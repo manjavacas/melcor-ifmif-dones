@@ -89,8 +89,8 @@ CV08600   AL016  2  2  1
 CV08601   0   0		                             
 CV086A0   3                                                                                         
 CV086A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-CV016A2   TATM    293.15  RHUM  0.0                 * 20 deg C, 0% rel. humidity
-CV016A3   MLFR.8  1.0                               * Filled with Ar
+CV086A2   TATM    293.15  RHUM  0.0                 * 20 deg C, 0% rel. humidity
+CV086A3   MLFR.8  1.0                               * Filled with Ar
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
