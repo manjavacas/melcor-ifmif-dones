@@ -1,10 +1,10 @@
 *
-title     'PPL1'
-jobid     'PPL1'
-restartf  'PPL1.RST'
-outputf   'PPL1.out'
-diagf     'PPL1.dia'
-stopf     'PPL1.stp'
+title     'L1'
+jobid     'L1'
+restartf  'L1.RST'
+outputf   'L1.out'
+diagf     'L1.dia'
+stopf     'L1.stp'
 crtout 
 tstart     00.0
 *
