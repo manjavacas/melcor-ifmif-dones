@@ -1,10 +1,10 @@
 *
-title     'PP'
-jobid     'PP'
-restartf  'PP.RST'
-outputf   'PPg.out'
-diagf     'PPg.dia'
-stopf     'PP.stp'
+title     'L0'
+jobid     'L0'
+restartf  'L0.RST'
+outputf   'L0g.out'
+diagf     'L0g.dia'
+stopf     'L0.stp'
 crtout 
 tstart     00.0
 *
@@ -29,7 +29,7 @@ CV01600   R016  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2
 CV01601   0   0		                                * Fog allowed (default)
 CV016A0   3                                                                                         
 CV016A1   PVOL  101195.0                            * 101325Pa-130Pa 
-CV016A2   TATM  290.95  RHUM  0.0                   * 25 deg C, 0% rel. humidity
+CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV016A3   MLFR.8  1.0                               * Filled with Ar
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
@@ -89,9 +89,8 @@ CV08600   AL016  2  2  1
 CV08601   0   0		                             
 CV086A0   3                                                                                         
 CV086A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-CV086A3   TATM    293.15    RHUM  0.6                                                  
-CV086A5   MLFR.4  0.78                              * Filled with air (O2)
-CV086A6   MLFR.5  0.22                              * Filled with air (N2)
+CV016A2   TATM    293.15  RHUM  0.0                 * 20 deg C, 0% rel. humidity
+CV016A3   MLFR.8  1.0                               * Filled with Ar
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 

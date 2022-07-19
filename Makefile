@@ -1,9 +1,9 @@
 all: clean gen cor
 
 gen: clean
-	./melgen-fusion-186_bdba PP.inp
+	./melgen-fusion-186_bdba L0.inp
 cor:
-	./melcor-fusion-186_bdba PP.cor 
+	./melcor-fusion-186_bdba L0.cor 
 clean:
 	rm -f *.OUT
 	rm -f *.out

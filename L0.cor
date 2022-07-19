@@ -9,17 +9,17 @@ noflush
 * MELCOR INPUT     *
 **********************************************************
 *
-TITLE     'PP'
+TITLE     'L0'
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  PP.RST
-OUTPUTFILE   PP.OUT
-PLOTFILE     PP.PTF
-DIAGFILE     PPcor.DIA
-MESSAGEFILE  PPcor.MES
+RESTARTFILE  L0.RST
+OUTPUTFILE   L0.OUT
+PLOTFILE     L0.PTF
+DIAGFILE     L0cor.DIA
+MESSAGEFILE  L0cor.MES
 *
 *
 *
