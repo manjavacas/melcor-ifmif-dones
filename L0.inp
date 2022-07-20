@@ -30,7 +30,9 @@ CV01601   0   0		                                * Fog allowed (default)
 CV016A0   3                                                                                         
 CV016A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV016A3   MLFR.8  1.0                               * Filled with Ar
+CV016A3   MLFR.8  0.999                             * Filled with Ar -> 99.999%
+CV016A4   MLFR.5  0.00021                           * Initial 02 -> 21% de 0.001%
+CV016A5   MLFR.4  0.00079                           * Initial N2 -> 79% de 0.001%
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -44,23 +46,23 @@ CV016C1  MASS.8 RATE TF.001
 CV016C2  ENERGY.A RATE TF.002
 *
 TF00100 'LLC-Ar-src' 1 1.0
-TF00110  0.0  1.0
+TF00110  0.0  24.0                  * pag. 18 del DDD-SGS; en m3/h, pendiente saber caudal SGS-Ar en Kg/s
 *
 TF00200 'LLC-Ar-src' 1 1.0
-TF00210  0.0  1.0
+TF00210  0.0  290.95                
 *
 ******* Sink Ar *******
 *
 CV016C3  MASS.8 RATE TF.003
 CV016C4  ENERGY.A RATE TF.004
 *
-TF00300 'LLC-Ar-sink' 1 -1.0
-TF00310  0.0  1.0
+TF00300 'LLC-Ar-sink' 1 -1.0    
+TF00310  0.0  24.0024               * pag. 18 del DDD-SGS; en m3/h, pendiente saber caudal SGS-Ar en Kg/s
 *
-TF00400 'LLC-Ar-sink' 1 -1.0
-TF00410  0.0  1.0
+TF00400 'LLC-Ar-sink' 1 -1.0    
+TF00410  0.0  290.95
 *
-******* Sink 02 *******
+******* Sink O2 *******
 *
 *CV016C5  MASS.5 RATE TF.005
 *CV016C6  ENERGY.A RATE TF.006
@@ -69,7 +71,7 @@ TF00410  0.0  1.0
 *TF00510  0.0  1.0
 *
 *TF00600 'LLC-O2-sink' 1 -1.0
-*TF00610  0.0  1.0
+*TF00610  0.0  290.95
 *
 ******* Sink N2 *******
 *
@@ -80,7 +82,7 @@ TF00410  0.0  1.0
 *TF00710  0.0  1.0
 *
 *TF00800 'LLC-N2-sink' 1 -1.0
-*TF00810  0.0  1.0
+*TF00810  0.0  290.95
 *
 *-----------------------------------------------                                                                
 * CV086 - AL016 - Airlock (C3)                                                                   
@@ -90,7 +92,9 @@ CV08601   0   0
 CV086A0   3                                                                                         
 CV086A1   PVOL    101195.0                          * 101325-130Pa                                                                          
 CV086A2   TATM    293.15  RHUM  0.0                 * 20 deg C, 0% rel. humidity
-CV086A3   MLFR.8  1.0                               * Filled with Ar
+CV086A3   MLFR.8  0.999                             * Filled with Ar
+CV086A4   MLFR.5  0.00021                           * Initial O2 -> 21% de 0.001
+CV086A5   MLFR.4  0.00079                           * Initial N2 -> 79% de 0.001
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -196,10 +200,10 @@ CV411C1  MASS.8 RATE TF.009
 CV411C2  ENERGY.A RATE TF.010
 *
 TF00900 'ENV-Ar-src' 1 1.0
-TF00910  0.0  1.0
+TF00910  0.0  0.001                         * Perdidas Ar LLC 
 *
 TF01000 'ENV-Ar-src' 1 1.0
-TF01010  0.0  1.0
+TF01010  0.0  293.15
 *
 ******* Source O2 *******
 *
@@ -207,10 +211,10 @@ CV411C3  MASS.8 RATE TF.011
 CV411C4  ENERGY.A RATE TF.012
 *
 TF01100 'ENV-O2-src' 1 1.0
-TF01110  0.0  1.0
+TF01110  0.0  1.0                           * Igual que sumidero LLC (pendiente)
 *
 TF01200 'ENV-O2-src' 1 1.0
-TF01210  0.0  1.0
+TF01210  0.0  293.15
 *
 ******* Source N2 *******
 *
@@ -218,10 +222,10 @@ CV411C5  MASS.8 RATE TF.013
 CV411C6  ENERGY.A RATE TF.014
 *
 TF01300 'ENV-N2-src' 1 1.0
-TF01310  0.0  1.0
+TF01310  0.0  1.0                           * Igual que sumidero LLC (pendiente)
 *
 TF01400 'ENV-N2-src' 1 1.0
-TF01410  0.0  1.0
+TF01410  0.0  293.15
 *
 ****************************************************************************************************************************************
 *         												  FP (Flow paths) INPUT						   								   *
@@ -365,11 +369,27 @@ TF41110   0.0       6.5
 * Leak-C002-AL016
 *-------------------------------------------------------
 *
+FL99900   lk-C002-AL016  042   086   7.0  7.0
+FL99901   0.0001   0.5    1.0 	                  
+FL99902	  3     0    0     0 				                  
+FL99903   1.0   1.0                      	                  
+FL999S0   0.0001  0.5   0.0112                           
+FL999T0   1   999        					                
 *
+TF99900   lk-C002-AL016  1    1.0  			                 
+TF99910   0.0       6.5                              * Pendiente de calcular; ISO 10648-2
 *
 *-------------------------------------------------------
 * Leak-AL016-R016
 *-------------------------------------------------------
-*   <!> TO-DO
 *
+FL99800   lk-AL016-R016  086   016   7.0  7.0
+FL99801   0.0001   0.5    1.0 	                  
+FL99802	  3     0    0     0 				                  
+FL99803   1.0   1.0                      	                  
+FL998S0   0.0001  0.5   0.0112                           
+FL998T0   1   998        					                
+*
+TF99800   lk-AL016-R016  1    1.0  			                 
+TF99810   0.0       6.5                              * Pendiente de calcular; ISO 10648-2
 .
