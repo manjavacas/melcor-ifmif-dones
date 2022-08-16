@@ -1,0 +1,6 @@
+1. ¿Es necesaria la válvula para los HVAC-al? Comprendo que en caso de fuga tiene que cerrarse o que si la presión es maás baja en la sala que fuera, debe entrar más aire.
+   No obstante, me parece excesivo limitar los flujos al 40-50% de su capacidad.
+
+2. La longitud de los HVAC la cojo desde la sala hasta el punto de extracción (por ejemplo, R111). Son varias secciones, pero el diámetro debe tomarse como el mínimo del
+   flujo (y el diámetro hidráulico con esta sección), que suele ser la salida a la sala. No obstante, la velocidad está como una TF y es algo impuesto, no sé qué valor 
+   tomar, estoy cogiendo por ahora el valor a la salida también.
