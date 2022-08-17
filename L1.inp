@@ -891,7 +891,7 @@ FL111S0   0.065   0.25    0.02                                 * A, L. HYD.DIAM=
 * Door-R104-R106           FM    TO     FM     TO
 * 1 W: m H:3 m --> A=0. m2  L=0.25m  P= m
 *-------------------------------------------------------
-FL11200   Door-R104-R105    104   106  12.6  12.6                   * floor + door height + gap - HYD.DIAM/2
+FL11200   Door-R104-R106    104   106  12.6  12.6                   * floor + door height + gap - HYD.DIAM/2
 FL11201   0.172   0.25    1.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
 FL11202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL11203   1.0   1.0                                             * FORM LOSS
@@ -961,7 +961,7 @@ FL117S0   0.132   0.25    0.02                                  * A, L. HYD.DIAM
 * Door-R112-AL151           FM    TO     FM     TO
 * 1C W:3m H:m --> A= m2  L=0.25m  P=m
 *-------------------------------------------------------
-FL11900   Door-R112-R149    112   194  12.6  12.6                   * floor + door height + gap - HYD.DIAM/2
+FL11900   Door-R112-AL151    112   194  12.6  12.6                   * floor + door height + gap - HYD.DIAM/2
 FL11901   0.132   0.25    1.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
 FL11902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL11903   1.0   1.0                                             * FORM LOSS
@@ -971,7 +971,7 @@ FL119S0   0.132   0.25    0.02                                 * A, L. HYD.DIAM=
 * Door-R105-R110           FM    TO     FM     TO
 * 3A W:4.5m H:3m --> A=0.1504m2  L=1.5m  P=30.08m
 *-------------------------------------------------------
-*FL12000   Door-R112-R113    105   110  12  12                   * floor + door height + gap - HYD.DIAM/2
+*FL12000   Door-R105-R110    105   110  12  12                   * floor + door height + gap - HYD.DIAM/2
 *FL12001   0.15   1.5    1.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
 *FL12002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 *FL12003   1.0   1.0                                             * FORM LOSS
