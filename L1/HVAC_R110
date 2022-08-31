@@ -1,0 +1,543 @@
+*-----------------------------------------------                                                                
+* CV105 - R105 - Assembly maintenance bay (C2)                                                                   
+*-----------------------------------------------                                                                
+CV10500   R105  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV10501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV105A0   3                                                                                         
+CV105A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV105A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV105A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV105A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV105B1   9.0      0.0                                                         
+CV105B2   17.5    1273.98                              * 8.5m (h) ; 1273.98 m3
+***
+*-----------------------------------------------                                                                
+* CV109 - R109 - Piping and cabling penetration space (C2)                                                                   
+*-----------------------------------------------                                                                
+CV10900   R109  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV10901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV109A0   3                                                                                         
+CV109A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV109A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV109A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV109A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV109B1   9.0      0.0                                                         
+CV109B2   17.5    3379.83                              * 8.5m (h) ; 3379.8338 m3
+***
+*                                       
+TF01800 'R109-Energy-src' 1 1.0                        * Energy source
+TF01810  0.0  298.15                                 * Temp AS collector = 293.15K
+*
+******** Sink O2 *******                           
+*                                                   
+CV109C3  MASS.5 019 2                         
+CV109C4  TE 018 8                      
+*                                                   
+TF01900 'R102-O2-snk' 1 -1.0                          
+TF01910  0.0  0.12                            * 6160 m3/h en CV109 (lo que falta para que cuadre) x 22% = 290.4 m3/h; Densidad 02 = 1.429 kg/m3 -> 414.9816 kg/h = 0.12 kg/s
+*                                                                                                                                  
+******* Sink N2 *******                           
+*                                                   
+CV109C5  MASS.4 020 2                         
+CV109C6  TE 018 8                       
+*                                                   
+TF02000 'R102-N2-snk' 1 -1.0                          
+TF02010  0.0  0.36                        * 160 m3/h en CV109 (lo que falta para que cuadre) x 78% = 1029.6 m3/h; Densidad N2 = 1.2506 kg/m3 -> 1287.61776 kg/h = 0.36 kg/s            
+* 
+*-----------------------------------------------                                                                
+* CV110 - R110 + R113 + R114 - Accelerator Vault + Beam transport room + Radiation isolation room (C2)                                                                   
+*-----------------------------------------------                                                                
+CV11000   R110  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV11001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV110A0   3                                                                                         
+CV110A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV110A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV110A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV110A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV110B1   9.0      0.0                                                         
+CV110B2   16.5    7343.96                              * 7.5m (h) ; 7343.9625 m3
+***
+*-----------------------------------------------                                                                
+* CV102 - R102 - Piping and cabling space (C2)                                                                   
+*-----------------------------------------------                                                                
+CV10200   R102  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV10201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV102A0   3                                                                                         
+CV102A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV102A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV102A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV102A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV102B1   9.0      0.0                                                         
+CV102B2   17.5    386.75                              * 8.5m (h) ; 386.75 m3
+*** 
+*                                       
+TF01500 'R102-Energy-src' 1 1.0                        * Energy source
+TF01510  0.0  298.15                                 * Temp AS collector = 293.15K
+*
+******** Sink O2 *******                           
+*                                                   
+CV102C3  MASS.5 016 2                         
+CV102C4  TE 015 8                      
+*                                                   
+TF01600 'R102-O2-snk' 1 -1.0                          
+TF01610  0.0  0.12                            * DDD-HVAC: (p.166-167) 1320 m3/h en CV102 (R102 exhaust) x 22% = 290.4 m3/h; Densidad 02 = 1.429 kg/m3 -> 414.9816 kg/h = 0.12 kg/s
+*                                                                                                                                  
+******* Sink N2 *******                           
+*                                                   
+CV102C5  MASS.4 017 2                         
+CV102C6  TE 015 8                       
+*                                                   
+TF01700 'R102-N2-snk' 1 -1.0                          
+TF01710  0.0  0.36                        * DDD-HVAC: (p.166-167) 1320 m3/h en CV102 (R102 exhaust) x 78% = 1029.6 m3/h; Densidad N2 = 1.2506 kg/m3 -> 1287.61776 kg/h = 0.36 kg/s            
+* 
+*-----------------------------------------------                                                                
+* CV112 - R112 - Assembly maintenance room (C2)                                                                   
+*-----------------------------------------------                                                                
+CV11200   R112  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV11201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV112A0   3                                                                                         
+CV112A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV112A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV112A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV112A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV112B1   9.0      0.0                                                         
+CV112B2   17.5    1971.46                              * 8.5m (h) ; 1971.4604 m3
+*** 
+************************************************
+*-----------------------------------------------                                                                
+* CV407 - ENV-INLET - Environment (inlet)                                                                
+*-----------------------------------------------                                                                
+CV40700   ENV  2  2  5          		                                           
+CV40701   0   -1                                    * Time-independent				       
+CV407A0   3                                                                                         
+CV407A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV407A3   TATM    293.15  RHUM  0.6    	                                                 
+CV407A8   MLFR.4  0.78                              * Filled with air (N2)
+CV407A9   MLFR.5  0.22                              * Filled with air (O2)
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV407B1   0.0        0.0                                                          
+CV407B2  50.0   1000000.0              	            * Random huge volume                                                          
+***                  
+*                                       
+TF01000 'AS-Energy-src' 1 1.0                        * Energy source
+TF01010  0.0  293.15                                 * Temp AS collector = 293.15K
+*
+******* Source O2 *******                           
+*                                                   
+CV407C3  MASS.5 011 2                         
+CV407C4  TE 010 8                      
+*                                                   
+TF01100 'ENV-O2-src' 1 1.0                          
+TF01110  0.0  2.74                            * DDD-HVAC: (p.162) 31405 m3/h en CV500 (R102 air supply 1) x 22% = 6909.1 m3/h; Densidad 02 = 1.429 kg/m3 -> 9873.1039 kg/h = 2.74 kg/s
+*                                                                                                                                  
+******* Source N2 *******                           
+*                                                   
+CV407C5  MASS.4 012 2                         
+CV407C6  TE 010 8                       
+*                                                   
+TF01200 'ENV-N2-src' 1 1.0                          
+TF01210  0.0  8.51                        * DDD-HVAC: (p.162) 31405 m3/h en CV500 (R102 air supply 1) x 78% = 24495.9 m3/h; Densidad N2 = 1.2506 kg/m3 -> 30634.57254 kg/h = 8.51 kg/s            
+*
+*-----------------------------------------------                                                                
+* CV408 - ENV-OUTLET - Environment (outlet)                                                                     
+*-----------------------------------------------                                                                
+CV40800   ENV  2  2  5          		                                   
+CV40801   0   -1		                            * Time-independent				            
+CV408A0   3                                                                                         
+CV408A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV408A3   TATM    293.15  RHUM  0.6    	                                                  
+CV408A8   MLFR.4  0.78                              * Filled with air (N2)
+CV408A9   MLFR.5  0.22                              * Filled with air (O2)
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV408B1   0.0        0.0                                                          
+CV408B2  50.0   1000000.0              	            * Random huge volume                                                          
+***
+******** Sink O2 *******                           
+*                                                   
+CV408C3  MASS.5 013 2                         
+CV408C4  TE 010 8                      
+*                                                   
+TF01300 'ENV-O2-src' 1 -1.0                          
+TF01310  0.0  2.09                            * DDD-HVAC: (p.167) 23925 m3/h en CV504 (R102 H2 Collector) x 22% = 5263.5 m3/h; Densidad 02 = 1.429 kg/m3 -> 7521.5415 kg/h = 2.09 kg/s
+*                                                                                                                                  
+******* Sink N2 *******                           
+*                                                   
+CV408C5  MASS.4 014 2                         
+CV408C6  TE 010 8                       
+*                                                   
+TF01400 'ENV-N2-src' 1 -1.0                          
+TF01410  0.0  6.48                        * DDD-HVAC: (p.167) 23925 m3/h en CV504 (R102 H2 Collector) x 78% = 18661.5 m3/h; Densidad N2 = 1.2506 kg/m3 -> 23338.0719 kg/h = 6.48 kg/s            
+* 
+*-----------------------------------------------                                                              
+* CV410 - C2-collector - HVAC collector for C2
+*-----------------------------------------------                                                               
+CV41000   HVAC-C2  2  2  5          	                                            
+CV41001   0   -1							           
+CV410A0   3                                                                                         
+CV410A1   PVOL    101235.0                          * 101325Pa-90Pa                                                                      
+CV410A3   TATM    293.15  RHUM  0.0                                                   
+CV410A8   MLFR.4  0.79                              * Filled with air (O2)
+CV410A9   MLFR.5  0.21                              * Filled with air (N2)
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV410B1   0.0        0.0                                                          
+CV410B2  50.0      400.0               	            * Random big volume                                                           
+*
+**************************************************      
+*-----------------------------------------------
+* CV500 - AS1 - Air Supply 1
+*-----------------------------------------------                                                                
+CV50000   AS1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV500A0   3                                                                                         
+CV500A1   PVOL    101325.0                          * PATM                                                                          
+CV500A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV500A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV500A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV500B1   0.0      0.0                                                         
+CV500B2   24.5   48.51                              * FROM L2 TO L0; 1800 x 1100
+*** 
+*-----------------------------------------------
+* CV501 - ASJ1 - Air Supply Junction R102 - R105 - AS1
+*-----------------------------------------------                                                                
+CV50100   ASJ1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV501A0   3                                                                                         
+CV501A1   PVOL    101325.0                          * PATM                                                                          
+CV501A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV501A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV501A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV501B1   16.4      0.0                                                         
+CV501B2   17.5   0.5                              * 1800 x 1100 x 250
+*** 
+*-----------------------------------------------
+* CV502 - ASJ2 - Air Supply Junction R105 - R109 - R110
+*-----------------------------------------------                                                                
+CV50200   ASJ2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV502A0   3                                                                                         
+CV502A1   PVOL    101325.0                          * PATM                                                                          
+CV502A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV502A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV502A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV502B1   15.725      0.0                                                         
+CV502B2   17.5        0.6                       * 1300 x 775 (+1m R110) x 250
+*** 
+*************************************************
+*-----------------------------------------------
+* CV504 - H2_1 - H2 Mainfold_1
+*-----------------------------------------------                                                                
+CV50400   H2_1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV504A0   3                                                                                         
+CV504A1   PVOL    101235.0                          * PATM-90Pa                                                                          
+CV504A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV504A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV504A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV504B1   0.0      0.0                                                         
+CV504B2   31.5   56.7                              * FROM L3 TO L0; 1300 x 675
+***
+*-----------------------------------------------
+* CV505 - H2J1 - H2 Junction R110 - 1
+*-----------------------------------------------                                                                
+CV50500   H2J1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV505A0   3                                                                                         
+CV505A1   PVOL    101325.0                          * PATM-90Pa                                                                          
+CV505A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV505A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV505A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV505B1   16.0      0.0                                                         
+CV505B2   16.5   0.13                             * 900 x 500 x 250
+*** 
+*-----------------------------------------------
+* CV506 - H2J2 - H2 Junction R110 - 2
+*-----------------------------------------------                                                                
+CV50600   H2J2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV506A0   3                                                                                         
+CV506A1   PVOL    101325.0                          * PATM-90Pa                                                                          
+CV506A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV506A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV506A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV506B1   15.95      0.0                                                         
+CV506B2   16.5   0.17                              * 1100 x 550 x 250
+*** 
+*-----------------------------------------------
+* CV507 - H2J3 - H2 Junction R110 - 3
+*-----------------------------------------------                                                                
+CV50700   H2J3  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV507A0   3                                                                                         
+CV507A1   PVOL    101325.0                          * PATM-90Pa                                                                          
+CV507A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV507A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV507A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV507B1   15.875      0.0                                                         
+CV507B2   16.5   0.20                              * 1150 x 625 x 250
+*** 
+*-----------------------------------------------
+* CV503 - H2J4 - H2 Junction R110 - 4
+*-----------------------------------------------                                                                
+CV50300   H2J4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV503A0   3                                                                                         
+CV503A1   PVOL    101325.0                          * PATM-90Pa                                                                          
+CV503A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV503A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV503A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV508B1   15.775      0.0                                                         
+CV508B2   16.5   0.25                              * 1150 x 725 x 250
+*** 
+************************************************
+************************************************
+*-------------------------------------------------------
+* Door-R102-R105           FM    TO     FM     TO
+* 1C W:3m H:3m --> A=0.1204 m2  L=0.25m  P=24.08m
+*-------------------------------------------------------
+FL10900   Door-R102-R105    102   105  12.0  12.0                   * floor + door height + gap - HYD.DIAM/2
+FL10901   0.12   0.25    1.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
+FL10902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL10903   1.0   1.0                                             * FORM LOSS
+FL109S0   0.12   0.25    0.02                                 * A, L. HYD.DIAM= 4A/P.
+*
+*-------------------------------------------------------
+* Door-R105-R109          FM    TO     FM     TO
+* 1D W:1.05m H:2.17m --> A=0.0648 m2  L=0.25m  P=12.96m
+*-------------------------------------------------------
+FL11100   Door-R105-R109   105   109  11.17  11.17                   * floor + door height + gap - HYD.DIAM/2
+FL11101   0.065   0.25    1.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
+FL11102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL11103   1.0   1.0                                             * FORM LOSS
+FL111S0   0.065   0.25    0.02                                 * A, L. HYD.DIAM= 4A/P.
+*
+*-------------------------------------------------------
+* Door-R105-R110           FM    TO     FM     TO
+* 3A W:4.5m H:3m --> A=0.1504m2  L=1.5m  P=30.08m
+*-------------------------------------------------------
+*FL12000   Door-R105-R110    105   110  12.0  12.0                   * floor + door height + gap - HYD.DIAM/2
+*FL12001   0.15   1.5    1.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
+*FL12002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+*FL12003   1.0   1.0                                             * FORM LOSS
+*FL120S0   0.15   1.5    0.02 
+*
+*-------------------------------------------------------
+* Door-R112-R113           FM    TO     FM     TO
+* 3A W:4.5m H:3m --> A=0.1504m2  L=1.5m  P=30.08m
+*-------------------------------------------------------
+*FL11800   Door-R112-R113    112   110  12.0  12.0                   * floor + door height + gap - HYD.DIAM/2
+*FL11801   0.15   1.5    1.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
+*FL11802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+*FL11803   1.0   1.0                                             * FORM LOSS
+*FL118S0   0.15   1.5    0.02                                  * A, L. HYD.DIAM= 4A/P.
+*
+**********************************************************
+*-------------------------------------------------------
+* HVAC-R102_1           FM    TO     FM     TO
+* 400 x 225 x 2000
+*-------------------------------------------------------
+FL50000   HVAC-R102_1    501   102  17.35  17.35                   * ceiling - HYD.DIAM/2
+FL50001   0.09   2.0    1.0   0.3    0.3                    * A, L, FRACT OPEN, DIAM
+FL50002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50003   1.0   1.0                                             * FORM LOSS
+FL500S0   0.09   2.0   0.3 
+*
+*-------------------------------------------------------
+* HVAC-R102_2           FM    TO     FM     TO
+* 1800 x 1100 x 2000
+*-------------------------------------------------------
+FL50100   HVAC-R102_2    500   501  16.8  16.8                   * ceiling - HYD.DIAM/2
+FL50101   1.98   2.0    1.0   1.4    1.4                    * A, L, FRACT OPEN, DIAM
+FL50102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50103   1.0   1.0                                             * FORM LOSS
+FL501S0   1.98   2.0   1.4 
+*
+*-------------------------------------------------------
+* HVAC-R102_3           FM    TO     FM     TO
+*-------------------------------------------------------
+FL50200   HVAC-R102_3    501   502  17.0  17.0                   * ceiling - HYD.DIAM/2
+FL50201   1.01   29.5    1.0   1    1                    * A, L, FRACT OPEN, DIAM
+FL50202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50203   1.0   1.0                                             * FORM LOSS
+FL502S1   1.02   7.5   1                     * 1275 x 800
+FL502S2   1.01   22.0   1                     * 1300 x 775
+*
+*-------------------------------------------------------
+* HVAC-inlet          FM    TO     FM     TO
+*-------------------------------------------------------
+FL50300   HVAC-inlet    407   500  12.5  12.5                   * ceiling - HYD.DIAM/2
+FL50301   2.0   20.0    1.0   1.5    1.5                    * A, L, FRACT OPEN, DIAM
+FL50302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50303   1.0   1.0                                             * FORM LOSS
+FL503S0   2.0   20.0   1.5                     * 
+*
+*-------------------------------------------------------
+* HVAC-R110           FM    TO     FM     TO
+*-------------------------------------------------------
+FL50400   HVAC-R110    502   110  16.05  16.3                   * ceiling - HYD.DIAM/2
+FL50401   0.81   86.2    1.0   0.9    0.4                    * A, L, FRACT OPEN, DIAM
+FL50402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50403   1.0   1.0                                             * FORM LOSS
+FL504S1   0.81   26.4   0.9                     * 1200 x 675
+FL504S2   0.65   19.3   0.8                     * 1000 x 650
+FL504S3   0.54   18.0   0.7                     * 900 x 600
+FL504S4   0.39   16.5   0.6                     * 750 x 525
+FL504S5   0.14   6.0   0.4                     * 375 x 375
+*
+*-------------------------------------------------------
+* HVAC-R109           FM    TO     FM     TO
+*-------------------------------------------------------
+FL50500   HVAC-R105    502   109  17.2  17.25                   * ceiling - HYD.DIAM/2
+FL50501   0.37   55.5    1.0   0.6    0.5                    * A, L, FRACT OPEN, DIAM
+FL50502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50503   1.0   1.0                                             * FORM LOSS
+FL505S1   0.37   33.5   0.6                     * 775 x 475
+FL505S2   0.21   22.0   0.5                     * 525 x 400
+*
+*********************************************************
+*-------------------------------------------------------
+* HVAC-C2_col           FM    TO     FM     TO
+*-------------------------------------------------------
+FL50600   HVAC-C2_col   504   410  16.75  16.75                   * ceiling - HYD.DIAM/2
+FL50601   2.0   30.0   1.0   1.5    1.5                    * A, L, FRACT OPEN, DIAM
+FL50602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50603   1.0   1.0                                             * FORM LOSS
+FL506S0   2.0   30.0   1.5                     *
+*
+*-------------------------------------------------------
+* HVAC-C2_col-out           FM    TO     FM     TO
+*-------------------------------------------------------
+FL50700   HVAC-C2_col-out   410   408  25.0  25.0                   * ceiling - HYD.DIAM/2
+FL50701   2.0   30.0   1.0   1.5    1.5                    * A, L, FRACT OPEN, DIAM
+FL50702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50703   1.0   1.0                                             * FORM LOSS
+FL507S0   2.0   30.0   1.5                     *
+*
+*-------------------------------------------------------
+* HVAC-R110_1           FM    TO     FM     TO
+*-------------------------------------------------------
+FL50800   HVAC-R110_1    110   505  16.3  16.3                   * ceiling - HYD.DIAM/2
+FL50801   0.14   20.0   1.0   0.4    0.4                    * A, L, FRACT OPEN, DIAM
+FL50802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50803   1.0   1.0                                             * FORM LOSS
+FL508S0   0.14   20.0   0.4                     * 400 x 350
+*
+*-------------------------------------------------------
+* HVAC-R110_2           FM    TO     FM     TO
+*-------------------------------------------------------
+FL50900   HVAC-R110_2    110   505  16.2  16.2                   * ceiling - HYD.DIAM/2
+FL50901   0.34   10.0   1.0   0.6    0.6                    * A, L, FRACT OPEN, DIAM
+FL50902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL50903   1.0   1.0                                             * FORM LOSS
+FL509S0   0.34   10.0   0.6                     * 725 x 475
+*
+*-------------------------------------------------------
+* HVAC-R110_3           FM    TO     FM     TO
+*-------------------------------------------------------
+FL51000   HVAC-R110_3   505   506  16.2  16.2                   * ceiling - HYD.DIAM/2
+FL51001   0.45   20.0   1.0   0.6    0.6                    * A, L, FRACT OPEN, DIAM
+FL51002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51003   1.0   1.0                                             * FORM LOSS
+FL510S0   0.45   20.0   0.6                     * 900 x 500
+*
+*-------------------------------------------------------
+* HVAC-R110_4           FM    TO     FM     TO
+*-------------------------------------------------------
+FL51100   HVAC-R110_4   110   506  16.25  16.25                   * ceiling - HYD.DIAM/2
+FL51101   0.24   2.0   1.0   0.5    0.5                    * A, L, FRACT OPEN, DIAM
+FL51102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51103   1.0   1.0                                             * FORM LOSS
+FL511S0   0.24   2.0   0.5                     * 600 x 400
+*
+*-------------------------------------------------------
+* HVAC-R110_5           FM    TO     FM     TO
+*-------------------------------------------------------
+FL51200   HVAC-R110_5   506   507  16.15  16.15                   * ceiling - HYD.DIAM/2
+FL51201   0.61   18.0   1.0   0.7    0.7                    * A, L, FRACT OPEN, DIAM
+FL51202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51203   1.0   1.0                                             * FORM LOSS
+FL512S0   0.61   18.0   0.7                     * 1100 x 550
+*
+*-------------------------------------------------------
+* HVAC-R110_6           FM    TO     FM     TO
+*-------------------------------------------------------
+FL51300   HVAC-R110_6   110   507  16.25  16.25                   * ceiling - HYD.DIAM/2
+FL51301   0.24   2.0   1.0   0.5    0.5                    * A, L, FRACT OPEN, DIAM
+FL51302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51303   1.0   1.0                                             * FORM LOSS
+FL513S0   0.24   2.0   0.5                     * 600 x 400
+*
+*-------------------------------------------------------
+* HVAC-R110_7           FM    TO     FM     TO
+*-------------------------------------------------------
+FL51400   HVAC-R110_7   507   503  16.1  16.1                   * ceiling - HYD.DIAM/2
+FL51401   0.72   21.5   1.0   0.8    0.8                    * A, L, FRACT OPEN, DIAM
+FL51402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51403   1.0   1.0                                             * FORM LOSS
+FL514S0   0.72   21.5   0.8                     * 1150 x 625
+*
+*-------------------------------------------------------
+* HVAC-R110_8           FM    TO     FM     TO
+*-------------------------------------------------------
+FL51500   HVAC-R110_8   110   503  16.25  16.25                   * ceiling - HYD.DIAM/2
+FL51501   0.24   2.0   1.0   0.5    0.5                    * A, L, FRACT OPEN, DIAM
+FL51502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51503   1.0   1.0                                             * FORM LOSS
+FL515S0   0.24   2.0   0.5                     * 600 x 400
+*
+*-------------------------------------------------------
+* HVAC-R110_9           FM    TO     FM     TO
+*-------------------------------------------------------
+FL51600   HVAC-R110_8   503   504  16.05  16.05                   * ceiling - HYD.DIAM/2
+FL51601   0.83   30.0   1.0   0.5    0.5                    * A, L, FRACT OPEN, DIAM
+FL51602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51603   1.0   1.0                                             * FORM LOSS
+FL516S0   0.83   30.0   0.9                     * 1150 x 725
+*
