@@ -243,7 +243,7 @@ FL00102	  3     0    0     0                                    * HORIZ fl, ACTI
 FL00103   1.0   1.0                                             * FORM LOSS
 FL001S0   0.1524   1.0    0.441                                 * A, L. HYD.DIAM. (4A/P)
 *
-FL001V1 -1  001 001                                             * PUERTA CERRADA (controlada por TF)
+FL001V1   -1  001 001                                           * PUERTA CERRADA (controlada por TF)
 *
 TF00400   DOOR-FL001   1   1.0                         
 TF00410   0.0       0.0
@@ -390,11 +390,11 @@ TF41110   0.0       6.5
 * Leak-C002-AL016
 *-------------------------------------------------------
 *
-FL99900   lk-C002-AL016  042   086   7.0  7.0
-FL99901   1.0E-4   0.5    1.0 	                        * A = 1 mm2       
-FL99902	  3     0    0     0 				            * Horizontal flow               
-FL99903   1.0   1.0                      	            * Coef por defecto (1.0)                 
-FL999S0   1.0E-4  0.5   0.0113 
+*FL99900   lk-C002-AL016  042   086   7.0  7.0
+*FL99901   1.0E-4   0.5    1.0 	                        * A = 1 mm2       
+*FL99902	  3     0    0     0 				        * Horizontal flow               
+*FL99903   1.0   1.0                      	            * Coef por defecto (1.0)                 
+*FL999S0   1.0E-4  0.5   0.0113 
 *                             
 *FL999T0   1   999        					                      
 *                                                    
@@ -426,7 +426,7 @@ FL99702	  3     0    0     0 				            * Horizontal flow
 FL99703   1.0   1.0                                     * Coef por defecto (1.0)                 	                  
 FL997S0   1.0E-4  0.5   0.0113           
 *                
-*FL997T0   1   998        					                
+*FL997T0   1   997        					                
 *
 *TF99700   lk-C002-R016  1    1.0  			                 
 *TF99710   0.0       6.5                                * Anulamos TF para dejar que MELCOR calcule la fuga por diferencia de presiones y no velocidades

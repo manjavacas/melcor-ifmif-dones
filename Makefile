@@ -1,5 +1,8 @@
 all: clean gen cor
 
+foo: clean
+	./melgen-fusion-186_bdba L0v2.inp
+	./melcor-fusion-186_bdba L0v2.cor
 gen: clean
 	./melgen-fusion-186_bdba L0.inp
 cor:
