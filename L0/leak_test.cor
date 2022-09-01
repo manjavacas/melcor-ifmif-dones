@@ -6,7 +6,7 @@ noflush
 *WARNINGLEVEL 0 0 -1
 *
 **********************************************************
-*                     MELCOR INPUT                       *
+*                MELCOR INPUT (LEAK TEST)                *
 **********************************************************
 *
 TITLE     'L0'
@@ -24,15 +24,15 @@ MESSAGEFILE  L0cor.MES
 *
 *
 CPULEFT          200.
-CPULIM           200000.   *maximo tiempo corriendo       
-DTTIME           1.E-1     *initial time step
+CPULIM           200000.    * maximo tiempo corriendo       
+DTTIME           1.E-1      * initial time step
 *
 CYMESF           55    60    
 *
 *
 RESTART          -1        
 *
-TEND     1.0e5 *segundos de simulacion
+TEND             1.0e5      * segundos de simulacion
 *
 *
 SOFTDTMIN  .000001 100

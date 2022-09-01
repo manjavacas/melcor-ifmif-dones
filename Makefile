@@ -1,8 +1,8 @@
 all: clean gen cor
 
 leak: clean
-	./melgen-fusion-186_bdba L0/L0v2.inp
-	./melcor-fusion-186_bdba L0/L0v2.cor
+	./melgen-fusion-186_bdba L0/leak_test.inp
+	./melcor-fusion-186_bdba L0/leak_test.cor
 gen: clean
 	./melgen-fusion-186_bdba L0/L0.inp
 cor:
