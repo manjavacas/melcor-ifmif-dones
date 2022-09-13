@@ -70,23 +70,27 @@ CV016C3  MASS.8 003 2
 CV016C4  TE 002 8                           
 *
 TF00300 'LLC-Ar-sink' 1 -1.0    
-TF00310  0.0  0.0391                        * DDD-SGS: 78.92 m3/h -> Densidad Ar = 1.784 kg/m3 --> 140.793 kg/h --> 0.0391 kg/s
+TF00310  0.0  0.0391                        * DDD-SGS: 78.92 m3/h -> Densidad Ar = 1.784 kg/m3 --> 140.793 kg/h --> 0.0391 kg/s    
 *
 ******* Sink O2 *******                     * SUPOSICIÓN: se purifica el 95% del O2 y N2, por lo que se devuelve el 5% (por ajustar)
 *
 CV016C5  MASS.5 005 2
 CV016C6  TE 002 8
 *
-TF00500 'LLC-O2-sink' 1 -1.0                * DDD-SGS: 0.23 - 0.0115 (5% que se devuelve a la LLC) = 0.2185 m3/h -> Densidad 02 = 1.429 kg/m3 --> 0.312 kg/h --> 8.673E-5 kg/s
-TF00510  0.0  0.00008673
+TF00500 'LLC-O2-sink' 1 -1.0
+*TF00510 0.0  0.00008673                    * DDD-SGS: 0.23 - 0.0115 (5% que se devuelve a la LLC) = 0.2185 m3/h --> Densidad 02 = 1.429 kg/m3 --> 0.3122365 kg/h --> 8.673E-5 kg/s
+*TF00510 0.0  0.000090384                   * ASUMIENDO 10%: 0.23 - 0.0023 (10% que se devuelve a la LLC) = 0.2277 m3/h --> Densidad 02 = 1.429 kg/m3 --> 0.3253833 kg/h --> 9.0384E-5 kg/s
+TF00510 0.0  0.000077603                    * ASUMIENDO 15%: 0.23 - 0.0345 (15% que se devuelve a la LLC) = 0.1955 m3/h --> Densidad 02 = 1.429 kg/m3 --> 0.2793695 kg/h --> 7.7603E-5 kg/s
 *
 ******* Sink N2 *******
 *
 CV016C7  MASS.4 007 2
 CV016C8  TE 002 8
 *
-TF00700 'LLC-N2-sink' 1 -1.0                * DDD-SGS: 0.85 - 0.043 (5% que se devuelve a la LLC) = 0.807 m3/h -> Densidad N2 = 1.2506 kg/m3 --> 1.009 kg/h --> 2.803E-4 kg/s
-TF00710  0.0  0.0002803
+TF00700 'LLC-N2-sink' 1 -1.0
+*TF00710  0.0  0.0002803                    * DDD-SGS: 0.85 - 0.043 (5% que se devuelve a la LLC) = 0.807 m3/h --> Densidad N2 = 1.2506 kg/m3 --> 1.009 kg/h --> 2.803E-4 kg/s
+*TF00710  0.0  0.000292328                  * ASUMIENDO 10%: 0.85 - 0.0085 (10% que se devuelve a la LLC) = 0.8415 m3/h --> Densidad N2 = 1.2506 kg/m3 --> 1.0523799 kg/h --> 2.92328E-4 kg/s
+TF00710  0.0  0.000250988                   * ASUMIENDO 15%: 0.85 - 0.1275 (15% que se devuelve a la LLC) = 0.7225 m3/h --> Densidad N2 = 1.2506 kg/m3 --> 0.9035585 kg/h --> 2.50988E-4 kg/s
 *
 *-----------------------------------------------                                                                
 * CV086 - AL016 - Airlock (C3)                                                                   
@@ -285,7 +289,7 @@ FL003S0   18E-2   50.0    0.478
 FL003T0   1   015                                        
 *
 TF01500   HVAC-C002-ex   1    1.0                         
-TF01510   0.0       5.2
+TF01510   0.0       5.45                                    * AJUSTADO. Anterior (EAI) = 5.2
 *
 *-------------------------------------------------------
 * HVAC-C002-al            FM    TO    FM   TO
@@ -387,7 +391,7 @@ TF41110   0.0       6.5
 **************************************************************  LEAKAGES *************************************************************** 
 *
 *-------------------------------------------------------
-* Leak-C002-AL016
+* Leak-C002-AL016                                       * De momento ANULADA. Usar directamente leak de Corridor a LLC para simplificar
 *-------------------------------------------------------
 *
 *FL99900   lk-C002-AL016  042   086   7.0  7.0
@@ -402,7 +406,7 @@ TF41110   0.0       6.5
 *TF99910   0.0       6.5                                * Anulamos TF para dejar que MELCOR calcule la fuga por diferencia de presiones y no velocidades
 *
 *-------------------------------------------------------
-* Leak-AL016-R016 (Airlock to LLC)                      * De momento ANULADO. Usar directamente leak de Corridor a LLC para simplificar
+* Leak-AL016-R016 (Airlock to LLC)                      * De momento ANULADA. Usar directamente leak de Corridor a LLC para simplificar
 *-------------------------------------------------------
 *
 *FL99800   lk-AL016-R016  086   016   7.0  7.0
