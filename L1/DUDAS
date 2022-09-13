@@ -1,2 +1,0 @@
-1. El hourly leak rate con cuanto tiempo lo calculamos? porque una vez que llegue al estado de equilibrio, cuanto más tiempo pase menor será, 
-   así que yo cogería el mismo tiempo (1h) que para medir la presión y la temperatura según el ISO 10648-2 'Pressure change method'.
