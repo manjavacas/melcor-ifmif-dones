@@ -1,5 +1,2 @@
-1. ¿Es necesaria la válvula para los HVAC-al? Comprendo que en caso de fuga tiene que cerrarse o que si la presión es maás baja en la sala que fuera, debe entrar más aire.
-   No obstante, me parece excesivo limitar los flujos al 40-50% de su capacidad.
-
-2. Para el HVAC he acordado con Claudio lo siguiente: como no es posible conectar entre sí mas de 2 CV con un FP, creamos unos CV pequeños intermedios qiue representan las 
-   uniones de las tuberías del HVAC que concetan más de dos salas. Os subo un esquema cuando pueda.
+1. El hourly leak rate con cuanto tiempo lo calculamos? porque una vez que llegue al estado de equilibrio, cuanto más tiempo pase menor será, 
+   así que yo cogería el mismo tiempo (1h) que para medir la presión y la temperatura según el ISO 10648-2 'Pressure change method'.
