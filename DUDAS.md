@@ -8,5 +8,6 @@
 
 2. Para una habitación fija, ¿los cálculos de fugas se consideran para todas en conjunto (una por habitación con la que se conecta) o cada fuga individual?. Supongo que el hourly leak rate es para toda la habitación y habría que sumar las contribuciones de cada fuga o para cada fuga va por separado.
 En concreto, me ocurre que la R110 tiene una diferencia entre aire que entra y que sale por el HVAC de unos 2000 m3/h, lo que hace que en una fuga de 1.75 cm2 (lo máximo que me ha dejado el ISO) tenga que llevar el aire velocidades ultrasónicas xd. Si se pudieran poner fugas por cada conexión, a lo mejor sí es posible. De todas formas estoy metiendo ahora los gaps de las puertas a ver qué tal.
+Creo que es más adecuado usar el constant pressure method, pues la intención es mantener la diferencia de presión.
 
 3. ¿Podríais subir aquí el código original de EAI?
