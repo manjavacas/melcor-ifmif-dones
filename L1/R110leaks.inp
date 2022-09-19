@@ -8,13 +8,13 @@
 *
 *EOR* MELGEN
 *
-title     'R110leakswithsources'
-jobid     'R110leakswithsources'
+title     'R110leaks'
+jobid     'R110leaks'
 *
-restartf  'R110leakswithsources.RST'
-outputf   'R110leakswithsources.out'
-diagf     'R110leakswithsources.dia'
-stopf     'R110leakswithsources.stp'
+restartf  'R110leaks.RST'
+outputf   'R110leaks.out'
+diagf     'R110leaks.dia'
+stopf     'R110leaks.stp'
 *
 crtout 
 tstart     0.0
@@ -804,17 +804,17 @@ noflush
 * MELCOR INPUT     *
 **********************************************************
 *
-TITLE     'R110leakswithsources'
+TITLE     'R110leaks'
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  R110leakswithsources.RST
-OUTPUTFILE   R110leakswithsources.OUT
-PLOTFILE     R110leakswithsources.PTF
-DIAGFILE     R110leakswithsourcescor.DIA
-MESSAGEFILE  R110leakswithsourcescor.MES
+RESTARTFILE  R110leaks.RST
+OUTPUTFILE   R110leaks.OUT
+PLOTFILE     R110leaks.PTF
+DIAGFILE     R110leakscor.DIA
+MESSAGEFILE  R110leakscor.MES
 *
 *
 *
