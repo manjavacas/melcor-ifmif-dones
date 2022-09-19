@@ -747,7 +747,7 @@ FL5060T   30.5    31.5
 FL506T0   1   041        * TF, TFnumber
 *
 TF04100   HVAC7  1    1.0  *name, number datapairs, mult.factor
-TF04110   0.0       6.64587875  * ?, velocity (para tener -23925.1635 m3/h)
+TF04110   0.0       9.29397875  * ?, velocity (para tener -33458.3235 m3/h)
 *
 *--------------------------------------------------------
 * LEAKS
