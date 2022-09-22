@@ -21,7 +21,7 @@ def calcular_dh_circular():
 
 
 def calcular_dh_cuadrado():
-    # DH = 4A / P; P = 2x2y
+    # DH = 4A / P; P = 4xy
     y = float(input('Introducir altura (m2)'))
     x = float(input('Introducir ancho (m2): '))
     return (4 * y * x) / (2 * x + 2 * y)
@@ -64,13 +64,12 @@ def oxygen_method():
             print('[!] Clase incorrecta. Debe ser C1, C2, C3 o C4.')
             exit()
 
-        print(f'** Hourly leak rate: {1} **', str(hourly_leak_rate))
         if hourly_leak_rate < HLRS[clase]:
             print(
-                f'\n** Cumple con la ISO. Hourly leak rate < {HLRS[clase]} **\n')
+                f'\n** Cumple con la ISO. Hourly leak rate = {hourly_leak_rate} < {HLRS[clase]} **\n')
         else:
             print(
-                f'\n** No cumple con la ISO. Hourly leak rate >= {HLRS[clase]} **\n')
+                f'\n** No cumple con la ISO. Hourly leak rate = {hourly_leak_rate} >= {HLRS[clase]} **\n')
 
 
 if __name__ == '__main__':
