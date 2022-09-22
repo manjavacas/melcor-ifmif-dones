@@ -32,7 +32,7 @@ CYMESF           55    60
 *
 RESTART          -1        
 *
-TEND             1.0e5      * segundos de simulacion
+TEND             3600      * segundos de simulacion
 *
 *
 SOFTDTMIN  .000001 100

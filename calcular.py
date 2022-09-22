@@ -75,7 +75,7 @@ def oxygen_method():
 
 if __name__ == '__main__':
     op = int(input(
-        'Introducir opción:\n [1] Calcular diámetro hidraúlico FL circular\n, [2] Calcular diámetro hidráulico FL cuadrado\n [3] Oxygen method\n'))
+        'Introducir opción:\n [1] Calcular diámetro hidraúlico FL circular\n [2] Calcular diámetro hidráulico FL cuadrado\n [3] Oxygen method\n'))
     if op == 1:
         dh = calcular_dh_circular()
         print('Diámetro hidráulico: ', dh)
