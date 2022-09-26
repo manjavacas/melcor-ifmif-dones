@@ -28,7 +28,7 @@ def calcular_dh_cuadrado():
 
 
 def oxygen_method():
-    t = int(input('- Introducir tiempo de simulación (seg): '))
+    t = float(input('- Introducir tiempo de simulación (seg): '))
     t0 = float(input('- Introducir temperatura inicial (K): ')) - \
         273.15  # conversion a celsius
     t1 = float(input('- Introducir temperatura final (K): ')) - \

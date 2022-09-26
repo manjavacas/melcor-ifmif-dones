@@ -37,7 +37,7 @@ NCG555    AR    8                                   * MATERIAL 8 IS AR
 CV01600   R016  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
 CV01601   0   0		                                * Fog allowed (default)
 CV016A0   3                                                                                         
-CV016A1   PVOL  101275.0                            * (MODIFICADA POR ENCIMA DE LA PRESION DEL PASILLO +40 Pa)
+CV016A1   PVOL  101195.0                            * (MODIFICADA POR ENCIMA DE LA PRESION DEL PASILLO +40 Pa)
 CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV016A3   MLFR.8  1.0                               * Filled with Ar
 *** 
@@ -70,9 +70,9 @@ CV042B2   8.5    11032.3359
 *-------------------------------------------------------
 *
 FL99700   lk-C002-R016  016   042   7.0  7.0
-FL99701   1.0E-4  0.5    1.0 	                        * A = 1cm2     
+FL99701   1.0E-8  0.5    1.0 	                        * A = 0.1um2     
 FL99702	  3     0    0     0 				            * Horizontal flow      
 FL99703   1.0   1.0                                     * Coef por defecto (1.0)                 	                  
-FL997S0   1.0E-4  0.5   0.011283791670955126                        
+FL997S0   1.0E-8  0.5   0.00011283791670955126                        
 *
 . * end
