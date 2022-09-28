@@ -1,18 +1,17 @@
-all: clean gen cor
-
 leak: clean
-	./melgen-fusion-186_bdba L0/leak_test.inp
-	./melcor-fusion-186_bdba L0/leak_test.cor
-gen: clean
-	./melgen-fusion-186_bdba L0/L0.inp
-cor:
-	./melcor-fusion-186_bdba L0/L0.cor 
+	./melgen-fusion-186_bdba L0/leaktest.inp
+	./melcor-fusion-186_bdba L0/leaktest.inp
+l0: clean
+	./melgen-fusion-186_bdba L0/l0.inp
+	./melcor-fusion-186_bdba L0/l0.inp
 clean:
-	rm -f *.OUT
-	rm -f *.out
-	rm -f *.PTF
-	rm -f *.RST
 	rm -f *.DIA
 	rm -f *.MES
-	rm -f *.dia
+	rm -f *.OUT
+	rm -f *.PTF
+	rm -f *.RST
 	rm -f extDIAG
+	rm -f MEGDIA
+	rm -f MEGOUT
+	rm -f MELDIA
+	rm -f MELOUT
