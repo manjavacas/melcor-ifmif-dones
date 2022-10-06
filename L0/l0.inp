@@ -333,7 +333,7 @@ FL005S0   18E-2   50.0    0.478
 FL005T0   1   017                                        
 *
 TF01700   HVAC-AL016-ex   1    1.0                         
-TF01710   0.0       5.5                                   * Manually set
+TF01710   0.0       5.5                                   * AJUSTADO manualmente
 *
 *-------------------------------------------------------
 * HVAC-AL016-al            FM    TO    FM   TO
@@ -393,53 +393,24 @@ TF41110   0.0       6.5
 **************************************************************  LEAKAGES *************************************************************** 
 *
 *-------------------------------------------------------
-* Leak-C002-AL016                                       * De momento ANULADA. Usar directamente leak de Corridor a LLC para simplificar
-*-------------------------------------------------------
-*
-*FL99900   lk-C002-AL016  042   086   7.0  7.0
-*FL99901   1.0E-4   0.5    1.0 	                        * A = 1 mm2       
-*FL99902	  3     0    0     0 				        * Horizontal flow               
-*FL99903   1.0   1.0                      	            * Coef por defecto (1.0)                 
-*FL999S0   1.0E-4  0.5   0.0113 
-*                             
-*FL999T0   1   999        					                      
-*                                                    
-*TF99900   lk-C002-AL016  1    1.0  			                        
-*TF99910   0.0       6.5                                * Anulamos TF para dejar que MELCOR calcule la fuga por diferencia de presiones y no velocidades
-*
-*-------------------------------------------------------
-* Leak-AL016-R016 (Airlock to LLC)                      * De momento ANULADA. Usar directamente leak de Corridor a LLC para simplificar
-*-------------------------------------------------------
-*
-*FL99800   lk-AL016-R016  086   016   7.0  7.0
-*FL99801   0.0001   0.5    1.0 	                  
-*FL99802	  3     0    0     0 				                  
-*FL99803   1.0   1.0                      	                  
-*FL998S0   0.0001  0.5   0.0112   
-*                        
-*FL998T0   1   998        					                
-*
-*TF99800   lk-AL016-R016  1    1.0  			                 
-*TF99810   0.0       6.5                                * Pendiente de calcular; ISO 10648-2
-*
-*-------------------------------------------------------
 * Leak-C002-R016 (Corridor to LLC)                   
 *-------------------------------------------------------
 *
-FL99700   lk-C002-R016  042   016   7.0  7.0
-FL99701   1.0E-6  0.5    1.0 	                        * A = 1 mm2       
+FL99700   lk-C002-R016  016   042   7.0  7.0
+FL99701   1.0E-7  0.5    1.0 	                        * A = 0.1mm2     
 FL99702	  3     0    0     0 				            * Horizontal flow      
 FL99703   1.0   1.0                                     * Coef por defecto (1.0)                 	                  
-FL997S0   1.0E-6  0.5   0.001129                        * Dh = 4A/2piR         
-*                
-*FL997T0   1   997        					                
+FL997S0   1.0E-7  0.5   0.0003568248232305542                       
 *
-*TF99700   lk-C002-R016  1    1.0  			                 
-*TF99710   0.0       6.5                                * Anulamos TF para dejar que MELCOR calcule la fuga por diferencia de presiones y no velocidades
+* 
+*
+*
+*
+*
+*
+*
 *
 . * End
-*
-*
 *
 **********************************************************
 *                     MELCOR INPUT                       *
