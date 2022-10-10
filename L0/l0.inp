@@ -66,7 +66,7 @@ TF00110  0.0  0.0391                        * Se devuelve el 100% del Ar extraí
 TF00200 'LLC-Energy-src' 1 1.0              * Energy source
 TF00210  0.0  290.95                        * Temp LLC = 290.95K (mantener temp cte.)
 *                                                                                                                                     
-******* Sink Ar *******                     * Sumideros LLC: Pg. 119/136 DDD-SGS [2PPHA3]: 80 m3/h total                  
+******* Sink Ar *******                     * Sumideros SGS-LLC: Pg. 119/136 DDD-SGS [2PPHA3]: 80 m3/h total                  
 *                                           
 CV016C3  MASS.8 003 2                       
 CV016C4  TE 002 8                           
@@ -210,24 +210,24 @@ TF01010  0.0  293.15                                 * Temp C3 collector = 293.1
 CV411C1  MASS.8 009 2
 CV411C2  TE 010 8
 *
-TF00900 'ENV-Ar-src' 1 1.0                          * SUPOSICIÓN: se pierde un 1% de Ar (3.91E-4 kg/s)
-TF00910  0.0  0.000391                              * Perdidas Ar LLC 
+TF00900 'ENV-Ar-src' 1 1.0                          * Ar vertido a chimenea a traves del G-RWTS
+TF00910  0.0  0.011893                              * 24 m3/h
 *                                                                                                                                    
 ******* Source O2 *******                           
 *                                                   
 CV411C3  MASS.5 011 2                         
 CV411C4  TE 010 8                      
 *                                                   
-TF01100 'ENV-O2-src' 1 1.0                          
-TF01110  0.0  9.12972E-05                           * Igual que sumidero LLC 
+TF01100 'ENV-O2-src' 1 1.0                          * O2 vertido a chimenea a traves del G-RWTS
+TF01110  0.0  7.93889E-05                           * 0.2 m3/h
 *                                                                                                                                  
 ******* Source N2 *******                           
 *                                                   
 CV411C5  MASS.4 013 2                         
 CV411C6  TE 010 8                       
 *                                                   
-TF01300 'ENV-N2-src' 1 1.0                          
-TF01310  0.0  2.64015E-04                           * Igual que sumidero LLC
+TF01300 'ENV-N2-src' 1 1.0                          * N2 vertido a chimenea a traves del G-RWTS
+TF01310  0.0  0.0002674894                          * 0.77 m3/h
 *                                                   
 ****************************************************************************************************************************************
 *         												  FP (Flow paths) INPUT						   								   *
@@ -287,7 +287,7 @@ FL003S0   18E-2   50.0    0.478
 FL003T0   1   015                                        
 *
 TF01500   HVAC-C002-ex   1    1.0                         
-TF01510   0.0       5.45                                    * AJUSTADO. Anterior (EAI) = 5.2
+TF01510   0.0       5.45                                    * AJUSTADO manualmente. Anterior (EAI) = 5.2
 *
 *-------------------------------------------------------
 * HVAC-C002-al            FM    TO    FM   TO
