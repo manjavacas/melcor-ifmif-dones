@@ -1,0 +1,368 @@
+****************************************************************************************************************************************
+****************************************************************************************************************************************
+*                                                        Main Building MELCOR model (Level 0)                                          *
+****************************************************************************************************************************************
+****************************************************************************************************************************************
+*
+*EOR* MELGEN
+*
+title     SGS
+jobid     SGS
+*
+restartf  SGS.rst
+outputf   SGS_gen.out
+diagf     SGS_gen.dia
+stopf     SGS.stp
+*
+crtout 
+tstart     00.0
+DTTIME     1.E-1      * initial time step
+*
+*
+****************************************************************************************************************************************
+*         										    NCG (Non Condensible Gases) INPUT			    		  						   *
+****************************************************************************************************************************************
+*
+NCG001    N2    4                                   * MATERIAL 4 IS N2
+NCG002    O2    5                                   * MATERIAL 5 IS O2
+NCG333    H2    6                                   * MATERIAL 6 IS H2
+NCG444    HE    7                                   * MATERIAL 7 IS HE
+NCG555    AR    8                                   * MATERIAL 8 IS AR
+*
+****************************************************************************************************************************************
+*        												CV (Control Volumes) INPUT									                   *
+****************************************************************************************************************************************
+*
+*-----------------------------------------------                                                                
+* CV016 - R016 - Lithium loop cell (C3)                                                                    
+*-----------------------------------------------                                                                
+CV01600   R016  2  2  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV01601   0   0		                                * Fog allowed (default)
+CV016A0   3                                                                                         
+CV016A1   PVOL  100000.0                            * 100000 Pa [EFDA_D_2N74W4]
+CV016A2   TATM  293.15  RHUM  0.0                   * 20 deg. C; 0% rel. humidity
+CV016A3   MLFR.8  1.0                               * Filled with Ar [EFDA_D_2PPHA3]
+*CV016A3   MLFR.8 0.9999                            * Filled with Ar -> 99.99%   
+*CV016A4   MLFR.5  0.000021                         * Initial 02 -> 21% de 0.01% 
+*CV016A5   MLFR.4  0.000079                         * Initial N2 -> 79% de 0.01% 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV016B1   0.0        0.0                                                            
+CV016B2   7.5   2856.885
+***
+*-----------------------------------------------                                                                
+* CV042 - C002 - Corridor (C2)                                                          
+*-----------------------------------------------                                                                
+CV04200   C002  2  2  1                                                           
+CV04201   0   0					                 
+CV042A0   3                                                                                         
+CV042A1   PVOL    101235.0                          * 101325 - 90 Pa                                                                 
+CV042A3   TATM    293.15    RHUM 0.6                                                
+CV042A5   MLFR.4  0.7812                            * Filled with air (N2) -> 78.12%
+CV042A6   MLFR.5  0.20946                           * Filled with air (O2) -> 20.946%
+CV042A8   MLFR.8  0.00934                           * Filled with air (Ar) -> 0.934%
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV042B1   0.0    0.0                                                            
+CV042B2   8.5    11032.3359                     
+***
+*-----------------------------------------------                                                                
+* CV408 - ENV-CHIMENEA - Environment (chimenea)                                                                     
+*-----------------------------------------------                                                                
+CV40800   ENV  2  2  5          		                                   
+CV40801   0   0		                                * Time-dependent				            
+CV408A0   3                                                                                         
+CV408A1   PVOL    101325.0                          * 101325 Pa = 1atm                                                                     
+CV408A3   TATM    293.15  RHUM  0.6    	                                                  
+CV408A8   MLFR.4  0.79                              * Filled with air (N2)
+CV408A9   MLFR.5  0.21                              * Filled with air (O2)
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV408B1   0.0        0.0                                                          
+CV408B2  50.0   1000000.0              	            * Random huge volume                                                          
+***
+*-----------------------------------------------                                                                
+* CV409 - Ar Supply Subsystem                                                                     
+*-----------------------------------------------                                                                
+CV40800   ASS  2  2  5          		                                   
+CV40801   0   -1		                            * Time-independent				            
+CV408A0   3                                                                                         
+CV408A1   PVOL    100200.0                          * P >= LLC                                                                 
+CV408A3   TATM    293.15  RHUM  0.0    	                                                  
+CV408A3   MLFR.8  1.0                               * Filled with Ar
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV408B1   0.0        0.0                                                          
+CV408B2  50.0   1000000.0              	            * Random huge volume                                                          
+***
+************************************************************* PARAMS FILTROS ************************************************
+*
+***** VOLUMENES *****
+*
+* Volumen de la LLC
+CF016000 VolLLC EQUALS 1 0.0  2856.885               * Sin equipamiento
+CF016001 1.0 0.0 TIME
+*
+* Volumen de la LLC (inv)
+CF016100    VolLLCinv   DIVIDE  1   0.0  
+CF016101    1.0    0.0    CFVALU.0160
+*
+****** FILTROS ******
+*
+* ID: CFnnnXXYY
+* nnn = room
+* XX = filter
+* YY = parameter ID
+*
+*------------------------------------------------------
+* Filtro 1  XX = 01
+*------------------------------------------------------
+* Caudal (Q1 = 80 m3/h / 4 filtros = 20 m3/h [Nippon Gases] | ID = 01)
+CF016010100 CaudalF1    EQUALS  1 0.0 20.0
+CF016010101 1.0 0.0 TIME
+*--------------------------------------------
+* Eficiencia N2 (% | ID = 11)
+CF016011100 EfN2F1    EQUALS  1 0.0 0.5         * Se retiene / elimina el 50 % de la masa
+CF016011101 1.0 0.0 TIME
+*
+* Eficiencia O2 (% | ID = 21)
+CF016012100 EfO2F1    EQUALS  1 0.0 <VALOR>
+CF016012101 1.0 0.0 TIME
+*
+* Eficiencia H2O (% | ID = 31)
+CF016013100 EfH2OF1   EQUALS  1 0.0 <VALOR>
+CF016013101 1.0 0.0 TIME
+*---------------------------------------------
+* Saturación N2 (kg | ID = 12)
+CF016011200 SatN2F1    EQUALS  1 0.0 <VALOR>
+CF016011201 1.0 0.0 TIME
+*
+* Saturación O2 (kg | ID = 22)
+CF016012200 SatO2F1    EQUALS  1 0.0 <VALOR>
+CF016012201 1.0 0.0 TIME
+*
+* Saturación H2O (kg | ID = 32)
+CF016013200 SatH2OF1   EQUALS  1 0.0 <VALOR>
+CF016013201 1.0 0.0 TIME
+*---------------------------------------------
+* Nivel para renovación (% | ID = 02)
+CF016010200 RenovF1    EQUALS  1 0.0 0.8         * Si masa O2 / H2O en filtro >= 80% saturacion --> evacuacion por chimenea
+CF016010201 1.0 0.0 TIME
+*---------------------------------------------
+* Volumen  (m3 | ID = 03)
+CF016010300 VolF1      EQUALS  1 0.0 <VALOR>
+CF016010301 1.0 0.0 TIME
+*---------------------------------------------
+* Tiempo de limpiado  (s | ID = 04)
+CF016010400 VolF1      EQUALS  1 0.0 10.0        * 10 segundos hasta volver a operar
+CF016010401 1.0 0.0 TIME
+*---------------------------------------------
+*
+************************************************************** FLOW PATHS ******************************************************
+*
+*-------------------------------------------------------
+* Leak-C002-R016 (Corridor to LLC)                   
+*-------------------------------------------------------
+*
+FL99700   lk-C002-R016  042   016   7.0  7.0
+FL99701   25.0E-6  0.5    1.0 	                      * A = 25mm2     
+FL99702	  3     0    0     0 				          * Horizontal flow      
+FL99703   1.0   1.0                                   * Coef por defecto (1.0)                 	                  
+FL997S0   25.0E-6  0.5   0.005641895835477563                       
+*
+*------------------------------------------------
+* Ar suppply to LLC
+*------------------------------------------------
+*
+FL99900   ASS-R016  409   016  7.0  7.0
+FL99901   1.0  0.5    1.0 	                         * A = 25mm2     
+FL99902	  3     0    0     0 				         * Horizontal flow      
+FL99903   1.0   1.0                                  * Coef por defecto (1.0)                 	                  
+FL999S0   1.0  0.5   1.128379167                       
+*
+*------------------------------------------------
+* Purificacion SGS
+*------------------------------------------------
+*
+*----------- Filtro 1 --------------
+*                  FM    TO    FM    TO 
+FL00100   Filter1  016  408    7.0  7.0
+FL00101   1.0   20.0    1.0                               
+FL00102	  3     0    0     0                           
+FL00103   1.0   1.0                                                           
+FL001S0   1.0   20.0    1.128379167                                   
+FL001V0   -1     1001    1001                    * Valve input                        
+FL001T0   2   1144                               * Velocidad
+*
+* IF (volO2 >= X OR volH2O >= Y) THEN abrir
+*
+CF100100  control L-A-IFTE 1 1.0 0.0
+CF100110  1.0    * initial value (full open)
+CF100103  -853   * open TF
+CF100104  -854   * close TF
+CF100105  NORMAL
+CF100110  1.0    0.0    CFVALU.1143 * look at pressure difference
+*
+CF114300  DP1  ADD   2   1.0  100114305  NORMAL
+CF114310   1.0    0.0   CVH-P.224
+CF114315  -1.0    0.0   CVH-P.225
+*
+CF114400   VALVE  L-A-IFTE    3   1.0
+CF114405   NORMAL
+CF114410   1.0      0.0         CFVALU.1145 
+CF114415   0.0     0.254        TIME     
+CF114420   0.0    -0.254        TIME                  
+*
+CF114500   PRE      L-GT    2   1.0
+CF114505   NORMAL
+CF114510   1.0      0.0       CFVALU.1143 
+CF114515   0.0      0.0       TIME        
+*
+TF85300   leakopen  2   1.  0.
+TF85301   0     0                                      * this is the default
+TF85310   0.0     0.                                   * closed if there is no press diff
+TF85311   40.0    1.                                   * full open if press diff is
+*
+TF85400   leakclose  2   1.  0.
+TF85401   0    0                                 
+TF85410   0.0     0.                                   
+TF85411   40.0    1.                                  
+*
+****************************************************  SUMIDEROS Y FUENTES ***************************************************** 
+*
+***** Energy source LLC *****           
+*                                           
+TF00100 'Energy-src' 1 1.0                           * Energy source
+TF00110  0.0  CVH-TVAP.016                           * Temp LLC
+*                                                                                    
+************************ Sumideros LLC **************************
+*
+*----------------- Filtro 1 --------------------
+*
+********* N2 - Filtro 1 *********                                                                         
+CV016C10  MASS.4 011 2                         
+CV016C11  TE 001 8                       
+*                                                   
+TF01100 'LLC-N2-sink' 1 -1.0                        * N2 vertido a chimenea a traves del G-RWTS
+TF01110  0.0  CFVALU.0011                           * ( CVH-MASS.4.016 * CaudalF1 / VolLLC ) * EfN2F1
+*
+CF001100 O2-rate-F1 MULTIPLY 4 1.0
+CV001110 1.0 0.0 CVH-MASS.4.016                     * Masa N2 en LLC 
+CV001111 1.0 0.0 CFVALU.0160101                     * Caudal F1
+CV001112 1.0 0.0 CFVALU.0161                        * 1/Volumen LLC
+CV001113 1.0 0.0 CFVALU.0160111                     * Eficiencia F1 para N2
+*                                                                                                                                  
+********* O2 - Filtro 1 *********                                                                         
+CV016C12  MASS.5 012 2                         
+CV016C13  TE 001 8                      
+*                                                   
+TF01200 'LLC-O2-sink' 1 -1.0                        * O2 vertido a chimenea a traves del G-RWTS
+TF01210  0.0  CFVALU.0012                           * ( CVH-MASS.5.016 * CaudalF1 / VolLLC ) * EfO2F1
+*
+CF001200 O2-rate-F1 MULTIPLY 4 1.0
+CV001210 1.0 0.0 CVH-MASS.5.016                     * Masa O2 en LLC 
+CV001211 1.0 0.0 CFVALU.0160101                     * Caudal F1
+CV001212 1.0 0.0 CFVALU.0161                        * 1/Volumen LLC
+CV001213 1.0 0.0 CFVALU.0160121                     * Eficiencia F1 para O2
+*                                                                                                                                  
+********* H2O - Filtro 1 *********
+CV016C14  MASS.3 013 2
+CV016C15  TE 001 8
+*
+TF01300 'LLC-H2O-sink' 1 -1.0                       * H2O vertido a chimenea a traves del G-RWTS
+TF01310  0.0  CFVALU.0013                           * ( CVH-MASS.3.016 * CaudalF1 / VolLLC ) * EfH2OF1
+*
+CF001300 H2O-rate-F1 MULTIPLY 4 1.0
+CV001310 1.0 0.0 CVH-MASS.3.016                     * Masa H2O en LLC
+CV001311 1.0 0.0 CFVALU.0160101                     * Caudal F1
+CV001312 1.0 0.0 CFVALU.0161                        * 1/Volumen LLC
+CV001313 1.0 0.0 CFVALU.0160131                     * Eficiencia F1 para H2O
+*  
+*-----------------------------------------------        
+*
+************************ FUENTES ENVIRONMENT **************************
+*
+*----------------- Filtro 1 --------------------
+*
+********* N2 - Filtro 1 *********                                                                         
+CV408C14  MASS.4 014 2                         
+CV408C15  TE 001 8                       
+*                                                   
+TF01400 'ENV-N2-source' 1 1.0                      * N2 vertido a chimenea a traves del G-RWTS
+TF01410  0.0  CFVALU.0011                           * ( CVH-MASS.4.016 * CaudalF1 / VolLLC ) * EfN2F1
+*                                                                                                                                  
+********* O2 - Filtro 1 *********                                                                         
+CV408C12  MASS.5 015 2                         
+CV408C13  TE 001 8                      
+*                                                   
+TF01500 'ENV-O2-source' 1 1.0                      * O2 vertido a chimenea a traves del G-RWTS
+TF01510  0.0  CFVALU.0012                           * ( CVH-MASS.5.016 * CaudalF1 / VolLLC ) * EfO2F1
+*                                                                                                                                
+********* H2O - Filtro 1 *********
+CV408C10  MASS.3 016 2
+CV408C11  TE 001 8
+*
+TF01600 'ENV-H2O-source' 1 1.0                     * H2O vertido a chimenea a traves del G-RWTS
+TF01610  0.0  CFVALU.0013                           * ( CVH-MASS.3.016 * CaudalF1 / VolLLC ) * EfH2OF1
+*  
+*-----------------------------------------------        
+*
+. * End
+*
+**********************************************************
+*                     MELCOR INPUT                       *
+**********************************************************
+*
+*EOR* melcor
+*
+noflush
+*
+*
+* WARNINGLEVEL 0 0 -1
+*
+*
+TITLE     SGS
+*
+*********
+* FILES *
+*********
+*
+RESTARTFILE  SGS.rst
+OUTPUTFILE   SGS.out
+PLOTFILE     SGS.ptf
+DIAGFILE     SGS_cor.dia
+MESSAGEFILE  SGS_cor.mes
+*
+*
+*
+CPULEFT          200.
+CPULIM           200000.   * max time running      
+*
+CYMESF           55    60    
+*
+*
+RESTART          -1        
+*
+TEND             1.0e5     * simulation time (seconds)
+*
+*
+SOFTDTMIN  .0001 1000
+*           TIME     DTMAX  DTMIN    DTEDT  DTPLT   DTRST
+TIME1        0.0     1.0    1.0e-3   1000.0  1.0    200.0
+TIME2      400.0     5.0    1.0e-3   1000.0  5.0    100.0
+TIME3      750.0     15.0   1.0e-3   1000.0  50.0   100.0
+TIME4     1500.0     15.0   1.0e-3   1000.0  50.0   100.0
+TIME5     2000.0     15.0   1.0e-3   1000.0  50.0   500.0
+TIME6     3000.0     15.0   1.0e-3   1000.0  50.0   500.0
+TIME7     4000.0     15.0   1.0e-3   2500.0  50.0   15000.0
+TIME8     5000.0     15.0   1.0e-3   2500.0  50.0   15000.0
+*
+*
+.* End
