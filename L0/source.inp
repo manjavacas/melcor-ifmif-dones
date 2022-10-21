@@ -53,9 +53,12 @@ CV042B2   8.5    11032.3359
 *
 ********* N2 - Filtro 1 *********  
 *
-CF00100 name MULTIPLY 2 1.0
+CF00100 name EQUALS 1 1.0
 CF00110 1.0 0.0 CVH-TVAP.042
-CF00111 0.0 1.0 TIME
+*
+*CF00100 name MULTIPLY 2 1.0
+*CF00110 1.0 0.0 CVH-TVAP.042
+*CF00111 0.0 1.0 TIME
 *                                                  
 TF01100 'LLC-N2-sink' 1 -1.0                        * N2 vertido a chimenea a traves del G-RWTS
 TF01110  0.0  1.0                           * ( CVH-MASS.4.016 * CaudalF1 / VolLLC ) * EfN2F1
