@@ -107,17 +107,17 @@ CV408B2  50.0   1000000.0              	            * Random huge volume
 ***** VOLUMENES *****
 *
 * Volumen de la LLC
-CF016000 VolLLC EQUALS 1 0.0  2856.885               * Sin equipamiento
-CF016001 1.0 0.0 TIME
+CF16000 VolLLC EQUALS 1 0.0  2856.885               * Sin equipamiento
+CF16001 1.0 0.0 TIME
 *
 * Volumen de la LLC (inv)
-CF016100    VolLLCinv   DIVIDE  1   0.0  
-CF016101    1.0    0.0    CFVALU.0160
+CF16100    VolLLCinv   DIVIDE  1   0.0  
+CF16101    1.0    0.0    CFVALU.160
 *
 ****** FILTROS ******
 *
-* ID: CFnnnXXYY
-* nnn = room
+* ID: CFnnXXYY
+* nn = room
 * XX = filter
 * YY = parameter ID
 *
@@ -125,44 +125,44 @@ CF016101    1.0    0.0    CFVALU.0160
 * Filtro 1  XX = 01
 *------------------------------------------------------
 * Caudal (Q1 = 80 m3/h / 4 filtros = 20 m3/h [Nippon Gases] | ID = 01)
-CF016010100 CaudalF1    EQUALS  1 0.0 20.0
-CF016010101 1.0 0.0 TIME
+CF16010100 CaudalF1    EQUALS  1 0.0 20.0
+CF16010101 1.0 0.0 TIME
 *--------------------------------------------
 * Eficiencia N2 (% | ID = 11)
-CF016011100 EfN2F1    EQUALS  1 0.0 0.5         * Se retiene / elimina el 50 % de la masa
-CF016011101 1.0 0.0 TIME
+CF16011100 EfN2F1    EQUALS  1 0.0 0.5         * Se retiene / elimina el 50 % de la masa
+CF16011101 1.0 0.0 TIME
 *
 * Eficiencia O2 (% | ID = 21)
-CF016012100 EfO2F1    EQUALS  1 0.0 <VALOR>
-CF016012101 1.0 0.0 TIME
+CF16012100 EfO2F1    EQUALS  1 0.0 <VALOR>
+CF16012101 1.0 0.0 TIME
 *
 * Eficiencia H2O (% | ID = 31)
-CF016013100 EfH2OF1   EQUALS  1 0.0 <VALOR>
-CF016013101 1.0 0.0 TIME
+CF16013100 EfH2OF1   EQUALS  1 0.0 <VALOR>
+CF16013101 1.0 0.0 TIME
 *---------------------------------------------
 * Saturación N2 (kg | ID = 12)
-CF016011200 SatN2F1    EQUALS  1 0.0 <VALOR>
-CF016011201 1.0 0.0 TIME
+CF16011200 SatN2F1    EQUALS  1 0.0 <VALOR>
+CF16011201 1.0 0.0 TIME
 *
 * Saturación O2 (kg | ID = 22)
-CF016012200 SatO2F1    EQUALS  1 0.0 <VALOR>
-CF016012201 1.0 0.0 TIME
+CF16012200 SatO2F1    EQUALS  1 0.0 <VALOR>
+CF16012201 1.0 0.0 TIME
 *
 * Saturación H2O (kg | ID = 32)
-CF016013200 SatH2OF1   EQUALS  1 0.0 <VALOR>
-CF016013201 1.0 0.0 TIME
+CF16013200 SatH2OF1   EQUALS  1 0.0 <VALOR>
+CF16013201 1.0 0.0 TIME
 *---------------------------------------------
 * Nivel para renovación (% | ID = 02)
-CF016010200 RenovF1    EQUALS  1 0.0 0.8         * Si masa O2 / H2O en filtro >= 80% saturacion --> evacuacion por chimenea
-CF016010201 1.0 0.0 TIME
+CF16010200 RenovF1    EQUALS  1 0.0 0.8         * Si masa O2 / H2O en filtro >= 80% saturacion --> evacuacion por chimenea
+CF16010201 1.0 0.0 TIME
 *---------------------------------------------
 * Volumen  (m3 | ID = 03)
-CF016010300 VolF1      EQUALS  1 0.0 <VALOR>
-CF016010301 1.0 0.0 TIME
+CF16010300 VolF1      EQUALS  1 0.0 <VALOR>
+CF16010301 1.0 0.0 TIME
 *---------------------------------------------
 * Tiempo de limpiado  (s | ID = 04)
-CF016010400 VolF1      EQUALS  1 0.0 10.0        * 10 segundos hasta volver a operar
-CF016010401 1.0 0.0 TIME
+CF16010400 VolF1      EQUALS  1 0.0 10.0        * 10 segundos hasta volver a operar
+CF16010401 1.0 0.0 TIME
 *---------------------------------------------
 *
 ************************************************************** FLOW PATHS ******************************************************
@@ -203,87 +203,72 @@ FL001T0   2   1144                               * Velocidad
 *
 * IF (volO2 >= X OR volH2O >= Y) THEN abrir
 *
-CF100100  control L-A-IFTE 1 1.0 0.0
-CF100110  1.0    * initial value (full open)
-CF100103  -853   * open TF
-CF100104  -854   * close TF
-CF100105  NORMAL
-CF100110  1.0    0.0    CFVALU.1143 * look at pressure difference
+CF100100 AperturaF1 L-A-IFTE 3 1.0
+CF100110 1.0 0.0 CFVALU.1002
+CF100111 0.0 1.0 TIME                            * ABIERTO
+CF100112 0.0 0.0 TIME                            * CERRADO
 *
-CF114300  DP1  ADD   2   1.0  100114305  NORMAL
-CF114310   1.0    0.0   CVH-P.224
-CF114315  -1.0    0.0   CVH-P.225
+CF100200 saturacion L-OR 2 2 1.0
+CF100210 1.0 0.0 CFVALU.1003
+CF100211 1.0 0.0 CFVALU.1004
 *
-CF114400   VALVE  L-A-IFTE    3   1.0
-CF114405   NORMAL
-CF114410   1.0      0.0         CFVALU.1145 
-CF114415   0.0     0.254        TIME     
-CF114420   0.0    -0.254        TIME                  
+CF100300 gt1 L-GT 2 1.0
+CF100310 1.0 0.0 CVH-MASS.5.016
+CF100311 1.0 0.0 CFVALU.160122
 *
-CF114500   PRE      L-GT    2   1.0
-CF114505   NORMAL
-CF114510   1.0      0.0       CFVALU.1143 
-CF114515   0.0      0.0       TIME        
-*
-TF85300   leakopen  2   1.  0.
-TF85301   0     0                                      * this is the default
-TF85310   0.0     0.                                   * closed if there is no press diff
-TF85311   40.0    1.                                   * full open if press diff is
-*
-TF85400   leakclose  2   1.  0.
-TF85401   0    0                                 
-TF85410   0.0     0.                                   
-TF85411   40.0    1.                                  
+CF100400 gt2 L-GT 2 1.0
+CF100410 1.0 0.0 CVH-MASS.3.016
+CF100411 1.0 0.0 CFVALU.160132
 *
 ****************************************************  SUMIDEROS Y FUENTES ***************************************************** 
 *
 ***** Energy source LLC *****           
 *                                           
-TF00100 'Energy-src' 1 1.0                           * Energy source
-TF00110  0.0  CVH-TVAP.016                           * Temp LLC
+CF00100 'Energy-src' EQUALS 1 1.0                    * Energy source
+CF00110  0.0  CVH-TVAP.016                           * Temp LLC
 *                                                                                    
 ************************ Sumideros LLC **************************
 *
 *----------------- Filtro 1 --------------------
 *
 ********* N2 - Filtro 1 *********                                                                         
-CV016C10  MASS.4 011 2                         
-CV016C11  TE 001 8                       
-*                                                   
-TF01100 'LLC-N2-sink' 1 -1.0                        * N2 vertido a chimenea a traves del G-RWTS
-TF01110  0.0  CFVALU.0011                           * ( CVH-MASS.4.016 * CaudalF1 / VolLLC ) * EfN2F1
+CV016C0  MASS.4 011 3                         
+CV016C1  TE 001 9  
 *
-CF001100 O2-rate-F1 MULTIPLY 4 1.0
-CV001110 1.0 0.0 CVH-MASS.4.016                     * Masa N2 en LLC 
-CV001111 1.0 0.0 CFVALU.0160101                     * Caudal F1
-CV001112 1.0 0.0 CFVALU.0161                        * 1/Volumen LLC
-CV001113 1.0 0.0 CFVALU.0160111                     * Eficiencia F1 para N2
+* N2 vertido a chimenea a traves del G-RWTS
+* ( CVH-MASS.4.016 * CaudalF1 / VolLLC ) * EfN2F1                     
+*
+CF01100 N2-rate-F1 MULTIPLY 4 -1.0
+CF01110 1.0 0.0 CVH-MASS.4.016                    * Masa N2 en LLC 
+CF01111 1.0 0.0 CFVALU.160101                     * Caudal F1
+CF01112 1.0 0.0 CFVALU.161                        * 1/Volumen LLC
+CF01113 1.0 0.0 CFVALU.160111                     * Eficiencia F1 para N2
 *                                                                                                                                  
 ********* O2 - Filtro 1 *********                                                                         
-CV016C12  MASS.5 012 2                         
-CV016C13  TE 001 8                      
-*                                                   
-TF01200 'LLC-O2-sink' 1 -1.0                        * O2 vertido a chimenea a traves del G-RWTS
-TF01210  0.0  CFVALU.0012                           * ( CVH-MASS.5.016 * CaudalF1 / VolLLC ) * EfO2F1
+CV016C2  MASS.5 012 3                         
+CV016C3  TE 001 9                      
 *
-CF001200 O2-rate-F1 MULTIPLY 4 1.0
-CV001210 1.0 0.0 CVH-MASS.5.016                     * Masa O2 en LLC 
-CV001211 1.0 0.0 CFVALU.0160101                     * Caudal F1
-CV001212 1.0 0.0 CFVALU.0161                        * 1/Volumen LLC
-CV001213 1.0 0.0 CFVALU.0160121                     * Eficiencia F1 para O2
+* O2 vertido a chimenea a traves del G-RWTS
+* ( CVH-MASS.5.016 * CaudalF1 / VolLLC ) * EfO2F1
+*
+CF01200 O2-rate-F1 MULTIPLY 4 -1.0
+CF01210 1.0 0.0 CVH-MASS.5.016                    * Masa O2 en LLC 
+CF01211 1.0 0.0 CFVALU.160101                     * Caudal F1
+CF01212 1.0 0.0 CFVALU.161                        * 1/Volumen LLC
+CF01213 1.0 0.0 CFVALU.160121                     * Eficiencia F1 para O2
 *                                                                                                                                  
 ********* H2O - Filtro 1 *********
-CV016C14  MASS.3 013 2
-CV016C15  TE 001 8
+CV016C4  MASS.3 013 3
+CV016C5  TE 001 9
 *
-TF01300 'LLC-H2O-sink' 1 -1.0                       * H2O vertido a chimenea a traves del G-RWTS
-TF01310  0.0  CFVALU.0013                           * ( CVH-MASS.3.016 * CaudalF1 / VolLLC ) * EfH2OF1
+* H2O vertido a chimenea a traves del G-RWTS
+* ( CVH-MASS.3.016 * CaudalF1 / VolLLC ) * EfH2OF1
 *
-CF001300 H2O-rate-F1 MULTIPLY 4 1.0
-CV001310 1.0 0.0 CVH-MASS.3.016                     * Masa H2O en LLC
-CV001311 1.0 0.0 CFVALU.0160101                     * Caudal F1
-CV001312 1.0 0.0 CFVALU.0161                        * 1/Volumen LLC
-CV001313 1.0 0.0 CFVALU.0160131                     * Eficiencia F1 para H2O
+CF01300 H2O-rate-F1 MULTIPLY 4 -1.0
+CF01310 1.0 0.0 CVH-MASS.3.016                    * Masa H2O en LLC
+CF01311 1.0 0.0 CFVALU.160101                     * Caudal F1
+CF01312 1.0 0.0 CFVALU.161                        * 1/Volumen LLC
+CF01313 1.0 0.0 CFVALU.160131                     * Eficiencia F1 para H2O
 *  
 *-----------------------------------------------        
 *
@@ -292,26 +277,25 @@ CV001313 1.0 0.0 CFVALU.0160131                     * Eficiencia F1 para H2O
 *----------------- Filtro 1 --------------------
 *
 ********* N2 - Filtro 1 *********                                                                         
-CV408C14  MASS.4 014 2                         
-CV408C15  TE 001 8                       
+CV408C0  MASS.4 014 3                         
+CV408C1  TE 001 9                       
 *                                                   
-TF01400 'ENV-N2-source' 1 1.0                      * N2 vertido a chimenea a traves del G-RWTS
-TF01410  0.0  CFVALU.0011                           * ( CVH-MASS.4.016 * CaudalF1 / VolLLC ) * EfN2F1
-*                                                                                                                                  
+CF04600 N2-rate-F1b EQUALS 1 -1.0
+CF01410 1.0 0.0 CFVALU.011
+*                                                                                                                                    
 ********* O2 - Filtro 1 *********                                                                         
-CV408C12  MASS.5 015 2                         
-CV408C13  TE 001 8                      
+CV408C2  MASS.5 015 3                         
+CV408C3  TE 001 9                      
 *                                                   
-TF01500 'ENV-O2-source' 1 1.0                      * O2 vertido a chimenea a traves del G-RWTS
-TF01510  0.0  CFVALU.0012                           * ( CVH-MASS.5.016 * CaudalF1 / VolLLC ) * EfO2F1
+CF01500 O2-rate-F1b EQUALS 1 -1.0
+CF01510 1.0 0.0 CFVALU.012
 *                                                                                                                                
 ********* H2O - Filtro 1 *********
-CV408C10  MASS.3 016 2
-CV408C11  TE 001 8
-*
-TF01600 'ENV-H2O-source' 1 1.0                     * H2O vertido a chimenea a traves del G-RWTS
-TF01610  0.0  CFVALU.0013                           * ( CVH-MASS.3.016 * CaudalF1 / VolLLC ) * EfH2OF1
-*  
+CV408C4  MASS.3 016 3
+CV408C5  TE 001 9
+* 
+CF01600 H2O-rate-F1b EQUALS 1 -1.0
+CF01610 1.0 0.0 CFVALU.013
 *-----------------------------------------------        
 *
 . * End
