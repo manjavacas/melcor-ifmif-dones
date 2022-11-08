@@ -18,3 +18,5 @@ clean:
 	rm -f MEGOUT
 	rm -f MELDIA
 	rm -f MELOUT
+	rm -f *.dia
+	rm -f *.out
