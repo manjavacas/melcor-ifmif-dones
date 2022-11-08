@@ -4,6 +4,9 @@ leak: clean
 l0: clean
 	./melgen-fusion-186_bdba L0/l0.inp
 	./melcor-fusion-186_bdba L0/l0.inp
+l1: clean
+	./melgen-fusion-186_bdba L1/l1.inp
+	./melcor-fusion-186_bdba L1/l1.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES

@@ -41,54 +41,15 @@ CV01601   0   0		                                * Fog allowed (default)
 CV016A0   3                                                                                         
 CV016A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV016A3   MLFR.8  0.99                              * Filled with Ar -> 99.99%   
-CV016A4   MLFR.5  0.0021                            * Initial 02 -> 21% de 0.01% 
-CV016A5   MLFR.4  0.0079                            * Initial N2 -> 79% de 0.01% 
+CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
 CV016B1   0.0      0.0                                                            
 CV016B2   7.5   2856.885
 ***
-*
-*********************************
-*
-******* Source Ar *******                   
-*
-CV016C1  MASS.8 001 2                       * Format 1
-CV016C2  TE 002 8                           
-*                                           
-TF00100 'LLC-Ar-src' 1 1.0                   
-TF00110  0.0  0.0391                        * Se devuelve el 100% del Ar extraído (se extrae 0.0391 kg/s)
-*                                                                                            
-******* Energy source for LLC *******           
-*                                           
-TF00200 'LLC-Energy-src' 1 1.0              * Energy source
-TF00210  0.0  290.95                        * Temp LLC = 290.95K (mantener temp cte.)
-*                                                                                                                                     
-******* Sink Ar *******                     * Sumideros SGS-LLC: Pg. 119/136 DDD-SGS [2PPHA3]: 80 m3/h total                  
-*                                           
-CV016C3  MASS.8 003 2                       
-CV016C4  TE 002 8                           
-*
-TF00300 'LLC-Ar-sink' 1 -1.0    
-TF00310  0.0  0.0391                        * DDD-SGS: 78.92 m3/h -> Densidad Ar = 1.784 kg/m3 --> 140.793 kg/h --> 0.0391 kg/s    
-*
-******* Sink O2 *******                     * Se purifica el 95% del O2 y N2, por lo que se devuelve el 5%
-*
-CV016C5  MASS.5 005 2
-CV016C6  TE 002 8
-*
-TF00500 'LLC-O2-sink' 1 -1.0
-TF00510 0.0  9.12972E-05                    * DDD-SGS: 0.23 - 0.02 (5% que se devuelve a la LLC) = 0.21 m3/h --> Densidad 02 = 1.429 kg/m3 --> 0.32867 kg/h --> 9.12972E-05 kg/s
-*
-******* Sink N2 *******
-*
-CV016C7  MASS.4 007 2
-CV016C8  TE 002 8
-*
-TF00700 'LLC-N2-sink' 1 -1.0
-TF00710  0.0  2.64015E-04                   * DDD-SGS: 0.85 - 0.09 (5% que se devuelve a la LLC) = 0.76 m3/h --> Densidad N2 = 1.2506 kg/m3 --> 0.950456 kg/h --> 2.64015E-04 kg/s
 *
 *-----------------------------------------------                                                                
 * CV086 - AL016 - Airlock (C3)                                                                   
@@ -129,7 +90,63 @@ CV042B2   8.5    11032.3359
 ****************************************************************************************************************************************
 *
 *-----------------------------------------------                                                                
-* CV407 - ENV-INLET - Environment (inlet)                                                                
+* CV997 - ArSS - Ar Supply Subsystem (C3)                                                                    
+*-----------------------------------------------                                                                
+CV99700   ARSS  2  0  1                                                            
+CV99701   0   0		                                * Fog allowed (default)
+CV997A0   3                                                                                         
+CV997A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV997A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV997A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV997A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV997A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV997B1   0.0      0.0                                                            
+CV997B2   0.3      10                             
+***
+*
+*-----------------------------------------------                                                                
+* CV998 - VPSA-AUX - VPSA-AUX (C3)                                                                    
+*-----------------------------------------------                                                                
+CV99800   VPSAAUX  2  0  1                                                   
+CV99801   0   0		                                * Fog allowed (default)
+CV998A0   3                                                                                         
+CV998A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV998A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV998A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV998A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV998A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV998B1   0.0      0.0                                                            
+CV998B2   0.3      0.147                            * Dimensiones conducto 700 x 300 (x 700 de fondo)                              
+***
+*
+*-----------------------------------------------                                                                
+* CV999 - VPSA - VPSA (C3)                                                                    
+*-----------------------------------------------                                                                
+CV99900   VPSA  2  0  1                                                   
+CV99901   0   0		                                * Fog allowed (default)
+CV999A0   3                                                                                         
+CV999A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV999A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV999A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV999A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV999A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV999B1   0.0      0.0                                                            
+CV999B2   6.0   942.48                              * Asumimos 8 cilindros de R = 2.5m y H = 6m
+***
+*
+****************************************************************************************************************************************
+*
+*-----------------------------------------------                                                                
+* CV407 - ENV-INLET - Environment (HVAC inlet)                                                                
 *-----------------------------------------------                                                                
 CV40700   ENV  2  2  5          		                                           
 CV40701   0   -1                                    * Time-independent				       
@@ -147,7 +164,7 @@ CV407B2  50.0   1000000.0              	            * Random huge volume
 ***                  
 *
 *-----------------------------------------------                                                                
-* CV408 - ENV-OUTLET - Environment (outlet)                                                                     
+* CV408 - ENV-OUTLET - Environment (HVAC outlet)                                                                     
 *-----------------------------------------------                                                                
 CV40800   ENV  2  2  5          		                                   
 CV40801   0   -1		                            * Time-independent				            
@@ -160,10 +177,27 @@ CV408A9   MLFR.5  0.21                              * Filled with air (N2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV408B1   0.0        0.0                                                          
+CV408B1   0.0        0.0                                                           
 CV408B2  50.0   1000000.0              	            * Random huge volume                                                          
 ***
 *
+*-----------------------------------------------                                                                
+* CV409 - ENV-GRWTS - G-RWTS                                                                  
+*-----------------------------------------------                                                                
+CV40900   GRWTS  2  2  5          		                                   
+CV40901   0   -1		                            * Time-independent				            
+CV409A0   3                                                                                         
+CV409A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV409A3   TATM    293.15  RHUM  0.6    	                                                  
+CV409A8   MLFR.4  0.79                              * Filled with air (O2)
+CV409A9   MLFR.5  0.21                              * Filled with air (N2)
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV409B1   0.0        0.0                                                          
+CV409B2  50.0   1000000.0              	            * Random huge volume                                                          
+***
 *-----------------------------------------------                                                              
 * CV410 - C2-collector - HVAC collector for C2
 *-----------------------------------------------                                                               

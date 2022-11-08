@@ -8,17 +8,17 @@
 *
 *EOR* MELGEN
 *
-title     'L1'
-jobid     'L1'
+title     l1
+jobid     l1
 *
-restartf  'L1.RST'
-outputf   'L1.out'
-diagf     'L1.dia'
-stopf     'L1.stp'
+restartf  l1.rst
+outputf   l1_gen.out
+diagf     l1_gen.dia
+stopf     l1.stp
 *
 crtout 
 tstart     0.0
-DTTIME           1.E-1     *initial time step
+DTTIME     1.E-1     *initial time step
 *
 *
 ****************************************************************************************************************************************
@@ -569,8 +569,8 @@ CV606A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV606B1   17.2      0.0                                                         
-CV606B2   17.5   0.0375                              * 500 x 300 x 250
+CV606B1   17.1      0.0                                                         
+CV606B2   17.5     0.05                             * 500 x 400 x 250
 *
 *-----------------------------------------------
 * CV607 - CVC2_6 - Connection Volume C2 6
@@ -1052,13 +1052,13 @@ TF52510   0.0        3.519166667 * ?, velocity (para tener 12669 m3/h)
 *-------------------------------------------------------
 * HVAC-S302          FM    TO     FM     TO
 *-------------------------------------------------------
-FL52600   HVAC-S302    512   513  17.0  17.0                   * 
+FL52600   HVAC-S302    512   513  17.2375  17.2375                   
 FL52601   0.525   26.8    1.0                     * A, L, FRACT OPEN, DIAM
 FL52602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL52603   1.0   1.0                                             * FORM LOSS
 FL526S0   0.525   26.8   0.68852459                     * 1000 X 525
-FL5260F   16.5    17.5
-FL5260T   16.5    17.5
+FL5260F   16.975    17.5
+FL5260T   16.975    17.5
 FL526T0   1   526        * TF, TFnumber
 *
 TF52600   FL526_vel  1    1.0  *name, number datapairs, mult.factor
@@ -1632,17 +1632,17 @@ noflush
 * MELCOR INPUT     *
 **********************************************************
 *
-TITLE     'L1'
+TITLE     l1
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  L1.RST
-OUTPUTFILE   L1.OUT
-PLOTFILE     L1.PTF
-DIAGFILE     L1cor.DIA
-MESSAGEFILE  L1cor.MES
+RESTARTFILE  l1.rst
+OUTPUTFILE   l1.out
+PLOTFILE     l1.ptf
+DIAGFILE     l1_cor.dia
+MESSAGEFILE  l1_cor.mes
 *
 *
 *
@@ -1654,7 +1654,7 @@ CYMESF           55    60
 *
 RESTART          -1        
 *
-TEND     3.0E2 *segundos de simulacion
+TEND     1.0E4 *segundos de simulacion
 *
 *
 SOFTDTMIN  1.0E-4 1000
