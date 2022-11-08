@@ -283,36 +283,36 @@ CV106B1   9.0      0.0
 CV106B2   17.5    9588.714                              * 8.5m (h) ; 9588.714 m3
 ***
 *-----------------------------------------------                                                                
-* CV100 - S02 - Stairs (C2)                                                                   
+* CV093 - S02 - Stairs (C2)                                                                   
 *-----------------------------------------------                                                                
-CV10000   S02  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-CV10001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-CV100A0   3                                                                                         
-CV100A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV100A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-CV100A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV100A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV09300   S02  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV09301   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV093A0   3                                                                                         
+CV093A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV093A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV093A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV093A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV100B1   9.0      0.0                                                         
-CV100B2   17.5     263.8528                             * 8.5m (h) ; 263.8528 m3
+CV093B1   0.0      0.0                                                         
+CV093B2   31.5     -                             * - m3
 ***
 *-----------------------------------------------                                                                
-* CV101 - SB4 - Shipping Bay 4 (C2)                                                                   
+* CV064 - SB4 - Shipping Bay 4 (C2)                                                                   
 *-----------------------------------------------                                                                
-CV10100   SB4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-CV10101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-CV101A0   3                                                                                         
-CV101A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV101A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-CV101A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV101A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV06400   SB4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV06401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV064A0   3                                                                                         
+CV064A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV064A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV064A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV064A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV101B1   9.0      0.0                                                         
-CV101B2   17.5     263.8528                             * 8.5m (h) ; 263.8528 m3
+CV101B1   0.0      0.0                                                         
+CV101B2   31.5     -                             * - m3
 ***
 *
 ******************** CONNECTION VOLUMES *************************
@@ -1003,7 +1003,7 @@ TF52210   0.0       5.21037037  * ?, velocity (para tener 3517 m3/h)
 *-------------------------------------------------------
 * HVAC-S207          FM    TO     FM     TO
 *-------------------------------------------------------
-FL52300   HVAC-S207    511   100  17.4125  17.4125                   * 
+FL52300   HVAC-S207    511   093  17.4125  17.4125                   * 
 FL52301   0.039375   3.2    1.0                      * A, L, FRACT OPEN, DIAM
 FL52302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL52303   1.0   1.0                                             * FORM LOSS
@@ -1284,7 +1284,7 @@ TF61010   0.0      3.624618675  * ?, velocity (para tener -1321.173507 m3/h)
 *-------------------------------------------------------
 * HVAC-C2_A106           FM    TO     FM     TO
 *-------------------------------------------------------
-FL61100   HVAC-C2_A106   100   606  17.3  17.3                   * 
+FL61100   HVAC-C2_A106   093   606  17.3  17.3                   * 
 FL61101   0.09   12.7   1.0                       * A, L, FRACT OPEN, DIAM
 FL61102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL61103   1.0   1.0                                             * FORM LOSS
