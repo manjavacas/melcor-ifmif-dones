@@ -296,7 +296,7 @@ CV093A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV093B1   0.0      0.0                                                         
-CV093B2   31.5     -                             * - m3
+CV093B2   31.5     1055.4112                            * 263.8528 x 4 m3
 ***
 *-----------------------------------------------                                                                
 * CV064 - SB4 - Shipping Bay 4 (C2)                                                                   
@@ -312,7 +312,7 @@ CV064A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV101B1   0.0      0.0                                                         
-CV101B2   31.5     -                             * - m3
+CV101B2   31.5     2455.92                             * 1134 + 330.48 x 4 m3
 ***
 *
 ******************** CONNECTION VOLUMES *************************
