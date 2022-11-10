@@ -168,57 +168,57 @@ CV905B2   7.5      1.0                              * 1m x 1m x 1m
 ****************************************************************************************************************************************
 *
 *-----------------------------------------------                                                                
-* CV407 - ENV-INLET - Environment (HVAC inlet)                                                                
+* CV400 - ENV-INLET - Environment (HVAC inlet)                                                                
 *-----------------------------------------------                                                                
-CV40700   ENV  2  2  5          		                                           
-CV40701   0   -1                                    * Time-independent				       
-CV407A0   3                                                                                         
-CV407A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-CV407A3   TATM    293.15  RHUM  0.6    	                                                 
-CV407A8   MLFR.4  0.79                              * Filled with air (O2)
-CV407A9   MLFR.5  0.21                              * Filled with air (N2)
+CV40000   ENV  2  2  5          		                                           
+CV40001   0   -1                                    * Time-independent				       
+CV400A0   3                                                                                         
+CV400A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV400A3   TATM    293.15  RHUM  0.6    	                                                 
+CV400A8   MLFR.4  0.79                              * Filled with air (O2)
+CV400A9   MLFR.5  0.21                              * Filled with air (N2)
 *
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV407B1   0.0        0.0                                                          
-CV407B2  50.0   1000000.0              	            * Random huge volume                                                          
+CV400B1   0.0        0.0                                                          
+CV400B2  50.0   1000000.0              	            * Random huge volume                                                          
 ***                  
 *
 *-----------------------------------------------                                                                
-* CV408 - ENV-OUTLET - Environment (HVAC outlet)                                                                     
+* CV401 - ENV-OUTLET - Environment (HVAC outlet)                                                                     
 *-----------------------------------------------                                                                
-CV40800   ENV  2  2  5          		                                   
-CV40801   0   -1		                            * Time-independent				            
-CV408A0   3                                                                                         
-CV408A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-CV408A3   TATM    293.15  RHUM  0.6    	                                                  
-CV408A8   MLFR.4  0.79                              * Filled with air (O2)
-CV408A9   MLFR.5  0.21                              * Filled with air (N2)
+CV40100   ENV  2  2  5          		                                   
+CV40101   0   -1		                            * Time-independent				            
+CV401A0   3                                                                                         
+CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV401A3   TATM    293.15  RHUM  0.6    	                                                  
+CV401A8   MLFR.4  0.79                              * Filled with air (O2)
+CV401A9   MLFR.5  0.21                              * Filled with air (N2)
 *
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV408B1   0.0        0.0                                                           
-CV408B2  50.0   1000000.0              	            * Random huge volume                                                          
+CV401B1   0.0        0.0                                                           
+CV401B2  50.0   1000000.0              	            * Random huge volume                                                          
 ***
 *
 *-----------------------------------------------                                                                
-* CV409 - ENV-GRWTS - G-RWTS                                                                  
+* CV402 - ENV-GRWTS - Environment (G-RWTS)
 *-----------------------------------------------                                                                
-CV40900   G-RWTS  2  2  5          		                                   
-CV40901   0   -1		                            * Time-independent				            
-CV409A0   3                                                                                         
-CV409A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-CV409A3   TATM    293.15  RHUM  0.6    	                                                  
-CV409A8   MLFR.4  0.79                              * Filled with air (O2)
-CV409A9   MLFR.5  0.21                              * Filled with air (N2)
+CV40200   G-RWTS  2  2  5          		                                   
+CV40201   0   -1		                            * Time-independent				            
+CV402A0   3                                                                                         
+CV402A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV402A3   TATM    293.15  RHUM  0.6    	                                                  
+CV402A8   MLFR.4  0.79                              * Filled with air (O2)
+CV402A9   MLFR.5  0.21                              * Filled with air (N2)
 *
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV409B1   0.0        0.0                                                          
-CV409B2  50.0   1000000.0              	            * Random huge volume                                                          
+CV402B1   0.0        0.0                                                          
+CV402B2  50.0   1000000.0              	            * Random huge volume                                                          
 ***
 *-----------------------------------------------                                                              
 * CV410 - C2-collector - HVAC collector for C2
@@ -370,7 +370,7 @@ TF207110   0.0       6.096285832                                * (35.55 - 10.66
 * SGS FL208           FM    TO    FM   TO                       * ArPU -> G-RWTS
 *-------------------------------------------------------
 *
-FL208100   SGS-FL208   901   409   5.75  5.75
+FL208100   SGS-FL208   901   402   5.75  5.75
 FL208101   0.001341  15.0   1.0    0.038    0.038              
 FL208102   3     0    0     0                                
 FL208103   1.0   1.0                                                           
@@ -414,7 +414,7 @@ TF01510   0.0       5.45                                        * Modificado. An
 * HVAC-C002-al            FM    TO    FM   TO
 *-------------------------------------------------------
 *
-FL00400   HVAC-C002-al    407   042   7.7   7.7
+FL00400   HVAC-C002-al    400   042   7.7   7.7
 FL00401   2.0   50.0    1.0   1.5958   1.5958                
 FL00402	  3     0    0     0                                 
 FL00403   1.0   1.0                                          
@@ -441,7 +441,7 @@ CF00420   0.0      0.525     TIME
 * HVAC-H2-ex          FM    TO    FM    TO
 *-------------------------------------------------------
 *
-FL41000   HVAC-H2-ex  410   408   0.0  0.0
+FL41000   HVAC-H2-ex  410   401   0.0  0.0
 FL41001   15.0   50.0    1.0   4.37  4.37 	                   
 FL41002	  3     0    0     0 				                  
 FL41003   1.0   1.0                      	                   
