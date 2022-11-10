@@ -72,9 +72,9 @@ CV401B2  50.0   1000000.0              	            * Random huge volume
 *
 *********************** MAINFOLDS **************************************
 *-----------------------------------------------
-* CV500 - AS1 - Air Supply 1
+* CV500 - AS-1 - Air Supply 1
 *-----------------------------------------------                                                                
-CV50000   AS1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50000   AS-1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50001   0   0                                     * fog ALLOWED (DEF)
 CV500A0   3                                                                                         
 CV500A1   PVOL    101325.0                          * PATM                                                                          
@@ -88,9 +88,9 @@ CV500B1   8.5      0.0
 CV500B2   24.5   31.68                              * FROM L2 TO L0; 1800 x 1100
 *** 
 *-----------------------------------------------
-* CV508 - AS2 - Air Supply 2
+* CV508 - AS-2 - Air Supply 2
 *-----------------------------------------------                                                                
-CV50800   AS2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50800   AS-2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50801   0   0                                     * fog ALLOWED (DEF)
 CV508A0   3                                                                                         
 CV508A1   PVOL    101325.0                          * PATM                                                                          
@@ -104,9 +104,9 @@ CV508B1   16.0      0.0
 CV508B2   31.5     11.0825                              * FROM L3 TO L1; 1100 x 650
 *** 
 *-----------------------------------------------
-* CV512 - AS3 - Air Supply 3
+* CV512 - AS-3 - Air Supply 3
 *-----------------------------------------------                                                                
-CV51200   AS3  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51200   AS-3  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV51201   0   0                                     * fog ALLOWED (DEF)
 CV512A0   3                                                                                         
 CV512A1   PVOL    101325.0                          * PATM                                                                          
@@ -120,9 +120,9 @@ CV512B1   16.0      0.0
 CV512B2   31.5     8.1375                              * FROM L3 TO L1; 1000 x 525
 ***
 *-----------------------------------------------
-* CV600 - C2_1 - C2 Mainfold_1
+* CV600 - C2-1 - C2 Mainfold 1
 *-----------------------------------------------                                                                
-CV60000   C2_1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60000   C2-1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV600A0   3                                                                                         
 CV600A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -136,9 +136,9 @@ CV600B1   8.5      0.0
 CV600B2   31.5   45.54                              * FROM L3 TO L0; 1800 x 1100
 ***
 *-----------------------------------------------
-* CV605 - C2_2 - C2 Mainfold_2
+* CV605 - C2-2 - C2 Mainfold 2
 *-----------------------------------------------                                                                
-CV60500   C2_2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60500   C2-2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV605A0   3                                                                                         
 CV605A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -153,9 +153,9 @@ CV605B2   31.5   11.935                              * FROM L3 TO L1; 1100 x 700
 ***
 *
 *-----------------------------------------------
-* CV609 - C2_3 - C2 Mainfold_3 (A206)
+* CV609 - C2-3 - C2 Mainfold 3 (A206)
 *-----------------------------------------------                                                                
-CV60900   C2_3  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60900   C2-3  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV609A0   3                                                                                         
 CV609A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -317,9 +317,9 @@ CV064B2   31.5     2455.92                             * 1134 + 330.48 x 4 m3
 *
 ******************** CONNECTION VOLUMES *************************
 *-----------------------------------------------
-* CV501 - CVAS_1 - Connection Volume Air Supply 1
+* CV501 - CVAS-1 - Connection Volume Air Supply 1
 *-----------------------------------------------                                                                
-CV50100   CVAS_1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50100   CVAS-1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV501A0   3                                                                                         
 CV501A1   PVOL    101325.0                          * PATM                                                                          
@@ -333,9 +333,9 @@ CV501B1   16.7      0.0
 CV501B2   17.5        0.255                       * 1275 x 800 x 250
 ***
 *-----------------------------------------------
-* CV502 - CVAS_2 - Connection Volume Air Supply 2
+* CV502 - CVAS-2 - Connection Volume Air Supply 2
 *----------------------------------------------                                                                
-CV50200   CVAS_2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50200   CVAS-2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV502A0   3                                                                                         
 CV502A1   PVOL    101325.0                          * PATM                                                                          
@@ -349,9 +349,9 @@ CV502B1   15.725      0.0
 CV502B2   17.5        0.576875                       * 1300 x 775 (+1m) x 250
 ***
 *-----------------------------------------------
-* CV503 - CVAS_3 - Connection Volume Air Supply 3
+* CV503 - CVAS-3 - Connection Volume Air Supply 3
 *----------------------------------------------                                                                
-CV50300   ASJ7  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50300   CVAS-3  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV503A0   3                                                                                         
 CV503A1   PVOL    101325.0                          * PATM                                                                          
@@ -365,9 +365,9 @@ CV503B1   17.025      0.0
 CV503B2   17.5        0.09203125                       * 775 x 475 x 250
 ***
 *-----------------------------------------------
-* CV504 - CVAS_4 - Connection Volume Air Supply 4
+* CV504 - CVAS-4 - Connection Volume Air Supply 4
 *-----------------------------------------------                                                                
-CV50400   CVAS_4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50400   CVAS-4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV504A0   3                                                                                         
 CV504A1   PVOL    101325.0                          * PATM                                                                          
@@ -381,9 +381,9 @@ CV504B1   15.825      0.0
 CV504B2   16.5        0.2025                       * 1200 x 675 x 250
 *** 
 *-----------------------------------------------
-* CV505 - CVAS_5 - Connection Volume Air Supply 5
+* CV505 - CVAS-5 - Connection Volume Air Supply 5
 *-----------------------------------------------                                                                
-CV50500   CVAS_5  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50500   CVAS-5  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV505A0   3                                                                                         
 CV505A1   PVOL    101325.0                          * PATM                                                                          
@@ -397,9 +397,9 @@ CV505B1   15.85      0.0
 CV505B2   16.5        0.1625                       * 1000 x 650 x 250
 *** 
 *-----------------------------------------------
-* CV506 - CVAS_6 - Connection Volume Air Supply 6
+* CV506 - CVAS-6 - Connection Volume Air Supply 6
 *-----------------------------------------------                                                                
-CV50600   CVAS_6  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50600   CVAS-6  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV506A0   3                                                                                         
 CV506A1   PVOL    101325.0                          * PATM                                                                          
@@ -413,9 +413,9 @@ CV506B1   15.9      0.0
 CV506B2   16.5        0.135                       * 900 x 600 x 250
 *** 
 *-----------------------------------------------
-* CV507 - CVAS_7 - Connection Volume Air Supply 7
+* CV507 - CVAS-7 - Connection Volume Air Supply 7
 *-----------------------------------------------                                                                
-CV50700   CVAS_7  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50700   CVAS-7  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV507A0   3                                                                                         
 CV507A1   PVOL    101325.0                          * PATM                                                                          
@@ -429,9 +429,9 @@ CV507B1   15.9      0.0
 CV507B2   16.5        0.1125                       * 750 x 525 (+ 0.075 para FL524) x 250
 *** 
 *-----------------------------------------------
-* CV509 - CVAS_8 - Connection Volume Air Supply 8
+* CV509 - CVAS-8 - Connection Volume Air Supply 8
 *-----------------------------------------------                                                                
-CV50900   CVAS_8  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50900   CVAS-8  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV50901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV509A0   3                                                                                         
 CV509A1   PVOL    101325.0                          * PATM                                                                          
@@ -445,9 +445,9 @@ CV509B1   16.85      0.0
 CV509B2   17.5        0.195                       * 1200 x 650 x 250
 *** 
 *-----------------------------------------------
-* CV510 - CVAS_9 - Connection Volume Air Supply 9
+* CV510 - CVAS-9 - Connection Volume Air Supply 9
 *-----------------------------------------------                                                                
-CV51000   CVAS_9  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51000   CVAS-9  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV51001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV510A0   3                                                                                         
 CV510A1   PVOL    101325.0                          * PATM                                                                          
@@ -461,9 +461,9 @@ CV510B1   17.0      0.0
 CV510B2   17.5        0.1                       * 800 x 500 x 250
 *** 
 *-----------------------------------------------
-* CV511 - CVAS_10 - Connection Volume Air Supply 10
+* CV511 - CVAS-10 - Connection Volume Air Supply 10
 *-----------------------------------------------                                                                
-CV51100   CVAS_10  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51100   CVAS-10  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV51101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV511A0   3                                                                                         
 CV511A1   PVOL    101325.0                          * PATM                                                                          
@@ -477,9 +477,9 @@ CV511B1   17.125      0.0
 CV511B2   17.5        0.046875                       * 500 x 375 x 250
 *** 
 *-----------------------------------------------
-* CV513 - CVAS_11 - Connection Volume Air Supply 11
+* CV513 - CVAS-11 - Connection Volume Air Supply 11
 *-----------------------------------------------                                                                
-CV51300   CVAS_11  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51300   CVAS-11  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV51301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV513A0   3                                                                                         
 CV513A1   PVOL    101325.0                          * PATM                                                                          
@@ -493,9 +493,9 @@ CV513B1   16.975      0.0
 CV513B2   17.5        0.13125                       * 1000 X 525 x 250
 *** 
 *-----------------------------------------------
-* CV601 - CVC2_1 - Connection Volume C2 1
+* CV601 - CVC2-1 - Connection Volume C2 1
 *-----------------------------------------------                                                                
-CV60100   CVC2_1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60100   CVC2-1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV601A0   3                                                                                         
 CV601A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -509,9 +509,9 @@ CV601B1   16.0      0.0
 CV601B2   16.5   0.1125                             * 900 x 500 x 250
 *** 
 *-----------------------------------------------
-* CV602 - CVC2_2 - Connection Volume C2 2
+* CV602 - CVC2-2 - Connection Volume C2 2
 *-----------------------------------------------                                                                
-CV60200   CVC2_2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60200   CVC2-2  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV602A0   3                                                                                         
 CV602A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -525,9 +525,9 @@ CV602B1   15.95      0.0
 CV602B2   16.5   0.15125                              * 1100 x 550 x 250
 *** 
 *-----------------------------------------------
-* CV603 - CVC2_3 - Connection Volume C2 3
+* CV603 - CVC2-3 - Connection Volume C2 3
 *-----------------------------------------------                                                                
-CV60300   CVC2_3  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60300   CVC2-3  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV603A0   3                                                                                         
 CV603A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -541,9 +541,9 @@ CV603B1   15.875      0.0
 CV603B2   16.5   0.1796875                              * 1150 x 625 x 250
 *** 
 *-----------------------------------------------
-* CV604 - CVC2_4 - Connection Volume C2 4
+* CV604 - CVC2-4 - Connection Volume C2 4
 *-----------------------------------------------                                                                
-CV60400   CVC2_4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60400   CVC2-4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV604A0   3                                                                                         
 CV604A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -557,9 +557,9 @@ CV604B1   15.775      0.0
 CV604B2   16.5   0.25                              * 1150 x 725 x 250
 ***
 *-----------------------------------------------
-* CV606 - CVC2_5 - Connection Volume C2 5
+* CV606 - CVC2-5 - Connection Volume C2 5
 *-----------------------------------------------                                                                
-CV60600   CVC2_5  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60600   CVC2-5  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV606A0   3                                                                                         
 CV606A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -573,9 +573,9 @@ CV606B1   17.1      0.0
 CV606B2   17.5     0.05                             * 500 x 400 x 250
 *
 *-----------------------------------------------
-* CV607 - CVC2_6 - Connection Volume C2 6
+* CV607 - CVC2-6 - Connection Volume C2 6
 *-----------------------------------------------                                                                
-CV60700   CVC2_6  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60700   CVC2-6  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV607A0   3                                                                                         
 CV607A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -589,9 +589,9 @@ CV607B1   17.025      0.0
 CV607B2   17.5   0.1128125                              * 950 x 475 x 250
 *
 *-----------------------------------------------
-* CV608 - CVC2_7 - Connection Volume C2 7
+* CV608 - CVC2-7 - Connection Volume C2 7
 *-----------------------------------------------                                                                
-CV60800   CVC2_7  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV60800   CVC2-7  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV60801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV608A0   3                                                                                         
 CV608A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -605,9 +605,9 @@ CV608B1   16.925      0.0
 CV608B2   17.5   0.14375                              * 1100 x 575 x 250
 *
 *-----------------------------------------------
-* CV610 - CVC2_8 - Connection Volume C2 8
+* CV610 - CVC2-8 - Connection Volume C2 8
 *-----------------------------------------------                                                                
-CV61000   CVC2_8  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV61000   CVC2-8  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV61001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV610A0   3                                                                                         
 CV610A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -621,9 +621,9 @@ CV610B1   17.0      0.0
 CV610B2   17.5   0.090625                              * 725 x 500 x 250
 *
 *-----------------------------------------------
-* CV611 - CVC2_9 - Connection Volume C2 9
+* CV611 - CVC2-9 - Connection Volume C2 9
 *-----------------------------------------------                                                                
-CV61100   CVC2_9  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV61100   CVC2-9  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV61101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV611A0   3                                                                                         
 CV611A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -637,9 +637,9 @@ CV611B1   16.9      0.0
 CV611B2   17.5   0.165                              * 1100 x 600 x 250
 *
 *-----------------------------------------------
-* CV612 - CVC2_10 - Connection Volume C2 10
+* CV612 - CVC2-10 - Connection Volume C2 10
 *-----------------------------------------------                                                                
-CV61200   CVC2_10  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV61200   CVC2-10  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV61201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV612A0   3                                                                                         
 CV612A1   PVOL    101235.0                          * PATM-90Pa                                                                          
@@ -662,9 +662,9 @@ CV612B2   17.5   0.0890625                              * 750 x 475 x 250
 **** R102 - R110 - R113 - R114 - R109 (AS1)
 *
 *-------------------------------------------------------
-* HVAC-inlet_AS1          FM    TO     FM     TO
+* HVAC-inlet-AS-1          FM    TO     FM     TO
 *-------------------------------------------------------
-FL50000   HVAC-inlet_AS1    400   500  24.0  24.0                   * ceiling - HYD.DIAM/2
+FL50000   HVAC-inlet-AS-1    400   500  24.0  24.0                   *
 FL50001   1.0   0.25    1.0                       * A, L, FRACT OPEN, DIAM
 FL50002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL50003   1.0   1.0                                             * FORM LOSS
@@ -674,7 +674,7 @@ FL5000T   23.5    24.5
 FL500T0   1   500        * TF, TFnumber
 *
 TF50000  FL500_vel  1    1.0  *name, number datapairs, mult.factor
-TF50010   0.0        8.72384875 * ?, velocity (8.72384875 para tener 31405.8555 m3/h)  33458.3235
+TF50010   0.0        8.723611111 * ?, velocity (para tener 31405 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S505          FM    TO     FM     TO
@@ -704,7 +704,7 @@ FL5020T   17.225    17.5
 FL502T0   1   502        * TF, TFnumber
 *
 TF50200   FL502_vel  1    1.0  *name, number datapairs, mult.factor
-TF50210   0.0       3.704  * ?, velocity (3.704 m/s para tener 1200.096 m3/h) 1321.2
+TF50210   0.0       3.703703704  * ?, velocity (para tener 1200.096 m3/h) 
 *
 *-------------------------------------------------------
 * HVAC-S506          FM    TO     FM     TO
@@ -719,7 +719,7 @@ FL5030T   16.725    17.5
 FL503T0   1   503        * TF, TFnumber
 *
 TF50300   FL503_vel  1    1.0  *name, number datapairs, mult.factor
-TF50310   0.0       8.328028536  * ?, velocity (8.328028536 para tener 30205.7595 m3/h) 32137.1235
+TF50310   0.0       8.327819134  * ?, velocity (para tener 30205 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S507          FM    TO     FM     TO
@@ -734,7 +734,7 @@ FL5040T   17.025    17.5
 FL504T0   1   504        * TF, TFnumber
 *
 TF50400   FL504_vel  1    1.0  *name, number datapairs, mult.factor
-TF50410   0.0       6.195013582  * ?, velocity (para tener 8209.94175 m3/h) 
+TF50410   0.0       6.194302962  * ?, velocity (para tener 8210 m3/h) 
 *
 *-------------------------------------------------------
 * HVAC-S508-1          FM    TO     FM     TO
@@ -747,7 +747,7 @@ FL505S0   0.158125   0.25   0.449                     * 0.158125 m2
 FL505T0   1   505        * TF, TFnumber
 *
 TF50500   FL505_vel   1    1.0  *name, number datapairs, mult.factor
-TF50510   0.0       7.211  * ?, velocity (7.211 m/s para tener 4104.86175 m3/h) 4106.88
+TF50510   0.0       7.209486166 * ?, velocity (para tener 4104 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S508-2          FM    TO     FM     TO
@@ -762,7 +762,7 @@ FL5060T   17.1    17.5
 FL506T0   1   506        * TF, TFnumber
 *
 TF50600   FL506_vel   1    1.0  *name, number datapairs, mult.factor
-TF50610   0.0       5.43  * ?, velocity (para tener 4105.08 m3/h) TOT109: 8209.94175 m3/s
+TF50610   0.0       5.42989418  * ?, velocity (para tener 4105 m3/h) 
 *
 *-------------------------------------------------------
 * HVAC-S509          FM    TO     FM     TO
@@ -777,7 +777,7 @@ FL5070T   15.825    16.5
 FL507T0   1   507        * TF, TFnumber
 *
 TF50700   FL507_vel   1    1.0  *name, number datapairs, mult.factor
-TF50710   0.0       7.543147377  * ?, velocity (7.543147377 para tener 21995.81775 m3/h) 23925.1635
+TF50710   0.0       7.543209877  * ?, velocity (para tener 21996 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S510'-1           FM    TO     FM     TO
@@ -790,7 +790,7 @@ FL508S0   0.16   0.25   0.45                     * 0.16 m2
 FL508T0   1   508        * TF, TFnumber
 *
 TF50800   FL508_vel  1    1.0  *name, number datapairs, mult.factor
-TF50810   0.0       7.3229  * ?, velocity (7.3229 m/s para tener 4217.9904 m3/h) 6147.33615
+TF50810   0.0       7.322916667  * ?, velocity (para tener 4218 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S510'-2           FM    TO     FM     TO
@@ -805,7 +805,7 @@ FL5090T   15.85    16.5
 FL509T0   1   509        * TF, TFnumber
 *
 TF50900   FL509_vel  1    1.0  *name, number datapairs, mult.factor
-TF50910   0.0       7.597362115  * ?, velocity (para tener 17777.82735 m3/h)
+TF50910   0.0       7.597435897  * ?, velocity (para tener 17778 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S510-1           FM    TO     FM     TO
@@ -818,7 +818,7 @@ FL510S0   0.11   0.25   0.374                     * 0.11 m2
 FL510T0   1   510        * TF, TFnumber
 *
 TF51000   FL510_vel  1    1.0  *name, number datapairs, mult.factor
-TF51010   0.0       10.6515  * ?, velocity (para tener 4217.994 m3/h)
+TF51010   0.0       10.65151515  * ?, velocity (para tener 4218 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S510-2           FM    TO     FM     TO
@@ -833,7 +833,7 @@ FL5110T   15.9    16.5
 FL511T0   1   511        * TF, TFnumber
 *
 TF51100   FL511_vel  1    1.0  *name, number datapairs, mult.factor
-TF51110   0.0       6.975222917  * ?, velocity (para tener 13559.83335 m3/h)
+TF51110   0.0       6.975308642  * ?, velocity (para tener 13560 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S511-1           FM    TO     FM     TO
@@ -846,7 +846,7 @@ FL512S0   0.14625   0.25   0.4315                     * 0.14625 m2
 FL512T0   1   512        * TF, TFnumber
 *
 TF51200   FL512_vel  1    1.0  *name, number datapairs, mult.factor
-TF51210   0.0       8.0114  * ?, velocity (para tener 4218.0021 m3/h)
+TF51210   0.0       8.011396011  * ?, velocity (para tener 4218 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S511-2           FM    TO     FM     TO
@@ -861,7 +861,7 @@ FL5130T   15.975    16.5
 FL513T0   1   513        * TF, TFnumber
 *
 TF51300   FL513_vel  1    1.0  *name, number datapairs, mult.factor
-TF51310   0.0       6.590357143  * ?, velocity (para tener 9341.83125 m3/h)
+TF51310   0.0       6.59047619  * ?, velocity (para tener 9342 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S512-1           FM    TO     FM     TO
@@ -874,7 +874,7 @@ FL514S0   0.253125   0.25   0.5677                     * 0.253125 m2
 FL514T0   1   514        * TF, TFnumber
 *
 TF51400   HVAC4  1    1.0  *name, number datapairs, mult.factor
-TF51410   0.0       7.62  * ?, velocity (para tener 6943.725 m3/h)
+TF51410   0.0       7.620301783  * ?, velocity (para tener 6944 m3/h)
 *
 *-------------------------------------------------------
 * HVAC-S512-2           FM    TO     FM     TO
@@ -889,16 +889,16 @@ FL5150T   16.125    16.5
 FL515T0   1   515        * TF, TFnumber
 *
 TF51500   FL515_vel  1    1.0  *name, number datapairs, mult.factor
-TF51510   0.0       4.737  * ?, velocity (para tener 2398.10625 m3/h) TOT110: 21995.81775 m3/h (23903.91243 --> 1908.09468 m3/h)
+TF51510   0.0       4.736790123  * ?, velocity (para tener 2398 m3/h) 
 *
 *--------------------------------------------------------------------
 *
 * R109 - SB4 - R104 - R105 - S02 (AS_2)
 *
 *-------------------------------------------------------
-* HVAC-inlet_AS2          FM    TO     FM     TO
+* HVAC-inlet-AS-2          FM    TO     FM     TO
 *-------------------------------------------------------
-FL51600   HVAC-inlet_AS2    400   508  24.0  24.0                   * ceiling - HYD.DIAM/2
+FL51600   HVAC-inlet-AS-2    400   508  24.0  24.0                   * ceiling - HYD.DIAM/2
 FL51601   1.0   0.25    1.0                       * A, L, FRACT OPEN, DIAM
 FL51602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL51603   1.0   1.0                                             * FORM LOSS
