@@ -123,35 +123,6 @@ CV901B1   0.0      0.0
 CV901B2   6.0   942.48                              * Asumimos 8 cilindros de R = 2.5m y H = 6m
 ***
 *
-******* Energy source for ArPU *******           
-*                                           
-CF90100 'ArPU-Energy-src' EQUALS 1 1.0              * Energy source
-CF90110  1.0  0.0  CVH-TVAP.901                     * Temp ArPU = 290.95K (mantener temp cte.)
-*                                                                                                                                 
-******* Sink ArPU-O2 *******                    
-*                                           
-CV901C1  MASS.5 902 3                       
-CV901C2  TE 901 9                           
-*
-CF90200 'ArPU-O2-sink' EQUALS 1 -2.4425E-04         * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
-CF90210  1.0  0.0  CVH-MASS.5.901                                      
-*
-******* Sink ArPU-N2 *******                    
-*                                           
-CV901C3  MASS.4 903 3                       
-CV901C4  TE 901 9                           
-*
-CF90300 'ArPU-N2-sink' EQUALS 1 -5.425E-05          * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
-CF90310  1.0  0.0  CVH-MASS.4.901   
-*
-******* Sink ArPU-H2O *******                    
-*                                           
-CV901C5  MASS.3 904 3                       
-CV901C6  TE 901 9                           
-*
-CF90400 'ArPU-H2O-sink' EQUALS 1 -2.75E-04          * Eficiencia (= 0.99) / 3600 = 2.75E-04
-CF90410  1.0  0.0  CVH-MASS.3.901   
-*
 *-----------------------------------------------                                                                
 * CV902 - SGS-AUX-1 (C3)                                                                    
 *-----------------------------------------------                                                                
@@ -212,6 +183,49 @@ CV905A3   MLFR.8  1.0                               * Filled with Ar
 CV905B1   6.5      0.0                                                            
 CV905B2   7.5      1.0                              * 1m x 1m x 1m                                                   
 ***
+*-----------------------------------------------                                                                
+* CV906 - SGS-AUX-5 (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90600   SGS-AUX-5  2  0  1                                                   
+CV90601   0   0		                                * Fog allowed (default)
+CV906A0   3                                                                                         
+CV906A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV906A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV906A3   MLFR.8  1.0                               * Filled with Ar 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV906B1   6.5      0.0                                                            
+CV906B2   7.5      1.0                              * 1m x 1m x 1m                                                   
+***
+******* Energy source for SGS-AUX-5 *******           
+*                                           
+CF90100 'SGS-AUX-5-Energy-src' EQUALS 1 1.0              * Energy source
+CF90110  1.0  0.0  CVH-TVAP.906                     * Temp ArPU = 290.95K (mantener temp cte.)
+*                                                                                                                                 
+******* Sink SGS-AUX-5-O2 *******                    
+*                                           
+CV906C1  MASS.5 902 3                       
+CV906C2  TE 901 9                           
+*
+CF90200 'SGS-AUX-5-O2-sink' EQUALS 1 -2.4425E-04         * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
+CF90210  1.0  0.0  CVH-MASS.5.906                                      
+*
+******* Sink SGS-AUX-5-N2 *******                    
+*                                           
+CV906C3  MASS.4 903 3                       
+CV906C4  TE 901 9                           
+*
+CF90300 'SGS-AUX-5-N2-sink' EQUALS 1 -5.425E-05          * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
+CF90310  1.0  0.0  CVH-MASS.4.906   
+*
+******* Sink SGS-AUX-5-H2O *******                    
+*                                           
+CV906C5  MASS.3 904 3                       
+CV906C6  TE 901 9                           
+*
+CF90400 'SGS-AUX-5-H2O-sink' EQUALS 1 -2.75E-04          * Eficiencia (= 0.99) / 3600 = 2.75E-04
+CF90410  1.0  0.0  CVH-MASS.3.906   
 *
 ****************************************************************************************************************************************
 *
@@ -420,12 +434,12 @@ CF20615   1.0  0.0  CFVALU.100
 * SGS FL207           FM    TO    FM   TO                       * ArPU --> AUX-3
 *-------------------------------------------------------
 *
-FL20700   SGS-FL207   901  904   5.75  5.75
+FL20700   SGS-FL207   906  904   5.75  5.75
 FL20701   0.001341 15.0   1.0    0.038    0.038              
 FL20702   3     0    0     0                                
 FL20703   1.0   1.0                                                           
 FL207S0   0.001341   15.0    0.038                             * D_ext = 2"           
-FL207T0   2   207                                              * (QP - RJ) m3/h / (3600 * 0.001341) = 6.096285832 m/s
+*FL207T0   2   207                                              * (QP - RJ) m3/h / (3600 * 0.001341) = 6.096285832 m/s
 *
 CF20700   VEL-FL207 DIVIDE 2 1.0
 CF20710   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276
@@ -449,6 +463,17 @@ FL208T0   2   208                                              * R / (3600 * 0.0
 CF20800   VEL-FL208 DIVIDE 2 1.0
 CF20810   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276                                 
 CF20815   1.0  0.0  CFVALU.101
+*
+*-------------------------------------------------------
+* SGS FL209           FM    TO    FM   TO                       * ArPU --> AUX-3
+*-------------------------------------------------------
+*
+FL20900   SGS-FL209   901  906   5.75  5.75
+FL20901   0.001341 1.0   1.0    0.038    0.038              
+FL20902   3     0    0     0                                
+FL20903   1.0   1.0                                                           
+FL209S0   0.001341   1.0    0.038                             * D_ext = 2"           
+FL209T0   2   207                                              * (QP - RJ) m3/h / (3600 * 0.001341) = 6.096285832 m/s
 *
 *-------------------------------------------------------
 * SGS FL200           FM    TO    FM   TO                       * ArSS -> AUX-3
