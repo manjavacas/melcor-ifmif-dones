@@ -99,7 +99,9 @@ CV90001   0   0		                                * Fog allowed (default)
 CV900A0   3                                                                                         
 CV900A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV900A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV900A3   MLFR.8  1.0                               * Filled with Ar   
+CV900A3   MLFR.8  0.99999                            * Filled with Ar -> 99.999%   
+CV016A4   MLFR.5  0.0000021                          * Initial 02 -> 21% de 0.001% 
+CV016A5   MLFR.4  0.0000079                          * Initial N2 -> 79% de 0.001%    
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -115,7 +117,9 @@ CV90101   0   0		                                * Fog allowed (default)
 CV901A0   3                                                                                         
 CV901A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV901A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV901A3   MLFR.8  1.0                               * Filled with Ar 
+CV901A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV901A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV901A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -131,7 +135,9 @@ CV90201   0   0		                                * Fog allowed (default)
 CV902A0   3                                                                                         
 CV902A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV902A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV902A3   MLFR.8  1.0                               * Filled with Ar 
+CV902A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV902A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV902A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -146,7 +152,9 @@ CV90301   0   0		                                * Fog allowed (default)
 CV903A0   3                                                                                         
 CV903A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV903A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV903A3   MLFR.8  1.0                               * Filled with Ar 
+CV903A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV903A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV903A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -161,7 +169,9 @@ CV90401   0   0		                                * Fog allowed (default)
 CV904A0   3                                                                                         
 CV904A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV904A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV904A3   MLFR.8  1.0                               * Filled with Ar 
+CV904A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV904A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV904A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -176,7 +186,9 @@ CV90501   0   0		                                * Fog allowed (default)
 CV905A0   3                                                                                         
 CV905A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV905A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV905A3   MLFR.8  1.0                               * Filled with Ar 
+CV905A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV905A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV905A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -191,7 +203,9 @@ CV90601   0   0		                                * Fog allowed (default)
 CV906A0   3                                                                                         
 CV906A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV906A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV906A3   MLFR.8  1.0                               * Filled with Ar 
+CV906A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV906A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV906A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -236,7 +250,9 @@ CV90701   0   0		                                * Fog allowed (default)
 CV907A0   3                                                                                         
 CV907A1   PVOL  101195.0                            * 101325Pa-130Pa 
 CV907A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV907A3   MLFR.8  1.0                               * Filled with Ar 
+CV907A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV907A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV907A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -253,24 +269,24 @@ CF90010  1.0  0.0  CVH-TVAP.907                     * Temp AUX-6 = 290.95K (mant
 CV907C1  MASS.5 905 3                       
 CV907C2  TE 900 9                           
 *
-CF90500 'AUX-6-O2-src' EQUALS 1 -1.0                * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
-CF90510  1.0  0.0  CFVALU.902                                      
+CF90500 'AUX-5-O2-sink' EQUALS 1 2.4425E-04        * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
+CF90510  1.0  0.0  CVH-MASS.5.907                                      
 *
 ******* Source SGS-AUX-6-N2 *******                    
 *                                           
 CV907C3  MASS.4 906 3                       
 CV907C4  TE 900 9                           
 *
-CF90600 'AUX-6-N2-src' EQUALS 1 -1.0                * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
-CF90610  1.0  0.0  CFVALU.903   
+CF90600 'AUX-5-N2-sink' EQUALS 1 5.425E-05         * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
+CF90610  1.0  0.0  CVH-MASS.4.907  
 *
 ******* Source SGS-AUX-6-H2O *******                    
 *                                           
 CV907C5  MASS.3 907 3                       
 CV907C6  TE 900 9                           
 *
-CF90700 'AUX-6-H2O-src' EQUALS 1 -1.0               * Eficiencia (= 0.99) / 3600 = 2.75E-04
-CF90710  1.0  0.0  CFVALU.904   
+CF90700 'AUX-5-H2O-sink' EQUALS 1 2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
+CF90710  1.0  0.0  CVH-MASS.3.907 
 *
 ****************************************************************************************************************************************
 *
@@ -371,12 +387,12 @@ FL20103   1.0   1.0
 FL201S0   0.43709   10.0    0.746                               * D_ext = 30"           
 FL201T0   2   201                                   
 *
-CF20100   VEL-FL201  DIVIDE  2  1.0                             * (QT - QP) m3/h / (3600 * 0.43709) = 7.423807761 m/s
+CF20100   VEL-FL201  DIVIDE  2  1.0                             * (QT - QP) m3/h / (3600 * 0.43709)  m/s
 CF20110   0.0  1573.524  TIME                                   * (3600 * 0.43709) = 1573.524                                  
 CF20115   1.0  0.0  CFVALU.202
 *
 CF20200   NUM-201  ADD  2  1.0
-CF20210   1.0  0.0  CFVALU.103
+CF20210   1.0  0.0  CFVALU.102
 CF20215   -1.0  0.0  CFVALU.100
 *
 *-------------------------------------------------------
@@ -388,7 +404,7 @@ FL20201   0.43709  5.0   1.0    0.746    0.746
 FL20202	  3     0    0     0                                
 FL20203   1.0   1.0                                                           
 FL202S0   0.43709   5.0    0.746                                *  D_ext = 30"           
-FL202T0   2   205                                               *  QT m3/h / (3600 * 0.43709) = 7.446400536 m/s
+FL202T0   2   205                                               *  QT m3/h / (3600 * 0.43709)  m/s
 *
 *-------------------------------------------------------
 * SGS FL203           FM    TO    FM   TO                       * AUX-4 --> LLC                  
@@ -401,7 +417,7 @@ FL20303   1.0   1.0
 FL203S0   0.19322  4.0   0.496                                  * D_ext = 20"                 
 FL203T0   2   203                                                                    
 *
-CF20300   VEL-FL203  DIVIDE  2  1.0                             * Q-LLC / (3600 * 0.19322) = 16.8445997 m/s
+CF20300   VEL-FL203  DIVIDE  2  1.0                             * Q-LLC / (3600 * 0.19322)  m/s
 CF20310   0.0  695.592  TIME                                    * (3600 * 0.19322) = 695.592                        
 CF20315   1.0  0.0  CFVALU.103
 *
@@ -425,7 +441,7 @@ FL20501   0.43709  36.0   1.0    0.746    0.746
 FL20502	  3     0    0     0                                
 FL20503   1.0   1.0                                                           
 FL205S0   0.43709   36.0    0.746                               * D_ext = 30"           
-FL205T0   2   205                                               * QT m3/h / (3600 * 0.43709) = 7.446400536 m/s                            
+FL205T0   2   205                                               * QT m3/h / (3600 * 0.43709)  m/s                            
 *
 CF20500   VEL-FL205  DIVIDE  2  1.0
 CF20510   0.0  1573.524  TIME                                   * (3600 * 0.43709) = 1573.524       
@@ -440,7 +456,7 @@ FL20601   0.001521  15.0   1.0    0.038    0.038
 FL20602	  3     0    0     0                                
 FL20603   1.0   1.0                                                           
 FL206S0   0.001521   15.0    0.044                              * D_ext = 2.5"           
-FL206T0   2   206                                               * QP / (3600 * 0.001521) = 6.494442409 m/s
+FL206T0   2   206                                               * QP / (3600 * 0.001521)  m/s
 *
 CF20600   VEL-FL206 DIVIDE 2 1.0
 CF20610   0.0   5.4756    TIME                                  * (3600 * 0.001521) = 5.4756                                
@@ -455,7 +471,7 @@ FL20701   0.001341 7.5   1.0    0.038    0.038
 FL20702   3     0    0     0                                
 FL20703   1.0   1.0                                                           
 FL207S0   0.001341   7.5    0.038                               * D_ext = 2"           
-FL207T0   2   207                                               * (QP - RJ) m3/h / (3600 * 0.001341) = 6.096285832 m/s
+FL207T0   2   207                                               * (QP - RJ) m3/h / (3600 * 0.001341)  m/s
 *
 CF20700   VEL-FL207 DIVIDE 2 1.0
 CF20710   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276
@@ -474,7 +490,7 @@ FL20801   0.001341  7.5   1.0    0.038    0.038
 FL20802   3     0    0     0                                
 FL20803   1.0   1.0                                                           
 FL208S0   0.001341   7.5    0.038                               * D_ext = 2"           
-FL208T0   2   208                                               * R / (3600 * 0.001341) = 2.610944434 m/s
+FL208T0   2   208                                               * RJ / (3600 * 0.001341) m/s
 *
 CF20800   VEL-FL208 DIVIDE 2 1.0
 CF20810   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276                                 
@@ -509,11 +525,11 @@ FL210S0   0.001341   7.5    0.038                               * D_ext = 2"
 *-------------------------------------------------------
 *
 FL20000   SGS-FL200   900   904   7.481  7.481
-FL20001   0.001341  30.0   1.0    0.038    0.038              
+FL20001   0.001341  7.5   1.0    0.038    0.038              
 FL20002   3     0    0     0                                
 FL20003   1.0   1.0                                                           
-FL200S0   0.001341   30.0    0.038                              * D_ext = 2"
-*FL200T0   2  208           
+FL200S0   0.001341   7.5    0.038                              * D_ext = 2"
+FL200T0   2  208           
 *
 * Calculo automatico de velocidad por diferencia de presion 
 * RJ m3/h / (3600 * 0.001341) = 2.610944434 m/s
@@ -632,7 +648,7 @@ CYMESF           55    60
 *
 RESTART          -1        
 *
-TEND             3.0e4     * simulation time (seconds)
+TEND             1.0e3     * simulation time (seconds) --> 1.4e6 = 1 año
 *
 *
 SOFTDTMIN  .0001 1000
