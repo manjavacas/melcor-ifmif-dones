@@ -195,20 +195,20 @@ CV906A3   MLFR.8  1.0                               * Filled with Ar
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-CV906B1   6.5      0.0                                                            
-CV906B2   7.5      1.0                              * 1m x 1m x 1m                                                   
+CV906B1   5.5      0.0                                                            
+CV906B2   7.5      2.0                              * 2m x 1m x 1m                                                                                                    
 ***
 ******* Energy source for SGS-AUX-5 *******           
 *                                           
-CF90100 'SGS-AUX-5-Energy-src' EQUALS 1 1.0              * Energy source
-CF90110  1.0  0.0  CVH-TVAP.906                     * Temp ArPU = 290.95K (mantener temp cte.)
+CF90100 'AUX-5-Energy-src' EQUALS 1 1.0             * Energy source
+CF90110  1.0  0.0  CVH-TVAP.906                     * Temp AUX-5 = 290.95K (mantener temp cte.)
 *                                                                                                                                 
 ******* Sink SGS-AUX-5-O2 *******                    
 *                                           
 CV906C1  MASS.5 902 3                       
 CV906C2  TE 901 9                           
 *
-CF90200 'SGS-AUX-5-O2-sink' EQUALS 1 -2.4425E-04         * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
+CF90200 'AUX-5-O2-sink' EQUALS 1 -2.4425E-04        * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
 CF90210  1.0  0.0  CVH-MASS.5.906                                      
 *
 ******* Sink SGS-AUX-5-N2 *******                    
@@ -216,7 +216,7 @@ CF90210  1.0  0.0  CVH-MASS.5.906
 CV906C3  MASS.4 903 3                       
 CV906C4  TE 901 9                           
 *
-CF90300 'SGS-AUX-5-N2-sink' EQUALS 1 -5.425E-05          * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
+CF90300 'AUX-5-N2-sink' EQUALS 1 -5.425E-05         * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
 CF90310  1.0  0.0  CVH-MASS.4.906   
 *
 ******* Sink SGS-AUX-5-H2O *******                    
@@ -224,8 +224,53 @@ CF90310  1.0  0.0  CVH-MASS.4.906
 CV906C5  MASS.3 904 3                       
 CV906C6  TE 901 9                           
 *
-CF90400 'SGS-AUX-5-H2O-sink' EQUALS 1 -2.75E-04          * Eficiencia (= 0.99) / 3600 = 2.75E-04
+CF90400 'AUX-5-H2O-sink' EQUALS 1 -2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
 CF90410  1.0  0.0  CVH-MASS.3.906   
+*
+***
+*-----------------------------------------------                                                                
+* CV907 - SGS-AUX-6 (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90700   SGS-AUX-6  2  0  1                                                   
+CV90701   0   0		                                * Fog allowed (default)
+CV907A0   3                                                                                         
+CV907A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV907A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV907A3   MLFR.8  1.0                               * Filled with Ar 
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV907B1   5.0      0.0                                                            
+CV907B2   6.0      1.0                              * 1m x 1m x 1m  
+***
+******* Energy source from SGS-AUX-6 *******           
+*                                           
+CF90000 'AUX-6-Energy-src' EQUALS 1 1.0             * Energy source
+CF90010  1.0  0.0  CVH-TVAP.907                     * Temp AUX-6 = 290.95K (mantener temp cte.)
+*   
+******* Source SGS-AUX-6-O2 *******                    
+*                                           
+CV907C1  MASS.5 905 3                       
+CV907C2  TE 900 9                           
+*
+CF90500 'AUX-6-O2-src' EQUALS 1 -1.0                * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
+CF90510  1.0  0.0  CFVALU.902                                      
+*
+******* Source SGS-AUX-6-N2 *******                    
+*                                           
+CV907C3  MASS.4 906 3                       
+CV907C4  TE 900 9                           
+*
+CF90600 'AUX-6-N2-src' EQUALS 1 -1.0                * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
+CF90610  1.0  0.0  CFVALU.903   
+*
+******* Source SGS-AUX-6-H2O *******                    
+*                                           
+CV907C5  MASS.3 907 3                       
+CV907C6  TE 900 9                           
+*
+CF90700 'AUX-6-H2O-src' EQUALS 1 -1.0               * Eficiencia (= 0.99) / 3600 = 2.75E-04
+CF90710  1.0  0.0  CFVALU.904   
 *
 ****************************************************************************************************************************************
 *
@@ -279,35 +324,6 @@ CV402A9   MLFR.5  0.21                              * Filled with air (N2)
 CV402B1   0.0        0.0                                                          
 CV402B2  50.0   1000000.0              	            * Random huge volume                                                          
 ***
-*
-******* Energy source from GRWTS *******           
-*                                           
-CF90000 'GRWTS-Energy-src' EQUALS 1 1.0                    * Energy source
-CF90010  1.0  0.0  CVH-TVAP.402                                 * Temp GRWTS = 293.15K (mantener temp cte.)
-*   
-******* Source GRWTS-O2 *******                    
-*                                           
-CV402C1  MASS.5 905 3                       
-CV402C2  TE 900 9                           
-*
-CF90500 'GRWST-O2-src' EQUALS 1 -1.0                 * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
-CF90510  1.0  0.0  CFVALU.902                                      
-*
-******* Source GRWTS-N2 *******                    
-*                                           
-CV402C3  MASS.4 906 3                       
-CV402C4  TE 900 9                           
-*
-CF90600 'GRWST-N2-src' EQUALS 1 -1.0                  * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
-CF90610  1.0  0.0  CFVALU.903   
-*
-******* Source GRWTS-H2O *******                    
-*                                           
-CV402C5  MASS.3 907 3                       
-CV402C6  TE 900 9                           
-*
-CF90700 'GRWST-H2O-src' EQUALS 1 -1.0                  * Eficiencia (= 0.99) / 3600 = 2.75E-04
-CF90710  1.0  0.0  CFVALU.904   
 *
 *-----------------------------------------------                                                              
 * CV410 - C2-collector - HVAC collector for C2
@@ -386,7 +402,7 @@ FL203S0   0.19322  4.0   0.496                                  * D_ext = 20"
 FL203T0   2   203                                                                    
 *
 CF20300   VEL-FL203  DIVIDE  2  1.0                             * Q-LLC / (3600 * 0.19322) = 16.8445997 m/s
-CF20310   0.0  695.592  TIME                                     * (3600 * 0.19322) = 695.592                        
+CF20310   0.0  695.592  TIME                                    * (3600 * 0.19322) = 695.592                        
 CF20315   1.0  0.0  CFVALU.103
 *
 *-------------------------------------------------------
@@ -412,7 +428,7 @@ FL205S0   0.43709   36.0    0.746                               * D_ext = 30"
 FL205T0   2   205                                               * QT m3/h / (3600 * 0.43709) = 7.446400536 m/s                            
 *
 CF20500   VEL-FL205  DIVIDE  2  1.0
-CF20510   0.0  1573.524  TIME                            * (3600 * 0.43709) = 1573.524       
+CF20510   0.0  1573.524  TIME                                   * (3600 * 0.43709) = 1573.524       
 CF20515   1.0  0.0  CFVALU.102
 *
 *-------------------------------------------------------
@@ -435,11 +451,11 @@ CF20615   1.0  0.0  CFVALU.100
 *-------------------------------------------------------
 *
 FL20700   SGS-FL207   906  904   5.75  5.75
-FL20701   0.001341 15.0   1.0    0.038    0.038              
+FL20701   0.001341 7.5   1.0    0.038    0.038              
 FL20702   3     0    0     0                                
 FL20703   1.0   1.0                                                           
-FL207S0   0.001341   15.0    0.038                             * D_ext = 2"           
-FL207T0   2   207                                              * (QP - RJ) m3/h / (3600 * 0.001341) = 6.096285832 m/s
+FL207S0   0.001341   7.5    0.038                               * D_ext = 2"           
+FL207T0   2   207                                               * (QP - RJ) m3/h / (3600 * 0.001341) = 6.096285832 m/s
 *
 CF20700   VEL-FL207 DIVIDE 2 1.0
 CF20710   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276
@@ -453,12 +469,12 @@ CF30015   -1.0  0.0  CFVALU.101                                 * -RJ
 * SGS FL208           FM    TO    FM   TO                       * ArPU -> G-RWTS
 *-------------------------------------------------------
 *
-FL20800   SGS-FL208   901   402   5.75  5.75
-FL20801   0.001341  15.0   1.0    0.038    0.038              
+FL20800   SGS-FL208   907   402   5.75  5.75
+FL20801   0.001341  7.5   1.0    0.038    0.038              
 FL20802   3     0    0     0                                
 FL20803   1.0   1.0                                                           
-FL208S0   0.001341   15.0    0.038                             * D_ext = 2"           
-FL208T0   2   208                                              * R / (3600 * 0.001341) = 2.610944434 m/s
+FL208S0   0.001341   7.5    0.038                               * D_ext = 2"           
+FL208T0   2   208                                               * R / (3600 * 0.001341) = 2.610944434 m/s
 *
 CF20800   VEL-FL208 DIVIDE 2 1.0
 CF20810   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276                                 
@@ -469,11 +485,24 @@ CF20815   1.0  0.0  CFVALU.101
 *-------------------------------------------------------
 *
 FL20900   SGS-FL209   901  906   5.75  5.75
-FL20901   0.001341 1.0   1.0    0.038    0.038              
+FL20901   0.001341  7.5   1.0    0.038    0.038              
 FL20902   3     0    0     0                                
 FL20903   1.0   1.0                                                           
-FL209S0   0.001341   1.0    0.038                             * D_ext = 2"           
-*FL209T0   2   207                                              * (QP - RJ) m3/h / (3600 * 0.001341) = 6.096285832 m/s
+FL209S0   0.001341   7.5    0.038                               * D_ext = 2"           
+*
+* Calculo automatico de velocidad por diferencia de presion 
+*
+*-------------------------------------------------------
+* SGS FL210           FM    TO    FM   TO                       * ArPU -> G-RWTS
+*-------------------------------------------------------
+*
+FL21000   SGS-FL210   901   907   5.75  5.75
+FL21001   0.001341  7.5   1.0    0.038    0.038              
+FL21002   3     0    0     0                                
+FL21003   1.0   1.0                                                           
+FL210S0   0.001341   7.5    0.038                               * D_ext = 2"           
+*
+* Calculo automatico de velocidad por diferencia de presion 
 *
 *-------------------------------------------------------
 * SGS FL200           FM    TO    FM   TO                       * ArSS -> AUX-3
@@ -483,7 +512,8 @@ FL20000   SGS-FL200   900   904   7.481  7.481
 FL20001   0.001341  30.0   1.0    0.038    0.038              
 FL20002   3     0    0     0                                
 FL20003   1.0   1.0                                                           
-FL200S0   0.001341   30.0    0.038                             * D_ext = 2"           
+FL200S0   0.001341   30.0    0.038                              * D_ext = 2"
+FL200T0   2  208           
 *
 * Calculo automatico de velocidad por diferencia de presion 
 * RJ m3/h / (3600 * 0.001341) = 2.610944434 m/s
