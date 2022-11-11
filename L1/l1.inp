@@ -299,9 +299,9 @@ CV093B1   0.0      0.0
 CV093B2   31.5     1055.4112                            * 263.8528 x 4 m3
 ***
 *-----------------------------------------------                                                                
-* CV064 - SB4 - Shipping Bay 4 (C2)                                                                   
+* CV064 - SB-4 - Shipping Bay 4 (C2)                                                                   
 *-----------------------------------------------                                                                
-CV06400   SB4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV06400   SB-4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV06401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV064A0   3                                                                                         
 CV064A1   PVOL    101235.0                          * 101325-90Pa                                                                          
@@ -659,7 +659,7 @@ CV612B2   17.5   0.0890625                              * 750 x 475 x 250
 *
 ********************* AIR SUPPLY ******************************************
 *
-**** R102 - R110 - R113 - R114 - R109 (AS1)
+**** R102 - R110 - R113 - R114 - R109 (AS-1)
 *
 *-------------------------------------------------------
 * HVAC-inlet-AS-1          FM    TO     FM     TO
@@ -1032,12 +1032,12 @@ TF52410   0.0       4.93968254  * ?, velocity (para tener 3112 m3/h)
 *
 *--------------------------------------------------------------------
 *
-* R108 - R109 (AS_3)
+* R108 - R109 (AS-3)
 *
 *-------------------------------------------------------
-* HVAC-inlet_AS3          FM    TO     FM     TO
+* HVAC-inlet-AS-3  (S301)        FM    TO     FM     TO
 *-------------------------------------------------------
-FL52500   HVAC-inlet_AS3    400   512  24.0  24.0                   * ceiling
+FL52500   HVAC-inlet-AS-3    400   512  24.0  24.0                   * ceiling
 FL52501   1.0   0.25    1.0                       * A, L, FRACT OPEN, DIAM
 FL52502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL52503   1.0   1.0                                             * FORM LOSS
@@ -1082,7 +1082,7 @@ TF52710   0.0       3.833333333  * ?, velocity (para tener 1863 m3/h)
 *-------------------------------------------------------
 * HVAC-S303-2          FM    TO     FM     TO
 *-------------------------------------------------------
-FL52800   HVAC-S303-2    513   109  17.2375  17.2375                   *  
+FL52800   HVAC-S303-2    513   106  17.2375  17.2375                   *  
 FL52801   0.459375   4.0    1.0                     * A, L, FRACT OPEN, DIAM
 FL52802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL52803   1.0   1.0                                             * FORM LOSS
@@ -1097,27 +1097,12 @@ TF52810   0.0       6.534240363  * ?, velocity (para tener 10806 m3/h)
 **
 ************************** C2 EXHAUST *******************************
 *
-*** R110 - R113 - R114 (C2_1)
-*
-**-------------------------------------------------------
-* HVAC-outlet_C2_1         FM    TO     FM     TO
-*-------------------------------------------------------
-FL60900   HVAC-outlet-C2_1    600   401  31.0  31.0                   * ceiling - HYD.DIAM/2
-FL60901   1.0   0.25    1.0                       * A, L, FRACT OPEN, DIAM
-FL60902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL60903   1.0   1.0                                             * FORM LOSS
-FL609S0   1.0   0.25   1.0                     * 
-FL6090F   30.5    31.5
-FL6090T   30.5    31.5
-FL609T0   1   609        * TF, TFnumber
-*
-TF60900   FL609_vel  1    1.0  *name, number datapairs, mult.factor
-TF60910   0.0       6.652019642  * ?, velocity (para tener -23947.27071 m3/h)  
+*** R110 - R113 - R114 (C2-1)
 *
 *-------------------------------------------------------
-* HVAC-C2_R110_1           FM    TO     FM     TO
+* HVAC-C2-R110-1           FM    TO     FM     TO
 *-------------------------------------------------------
-FL60000   HVAC-C2_R110_1    110   601  16.325  16.325                   * 
+FL60000   HVAC-C2-R110-1    110   601  16.325  16.325                   * 
 FL60001   0.14   20.0   1.0                      * A, L, FRACT OPEN, DIAM
 FL60002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL60003   1.0   1.0                                             * FORM LOSS
@@ -1127,31 +1112,31 @@ FL6000T   16.15    16.5
 FL600T0   1   600        * TF, TFnumber
 *
 TF60000   FL600_vel  1    1.0  *name, number datapairs, mult.factor
-TF60010   0.0       4.700603793  * ?, velocity (para tener -2369.104312 m3/h)  
+TF60010   0.0       4.696428571  * ?, velocity (para tener -2367 m3/h)  
 *
-*  2367 m3/h a Patm = 2369.104312 m3/h a P_R110
+*  2367 m3/h a Patm = 2369.104312 m3/h a P_C2
 *
 *-------------------------------------------------------
-* HVAC-C2_R110_2           FM    TO     FM     TO
+* HVAC-C2-R110-2           FM    TO     FM     TO
 *-------------------------------------------------------
-FL60100   HVAC-C2_R110_2    110   601  16.2625  16.2625                   * 
+FL60100   HVAC-C2-R110-2    110   601  16.2625  16.2625                   * 
 FL60101   0.344375   10.0   1.0                       * A, L, FRACT OPEN, DIAM
 FL60102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL60103   1.0   1.0                                             * FORM LOSS
-FL601S0   0.344375   10.0   0.6622                     * 725 x 475
+FL601S0   0.344375   10.0   0.574                     * 725 x 475
 FL6010F   16.025    16.5
 FL6010T   16.025    16.5 
 FL601T0   1   601        * TF, TFnumber
 *
 TF60100   FL601_vel  1    1.0  *name, number datapairs, mult.factor
-TF60110   0.0       6.167204056  * ?, velocity (para tener -7645.791228 m3/h)
+TF60110   0.0       6.161726154  * ?, velocity (para tener -7639 m3/h)
 *
-* Normalización: 7639 m3/h a Patm = 7645.791228 m3/h a P_R110
+* Normalización: 7639 m3/h a Patm = 7645.791228 m3/h a P_C2
 *
 *-------------------------------------------------------
-* HVAC-C2_R110_3           FM    TO     FM     TO
+* HVAC-C2-R110-3           FM    TO     FM     TO
 *-------------------------------------------------------
-FL60200   HVAC-C2_R110_3   601   602  16.25  16.25                   * 
+FL60200   HVAC-C2-R110-3   601   602  16.25  16.25                   * 
 FL60201   0.45   20.0   1.0                       * A, L, FRACT OPEN, DIAM
 FL60202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL60203   1.0   1.0                                             * FORM LOSS
@@ -1161,12 +1146,14 @@ FL6020T   16.0    16.5
 FL602T0   1   602        * TF, TFnumber
 *
 TF60200   FL602_vel  1    1.0  *name, number datapairs, mult.factor
-TF60210   0.0       6.182034284  * ?, velocity (para tener -10014.89554 m3/h) 7645.791228 + 2369.104312
+TF60210   0.0       6.17654321  * ?, velocity (para tener -10006 m3/h)
+*
+* Normalización: 10006 m3/h a Patm = 10014.89554 m3/h a P_C2
 *
 *-------------------------------------------------------
-* HVAC-C2_R110_4           FM    TO     FM     TO
+* HVAC-C2-R110-4           FM    TO     FM     TO
 *-------------------------------------------------------
-FL60300   HVAC-C2_R110_4   110   602  16.3  16.3                   * 
+FL60300   HVAC-C2-R110-4   110   602  16.3  16.3                   * 
 FL60301   0.24   2.0   1.0                      * A, L, FRACT OPEN, DIAM
 FL60302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL60303   1.0   1.0                                             * FORM LOSS
@@ -1176,24 +1163,26 @@ FL6030T   16.1    16.5
 FL603T0   1   603        * TF, TFnumber
 *
 TF60300   FL603_vel  1    1.0  *name, number datapairs, mult.factor
-TF60310   0.0       5.37514474  * ?, velocity (para tener -4644.125056 m3/h)
+TF60310   0.0       5.37037037  * ?, velocity (para tener -4640 m3/h)
 *
-* Normalización: 4640 m3/h a Patm = 4644.125056 m3/h a P_R110
+* Normalización: 4640 m3/h a Patm = 4644.125056 m3/h a P_C2
 *
 *-------------------------------------------------------
-* HVAC-C2_R110_5           FM    TO     FM     TO
+* HVAC-C2-R110-5           FM    TO     FM     TO
 *-------------------------------------------------------
-FL60400   HVAC-C2_R110_5   602   603  16.225  16.225                   * 
+FL60400   HVAC-C2-R110-5   602   603  16.225  16.225                   * 
 FL60401   0.605   18.0   1.0                       * A, L, FRACT OPEN, DIAM
 FL60402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL60403   1.0   1.0                                             * FORM LOSS
-FL604S0   0.605   18.0   0.756                     * 1100 x 550
+FL604S0   0.605   18.0   0.733                     * 1100 x 550
 FL6040F   15.95    16.5
 FL6040T   15.95    16.5
 FL604T0   1   604        * TF, TFnumber
 *
 TF60400   FL604_vel  1    1.0  *name, number datapairs, mult.factor
-TF60410   0.0       6.730496141  * ?, velocity (para tener -14659.0206 m3/h) 10014.89554 + 4644.125056
+TF60410   0.0       6.724517906  * ?, velocity (para tener -14646 m3/h) 
+*
+* Normalización: 14646 m3/h a Patm = 14659.0206 m3/h a P_C2
 *
 *-------------------------------------------------------
 * HVAC-C2_R110_6           FM    TO     FM     TO
@@ -1259,6 +1248,21 @@ FL608T0   1   608        * TF, TFnumber
 *
 TF60800   FL608_vel  1    1.0  *name, number datapairs, mult.factor
 TF60810   0.0       7.971068966  * ?, velocity (para tener -23947.27071 m3/h) 19303.14566 + 4644.125056
+*
+**-------------------------------------------------------
+* HVAC-outlet-C2-1         FM    TO     FM     TO
+*-------------------------------------------------------
+FL60900   HVAC-outlet-C2-1    600   401  31.0  31.0                   * ceiling - HYD.DIAM/2
+FL60901   1.0   0.25    1.0                       * A, L, FRACT OPEN, DIAM
+FL60902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL60903   1.0   1.0                                             * FORM LOSS
+FL609S0   1.0   0.25   1.0                     * 
+FL6090F   30.5    31.5
+FL6090T   30.5    31.5
+FL609T0   1   609        * TF, TFnumber
+*
+TF60900   FL609_vel  1    1.0  *name, number datapairs, mult.factor
+TF60910   0.0       6.652019642  * ?, velocity (para tener -23947.27071 m3/h)  
 *
 **-------------------------------------------------------
 *
