@@ -1568,7 +1568,7 @@ TF62610   0.0      6.773569024  * ?, velocity (para tener -16094 m3/h)
 *-------------------------------------------------------
 * HVAC-outlet-C2-3         FM    TO     FM     TO
 *-------------------------------------------------------
-FL62700   HVAC-outlet-C2-3    605   401  31.0  31.0                   * ceiling - HYD.DIAM/2
+FL62700   HVAC-outlet-C2-3    609   401  31.0  31.0                   * ceiling - HYD.DIAM/2
 FL62701   1.0   0.25    1.0                       * A, L, FRACT OPEN, DIAM
 FL62702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL62703   1.0   1.0                                             * FORM LOSS
