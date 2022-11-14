@@ -262,7 +262,7 @@ CV907B2   6.0      1.0                              * 1m x 1m x 1m
 ******* Energy source from SGS-AUX-6 *******           
 *                                           
 CF90000 'AUX-6-Energy-src' EQUALS 1 1.0             * Energy source
-CF90010  1.0  0.0  CVH-TVAP.907                     * Temp AUX-6 = 290.95K (mantener temp cte.)
+CF90010  1.0  0.0  CVH-TVAP.906                     * Temp AUX-6 = 290.95K (mantener temp cte.)
 *   
 ******* Source SGS-AUX-6-O2 *******                    
 *                                           
