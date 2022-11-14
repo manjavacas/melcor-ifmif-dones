@@ -1589,10 +1589,10 @@ TF62710   0.0       6.143333333  * ?, velocity (para tener -22116 m3/h)
 *************** OUTDOORS ********************
 *
 FL40000   R110_leak_env    400   110  12.75  12.75                   * ceiling - HYD.DIAM/2
-FL40001   0.1   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
+FL40001   0.05   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
 FL40002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40003   1.0   1.0                                             * FORM LOSS
-FL400S0   0.1   0.25   0.3568248232    
+FL400S0   0.05   0.25   0.2523    
 * Q = 0.2 (ACH) * Vol (m3) = 1468.7925 m3/h for 90 Pa dif 
 * Simulación: 5.18 m/s * 0.1 m2 * 3600 s/h = 1864.8 m3/h                
 *  
@@ -1662,7 +1662,7 @@ CYMESF           55    60
 *
 RESTART          -1        
 *
-TEND     1.0E4 *segundos de simulacion
+TEND     1.0E3 *segundos de simulacion
 *
 *
 SOFTDTMIN  1.0E-4 1000
