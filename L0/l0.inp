@@ -75,7 +75,7 @@ CV016B2   7.5   2856.885
 * CV042 - C002 - Corridor (C2)                                                          
 *-----------------------------------------------                                                                
 CV04200   C002  2  2  1                                                           
-CV04201   0   0					                 
+CV04201   0   -1					                 
 CV042A0   3                                                                                         
 CV042A1   PVOL    101235.0                          * 101325-90Pa                                                                 
 CV042A3   TATM    293.15    RHUM 0.6                                                
@@ -293,30 +293,30 @@ CF90710  1.0  0.0  CVH-MASS.3.906
 *-----------------------------------------------                                                                
 * CV400 - ENV-INLET - Environment (HVAC inlet)                                                                
 *-----------------------------------------------                                                                
-CV40000   ENV  2  2  5          		                                           
-CV40001   0   -1                                    * Time-independent				       
-CV400A0   3                                                                                         
-CV400A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-CV400A3   TATM    293.15  RHUM  0.6    	                                                 
-CV400A8   MLFR.4  0.79                              * Filled with air (O2)
-CV400A9   MLFR.5  0.21                              * Filled with air (N2)
+*CV40000   ENV  2  2  5          		                                           
+*CV40001   0   -1                                    * Time-independent				       
+*CV400A0   3                                                                                         
+*CV400A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+*CV400A3   TATM    293.15  RHUM  0.6    	                                                 
+*CV400A8   MLFR.4  0.79                              * Filled with air (O2)
+*CV400A9   MLFR.5  0.21                              * Filled with air (N2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV400B1   0.0        0.0                                                          
-CV400B2  50.0   1000000.0              	            * Random huge volume                                                          
+*CV400B1   0.0        0.0                                                          
+*CV400B2  50.0   1000000.0              	         * Random huge volume                                                          
 ***                  
 *
 *-----------------------------------------------                                                                
 * CV401 - ENV-OUTLET - Environment (HVAC outlet)                                                                     
 *-----------------------------------------------                                                                
-CV40100   ENV  2  2  5          		                                   
-CV40101   0   -1		                            * Time-independent				            
-CV401A0   3                                                                                         
-CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-CV401A3   TATM    293.15  RHUM  0.6    	                                                  
-CV401A8   MLFR.4  0.79                              * Filled with air (O2)
-CV401A9   MLFR.5  0.21                              * Filled with air (N2)
+*CV40100   ENV  2  2  5          		                                   
+*CV40101   0   -1		                            * Time-independent				            
+*CV401A0   3                                                                                         
+*CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+*CV401A3   TATM    293.15  RHUM  0.6    	                                                  
+*CV401A8   MLFR.4  0.79                              * Filled with air (O2)
+*CV401A9   MLFR.5  0.21                              * Filled with air (N2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -344,18 +344,18 @@ CV402B2  50.0   1000000.0              	            * Random huge volume
 *-----------------------------------------------                                                              
 * CV410 - C2-collector - HVAC collector for C2
 *-----------------------------------------------                                                               
-CV41000   HVAC-C2  2  2  5          	                                            
-CV41001   0   -1							           
-CV410A0   3                                                                                         
-CV410A1   PVOL    101235.0                          * 101325Pa-90Pa                                                                      
-CV410A3   TATM    293.15  RHUM  0.0                                                   
-CV410A8   MLFR.4  0.79                              * Filled with air (O2)
-CV410A9   MLFR.5  0.21                              * Filled with air (N2)
+*CV41000   HVAC-C2  2  2  5          	                                            
+*CV41001   0   -1							           
+*CV410A0   3                                                                                         
+*CV410A1   PVOL    101235.0                          * 101325Pa-90Pa                                                                      
+*CV410A3   TATM    293.15  RHUM  0.0                                                   
+*CV410A8   MLFR.4  0.79                              * Filled with air (O2)
+*CV410A9   MLFR.5  0.21                              * Filled with air (N2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV410B1   0.0        0.0                                                          
-CV410B2  50.0      400.0               	            * Random big volume                                                           
+*CV410B1   0.0        0.0                                                          
+*CV410B2  50.0      400.0               	            * Random big volume                                                           
 ***        
 *                                                                                                                 
 ****************************************************************************************************************************************
@@ -368,11 +368,11 @@ CV410B2  50.0      400.0               	            * Random big volume
 * Door-R016-C002             FM    TO     FM     TO
 *-------------------------------------------------------
 *
-FL00100   Door-R016-C002    016   042    3.8  3.8
-FL00101   0.1524   1.0    0.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
-FL00102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL00103   1.0   1.0                                             * FORM LOSS
-FL001S0   0.1524   1.0    0.441                                 * A, L. HYD.DIAM. (4A/P)
+*FL00100   Door-R016-C002    016   042    3.8  3.8
+*FL00101   0.1524   1.0    0.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
+*FL00102	  3     0    0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+*FL00103   1.0   1.0                                             * FORM LOSS
+*FL001S0   0.1524   1.0    0.441                                 * A, L. HYD.DIAM. (4A/P)
 *
 **************************************************************** SGS ******************************************************************
 *
@@ -540,57 +540,57 @@ FL200T0   2  208
 * HVAC-C002-ex           FM    TO    FM   TO
 *-------------------------------------------------------
 *
-FL00300   HVAC-C002-ex   042   410   7.7  7.7
-FL00301   18E-2   50.0   1.0   0.48    0.48                     
-FL00302	  3     0    0     0                                
-FL00303   1.0   1.0                                           
-FL003S0   18E-2   50.0    0.478                            
-FL003T0   1   015                                        
+*FL00300   HVAC-C002-ex   042   410   7.7  7.7
+*FL00301   18E-2   50.0   1.0   0.48    0.48                     
+*FL00302	  3     0    0     0                                
+*FL00303   1.0   1.0                                           
+*FL003S0   18E-2   50.0    0.478                            
+*FL003T0   1   015                                        
 *
-TF01500   HVAC-C002-ex   1    1.0                         
-TF01510   0.0       5.45                                        * Modificado. Anterior (EAI) = 5.2
+*TF01500   HVAC-C002-ex   1    1.0                         
+*TF01510   0.0       5.45                                        * Modificado. Anterior (EAI) = 5.2
 *
 *-------------------------------------------------------
 * HVAC-C002-al            FM    TO    FM   TO
 *-------------------------------------------------------
 *
-FL00400   HVAC-C002-al    400   042   7.7   7.7
-FL00401   2.0   50.0    1.0   1.5958   1.5958                
-FL00402	  3     0    0     0                                 
-FL00403   1.0   1.0                                          
-FL004S0   2.0   50.0    1.5915 
+*FL00400   HVAC-C002-al    400   042   7.7   7.7
+*FL00401   2.0   50.0    1.0   1.5958   1.5958                
+*FL00402	  3     0    0     0                                 
+*FL00403   1.0   1.0                                          
+*FL004S0   2.0   50.0    1.5915 
 *                            
-FL004V0	  -1     004    004
-FL004T0   1   016                                          
+*FL004V0	  -1     004    004
+*FL004T0   1   016                                          
 *
-TF01600   HVAC-C002-al   1    1.0                            
-TF01610   0.0       1.0
+*TF01600   HVAC-C002-al   1    1.0                            
+*TF01610   0.0       1.0
 *
-CF00300   PRE      L-GT    2   1.0
-CF00305   NORMAL
-CF00310   1.0      0.0       CVH-P.042
-CF00315   0.0      101235.0  TIME
+*CF00300   PRE      L-GT    2   1.0
+*CF00305   NORMAL
+*CF00310   1.0      0.0       CVH-P.042
+*CF00315   0.0      101235.0  TIME
 *
-CF00400   VALVE    L-A-IFTE    3   1.0
-CF00405   NORMAL
-CF00410   1.0      0.0       CFVALU.003
-CF00415   0.0      0.475     TIME
-CF00420   0.0      0.525     TIME
+*CF00400   VALVE    L-A-IFTE    3   1.0
+*CF00405   NORMAL
+*CF00410   1.0      0.0       CFVALU.003
+*CF00415   0.0      0.475     TIME
+*CF00420   0.0      0.525     TIME
 *
 *-------------------------------------------------------
 * HVAC-H2-ex          FM    TO    FM    TO
 *-------------------------------------------------------
 *
-FL41000   HVAC-H2-ex  410   401   0.0  0.0
-FL41001   15.0   50.0    1.0   4.37  4.37 	                   
-FL41002	  3     0    0     0 				                  
-FL41003   1.0   1.0                      	                   
-FL410S0   15.0   50.0    4.37 
+*FL41000   HVAC-H2-ex  410   401   0.0  0.0
+*FL41001   15.0   50.0    1.0   4.37  4.37 	                   
+*FL41002	  3     0    0     0 				                  
+*FL41003   1.0   1.0                      	                   
+*FL410S0   15.0   50.0    4.37 
 *                             
-FL410T0   1   410        					                  
+*FL410T0   1   410        					                  
 *
-TF41000   HVAC-H2-ex  1    1.0  			             
-TF41010   0.0       5.2
+*TF41000   HVAC-H2-ex  1    1.0  			             
+*TF41010   0.0       5.2
 *
 **************************************************************  LEAKAGES *************************************************************** 
 *
@@ -643,12 +643,12 @@ MESSAGEFILE  l0_cor.mes
 CPULEFT          200.
 CPULIM           86400.                             * max time running      
 *
-CYMESF           10000    10000                     * 55    60    
+CYMESF           10000    10000                     * FRECUENCIA TERMINAL / .OUT    
 *
 *
 RESTART          -1        
 *
-TEND             1.0e6                              * tiempo de simulacion (seg) 3.1536e7 -> 1 year
+TEND             1.0e5                              * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000
@@ -661,4 +661,4 @@ TIME3       31449600.0  100.0     1.0      1800.0     1800.0     1800.0        *
 *TIME_N     TEND-86400  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia (general): cada media hora
 *
 *
-. * End
+. * End/L0
