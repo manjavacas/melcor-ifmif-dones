@@ -41,7 +41,9 @@ CV01601   0   0		                                * Fog allowed (default)
 CV016A0   3                                                                                         
 CV016A1   PVOL  100235.0                            * -1000 Pa para Oxygen Method
 CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV016A3   MLFR.8  1.0                               * Filled with Ar
+CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -57,8 +59,9 @@ CV04201   0   0
 CV042A0   3                                                                                         
 CV042A1   PVOL    101235.0                          * 101325-90Pa                                                                 
 CV042A3   TATM    293.15    RHUM 0.6                                                
-CV042A5   MLFR.4  0.79                              * Filled with air (O2)
-CV042A6   MLFR.5  0.21                              * Filled with air (N2)
+CV042A5   MLFR.4  0.78                              * Filled with air (N2)
+CV042A6   MLFR.5  0.21                              * Filled with air (O2)
+CV042A8   MLFR.8  0.01                              * Filled with air (Ar)
 *
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
