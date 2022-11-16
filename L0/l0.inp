@@ -16,7 +16,7 @@ stopf     l0.stp
 *
 crtout 
 tstart     00.0
-DTTIME     1.E-1      * initial time step
+DTTIME     0.1      * initial time step
 *
 *
 ****************************************************************************************************************************************
@@ -38,7 +38,7 @@ CF10000   QP  EQUALS  1  0.0  35.55           * Caudal de entrada al purificador
 CF10010   1.0  0.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  MULTIPLY  1  0.3                * Ar rejected by SGS-Ar (30 % of 35.55 m3/h) -> proporcional a 80 m3/h para solo R016
+CF10100   RJ  MULTIPLY  1  0.3                * Ar rejected by SGS-Ar (30% of 35.55 m3/h) -> proporcional a 80 m3/h para solo R016
 CF10110   1.0  0.0  CFVALU.100                * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
@@ -95,10 +95,10 @@ CV042B2   8.5    11032.3359
 * CV900 - ArSS - Ar Supply Subsystem (C3)                                                                    
 *-----------------------------------------------                                                                
 CV90000   ARSS  2  0  1                                                            
-CV90001   0   0		                                * Fog allowed (default)
+CV90001   0   0		                                 * Fog allowed (default)
 CV900A0   3                                                                                         
-CV900A1   PVOL  101195.0                            * 101325Pa-130Pa 
-CV900A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV900A1   PVOL  101195.0                             * 101325Pa-130Pa 
+CV900A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C; 0% rel. humidity
 CV900A3   MLFR.8  0.99999                            * Filled with Ar -> 99.999%   
 CV900A4   MLFR.5  0.0000021                          * Initial 02 -> 21% de 0.001% 
 CV900A5   MLFR.4  0.0000079                          * Initial N2 -> 79% de 0.001%    
@@ -269,7 +269,7 @@ CF90010  1.0  0.0  CVH-TVAP.906                     * Temp AUX-6 = 290.95K (mant
 CV907C1  MASS.5 905 3                       
 CV907C2  TE 900 9                           
 *
-CF90500 'AUX-6-O2-src' EQUALS 1 2.4425E-04        * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
+CF90500 'AUX-6-O2-src' EQUALS 1 2.4425E-04          * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
 CF90510  1.0  0.0  CVH-MASS.5.906                                      
 *
 ******* Source SGS-AUX-6-N2 *******                    
@@ -277,7 +277,7 @@ CF90510  1.0  0.0  CVH-MASS.5.906
 CV907C3  MASS.4 906 3                       
 CV907C4  TE 900 9                           
 *
-CF90600 'AUX-6-N2-src' EQUALS 1 5.425E-05         * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
+CF90600 'AUX-6-N2-src' EQUALS 1 5.425E-05           * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
 CF90610  1.0  0.0  CVH-MASS.4.906  
 *
 ******* Source SGS-AUX-6-H2O *******                    
@@ -285,7 +285,7 @@ CF90610  1.0  0.0  CVH-MASS.4.906
 CV907C5  MASS.3 907 3                       
 CV907C6  TE 900 9                           
 *
-CF90700 'AUX-6-H2O-src' EQUALS 1 2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
+CF90700 'AUX-6-H2O-src' EQUALS 1 2.75E-04           * Eficiencia (= 0.99) / 3600 = 2.75E-04
 CF90710  1.0  0.0  CVH-MASS.3.906 
 *
 ****************************************************************************************************************************************
@@ -528,7 +528,7 @@ FL20000   SGS-FL200   900   904   7.481  7.481
 FL20001   0.001341  7.5   1.0    0.038    0.038              
 FL20002   3     0    0     0                                
 FL20003   1.0   1.0                                                           
-FL200S0   0.001341   7.5    0.038                              * D_ext = 2"
+FL200S0   0.001341   7.5    0.038                               * D_ext = 2"
 FL200T0   2  208           
 *
 * Calculo automatico de velocidad por diferencia de presion 
@@ -641,25 +641,24 @@ MESSAGEFILE  l0_cor.mes
 *
 *
 CPULEFT          200.
-CPULIM           200000.   * max time running      
+CPULIM           86400.                             * max time running      
 *
-CYMESF           55    60    
+CYMESF           10000    10000                     * 55    60    
 *
 *
 RESTART          -1        
 *
-TEND             1.0e3     * simulation time (seconds) --> 1.4e6 = 1 año
+TEND             1.0e6                              * tiempo de simulacion (seg) 3.1536e7 -> 1 year
 *
 *
-SOFTDTMIN  .0001 1000
-*           TIME     DTMAX  DTMIN    DTEDT  DTPLT   DTRST
-TIME1        0.0     1.0   1.0e-3   1000.0  1.0   200.0
-TIME2      400.0     5.0   1.0e-3   1000.0  5.0   100.0
-TIME3      750.0     15.0   1.0e-3   1000.0  50.0   100.0
-TIME4     1500.0     15.0   1.0e-3   1000.0  50.0   100.0
-TIME5     2000.0     15.0   1.0e-3   1000.0  50.0   500.0
-TIME6     3000.0     15.0   1.0e-3   1000.0  50.0   500.0
-TIME7     4000.0     15.0   1.0e-3   2500.0  50.0   15000.0
-TIME8     5000.0     15.0   1.0e-3   2500.0  50.0   15000.0
+SOFTDTMIN  .1 1000
+*
+*
+*             TIME       DTMAX   DTMIN      DTEDT      DTPLT      DTRST
+TIME1       0.0         100.0     1.0      1800.0     1800.0     1800.0        * primer dia: cada media hora -> 1800 s
+TIME2       86400.0     1000.0    10.0     86400.0    86400.0    86400.0       * despues, cada 24 horas -> 86400.0 s
+TIME3       31449600.0  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
+*TIME_N     TEND-86400  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia (general): cada media hora
+*
 *
 . * End
