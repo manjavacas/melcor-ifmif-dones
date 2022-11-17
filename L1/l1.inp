@@ -2363,14 +2363,14 @@ FL82701   0.001   0.25    1.0                                   * A, L, FRACT OP
 FL82702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL82703   1.0   1.0                                             * FORM LOSS
 FL827S0   0.001   0.25   0.0357  
-* Valor pequeño: 1m pared, solo 20Pa diferencia
+* Valor pequeño: 1m pared, flow expected: 0 m3/h
 *
 FL82800   INF-R110-R151    110   151  11.75  11.75              * Half room height
 FL82801   0.001   0.25    1.0                                   * A, L, FRACT OPEN, DIAM
 FL82802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL82803   1.0   1.0                                             * FORM LOSS
 FL828S0   0.001   0.25   0.0357 
-*Valor pequeño: 1.5m pared 
+*Valor pequeño: 1.5m pared, flow expected: 30 m3/h
 *
 FL82900   INF-R110-R114-1    110   114  12.75  12.75            * Half room height
 FL82901   0.01   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
@@ -2389,7 +2389,7 @@ FL83201   0.001   0.25    1.0                                   * A, L, FRACT OP
 FL83202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL83203   1.0   1.0                                             * FORM LOSS
 FL832S0   0.001   0.25   0.0357                                 
-* Valor pequeño: 1.5m pared, R129 estanca (Ar)
+* Valor pequeño: 1.5m pared, R129 estanca (Ar), flow expected: 0 m3/h
 *
 *
 . * END
