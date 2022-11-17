@@ -529,7 +529,7 @@ FL20001   0.001341  7.5   1.0    0.038    0.038
 FL20002   3     0    0     0                                
 FL20003   1.0   1.0                                                           
 FL200S0   0.001341   7.5    0.038                               * D_ext = 2"
-FL200T0   2  208           
+*FL200T0   2  208           
 *
 * Calculo automatico de velocidad por diferencia de presion 
 * RJ m3/h / (3600 * 0.001341) = 2.610944434 m/s
