@@ -34,19 +34,19 @@ NCG555    AR    8                             * MATERIAL 8 IS AR
 ****************************************************************************************************************************************
 *
 ****** CAUDAL ENTRADA ArPU ******
-CF10000   QP  EQUALS  1  0.0  35.55           * Caudal de entrada al purificador. Nippon Gases -> 80 m3/h para todas las salas
+CF10000   QP  EQUALS  1  0.0  35.55                 * Caudal de entrada al purificador. Nippon Gases -> 80 m3/h para todas las salas
 CF10010   1.0  0.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  MULTIPLY  1  0.3                * Ar rejected by SGS-Ar (30% of 35.55 m3/h) -> proporcional a 80 m3/h para solo R016
-CF10110   1.0  0.0  CFVALU.100                * PARAMETRO A OPTIMIZAR
+CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.55 m3/h) -> proporcional a 80 m3/h para solo R016
+CF10110   1.0  0.0  CFVALU.100                      * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
-CF10200   QT  EQUALS  1  1.0                  * R016 (mas adelante: R016 + R009 + R129)
+CF10200   QT  EQUALS  1  1.0                        * R016 (mas adelante: R016 + R009 + R129)
 CF10210   1.0  0.0  CFVALU.103
 *
 ****** CAUDAL LLC *********
-CF10300   Q-LLC  EQUALS  1  0.0  11717.0      * Caudal entrada/salida R016
+CF10300   Q-LLC  EQUALS  1  0.0  11717.0            * Caudal entrada/salida R016
 CF10310   1.0  0.0  TIME 
 *
 ****************************************************************************************************************************************
@@ -311,7 +311,7 @@ CF90710  1.0  0.0  CVH-MASS.3.906
 * CV401 - ENV-OUTLET - Environment (HVAC outlet)                                                                     
 *-----------------------------------------------                                                                
 *CV40100   ENV  2  2  5          		                                   
-*CV40101   0   -1		                            * Time-independent				            
+*CV40101   0   -1		                             * Time-independent				            
 *CV401A0   3                                                                                         
 *CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
 *CV401A3   TATM    293.15  RHUM  0.6    	                                                  
@@ -321,24 +321,24 @@ CF90710  1.0  0.0  CVH-MASS.3.906
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV401B1   0.0        0.0                                                           
-CV401B2  50.0   1000000.0              	            * Random huge volume                                                          
+CV401B2  50.0   1000000.0              	             * Random huge volume                                                          
 ***
 *
 *-----------------------------------------------                                                                
 * CV402 - ENV-GRWTS - Environment (G-RWTS)
 *-----------------------------------------------                                                                
 CV40200   G-RWTS  2  2  5          		                                   
-CV40201   0   0		                                * Time-independent				            
+CV40201   0   0		                                 * Time-independent				            
 CV402A0   3                                                                                         
-CV402A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV402A1   PVOL    101325.0                           * 101325Pa = 1atm                                                                     
 CV402A3   TATM    293.15  RHUM  0.6    	                                                  
-CV402A8   MLFR.4  0.79                              * Filled with air (O2)
-CV402A9   MLFR.5  0.21                              * Filled with air (N2)
+CV402A8   MLFR.4  0.79                               * Filled with air (O2)
+CV402A9   MLFR.5  0.21                               * Filled with air (N2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV402B1   0.0        0.0                                                          
-CV402B2  50.0   1000000.0              	            * Random huge volume                                                          
+CV402B2  50.0   1000000.0              	             * Random huge volume                                                          
 ***
 *
 *-----------------------------------------------                                                              
@@ -355,7 +355,7 @@ CV402B2  50.0   1000000.0              	            * Random huge volume
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 *CV410B1   0.0        0.0                                                          
-*CV410B2  50.0      400.0               	            * Random big volume                                                           
+*CV410B2  50.0      400.0               	         * Random big volume                                                           
 ***        
 *                                                                                                                 
 ****************************************************************************************************************************************
@@ -641,14 +641,14 @@ MESSAGEFILE  l0_cor.mes
 *
 *
 CPULEFT          200.
-CPULIM           86400.                             * max time running      
+CPULIM           86400.                               * max CPU cycles running      
 *
 CYMESF           100000    100000                     * FRECUENCIA TERMINAL / .OUT    
 *
 *
 RESTART          -1        
 *
-TEND             3.1536e7                              * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             3.1536e7                             * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000
@@ -658,6 +658,7 @@ SOFTDTMIN  .1 1000
 TIME1       0.0         100.0     1.0      1800.0     1800.0     1800.0        * primer dia: cada media hora -> 1800 s
 TIME2       86400.0     1000.0    10.0     86400.0    86400.0    86400.0       * despues, cada 24 horas -> 86400.0 s
 TIME3       31449600.0  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
+*
 *TIME_N     TEND-86400  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia (general): cada media hora
 *
 *
