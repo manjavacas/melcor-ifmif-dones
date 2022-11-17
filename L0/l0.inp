@@ -643,7 +643,7 @@ MESSAGEFILE  l0_cor.mes
 CPULEFT          200.
 CPULIM           86400.                             * max time running      
 *
-CYMESF           10000    10000                     * FRECUENCIA TERMINAL / .OUT    
+CYMESF           100000    100000                     * FRECUENCIA TERMINAL / .OUT    
 *
 *
 RESTART          -1        
