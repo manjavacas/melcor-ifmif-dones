@@ -34,11 +34,11 @@ NCG555    AR    8                             * MATERIAL 8 IS AR
 ****************************************************************************************************************************************
 *
 ****** CAUDAL ENTRADA ArPU ******
-CF10000   QP  EQUALS  1  0.0  35.55                 * Caudal de entrada al purificador. Nippon Gases -> 80 m3/h para todas las salas
+CF10000   QP  EQUALS  1  0.0  35.5957               * Caudal de entrada al purificador. Nippon Gases -> 80 Nm3/h para todas las salas
 CF10010   1.0  0.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.55 m3/h) -> proporcional a 80 m3/h para solo R016
+CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.5957 m3/h) -> proporcional a 80 Nm3/h para solo R016
 CF10110   1.0  0.0  CFVALU.100                      * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
@@ -97,7 +97,7 @@ CV042B2   8.5    11032.3359
 CV90000   ARSS  2  0  1                                                            
 CV90001   0   -1		                             * Fog allowed (default)
 CV900A0   3                                                                                         
-CV900A1   PVOL  101195.0                             * 101325Pa-130Pa 
+CV900A1   PVOL  101195.0                             * 101325Pa-130Pa
 CV900A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C; 0% rel. humidity
 CV900A3   MLFR.8  0.99999                            * Filled with Ar -> 99.999%   
 CV900A4   MLFR.5  0.0000021                          * Initial 02 -> 21% de 0.001% 
@@ -377,6 +377,23 @@ CV402B2  50.0   1000000.0              	             * Random huge volume
 **************************************************************** SGS ******************************************************************
 *
 *-------------------------------------------------------
+* SGS FL200           FM    TO    FM   TO                       * ArSS -> AUX-3
+*-------------------------------------------------------
+*
+FL20000   SGS-FL200   900   904   7.481  7.481
+FL20001   0.001341  7.5   1.0    0.038    0.038              
+FL20002   3     0    0     0                                
+FL20003   1.0   1.0                                                           
+FL200S0   0.001341   7.5    0.038                               * D_ext = 2"
+*FL200T0   2  208           
+*
+*CF20000   VEL-ArSS  EQUALS  1  0.0  2.20813654818               * 10.66 / (3600 * 0.001341)
+*CF20010   1.0  0.0  TIME
+*
+* Para calculo automatico de velocidad por diferencia de presion:
+* RJ m3/h / (3600 * 0.001341) = 2.610944434 m/s
+*
+*-------------------------------------------------------
 * SGS FL201           FM    TO    FM   TO                       * AUX-2 --> AUX-3
 *-------------------------------------------------------
 *
@@ -520,20 +537,6 @@ FL210S0   0.001341   7.5    0.038                               * D_ext = 2"
 *
 * Calculo automatico de velocidad por diferencia de presion 
 *
-*-------------------------------------------------------
-* SGS FL200           FM    TO    FM   TO                       * ArSS -> AUX-3
-*-------------------------------------------------------
-*
-FL20000   SGS-FL200   900   904   7.481  7.481
-FL20001   0.001341  7.5   1.0    0.038    0.038              
-FL20002   3     0    0     0                                
-FL20003   1.0   1.0                                                           
-FL200S0   0.001341   7.5    0.038                               * D_ext = 2"
-*FL200T0   2  208           
-*
-* Calculo automatico de velocidad por diferencia de presion 
-* RJ m3/h / (3600 * 0.001341) = 2.610944434 m/s
-*
 **************************************************************** HVAC ****************************************************************** 
 *
 *-------------------------------------------------------
@@ -641,14 +644,14 @@ MESSAGEFILE  l0_cor.mes
 *
 *
 CPULEFT          200.
-CPULIM           86400.                               * max CPU cycles running      
+CPULIM           86400.                          * max CPU cycles running      
 *
-CYMESF           100000    100000                     * FRECUENCIA TERMINAL / .OUT    
+CYMESF           100000    100000                * FRECUENCIA TERMINAL / .OUT    
 *
 *
 RESTART          -1        
 *
-TEND             3.1536e7                             * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             1.e6                            * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000
