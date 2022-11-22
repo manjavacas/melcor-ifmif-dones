@@ -95,7 +95,7 @@ CV042B2   8.5    11032.3359
 * CV900 - ArSS - Ar Supply Subsystem (C3)                                                                    
 *-----------------------------------------------                                                                
 CV90000   ARSS  2  0  1                                                            
-CV90001   0   0		                                 * Fog allowed (default)
+CV90001   0   -1		                             * Fog allowed (default)
 CV900A0   3                                                                                         
 CV900A1   PVOL  101195.0                             * 101325Pa-130Pa 
 CV900A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C; 0% rel. humidity
