@@ -665,7 +665,7 @@ CYMESF           100000    100000                * FRECUENCIA TERMINAL / .OUT
 *
 RESTART          -1        
 *
-TEND             5.e5                            * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             3.1536e7                            * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000
