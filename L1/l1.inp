@@ -810,7 +810,7 @@ CV193B2   17.5     380.2                            * 8.5m (h)
 ***
 *
 *
-*********************** MANIFOLDS **************************************
+********************************** MANIFOLDS ********************************************
 *-----------------------------------------------
 * CV500 - AS-1 - Air Supply 1
 *-----------------------------------------------                                                                
@@ -909,7 +909,7 @@ CV609B1   16.0      0.0
 CV609B2   31.5   12.59375                              * FROM L3 TO L1; 1250 x 650
 ***
 *
-******************** CONNECTION VOLUMES *************************
+******************************** CONNECTION VOLUMES ****************************************
 *-----------------------------------------------
 * CV501 - CVAS-1 - Connection Volume Air Supply 1
 *-----------------------------------------------                                                                
@@ -1247,11 +1247,11 @@ CV612B1   17.025      0.0
 CV612B2   17.5   0.0890625                              * 750 x 475 x 250
 *
 ***
-*****************************************************************************
-*                     FLOW PATHS
-*****************************************************************************
+*************************************************************************************************
+*                                         FLOW PATHS
+*************************************************************************************************
 *
-********************* AIR SUPPLY ******************************************
+***************************************** AIR SUPPLY ********************************************
 *
 **** R102 - R110 - R113 - R114 - R109 (AS-1)
 *
@@ -1597,7 +1597,7 @@ TF52210   0.0       5.21037037  * ?, velocity (para tener 3517 m3/h)
 *------------------------------------------------------------------------------------------------------------------
 * HVAC-S207          FM    TO     FM     TO
 *------------------------------------------------------------------------------------------------------------------
-FL52300   HVAC-S207    511   093  17.4125  17.4125                   * 
+FL52300   HVAC-S207    511   186  17.4125  17.4125                   * 
 FL52301   0.039375   3.2    1.0                      * A, L, FRACT OPEN, DIAM
 FL52302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL52303   1.0   1.0                                             * FORM LOSS
@@ -1661,7 +1661,7 @@ TF52610   0.0       6.703174603  * ?, velocity (para tener 12669 m3/h)
 *------------------------------------------------------------------------------------------------------------------
 * HVAC-S303-1          FM    TO     FM     TO
 *------------------------------------------------------------------------------------------------------------------
-FL52700   HVAC-S303-1    513   108  17.35  17.35                   *
+FL52700   HVAC-S303-1    513   106  17.35  17.35                   *
 FL52701   0.135   12.2    1.0                     * A, L, FRACT OPEN, DIAM
 FL52702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL52703   1.0   1.0                                             * FORM LOSS
@@ -1886,7 +1886,7 @@ TF61010   0.0      3.621399177  * ?, velocity (para tener -1320 m3/h)
 *---------------------------------------------------------------------------------------------------------------
 * HVAC-A106           FM    TO     FM     TO
 *---------------------------------------------------------------------------------------------------------------
-FL61100   HVAC-A106   093   606  17.3875  17.3875                   * 
+FL61100   HVAC-A106   186   606  17.3875  17.3875                   * 
 FL61101   0.09   12.7   1.0                       * A, L, FRACT OPEN, DIAM
 FL61102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL61103   1.0   1.0                                             * FORM LOSS
@@ -2094,7 +2094,7 @@ TF62210   0.0      6.290421456  * ?, velocity (para tener -8209 m3/h)
 *----------------------------------------------------------------------------------------------------------------
 * HVAC-A210-1           FM    TO     FM     TO
 *----------------------------------------------------------------------------------------------------------------
-FL62300   HVAC-A210-1   108   612  17.3375  17.3375                   * 
+FL62300   HVAC-A210-1   106   612  17.3375  17.3375                   * 
 FL62301   0.11375   14.5   1.0                       * A, L, FRACT OPEN, DIAM
 FL62302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL62303   1.0   1.0                                             * FORM LOSS
@@ -2182,70 +2182,70 @@ TF62710   0.0       6.143333333  * ?, velocity (para tener -22116 m3/h)
 *
 *************** OUTDOORS ********************              
 *  
-FL40000   INF-OUT-SB1-L1    400   061  13.25  13.25             * Half room height
+FL40000   INF-OUT-SB1L1    400   180  13.25  13.25             * Half room height
 FL40001   0.01   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
 FL40002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40003   1.0   1.0                                             * FORM LOSS
 FL400S0   0.01   0.25   0.1128                                  * 185 m3/h expected ---> 5.14 m/s   
 *  
 *
-FL40100   INF-OUT-SB2-L1    400   062  13.25  13.25             * Half room height
+FL40100   INF-OUT-SB2L1    400   181  13.25  13.25             * Half room height
 FL40101   0.01   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
 FL40102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40103   1.0   1.0                                             * FORM LOSS
 FL401S0   0.01   0.25   0.1128                                  * 148 m3/h expected ---> 4.11 m/s   
 *  
 *
-FL40200   INF-OUT-SB3-L1    400   063  13.25  13.25             * Half room height
+FL40200   INF-OUT-SB3L1    400   182  13.25  13.25             * Half room height
 FL40201   0.01   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
 FL40202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40203   1.0   1.0                                             * FORM LOSS
 FL402S0   0.01   0.25   0.1128                                  * 165 m3/h expected ---> 4.58 m/s   
 *  
 * 
-FL40300   INF-OUT-SB4-L1    400   064  13.25  13.25             * Half room height
+FL40300   INF-OUT-SB4L1    400   183  13.25  13.25             * Half room height
 FL40301   0.025   0.25    1.0                                   * A, L, FRACT OPEN, DIAM
 FL40302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40303   1.0   1.0                                             * FORM LOSS
 FL403S0   0.025   0.25   0.1784                                 * 383 m3/h expected ---> 4.26 m/s
 *
 *
-FL40400   INF-OUT-E02-L1    400   072  13.25  13.25             * Half room height
+FL40400   INF-OUT-E02L1    400   184  13.25  13.25             * Half room height
 FL40401   0.0025   0.25    1.0                                  * A, L, FRACT OPEN, DIAM
 FL40402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40403   1.0   1.0                                             * FORM LOSS
 FL404S0   0.0025   0.25   0.0564                                * 35 m3/h expected ---> 3.89 m/s
 * 
 *
-FL40500   INF-OUT-E03-L1    400   073  13.25  13.25             * Half room height
+FL40500   INF-OUT-E03L1    400   185  13.25  13.25             * Half room height
 FL40501   0.0025   0.25    1.0                                  * A, L, FRACT OPEN, DIAM
 FL40502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40503   1.0   1.0                                             * FORM LOSS
 FL405S0   0.0025   0.25   0.0564                                * 42 m3/h expected ---> 4.67 m/s
 *
 *
-FL40600   INF-OUT-S02-L1    400   093  13.25  13.25             * Half room height
+FL40600   INF-OUT-S02L1    400   186  13.25  13.25             * Half room height
 FL40601   0.005   0.25    1.0                                   * A, L, FRACT OPEN, DIAM
 FL40602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40603   1.0   1.0                                             * FORM LOSS
 FL406S0   0.005   0.25   0.0798                                 * 81 m3/h expected ---> 4.5 m/s
 *
 *
-FL40700   INF-OUT-S04-L1    400   094  13.25  13.25             * Half room height
+FL40700   INF-OUT-S04L1    400   187  13.25  13.25             * Half room height
 FL40701   0.0075   0.25    1.0                                  * A, L, FRACT OPEN, DIAM
 FL40702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40703   1.0   1.0                                             * FORM LOSS
 FL407S0   0.0075   0.25   0.0977                                * 103 m3/h expected ---> 3.81 m/s
 *
 *
-FL40800   INF-OUT-S05-L1    400   095  13.25  13.25             * Half room height
+FL40800   INF-OUT-S05L1    400   188  13.25  13.25             * Half room height
 FL40801   0.0075   0.25    1.0                                  * A, L, FRACT OPEN, DIAM
 FL40802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40803   1.0   1.0                                             * FORM LOSS
 FL408S0   0.0075   0.25   0.0977                                * 111 m3/h expected ---> 4.11 m/s
 *
 *
-FL40900   INF-OUT-S07-L1    400   097  13.25  13.25             * Half room height
+FL40900   INF-OUT-S07L1    400   189  13.25  13.25             * Half room height
 FL40901   0.005   0.25    1.0                                   * A, L, FRACT OPEN, DIAM
 FL40902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40903   1.0   1.0                                             * FORM LOSS
@@ -2322,7 +2322,7 @@ FL41903   1.0   1.0                                             * FORM LOSS
 FL419S0   0.0025   0.25   0.0564                                * 53 m3/h expected ---> 5.89 m/s
 *
 *
-FL42000   INF-OUT-C102    400   196  13.25  13.25               * Half room height
+FL42000   INF-OUT-C102    400   190  13.25  13.25               * Half room height
 FL42001   0.09   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
 FL42002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL42003   1.0   1.0                                             * FORM LOSS
@@ -2351,7 +2351,7 @@ FL81403   1.0   1.0                                             * FORM LOSS
 FL814S0   0.01   0.25   0.1128  
 *
 *
-*FL81700   INF-R108-R110    108   110  12.75  12.75              * Half room height
+*FL81700   INF-R106-R110    106   110  12.75  12.75              * Half room height
 *FL81701   0.01   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
 *FL81702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 *FL81703   1.0   1.0                                             * FORM LOSS
@@ -2365,7 +2365,7 @@ FL814S0   0.01   0.25   0.1128
 *FL821S0   0.01   0.25   0.1128  
 *
 *
-*FL82700   INF-R110-AL151    110   194  11.75  11.75             * Half room height
+*FL82700   INF-R110-AL151    110   191  11.75  11.75             * Half room height
 *FL82701   0.001   0.25    1.0                                   * A, L, FRACT OPEN, DIAM
 *FL82702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 *FL82703   1.0   1.0                                             * FORM LOSS
