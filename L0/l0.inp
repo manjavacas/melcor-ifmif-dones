@@ -34,11 +34,11 @@ NCG555    AR    8                             * MATERIAL 8 IS AR
 ****************************************************************************************************************************************
 *
 ****** CAUDAL ENTRADA ArPU ******
-CF10000   QP  EQUALS  1  0.0  35.5957               * Caudal de entrada al purificador. Nippon Gases -> 80 Nm3/h para todas las salas
+CF10000   QP  EQUALS  1  0.0  35.64601176           * Caudal de entrada al purificador. Nippon Gases -> 80 Nm3/h para todas las salas
 CF10010   1.0  0.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.5957 Nm3/h) -> proporcional a 80 Nm3/h para solo R016
+CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.55454408 Nm3/h) -> proporcional a 80 Nm3/h para solo R016
 CF10110   1.0  0.0  CFVALU.100                      * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
@@ -46,7 +46,7 @@ CF10200   QT  EQUALS  1  1.0                        * R016 (mas adelante: R016 +
 CF10210   1.0  0.0  CFVALU.103
 *
 ****** CAUDAL LLC *********
-CF10300   Q-LLC  EQUALS  1  0.0  11727.4            * Caudal entrada/salida R016
+CF10300   Q-LLC  EQUALS  1  0.0  11747.14318        * Caudal entrada/salida R016
 CF10310   1.0  0.0  TIME 
 *
 ****************************************************************************************************************************************
@@ -54,12 +54,12 @@ CF10310   1.0  0.0  TIME
 ****************************************************************************************************************************************
 *
 *-----------------------------------------------                                                                
-* CV016 - R016 - Lithium loop cell (C3)                                                                    
+* CV016 - R016 - Lithium loop cell (C4)                                                                    
 *-----------------------------------------------                                                                
 CV01600   R016  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
 CV01601   0   0		                                * Fog allowed (default)
 CV016A0   3                                                                                         
-CV016A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV016A1   PVOL  101065.0                            * 101325Pa-260Pa 
 CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -68,9 +68,27 @@ CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
 CV016B1   0.0      0.0                                                            
-CV016B2   7.5   2658.7
+CV016B2   7.2      2658.7                           * Aprox. height 
 ***
-*       
+*
+*-----------------------------------------------                                                                
+* CV093 - AL016 - Airlock (C3a)                                                                    
+*-----------------------------------------------                                                                
+*CV09300   AL016  2  0  1                                                            
+*CV09301   0   0		                              
+*CV093A0   3                                                                                         
+*CV093A1   PVOL  101215.0                            * 101325Pa-110Pa 
+*CV093A2   TATM  290.95  RHUM  0.0                   * 20 deg. C; 0% rel. humidity
+*CV093A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+*CV093A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+*CV093A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+*CV093B1   0.0      0.0                                                            
+*CV093B2   7.5      281.8                           
+***
+*      
 *-----------------------------------------------                                                                
 * CV042 - C002 - Corridor (C2)                                                          
 *-----------------------------------------------                                                                
@@ -86,13 +104,13 @@ CV042A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV042B1   0.0      0.0                                                            
-CV042B2   8.5    11032.3359                     
+CV042B2   8.13     11032.7                          * Aprox. height              
 ***
 *
 ****************************************************************************************************************************************
 *
 *-----------------------------------------------                                                                
-* CV900 - ArSS - Ar Supply Subsystem (C3)                                                                    
+* CV900 - ArSS - Ar Supply Subsystem                                                                    
 *-----------------------------------------------                                                                
 CV90000   ARSS  2  0  1                                                            
 CV90001   0   -1		                             * Fog allowed (default)
@@ -110,12 +128,12 @@ CV900B2   50.0     1000000.0
 ***
 *
 *-----------------------------------------------                                                                
-* CV901 - ArPU - Argon Purification Unit (C3)                                                                    
+* CV901 - ArPU - Argon Purification Unit (C4)                                                                    
 *-----------------------------------------------                                                                
 CV90100   ArPU  2  0  1                                                   
 CV90101   0   0		                                * Fog allowed (default)
 CV901A0   3                                                                                         
-CV901A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV901A1   PVOL  101065.0                            * 101325Pa-260Pa 
 CV901A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV901A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV901A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -128,12 +146,12 @@ CV901B2   6.0   942.48                              * Asumimos 8 cilindros de R 
 ***
 *
 *-----------------------------------------------                                                                
-* CV902 - SGS-AUX-1 (C3)                                                                    
+* CV902 - SGS-AUX-1 (C4)                                                                    
 *-----------------------------------------------                                                                
 CV90200   SGS-AUX-1  2  0  1                                                   
 CV90201   0   0		                                * Fog allowed (default)
 CV902A0   3                                                                                         
-CV902A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV902A1   PVOL  101065.0                            * 101325Pa-260Pa 
 CV902A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV902A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV902A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -141,16 +159,16 @@ CV902A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-CV902B1   6.5      0.0                                                            
-CV902B2   7.5      1.0                              * 1m x 1m x 1m                                                   
+CV902B1   6.2      0.0                                                            
+CV902B2   7.2      1.0                              * 1m x 1m x 1m                                                   
 ***
 *-----------------------------------------------                                                                
-* CV903 - SGS-AUX-2 (C3)                                                                    
+* CV903 - SGS-AUX-2 (C4)                                                                    
 *-----------------------------------------------                                                                
 CV90300   SGS-AUX-2  2  0  1                                                   
 CV90301   0   0		                                * Fog allowed (default)
 CV903A0   3                                                                                         
-CV903A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV903A1   PVOL  101065.0                            * 101325Pa-260Pa 
 CV903A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV903A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV903A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -158,16 +176,16 @@ CV903A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-CV903B1   5.5      0.0                                                            
-CV903B2   7.5      2.0                              * 2m x 1m x 1m                                                   
+CV903B1   5.2      0.0                                                            
+CV903B2   7.2      2.0                              * 2m x 1m x 1m                                                   
 ***
 *-----------------------------------------------                                                                
-* CV904 - SGS-AUX-3 (C3)                                                                    
+* CV904 - SGS-AUX-3 (C4)                                                                    
 *-----------------------------------------------                                                                
 CV90400   SGS-AUX-3  2  0  1                                                   
 CV90401   0   0		                                * Fog allowed (default)
 CV904A0   3                                                                                         
-CV904A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV904A1   PVOL  101065.0                            * 101325Pa-260Pa 
 CV904A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV904A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV904A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -175,16 +193,16 @@ CV904A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-CV904B1   5.5      0.0                                                            
-CV904B2   7.5      2.0                              * 2m x 1m x 1m                                                   
+CV904B1   5.2      0.0                                                            
+CV904B2   7.2      2.0                              * 2m x 1m x 1m                                                   
 ***
 *-----------------------------------------------                                                                
-* CV905 - SGS-AUX-4 (C3)                                                                    
+* CV905 - SGS-AUX-4 (C4)                                                                    
 *-----------------------------------------------                                                                
 CV90500   SGS-AUX-4  2  0  1                                                   
 CV90501   0   0		                                * Fog allowed (default)
 CV905A0   3                                                                                         
-CV905A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV905A1   PVOL  101065.0                            * 101325Pa-260Pa 
 CV905A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV905A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV905A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -192,16 +210,16 @@ CV905A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-CV905B1   6.5      0.0                                                            
-CV905B2   7.5      1.0                              * 1m x 1m x 1m                                                   
+CV905B1   6.2      0.0                                                            
+CV905B2   7.2      1.0                              * 1m x 1m x 1m                                                   
 ***
 *-----------------------------------------------                                                                
-* CV906 - SGS-AUX-5 (C3)                                                                    
+* CV906 - SGS-AUX-5 (C4)                                                                    
 *-----------------------------------------------                                                                
 CV90600   SGS-AUX-5  2  0  1                                                   
 CV90601   0   0		                                * Fog allowed (default)
 CV906A0   3                                                                                         
-CV906A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV906A1   PVOL  101065.0                            * 101325Pa-260Pa 
 CV906A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV906A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV906A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -209,8 +227,8 @@ CV906A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-CV906B1   5.5      0.0                                                            
-CV906B2   7.5      2.0                              * 2m x 1m x 1m                                                                                                    
+CV906B1   5.2      0.0                                                            
+CV906B2   7.2      2.0                              * 2m x 1m x 1m                                                                                                    
 ***
 ******* Energy source for SGS-AUX-5 *******           
 *                                           
@@ -241,7 +259,6 @@ CV906C6  TE 901 9
 CF90400 'AUX-5-H2O-sink' EQUALS 1 -2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
 CF90410  1.0  0.0  CVH-MASS.3.906   
 *
-***
 *-----------------------------------------------                                                                
 * CV907 - SGS-AUX-6 (C3)                                                                    
 *-----------------------------------------------                                                                
@@ -320,8 +337,8 @@ CF90710  1.0  0.0  CVH-MASS.3.906
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV401B1   0.0        0.0                                                           
-CV401B2  50.0   1000000.0              	             * Random huge volume                                                          
+*CV401B1   0.0        0.0                                                           
+*CV401B2  50.0   1000000.0              	         * Random huge volume                                                          
 ***
 *
 *-----------------------------------------------                                                                
@@ -368,7 +385,7 @@ CV402B2  50.0   1000000.0              	             * Random huge volume
 * Door-R016-C002             FM    TO     FM     TO
 *-------------------------------------------------------
 *
-*FL00100   Door-R016-C002    016   042    3.8  3.8
+*FL00100   Door-R016-C002    016   042    3.6  3.6
 *FL00101   0.1524   1.0    0.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
 *FL00102   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 *FL00103   0.0   0.0                                             * FORM LOSS
@@ -380,24 +397,21 @@ CV402B2  50.0   1000000.0              	             * Random huge volume
 * SGS FL200           FM    TO    FM   TO                       * ArSS -> AUX-3
 *-------------------------------------------------------
 *
-FL20000   SGS-FL200   900   904   7.481  7.481
+FL20000   SGS-FL200   900   904   6.2    6.2
 FL20001   0.001341  7.5   1.0    0.038    0.038              
 FL20002   3     0    0     0                                
 FL20003   0.0   0.0                                                           
 FL200S0   0.001341   7.5    0.038                               * D_ext = 2"
 FL200T0   2  200           
 *
-CF20000   VEL-ArSS  EQUALS  1  0.0  0.1765                      * X / (3600 * 0.001341)
+CF20000   VEL-ArSS  EQUALS  1  0.0  0.1853                     * X / (3600 * 0.001341) -> MAX 0.1864495298 m/s
 CF20010   1.0  0.0  TIME
 *
-* Para calculo automatico de velocidad por diferencia de presion:
-* RJ m3/h / (3600 * 0.001341) = 2.610944434 m/s
-*
 *-------------------------------------------------------
-* SGS FL201           FM    TO    FM   TO                       * AUX-2 --> AUX-3
+* SGS FL201           FM    TO    FM   TO                       * AUX-2 -> AUX-3
 *-------------------------------------------------------
 *
-FL20100   SGS-FL201   903   904   7.127  7.127
+FL20100   SGS-FL201   903   904   6.2  6.2
 FL20101   0.43709  10.0   1.0    0.746    0.746              
 FL20102	  3     0    0     0                                
 FL20103   0.0   0.0                                                           
@@ -416,7 +430,7 @@ CF20215   -1.0  0.0  CFVALU.100
 * SGS FL202           FM    TO    FM   TO                       * AUX-3 --> AUX-4
 *-------------------------------------------------------
 *
-FL20200   SGS-FL202   904   905   7.127  7.127
+FL20200   SGS-FL202   904   905   6.7    6.7
 FL20201   0.43709  5.0   1.0    0.746    0.746              
 FL20202	  3     0    0     0                                
 FL20203   0.0   0.0                                                         
@@ -427,7 +441,7 @@ FL202T0   2   205                                               *  QT m3/h / (36
 * SGS FL203           FM    TO    FM   TO                       * AUX-4 --> LLC                  
 *-------------------------------------------------------
 *
-FL20300   SGS-FL203   905   016   7.252  7.252
+FL20300   SGS-FL203   905   016   6.7  6.7
 FL20301   0.19322  4.0   1.0  0.496   0.496                
 FL20302	  3     0    0     0                                
 FL20303   0.0   0.0                                         
@@ -442,7 +456,7 @@ CF20315   1.0  0.0  CFVALU.103
 * SGS FL204           FM    TO    FM   TO                       * LLC -> AUX-1
 *-------------------------------------------------------
 *
-FL20400   SGS-FL204   016   902   7.252  7.252
+FL20400   SGS-FL204   016   902  6.7  6.7  
 FL20401   0.19322  4.0   1.0  0.496   0.496                
 FL20402	  3     0    0     0                                
 FL20403  0.0   0.0                                         
@@ -453,7 +467,7 @@ FL204T0   2   203                                               * Mismo valor qu
 * SGS FL205           FM    TO    FM   TO                       * AUX-1 --> AUX-2
 *-------------------------------------------------------
 *
-FL20500   SGS-FL205   902   903   7.127  7.127
+FL20500   SGS-FL205   902   903   6.7  6.7
 FL20501   0.43709  36.0   1.0    0.746    0.746              
 FL20502	  3     0    0     0                                
 FL20503   0.0   0.0                                                          
@@ -468,7 +482,7 @@ CF20515   1.0  0.0  CFVALU.102
 * SGS FL206           FM    TO    FM   TO                       * AUX-2 --> ArPU
 *-------------------------------------------------------
 *
-FL20600   SGS-FL206   903   901   5.75  5.75
+FL20600   SGS-FL206   903   901   5.6  5.6
 FL20601   0.001521  15.0   1.0    0.038    0.038              
 FL20602	  3     0    0     0                                
 FL20603   0.0   0.0                                                           
@@ -483,7 +497,7 @@ CF20615   1.0  0.0  CFVALU.100
 * SGS FL207           FM    TO    FM   TO                       * ArPU --> AUX-3
 *-------------------------------------------------------
 *
-FL20700   SGS-FL207   906  904   5.75  5.75
+FL20700   SGS-FL207   906  904   6.2  6.2
 FL20701   0.001341 7.5   1.0    0.038    0.038              
 FL20702   3     0    0     0                                
 FL20703   0.0   0.0                                                            
@@ -502,7 +516,7 @@ CF30015   -1.0  0.0  CFVALU.101                                 * -RJ
 * SGS FL208           FM    TO    FM   TO                       * ArPU -> G-RWTS
 *-------------------------------------------------------
 *
-FL20800   SGS-FL208   907   402   5.75  5.75
+FL20800   SGS-FL208   907   402   5.5  5.5
 FL20801   0.001341  7.5   1.0    0.038    0.038              
 FL20802   3     0    0     0                                
 FL20803   0.0   0.0                                                            
@@ -517,7 +531,7 @@ CF20815   1.0  0.0  CFVALU.101
 * SGS FL209           FM    TO    FM   TO                       * ArPU --> AUX-3
 *-------------------------------------------------------
 *
-FL20900   SGS-FL209   901  906   5.75  5.75
+FL20900   SGS-FL209   901  906   5.6  5.6
 FL20901   0.001341  7.5   1.0    0.038    0.038              
 FL20902   3     0    0     0                                
 FL20903   0.0   0.0                                                            
@@ -529,7 +543,7 @@ FL209S0   0.001341   7.5    0.038                               * D_ext = 2"
 * SGS FL210           FM    TO    FM   TO                       * ArPU -> G-RWTS
 *-------------------------------------------------------
 *
-FL21000   SGS-FL210   901   907   5.75  5.75
+FL21000   SGS-FL210   901   907   5.5  5.5
 FL21001   0.001341  7.5   1.0    0.038    0.038              
 FL21002   3     0    0     0                                
 FL21003   0.0   0.0                                                           
@@ -601,13 +615,13 @@ FL210S0   0.001341   7.5    0.038                               * D_ext = 2"
 * Leak-C002-R016 (Corridor to LLC)                   
 *-------------------------------------------------------
 *
-FL99700   lk-C002-R016  042   016   7.0  7.0
-FL99701   25.0E-6  0.5    1.0   0.005641895835477563  0.005641895835477563	            * A = 25mm2     
-FL99702	  3     0    0     0 				                                            * Horizontal flow      
-FL99703   0.0   0.0                                                                    * Coef por defecto (1.0)                 	                  
-FL997S0   25.0E-6  0.5   0.005641895835477563                       
+FL99700   lk-C002-R016  042   016   3.6  3.6
+FL99701   5.0E-6  0.5    1.0   0.00253132522  0.00253132522	        * A = 5mm2     
+FL99702	  3     0    0     0 				                        * Horizontal flow      
+FL99703   0.0   0.0                                                                 	                  
+FL997S0   5.0E-6  0.5   0.00253132522                       
+*                      
 *
-* 
 *
 *
 *
@@ -644,14 +658,14 @@ MESSAGEFILE  l0_cor.mes
 *
 *
 CPULEFT          200.
-CPULIM           86400.                          * max CPU cycles running      
+CPULIM           86400.                          * max CPU time running      
 *
 CYMESF           100000    100000                * FRECUENCIA TERMINAL / .OUT    
 *
 *
 RESTART          -1        
 *
-TEND             1.e6                            * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             5.e5                            * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000
