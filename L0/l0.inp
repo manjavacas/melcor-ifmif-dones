@@ -38,7 +38,7 @@ CF10000   QP  EQUALS  1  0.0  35.64601176           * Caudal de entrada al purif
 CF10010   1.0  0.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.55454408 Nm3/h) -> proporcional a 80 Nm3/h para solo R016
+CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.64601176 Nm3/h) -> proporcional a 80 Nm3/h para solo R016
 CF10110   1.0  0.0  CFVALU.100                      * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
