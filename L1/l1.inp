@@ -111,7 +111,7 @@ CV102B2   31.5     1042.875                         * 8.5m (h) --> 393.5 m3
 CV10400   R104  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV10401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV104A0   3                                                                                         
-CV104A1   PVOL    101262.0                          * 101325-63Pa                                                                          
+CV104A1   PVOL    101257.0                          * 101325-68Pa                                                                          
 CV104A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV104A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV104A6   MLFR.5  0.22                              * FILLED WITH air (O2)
