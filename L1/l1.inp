@@ -614,7 +614,7 @@ CV181A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV181B1   9.0      0.0                                                         
-CV181B2   16.5     628.7                            * 8.5m (h)
+CV181B2   17.5     628.7                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV182 - SB3L1 - Shipping Bay 3 L1 (C2)                                                                   
@@ -630,7 +630,7 @@ CV182A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV182B1   9.0      0.0                                                         
-CV182B2   16.5     680.7                            * 8.5m (h)
+CV182B2   17.5     680.7                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV183 - SB4L1 - Shipping Bay 4 L1 (C1)                                                                   
@@ -646,7 +646,7 @@ CV183A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV183B1   9.0      0.0                                                         
-CV183B2   16.5     639.7                            * 8.5m (h)
+CV183B2   17.5     639.7                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV184 - E02L1 - Elevator 2 L1 (C2)                                                                   
@@ -662,7 +662,7 @@ CV184A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV184B1   9.0      0.0                                                         
-CV184B2   16.5     124.4                            * 8.5m (h)
+CV184B2   17.5     124.4                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV185 - E03L1 - Elevator 3 L1 (C2)                                                                   
@@ -678,7 +678,7 @@ CV185A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV185B1   9.0      0.0                                                         
-CV185B2   16.5     160.7                            *  8.5m (h)
+CV185B2   17.5     160.7                            *  8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV186 - S02L1 - Stairs 2 L1 (C2)                                                                   
@@ -710,7 +710,7 @@ CV187A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV187B1   9.0      0.0                                                         
-CV187B2   16.5     385.2                            * 8.5m (h)
+CV187B2   17.5     385.2                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV188 - S05L1 - Stairs 5 L1 (C2)                                                                   
@@ -726,7 +726,7 @@ CV188A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV188B1   9.0      0.0                                                         
-CV188B2   16.5     363.7                            * 8.5m (h)
+CV188B2   17.5     363.7                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV189 - S07L1 - Stairs 7 L1 (C0)                                                                   
@@ -742,7 +742,7 @@ CV189A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV189B1   9.0      0.0                                                         
-CV189B2   16.5     249.1                            * 8.5m (h)
+CV189B2   17.5     249.1                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV190 - C102 - Corridor (C2)                                                                   
@@ -1880,7 +1880,7 @@ MESSAGEFILE  l1_cor.mes
 CPULEFT          200.
 CPULIM           200000.   *maximo tiempo corriendo       
 *
-CYMESF           55    60    
+CYMESF           10000    10000    
 *
 *
 RESTART          -1        
