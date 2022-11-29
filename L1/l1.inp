@@ -694,7 +694,7 @@ CV186A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV186B1   9.0      0.0                                                         
-CV186B2   16.5     266.4                            * 8.5m (h)
+CV186B2   17.5     266.4                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV0187- S04L1 - Stairs 4 L1 (C2)                                                                   
@@ -1885,7 +1885,7 @@ CYMESF           55    60
 *
 RESTART          -1        
 *
-TEND     1.0E3 *segundos de simulacion
+TEND     1.0E6 *segundos de simulacion
 *
 *
 SOFTDTMIN  1.0E-4 1000
