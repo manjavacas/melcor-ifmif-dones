@@ -23,3 +23,4 @@ clean:
 	rm -f MELOUT
 	rm -f *.dia
 	rm -f *.out
+	fortzfjxtJ
