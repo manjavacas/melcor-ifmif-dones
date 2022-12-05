@@ -38,7 +38,7 @@ CF10000   QP  EQUALS  1  0.0  35.64601176           * Caudal de entrada al purif
 CF10010   1.0  0.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.64601176 Nm3/h) -> proporcional a 80 Nm3/h para solo R016
+CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.64601176 m3/h) -> proporcional a 80 Nm3/h para solo R016
 CF10110   1.0  0.0  CFVALU.100                      * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
@@ -72,39 +72,75 @@ CV016B2   7.2      2658.7                           * Aprox. height
 ***
 *
 *-----------------------------------------------                                                                
-* CV093 - AL016 - Airlock (C3a)                                                                    
+* CV096 - AL016 - Airlock (C3a)                                                                    
 *-----------------------------------------------                                                                
-*CV09300   AL016  2  0  1                                                            
-*CV09301   0   0		                              
-*CV093A0   3                                                                                         
-*CV093A1   PVOL  101215.0                            * 101325Pa-110Pa 
-*CV093A2   TATM  290.95  RHUM  0.0                   * 20 deg. C; 0% rel. humidity
-*CV093A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-*CV093A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-*CV093A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+CV09600   AL016  2  0  1                                                            
+CV09601   0  -1		                              
+CV096A0   3                                                                                         
+CV096A1   PVOL  101215.0                            * 101325Pa-110Pa 
+CV096A3   TATM    290.95    RHUM 0.6                                                
+CV096A5   MLFR.4  0.78                              * Filled with air (N2)
+CV096A6   MLFR.5  0.21                              * Filled with air (O2)
+CV096A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-*CV093B1   0.0      0.0                                                            
-*CV093B2   7.5      281.8                           
+CV096B1   0.0      0.0                                                            
+CV096B2   7.5      281.8                           
 ***
 *      
 *-----------------------------------------------                                                                
 * CV042 - C002 - Corridor (C2)                                                          
 *-----------------------------------------------                                                                
-CV04200   C002  2  2  1                                                           
-CV04201   0   -1					                 
-CV042A0   3                                                                                         
-CV042A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV042A3   TATM    293.15    RHUM 0.6                                                
-CV042A5   MLFR.4  0.78                              * Filled with air (N2)
-CV042A6   MLFR.5  0.21                              * Filled with air (O2)
-CV042A8   MLFR.8  0.01                              * Filled with air (Ar)
+*CV04200   C002  2  2  1                                                           
+*CV04201   0   -1					                 
+*CV042A0   3                                                                                         
+*CV042A1   PVOL    101235.0                          * 101325-90Pa                                                                 
+*CV042A3   TATM    293.15    RHUM 0.6                                                
+*CV042A5   MLFR.4  0.78                              * Filled with air (N2)
+*CV042A6   MLFR.5  0.21                              * Filled with air (O2)
+*CV042A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV042B1   0.0      0.0                                                            
-CV042B2   8.13     11032.7                          * Aprox. height              
+*CV042B1   0.0      0.0                                                            
+*CV042B2   8.13     11032.7                          * Aprox. height              
+***
+*
+*-----------------------------------------------                                                                
+* CV015 - R015 - Organic loop cell (C2)                                                          
+*-----------------------------------------------                                                                
+CV01500   R015  2  2  1                                                           
+CV01501   0   -1					                 
+CV015A0   3                                                                                         
+CV015A1   PVOL    101235.0                          * 101325-90Pa                                                                 
+CV015A3   TATM    293.15    RHUM 0.6                                                
+CV015A5   MLFR.4  0.78                              * Filled with air (N2)
+CV015A6   MLFR.5  0.21                              * Filled with air (O2)
+CV015A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV015B1   0.0      0.0                                                            
+CV015B2   9.5      2898.6                           * Aprox. height              
+***
+*
+*-----------------------------------------------                                                                
+* CV018 - R018 - Ar purification Equipment (C2)                                                          
+*-----------------------------------------------                                                                
+CV01800   R018  2  2  1                                                           
+CV01801   0   -1					                 
+CV018A0   3                                                                                         
+CV018A1   PVOL    101235.0                          * 101325-90Pa                                                                 
+CV018A3   TATM    293.15    RHUM 0.6                                                
+CV018A5   MLFR.4  0.78                              * Filled with air (N2)
+CV018A6   MLFR.5  0.21                              * Filled with air (O2)
+CV018A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV018B1   0.0      0.0                                                            
+CV018B2   7.5      2528.3                           * Aprox. height              
 ***
 *
 ****************************************************************************************************************************************
@@ -142,7 +178,7 @@ CV901A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
 CV901B1   0.0      0.0                                                            
-CV901B2   6.0   942.48                              * Asumimos 8 cilindros de R = 2.5m y H = 6m
+CV901B2   6.0      942.48                           * Asumimos 8 cilindros de R = 2.5m y H = 6m
 ***
 *
 *-----------------------------------------------                                                                
@@ -308,42 +344,9 @@ CF90710  1.0  0.0  CVH-MASS.3.906
 ****************************************************************************************************************************************
 *
 *-----------------------------------------------                                                                
-* CV400 - ENV-INLET - Environment (HVAC inlet)                                                                
-*-----------------------------------------------                                                                
-*CV40000   ENV  2  2  5          		                                           
-*CV40001   0   -1                                    * Time-independent				       
-*CV400A0   3                                                                                         
-*CV400A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-*CV400A3   TATM    293.15  RHUM  0.6    	                                                 
-*CV400A8   MLFR.4  0.79                              * Filled with air (O2)
-*CV400A9   MLFR.5  0.21                              * Filled with air (N2)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-*CV400B1   0.0        0.0                                                          
-*CV400B2  50.0   1000000.0              	         * Random huge volume                                                          
-***                  
-*
-*-----------------------------------------------                                                                
-* CV401 - ENV-OUTLET - Environment (HVAC outlet)                                                                     
-*-----------------------------------------------                                                                
-*CV40100   ENV  2  2  5          		                                   
-*CV40101   0   -1		                             * Time-independent				            
-*CV401A0   3                                                                                         
-*CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-*CV401A3   TATM    293.15  RHUM  0.6    	                                                  
-*CV401A8   MLFR.4  0.79                              * Filled with air (O2)
-*CV401A9   MLFR.5  0.21                              * Filled with air (N2)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-*CV401B1   0.0        0.0                                                           
-*CV401B2  50.0   1000000.0              	         * Random huge volume                                                          
-***
-*
-*-----------------------------------------------                                                                
 * CV402 - ENV-GRWTS - Environment (G-RWTS)
-*-----------------------------------------------                                                                
+*-----------------------------------------------  
+*                                                              
 CV40200   G-RWTS  2  2  5          		                                   
 CV40201   0   0		                                 * Time-independent				            
 CV402A0   3                                                                                         
@@ -356,40 +359,12 @@ CV402A9   MLFR.5  0.21                               * Filled with air (N2)
 ***                                                                                                 
 CV402B1   0.0        0.0                                                          
 CV402B2  50.0   1000000.0              	             * Random huge volume                                                          
-***
-*
-*-----------------------------------------------                                                              
-* CV410 - C2-collector - HVAC collector for C2
-*-----------------------------------------------                                                               
-*CV41000   HVAC-C2  2  2  5          	                                            
-*CV41001   0   -1							           
-*CV410A0   3                                                                                         
-*CV410A1   PVOL    101235.0                          * 101325Pa-90Pa                                                                      
-*CV410A3   TATM    293.15  RHUM  0.0                                                   
-*CV410A8   MLFR.4  0.79                              * Filled with air (O2)
-*CV410A9   MLFR.5  0.21                              * Filled with air (N2)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-*CV410B1   0.0        0.0                                                          
-*CV410B2  50.0      400.0               	         * Random big volume                                                           
-***        
+***      
 *                                                                                                                 
 ****************************************************************************************************************************************
 *         												  FP (Flow paths) INPUT						   								   *
 ****************************************************************************************************************************************
 *
-**************************************************************** DOORS ***************************************************************** 
-*
-*-------------------------------------------------------
-* Door-R016-C002             FM    TO     FM     TO
-*-------------------------------------------------------
-*
-*FL00100   Door-R016-C002    016   042    3.6  3.6
-*FL00101   0.1524   1.0    0.0   0.02    0.02                    * A, L, FRACT OPEN, DIAM
-*FL00102   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-*FL00103   0.0   0.0                                             * FORM LOSS
-*FL001S0   0.1524   1.0    0.441                                 * A, L. HYD.DIAM. (4A/P)
 *
 **************************************************************** SGS ******************************************************************
 *
@@ -404,7 +379,7 @@ FL20003   0.0   0.0
 FL200S0   0.001341   7.5    0.038                               * D_ext = 2"
 FL200T0   2  200           
 *
-CF20000   VEL-ArSS  EQUALS  1  0.0  0.18535                     * X / (3600 * 0.001341) -> MAX 0.1864495298 m/s
+CF20000   VEL-ArSS  EQUALS  1  0.0  0.1735                      * X / (3600 * 0.001341) -> MAX 0.1864495298 m/s
 CF20010   1.0  0.0  TIME
 *
 *-------------------------------------------------------
@@ -434,8 +409,8 @@ FL20200   SGS-FL202   904   905   6.7    6.7
 FL20201   0.43709  5.0   1.0    0.746    0.746              
 FL20202	  3     0    0     0                                
 FL20203   0.0   0.0                                                         
-FL202S0   0.43709   5.0    0.746                                *  D_ext = 30"           
-FL202T0   2   205                                               *  QT m3/h / (3600 * 0.43709)  m/s
+FL202S0   0.43709   5.0    0.746                                * D_ext = 30"           
+FL202T0   2   205                                               * QT m3/h / (3600 * 0.43709)  m/s
 *
 *-------------------------------------------------------
 * SGS FL203           FM    TO    FM   TO                       * AUX-4 --> LLC                  
@@ -551,83 +526,120 @@ FL210S0   0.001341   7.5    0.038                               * D_ext = 2"
 *
 * Calculo automatico de velocidad por diferencia de presion 
 *
-**************************************************************** HVAC ****************************************************************** 
-*
-*-------------------------------------------------------
-* HVAC-C002-ex           FM    TO    FM   TO
-*-------------------------------------------------------
-*
-*FL00300   HVAC-C002-ex   042   410   7.7  7.7
-*FL00301   18E-2   50.0   1.0   0.48    0.48                     
-*FL00302   3     0    0     0                                
-*FL00303   0.0   0.0                                         
-*FL003S0   18E-2   50.0    0.478                            
-*FL003T0   1   015                                        
-*
-*TF01500   HVAC-C002-ex   1    1.0                         
-*TF01510   0.0       5.45                                        * Modificado. Anterior (EAI) = 5.2
-*
-*-------------------------------------------------------
-* HVAC-C002-al            FM    TO    FM   TO
-*-------------------------------------------------------
-*
-*FL00400   HVAC-C002-al    400   042   7.7   7.7
-*FL00401   2.0   50.0    1.0   1.5958   1.5958                
-*FL00402   3     0    0     0                                 
-*FL00403   0.0   0.0                                        
-*FL004S0   2.0   50.0    1.5915 
-*                            
-*FL004V0   -1     004    004
-*FL004T0   1   016                                          
-*
-*TF01600   HVAC-C002-al   1    1.0                            
-*TF01610   0.0       1.0
-*
-*CF00300   PRE      L-GT    2   1.0
-*CF00305   NORMAL
-*CF00310   1.0      0.0       CVH-P.042
-*CF00315   0.0      101235.0  TIME
-*
-*CF00400   VALVE    L-A-IFTE    3   1.0
-*CF00405   NORMAL
-*CF00410   1.0      0.0       CFVALU.003
-*CF00415   0.0      0.475     TIME
-*CF00420   0.0      0.525     TIME
-*
-*-------------------------------------------------------
-* HVAC-H2-ex          FM    TO    FM    TO
-*-------------------------------------------------------
-*
-*FL41000   HVAC-H2-ex  410   401   0.0  0.0
-*FL41001   15.0   50.0    1.0   4.37  4.37 	                   
-*FL41002   3     0    0     0 				                  
-*FL41003   0.0   0.0                      	                   
-*FL410S0   15.0   50.0    4.37 
-*                             
-*FL410T0   1   410        					                  
-*
-*TF41000   HVAC-H2-ex  1    1.0  			             
-*TF41010   0.0       5.2
-*
 **************************************************************  LEAKAGES *************************************************************** 
 *
 *-------------------------------------------------------
-* Leak-C002-R016 (Corridor to LLC)                   
+* Leak-C002-AL016 (Door)                    
 *-------------------------------------------------------
 *
-FL99700   lk-C002-R016  042   016   3.6  3.6
-FL99701   5.0E-6  0.5    1.0   0.00253132522  0.00253132522	        * A = 5mm2     
-FL99702	  3     0    0     0 				                        * Horizontal flow      
-FL99703   0.0   0.0                                                                 	                  
-FL997S0   5.0E-6  0.5   0.00253132522                       
-*                      
+*FL70000   lk-C002-AL016  042   096   3.75  3.75
+*FL70001   25.0E-6  0.25    1.0   	                                * A = 25mm2    
+*FL70002   3     0    0     0 				                        * Horizontal flow      
+*FL70003   0.0   0.0                                                                 	                  
+*FL700S0   25.0E-6  0.25   0.005641895835                                                  
+*** 
 *
+*-------------------------------------------------------
+* Leak-AL016-R016 (Door)                   
+*-------------------------------------------------------
 *
+FL70100   lk-AL016-R016  096   016   3.6  3.6
+FL70101   25.0E-6  1.0    1.0   	                                * A = 25mm2     
+FL70102	  3     0    0   0 				                            * Horizontal flow      
+FL70103   0.0   0.0                                                                 	                  
+FL701S0   25.0E-6  1.0   0.005641895835                                                    
+*** 
 *
+*-------------------------------------------------------
+* Leak-R015-R016                    
+*-------------------------------------------------------
 *
+FL70200   lk-R015-R016  015   016   3.6  3.6
+FL70201   5.0E-6  0.5    1.0                            	        * A = 5mm2     
+FL70202	  3     0    0     0 				                        * Horizontal flow      
+FL70203   0.0   0.0                                                                 	                  
+FL702S0   5.0E-6  0.5   0.00253132522                       
+*** 
 *
+*-------------------------------------------------------
+* Leak-R018-R016                    
+*-------------------------------------------------------
 *
+FL70300   lk-R018-R016  018   016   3.6  3.6
+FL70301   5.0E-6  0.5    1.0   	                                    * A = 5mm2     
+FL70302	  3     0    0     0 				                        * Horizontal flow      
+FL70303   0.0   0.0                                                                 	                  
+FL703S0   5.0E-6  0.5   0.00253132522                       
+*** 
+**
 *
+*************************************************** OUTPUTS ***************************************************
+*
+* Formula densidad: d = d' · (P · T') / (P' · T) ; T' = 25 ºC , P' = Patm = 101325 Pa
+*
+CF15000   N2-dens-LLC DIVIDE 2 1.0                                      
+CF15010   101325.0  0.0  CVH-TVAP.016
+CF15015   347.34475  0.0  CVH-P.016                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
+*
+CF15100   O2-dens-LLC DIVIDE 2 1.0                                      
+CF15110   101325.0  0.0  CVH-TVAP.016
+CF15115   396.83765  0.0  CVH-P.016                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
+*
+CF15200   H2O-dens-LLC DIVIDE 2 1.0                                      
+CF15210   101325.0  0.0  CVH-TVAP.016
+CF15215   223.2211781  0.0  CVH-P.016                               * d' · T' = 223.2211781 (d' = 0.7486875 kg/m3)
+*
+CF15300   N2-dens-AUX5 DIVIDE 2 1.0                                      
+CF15310   101325.0  0.0  CVH-TVAP.906
+CF15315   347.34475  0.0  CVH-P.906                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
+*
+CF15400   O2-dens-AUX5 DIVIDE 2 1.0                                      
+CF15410   101325.0  0.0  CVH-TVAP.906
+CF15415   396.83765  0.0  CVH-P.906                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
+*
+CF15500   H2O-dens-AUX5 DIVIDE 2 1.0                                      
+CF15510   101325.0  0.0  CVH-TVAP.906
+CF15515   223.2211781  0.0  CVH-P.906                               * d' · T' = 223.2211781 (d' = 0.7486875 kg/m3)
+*
+* ppm
+*
+CF16000   LLC-N2-ppm DIVIDE 2 1.0E6
+CF16010   2658.7  0.0  CFVALU.150                                   * Volumen LLC * densidad N2 = 2658.7 * CFVALU.150                                                              
+CF16015   1.0  0.0  CVH-MASS.4.016
+*
+CF16100   LLC-O2-ppm DIVIDE 2 1.0E6
+CF16110   2658.7  0.0  CFVALU.151                                   * Volumen LLC * densidad O2 = 2658.7 * CFVALU.151                                                                       
+CF16115   1.0  0.0  CVH-MASS.5.016
+*
+CF16200   LLC-H2O-ppm DIVIDE 2 1.0E6
+CF16210   2658.7  0.0  CFVALU.152                                   * Volumen LLC * densidad H2O = 2658.7 * CFVALU.152                                                                         
+CF16215   1.0  0.0  CVH-MASS.3.016
+*
+CF16300   ArPu-N2-ppm DIVIDE 2 1.0E6                                * Impurezas de N2 (ppm) en Ar purificado
+CF16310   1.0  0.0  CFVALU.166                                                            
+CF16315   3600.0  0.0  FL-MFLOW.4.207
+*
+CF16400   ArPu-O2-ppm DIVIDE 2 1.0E6                                * Impurezas de O2 (ppm) en Ar purificado
+CF16410   1.0  0.0  CFVALU.167                                                              
+CF16415   3600.0  0.0  FL-MFLOW.5.207
+*
+CF16500   ArPu-H2O-ppm DIVIDE 2 1.0E6                               * Impurezas de H2O (ppm) en Ar purificado
+CF16510   1.0  0.0  CFVALU.168                                                                                                           
+CF16515   3600.0  0.0  FL-MFLOW.3.207
+*
+* Auxiliar CF
+*
+CF16600  Denom-163 MULTIPLY 2 1.0
+CF16610  1.0  0.0  CFVALU.153
+CF16615  1.0  0.0  CFVALU.300
+*
+CF16700  Denom-164 MULTIPLY 2 1.0
+CF16710  1.0  0.0  CFVALU.154
+CF16715  1.0  0.0  CFVALU.300
+*
+CF16800  Denom-165 MULTIPLY 2 1.0
+CF16810  1.0  0.0  CFVALU.155
+CF16815  1.0  0.0  CFVALU.300
 *
 . * End
 *
@@ -658,14 +670,14 @@ MESSAGEFILE  l0_cor.mes
 *
 *
 CPULEFT          200.
-CPULIM           86400.                          * max CPU time running      
+CPULIM           86400.                             * max CPU time running      
 *
-CYMESF           100000    100000                * FRECUENCIA TERMINAL / .OUT    
+CYMESF           100000    100000                   * FRECUENCIA TERMINAL / .OUT    
 *
 *
 RESTART          -1        
 *
-TEND             3.1536e7                            * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             1.1536e7                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000

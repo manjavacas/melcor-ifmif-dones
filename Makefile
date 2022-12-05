@@ -7,9 +7,6 @@ l0: clean
 l1: clean
 	./melgen-fusion-186_bdba L1/l1.inp
 	./melcor-fusion-186_bdba L1/l1.inp
-airlock: clean
-	./melgen-fusion-186_bdba L0/l0_airlock.inp
-	./melcor-fusion-186_bdba L0/l0_airlock.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES
@@ -23,4 +20,3 @@ clean:
 	rm -f MELOUT
 	rm -f *.dia
 	rm -f *.out
-	fortzfjxtJ
