@@ -204,18 +204,18 @@ CV110B2   16.5     7394.2                           * 7.5m (h)
 *-----------------------------------------------                                                                
 * CV112 - R112 - Assembly maintenance room (C3a)                                                                   
 *-----------------------------------------------                                                                
-*CV11200   R112  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV11201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV112A0   3                                                                                         
-*CV112A1   PVOL    101215.0                          * 101325-110Pa                                                                          
-*CV112A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV112A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV112A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV11200   R112  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV11201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV112A0   3                                                                                         
+CV112A1   PVOL    101215.0                          * 101325-110Pa                                                                          
+CV112A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV112A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV112A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV112B1   9.0      0.0                                                         
-*CV112B2   17.5     2034.7                           * 8.5m (h)
+CV112B1   9.0      0.0                                                         
+CV112B2   17.5     2034.7                           * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV114 - R114-1 - Radiation isolation room 1 (C3)                                                                   
@@ -267,50 +267,50 @@ CV110B2   16.5     7394.2                           * 7.5m (h)
 *-----------------------------------------------                                                                
 * CV144 - R144 - Electric room TS EPS (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV14400   R144  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV14401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV144A0   3                                                                                         
-*CV144A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV144A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
-*CV144A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV144A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV14400   R144  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV14401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV144A0   3                                                                                         
+CV144A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV144A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV144A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV144A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV144B1   9.0      0.0                                                         
-*CV144B2   17.5     351.7                            * 8.5m (h) 
+CV144B1   9.0      0.0                                                         
+CV144B2   17.5     351.7                            * 8.5m (h) 
 ***
 *-----------------------------------------------                                                                
 * CV145 - R145-1 - Local control room TS transmiter room (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV14500   R145-1  2  2  2                           * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV14501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV145A0   3                                                                                         
-*CV145A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV145A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
-*CV145A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV145A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV14500   R145-1  2  2  2                           * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV14501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV145A0   3                                                                                         
+CV145A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV145A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV145A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV145A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV145B1   9.0      0.0                                                         
-*CV145B2   17.5     457.1                            * 8.5m (h) 
+CV145B1   9.0      0.0                                                         
+CV145B2   17.5     457.1                            * 8.5m (h) 
 ***
 *-----------------------------------------------                                                                
 * CV146 - R145-2 - Local control room TS control room (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV14600   R145-2  2  2  2                           * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV14601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV146A0   3                                                                                         
-*CV146A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV146A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
-*CV146A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV146A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV14600   R145-2  2  2  2                           * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV14601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV146A0   3                                                                                         
+CV146A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV146A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV146A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV146A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV146B1   9.0      0.0                                                         
-*CV146B2   17.5     831.5                            * 8.5m (h) 
+CV146B1   9.0      0.0                                                         
+CV146B2   17.5     831.5                            * 8.5m (h) 
 ***
 *-----------------------------------------------                                                                
 * CV147 - R147 - Loading station (C4a)                                                                   
@@ -331,18 +331,18 @@ CV110B2   16.5     7394.2                           * 7.5m (h)
 *-----------------------------------------------                                                                
 * CV149 - R149 - TSA room (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV14900   R149  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV14901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV149A0   3                                                                                         
-*CV149A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV149A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV149A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV149A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV14900   R149  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV14901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV149A0   3                                                                                         
+CV149A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV149A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV149A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV149A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV149B1   9.0      0.0                                                         
-*CV149B2   17.5     8052.7551                        * 8.5m / 5.5m (h) 
+CV149B1   9.0      0.0                                                         
+CV149B2   17.5     8052.7551                        * 8.5m / 5.5m (h) 
 ***
 *-----------------------------------------------                                                                
 * CV151 - R151 - Tritium room (C3)                                                                   
@@ -507,18 +507,18 @@ CV110B2   16.5     7394.2                           * 7.5m (h)
 *-----------------------------------------------                                                                
 * CV163 - R163 - Complementary experiments auxiliary room (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV16300   R163  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV16301   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV163A0   3                                                                                         
-*CV163A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV163A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*V163A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV163A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV16300   R163  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV16301   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV163A0   3                                                                                         
+CV163A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV163A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV163A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV163A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV163B1   9.0      0.0                                                         
-*CV163B2   17.5     297.5                            * 8.5m (h) 
+CV163B1   9.0      0.0                                                         
+CV163B2   17.5     297.5                            * 8.5m (h) 
 ***
 *-----------------------------------------------                                                                
 * CV166 - R166 - Storage of cask to external analysis (C4)                                                                   
@@ -587,50 +587,50 @@ CV110B2   16.5     7394.2                           * 7.5m (h)
 *-----------------------------------------------                                                                
 * CV180 - SB1L1 - Shipping Bay 1 L1 (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV18000   SB1L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV18001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV180A0   3                                                                                         
-*CV180A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV180A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV180A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV180A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV18000   SB1L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV18001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV180A0   3                                                                                         
+CV180A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV180A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV180A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV180A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV180B1   9.0      0.0                                                         
-*CV180B2   17.5     752.0                            * 8.5m (h)
+CV180B1   9.0      0.0                                                         
+CV180B2   17.5     752.0                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV181 - SB2L1 - Shipping Bay 2 L1 (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV18100   SB2L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV18101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV181A0   3                                                                                         
-*CV181A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV181A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV181A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV181A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV18100   SB2L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV18101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV181A0   3                                                                                         
+CV181A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV181A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV181A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV181A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV181B1   9.0      0.0                                                         
-*CV181B2   17.5     628.7                            * 8.5m (h)
+CV181B1   9.0      0.0                                                         
+CV181B2   17.5     628.7                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV182 - SB3L1 - Shipping Bay 3 L1 (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV18200   SB3L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV18201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV182A0   3                                                                                         
-*CV182A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV182A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV182A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV182A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV18200   SB3L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV18201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV182A0   3                                                                                         
+CV182A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV182A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV182A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV182A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV182B1   9.0      0.0                                                         
-*CV182B2   17.5     680.7                            * 8.5m (h)
+CV182B1   9.0      0.0                                                         
+CV182B2   17.5     680.7                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV183 - SB4L1 - Shipping Bay 4 L1 (C1)                                                                   
@@ -651,18 +651,18 @@ CV183B2   17.5     639.7                            * 8.5m (h)
 *-----------------------------------------------                                                                
 * CV184 - E02L1 - Elevator 2 L1 (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV18400   E02L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV18401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV184A0   3                                                                                         
-*CV184A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV184A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV184A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV184A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV18400   E02L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV18401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV184A0   3                                                                                         
+CV184A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV184A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV184A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV184A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV184B1   9.0      0.0                                                         
-*CV184B2   17.5     124.4                            * 8.5m (h)
+CV184B1   9.0      0.0                                                         
+CV184B2   17.5     124.4                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV185 - E03L1 - Elevator 3 L1 (C2)                                                                   
@@ -699,18 +699,18 @@ CV186B2   17.5     266.4                            * 8.5m (h)
 *-----------------------------------------------                                                                
 * CV187- S04L1 - Stairs 4 L1 (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV18700   S04L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV18701   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV187A0   3                                                                                         
-*CV187A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV187A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV187A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV187A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV18700   S04L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV18701   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV187A0   3                                                                                         
+CV187A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV187A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV187A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV187A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV187B1   9.0      0.0                                                         
-*CV187B2   17.5     385.2                            * 8.5m (h)
+CV187B1   9.0      0.0                                                         
+CV187B2   17.5     385.2                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV188 - S05L1 - Stairs 5 L1 (C2)                                                                   
@@ -731,50 +731,50 @@ CV186B2   17.5     266.4                            * 8.5m (h)
 *-----------------------------------------------                                                                
 * CV189 - S07L1 - Stairs 7 L1 (C0)                                                                   
 *-----------------------------------------------                                                                
-*CV18900   S07L1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV18901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV189A0   3                                                                                         
-*CV189A1   PVOL    101325.0                          * 101325                                                                          
-*CV189A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV189A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV189A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV18900   S07L1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV18901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV189A0   3                                                                                         
+CV189A1   PVOL    101325.0                          * 101325                                                                          
+CV189A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV189A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV189A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV189B1   9.0      0.0                                                         
-*CV189B2   17.5     249.1                            * 8.5m (h)
+CV189B1   9.0      0.0                                                         
+CV189B2   17.5     249.1                            * 8.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV190 - C102 - Corridor (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV19000   C102  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV19001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV190A0   3                                                                                         
-*CV190A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV190A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV190A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV190A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV19000   C102  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV19001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV190A0   3                                                                                         
+CV190A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV190A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV190A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV190A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV190B1   9.0      0.0                                                         
-*CV190B2   17.262218484     8841.4                   * 8.262218484 m (h) approx (Vol/area)
+CV190B1   9.0      0.0                                                         
+CV190B2   17.262218484     8841.4                   * 8.262218484 m (h) approx (Vol/area)
 ***
 *-----------------------------------------------                                                                
 * CV191 - AL151 - Airlock (C3)                                                                   
 *-----------------------------------------------                                                                
-*CV19100   AL151  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV19101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV191A0   3                                                                                         
-*CV191A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-*CV191A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV191A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV191A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV19100   AL151  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV19101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV191A0   3                                                                                         
+CV191A1   PVOL    101195.0                          * 101325-130Pa                                                                          
+CV191A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV191A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV191A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV191B1   9.0      0.0                                                         
-*CV191B2   14.5     348.4                            * 5.5m (h)
+CV191B1   9.0      0.0                                                         
+CV191B2   14.5     348.4                            * 5.5m (h)
 ***
 *-----------------------------------------------                                                                
 * CV196 - AL156 - Airlock (C4a)                                                                   
@@ -858,6 +858,22 @@ CV507A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***                                                                                                 
 CV507B1   16.0      0.0                                                         
 CV507B2   31.5     8.1375                              * FROM L3 TO L1; 1000 x 525
+***
+*-----------------------------------------------
+* CV508 - AS-4 - Air Supply 4
+*-----------------------------------------------                                                                
+CV50800   AS-4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50801   0   0                                     * fog ALLOWED (DEF)
+CV508A0   3                                                                                         
+CV508A1   PVOL    101325.0                          * PATM                                                                          
+CV508A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV508A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV508A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV508B1   16.0      0.0                                                         
+CV508B2   24.5     13.005                              * FROM L2 TO L1; 1700 x 900
 ***
 *-----------------------------------------------
 * CV600 - C2-1 - C2 Mainfold 1
@@ -989,6 +1005,166 @@ CV506A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***                                                                                                 
 CV506B1   17.125      0.0                                                         
 CV506B2   17.5        0.046875                       * 500 x 375 x 250
+***
+*-----------------------------------------------
+* CV509 - CVAS-6 - Connection Volume Air Supply 6
+*-----------------------------------------------                                                                
+CV50900   CVAS-6  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV50901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV509A0   3                                                                                         
+CV509A1   PVOL    101325.0                          * PATM                                                                          
+CV509A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV509A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV509A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV509B1   17.1      0.0                                                         
+CV509B2   17.5        0.06                       * 600 x 400 x 250
+***
+*-----------------------------------------------
+* CV510 - CVAS-7 - Connection Volume Air Supply 7
+*-----------------------------------------------                                                                
+CV51000   CVAS-7  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV510A0   3                                                                                         
+CV510A1   PVOL    101325.0                          * PATM                                                                          
+CV510A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV510A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV510A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV510B1   17.25      0.0                                                         
+CV510B2   17.5        0.025                       * 400 x 250 x 250
+***
+*-----------------------------------------------
+* CV511 - CVAS-8 - Connection Volume Air Supply 8
+*-----------------------------------------------                                                                
+CV51100   CVAS-8  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV511A0   3                                                                                         
+CV511A1   PVOL    101325.0                          * PATM                                                                          
+CV511A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV511A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV511A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV511B1   16.65      0.0                                                         
+CV511B2   17.5        0.36125                       * 1700 x 850 x 250
+***
+*-----------------------------------------------
+* CV512 - CVAS-9 - Connection Volume Air Supply 9
+*-----------------------------------------------                                                                
+CV51200   CVAS-9  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV512A0   3                                                                                         
+CV512A1   PVOL    101325.0                          * PATM                                                                          
+CV512A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV512A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV512A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV512B1   16.95      0.0                                                         
+CV512B2   17.5        0.15125                       * 1100 x 550 x 250
+***
+*-----------------------------------------------
+* CV513 - CVAS-10 - Connection Volume Air Supply 10
+*-----------------------------------------------                                                                
+CV51300   CVAS-10  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV513A0   3                                                                                         
+CV513A1   PVOL    101325.0                          * PATM                                                                          
+CV513A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV513A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV513A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV513B1   17.05      0.0                                                         
+CV513B2   17.5        0.09                       * 800 x 450 x 250
+***
+*-----------------------------------------------
+* CV514 - CVAS-11 - Connection Volume Air Supply 11
+*-----------------------------------------------                                                                
+CV51400   CVAS-11  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV514A0   3                                                                                         
+CV514A1   PVOL    101325.0                          * PATM                                                                          
+CV514A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV514A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV514A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV514B1   16.7      0.0                                                         
+CV514B2   17.5        0.27                       * 1350 X 800 x 250
+***
+*-----------------------------------------------
+* CV515 - CVAS-12 - Connection Volume Air Supply 12
+*-----------------------------------------------                                                                
+CV51500   CVAS-12  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV515A0   3                                                                                         
+CV515A1   PVOL    101325.0                          * PATM                                                                          
+CV515A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV515A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV515A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV515B1   17.15      0.0                                                         
+CV515B2   17.5        0.0525                       * 600 X 350 x 250
+***
+*-----------------------------------------------
+* CV516 - CVAS-13 - Connection Volume Air Supply 13
+*-----------------------------------------------                                                                
+CV51600   CVAS-13  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV516A0   3                                                                                         
+CV516A1   PVOL    101325.0                          * PATM                                                                          
+CV516A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV516A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV516A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV516B1   17.2      0.0                                                         
+CV516B2   17.5        0.045                       * 600 X 300 x 250
+***
+*-----------------------------------------------
+* CV517 - CVAS-14 - Connection Volume Air Supply 14
+*-----------------------------------------------                                                                
+CV51700   CVAS-14  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV517A0   3                                                                                         
+CV517A1   PVOL    101325.0                          * PATM                                                                          
+CV517A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV517A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV517A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV517B1   17.3      0.0                                                         
+CV517B2   17.5        0.0175                       * 350 X 200 x 250
+***
+*-----------------------------------------------
+* CV518 - CVAS-14 - Connection Volume Air Supply 14
+*-----------------------------------------------                                                                
+CV51800   CVAS-14  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV51801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV518A0   3                                                                                         
+CV518A1   PVOL    101325.0                          * PATM                                                                          
+CV518A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV518A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV518A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV518B1   13.9      0.0                                                         
+CV518B2   17.5        0.99                       * 1100 X 600 (+3000) x 250
 ***
 *-----------------------------------------------
 * CV602 - CVC2-1 - Connection Volume C2 1
@@ -1332,6 +1508,386 @@ FL516T0   1   516        * TF, TFnumber
 TF51600   FL516_vel  1    1.0  *name, number datapairs, mult.factor
 TF51610   0.0       6.703174603  * ?, velocity (para tener 12669 m3/h)  
 *
+*------------------------------------------------------------------------------------------------------------------
+*
+* AS-4
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-inlet-AS-4  (S800)        FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL51700   HVAC-inlet-AS-4    400  508  24.0  24.0                   * ceiling
+FL51701   2.3   0.25    1.0                       * A, L, FRACT OPEN, DIAM
+FL51702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51703   1.0   1.0                                             * FORM LOSS
+FL517S0   2.3   0.25   1.5                     * 
+FL5170F   23.25    24.75
+FL5170T   23.25    24.75
+FL517T0   1   517        * TF, TFnumber
+*
+TF51700  FL517_vel  1    1.0  *name, number datapairs, mult.factor
+TF51710   0.0        6.338024691 * ?, velocity (para tener 51338 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S801          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL51800   HVAC-S801    508   509  17.3  17.3                   
+FL51801   0.23   2.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL51802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51803   1.0   1.0                                             * FORM LOSS
+FL518S0   0.23   2.0   0.472                     * 575 X 400
+FL5180F   17.1    17.5
+FL5180T   17.1    17.5
+FL518T0   1   518        * TF, TFnumber
+*
+TF51800   FL518_vel  1    1.0  *name, number datapairs, mult.factor
+TF51810   0.0       4.420289855  * ?, velocity (para tener 3660 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S802-1          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL51900   HVAC-S802-1    509   145  17.375  17.375                   
+FL51901   0.08125   11.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL51902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL51903   1.0   1.0                                             * FORM LOSS
+FL519S0   0.08125   11.0   0.283                     * 325 X 250
+FL5190F   17.25    17.5
+FL5190T   17.25    17.5
+FL519T0   1   519        * TF, TFnumber
+*
+TF51900   FL519_vel  1    1.0  *name, number datapairs, mult.factor
+TF51910   0.0       3.788034188  * ?, velocity (para tener 1108 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S802-2          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52000   HVAC-S802-2    509   146  17.375  17.375                   
+FL52001   0.1   2.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL52002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52003   1.0   1.0                                             * FORM LOSS
+FL520S0   0.1   2.0   0.283                     * 400 X 250
+FL5200F   17.25    17.5
+FL5200T   17.25    17.5
+FL520T0   1   520        * TF, TFnumber
+*
+TF52000   FL20_vel  1    1.0  *name, number datapairs, mult.factor
+TF52010   0.0       3.725  * ?, velocity (para tener 1341 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S802-3          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52100   HVAC-S802-3    509   510  17.375  17.375                   
+FL52101   0.0875   5.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL52102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52103   1.0   1.0                                             * FORM LOSS
+FL521S0   0.0875   5.0   0.292                     * 350 X 250
+FL5210F   17.25    17.5
+FL5210T   17.25    17.5
+FL521T0   1   521        * TF, TFnumber
+*
+TF52100   FL21_vel  1    1.0  *name, number datapairs, mult.factor
+TF52110   0.0       3.844444  * ?, velocity (para tener 1211 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S802-4          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52200   HVAC-S802-4    510   144  17.4  17.4                   
+FL52201   0.07   3.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL52202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52203   1.0   1.0                                             * FORM LOSS
+FL522S0   0.07   3.0   0.255                     * 350 X 200
+FL5220F   17.3    17.5
+FL5220T   17.3    17.5
+FL522T0   1   522        * TF, TFnumber
+*
+TF52200   FL22_vel  1    1.0  *name, number datapairs, mult.factor
+TF52210   0.0       3.357143  * ?, velocity (para tener 846 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S802-5          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52300   HVAC-S802-5    510   163  17.425  17.425                   
+FL52301   0.0375   7.5    1.0                     * A, L, FRACT OPEN, DIAM
+FL52302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52303   1.0   1.0                                             * FORM LOSS
+FL523S0   0.0375   7.5   0.188                     * 250 X 150
+FL5230F   17.35    17.5
+FL5230T   17.35    17.5
+FL523T0   1   523        * TF, TFnumber
+*
+TF52300   FL23_vel  1    1.0  *name, number datapairs, mult.factor
+TF52310   0.0       2.703704  * ?, velocity (para tener 365 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S821          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52400   HVAC-S821    508   511  17.075  17.075                   
+FL52401   1.445   8.2    1.0                     * A, L, FRACT OPEN, DIAM
+FL52402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52403   1.0   1.0                                             * FORM LOSS
+FL524S0   1.445   8.2   1.133                     * 1700 X 850
+FL5240F   16.65    17.5
+FL5240T   16.65    17.5
+FL524T0   1   524        * TF, TFnumber
+*
+TF52400   FL24_vel  1    1.0  *name, number datapairs, mult.factor
+TF52410   0.0       9.165321  * ?, velocity (para tener 47678 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S820          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52500   HVAC-S820    511   512  17.225  17.225                   
+FL52501   0.605   11.3    1.0                     * A, L, FRACT OPEN, DIAM
+FL52502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52503   1.0   1.0                                             * FORM LOSS
+FL525S0   0.605   11.3   0.733                     * 1100 X 550
+FL5250F   16.95    17.5
+FL5250T   16.95    17.5
+FL525T0   1   525        * TF, TFnumber
+*
+TF52500   FL25_vel  1    1.0  *name, number datapairs, mult.factor
+TF52510   0.0       6.821855  * ?, velocity (para tener 14858 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S818          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52600   HVAC-S818    512   149  17.3  17.3                   
+FL52601   0.32   3.2    1.0                     * A, L, FRACT OPEN, DIAM
+FL52602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52603   1.0   1.0                                             * FORM LOSS
+FL526S0   0.32   3.2   0.533                     * 800 X 400
+FL5260F   17.1    17.5
+FL5260T   17.1    17.5
+FL526T0   1   526        * TF, TFnumber
+*
+TF52600   FL26_vel  1    1.0  *name, number datapairs, mult.factor
+TF52610   0.0       5.529514  * ?, velocity (para tener 6370 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S817          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52700   HVAC-S817    512   182  17.3875  17.3875                   
+FL52701   0.0675   13.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL52702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52703   1.0   1.0                                             * FORM LOSS
+FL527S0   0.0675   13.0   0.257                     * 300 X 225
+FL5270F   17.275    17.5
+FL5270T   17.275    17.5
+FL527T0   1   527        * TF, TFnumber
+*
+TF52700   FL27_vel  1    1.0  *name, number datapairs, mult.factor
+TF52710   0.0       3.399177  * ?, velocity (para tener 826 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S816          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52800   HVAC-S816    512   513  17.275  17.275                   
+FL52801   0.36   15.5    1.0                     * A, L, FRACT OPEN, DIAM
+FL52802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52803   1.0   1.0                                             * FORM LOSS
+FL528S0   0.36   15.5   0.576                     * 800 X 450
+FL5280F   17.05    17.5
+FL5280T   17.05    17.5
+FL528T0   1   528        * TF, TFnumber
+*
+TF52800   FL28_vel  1    1.0  *name, number datapairs, mult.factor
+TF52810   0.0       5.912037  * ?, velocity (para tener 7662 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S814          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL52900   HVAC-S814    513   190  17.275  17.275                   
+FL52901   0.36   34.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL52902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL52903   1.0   1.0                                             * FORM LOSS
+FL529S0   0.36   34.0   0.576                     * 800 X 450
+FL5290F   17.05    17.5
+FL5290T   17.05    17.5
+FL529T0   1   529        * TF, TFnumber
+*
+TF52900   FL29_vel  1    1.0  *name, number datapairs, mult.factor
+TF52910   0.0       5.654321  * ?, velocity (para tener 7328 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S815          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53000   HVAC-S815    513   189  17.4125  17.4125                   
+FL53001   0.035   14.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL53002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53003   1.0   1.0                                             * FORM LOSS
+FL530S0   0.035   14.0   0.187                     * 200 X 175
+FL5300F   17.325    17.5
+FL5300T   17.325    17.5
+FL530T0   1   530        * TF, TFnumber
+*
+TF53000   FL30_vel  1    1.0  *name, number datapairs, mult.factor
+TF53010   0.0       2.650794  * ?, velocity (para tener 334 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S81213-1          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53100   HVAC-S81213-1    508   514  17.1  17.15                   
+FL53101   1.08   32.1428571    1.0                     * A, L, FRACT OPEN, DIAM
+FL53102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53103   1.0   1.0                                             * FORM LOSS
+FL531S1   1.08   15.0   1.005                     * 1350 X 800
+FL531S2   0.945   15.0   0.922                     * 1350 X 700
+FL5310F   16.7    17.5
+FL5310T   16.8    17.5
+FL531T0   1   531        * TF, TFnumber
+*
+TF53100   FL31_vel  1    1.0  *name, number datapairs, mult.factor
+TF53110   0.0       8.441358  * ?, velocity (para tener 32820 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S81213-2          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53200   HVAC-S81213-2    514   149  17.1  17.1                   
+FL53201   0.64   3.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL53202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53203   1.0   1.0                                             * FORM LOSS
+FL532S0   0.64   3.0   0.8                     * 800 X 800 (400 x 2)
+FL5320F   16.7    17.5
+FL5320T   16.7    17.5
+FL532T0   1   532        * TF, TFnumber
+*
+TF53200   FL32_vel  1    1.0  *name, number datapairs, mult.factor
+TF53210   0.0       5.529514  * ?, velocity (para tener 12740 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S808          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53300   HVAC-S808    514   515  17.325  17.325                   
+FL53301   0.21   8.2    1.0                     * A, L, FRACT OPEN, DIAM
+FL53302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53303   1.0   1.0                                             * FORM LOSS
+FL533S0   0.21   8.2   0.442                     * 600 X 350 
+FL5330F   17.15    17.5
+FL5330T   17.15    17.5
+FL533T0   1   533        * TF, TFnumber
+*
+TF53300   FL33_vel  1    1.0  *name, number datapairs, mult.factor
+TF53310   0.0       4.857143  * ?, velocity (para tener 3672 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S804          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53400   HVAC-S804    515   181  17.4  17.4                   
+FL53401   0.06   8.2    1.0                     * A, L, FRACT OPEN, DIAM
+FL53402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53403   1.0   1.0                                             * FORM LOSS
+FL534S0   0.06   8.2   0.24                     * 300 X 200
+FL5340F   17.3    17.5
+FL5340T   17.3    17.5
+FL534T0   1   534        * TF, TFnumber
+*
+TF53400   FL34_vel  1    1.0  *name, number datapairs, mult.factor
+TF53410   0.0       3.435185  * ?, velocity (para tener 742 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S807          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53500   HVAC-S807    515   516  17.35  17.35                   
+FL53501   0.18   9.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL53502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53503   1.0   1.0                                             * FORM LOSS
+FL535S0   0.18   9.0   0.4                     * 600 X 300
+FL5350F   17.2    17.5
+FL5350T   17.2    17.5
+FL535T0   1   535        * TF, TFnumber
+*
+TF53500   FL35_vel  1    1.0  *name, number datapairs, mult.factor
+TF53510   0.0       4.521605  * ?, velocity (para tener 2930 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-R112          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53600   HVAC-R112    516   112  17.35  17.35                   
+FL53601   0.135   3.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL53602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53603   1.0   1.0                                             * FORM LOSS
+FL536S0   0.135   3.0   0.36                     * 450 X 300
+FL5360F   17.2    17.5
+FL5360T   17.2    17.5
+FL536T0   1   536        * TF, TFnumber
+*
+TF53600   FL36_vel  1    1.0  *name, number datapairs, mult.factor
+TF53610   0.0       4.611111  * ?, velocity (para tener 2241 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S806-1          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53700   HVAC-S806-1    516   517  17.4  17.4                   
+FL53701   0.06   8.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL53702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53703   1.0   1.0                                             * FORM LOSS
+FL537S0   0.06   8.0   0.24                     * 300 X 200
+FL5370F   17.3    17.5
+FL5370T   17.3    17.5
+FL537T0   1   537        * TF, TFnumber
+*
+TF53700   FL37_vel  1    1.0  *name, number datapairs, mult.factor
+TF53710   0.0       3.189815  * ?, velocity (para tener 689 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S806-2          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53800   HVAC-S806-2    517   184  17.425  17.425                   
+FL53801   0.0225   3.8    1.0                     * A, L, FRACT OPEN, DIAM
+FL53802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53803   1.0   1.0                                             * FORM LOSS
+FL538S0   0.0225   3.8   0.15                     * 150 X 150
+FL5380F   17.35    17.5
+FL5380T   17.35    17.5
+FL538T0   1   538        * TF, TFnumber
+*
+TF53800   FL38_vel  1    1.0  *name, number datapairs, mult.factor
+TF53810   0.0       2.135802  * ?, velocity (para tener 173 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S806-2          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL53900   HVAC-S805    517   187  17.425  17.425                   
+FL53901   0.0525   2.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL53902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL53903   1.0   1.0                                             * FORM LOSS
+FL539S0   0.0525   2.0   0.21                     * 350 X 150
+FL5390F   17.35    17.5
+FL5390T   17.35    17.5
+FL539T0   1   539        * TF, TFnumber
+*
+TF53900   FL39_vel  1    1.0  *name, number datapairs, mult.factor
+TF53910   0.0       2.730159  * ?, velocity (para tener 516 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S812          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL54000   HVAC-S812    514   518  17.2  17.2                   
+FL54001   0.66   2.8    1.0                     * A, L, FRACT OPEN, DIAM
+FL54002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL54003   1.0   1.0                                             * FORM LOSS
+FL540S0   0.66   2.8   0.776                     * 1100 X 600 
+FL5400F   16.9    17.5
+FL5400T   16.9    17.5
+FL540T0   1   540        * TF, TFnumber
+*
+TF54000   FL40_vel  1    1.0  *name, number datapairs, mult.factor
+TF54010   0.0       6.905303  * ?, velocity (para tener 16407 m3/h)  
+*
+*------------------------------------------------------------------------------------------------------------------
+* HVAC-S811          FM    TO     FM     TO
+*------------------------------------------------------------------------------------------------------------------
+FL54100   HVAC-S811    518   191  14.375  17.375                   
+FL54101   0.08125   2.0    1.0                     * A, L, FRACT OPEN, DIAM
+FL54102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL54103   1.0   1.0                                             * FORM LOSS
+FL541S0   0.08125   2.0   0.283                     * 325 X 250 
+FL5410F   14.25    14.5
+FL5410T   14.25    14.5
+FL541T0   1   541        * TF, TFnumber
+*
+TF54100   FL41_vel  1    1.0  *name, number datapairs, mult.factor
+TF54110   0.0       3.962393  * ?, velocity (para tener 1159 m3/h)  
+*
 **
 ************************************************** C2 EXHAUST *****************************************************
 *
@@ -1556,7 +2112,7 @@ TF61110   0.0      5.622782446  * ?, velocity (para tener -6022 m3/h)
 * HVAC-A212-1           FM    TO     FM     TO
 *----------------------------------------------------------------------------------------------------------------
 FL61200   HVAC-A212-1   109   606  17.3  17.25                   * 
-FL61201   0.21   24.2   1.0                       * A, L, FRACT OPEN, DIAM
+FL61201   0.3625   92.95238095   1.0                       * A, L, FRACT OPEN, DIAM
 FL61202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL61203   1.0   1.0                                             * FORM LOSS
 FL612S1   0.21   52.4   0.4541                     * 525 x 400
