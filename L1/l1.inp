@@ -2765,46 +2765,46 @@ TF63910   0.0       9.99972222 * ?, velocity (para tener -35999 m3/h)
 *FL400S0   0.051247   0.5    0.25544                             * 185 m3/h expected   
 *  
 *
-*FL40100   INF-OUT-SB2L1    400   181  13.25  13.25              * Half room height
-*FL40101   0.040997   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-*FL40102   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-*FL40103   1.0   1.0                                             * FORM LOSS
-*FL401S0   0.040997   0.5   0.22847                              * 148 m3/h expected    
+FL40100   INF-OUT-SB2L1    400   181  13.25  13.25              * Half room height
+FL40101   0.01   0.5   1.0                                      * A, L, FRACT OPEN, DIAM
+FL40102   3      0     0     0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL40103   1.0    1.0                                            * FORM LOSS
+FL401S0   0.01   0.5   0.113                                    * 148 m3/h expected    
 *  
 *
-*FL40200   INF-OUT-SB3L1    400   182  13.25  13.25              * Half room height
-*FL40201   0.045706   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-*FL40202   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-*FL40203   1.0   1.0                                             * FORM LOSS
-*FL402S0   0.045706   0.5   0.24124                              * 165 m3/h expected    
+FL40200   INF-OUT-SB3L1    400   182  13.25  13.25              * Half room height
+FL40201   0.01   0.5   1.0                                      * A, L, FRACT OPEN, DIAM
+FL40202   3      0     0     0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL40203   1.0    1.0                                            * FORM LOSS
+FL402S0   0.01   0.5   0.113                                    * 165 m3/h expected    
 *  
 * 
 FL40300   INF-OUT-SB4L1    400   183  13.25  13.25              * Half room height
-FL40301   0.106094   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-FL40302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL40303   1.0   1.0                                             * FORM LOSS
-FL403S0   0.106094   0.5   0.36754                              * 383 m3/h expected
+FL40301   0.015   0.5   1.0                                     * A, L, FRACT OPEN, DIAM
+FL40302	  3       0     0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL40303   1.0     1.0                                           * FORM LOSS
+FL403S0   0.015   0.5   0.138                                   * 383 m3/h expected
 *
 *
-*FL40400   INF-OUT-E02L1    400   184  13.25  13.25              * Half room height
-*FL40401   0.009695   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-*FL40402   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-*FL40403   1.0   1.0                                             * FORM LOSS
-*FL404S0   0.009695   0.5   0.11111                              * 35 m3/h expected 
+FL40400   INF-OUT-E02L1    400   184  13.25  13.25              * Half room height
+FL40401   0.0015   0.5   1.0                                    * A, L, FRACT OPEN, DIAM
+FL40402   3        0     0     0                                * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL40403   1.0      1.0                                          * FORM LOSS
+FL404S0   0.0015   0.5   0.044                                  * 35 m3/h expected 
 * 
 *
 *FL40500   INF-OUT-E03L1    400   185  13.25  13.25              * Half room height
 *FL40501   0.011634   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
 *FL40502   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 *FL40503   1.0   1.0                                             * FORM LOSS
-*FL405S0   0.011634   0.5   0.12171                              * 42 m3/h expected 
+*FL405S0   0.011634   0.5   0.044                                * 42 m3/h expected 
 *
 *
 FL40600   INF-OUT-S02L1    400   186  13.25  13.25              * Half room height
-FL40601   0.022438   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-FL40602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL40603   1.0   1.0                                             * FORM LOSS
-FL406S0   0.022438   0.5   0.16902                              * 81 m3/h expected 
+FL40601   0.003   0.5   1.0                                     * A, L, FRACT OPEN, DIAM
+FL40602	  3       0     0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL40603   1.0     1.0                                           * FORM LOSS
+FL406S0   0.003   0.5   0.062                                   * 81 m3/h expected 
 *
 *
 *FL40700   INF-OUT-S04L1    400   187  13.25  13.25              * Half room height
@@ -2821,11 +2821,11 @@ FL406S0   0.022438   0.5   0.16902                              * 81 m3/h expect
 *FL408S0   0.030748   0.5   0.19786                              * 111 m3/h expected 
 *
 *
-*FL40900   INF-OUT-S07L1    400   189  13.25  13.25              * Half room height
-*FL40901   0.018560   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-*FL40902   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-*FL40903   1.0   1.0                                             * FORM LOSS
-*FL409S0   0.018560   0.5   0.15372                              * 67 m3/h expected 
+FL40900   INF-OUT-S07L1    400   189  13.25  13.25              * Half room height
+FL40901   0.01   0.5   1.0                                      * A, L, FRACT OPEN, DIAM
+FL40902   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL40903   1.0   1.0                                             * FORM LOSS
+FL409S0   0.01   0.5   0.113                                    * 67 m3/h expected 
 *
 *
 *FL41000   INF-OUT-R101     400   101  13.25  13.25              * Half room height
@@ -2836,45 +2836,45 @@ FL406S0   0.022438   0.5   0.16902                              * 81 m3/h expect
 *
 *
 FL41100   INF-OUT-R102     400   102  13.25  13.25              * Half room height
-FL41101   0.033241   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-FL41102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL41103   1.0   1.0                                             * FORM LOSS
-FL411S0   0.033241   0.5   0.20573                              * 120 m3/h expected 
+FL41101   0.01   0.5   1.0                                      * A, L, FRACT OPEN, DIAM
+FL41102	  3      0     0     0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL41103   1.0    1.0                                            * FORM LOSS
+FL411S0   0.01   0.5   0.113                                    * 120 m3/h expected 
 *
 *
 FL41200   INF-OUT-R104     400   104  13.25  13.25              * Half room height
-FL41201   0.065651   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-FL41202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL41203   1.0   1.0                                             * FORM LOSS
-FL412S0   0.065651   0.5   0.28912                              * 237 m3/h expected 
+FL41201   0.015   0.5   1.0                                     * A, L, FRACT OPEN, DIAM
+FL41202	  3       0     0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL41203   1.0     1.0                                           * FORM LOSS
+FL412S0   0.015   0.5   0.138                                   * 237 m3/h expected 
 *
 *
 FL41300   INF-OUT-R105     400   105  13.25  13.25              * Half room height
-FL41301   0.086150   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-FL41302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL41303   1.0   1.0                                             * FORM LOSS
-FL413S0   0.086150   0.5   0.33119                              * 311 m3/h expected 
+FL41301   0.01   0.5   1.0                                      * A, L, FRACT OPEN, DIAM
+FL41302	  3      0     0     0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL41303   1.0    1.0                                            * FORM LOSS
+FL413S0   0.01   0.5   0.113                                    * 311 m3/h expected 
 *
 *
 FL41400   INF-OUT-R106     400   106  13.25  13.25              * Half room height
-FL41401   0.598615   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-FL41402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL41401   0.1   0.5   1.0                                       * A, L, FRACT OPEN, DIAM
+FL41402	  3     0     0     0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL41403   1.0   1.0                                             * FORM LOSS
-FL414S0   0.598615   0.5   0.87303                              * 2161 m3/h expected 
+FL414S0   0.1   0.5   0.357                                     * 2161 m3/h expected 
 *
 *
 FL41500   INF-OUT-R110     400   110  12.75  12.75              * Half room height
-FL41501   0.542659   1.5   1.0                                  * A, L, FRACT OPEN, DIAM
-FL41502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL41501   0.1   1.5   1.0                                       * A, L, FRACT OPEN, DIAM
+FL41502	  3     0     0     0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL41503   1.0   1.0                                             * FORM LOSS
-FL415S0   0.542659   1.5   0.83123                              * 1959 m3/h expected 
+FL415S0   0.1   1.5   0.357                                     * 1959 m3/h expected 
 *
 *
-*FL41600   INF-OUT-R149     400   149  13.25  13.25              * Half room height
-*FL41601   0.529363   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-*FL41602   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-*FL41603   1.0   1.0                                             * FORM LOSS
-*FL416S0   0.529363   0.5   0.82098                              * 1911 m3/h expected 
+FL41600   INF-OUT-R149     400   149  13.25  13.25              * Half room height
+FL41601   0.1   0.5   1.0                                       * A, L, FRACT OPEN, DIAM
+FL41602   3     0     0     0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL41603   1.0   1.0                                             * FORM LOSS
+FL416S0   0.1   0.5   0.357                                     * 1911 m3/h expected 
 *
 *
 *FL41700   INF-OUT-R159     400   159  13.25  13.25              * Half room height
@@ -2898,19 +2898,19 @@ FL415S0   0.542659   1.5   0.83123                              * 1959 m3/h expe
 *FL419S0   0.014681   0.5   0.13672                              * 53 m3/h expected
 *
 *
-*FL42000   INF-OUT-C102     400   190  13.25  13.25              * Half room height
-*FL42001   0.014681   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-*FL42002   3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-*FL42003   1.0   1.0                                             * FORM LOSS
-*FL420S0   0.014681   0.5   0.88785                              * 2235 m3/h expected
+FL42000   INF-OUT-C102     400   190  13.25  13.25              * Half room height
+FL42001   0.1   0.5   1.0                                       * A, L, FRACT OPEN, DIAM
+FL42002   3     0     0     0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL42003   1.0   1.0                                             * FORM LOSS
+FL420S0   0.1   0.5   0.357                                     * 2235 m3/h expected
 *
-************** INDOORS ******************************
+************************** INDOORS ******************************
 *
 FL80000   INF-SB4L1-S02L1   183   186  13.25  13.25             * Half room height
-FL80001   0.014759   0.25   1.0                                 * A, L, FRACT OPEN, DIAM
+FL80001   0.000025   0.25   1.0                                 * A, L, FRACT OPEN, DIAM
 FL80002	  3     0    0      0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL80003   1.0   1.0                                             * FORM LOSS
-FL800S0   0.014759   0.25   0.13708  
+FL800S0   0.000025   0.25   0.00564  
 * 
 *
 FL80400   INF-R102-R110    102   110  12.75  12.75              * Half room height
