@@ -53,13 +53,247 @@ CF10310   1.0  0.0  TIME
 *        												CV (Control Volumes) INPUT									                   *
 ****************************************************************************************************************************************
 *
+********************************************************* ROOM LIST ********************************************************************
+*
 *-----------------------------------------------                                                                
-* CV016 - R016 - Lithium loop cell (C4)                                                                    
+* CV001 - R001 - Loading area (C1)                                                                    
+*-----------------------------------------------                                                                
+CV00100   R001  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00101   0   0		                                * Fog allowed (default)
+CV001A0   3                                                                                         
+CV001A1   PVOL  101270.0                            * 101325Pa-55Pa 
+CV001A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV001A3   MLFR.4  0.78                              * Filled with air (N2)
+CV001A6   MLFR.5  0.21                              * Filled with air (O2)
+CV001A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV001B1   0.0      0.0                                                            
+CV001B2   8.5      2496.0                           * 2113.4 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV002 - R002 - TL-WTS (C2)                                                                    
+*-----------------------------------------------                                                                
+CV00200   R002  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00201   0   0		                                * Fog allowed (default)
+CV002A0   3                                                                                         
+CV002A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV002A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV002A3   MLFR.4  0.78                              * Filled with air (N2)
+CV002A6   MLFR.5  0.21                              * Filled with air (O2)
+CV002A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV002B1   0.0      0.0                                                            
+CV002B2   8.5      1115.0                           * 909.6 m3 (2PNSLP)
+***
+*
+*-----------------------------------------------                                                                
+* CV003 - R003 - Liquid Waste Treatment Cell (C2)                                                                    
+*-----------------------------------------------                                                                
+CV00300   R003  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00301   0   0		                                * Fog allowed (default)
+CV003A0   3                                                                                         
+CV003A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV003A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV003A3   MLFR.4  0.78                              * Filled with air (N2)
+CV003A6   MLFR.5  0.21                              * Filled with air (O2)
+CV003A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV003B1   0.0      0.0                                                            
+CV003B2   8.5      3086.0                           * 2645.9 m3 (2PNSLP) 
+***
+*-----------------------------------------------                                                                
+* CV004 - R004 - CR LRWTS (C2)                                                                    
+*-----------------------------------------------                                                                
+CV00400   R004  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00401   0   0		                                * Fog allowed (default)
+CV004A0   3                                                                                         
+CV004A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV004A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV004A3   MLFR.4  0.78                              * Filled with air (N2)
+CV004A6   MLFR.5  0.21                              * Filled with air (O2)
+CV004A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV004B1   0.0      0.0                                                            
+CV004B2   8.5      379.0                            * 320.2 m3 (2PNSLP) 
+***
+*
+*-----------------------------------------------                                                                
+* CV005 - R005 - Liquid Metal Workshop (C2)                                                                    
+*-----------------------------------------------                                                                
+CV00500   R005  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00501   0   0		                                * Fog allowed (default)
+CV005A0   3                                                                                         
+CV005A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV005A2   TATM  295.15  RHUM  0.6                   * 22 deg. C; 60% rel. humidity
+CV005A3   MLFR.4  0.78                              * Filled with air (N2)
+CV005A6   MLFR.5  0.21                              * Filled with air (O2)
+CV005A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV005B1   0.0      0.0                                                            
+CV005B2   8.5      704.0                            * 594.2 m3 (2PNSLP) 
+***
+*
+*-----------------------------------------------                                                                
+* CV006 - R006 - Storage (C2)                                                                    
+*-----------------------------------------------                                                                
+CV00600   R006  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00601   0   0		                                * Fog allowed (default)
+CV006A0   3                                                                                         
+CV006A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV006A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV006A3   MLFR.4  0.78                              * Filled with air (N2)
+CV006A6   MLFR.5  0.21                              * Filled with air (O2)
+CV006A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV006B1   0.0      0.0                                                            
+CV006B2   8.5      447.0                            * 349.2 m3 (2PNSLP) 
+***
+*
+*-----------------------------------------------                                                                
+* CV007 - R007 - Hall / Storage (C1 - por confirmar en 2PNSLP)                                                                    
+*-----------------------------------------------                                                                
+CV00700   R007  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00701   0   0		                                * Fog allowed (default)
+CV007A0   3                                                                                         
+CV007A1   PVOL  101270.0                            * 101325Pa-55Pa 
+CV007A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV007A3   MLFR.4  0.78                              * Filled with air (N2)
+CV007A6   MLFR.5  0.21                              * Filled with air (O2)
+CV007A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV007B1   0.0      0.0                                                            
+CV007B2   8.5      1511.0                           * 1281.3 m3 (2PNSLP) 
+***
+*
+*-----------------------------------------------                                                                
+* CV008 - R009-1 - Cold Traps Cell (C2 - por confirmar en 2PNSLP)                                                                    
+*-----------------------------------------------                                                                
+CV00800   R009-1  2  0  1                           * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00801   0   0		                                * Fog allowed (default)
+CV008A0   3                                                                                         
+CV008A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV008A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV008A3   MLFR.4  0.78                              * Filled with air (N2)
+CV008A6   MLFR.5  0.21                              * Filled with air (O2)
+CV008A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV008B1   0.0      0.0                                                            
+CV008B2   8.0      557.0                            * 609.0 m3 (2PNSLP) ; Height = Volume / Floor Area
+***
+*
+*-----------------------------------------------                                                                
+* CV009 - R009-2 - Hot Traps Cell (C2 - C4 en 2PNSLP)                                                                    
+*-----------------------------------------------                                                                
+CV00900   R009-2  2  0  1                           * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00901   0   0		                                * Fog allowed (default)
+CV009A0   3                                                                                         
+CV009A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV009A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV009A3   MLFR.4  0.78                              * Filled with air (N2)
+CV009A6   MLFR.5  0.21                              * Filled with air (O2)
+CV009A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV009B1   0.0      0.0                                                            
+CV009B2   8.5      585.0                            * 581.3 m3 (2PNSLP) 
+***
+*
+*-----------------------------------------------                                                                
+* CV010 - R010 - Piping and Cabling Area (C2)                                                                    
+*-----------------------------------------------                                                                
+CV01000   R010  2  0  1                           * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV01001   0   0		                                * Fog allowed (default)
+CV010A0   3                                                                                         
+CV010A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV010A2   TATM  298.15  RHUM  0.6                   * 25 deg. C; 60% rel. humidity
+CV010A3   MLFR.4  0.78                              * Filled with air (N2)
+CV010A6   MLFR.5  0.21                              * Filled with air (O2)
+CV010A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV010B1   0.0      0.0                                                            
+CV010B2   8.5      267.0                            * 211.8 m3 (2PNSLP) 
+***
+*
+*-----------------------------------------------                                                                
+* CV011 - R011 - LF Utility Cell (C2)                                                                    
+*-----------------------------------------------                                                                
+CV01100   R011  2  0  1                           * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV01101   0   0		                                * Fog allowed (default)
+CV011A0   3                                                                                         
+CV011A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV011A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV011A3   MLFR.4  0.78                              * Filled with air (N2)
+CV011A6   MLFR.5  0.21                              * Filled with air (O2)
+CV011A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV011B1   0.0      0.0                                                            
+CV011B2   8.5      2469.0                           * 2187.4 m3 (2PNSLP) ; Height = Volume / Floor Area
+***
+*
+*-----------------------------------------------                                                                
+* CV014 - R014 - Vent Gas Detritiation (VDS) (C2 - C3 en 2PNSLP)                                                                    
+*-----------------------------------------------                                                                
+CV01400   R014  2  0  1                           * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV01401   0   0		                                * Fog allowed (default)
+CV014A0   3                                                                                         
+CV014A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV014A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV014A3   MLFR.4  0.78                              * Filled with air (N2)
+CV014A6   MLFR.5  0.21                              * Filled with air (O2)
+CV014A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV014B1   0.0      0.0                                                            
+CV014B2   8.5      2306.0                           * 1923.6 m3 (2PNSLP)
+***
+*
+*-----------------------------------------------                                                                
+* CV015 - R015 - Organic Loop Cell (C2)                                                                    
+*-----------------------------------------------                                                                
+CV01500   R015  2  0  1                           * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV01501   0   0		                                * Fog allowed (default)
+CV015A0   3                                                                                         
+CV015A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV015A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV015A3   MLFR.4  0.78                              * Filled with air (N2)
+CV015A6   MLFR.5  0.21                              * Filled with air (O2)
+CV015A8   MLFR.8  0.01                              * Filled with air (Ar)                           
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV015B1   0.0      0.0                                                            
+CV015B2   9.5      2963.0                           * 2898.6 m3 (2PNSLP) ; Height = Volume / Floor Area
+***
+*
+*-----------------------------------------------                                                                
+* CV016 - R016 - Lithium loop cell (C3 - C4 en 2PNSLP)                                                                    
 *-----------------------------------------------                                                                
 CV01600   R016  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
 CV01601   0   0		                                * Fog allowed (default)
 CV016A0   3                                                                                         
-CV016A1   PVOL  101065.0                            * 101325Pa-260Pa 
+CV016A1   PVOL  101195.0                            * 101325Pa-195Pa 
 CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
 CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -68,68 +302,14 @@ CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
 CV016B1   0.0      0.0                                                            
-CV016B2   7.2      2658.7                           * Aprox. height 
-***
-*
-*-----------------------------------------------                                                                
-* CV096 - AL016 - Airlock (C3a)                                                                    
-*-----------------------------------------------                                                                
-CV09600   AL016  2  0  1                                                            
-CV09601   0  -1		                              
-CV096A0   3                                                                                         
-CV096A1   PVOL  101215.0                            * 101325Pa-110Pa 
-CV096A3   TATM    290.95    RHUM 0.6                                                
-CV096A5   MLFR.4  0.78                              * Filled with air (N2)
-CV096A6   MLFR.5  0.21                              * Filled with air (O2)
-CV096A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV096B1   0.0      0.0                                                            
-CV096B2   7.5      281.8                           
-***
-*      
-*-----------------------------------------------                                                                
-* CV042 - C002 - Corridor (C2)                                                          
-*-----------------------------------------------                                                                
-*CV04200   C002  2  2  1                                                           
-*CV04201   0   -1					                 
-*CV042A0   3                                                                                         
-*CV042A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-*CV042A3   TATM    293.15    RHUM 0.6                                                
-*CV042A5   MLFR.4  0.78                              * Filled with air (N2)
-*CV042A6   MLFR.5  0.21                              * Filled with air (O2)
-*CV042A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-*CV042B1   0.0      0.0                                                            
-*CV042B2   8.13     11032.7                          * Aprox. height              
-***
-*
-*-----------------------------------------------                                                                
-* CV015 - R015 - Organic loop cell (C2)                                                          
-*-----------------------------------------------                                                                
-CV01500   R015  2  2  1                                                           
-CV01501   0   -1					                 
-CV015A0   3                                                                                         
-CV015A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV015A3   TATM    293.15    RHUM 0.6                                                
-CV015A5   MLFR.4  0.78                              * Filled with air (N2)
-CV015A6   MLFR.5  0.21                              * Filled with air (O2)
-CV015A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV015B1   0.0      0.0                                                            
-CV015B2   9.5      2898.6                           * Aprox. height              
+CV016B2   7.2      2495.0                           * 2658.7 m3 (2PNSLP) ; Height = Volume / Floor Area
 ***
 *
 *-----------------------------------------------                                                                
 * CV018 - R018 - Ar purification Equipment (C2)                                                          
 *-----------------------------------------------                                                                
 CV01800   R018  2  2  1                                                           
-CV01801   0   -1					                 
+CV01801   0   0					                 
 CV018A0   3                                                                                         
 CV018A1   PVOL    101235.0                          * 101325-90Pa                                                                 
 CV018A3   TATM    293.15    RHUM 0.6                                                
@@ -140,10 +320,46 @@ CV018A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV018B1   0.0      0.0                                                            
-CV018B2   7.5      2528.3                           * Aprox. height              
+CV018B2   7.5      3074.0                           * 2528.3 m3 (2PNSLP)      
 ***
 *
-****************************************************************************************************************************************
+*-----------------------------------------------                                                                
+* CV042 - C002 - Corridor (C2)                                                          
+*-----------------------------------------------                                                                
+CV04200   C002  2  2  1                                                           
+CV04201   0   0					                 
+CV042A0   3                                                                                         
+CV042A1   PVOL    101235.0                          * 101325-90Pa                                                                 
+CV042A3   TATM    293.15    RHUM 0.6                                                
+CV042A5   MLFR.4  0.78                              * Filled with air (N2)
+CV042A6   MLFR.5  0.21                              * Filled with air (O2)
+CV042A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV042B1   0.0      0.0                                                            
+CV042B2   8.1      12826.3                          * 11032.7 m3 (2PNSLP) ; Height = Volume / Floor Area             
+***
+*
+*-----------------------------------------------                                                                
+* CV096 - AL016 - Airlock (C2 - C3a en 2PNSLP)                                                                    
+*-----------------------------------------------                                                                
+CV09600   AL016  2  0  1                                                            
+CV09601   0  0		                              
+CV096A0   3                                                                                         
+CV096A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV096A3   TATM    293.15    RHUM 0.6                                                
+CV096A5   MLFR.4  0.78                              * Filled with air (N2)
+CV096A6   MLFR.5  0.21                              * Filled with air (O2)
+CV096A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV096B1   0.0      0.0                                                            
+CV096B2   7.5      421.0                            * 281.8 m3 (2PNSLP)                          
+***
+*      
+*********************************************************** Ar SUPPLY **************************************************************
 *
 *-----------------------------------------------                                                                
 * CV900 - ArSS - Ar Supply Subsystem                                                                    
@@ -500,7 +716,7 @@ CV557B2   8.5      0.368125                          * 1000 x 550 (+1m) x 250
 *
 ***************************************** AIR SUPPLY ********************************************
 *
-**** ASL0-1 ****
+**** AS-L0-1 ****
 *
 *-------------------------------------------------------
 * HVAC-inlet-ASL0-1          FM    TO     FM     TO
@@ -682,7 +898,6 @@ FL311T0   1   311
 TF31100   FL311_vel  1    1.0  
 TF31110   0.0        2.82222222                                 * velocity (381 m3/h)
 *
-*
 *-------------------------------------------------------
 * HVAC-S909          FM    TO     FM     TO
 *-------------------------------------------------------
@@ -746,7 +961,7 @@ TF31510   0.0        3.46759259                                 * velocity (749 
 *-------------------------------------------------------
 * HVAC-S905          FM    TO     FM     TO
 *-------------------------------------------------------
-FL31600   HVAC-S904    557   091  8.4  8.4                   
+FL31600   HVAC-S905    557   091  8.3625  8.3625                   
 FL31601   0.0825   4.0    1.0                                   * A, L, FRACT OPEN, DIAM
 FL31602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL31603   1.0   1.0                                             * FORM LOSS
@@ -757,6 +972,21 @@ FL316T0   1   316
 *
 TF31600   FL316_vel  1    1.0  
 TF31610   0.0        3.61279461                                 * velocity (1073 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S906          FM    TO     FM     TO
+*-------------------------------------------------------
+FL31700   HVAC-S906    557   001  8.1625  8.1625                   
+FL31701   0.45125   5.4    1.0                                   * A, L, FRACT OPEN, DIAM
+FL31702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL31703   1.0   1.0                                             * FORM LOSS
+FL317S0   0.45125   5.4   0.633                   
+FL3170F   8.025    8.5
+FL3170T   8.025    8.5
+FL317T0   1   317     
+*
+TF31700   FL317_vel  1    1.0  
+TF31710   0.0        6.14712219                                 * velocity (9986 m3/h)
 *
 **************************************************************** SGS ******************************************************************
 *
