@@ -1282,7 +1282,108 @@ CV563A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 CV563B1   7.4       0.0                                                         
 CV563B2   8.1       0.23625                         * 1350 x 700 x 250
 *
-***                                                                                              
+*-------------------------------------------------------
+* CV564 - CVASL0-13 - Connection Volume Air Supply L0 13
+*-------------------------------------------------------                                                                
+CV56400   CVASL0-13  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV56401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV564A0   3                                                                                         
+CV564A1   PVOL    101325.0                          * PATM                                                                          
+CV564A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV564A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV564A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV564B1   7.4       0.0                                                         
+CV564B2   8.1       0.23625                         * 1350 x 700 x 250
+*
+***    
+*-------------------------------------------------------
+* CV565 - CVASL0-14 - Connection Volume Air Supply L0 14
+*-------------------------------------------------------                                                                
+CV56500   CVASL0-14  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV56501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV565A0   3                                                                                         
+CV565A1   PVOL    101325.0                          * PATM                                                                          
+CV565A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV565A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV565A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV565B1   7.5       0.0                                                         
+CV565B2   8.1       0.165                           * 1100 x 600 x 250
+*
+***     
+*-------------------------------------------------------
+* CV566 - CVASL0-15 - Connection Volume Air Supply L0 15
+*-------------------------------------------------------                                                                
+CV56600   CVASL0-15  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV56601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV566A0   3                                                                                         
+CV566A1   PVOL    101325.0                          * PATM                                                                          
+CV566A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV566A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV566A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV566B1   7.55       0.0                                                         
+CV566B2   8.1        0.15125                        * 1100 x 550 x 250
+*
+***       
+*-------------------------------------------------------
+* CV567 - CVASL0-16 - Connection Volume Air Supply L0 16
+*-------------------------------------------------------                                                                
+CV56700   CVASL0-16  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV56701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV567A0   3                                                                                         
+CV567A1   PVOL    101325.0                          * PATM                                                                          
+CV567A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV567A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV567A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV567B1   7.55       0.0                                                         
+CV567B2   8.1        0.15125                        * 1100 x 550 x 250
+*
+***      
+*-------------------------------------------------------
+* CV568 - CVASL0-17 - Connection Volume Air Supply L0 17
+*-------------------------------------------------------                                                                
+CV56800   CVASL0-17  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV56801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV568A0   3                                                                                         
+CV568A1   PVOL    101325.0                          * PATM                                                                          
+CV568A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV568A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV568A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV568B1   7.85       0.0                                                         
+CV568B2   8.1        0.021875                       * 350 x 250 x 250
+*
+***     
+*-------------------------------------------------------
+* CV569 - CVASL0-18 - Connection Volume Air Supply L0 18
+*-------------------------------------------------------                                                                
+CV56900   CVASL0-18  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV56901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV569A0   3                                                                                         
+CV569A1   PVOL    101325.0                          * PATM                                                                          
+CV569A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV569A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV569A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV569B1   7.65       0.0                                                         
+CV569B2   8.1        0.084375                       * 750 x 450 x 250
+*
+***                                                                                
 ****************************************************************************************************************************************
 *         												  FP (Flow paths) INPUT						   								   *
 ****************************************************************************************************************************************
@@ -1715,6 +1816,216 @@ FL327T0   1   327
 TF32700   FL327_vel  1    1.0
 TF32710   0.0        2.65079365                                 * velocity (334 m3/h)
 * 
+*-------------------------------------------------------
+* HVAC-S928          FM    TO     FM     TO
+*-------------------------------------------------------
+FL32800   HVAC-S928    560   563  7.75  7.75            
+FL32801   0.945   6.1    1.0                                    * A, L, FRACT OPEN, DIAM
+FL32802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL32803   1.0   1.0                                             * FORM LOSS
+FL328S0   0.945   6.1   0.922                     
+FL3280F   7.4    8.1
+FL3280T   7.4    8.1
+FL328T0   1   328        
+*
+TF32800   FL328_vel  1    1.0
+TF32810   0.0        8.05673133                                 * velocity (27409 m3/h)
+* 
+*-------------------------------------------------------
+* HVAC-S927          FM    TO     FM     TO
+*-------------------------------------------------------
+FL32900   HVAC-S927    563   005  7.975  7.975            
+FL32901   0.1   7.5    1.0                                      * A, L, FRACT OPEN, DIAM
+FL32902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL32903   1.0   1.0                                             * FORM LOSS
+FL329S0   0.1   7.5   0.308                     
+FL3290F   7.85    8.1
+FL3290T   7.85    8.1
+FL329T0   1   329        
+*
+TF32900   FL329_vel  1    1.0
+TF32910   0.0        3.91111111                                 * velocity (1408 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S926          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33000   HVAC-S926    563   564  7.75  7.75            
+FL33001   0.945   12.3    1.0                                   * A, L, FRACT OPEN, DIAM
+FL33002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33003   1.0   1.0                                             * FORM LOSS
+FL330S0   0.945   12.3   0.922                     
+FL3300F   7.4    8.1
+FL3300T   7.4    8.1
+FL330T0   1   330        
+*
+TF33000   FL330_vel  1    1.0
+TF33010   0.0        7.64285714                                 * velocity (26001 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S924-1          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33100   HVAC-S924-1    564   024  7.95  7.95            
+FL33101   0.15   8.2    1.0                                     * A, L, FRACT OPEN, DIAM
+FL33102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33103   1.0   1.0                                             * FORM LOSS
+FL331S0   0.15   8.2   0.375                     
+FL3310F   7.8    8.1
+FL3310T   7.8    8.1
+FL331T0   1   331        
+*
+TF33100   FL331_vel  1    1.0
+TF33110   0.0        4.48888889                                 * velocity (2424 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S924-2          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33200   HVAC-S924-2    564   042  7.875  7.875            
+FL33201   0.36   3.0    1.0                                     * A, L, FRACT OPEN, DIAM
+FL33202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33203   1.0   1.0                                             * FORM LOSS
+FL332S0   0.36   3.0   0.576                     
+FL3320F   7.65    8.1
+FL3320T   7.65    8.1
+FL332T0   1   332        
+*
+TF33200   FL332_vel  1    1.0
+TF33210   0.0        6.01311728                                 * velocity (7793 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S923          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33300   HVAC-S923    564   565  7.8  7.8            
+FL33301   0.6   8.9    1.0                                      * A, L, FRACT OPEN, DIAM
+FL33302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33303   1.0   1.0                                             * FORM LOSS
+FL333S0   0.6   8.9   0.75                     
+FL3330F   7.5    8.1
+FL3330T   7.5    8.1
+FL333T0   1   333        
+*
+TF33300   FL333_vel  1    1.0
+TF33310   0.0        7.30740741                                 * velocity (15784 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S922          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33400   HVAC-S922    565   023  7.9875  7.9875            
+FL33401   0.0675   7.1    1.0                                   * A, L, FRACT OPEN, DIAM
+FL33402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33403   1.0   1.0                                             * FORM LOSS
+FL334S0   0.0675   7.1    0.257                     
+FL3340F   7.875    8.1
+FL3340T   7.875    8.1
+FL334T0   1   334        
+*
+TF33400   FL334_vel  1    1.0
+TF33410   0.0        3.71604938                                 * velocity (903 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S921          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33500   HVAC-S921    565   566  7.825  7.825            
+FL33501   0.55   3.2    1.0                                     * A, L, FRACT OPEN, DIAM
+FL33502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33503   1.0   1.0                                             * FORM LOSS
+FL335S0   0.55   3.2    0.71                     
+FL3350F   7.55    8.1
+FL3350T   7.55    8.1
+FL335T0   1   335        
+*
+TF33500   FL335_vel  1    1.0
+TF33510   0.0        7.51565657                                 * velocity (14881 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S920          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33600   HVAC-S920    566   025  8.0  8.0            
+FL33601   0.045   7.0    1.0                                    * A, L, FRACT OPEN, DIAM
+FL33602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33603   1.0   1.0                                             * FORM LOSS
+FL336S0   0.045   7.0    0.212                     
+FL3360F   7.9    8.1
+FL3360T   7.9    8.1
+FL336T0   1   336        
+*
+TF33600   FL336_vel  1    1.0
+TF33610   0.0        3.11728395                                 * velocity (505 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S918          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33700   HVAC-S918    566   567  7.825  7.825            
+FL33701   0.605   6.6    1.0                                    * A, L, FRACT OPEN, DIAM
+FL33702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33703   1.0   1.0                                             * FORM LOSS
+FL337S0   0.605   6.6    0.733                     
+FL3370F   7.55    8.1
+FL3370T   7.55    8.1
+FL337T0   1   337        
+*
+TF33700   FL337_vel  1    1.0
+TF33710   0.0        6.60055096                                 * velocity (14376 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S917          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33800   HVAC-S917    567   015  7.9  7.9            
+FL33801   0.3   5.8    1.0                                      * A, L, FRACT OPEN, DIAM
+FL33802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33803   1.0   1.0                                             * FORM LOSS
+FL338S0   0.3   5.8    0.522                     
+FL3380F   7.7    8.1
+FL3380T   7.7    8.1
+FL338T0   1   338        
+*
+TF33800   FL338_vel  1    1.0
+TF33810   0.0        5.48703704                                 * velocity (5926 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S916          FM    TO     FM     TO
+*-------------------------------------------------------
+FL33900   HVAC-S916    567   568  7.975  7.975            
+FL33901   0.0875   7.0    1.0                                   * A, L, FRACT OPEN, DIAM
+FL33902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL33903   1.0   1.0                                             * FORM LOSS
+FL339S0   0.0875   7.0    0.292                     
+FL3390F   7.85    8.1
+FL3390T   7.85    8.1
+FL339T0   1   339        
+*
+TF33900   FL339_vel  1    1.0
+TF33910   0.0        4.02222222                                 * velocity (1267 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S914          FM    TO     FM     TO
+*-------------------------------------------------------
+FL34000   HVAC-S914    568   083  7.975  7.975            
+FL34001   0.075   2.5    1.0                                    * A, L, FRACT OPEN, DIAM
+FL34002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL34003   1.0   1.0                                             * FORM LOSS
+FL340S0   0.075   2.5    0.273                     
+FL3400F   7.85    8.1
+FL3400T   7.85    8.1
+FL340T0   1   340        
+*
+TF34000   FL340_vel  1    1.0
+TF34010   0.0        3.41111111                                 * velocity (921 m3/h)
+*
+*-------------------------------------------------------
+* HVAC-S915          FM    TO     FM     TO
+*-------------------------------------------------------
+FL34100   HVAC-S915    568   084  8.025  8.025            
+FL34101   0.0375   3.0    1.0                                   * A, L, FRACT OPEN, DIAM
+FL34102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL34103   1.0   1.0                                             * FORM LOSS
+FL341S0   0.0375   3.0    0.188                     
+FL3410F   7.95    8.1
+FL3410T   7.95    8.1
+FL341T0   1   341        
+*
+TF34100   FL341_vel  1    1.0
+TF34110   0.0        2.56296296                                 * velocity (346 m3/h)
+*
 **************************************************************** SGS ******************************************************************
 *
 *-------------------------------------------------------
