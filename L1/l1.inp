@@ -56,7 +56,7 @@ CV400B2  50.0   1000000.0              	            * Random huge volume
 * CV401 - ENV-OUT - Environment for EXHAUST                                                                
 *-----------------------------------------------                                                                
 CV40100   ENV-OUT  2  2  5          		                                           
-CV40101   0   -1                                    * Time-independent				       
+CV40101   0   0                                     * Time-independent				       
 CV401A0   3                                                                                         
 CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
 CV401A3   TATM    293.15  RHUM  0.6    	                                                 
@@ -73,21 +73,26 @@ CV401B2  50.0   1000000.0              	            * Random huge volume
 * 
 * C0 = Patm ; C1 = -55 Pa ; C2a = -63 Pa ; C2 = -90 Pa ; C3a = -110 Pa ; C3 = -130 Pa ; C4a = -195 Pa ; C4 = -260 Pa
 * 
-*-----------------------------------------------------------------------------------------------------------------------                                                             
-* CV101 - R101 - Electric Room Train A (C2)                                                                   
+*----------------------------------------------------------------------------------------------------------------------- 
+*-----------------------------------------------                                                            
+* CV100 - R100 - Electric Room SIC-2 Train A (?)                                                                   
+*-----------------------------------------------  
+***                                                              
+*-----------------------------------------------                                                             
+* CV101 - R101 - Electric Room SIC-1 Train A (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV10100   R101  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV10101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV101A0   3                                                                                         
-*CV101A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV101A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
-*CV101A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV101A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV10100   R101  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV10101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV101A0   3                                                                                         
+CV101A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV101A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV101A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV101A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV101B1   9.0      0.0                                                         
-*CV101B2   17.5     424.2                            * 8.5m (h) 
+CV101B1   9.0      0.0                                                         
+CV101B2   17.5     539.0                            * 424.2 m3 (2PNSLP) 
 ***
 *-----------------------------------------------                                                                
 * CV102 - R102 - Piping and cabling space (C2)                                                                   
@@ -103,8 +108,12 @@ CV102A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV102B1   9.0      0.0                                                         
-CV102B2   31.5     1042.875                         * 8.5m (h) --> 393.5 m3
+CV102B2   31.5     1588.2                         * 600 m3 en 8.5 m ; 393.5 m3 en 8.5 m (2PNSLP) --> 1041.617647
 ***
+*-----------------------------------------------                                                            
+* CV103 - R103 - ASA Electric Room Train B (?)                                                                   
+*-----------------------------------------------  
+***  
 *-----------------------------------------------                                                                
 * CV104 - R104 - Assembly shipping bay (C2a)                                                                   
 *-----------------------------------------------                                                                
@@ -119,15 +128,15 @@ CV104A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV104B1   9.0      0.0                                                         
-CV104B2   17.5     1053.0                           * 8.5m (h) 
+CV104B2   17.5     1184.0                           * 1053.02 m3 (2PNSLP) 
 ***
 *-----------------------------------------------                                                                
-* CV105 - R105 - Assembly maintenance bay (C3a)                                                                   
+* CV105 - R105 - Assembly maintenance bay (C2 - C3a en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
 CV10500   R105  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV10501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV105A0   3                                                                                         
-CV105A1   PVOL    101215.0                          * 101325-110Pa                                                                          
+CV105A1   PVOL    101235.0                          * 101325-90Pa                                                                           
 CV105A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV105A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV105A6   MLFR.5  0.22                              * FILLED WITH air (O2)
@@ -135,7 +144,7 @@ CV105A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV105B1   9.0      0.0                                                         
-CV105B2   17.5     1274.0                           * 8.5m (h) 
+CV105B2   17.5     1156.0                           * 1274.0 m3 (2PNSLP) 
 ***
 *-----------------------------------------------                                                                
 * CV106 - R106 (+ R108) - Cooling machine room (C2)                                                                   
@@ -151,8 +160,12 @@ CV106A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV106B1   9.0      0.0                                                         
-CV106B2   17.5     11310.0                              * 8.5m (h) 
+CV106B2   17.5     12668.0                          * 11310.0 m3 (2PNSLP)       
 ***
+*-----------------------------------------------                                                            
+* CV107 - R107 - ASA Electric Room Train A (?)                                                                   
+*-----------------------------------------------  
+***  
 *-----------------------------------------------                                                                
 * CV109 - R109 - Piping and cabling penetration space (C2)                                                                   
 *-----------------------------------------------                                                                
@@ -167,15 +180,15 @@ CV109A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV109B1   9.0      0.0                                                         
-CV109B2   17.5     3385.0                           * 8.5m (h) 
+CV109B2   17.5     4104.0                           * 3385.5 m3 (2PNSLP)       
 ***
 *-----------------------------------------------                                                                
-* CV110 - R110 + R113 + R114 - Accelerator Vault + Beam transport room + Radiation isolation room (C3)                                                                   
+* CV110 - R110 + R113 + R114 - Accelerator Vault + Beam transport room + Radiation isolation room (C2 - C3 en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
 CV11000   R110  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV11001   0   0		                                * fog ALLOWED (DEF), 
 CV110A0   3                                                                                         
-CV110A1   PVOL    101195.0                          * 101325-130Pa                                                                          
+CV110A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV110A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV110A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV110A6   MLFR.5  0.22                              * FILLED WITH air (O2)
@@ -183,31 +196,31 @@ CV110A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV110B1   9.0      0.0                                                         
-CV110B2   16.5     7394.2                           * 7.5m (h) 
+CV110B2   16.5     10998.0                          * 7394.2 m3 (2PNSLP)  
 *** 
 *-----------------------------------------------                                                                
 * CV111 - R111 - Piping and cabling area (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV11100   R111  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV11101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV111A0   3                                                                                         
-*CV111A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV111A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
-*CV111A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV111A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV11100   R111  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV11101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV111A0   3                                                                                         
+CV111A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV111A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV111A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV111A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV111B1   9.0      0.0                                                         
-*CV111B2   17.5     211.8                            * 8.5m (h) 
+CV111B1   9.0      0.0                                                         
+CV111B2   17.5     267.0                            * 211.8 m3 (2PNSLP)    
 ***
 *-----------------------------------------------                                                                
-* CV112 - R112 - Assembly maintenance room (C3a)                                                                   
+* CV112 - R112 - Assembly maintenance room (C2 - C3a en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
 CV11200   R112  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV11201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV112A0   3                                                                                         
-CV112A1   PVOL    101215.0                          * 101325-110Pa                                                                          
+CV112A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV112A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV112A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV112A6   MLFR.5  0.22                              * FILLED WITH air (O2)
@@ -215,54 +228,53 @@ CV112A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV112B1   9.0      0.0                                                         
-CV112B2   17.5     2034.7                           * 8.5m (h)
+CV112B2   17.5     2241.0                           * 2034.7 m3 (2PNSLP)  
 ***
 *-----------------------------------------------                                                                
-* CV114 - R114-1 - Radiation isolation room 1 (C3)                                                                   
+* CV114 - R114-1 - Radiation isolation room 1 (C2 - C3 en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
-*CV11400   R114-1  2  2  2                           * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV11401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV114A0   3                                                                                         
-*CV114A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-*CV114A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV114A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV114A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV11400   R114-1  2  2  2                           * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV11401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV114A0   3                                                                                         
+CV114A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV114A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV114A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV114A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV114B1   9.0      0.0                                                         
-*CV114B2   16.5     394.9                            * 7.5m (h) 
+CV114B1   9.0      0.0                                                         
+CV114B2   16.5     686.0                            * 394.9 m3 (2PNSLP)     
 ***
 *-----------------------------------------------                                                                
-* CV129 - R129 - Target interface room (C4)                                                                   
+* CV129 - R129 - Target interface room (C3 - C4 en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
 CV12900   R129  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV12901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV129A0   3                                                                                         
-CV129A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV129A1   PVOL    101195.0                          * 101325-130Pa                                                                          
 CV129A3   TATM    298.15    RHUM  0.0               * 25. deg C, room temp.                                      
 CV129A5   MLFR.8  1.0                               * FILLED WITH Ar
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV129B1   9.0      0.0                                                         
-CV129B2   14.5     209.4                            * 5.5m (h) 
+CV129B2   14.5     529.0                            * 209.4 m3 (2PNSLP)  
 ***
 *-----------------------------------------------                                                                
 * CV130 - R130 - Test Cell (C4)                                                                   
 *-----------------------------------------------                                                                
-*CV13000   R130  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV13001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV130A0   3                                                                                         
-*CV130A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-*CV130A3   TATM    290.95    RHUM  1.0               * 17.8 deg C, room temp.                                      
-*CV130A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV130A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV13000   R130  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV13001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV130A0   3                                                                                         
+CV130A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV130A3   TATM    290.95    RHUM  1.0               * 17.8 deg C, room temp.                                      
+CV130A5   MLFR.7  1.0                               * FILLED WITH He 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV130B1   9.0      0.0                                                         
-*CV130B2   17.8     82.5                             * 8.8m (h) 
+CV130B1   9.0      0.0                                                         
+CV130B2   17.8     82.5                             * 2PNSLP 
 ***
 *-----------------------------------------------                                                                
 * CV144 - R144 - Electric room TS EPS (C2)                                                                   
@@ -278,7 +290,7 @@ CV144A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV144B1   9.0      0.0                                                         
-CV144B2   17.5     351.7                            * 8.5m (h) 
+CV144B2   17.5     423.0                            * 351.7 m3 (2PNSLP)           
 ***
 *-----------------------------------------------                                                                
 * CV145 - R145-1 - Local control room TS transmiter room (C2)                                                                   
@@ -294,7 +306,7 @@ CV145A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV145B1   9.0      0.0                                                         
-CV145B2   17.5     457.1                            * 8.5m (h) 
+CV145B2   17.5     554.0                            * 457.1 m3 (2PNSLP)                         
 ***
 *-----------------------------------------------                                                                
 * CV146 - R145-2 - Local control room TS control room (C2)                                                                   
@@ -310,15 +322,15 @@ CV146A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV146B1   9.0      0.0                                                         
-CV146B2   17.5     831.5                            * 8.5m (h) 
+CV146B2   17.5     671.0                            * 831.5 m3 (2PNSLP)       
 ***
 *-----------------------------------------------                                                                
-* CV147 - R147 - Loading station (C4a)                                                                   
+* CV147 - R147 - Loading station (C3 - C4a en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
 CV14700   R147  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV14701   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV147A0   3                                                                                         
-CV147A1   PVOL    101130.0                          * 101325-195Pa                                                                          
+CV147A1   PVOL    101195.0                          * 101325-160Pa                                                                          
 CV147A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV147A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV147A6   MLFR.5  0.22                              * FILLED WITH air (O2)
@@ -326,7 +338,7 @@ CV147A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV147B1   9.0      0.0                                                         
-CV147B2   14.5     370.1                            * 5.5m (h) 
+CV147B2   14.5     468.0                            * 370.1 m3 (2PNSLP)              
 ***
 *-----------------------------------------------                                                                
 * CV149 - R149 - TSA room (C2)                                                                   
@@ -342,7 +354,7 @@ CV149A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV149B1   9.0      0.0                                                         
-CV149B2   17.5     8052.7551                        * 8.5m / 5.5m (h) 
+CV149B2   17.5     9555.0                           * 8052.7551 CAD model                        
 ***
 *-----------------------------------------------                                                                
 * CV151 - R151 - Tritium room (C3)                                                                   
@@ -358,151 +370,151 @@ CV151A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV151B1   9.0      0.0                                                         
-CV151B2   14.5     544.5                            * 5.5m (h) 
+CV151B2   14.5     915.0                            * 544.5 m3 (2PNSLP)                          
 ***
 *-----------------------------------------------                                                                
 * CV152 - R152 - Maintenance room (C4)                                                                   
 *-----------------------------------------------                                                                
-*CV15200   R152  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV15201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV152A0   3                                                                                         
-*CV152A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-*CV152A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV152A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV152A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV15200   R152  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV15201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV152A0   3                                                                                         
+CV152A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV152A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV152A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV152A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV152B1   9.0      0.0                                                         
-*CV152B2   14.5     480.7                            * 5.5m (h) 
+CV152B1   9.0      0.0                                                         
+CV152B2   14.5     979.0                            * 480.7 m3 (2PNSLP)             
 ***
 *-----------------------------------------------                                                                
 * CV153 - R153 - Storage recyclable components (C4)                                                                   
 *-----------------------------------------------                                                                
-*CV15300   R153  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV15301   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV153A0   3                                                                                         
-*CV153A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-*CV153A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV153A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV153A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV15300   R153  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV15301   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV153A0   3                                                                                         
+CV153A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV153A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV153A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV153A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV153B1   9.0      0.0                                                         
-*CV153B2   16.5     359.2                            * 7.5m (h) 
+CV153B1   9.0      0.0                                                         
+CV153B2   16.5     517.0                            * 359.2 m3 (2PNSLP)   
 ***
 *-----------------------------------------------                                                                
 * CV154 - R154 - Samples extraction working zone (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV15400   R154  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV15401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV154A0   3                                                                                         
-*CV154A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV154A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
-*CV154A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV154A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV15400   R154  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV15401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV154A0   3                                                                                         
+CV154A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV154A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV154A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV154A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV154B1   9.0      0.0                                                         
-*CV154B2   17.5     540.3                              * 8.5m (h) 
+CV154B1   9.0      0.0                                                         
+CV154B2   17.5     794.0                            * 540.3 m3 (2PNSLP)                             
 ***
 *-----------------------------------------------                                                                
 * CV155 - R155 - Maintenance room working zone (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV15500   R155  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV15501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV155A0   3                                                                                         
-*CV155A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV155A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
-*CV155A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV155A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV15500   R155  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV15501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV155A0   3                                                                                         
+CV155A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV155A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV155A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV155A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV155B1   9.0      0.0                                                         
-*CV155B2   14.5     153.8                            * 5.5m (h) 
+CV155B1   9.0      0.0                                                         
+CV155B2   14.5     368.0                            * 153.8 m3 (2PNSLP) 
 ***
 *-----------------------------------------------                                                                
 * CV156 - R156 - VLLW & LLW measurement (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV15600   R156  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV15601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV156A0   3                                                                                         
-*CV156A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV156A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV156A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV156A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV15600   R156  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV15601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV156A0   3                                                                                         
+CV156A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV156A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV156A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV156A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV156B1   9.0      0.0                                                         
-*CV156B2   17.5     955.2                            * 8.5m (h)
+CV156B1   9.0      0.0                                                         
+CV156B2   17.5     1107.0                           * 955.2 m3 (2PNSLP)    
 ***
 *-----------------------------------------------                                                                
 * CV157 - R157 - HFMT samples extraction (C4)                                                                   
 *-----------------------------------------------                                                                
-*CV15700   R157  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV15701   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV157A0   3                                                                                         
-*CV157A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-*CV157A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV157A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV157A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV15700   R157  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV15701   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV157A0   3                                                                                         
+CV157A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV157A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV157A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV157A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV157B1   9.0      0.0                                                         
-*CV157B2   16.5     172.1                            * 7.5m (h) 
+CV157B1   9.0      0.0                                                         
+CV157B2   16.5     216.0                            * 172.1 m3 (2PNSLP)           
 ***
 *-----------------------------------------------                                                                
 * CV158 - R158 - Storage (C4)                                                                   
 *-----------------------------------------------                                                                
-*CV15800   R158  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV15801   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV158A0   3                                                                                         
-*CV158A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-*CV158A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV158A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV158A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV15800   R158  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV15801   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV158A0   3                                                                                         
+CV158A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV158A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV158A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV158A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV158B1   9.0      0.0                                                         
-*CV158B2   14.5     1323.4                           * 5.5m (h) 
+CV158B1   9.0      0.0                                                         
+CV158B2   14.5     2067.0                           * 1323.4 m3 (2PNSLP)   
 ***
 *-----------------------------------------------                                                                
 * CV159 - R159 - S-RWTS Workshop (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV15900   R159  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV15901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV159A0   3                                                                                         
-*CV159A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV159A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
-*CV159A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV159A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV15900   R159  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV15901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV159A0   3                                                                                         
+CV159A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV159A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV159A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV159A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV159B1   9.0      0.0                                                         
-*CV159B2   17.5     1035.1                           * 8.5m (h) 
+CV159B1   9.0      0.0                                                         
+CV159B2   17.5     1303.0                           * 1035.1 m3 (2PNSLP)  
 ***
 *-----------------------------------------------                                                                
 * CV160 - R160 - Complementary experiments hall (C3)                                                                   
 *-----------------------------------------------                                                                
-*CV16000   R160  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV16001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV160A0   3                                                                                         
-*CV160A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-*CV160A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV160A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV160A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV16000   R160  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV16001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV160A0   3                                                                                         
+CV160A1   PVOL    101195.0                          * 101325-130Pa                                                                          
+CV160A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV160A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV160A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV160B1   9.0      0.0                                                         
-*CV160B2   17.0     2357.0                           * 8.0m (h) 
+CV160B1   9.0      0.0                                                         
+CV160B2   17.0     3030.0                           * 2357.0 m3 (2PNSLP)     
 ***
 *-----------------------------------------------                                                                
 * CV163 - R163 - Complementary experiments auxiliary room (C2)                                                                   
@@ -518,71 +530,71 @@ CV163A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV163B1   9.0      0.0                                                         
-CV163B2   17.5     297.5                            * 8.5m (h) 
+CV163B2   17.5     365.0                            * 297.5 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV166 - R166 - Storage of cask to external analysis (C4)                                                                   
 *-----------------------------------------------                                                                
-*CV16600   R166  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV16601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV166A0   3                                                                                         
-*CV166A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-*CV166A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV166A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV166A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV16600   R166  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV16601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV166A0   3                                                                                         
+CV166A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV166A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV166A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV166A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV166B1   9.0      0.0                                                         
-*CV166B2   16.5     706.6                            * 7.5m (h) 
+CV166B1   9.0      0.0                                                         
+CV166B2   16.5     1073.0                           * 706.6 m3 (2PNSLP) 
 ***
 *-----------------------------------------------                                                                
 * CV167 - R167 - Other samples extraction (C4)                                                                   
 *-----------------------------------------------                                                                
-*CV16700   R167  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV16701   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV167A0   3                                                                                         
-*CV167A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-*CV167A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV167A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV167A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV16700   R167  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV16701   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV167A0   3                                                                                         
+CV167A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV167A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV167A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV167A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV167B1   9.0      0.0                                                         
-*CV167B2   16.5     432.5                            * 7.5m (h) 
+CV167B1   9.0      0.0                                                         
+CV167B2   16.5     567.0                            * 432.5 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV168 - R168 - Damaged rigs examination (C4)                                                                   
 *-----------------------------------------------                                                                
-*CV16800   R168  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV16801   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV168A0   3                                                                                         
-*CV168A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-*CV168A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV168A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV168A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV16800   R168  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV16801   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV168A0   3                                                                                         
+CV168A1   PVOL    101065.0                          * 101325-260Pa                                                                          
+CV168A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV168A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV168A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV168B1   9.0      0.0                                                         
-*CV168B2   16.5     110.0                            * 7.5m (h) 
+CV168B1   9.0      0.0                                                         
+CV168B2   16.5     156.0                            * 110.0 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV170 - R170 - Accelerator HVAC room (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV17000   R170  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV17001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV170A0   3                                                                                         
-*CV170A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV170A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV170A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV170A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV17000   R170  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV17001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV170A0   3                                                                                         
+CV170A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV170A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV170A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV170A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV170B1   9.0      0.0                                                         
-*CV170B2   16.5     1117.2                           * 7.5m (h) 
+CV170B1   9.0      0.0                                                         
+CV170B2   16.5     1584.0                           * 1117.2 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV180 - SB1L1 - Shipping Bay 1 L1 (C2)                                                                   
@@ -598,7 +610,7 @@ CV180A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV180B1   9.0      0.0                                                         
-CV180B2   17.5     752.0                            * 8.5m (h)
+CV180B2   17.5     927.0                            * 752.0 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV181 - SB2L1 - Shipping Bay 2 L1 (C2)                                                                   
@@ -614,7 +626,7 @@ CV181A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV181B1   9.0      0.0                                                         
-CV181B2   17.5     628.7                            * 8.5m (h)
+CV181B2   17.5     742.0                            * 628.7 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV182 - SB3L1 - Shipping Bay 3 L1 (C2)                                                                   
@@ -630,7 +642,7 @@ CV182A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV182B1   9.0      0.0                                                         
-CV182B2   17.5     680.7                            * 8.5m (h)
+CV182B2   17.5     826.0                            * 680.7 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV183 - SB4L1 - Shipping Bay 4 L1 (C1)                                                                   
@@ -646,7 +658,7 @@ CV183A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV183B1   9.0      0.0                                                         
-CV183B2   17.5     639.7                            * 8.5m (h)
+CV183B2   17.5     765.0                            * 639.7 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV184 - E02L1 - Elevator 2 L1 (C2)                                                                   
@@ -662,23 +674,23 @@ CV184A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV184B1   9.0      0.0                                                         
-CV184B2   17.5     124.4                            * 8.5m (h)
+CV184B2   17.5     173.0                            * 124.4 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV185 - E03L1 - Elevator 3 L1 (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV18500   E03L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV18501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV185A0   3                                                                                         
-*CV185A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV185A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV185A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV185A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV18500   E03L1  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV18501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV185A0   3                                                                                         
+CV185A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV185A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV185A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV185A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV185B1   9.0      0.0                                                         
-*CV185B2   17.5     160.7                            *  8.5m (h)
+CV185B1   9.0      0.0                                                         
+CV185B2   17.5     210.0                            * 160.7 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV186 - S02L1 - Stairs 2 L1 (C2)                                                                   
@@ -694,7 +706,7 @@ CV186A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV186B1   9.0      0.0                                                         
-CV186B2   17.5     266.4                            * 8.5m (h)
+CV186B2   17.5     405.0                            * 266.4 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV187- S04L1 - Stairs 4 L1 (C2)                                                                   
@@ -710,31 +722,31 @@ CV187A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV187B1   9.0      0.0                                                         
-CV187B2   17.5     385.2                            * 8.5m (h)
+CV187B2   17.5     516.0                            * 385.2 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV188 - S05L1 - Stairs 5 L1 (C2)                                                                   
 *-----------------------------------------------                                                                
-*CV18800   S05L1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV18801   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV188A0   3                                                                                         
-*CV188A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-*CV188A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV188A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV188A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV18800   S05L1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV18801   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV188A0   3                                                                                         
+CV188A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV188A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV188A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV188A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV188B1   9.0      0.0                                                         
-*CV188B2   17.5     363.7                            * 8.5m (h)
+CV188B1   9.0      0.0                                                         
+CV188B2   17.5     554.0                            * 363.7 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
-* CV189 - S07L1 - Stairs 7 L1 (C0)                                                                   
+* CV189 - S07L1 - Stairs 7 L1 (C2 - C0 en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
 CV18900   S07L1  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV18901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV189A0   3                                                                                         
-CV189A1   PVOL    101325.0                          * 101325                                                                          
+CV189A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV189A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV189A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV189A6   MLFR.5  0.22                              * FILLED WITH air (O2)
@@ -742,7 +754,7 @@ CV189A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV189B1   9.0      0.0                                                         
-CV189B2   17.5     249.1                            * 8.5m (h)
+CV189B2   17.5     334.0                            * 249.1 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
 * CV190 - C102 - Corridor (C2)                                                                   
@@ -758,15 +770,15 @@ CV190A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV190B1   9.0      0.0                                                         
-CV190B2   17.262218484     8841.4                   * 8.262218484 m (h) approx (Vol/area)
+CV190B2   17.25    11172.7                          * 8841.4 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
-* CV191 - AL151 - Airlock (C3)                                                                   
+* CV191 - AL151 - Airlock (C3a - C3 en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
 CV19100   AL151  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV19101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV191A0   3                                                                                         
-CV191A1   PVOL    101195.0                          * 101325-130Pa                                                                          
+CV191A1   PVOL    101215.0                          * 101325-110Pa                                                                          
 CV191A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV191A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV191A6   MLFR.5  0.22                              * FILLED WITH air (O2)
@@ -774,41 +786,40 @@ CV191A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV191B1   9.0      0.0                                                         
-CV191B2   14.5     348.4                            * 5.5m (h)
+CV191B2   14.5     628.0                            * 348.4 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
-* CV196 - AL156 - Airlock (C4a)                                                                   
+* CV196 - AL156 - Airlock (C3a - C4a en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
-*CV19600   AL156  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV19601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV196A0   3                                                                                         
-*CV196A1   PVOL    101130.0                          * 101325-195Pa                                                                          
-*CV196A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV196A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV196A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV19600   AL156  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV19601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV196A0   3                                                                                         
+CV196A1   PVOL    101215.0                          * 101325-110Pa                                                                          
+CV196A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV196A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV196A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV196B1   9.0      0.0                                                         
-*CV196B2   14.5     225.1                            * 5.5m (h) 
+CV196B1   9.0      0.0                                                         
+CV196B2   14.5     441.0                            * 225.1 m3 (2PNSLP) 
 ***
 *-----------------------------------------------                                                                
 * CV195 - AL165 - Airlock to cask storage to external analysis (C3a)                                                                   
 *-----------------------------------------------                                                                
-*CV19500   AL165  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
-*CV19501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
-*CV195A0   3                                                                                         
-*CV195A1   PVOL    101130.0                          * 101325-195Pa                                                                          
-*CV195A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-*CV195A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-*CV195A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV19500   AL165  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV19501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV195A0   3                                                                                         
+CV195A1   PVOL    101130.0                          * 101325-195Pa                                                                          
+CV195A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV195A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV195A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-*CV195B1   9.0      0.0                                                         
-*CV195B2   17.5     380.2                            * 8.5m (h) 
+CV195B1   9.0      0.0                                                         
+CV195B2   17.5     505.0                            * 380.2 m3 (2PNSLP)
 ***
-*
 *
 ********************************** MANIFOLDS ********************************************
 *-----------------------------------------------
