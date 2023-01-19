@@ -1418,6 +1418,22 @@ CV616A6   MLFR.5  0.22                              * FILLED WITH air (O2)
 CV616B1   16.95      0.0                                                         
 CV616B2   17.5   0.130625                              * 950 x 550 x 250
 *
+*-----------------------------------------------
+* CV617 - CVC2-14 - Connection Volume C2 14
+*-----------------------------------------------                                                                
+CV61700   CVC2-14  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV61701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV617A0   3                                                                                         
+CV617A1   PVOL    101235.0                          * PATM-90Pa                                                                          
+CV617A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV617A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV617A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV617B1   16.95      0.0                                                         
+CV617B2   17.5       0.144375                       * 1050 x 550 x 250
+*
 ***
 *************************************************************************************************
 *                                         FLOW PATHS
