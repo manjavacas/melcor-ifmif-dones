@@ -3619,7 +3619,7 @@ TF38310   0.0        7.13296296                                * velocity (57777
 * HVAC-exhaust-C2          FM    TO     FM     TO
 *-------------------------------------------------------
 FL46300   HVAC-exhaust-C2    410   401  30.5  30.5           
-FL46301   4.0   1.0    1.0                                     * A, L, FRACT OPEN, DIAM
+FL46301   4.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL46302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL46303   1.0   1.0                                             * FORM LOSS
 FL463S0   4.0   1.0    2.0                     
@@ -3637,7 +3637,7 @@ TF46310   0.0        8.03493056                                 * velocity (4136
 * HVAC-col-C2-1          FM    TO     FM     TO
 *-------------------------------------------------------
 FL41100   HVAC-col-C2L0-1    600   410  30.75  30.75           
-FL41101   2.25   1.0    1.0                                 * A, L, FRACT OPEN, DIAM
+FL41101   2.25   1.0    1.0                                     * A, L, FRACT OPEN, DIAM
 FL41102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL41103   1.0   1.0                                             * FORM LOSS
 FL411S0   2.25   1.0    1.5                     
@@ -3652,7 +3652,7 @@ TF41110   0.0        5.10629630                                 * velocity (4136
 * HVAC-B40          FM    TO     FM     TO
 *-------------------------------------------------------
 FL40000   HVAC-B40   651   600  8.025  8.025           
-FL40001   1.1875   8.0    1.0                                 * A, L, FRACT OPEN, DIAM
+FL40001   1.1875   8.0    1.0                                   * A, L, FRACT OPEN, DIAM
 FL40002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL40003   1.0   1.0                                             * FORM LOSS
 FL400S0   1.1875   8.0    1.08                     
