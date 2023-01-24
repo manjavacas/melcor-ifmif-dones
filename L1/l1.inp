@@ -2516,8 +2516,8 @@ FL54601   0.04   5.0    1.0                                     * A, L, FRACT OP
 FL54602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL54603   1.0   1.0                                             * FORM LOSS
 FL546S0   0.04   5.0    0.2                      
-FL5460F   14.5    14.5
-FL5460T   14.5    14.5
+FL5460F   14.3    14.5
+FL5460T   14.3    14.5
 FL546T0   1   546        
 *
 TF54600   FL546_vel  1    1.0
