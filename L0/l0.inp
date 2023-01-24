@@ -3601,10 +3601,10 @@ TF38210   0.0        5.04487179                                 * velocity (4722
 * HVAC-inlet-AS-3          FM    TO     FM     TO
 *-------------------------------------------------------
 FL38300   HVAC-inlet-AS-3    400   573  23.75  23.75            
-FL38301   2.25   0.25    1.0                                    * A, L, FRACT OPEN, DIAM
+FL38301   2.25   1.0    1.0                                    * A, L, FRACT OPEN, DIAM
 FL38302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL38303   1.0   1.0                                             * FORM LOSS
-FL383S0   2.25   0.25   1.5                      
+FL383S0   2.25   1.0   1.5                      
 FL3830F   23.0    24.5
 FL3830T   23.0    24.5
 FL383T0   1   383        
