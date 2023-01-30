@@ -7,6 +7,9 @@ l0: clean
 l1: clean
 	./melgen-fusion-186_bdba L1/l1.inp
 	./melcor-fusion-186_bdba L1/l1.inp
+mb: clean
+	./melgen-fusion-186_bdba Main Building/main.inp
+	./melcor-fusion-186_bdba  Main Building/main.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES
