@@ -10125,7 +10125,7 @@ FL833S0   0.000025   0.25    0.00564
 *
 FL83400   D-C102-R111   190   111  12.0  12.0                   * Door height: 3000 mm
 FL83401   0.000025   0.25    1.0                                * A, L, FRACT OPEN, DIAM
-FL83302   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL83402   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL83403   1.0    1.0                                            * FORM LOSS
 FL834S0   0.000025   0.25    0.00564  
 *
