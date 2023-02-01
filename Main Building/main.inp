@@ -10191,12 +10191,144 @@ FL844S0   0.000025   1.0     0.00564
 *
 ***
 *--------------------- Walls ----------------------------*
-FL84500   W-SB2L1-S04L1   158   152  12.0  12.0                   * Door height: 3000 mm
-FL84501   0.000025   1.0     1.0                                * A, L, FRACT OPEN, DIAM
-FL84502   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL84503   1.0    1.0                                            * FORM LOSS
-FL845S0   0.000025   1.0     0.00564  
 *
+FL84500   W-SB2L1-S04L1   181   187  13.25  13.25               * Half room height (8.5 m)
+FL84501   0.000005   0.9     1.0                                * A, L, FRACT OPEN, DIAM
+FL84502   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL84503   1.0    1.0                                            * FORM LOSS
+FL845S0   0.000005   0.9     0.00252  
+*
+FL84600   W-R102-R110   102   110  12.75  12.75                 * Half room height (7.5 m)
+FL84601   0.000005   1.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL84602   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL84603   1.0    1.0                                            * FORM LOSS
+FL846S0   0.000005   1.5     0.00252  
+*
+FL84700   W-R105-R106   105   106  13.25  13.25                 * Half room height (8.5 m)
+FL84701   0.000005   0.25    1.0                                * A, L, FRACT OPEN, DIAM
+FL84702   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL84703   1.0    1.0                                            * FORM LOSS
+FL847S0   0.000005   0.25    0.00252  
+*
+FL84800   W-SB4L1-R106   183   106  13.25  13.25                * Half room height (8.5 m)
+FL84801   0.000005   0.25    1.0                                * A, L, FRACT OPEN, DIAM
+FL84802   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL84803   1.0    1.0                                            * FORM LOSS
+FL848S0   0.000005   0.25    0.00252  
+*
+FL84900   W-R109-R110   109   110  12.75  12.75                 * Half room height (7.5 m)
+FL84901   0.000005   1.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL84902   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL84903   1.0    1.0                                            * FORM LOSS
+FL849S0   0.000005   1.5     0.00252  
+*
+FL85000   W-R106-R110   106   110  12.75  12.75                 * Half room height (7.5 m)
+FL85001   0.000005   1.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL85002   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85003   1.0    1.0                                            * FORM LOSS
+FL850S0   0.000005   1.5     0.00252  
+*
+FL85100   W-R106-R112   106   112  13.25  13.25                 * Half room height (8.5 m)
+FL85101   0.000005   0.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL85102   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85103   1.0    1.0                                            * FORM LOSS
+FL851S0   0.000005   0.5     0.00252  
+*
+FL85200   W-E02L1-R149   184   149  13.25  13.25                * Half room height (8.5 m)
+FL85201   0.000005   0.25    1.0                                * A, L, FRACT OPEN, DIAM
+FL85202   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85203   1.0    1.0                                            * FORM LOSS
+FL852S0   0.000005   0.25    0.00252  
+*
+FL85300   W-R110-AL151   110   191  11.75  11.75                * Half room height (5.5 m)
+FL85301   0.000005   1.35    1.0                                * A, L, FRACT OPEN, DIAM
+FL85302   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85303   1.0    1.0                                            * FORM LOSS
+FL853S0   0.000005   1.35    0.00252  
+*
+FL85400   W-R110-R151   110   151  11.75  11.75                 * Half room height (5.5 m)
+FL85401   0.000005   2.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL85402   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85403   1.0    1.0                                            * FORM LOSS
+FL854S0   0.000005   2.5     0.00252  
+*
+FL85500   W-R110-R114-1   110   114  12.75  12.75               * Half room height (7.5 m)
+FL85501   0.000005   1.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL85502   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85503   1.0    1.0                                            * FORM LOSS
+FL855S0   0.000005   1.5     0.00252  
+*
+FL85600   W-R110-R170     110   170  12.75  12.75               * Half room height (7.5 m)
+FL85601   0.000005   1.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL85602   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85603   1.0    1.0                                            * FORM LOSS
+FL856S0   0.000005   1.5     0.00252  
+*
+FL85700   W-R110-R129     110   129  11.75  11.75               * Half room height (5.5 m)
+FL85701   0.000005   2.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL85702   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85703   1.0    1.0                                            * FORM LOSS
+FL857S0   0.000005   2.5     0.00252  
+*
+FL85800   W-R147-R151     147   151  11.75  11.75               * Half room height (5.5 m)
+FL85801   0.000005   0.25    1.0                                * A, L, FRACT OPEN, DIAM
+FL85802   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85803   1.0    1.0                                            * FORM LOSS
+FL858S0   0.000005   0.25    0.00252  
+*
+FL85900   W-R151-R129     151   129  11.75  11.75               * Half room height (5.5 m)
+FL85901   0.000005   1.5     1.0                                * A, L, FRACT OPEN, DIAM
+FL85902   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL85903   1.0    1.0                                            * FORM LOSS
+FL859S0   0.000005   1.5     0.00252  
+*
+FL86000   W-R149-AL151     149   191  11.75  11.75              * Half room height (5.5 m)
+FL86001   0.000005   0.25     1.0                               * A, L, FRACT OPEN, DIAM
+FL86002   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL86003   1.0    1.0                                            * FORM LOSS
+FL860S0   0.000005   0.25     0.00252  
+*
+FL86100   W-R149-R147      149   147  11.75  11.75              * Half room height (5.5 m)
+FL86101   0.000005   0.25     1.0                               * A, L, FRACT OPEN, DIAM
+FL86102   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL86103   1.0    1.0                                            * FORM LOSS
+FL861S0   0.000005   0.25     0.00252  
+*
+FL86200   W-R149-R151      149   151  11.75  11.75              * Half room height (5.5 m)
+FL86201   0.000005   0.25     1.0                               * A, L, FRACT OPEN, DIAM
+FL86202   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL86203   1.0    1.0                                            * FORM LOSS
+FL862S0   0.000005   0.25     0.00252  
+*
+FL86300   W-R151-R145-1    151   145  11.75  11.75              * Half room height (5.5 m)
+FL86301   0.000005   0.25     1.0                               * A, L, FRACT OPEN, DIAM
+FL86302   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL86303   1.0    1.0                                            * FORM LOSS
+FL863S0   0.000005   0.25     0.00252  
+*
+FL86400   W-R129-R130      129   130  11.75  11.75              * Half room height (5.5 m)
+FL86401   0.000005   3.0      1.0                               * A, L, FRACT OPEN, DIAM
+FL86402   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL86403   1.0    1.0                                            * FORM LOSS
+FL864S0   0.000005   3.0      0.00252  
+*
+FL86500   W-R151-R130      151   130  11.75  11.75              * Half room height (5.5 m)
+FL86501   0.000005   3.5      1.0                               * A, L, FRACT OPEN, DIAM
+FL86502   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL86503   1.0    1.0                                            * FORM LOSS
+FL865S0   0.000005   3.5      0.00252  
+*
+FL86600   W-R129-R114-1    129   114  11.75  11.75              * Half room height (5.5 m)
+FL86601   0.000005   2.5      1.0                               * A, L, FRACT OPEN, DIAM
+FL86602   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL86603   1.0    1.0                                            * FORM LOSS
+FL866S0   0.000005   2.5      0.00252  
+*
+FL86700   W-R170-R114-1    170   114  12.75  12.75              * Half room height (5.5 m)
+FL86701   0.000005   0.25     1.0                               * A, L, FRACT OPEN, DIAM
+FL86702   3      0      0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL86703   1.0    1.0                                            * FORM LOSS
+FL867S0   0.000005   0.25     0.00252  
 *
 ***
 *-------------------------------------------------------
