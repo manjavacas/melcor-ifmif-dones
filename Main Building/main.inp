@@ -10269,13 +10269,13 @@ FL80302	  3     0    0     0                                    * HORIZ fl, ACTI
 FL80303   1.0   1.0                                             * FORM LOSS
 FL803S0   0.000025   0.25   0.00564  
 *
-FL80400   D-R105-R110     105   110  12.6  12.6                 * Door height: 3600 mm
+FL80400   D-R105-R110     105   110  12.8  12.8                 * Door height: 3800 mm
 FL80401   0.000025   1.5    1.0                                 * A, L, FRACT OPEN, DIAM
 FL80402	  3     0    0      0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL80403   1.0   1.0                                             * FORM LOSS
 FL804S0   0.000025   1.5    0.00564  
 *
-FL80500   D-R104-R105     104   105  12.6  12.6                 * Door height: 3600 mm
+FL80500   D-R104-R105     104   105  12.8  12.8                 * Door height: 3800 mm
 FL80501   0.000025   0.25   1.0                                 * A, L, FRACT OPEN, DIAM
 FL80502	  3     0    0      0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL80503   1.0   1.0                                             * FORM LOSS
@@ -10287,7 +10287,7 @@ FL80602	  3     0    0      0                                   * HORIZ fl, ACTI
 FL80603   1.0   1.0                                             * FORM LOSS
 FL806S0   0.000025   0.25    0.00564  
 *
-FL80700   D-R104-SB4L1    104   183  12.6  12.6                 * Door height: 3600 mm
+FL80700   D-R104-SB4L1    104   183  12.8  12.8                 * Door height: 3800 mm
 FL80701   0.000025   0.25   1.0                                 * A, L, FRACT OPEN, DIAM
 FL80702	  3     0    0      0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL80703   1.0   1.0                                             * FORM LOSS
@@ -10299,7 +10299,7 @@ FL80802	  3     0    0      0                                   * HORIZ fl, ACTI
 FL80803   1.0   1.0                                             * FORM LOSS
 FL808S0   0.000025   0.25    0.00564  
 *
-FL80900   D-R104-R106     104   106  11.17  11.17               * Door height: 2170 mm
+FL80900   D-R104-R106     104   106  13.5   13.5                * Door height: 4500 mm
 FL80901   0.000025   0.25   1.0                                 * A, L, FRACT OPEN, DIAM
 FL80902	  3     0    0      0                                   * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL80903   1.0   1.0                                             * FORM LOSS
@@ -10311,19 +10311,19 @@ FL81002   3      0      0    0                                  * HORIZ fl, ACTI
 FL81003   1.0    1.0                                            * FORM LOSS
 FL810S0   0.000025   0.25    0.00564  
 *
-FL81100   D-R106-SB2L1      106   181  12.6  12.6               * Door height: 3600 mm
+FL81100   D-R106-SB2L1      106   181  12.8  12.8               * Door height: 3800 mm
 FL81101   0.000025   0.5    1.0                                 * A, L, FRACT OPEN, DIAM
 FL81102   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL81103   1.0    1.0                                            * FORM LOSS
 FL811S0   0.000025   0.5    0.00564  
 *
-FL81200   D-R112-SB2L1      112   181  12.6  12.6               * Door height: 3600 mm
+FL81200   D-R112-SB2L1      112   181  13.2  13.2               * Door height: 4200 mm
 FL81201   0.000025   0.25    1.0                                * A, L, FRACT OPEN, DIAM
 FL81202   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL81203   1.0    1.0                                            * FORM LOSS
 FL812S0   0.000025   0.25    0.00564  
 *
-FL81300   D-R112-R110      112   110  12.0  12.0                * Door height: 3000 mm
+FL81300   D-R112-R110      112   110  12.8  12.8                * Door height: 3800 mm
 FL81301   0.000025   1.5    1.0                                 * A, L, FRACT OPEN, DIAM
 FL81302   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL81303   1.0    1.0                                            * FORM LOSS
@@ -10341,7 +10341,7 @@ FL81502   3      0      0    0                                  * HORIZ fl, ACTI
 FL81503   1.0    1.0                                            * FORM LOSS
 FL815S0   0.000025   0.25    0.00564  
 *
-FL81600   D-R112-AL151    112   191  12.0  12.0                 * Door height: 3000 mm
+FL81600   D-R112-AL151    112   191  13.2  13.2                 * Door height: 4200 mm
 FL81601   0.000025   0.25    1.0                                * A, L, FRACT OPEN, DIAM
 FL81602   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL81603   1.0    1.0                                            * FORM LOSS
@@ -10353,7 +10353,7 @@ FL81702   3      0      0    0                                  * HORIZ fl, ACTI
 FL81703   1.0    1.0                                            * FORM LOSS
 FL817S0   0.000025   0.25    0.00564  
 *
-FL81800   D-AL151-R147    191   147  12.0  12.0                 * Door height: 3000 mm
+FL81800   D-AL151-R147    191   147  13.2  13.2                 * Door height: 4200 mm
 FL81801   0.000025   0.25    1.0                                * A, L, FRACT OPEN, DIAM
 FL81802   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL81803   1.0    1.0                                            * FORM LOSS
@@ -10389,7 +10389,7 @@ FL82302   3      0      0    0                                  * HORIZ fl, ACTI
 FL82303   1.0    1.0                                            * FORM LOSS
 FL823S0   0.000025   0.25    0.00564  
 *
-FL82400   D-C102-SB3L1    190   182  12.6  12.6                 * Door height: 3600 mm
+FL82400   D-C102-SB3L1    190   182  12.8  12.8                 * Door height: 3800 mm
 FL82401   0.000025   0.25    1.0                                * A, L, FRACT OPEN, DIAM
 FL82402   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL82403   1.0    1.0                                            * FORM LOSS
@@ -10425,13 +10425,13 @@ FL82902   3      0      0    0                                  * HORIZ fl, ACTI
 FL82903   1.0    1.0                                            * FORM LOSS
 FL829S0   0.000025   0.25    0.00564  
 *
-FL83000   D-C102-AL156   190   196  12.0  12.0                  * Door height: 3000 mm
+FL83000   D-C102-AL156   190   196  12.8  12.8                  * Door height: 3800 mm
 FL83001   0.000025   0.25    1.0                                * A, L, FRACT OPEN, DIAM
 FL83002   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL83003   1.0    1.0                                            * FORM LOSS
 FL830S0   0.000025   0.25    0.00564  
 *
-FL83100   D-AL156-R158   196   158  12.0  12.0                  * Door height: 3000 mm
+FL83100   D-AL156-R158   196   158  12.8  12.8                  * Door height: 3800 mm
 FL83101   0.000025   0.25    1.0                                * A, L, FRACT OPEN, DIAM
 FL83102   3      0      0    0                                  * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL83103   1.0    1.0                                            * FORM LOSS
