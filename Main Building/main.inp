@@ -63,8 +63,9 @@ CV40001   0   -1                                    * Time-independent
 CV400A0   3                                                                                         
 CV400A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
 CV400A3   TATM    293.15  RHUM  0.6    	                                                 
-CV400A8   MLFR.4  0.78                              * Filled with air (N2)
-CV400A9   MLFR.5  0.22                              * Filled with air (O2)
+CV400A4   MLFR.4  0.78                              * Filled with air (N2)
+CV400A6   MLFR.5  0.21                              * Filled with air (O2)
+CV400A8   MLFR.8  0.01                              * Filled with air (Ar) 
 *
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
@@ -76,12 +77,13 @@ CV400B2  50.0   1000000.0              	            * Random huge volume
 * CV401 - ENV-OUT - Environment for EXHAUST                                                                
 *-----------------------------------------------                                                                
 CV40100   ENV-OUT  2  2  5          		                                           
-CV40101   0   0                                     * Time-independent				       
+CV40101   0   0                                     				       
 CV401A0   3                                                                                         
 CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
 CV401A3   TATM    293.15  RHUM  0.6    	                                                 
-CV401A8   MLFR.4  0.78                              * Filled with air (N2)
-CV401A9   MLFR.5  0.22                              * Filled with air (O2)
+CV401A4   MLFR.4  0.78                              * Filled with air (N2)
+CV401A6   MLFR.5  0.22                              * Filled with air (O2)
+CV401A8   MLFR.8  0.01                              * Filled with air (Ar) 
 *
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
@@ -93,12 +95,13 @@ CV401B2  50.0   1000000.0              	            * Random huge volume
 * CV402 - ENV-GRWTS - Environment (G-RWTS)
 *-----------------------------------------------                                                            
 CV40200   G-RWTS  2  2  5          		                                   
-CV40201   0   0		                                 * 				            
+CV40201   0   0		                                  				            
 CV402A0   3                                                                                         
 CV402A1   PVOL    101325.0                           * 101325Pa = 1atm                                                                     
 CV402A3   TATM    293.15  RHUM  0.6    	                                                  
-CV402A8   MLFR.4  0.79                               * Filled with air (O2)
-CV402A9   MLFR.5  0.21                               * Filled with air (N2)
+CV402A4   MLFR.4  0.78                               * Filled with air (O2)
+CV402A6   MLFR.5  0.21                               * Filled with air (N2)
+CV402A8   MLFR.8  0.01                               * Filled with air (Ar) 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -114,8 +117,9 @@ CV40901   0   0		                                 *
 CV409A0   3                                                                                         
 CV409A1   PVOL    101095.0                           * 101325Pa - 130 Pa                                                                     
 CV409A3   TATM    293.15  RHUM  0.6    	                                                  
-CV409A8   MLFR.4  0.79                               * Filled with air (O2)
-CV409A9   MLFR.5  0.21                               * Filled with air (N2)
+CV409A4   MLFR.4  0.78                               * Filled with air (O2)
+CV409A6   MLFR.5  0.21                               * Filled with air (N2)
+CV409A8   MLFR.8  0.01                               * Filled with air (Ar) 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -131,8 +135,9 @@ CV41001   0   0		                                 *
 CV410A0   3                                                                                         
 CV410A1   PVOL    101235.0                           * 101325Pa - 90 Pa                                                                     
 CV410A3   TATM    293.15  RHUM  0.6    	                                                  
-CV410A8   MLFR.4  0.79                               * Filled with air (O2)
-CV410A9   MLFR.5  0.21                               * Filled with air (N2)
+CV410A4   MLFR.4  0.78                               * Filled with air (O2)
+CV410A6   MLFR.5  0.21                               * Filled with air (N2)
+CV410A8   MLFR.8  0.01                               * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -148,8 +153,9 @@ CV41101   0   0		                                 *
 CV411A0   3                                                                                         
 CV411A1   PVOL    101065.0                           * 101325Pa - 130 Pa                                                                     
 CV411A3   TATM    293.15  RHUM  0.6    	                                                  
-CV411A8   MLFR.4  0.79                               * Filled with air (O2)
-CV411A9   MLFR.5  0.21                               * Filled with air (N2)
+CV411A4   MLFR.4  0.78                               * Filled with air (O2)
+CV411A6   MLFR.5  0.21                               * Filled with air (N2)
+CV411A8   MLFR.8  0.01                               * Filled with air (Ar) 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -993,7 +999,8 @@ CV101A0   3
 CV101A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV101A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
 CV101A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV101A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV101A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV101A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1009,7 +1016,8 @@ CV102A0   3
 CV102A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV102A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV102A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV102A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV102A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV102A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1029,7 +1037,8 @@ CV104A0   3
 CV104A1   PVOL    101257.0                          * 101325-68Pa                                                                          
 CV104A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV104A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV104A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV104A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV104A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1045,7 +1054,8 @@ CV105A0   3
 CV105A1   PVOL    101235.0                          * 101325-90Pa                                                                           
 CV105A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV105A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV105A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV105A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV105A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1061,7 +1071,8 @@ CV106A0   3
 CV106A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV106A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV106A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV106A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV106A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV106A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1081,7 +1092,8 @@ CV109A0   3
 CV109A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV109A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV109A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV109A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV109A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV109A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1097,7 +1109,8 @@ CV110A0   3
 CV110A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV110A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV110A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV110A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV110A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV110A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1113,7 +1126,8 @@ CV111A0   3
 CV111A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV111A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV111A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV111A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV111A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV111A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1129,7 +1143,8 @@ CV112A0   3
 CV112A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV112A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV112A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV112A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV112A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV112A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1145,7 +1160,8 @@ CV114A0   3
 CV114A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV114A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV114A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV114A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV114A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV114A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1160,7 +1176,9 @@ CV12901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV129A0   3                                                                                         
 CV129A1   PVOL    101195.0                          * 101325-130Pa                                                                          
 CV129A3   TATM    298.15    RHUM  0.0               * 25. deg C, room temp.                                      
-CV129A5   MLFR.8  1.0                               * FILLED WITH Ar
+CV129A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV129A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV129A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1175,7 +1193,9 @@ CV13001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV130A0   3                                                                                         
 CV130A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV130A3   TATM    290.95    RHUM  1.0               * 17.8 deg C, room temp.                                      
-CV130A5   MLFR.7  1.0                               * FILLED WITH He 
+CV130A5   MLFR.7  0.9999                            * FILLED WITH He -> 99.99%   
+CV130A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV130A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1191,7 +1211,8 @@ CV144A0   3
 CV144A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV144A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
 CV144A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV144A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV144A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV144A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1207,7 +1228,8 @@ CV145A0   3
 CV145A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV145A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
 CV145A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV145A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV145A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV145A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1223,7 +1245,8 @@ CV146A0   3
 CV146A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV146A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
 CV146A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV146A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV146A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV146A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1239,7 +1262,8 @@ CV147A0   3
 CV147A1   PVOL    101195.0                          * 101325-160Pa                                                                          
 CV147A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV147A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV147A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV147A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV147A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1255,7 +1279,8 @@ CV149A0   3
 CV149A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV149A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV149A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV149A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV149A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV149A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1271,7 +1296,8 @@ CV151A0   3
 CV151A1   PVOL    101195.0                          * 101325-130Pa                                                                          
 CV151A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV151A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV151A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV151A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV151A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1287,7 +1313,8 @@ CV152A0   3
 CV152A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV152A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV152A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV152A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV152A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV152A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1303,7 +1330,8 @@ CV153A0   3
 CV153A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV153A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV153A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV153A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV153A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV153A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1319,7 +1347,8 @@ CV154A0   3
 CV154A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV154A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
 CV154A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV154A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV154A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV154A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1335,7 +1364,8 @@ CV155A0   3
 CV155A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV155A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
 CV155A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV155A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV155A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV155A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1351,7 +1381,8 @@ CV156A0   3
 CV156A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV156A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV156A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV156A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV156A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV156A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1367,7 +1398,8 @@ CV157A0   3
 CV157A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV157A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV157A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV157A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV157A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV157A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1383,7 +1415,8 @@ CV158A0   3
 CV158A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV158A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV158A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV158A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV158A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV158A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1399,7 +1432,8 @@ CV159A0   3
 CV159A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV159A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
 CV159A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV159A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV159A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV159A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1415,7 +1449,8 @@ CV160A0   3
 CV160A1   PVOL    101195.0                          * 101325-130Pa                                                                          
 CV160A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV160A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV160A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV160A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV160A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1431,7 +1466,8 @@ CV163A0   3
 CV163A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV163A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV163A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV163A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV163A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV163A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1447,7 +1483,8 @@ CV166A0   3
 CV166A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV166A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV166A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV166A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV166A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV166A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1463,7 +1500,8 @@ CV167A0   3
 CV167A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV167A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV167A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV167A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV167A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV167A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1479,7 +1517,8 @@ CV168A0   3
 CV168A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV168A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV168A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV168A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV168A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV168A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1495,7 +1534,8 @@ CV170A0   3
 CV170A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV170A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV170A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV170A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV170A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV170A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1511,7 +1551,8 @@ CV180A0   3
 CV180A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV180A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV180A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV180A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV180A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV180A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1527,7 +1568,8 @@ CV181A0   3
 CV181A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV181A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV181A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV181A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV181A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV181A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1543,7 +1585,8 @@ CV182A0   3
 CV182A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV182A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV182A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV182A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV182A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV182A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1559,7 +1602,8 @@ CV183A0   3
 CV183A1   PVOL    101270.0                          * 101325-55Pa                                                                          
 CV183A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV183A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV183A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV183A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV183A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1575,7 +1619,8 @@ CV184A0   3
 CV184A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV184A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV184A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV184A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV184A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV184A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1591,7 +1636,8 @@ CV185A0   3
 CV185A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV185A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV185A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV185A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV185A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV185A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1607,7 +1653,8 @@ CV186A0   3
 CV186A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV186A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV186A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV186A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV186A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV186A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1623,7 +1670,8 @@ CV187A0   3
 CV187A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV187A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV187A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV187A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV187A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV187A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1639,7 +1687,8 @@ CV188A0   3
 CV188A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV188A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV188A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV188A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV188A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV188A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1655,7 +1704,8 @@ CV189A0   3
 CV189A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV189A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV189A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV189A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV189A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV189A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1671,7 +1721,8 @@ CV190A0   3
 CV190A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV190A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV190A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV190A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV190A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV190A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1687,7 +1738,8 @@ CV191A0   3
 CV191A1   PVOL    101215.0                          * 101325-110Pa                                                                          
 CV191A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV191A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV191A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV191A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV191A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1703,7 +1755,8 @@ CV196A0   3
 CV196A1   PVOL    101215.0                          * 101325-110Pa                                                                          
 CV196A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV196A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV196A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV196A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV196A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1719,12 +1772,50 @@ CV195A0   3
 CV195A1   PVOL    101130.0                          * 101325-195Pa                                                                          
 CV195A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
 CV195A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV195A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV195A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV195A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV195B1   9.0      0.0                                                         
 CV195B2   17.5     505.0                            * 380.2 m3 (2PNSLP)
+***
+*
+*********************************************************** L2 ROOMS ***************************************************************
+*
+*-----------------------------------------------                                                                
+* CV201 - R201-A1 - RF Source Area (C2)                                                                   
+*-----------------------------------------------                                                                
+CV20100   R201-A1  2  2  2                          * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV20101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV201A0   3                                                                                         
+CV201A1   PVOL    101235.0                          * 101235-90Pa                                                                          
+CV201A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV201A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV201A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV201A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV201B1   18.0      0.0                                                         
+CV201B2   24.5      18406.0                         * 16391.0 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV202 - R202-A2 - RF, Electricity & Electronics Workshop (C2)                                                                   
+*-----------------------------------------------                                                                
+CV20200   R202-A2  2  2  2                          * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV20201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV202A0   3                                                                                         
+CV202A1   PVOL    101235.0                          * 101235-90Pa                                                                          
+CV202A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV202A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV202A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV202A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV202B1   18.0      0.0                                                         
+CV202B2   24.5      1281.0                          * 1080.6 m3 (2PNSLP)
 ***
 *
 *********************************************************** Ar SUPPLY **************************************************************
@@ -1936,7 +2027,8 @@ CV500A0   3
 CV500A1   PVOL    101325.0                          * PATM                                                                          
 CV500A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV500A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV500A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV500A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV500A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1953,7 +2045,8 @@ CV558A0   3
 CV558A1   PVOL    101325.0                          * PATM                                                                          
 CV558A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV558A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV558A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV558A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV555A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1970,7 +2063,8 @@ CV573A0   3
 CV573A1   PVOL    101325.0                          * PATM                                                                          
 CV573A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV573A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV573A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV573A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV573A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1987,7 +2081,8 @@ CV503A0   3
 CV503A1   PVOL    101325.0                          * PATM                                                                          
 CV503A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV503A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV503A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV503A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV503A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2004,7 +2099,8 @@ CV507A0   3
 CV507A1   PVOL    101325.0                          * PATM                                                                          
 CV507A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV507A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV507A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV507A6   MLFR.5  0.23                              * FILLED WITH air (O2)
+CV507A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2021,7 +2117,8 @@ CV508A0   3
 CV508A1   PVOL    101325.0                          * PATM                                                                          
 CV508A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV508A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV508A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV508A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV508A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2038,7 +2135,8 @@ CV529A0   3
 CV529A1   PVOL    101325.0                          * PATM                                                                          
 CV529A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV529A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV529A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV529A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV529A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2055,7 +2153,8 @@ CV600A0   3
 CV600A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV600A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV600A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV600A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV600A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV600A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2072,7 +2171,8 @@ CV656A0   3
 CV656A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV656A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV656A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV656A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV656A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV656A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2089,7 +2189,8 @@ CV677A0   3
 CV677A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV677A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV677A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV677A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV677A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV677A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2106,7 +2207,8 @@ CV601A0   3
 CV601A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV601A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV601A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV601A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV601A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV601A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2123,7 +2225,8 @@ CV605A0   3
 CV605A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV605A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV605A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV605A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV605A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV605A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2140,7 +2243,8 @@ CV607A0   3
 CV607A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV607A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV607A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV607A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV607A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV607A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2157,7 +2261,8 @@ CV618A0   3
 CV618A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV618A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV618A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV618A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV618A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV618A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2174,7 +2279,8 @@ CV678A0   3
 CV678A1   PVOL    101195.0                          * PATM-130Pa                                                                          
 CV678A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV678A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV678A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV678A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV678A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2191,7 +2297,8 @@ CV628A0   3
 CV628A1   PVOL    101195.0                          * PATM-130Pa                                                                          
 CV628A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV628A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV628A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV628A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV628A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2208,7 +2315,8 @@ CV680A0   3
 CV680A1   PVOL    101065.0                          * PATM-230Pa                                                                          
 CV680A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV680A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV680A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV680A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV680A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2225,7 +2333,8 @@ CV632A0   3
 CV632A1   PVOL    101065.0                          * PATM-230Pa                                                                          
 CV632A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV632A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV632A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV632A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV632A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2246,7 +2355,8 @@ CV551A0   3
 CV551A1   PVOL    101325.0                          * PATM                                                                          
 CV551A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV551A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV551A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV551A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV551A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2262,7 +2372,8 @@ CV552A0   3
 CV552A1   PVOL    101325.0                          * PATM                                                                          
 CV552A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV552A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV552A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV552A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV552A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2278,7 +2389,8 @@ CV553A0   3
 CV553A1   PVOL    101325.0                          * PATM                                                                          
 CV553A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV553A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV553A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV553A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV553A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2294,7 +2406,8 @@ CV554A0   3
 CV554A1   PVOL    101325.0                          * PATM                                                                          
 CV554A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV554A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV554A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV554A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV554A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2310,7 +2423,8 @@ CV555A0   3
 CV555A1   PVOL    101325.0                          * PATM                                                                          
 CV555A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV555A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV555A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV555A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV555A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2326,7 +2440,8 @@ CV556A0   3
 CV556A1   PVOL    101325.0                          * PATM                                                                          
 CV556A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV556A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV556A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV556A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV556A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2342,7 +2457,8 @@ CV557A0   3
 CV557A1   PVOL    101325.0                          * PATM                                                                          
 CV557A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV557A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV557A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV557A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV557A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2358,7 +2474,8 @@ CV559A0   3
 CV559A1   PVOL    101325.0                          * PATM                                                                          
 CV559A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV559A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV559A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV559A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV559A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2375,7 +2492,8 @@ CV560A0   3
 CV560A1   PVOL    101325.0                          * PATM                                                                          
 CV560A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV560A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV560A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV560A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV560A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2392,7 +2510,8 @@ CV561A0   3
 CV561A1   PVOL    101325.0                          * PATM                                                                          
 CV561A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV561A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV561A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV561A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV561A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2409,7 +2528,8 @@ CV562A0   3
 CV562A1   PVOL    101325.0                          * PATM                                                                          
 CV562A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV562A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV562A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV562A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV562A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2425,7 +2545,8 @@ CV563A0   3
 CV563A1   PVOL    101325.0                          * PATM                                                                          
 CV563A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV563A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV563A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV563A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV563A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2441,7 +2562,8 @@ CV564A0   3
 CV564A1   PVOL    101325.0                          * PATM                                                                          
 CV564A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV564A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV564A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV564A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV564A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2458,7 +2580,8 @@ CV565A0   3
 CV565A1   PVOL    101325.0                          * PATM                                                                          
 CV565A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV565A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV565A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV565A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV565A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2475,7 +2598,8 @@ CV566A0   3
 CV566A1   PVOL    101325.0                          * PATM                                                                          
 CV566A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV566A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV566A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV566A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV566A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2492,7 +2616,8 @@ CV567A0   3
 CV567A1   PVOL    101325.0                          * PATM                                                                          
 CV567A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV567A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV567A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV567A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV567A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2509,7 +2634,8 @@ CV568A0   3
 CV568A1   PVOL    101325.0                          * PATM                                                                          
 CV568A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV568A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV568A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV568A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV568A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2526,7 +2652,8 @@ CV569A0   3
 CV569A1   PVOL    101325.0                          * PATM                                                                          
 CV569A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV569A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV569A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV569A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV569A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2543,7 +2670,8 @@ CV570A0   3
 CV570A1   PVOL    101325.0                          * PATM                                                                          
 CV570A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV570A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV570A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV570A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV570A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2560,7 +2688,8 @@ CV571A0   3
 CV571A1   PVOL    101325.0                          * PATM                                                                          
 CV571A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV571A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV571A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV571A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV571A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2577,7 +2706,8 @@ CV572A0   3
 CV572A1   PVOL    101325.0                          * PATM                                                                          
 CV572A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV572A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV572A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV572A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV572A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2594,7 +2724,8 @@ CV574A0   3
 CV574A1   PVOL    101325.0                          * PATM                                                                          
 CV574A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV574A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV574A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV574A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV574A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2611,7 +2742,8 @@ CV575A0   3
 CV575A1   PVOL    101325.0                          * PATM                                                                          
 CV575A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV575A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV575A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV575A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV575A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2628,7 +2760,8 @@ CV576A0   3
 CV576A1   PVOL    101325.0                          * PATM                                                                          
 CV576A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV576A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV576A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV576A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV576A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2645,7 +2778,8 @@ CV577A0   3
 CV577A1   PVOL    101325.0                          * PATM                                                                          
 CV577A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV577A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV577A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV577A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV577A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2662,7 +2796,8 @@ CV578A0   3
 CV578A1   PVOL    101325.0                          * PATM                                                                          
 CV578A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV578A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV578A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV578A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV578A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2679,7 +2814,8 @@ CV579A0   3
 CV579A1   PVOL    101325.0                          * PATM                                                                          
 CV579A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV579A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV579A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV579A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV579A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2696,7 +2832,8 @@ CV580A0   3
 CV580A1   PVOL    101325.0                          * PATM                                                                          
 CV580A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV580A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV580A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV580A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV580A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2713,7 +2850,8 @@ CV581A0   3
 CV581A1   PVOL    101325.0                          * PATM                                                                          
 CV581A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV581A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV581A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV581A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV581A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2730,7 +2868,8 @@ CV582A0   3
 CV582A1   PVOL    101325.0                          * PATM                                                                          
 CV582A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV582A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV582A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV582A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV582A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2747,7 +2886,8 @@ CV583A0   3
 CV583A1   PVOL    101325.0                          * PATM                                                                          
 CV583A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV583A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV583A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV583A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV583A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2764,7 +2904,8 @@ CV584A0   3
 CV584A1   PVOL    101325.0                          * PATM                                                                          
 CV584A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV584A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV584A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV584A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV584A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2781,7 +2922,8 @@ CV585A0   3
 CV585A1   PVOL    101325.0                          * PATM                                                                          
 CV585A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV585A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV585A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV585A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV585A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2798,7 +2940,8 @@ CV586A0   3
 CV586A1   PVOL    101325.0                          * PATM                                                                          
 CV586A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV586A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV586A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV586A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV586A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2815,7 +2958,8 @@ CV650A0   3
 CV650A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV650A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV650A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV650A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV650A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV650A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2832,7 +2976,8 @@ CV651A0   3
 CV651A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV651A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV651A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV651A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV651A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV651A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2849,7 +2994,8 @@ CV652A0   3
 CV652A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV652A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV652A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV652A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV652A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV652A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2866,7 +3012,8 @@ CV653A0   3
 CV653A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV653A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV653A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV653A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV653A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV653A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2883,7 +3030,8 @@ CV654A0   3
 CV654A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV654A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV654A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV654A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV654A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV654A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2899,7 +3047,8 @@ CV657A0   3
 CV657A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV657A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV657A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV657A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV657A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV657A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2915,7 +3064,8 @@ CV658A0   3
 CV658A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV658A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV658A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV658A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV658A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV658A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2931,7 +3081,8 @@ CV659A0   3
 CV659A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV659A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV659A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV659A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV659A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV659A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2947,7 +3098,8 @@ CV660A0   3
 CV660A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV660A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV660A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV660A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV660A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV660A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2963,7 +3115,8 @@ CV661A0   3
 CV661A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV661A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV661A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV661A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV661A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV661A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2979,7 +3132,8 @@ CV662A0   3
 CV662A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV662A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV662A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV662A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV662A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV662A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2995,7 +3149,8 @@ CV663A0   3
 CV663A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV663A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV663A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV663A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV663A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV663A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3011,7 +3166,8 @@ CV664A0   3
 CV664A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV664A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV664A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV664A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV664A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV664A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3027,7 +3183,8 @@ CV665A0   3
 CV665A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV665A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV665A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV665A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV665A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV665A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3043,7 +3200,8 @@ CV666A0   3
 CV666A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV666A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV666A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV666A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV666A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV666A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3059,7 +3217,8 @@ CV667A0   3
 CV667A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV667A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV667A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV667A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV667A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV667A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3075,7 +3234,8 @@ CV668A0   3
 CV668A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV668A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV668A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV668A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV668A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV668A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3091,7 +3251,8 @@ CV669A0   3
 CV669A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV669A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV669A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV669A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV669A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV669A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3107,7 +3268,8 @@ CV670A0   3
 CV670A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV670A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV670A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV670A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV670A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV670A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3123,7 +3285,8 @@ CV671A0   3
 CV671A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV671A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV671A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV671A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV671A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV671A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3139,7 +3302,8 @@ CV672A0   3
 CV672A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV672A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV672A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV672A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV672A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV672A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3155,7 +3319,8 @@ CV673A0   3
 CV673A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV673A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV673A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV673A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV673A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV673A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3171,7 +3336,8 @@ CV674A0   3
 CV674A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV674A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV674A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV674A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV674A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV674A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3187,7 +3353,8 @@ CV675A0   3
 CV675A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV675A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV675A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV675A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV675A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV675A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3203,7 +3370,8 @@ CV676A0   3
 CV676A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV676A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV676A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV676A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV676A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV676A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3219,7 +3387,8 @@ CV655A0   3
 CV655A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV655A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV655A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV655A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV655A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV655A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3235,7 +3404,8 @@ CV679A0   3
 CV679A1   PVOL    101195.0                          * PATM-130Pa                                                                          
 CV679A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV679A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV679A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV679A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV679A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3251,7 +3421,8 @@ CV681A0   3
 CV681A1   PVOL    101065.0                          * PATM-260Pa                                                                          
 CV681A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV681A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV681A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV681A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV681A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3259,7 +3430,6 @@ CV681B1   6.95          0.0
 CV681B2   7.5           0.4125                      * 750 x 550 x 250
 *
 ***      
-*
 *--------------------------------------------- L1 ------------------------------------------------------
 *
 *-----------------------------------------------
@@ -3271,7 +3441,8 @@ CV501A0   3
 CV501A1   PVOL    101325.0                          * PATM                                                                          
 CV501A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV501A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV501A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV501A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV501A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3287,7 +3458,8 @@ CV502A0   3
 CV502A1   PVOL    101325.0                          * PATM                                                                          
 CV502A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV502A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV502A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV502A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV501A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3303,7 +3475,8 @@ CV504A0   3
 CV504A1   PVOL    101325.0                          * PATM                                                                          
 CV504A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV504A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV504A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV504A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV504A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3319,7 +3492,8 @@ CV505A0   3
 CV505A1   PVOL    101325.0                          * PATM                                                                          
 CV505A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV505A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV505A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV505A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV505A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3335,7 +3509,8 @@ CV506A0   3
 CV506A1   PVOL    101325.0                          * PATM                                                                          
 CV506A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV506A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV506A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV506A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV506A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3351,7 +3526,8 @@ CV509A0   3
 CV509A1   PVOL    101325.0                          * PATM                                                                          
 CV509A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV509A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV509A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV509A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV509A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3367,7 +3543,8 @@ CV510A0   3
 CV510A1   PVOL    101325.0                          * PATM                                                                          
 CV510A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV510A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV510A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV510A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV510A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3383,7 +3560,8 @@ CV511A0   3
 CV511A1   PVOL    101325.0                          * PATM                                                                          
 CV511A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV511A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV511A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV511A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV511A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3399,7 +3577,8 @@ CV512A0   3
 CV512A1   PVOL    101325.0                          * PATM                                                                          
 CV512A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV512A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV512A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV512A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV512A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3415,7 +3594,8 @@ CV513A0   3
 CV513A1   PVOL    101325.0                          * PATM                                                                          
 CV513A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV513A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV513A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV513A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV513A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3431,7 +3611,8 @@ CV514A0   3
 CV514A1   PVOL    101325.0                          * PATM                                                                          
 CV514A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV514A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV514A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV514A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV514A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3447,7 +3628,8 @@ CV515A0   3
 CV515A1   PVOL    101325.0                          * PATM                                                                          
 CV515A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV515A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV515A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV515A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV515A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3463,7 +3645,8 @@ CV516A0   3
 CV516A1   PVOL    101325.0                          * PATM                                                                          
 CV516A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV516A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV516A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV516A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV516A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3479,7 +3662,8 @@ CV517A0   3
 CV517A1   PVOL    101325.0                          * PATM                                                                          
 CV517A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV517A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV517A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV517A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV517A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3495,7 +3679,8 @@ CV518A0   3
 CV518A1   PVOL    101325.0                          * PATM                                                                          
 CV518A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV518A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV518A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV518A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV518A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3511,7 +3696,8 @@ CV519A0   3
 CV519A1   PVOL    101325.0                          * PATM                                                                          
 CV519A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV519A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV519A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV519A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV519A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3527,7 +3713,8 @@ CV521A0   3
 CV521A1   PVOL    101325.0                          * PATM                                                                          
 CV521A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV521A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV521A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV521A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV521A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3543,7 +3730,8 @@ CV522A0   3
 CV522A1   PVOL    101325.0                          * PATM                                                                          
 CV522A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV522A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV522A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV522A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV522A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3559,7 +3747,8 @@ CV523A0   3
 CV523A1   PVOL    101325.0                          * PATM                                                                          
 CV523A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV523A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV523A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV523A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV523A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3575,7 +3764,8 @@ CV524A0   3
 CV524A1   PVOL    101325.0                          * PATM                                                                          
 CV524A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV524A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV524A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV524A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV524A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3591,7 +3781,8 @@ CV525A0   3
 CV525A1   PVOL    101325.0                          * PATM                                                                          
 CV525A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV525A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV525A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV525A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV525A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3607,7 +3798,8 @@ CV526A0   3
 CV526A1   PVOL    101325.0                          * PATM                                                                          
 CV526A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV526A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV526A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV526A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV526A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3623,7 +3815,8 @@ CV527A0   3
 CV527A1   PVOL    101325.0                          * PATM                                                                          
 CV527A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV527A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV527A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV527A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV527A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3639,7 +3832,8 @@ CV528A0   3
 CV528A1   PVOL    101325.0                          * PATM                                                                          
 CV528A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV528A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV528A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV528A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV528A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3655,7 +3849,8 @@ CV530A0   3
 CV530A1   PVOL    101325.0                          * PATM                                                                          
 CV530A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV530A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV530A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV530A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV530A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3671,7 +3866,8 @@ CV531A0   3
 CV531A1   PVOL    101325.0                          * PATM                                                                          
 CV531A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV531A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV531A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV531A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV531A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3687,7 +3883,8 @@ CV532A0   3
 CV532A1   PVOL    101325.0                          * PATM                                                                          
 CV532A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV532A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV532A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV532A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV532A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3703,7 +3900,8 @@ CV533A0   3
 CV533A1   PVOL    101325.0                          * PATM                                                                          
 CV533A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV533A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV533A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV533A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV533A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3719,7 +3917,8 @@ CV540A0   3
 CV540A1   PVOL    101325.0                          * PATM                                                                          
 CV540A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV540A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV540A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV540A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV540A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3735,7 +3934,8 @@ CV534A0   3
 CV534A1   PVOL    101325.0                          * PATM                                                                          
 CV534A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV534A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV534A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV534A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV534A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3751,7 +3951,8 @@ CV535A0   3
 CV535A1   PVOL    101325.0                          * PATM                                                                          
 CV535A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV535A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV535A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV535A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV535A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3767,7 +3968,8 @@ CV536A0   3
 CV536A1   PVOL    101325.0                          * PATM                                                                          
 CV536A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV536A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV536A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV536A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV536A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3783,7 +3985,8 @@ CV537A0   3
 CV537A1   PVOL    101325.0                          * PATM                                                                          
 CV537A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV537A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV537A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV537A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV537A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3799,7 +4002,8 @@ CV538A0   3
 CV538A1   PVOL    101325.0                          * PATM                                                                          
 CV538A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV538A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV538A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV538A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV538A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3815,7 +4019,8 @@ CV539A0   3
 CV539A1   PVOL    101325.0                          * PATM                                                                          
 CV539A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV539A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV539A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV539A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV539A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3831,7 +4036,8 @@ CV520A0   3
 CV520A1   PVOL    101325.0                          * PATM                                                                          
 CV520A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV520A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV520A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV520A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV520A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3847,7 +4053,8 @@ CV602A0   3
 CV602A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV602A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV602A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV602A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV602A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV602A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3863,7 +4070,8 @@ CV603A0   3
 CV603A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV603A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV603A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV603A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV603A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV603A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3879,7 +4087,8 @@ CV604A0   3
 CV604A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV604A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV604A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV604A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV604A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV604A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                
@@ -3895,7 +4104,8 @@ CV606A0   3
 CV606A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV606A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV606A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV606A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV606A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV606A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3911,7 +4121,8 @@ CV608A0   3
 CV608A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV608A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV608A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV608A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV608A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV608A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3927,7 +4138,8 @@ CV609A0   3
 CV609A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV609A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV609A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV609A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV609A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV609A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3943,7 +4155,8 @@ CV610A0   3
 CV610A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV610A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV610A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV610A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV610A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV610A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3959,7 +4172,8 @@ CV611A0   3
 CV611A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV611A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV611A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV611A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV611A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV611A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3975,7 +4189,8 @@ CV612A0   3
 CV612A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV612A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV612A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV612A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV612A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV612A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -3991,7 +4206,8 @@ CV613A0   3
 CV613A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV613A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV613A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV613A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV613A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV613A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4007,7 +4223,8 @@ CV614A0   3
 CV614A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV614A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV614A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV614A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV614A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV614A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4023,7 +4240,8 @@ CV615A0   3
 CV615A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV615A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV615A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV615A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV615A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV615A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4039,7 +4257,8 @@ CV616A0   3
 CV616A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV616A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV616A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV616A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV616A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV616A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4055,7 +4274,8 @@ CV617A0   3
 CV617A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV617A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV617A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV617A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV617A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV617A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4071,7 +4291,8 @@ CV599A0   3
 CV599A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV599A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV599A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV599A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV599A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV599A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4087,7 +4308,8 @@ CV619A0   3
 CV619A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV619A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV619A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV619A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV619A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV619A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4103,7 +4325,8 @@ CV620A0   3
 CV620A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV620A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV620A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV620A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV620A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV620A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4119,7 +4342,8 @@ CV621A0   3
 CV621A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV621A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV621A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV621A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV621A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV621A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4135,7 +4359,8 @@ CV622A0   3
 CV622A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV622A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV622A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV622A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV622A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV622A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4151,7 +4376,8 @@ CV623A0   3
 CV623A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV623A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV623A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV623A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV623A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV623A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4167,7 +4393,8 @@ CV624A0   3
 CV624A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV624A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV624A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV624A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV624A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV624A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4183,7 +4410,8 @@ CV625A0   3
 CV625A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV625A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV625A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV625A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV625A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV625A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4199,7 +4427,8 @@ CV626A0   3
 CV626A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV626A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV626A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV626A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV626A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV626A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4215,7 +4444,8 @@ CV627A0   3
 CV627A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV627A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV627A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV627A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV627A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV627A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4231,7 +4461,8 @@ CV629A0   3
 CV629A1   PVOL    101195.0                          * PATM-130Pa                                                                          
 CV629A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV629A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV629A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV629A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV629A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4247,7 +4478,8 @@ CV630A0   3
 CV630A1   PVOL    101195.0                          * PATM-130Pa                                                                          
 CV630A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV630A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV630A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV630A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV630A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4263,7 +4495,8 @@ CV631A0   3
 CV631A1   PVOL    101195.0                          * PATM-130Pa                                                                          
 CV631A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV631A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV631A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV631A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV631A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4279,7 +4512,8 @@ CV633A0   3
 CV633A1   PVOL    101065.0                          * PATM-260Pa                                                                          
 CV633A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV633A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV633A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV633A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV633A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4295,7 +4529,8 @@ CV634A0   3
 CV634A1   PVOL    101065.0                          * PATM-260Pa                                                                          
 CV634A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV634A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV634A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV634A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV634A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4311,7 +4546,8 @@ CV635A0   3
 CV635A1   PVOL    101065.0                          * PATM-260Pa                                                                          
 CV635A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV635A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV635A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV635A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV635A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4327,7 +4563,8 @@ CV636A0   3
 CV636A1   PVOL    101065.0                          * PATM-260Pa                                                                          
 CV636A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV636A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV636A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV636A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV636A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4343,7 +4580,8 @@ CV637A0   3
 CV637A1   PVOL    101065.0                          * PATM-260Pa                                                                          
 CV637A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV637A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV637A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV637A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV637A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -4359,7 +4597,8 @@ CV638A0   3
 CV638A1   PVOL    101065.0                          * PATM-260Pa                                                                          
 CV638A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV638A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV638A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV638A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV638A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
