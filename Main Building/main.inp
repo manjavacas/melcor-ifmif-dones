@@ -9826,12 +9826,6 @@ FL38702	  3       0     0     0                                 * HORIZ fl, ACTI
 FL38703   1.0     1.0                                           * FORM LOSS
 FL387S0   0.000005   0.5    0.00252                             
 *
-FL38700   W-OUT-SB1L0    400   080  4.25  4.25                  * Half room height (8.5 m)
-FL38701   0.000005   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
-FL38702	  3       0     0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL38703   1.0     1.0                                           * FORM LOSS
-FL387S0   0.000005   0.5    0.00252                             
-*
 FL99000   W-OUT-SB3L0    400   082  4.25  4.25                  * Half room height (8.5 m)
 FL99001   0.000005   0.5   1.0                                  * A, L, FRACT OPEN, DIAM
 FL99002	  3       0     0     0                                 * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
