@@ -5186,7 +5186,7 @@ CV687A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                
-CV687B1   24.3          0.0                                                         
+CV687B1   23.3          0.0                                                         
 CV687B2   24.5          0.18                        * 1200 X 600 X 250
 *
 ***
