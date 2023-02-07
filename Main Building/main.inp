@@ -1176,9 +1176,9 @@ CV12901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
 CV129A0   3                                                                                         
 CV129A1   PVOL    101195.0                          * 101325-130Pa                                                                          
 CV129A3   TATM    298.15    RHUM  0.0               * 25. deg C, room temp.                                      
-CV129A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV129A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV129A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+CV129A5   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV129A6   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV129A8   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1194,8 +1194,8 @@ CV130A0   3
 CV130A1   PVOL    101065.0                          * 101325-260Pa                                                                          
 CV130A3   TATM    290.95    RHUM  1.0               * 17.8 deg C, room temp.                                      
 CV130A5   MLFR.7  0.9999                            * FILLED WITH He -> 99.99%   
-CV130A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV130A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+CV130A6   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV130A8   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
