@@ -2004,6 +2004,244 @@ CV252A8   MLFR.8  0.01                              * Filled with air (Ar)
 CV252B1   18.0      0.0                                                         
 CV252B2   24.5      1000.0                          * 777.4 m3 (2PNSLP)
 ***
+*-----------------------------------------------                                                                
+* CV242 - C203 - Corridor (C2)                                                                   
+*-----------------------------------------------                                                                
+CV24200   C203  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV24201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV242A0   3                                                                                         
+CV242A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV242A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV242A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV242A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV242A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV242B1   18.0      0.0                                                         
+CV242B2   24.5      10505.0                         * 8687.4 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV280 - SB1L2 - Shipping Bay 1 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28000   SB1L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV280A0   3                                                                                         
+CV280A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV280A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV280A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV280A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV280A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV280B1   18.0      0.0                                                         
+CV280B2   24.5      721.0                           * 575.1 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV281 - SB2L2 - Shipping Bay 2 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28100   SB2L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV281A0   3                                                                                         
+CV281A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV281A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV281A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV281A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV281A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV281B1   18.0      0.0                                                         
+CV281B2   24.5      595.0                           * 463.8 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV282 - SB3L2 - Shipping Bay 3 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28200   SB3L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28201   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV282A0   3                                                                                         
+CV282A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV282A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV282A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV282A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV282A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV282B1   18.0      0.0                                                         
+CV282B2   24.5      643.0                           * 520.5 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV283 - SB4L2 - Shipping Bay 4 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28300   SB4L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28301   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV283A0   3                                                                                         
+CV283A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV283A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV283A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV283A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV283A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV283B1   18.0      0.0                                                         
+CV283B2   24.5      595.0                           * 489.1 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV284 - E02L2 - Elevator 2 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28400   E02L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV284A0   3                                                                                         
+CV284A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV284A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV284A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV284A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV284A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV284B1   18.0      0.0                                                         
+CV284B2   24.5      135.0                           * 95.9 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV285 - E04L2 - Elevator 4 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28500   E04L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28501   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV285A0   3                                                                                         
+CV285A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV285A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV285A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV285A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV285A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV285B1   18.0      0.0                                                         
+CV285B2   24.5      164.0                           * 122.9 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV286 - S02L2 - Stairs 2 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28600   S02L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28601   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV286A0   3                                                                                         
+CV286A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV286A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV286A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV286A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV286A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                
+CV286B1   18.0      0.0                                                         
+CV286B2   24.5      315.0                           * 201.7 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV287 - S04L2 - Stairs 4 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28700   S04L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28701   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV287A0   3                                                                                         
+CV287A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV287A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV287A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV287A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV287A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                
+CV287B1   18.0      0.0                                                         
+CV287B2   24.5      400.0                           * 294.6 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV288 - S05L2 - Stairs 5 L2 (C2)                                                                   
+*-----------------------------------------------                                                                
+CV28800   S05L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28801   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV288A0   3                                                                                         
+CV288A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV288A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV288A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV288A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV288A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                
+CV288B1   18.0      0.0                                                         
+CV288B2   24.5      431.0                           * 278.3 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV289 - S07L2 - Stairs 7 L2 (C2 - C0 en 2PNSLP)                                                                   
+*-----------------------------------------------                                                                
+CV28900   S07L2  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV28901   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV289A0   3                                                                                         
+CV289A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV289A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV289A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV289A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV289A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                
+CV289B1   18.0      0.0                                                         
+CV289B2   24.5      260.0                           * 190.5 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV290 - AL230 - Airlock 230 (C3a)                                                                   
+*-----------------------------------------------                                                                
+CV29000   AL230  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV29001   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV290A0   3                                                                                         
+CV290A1   PVOL    101215.0                          * 101325-110Pa                                                                          
+CV290A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV290A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV290A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV290A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                
+CV290B1   18.0      0.0                                                         
+CV290B2   24.5      76.0                            * 55.5 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV291 - AL231 - Airlock 231 (C3a)                                                                   
+*-----------------------------------------------                                                                
+CV29100   AL231  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV29101   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV291A0   3                                                                                         
+CV291A1   PVOL    101215.0                          * 101325-110Pa                                                                          
+CV291A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV291A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV291A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV291A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                
+CV291B1   18.0      0.0                                                         
+CV291B2   24.5      72.0                            * 51.5 m3 (2PNSLP)
+***
+*-----------------------------------------------                                                                
+* CV294 - AL204 - Airlock 204 (C2a)                                                                   
+*-----------------------------------------------                                                                
+CV29400   AL204  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV29401   0   0		                                * fog ALLOWED (DEF), TIME-INDEP
+CV294A0   3                                                                                         
+CV294A1   PVOL    101257.0                          * 101325-68Pa                                                                          
+CV294A3   TATM    293.15    RHUM  0.6               * 20 deg C, room temp.                                      
+CV294A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV294A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV294A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                
+CV294B1   18.0      0.0                                                         
+CV294B2   24.5      405.0                           * 302.0 m3 (2PNSLP)
+***
 *
 *********************************************************** Ar SUPPLY **************************************************************
 *
