@@ -5274,6 +5274,23 @@ CV694A8   MLFR.8  0.01                              * Filled with air (Ar)
 CV694B1   24.0          0.0                                                         
 CV694B2   24.5          0.10625                     * 850 X 500 X 250
 *
+*-------------------------------------------------------
+* CV689 - CVASL2-10 - Connection Volume Air Supply L2 10
+*-------------------------------------------------------                                                                
+CV68900   CVASL2-10   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV68901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV689A0   3                                                                                         
+CV689A1   PVOL    101235.0                          * PATM-90Pa                                                                          
+CV689A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV689A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV689A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV689A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                               
+CV689B1   24.025        0.0                                                         
+CV689B2   24.5          0.0890625                   * 750 X 475 X 250
+*
 ***
 *************************************************************************************************
 *                                         FLOW PATHS
