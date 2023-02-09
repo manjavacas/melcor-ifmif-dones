@@ -2232,7 +2232,7 @@ CV69000   ASI-1  2  2  1                             * noneq, NOuSED, 1=L0/2=L1/
 CV69001   0   0                                     * fog ALLOWED (DEF)
 CV690A0   3                                                                                         
 CV690A1   PVOL    101325.0                          * PATM                                                                          
-CV690A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV690A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                 
 CV690A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV690A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV690A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2249,7 +2249,7 @@ CV50000   AS-1  2  2  1                             * noneq, NOuSED, 1=L0/2=L1/3
 CV50001   0   0                                     * fog ALLOWED (DEF)
 CV500A0   3                                                                                         
 CV500A1   PVOL    101325.0                          * PATM                                                                          
-CV500A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV500A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                         
 CV500A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV500A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV500A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2267,7 +2267,7 @@ CV55800   AS-2  2  2  1                             * noneq, NOuSED, 1=L0/2=L1/3
 CV55801   0   0                                     * fog ALLOWED (DEF)
 CV558A0   3                                                                                         
 CV558A1   PVOL    101325.0                          * PATM                                                                          
-CV558A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV558A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                        
 CV558A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV558A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV558A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2285,7 +2285,7 @@ CV57300   AS-3  2  2  1                             * noneq, NOuSED, 1=L0/2=L1/3
 CV57301   0   0                                     * fog ALLOWED (DEF)
 CV573A0   3                                                                                         
 CV573A1   PVOL    101325.0                          * PATM                                                                          
-CV573A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV573A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                          
 CV573A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV573A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV573A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2303,7 +2303,7 @@ CV50300   AS-4  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3
 CV50301   0   0                                     * fog ALLOWED (DEF)
 CV503A0   3                                                                                         
 CV503A1   PVOL    101325.0                          * PATM                                                                          
-CV503A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV503A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                            
 CV503A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV503A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV503A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2321,7 +2321,7 @@ CV50700   AS-5  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3
 CV50701   0   0                                     * fog ALLOWED (DEF)
 CV507A0   3                                                                                         
 CV507A1   PVOL    101325.0                          * PATM                                                                          
-CV507A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV507A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                             
 CV507A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV507A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV507A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2339,7 +2339,7 @@ CV50800   AS-6  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3
 CV50801   0   0                                     * fog ALLOWED (DEF)
 CV508A0   3                                                                                         
 CV508A1   PVOL    101325.0                          * PATM                                                                          
-CV508A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV508A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                          
 CV508A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV508A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV508A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2357,7 +2357,7 @@ CV52900   AS-7  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3
 CV52901   0   0                                     * fog ALLOWED (DEF)
 CV529A0   3                                                                                         
 CV529A1   PVOL    101325.0                          * PATM                                                                          
-CV529A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV529A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                            
 CV529A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV529A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV529A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2375,7 +2375,7 @@ CV68300   AS-8  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3
 CV68301   0   0                                     * fog ALLOWED (DEF)
 CV683A0   3                                                                                         
 CV683A1   PVOL    101325.0                          * PATM                                                                          
-CV683A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV683A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                         
 CV683A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV683A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV683A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2393,7 +2393,7 @@ CV68400   AS-9  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3
 CV68401   0   0                                     * fog ALLOWED (DEF)
 CV684A0   3                                                                                         
 CV684A1   PVOL    101325.0                          * PATM                                                                          
-CV684A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV684A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                        
 CV684A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV684A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV684A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2411,7 +2411,7 @@ CV68800   AS-10  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3
 CV68801   0   0                                     * fog ALLOWED (DEF)
 CV688A0   3                                                                                         
 CV688A1   PVOL    101325.0                          * PATM                                                                          
-CV688A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV688A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                        
 CV688A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV688A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV688A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2429,7 +2429,7 @@ CV71100   AS-11  2  2  2                            * noneq, NOuSED, 1=L0/2=L1/3
 CV71101   0   0                                     * fog ALLOWED (DEF)
 CV711A0   3                                                                                         
 CV711A1   PVOL    101325.0                          * PATM                                                                          
-CV711A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV711A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                    
 CV711A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV711A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV711A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2649,7 +2649,7 @@ CV55100   CVASL0-1  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV551A0   3                                                                                         
 CV551A1   PVOL    101325.0                          * PATM                                                                          
-CV551A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV551A3   TATM    287.15    RHUM  0.6               * 14.0 deg C             
 CV551A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV551A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV551A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2666,7 +2666,7 @@ CV55200   CVASL0-2  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV552A0   3                                                                                         
 CV552A1   PVOL    101325.0                          * PATM                                                                          
-CV552A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV552A3   TATM    287.15    RHUM  0.6               * 14.0 deg C  
 CV552A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV552A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV552A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2683,7 +2683,7 @@ CV55300   CVASL0-3  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV553A0   3                                                                                         
 CV553A1   PVOL    101325.0                          * PATM                                                                          
-CV553A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV553A3   TATM    287.15    RHUM  0.6               * 14.0 deg C        
 CV553A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV553A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV553A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2700,7 +2700,7 @@ CV55400   CVASL0-4  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV554A0   3                                                                                         
 CV554A1   PVOL    101325.0                          * PATM                                                                          
-CV554A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV554A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                         
 CV554A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV554A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV554A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2717,7 +2717,7 @@ CV55500   CVASL0-5  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV555A0   3                                                                                         
 CV555A1   PVOL    101325.0                          * PATM                                                                          
-CV555A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV555A3   TATM    287.15    RHUM  0.6               * 14.0 deg C         
 CV555A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV555A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV555A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2734,7 +2734,7 @@ CV55600   CVASL0-6  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV556A0   3                                                                                         
 CV556A1   PVOL    101325.0                          * PATM                                                                          
-CV556A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV556A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                  
 CV556A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV556A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV556A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2751,7 +2751,7 @@ CV55700   CVASL0-7  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV557A0   3                                                                                         
 CV557A1   PVOL    101325.0                          * PATM                                                                          
-CV557A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV557A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                
 CV557A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV557A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV557A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2768,7 +2768,7 @@ CV55900   CVASL0-8  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV559A0   3                                                                                         
 CV559A1   PVOL    101325.0                          * PATM                                                                          
-CV559A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV559A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                     
 CV559A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV559A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV559A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2786,7 +2786,7 @@ CV56000   CVASL0-9  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV56001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV560A0   3                                                                                         
 CV560A1   PVOL    101325.0                          * PATM                                                                          
-CV560A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV560A3   TATM    287.15    RHUM  0.6               * 14.0 deg C   
 CV560A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV560A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV560A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2804,7 +2804,7 @@ CV56100   CVASL0-10  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV561A0   3                                                                                         
 CV561A1   PVOL    101325.0                          * PATM                                                                          
-CV561A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV561A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                 
 CV561A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV561A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV561A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2822,7 +2822,7 @@ CV56200   CVASL0-11  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV562A0   3                                                                                         
 CV562A1   PVOL    101325.0                          * PATM                                                                          
-CV562A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV562A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                      
 CV562A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV562A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV562A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2839,7 +2839,7 @@ CV56300   CVASL0-12  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV563A0   3                                                                                         
 CV563A1   PVOL    101325.0                          * PATM                                                                          
-CV563A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV563A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                        
 CV563A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV563A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV563A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2856,7 +2856,7 @@ CV56400   CVASL0-13  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV564A0   3                                                                                         
 CV564A1   PVOL    101325.0                          * PATM                                                                          
-CV564A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV564A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                           
 CV564A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV564A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV564A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2874,7 +2874,7 @@ CV56500   CVASL0-14  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV565A0   3                                                                                         
 CV565A1   PVOL    101325.0                          * PATM                                                                          
-CV565A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV565A3   TATM    287.15    RHUM  0.6               * 14.0 deg C              
 CV565A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV565A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV565A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2892,7 +2892,7 @@ CV56600   CVASL0-15  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV566A0   3                                                                                         
 CV566A1   PVOL    101325.0                          * PATM                                                                          
-CV566A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV566A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV566A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV566A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV566A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2910,7 +2910,7 @@ CV56700   CVASL0-16  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV567A0   3                                                                                         
 CV567A1   PVOL    101325.0                          * PATM                                                                          
-CV567A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV567A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                 
 CV567A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV567A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV567A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2928,7 +2928,7 @@ CV56800   CVASL0-17  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV568A0   3                                                                                         
 CV568A1   PVOL    101325.0                          * PATM                                                                          
-CV568A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV568A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV568A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV568A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV568A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2946,7 +2946,7 @@ CV56900   CVASL0-18  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV569A0   3                                                                                         
 CV569A1   PVOL    101325.0                          * PATM                                                                          
-CV569A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV569A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV569A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV569A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV569A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2964,7 +2964,7 @@ CV57000   CVASL0-19  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV570A0   3                                                                                         
 CV570A1   PVOL    101325.0                          * PATM                                                                          
-CV570A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV570A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV570A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV570A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV570A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -2982,7 +2982,7 @@ CV57100   CVASL0-20  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV571A0   3                                                                                         
 CV571A1   PVOL    101325.0                          * PATM                                                                          
-CV571A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV571A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV571A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV571A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV571A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3000,7 +3000,7 @@ CV57200   CVASL0-21  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV572A0   3                                                                                         
 CV572A1   PVOL    101325.0                          * PATM                                                                          
-CV572A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV572A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                
 CV572A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV572A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV572A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3018,7 +3018,7 @@ CV57400   CVASL0-22  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV574A0   3                                                                                         
 CV574A1   PVOL    101325.0                          * PATM                                                                          
-CV574A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV574A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV574A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV574A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV574A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3036,7 +3036,7 @@ CV57500   CVASL0-23  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV575A0   3                                                                                         
 CV575A1   PVOL    101325.0                          * PATM                                                                          
-CV575A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV575A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV575A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV575A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV575A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3054,7 +3054,7 @@ CV57600   CVASL0-24  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV576A0   3                                                                                         
 CV576A1   PVOL    101325.0                          * PATM                                                                          
-CV576A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV576A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV576A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV576A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV576A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3072,7 +3072,7 @@ CV57700   CVASL0-25  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV577A0   3                                                                                         
 CV577A1   PVOL    101325.0                          * PATM                                                                          
-CV577A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV577A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                 
 CV577A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV577A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV577A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3090,7 +3090,7 @@ CV57800   CVASL0-26  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV578A0   3                                                                                         
 CV578A1   PVOL    101325.0                          * PATM                                                                          
-CV578A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV578A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV578A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV578A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV578A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3108,7 +3108,7 @@ CV57900   CVASL0-27  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV579A0   3                                                                                         
 CV579A1   PVOL    101325.0                          * PATM                                                                          
-CV579A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV579A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                              
 CV579A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV579A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV579A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3126,7 +3126,7 @@ CV58000   CVASL0-28  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV580A0   3                                                                                         
 CV580A1   PVOL    101325.0                          * PATM                                                                          
-CV580A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV580A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                            
 CV580A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV580A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV580A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3144,7 +3144,7 @@ CV58100   CVASL0-29  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV581A0   3                                                                                         
 CV581A1   PVOL    101325.0                          * PATM                                                                          
-CV581A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV581A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                             
 CV581A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV581A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV581A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3162,7 +3162,7 @@ CV58200   CVASL0-30  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV582A0   3                                                                                         
 CV582A1   PVOL    101325.0                          * PATM                                                                          
-CV582A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV582A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                             
 CV582A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV582A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV582A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3180,7 +3180,7 @@ CV58300   CVASL0-31  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV583A0   3                                                                                         
 CV583A1   PVOL    101325.0                          * PATM                                                                          
-CV583A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV583A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                             
 CV583A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV583A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV583A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3198,7 +3198,7 @@ CV58400   CVASL0-32  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV584A0   3                                                                                         
 CV584A1   PVOL    101325.0                          * PATM                                                                          
-CV584A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV584A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                              
 CV584A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV584A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV584A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3216,7 +3216,7 @@ CV58500   CVASL0-33  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV585A0   3                                                                                         
 CV585A1   PVOL    101325.0                          * PATM                                                                          
-CV585A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV585A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV585A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV585A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV585A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3234,7 +3234,7 @@ CV58600   CVASL0-34  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV586A0   3                                                                                         
 CV586A1   PVOL    101325.0                          * PATM                                                                          
-CV586A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV586A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV586A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV586A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV586A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3735,7 +3735,7 @@ CV50100   CVASL1-1  2  2  2                           * noneq, NOuSED, 1=L0/2=L1
 CV50101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV501A0   3                                                                                         
 CV501A1   PVOL    101325.0                          * PATM                                                                          
-CV501A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV501A3   TATM    287.15    RHUM  0.6               * 14.0 deg C     
 CV501A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV501A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV501A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3752,7 +3752,7 @@ CV50200   CVASL1-2  2  2  2                             * noneq, NOuSED, 1=L0/2=
 CV50201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV502A0   3                                                                                         
 CV502A1   PVOL    101325.0                          * PATM                                                                          
-CV502A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV502A3   TATM    287.15    RHUM  0.6               * 14.0 deg C
 CV502A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV502A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV502A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3769,7 +3769,7 @@ CV50400   CVASL1-3  2  2  2                         * noneq, NOuSED, 1=L0/2=L1/3
 CV50401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV504A0   3                                                                                         
 CV504A1   PVOL    101325.0                          * PATM                                                                          
-CV504A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV504A3   TATM    287.15    RHUM  0.6               * 14.0 deg C            
 CV504A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV504A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV504A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3786,7 +3786,7 @@ CV50500   CVASL1-4  2  2  2                         * noneq, NOuSED, 1=L0/2=L1/3
 CV50501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV505A0   3                                                                                         
 CV505A1   PVOL    101325.0                          * PATM                                                                          
-CV505A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV505A3   TATM    287.15    RHUM  0.6               * 14.0 deg C
 CV505A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV505A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV505A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3803,7 +3803,7 @@ CV50600   CVASL1-5  2  2  2                         * noneq, NOuSED, 1=L0/2=L1/3
 CV50601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV506A0   3                                                                                         
 CV506A1   PVOL    101325.0                          * PATM                                                                          
-CV506A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV506A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV506A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV506A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV506A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3820,7 +3820,7 @@ CV50900   CVASL1-6  2  2  2                         * noneq, NOuSED, 1=L0/2=L1/3
 CV50901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV509A0   3                                                                                         
 CV509A1   PVOL    101325.0                          * PATM                                                                          
-CV509A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV509A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV509A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV509A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV509A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3837,7 +3837,7 @@ CV51000   CVASL1-7  2  2  2                         * noneq, NOuSED, 1=L0/2=L1/3
 CV51001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV510A0   3                                                                                         
 CV510A1   PVOL    101325.0                          * PATM                                                                          
-CV510A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV510A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV510A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV510A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV510A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3854,7 +3854,7 @@ CV51100   CVASL1-8  2  2  2                         * noneq, NOuSED, 1=L0/2=L1/3
 CV51101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV511A0   3                                                                                         
 CV511A1   PVOL    101325.0                          * PATM                                                                          
-CV511A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV511A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV511A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV511A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV511A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3871,7 +3871,7 @@ CV51200   CVASL1-9  2  2  2                         * noneq, NOuSED, 1=L0/2=L1/3
 CV51201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV512A0   3                                                                                         
 CV512A1   PVOL    101325.0                          * PATM                                                                          
-CV512A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV512A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV512A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV512A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV512A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3888,7 +3888,7 @@ CV51300   CVASL1-10  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV51301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV513A0   3                                                                                         
 CV513A1   PVOL    101325.0                          * PATM                                                                          
-CV513A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV513A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV513A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV513A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV513A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3905,7 +3905,7 @@ CV51400   CVASL1-11  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV51401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV514A0   3                                                                                         
 CV514A1   PVOL    101325.0                          * PATM                                                                          
-CV514A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV514A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV514A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV514A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV514A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3922,7 +3922,7 @@ CV51500   CVASL1-12  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV51501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV515A0   3                                                                                         
 CV515A1   PVOL    101325.0                          * PATM                                                                          
-CV515A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV515A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV515A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV515A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV515A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3939,7 +3939,7 @@ CV51600   CVASL1-13  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV51601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV516A0   3                                                                                         
 CV516A1   PVOL    101325.0                          * PATM                                                                          
-CV516A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV516A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV516A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV516A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV516A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3956,7 +3956,7 @@ CV51700   CVASL1-14  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV51701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV517A0   3                                                                                         
 CV517A1   PVOL    101325.0                          * PATM                                                                          
-CV517A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV517A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                     
 CV517A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV517A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV517A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3973,7 +3973,7 @@ CV51800   CVASL1-15  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV51801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV518A0   3                                                                                         
 CV518A1   PVOL    101325.0                          * PATM                                                                          
-CV518A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV518A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                     
 CV518A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV518A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV518A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -3990,7 +3990,7 @@ CV51900   CVASL1-16  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV51901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV519A0   3                                                                                         
 CV519A1   PVOL    101325.0                          * PATM                                                                          
-CV519A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV519A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV519A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV519A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV519A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4007,7 +4007,7 @@ CV52100   CVASL1-17  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV521A0   3                                                                                         
 CV521A1   PVOL    101325.0                          * PATM                                                                          
-CV521A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV521A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV521A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV521A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV521A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4024,7 +4024,7 @@ CV52200   CVASL1-18  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV522A0   3                                                                                         
 CV522A1   PVOL    101325.0                          * PATM                                                                          
-CV522A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV522A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV522A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV522A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV522A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4041,7 +4041,7 @@ CV52300   CVASL1-19  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV523A0   3                                                                                         
 CV523A1   PVOL    101325.0                          * PATM                                                                          
-CV523A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV523A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV523A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV523A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV523A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4058,7 +4058,7 @@ CV52400   CVASL1-20  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV524A0   3                                                                                         
 CV524A1   PVOL    101325.0                          * PATM                                                                          
-CV524A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV524A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                     
 CV524A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV524A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV524A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4075,7 +4075,7 @@ CV52500   CVASL1-21  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV525A0   3                                                                                         
 CV525A1   PVOL    101325.0                          * PATM                                                                          
-CV525A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV525A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV525A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV525A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV525A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4092,7 +4092,7 @@ CV52600   CVASL1-22  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV526A0   3                                                                                         
 CV526A1   PVOL    101325.0                          * PATM                                                                          
-CV526A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV526A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                               
 CV526A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV526A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV526A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4109,7 +4109,7 @@ CV52700   CVASL1-23  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV527A0   3                                                                                         
 CV527A1   PVOL    101325.0                          * PATM                                                                          
-CV527A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV527A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                     
 CV527A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV527A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV527A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4126,7 +4126,7 @@ CV52800   CVASL1-24  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV528A0   3                                                                                         
 CV528A1   PVOL    101325.0                          * PATM                                                                          
-CV528A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV528A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                     
 CV528A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV528A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV528A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4143,7 +4143,7 @@ CV53000   CVASL1-25  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV530A0   3                                                                                         
 CV530A1   PVOL    101325.0                          * PATM                                                                          
-CV530A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV530A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV530A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV530A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV530A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4160,7 +4160,7 @@ CV53100   CVASL1-26  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV531A0   3                                                                                         
 CV531A1   PVOL    101325.0                          * PATM                                                                          
-CV531A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV531A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV531A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV531A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV531A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4177,7 +4177,7 @@ CV53200   CVASL1-27  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV532A0   3                                                                                         
 CV532A1   PVOL    101325.0                          * PATM                                                                          
-CV532A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV532A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV532A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV532A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV532A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4194,7 +4194,7 @@ CV53300   CVASL1-28  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV533A0   3                                                                                         
 CV533A1   PVOL    101325.0                          * PATM                                                                          
-CV533A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV533A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV533A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV533A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV533A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4211,7 +4211,7 @@ CV54000   CVASL1-29  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV54001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV540A0   3                                                                                         
 CV540A1   PVOL    101325.0                          * PATM                                                                          
-CV540A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV540A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                        
 CV540A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV540A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV540A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4228,7 +4228,7 @@ CV53400   CVASL1-30  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV534A0   3                                                                                         
 CV534A1   PVOL    101325.0                          * PATM                                                                          
-CV534A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV534A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV534A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV534A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV534A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4245,7 +4245,7 @@ CV53500   CVASL1-31  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV535A0   3                                                                                         
 CV535A1   PVOL    101325.0                          * PATM                                                                          
-CV535A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV535A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV535A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV535A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV535A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4262,7 +4262,7 @@ CV53600   CVASL1-32  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV536A0   3                                                                                         
 CV536A1   PVOL    101325.0                          * PATM                                                                          
-CV536A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV536A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV536A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV536A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV536A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4279,7 +4279,7 @@ CV53700   CVASL1-33  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV537A0   3                                                                                         
 CV537A1   PVOL    101325.0                          * PATM                                                                          
-CV537A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV537A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV537A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV537A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV537A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4296,7 +4296,7 @@ CV53800   CVASL1-34  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV538A0   3                                                                                         
 CV538A1   PVOL    101325.0                          * PATM                                                                          
-CV538A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV538A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV538A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV538A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV538A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4313,7 +4313,7 @@ CV53900   CVASL1-35  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV53901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV539A0   3                                                                                         
 CV539A1   PVOL    101325.0                          * PATM                                                                          
-CV539A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV539A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV539A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV539A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV539A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4330,7 +4330,7 @@ CV52000   CVASL1-36  2  2  2                        * noneq, NOuSED, 1=L0/2=L1/3
 CV52001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV520A0   3                                                                                         
 CV520A1   PVOL    101325.0                          * PATM                                                                          
-CV520A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV520A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV520A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV520A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV520A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4909,8 +4909,8 @@ CV638B2   14.5         0.1065625                    * 775 x 550 x 250
 CV68200   CVASL2-1   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV68201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV682A0   3                                                                                         
-CV682A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV682A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV682A1   PVOL    101325.0                          * PATM                                                                          
+CV682A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV682A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV682A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV682A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4926,8 +4926,8 @@ CV682B2   24.5          0.495                       * 1800 x 1100 x 250
 CV68500   CVASL2-2   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV68501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV685A0   3                                                                                         
-CV685A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV685A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV685A1   PVOL    101325.0                          * PATM                                                                          
+CV685A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV685A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV685A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV685A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4943,8 +4943,8 @@ CV685B2   24.5          0.1203125                   * 875 x 550 x 250
 CV68600   CVASL2-3   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV68601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV686A0   3                                                                                         
-CV686A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV686A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV686A1   PVOL    101325.0                          * PATM                                                                          
+CV686A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV686A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV686A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV686A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4960,8 +4960,8 @@ CV686B2   24.5          0.0415625                   * 475 x 350 x 250
 CV74700   CVASL2-4   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV74701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV747A0   3                                                                                         
-CV747A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV747A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV747A1   PVOL    101325.0                          * PATM                                                                          
+CV747A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV747A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV747A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV747A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4977,8 +4977,8 @@ CV747B2   24.5          0.096875                    * 775 x 500 x 250
 CV68700   CVASL2-5   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV68701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV687A0   3                                                                                         
-CV687A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV687A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV687A1   PVOL    101325.0                          * PATM                                                                          
+CV687A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV687A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV687A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV687A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -4994,8 +4994,8 @@ CV687B2   24.5          0.18                        * 1200 X 600 X 250
 CV69200   CVASL2-6   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV69201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV692A0   3                                                                                         
-CV692A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV692A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV692A1   PVOL    101325.0                          * PATM                                                                         
+CV692A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV692A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV692A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV692A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -5011,8 +5011,8 @@ CV692B2   24.5          0.11875                     * 950 X 500 X 250
 CV69300   CVASL2-7   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV69301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV693A0   3                                                                                         
-CV693A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV693A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV693A1   PVOL    101325.0                          * PATM                                                                          
+CV693A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV693A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV693A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV693A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -5028,8 +5028,8 @@ CV693B2   24.5          0.03125                     * 500 X 250 X 250
 CV69100   CVASL2-8   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV69101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV691A0   3                                                                                         
-CV691A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV691A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV691A1   PVOL    101325.0                          * PATM                                                                         
+CV691A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV691A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV691A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV691A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -5045,8 +5045,8 @@ CV691B2   24.5          0.1125                      * 900 X 500 X 250
 CV69400   CVASL2-9   2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV69401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV694A0   3                                                                                         
-CV694A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV694A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV694A1   PVOL    101325.0                          * PATM                                                                          
+CV694A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV694A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV694A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV694A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -5062,8 +5062,8 @@ CV694B2   24.5          0.10625                     * 850 X 500 X 250
 CV68900   CVASL2-10   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV68901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV689A0   3                                                                                         
-CV689A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV689A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV689A1   PVOL    101325.0                          * PATM                                                                          
+CV689A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV689A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV689A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV689A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -5079,8 +5079,8 @@ CV689B2   24.5          0.0890625                   * 750 X 475 X 250
 CV69500   CVASL2-11   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV69501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV695A0   3                                                                                         
-CV695A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV695A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV695A1   PVOL    101325.0                          * PATM                                                                          
+CV695A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV695A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV695A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV695A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -5096,8 +5096,8 @@ CV695B2   24.5          0.07                        * 700 X 400 X 250
 CV69600   CVASL2-12   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV69601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV696A0   3                                                                                         
-CV696A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV696A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV696A1   PVOL    101325.0                          * PATM                                                                        
+CV696A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV696A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV696A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV696A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -5113,8 +5113,8 @@ CV696B2   24.5          0.06                        * 600 X 400 X 250
 CV70100   CVASL2-13   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
 CV70101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV701A0   3                                                                                         
-CV701A1   PVOL    101235.0                          * PATM-90Pa                                                                          
-CV701A3   TATM    298.15    RHUM  0.6               * 25. deg C                                      
+CV701A1   PVOL    101325.0                          * PATM                                                                          
+CV701A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                       
 CV701A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV701A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV701A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -5123,6 +5123,125 @@ CV701A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***                                                                                               
 CV701B1   23.9          0.0                                                         
 CV701B2   24.5          0.18                        * 1200 X 600 X 250
+*
+*-------------------------------------------------------
+* CV702 - CVASL2-14 - Connection Volume Air Supply L2 14
+*-------------------------------------------------------                                                                
+CV70200   CVASL2-14   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV70201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV702A0   3                                                                                         
+CV702A1   PVOL    101325.0                          * PATM                                                                       
+CV702A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
+CV702A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV702A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV702A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                               
+CV702B1   23.9          0.0                                                         
+CV702B2   24.5          0.165                       * 1100 X 600 X 250
+*
+*-------------------------------------------------------
+* CV703 - CVASL2-15 - Connection Volume Air Supply L2 15
+*-------------------------------------------------------                                                                
+CV70300   CVASL2-15   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV70301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV703A0   3                                                                                         
+CV703A1   PVOL    101325.0                          * PATM                                                                       
+CV703A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
+CV703A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV703A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV703A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                               
+CV703B1   23.9          0.0                                                         
+CV703B2   24.5          0.165                       * 1100 X 600 X 250
+*
+*-------------------------------------------------------
+* CV704 - CVASL2-16 - Connection Volume Air Supply L2 16
+*-------------------------------------------------------                                                                
+CV70400   CVASL2-16   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV70401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV704A0   3                                                                                         
+CV704A1   PVOL    101325.0                          * PATM                                                                       
+CV704A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
+CV704A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV704A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV704A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                               
+CV704B1   23.95         0.0                                                         
+CV704B2   24.5          0.15125                     * 1100 X 550 X 250
+*
+*-------------------------------------------------------
+* CV705 - CVASL2-17 - Connection Volume Air Supply L2 17
+*-------------------------------------------------------                                                                
+CV70500   CVASL2-17   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV70501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV705A0   3                                                                                         
+CV705A1   PVOL    101325.0                          * PATM                                                                       
+CV705A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
+CV705A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV705A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV705A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                               
+CV705B1   24.2          0.0                                                         
+CV705B2   24.5          0.03375                     * 450 X 300 X 250
+*
+*-------------------------------------------------------
+* CV706 - CVASL2-18 - Connection Volume Air Supply L2 18
+*-------------------------------------------------------                                                                
+CV70600   CVASL2-18   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV70601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV706A0   3                                                                                         
+CV706A1   PVOL    101325.0                          * PATM                                                                       
+CV706A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
+CV706A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV706A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV706A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                               
+CV706B1   24.25         0.0                                                         
+CV706B2   24.5          0.01875                     * 300 X 250 X 250
+*
+*-------------------------------------------------------
+* CV707 - CVASL2-19 - Connection Volume Air Supply L2 19
+*-------------------------------------------------------                                                                
+CV70700   CVASL2-19   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV70701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV707A0   3                                                                                         
+CV707A1   PVOL    101325.0                          * PATM                                                                       
+CV707A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
+CV707A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV707A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV707A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                               
+CV707B1   23.95         0.0                                                         
+CV707B2   24.5          0.12375                     * 900 X 550 X 250
+*
+*-------------------------------------------------------
+* CV708 - CVASL2-20 - Connection Volume Air Supply L2 20
+*-------------------------------------------------------                                                                
+CV70800   CVASL2-20   2  2  1                       * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV70801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
+CV708A0   3                                                                                         
+CV708A1   PVOL    101325.0                          * PATM                                                                       
+CV708A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
+CV708A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV708A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV708A8   MLFR.8  0.01                              * Filled with air (Ar)
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                               
+CV708B1   24.125        0.0                                                         
+CV708B2   24.5          0.046875                    * 500 X 375 X 250
 *
 ***
 *************************************************************************************************
@@ -10929,6 +11048,231 @@ FL033T0   1   033
 *
 TF03300   FL033_vel  1    1.0
 TF03310   0.0         4.11316872                                * velocity for 1999 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S722          FM    TO     FM     TO
+*-------------------------------------------------------
+FL03400   HVAC-S722    701   702  24.2  24.2            
+FL03401   0.66    4.8    1.0                                    * A, L, FRACT OPEN, DIAM
+FL03402	  3     0    0     0                                    
+FL03403   1.0   1.0                                             
+FL034S0   0.66    4.8    0.776                     
+FL0340F   23.9    24.5
+FL0340T   23.9    24.5
+FL034T0   1   034        
+*
+TF03400   FL034_vel  1    1.0
+TF03410   0.0         7.06944444                                * velocity for 16797 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S720          FM    TO     FM     TO
+*-------------------------------------------------------
+FL03500   HVAC-S720    702   703  24.2  24.2            
+FL03501   0.6     9.8    1.0                                    * A, L, FRACT OPEN, DIAM
+FL03502	  3     0    0     0                                    
+FL03503   1.0   1.0                                             
+FL035S0   0.6     9.8    0.75                     
+FL0350F   23.9    24.5
+FL0350T   23.9    24.5
+FL035T0   1   035        
+*
+TF03500   FL035_vel  1    1.0
+TF03510   0.0         7.32916667                                * velocity for 15831 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S721          FM    TO     FM     TO
+*-------------------------------------------------------
+FL03600   HVAC-S721    702   203  24.4  24.4            
+FL03601   0.08    3.0    1.0                                    * A, L, FRACT OPEN, DIAM
+FL03602	  3     0    0     0                                    
+FL03603   1.0   1.0                                             
+FL036S0   0.08    3.0    0.267                     
+FL0360F   24.3    24.5
+FL0360T   24.3    24.5
+FL036T0   1   036        
+*
+TF03600   FL036_vel  1    1.0
+TF03610   0.0         3.35416667                                * velocity for 966 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S719          FM    TO     FM     TO
+*-------------------------------------------------------
+FL03700   HVAC-S719    703   242  24.35  24.35            
+FL03701   0.105   13.2   1.0                                    * A, L, FRACT OPEN, DIAM
+FL03702	  3     0    0     0                                    
+FL03703   1.0   1.0                                             
+FL037S0   0.105   13.2   0.323                     
+FL0370F   24.2    24.5
+FL0370T   24.2    24.5
+FL037T0   1   037        
+*
+TF03700   FL037_vel  1    1.0
+TF03710   0.0         3.96031746                                * velocity for 1497 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S718          FM    TO     FM     TO
+*-------------------------------------------------------
+FL03800   HVAC-S718    703   704  24.225  24.225            
+FL03801   0.605   9.4   1.0                                     * A, L, FRACT OPEN, DIAM
+FL03802	  3     0    0     0                                    
+FL03803   1.0   1.0                                             
+FL038S0   0.605   9.4   0.733                     
+FL0380F   23.95    24.5
+FL0380T   23.95    24.5
+FL038T0   1   038        
+*
+TF03800   FL038_vel  1    1.0
+TF03810   0.0         6.58126722                                * velocity for 14334 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S717          FM    TO     FM     TO
+*-------------------------------------------------------
+FL03900   HVAC-S717    704   705  24.35  24.35            
+FL03901   0.135   9.4   1.0                                     * A, L, FRACT OPEN, DIAM
+FL03902	  3     0    0     0                                    
+FL03903   1.0   1.0                                             
+FL039S0   0.135   9.4   0.36                     
+FL0390F   24.2    24.5
+FL0390T   24.2    24.5
+FL039T0   1   039        
+*
+TF03900   FL039_vel  1    1.0
+TF03910   0.0         4.30658436                                * velocity for 2093 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S714          FM    TO     FM     TO
+*-------------------------------------------------------
+FL04000   HVAC-S714    705   706  24.375  24.375            
+FL04001   0.075   6.0   1.0                                     * A, L, FRACT OPEN, DIAM
+FL04002	  3     0    0     0                                    
+FL04003   1.0   1.0                                             
+FL040S0   0.075   6.0   0.273                     
+FL0400F   24.25    24.5
+FL0400T   24.25    24.5
+FL040T0   1   040        
+*
+TF04000   FL040_vel  1    1.0
+TF04010   0.0         3.34444444                                * velocity for 903 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S711          FM    TO     FM     TO
+*-------------------------------------------------------
+FL04100   HVAC-S711    706   289  24.425  24.425            
+FL04101   0.03    29.0   1.0                                    * A, L, FRACT OPEN, DIAM
+FL04102	  3     0    0     0                                    
+FL04103   1.0   1.0                                             
+FL041S0   0.03    29.0   0.171                    
+FL0410F   24.35    24.5
+FL0410T   24.35    24.5
+FL041T0   1   041        
+*
+TF04100   FL041_vel  1    1.0
+TF04110   0.0         2.40740741                                * velocity for 260 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S716          FM    TO     FM     TO
+*-------------------------------------------------------
+FL04200   HVAC-S716    705   234  24.375  24.375            
+FL04201   0.0875    9.8   1.0                                   * A, L, FRACT OPEN, DIAM
+FL04202	  3     0    0     0                                    
+FL04203   1.0   1.0                                             
+FL042S0   0.0875    9.8   0.292                    
+FL0420F   24.25    24.5
+FL0420T   24.25    24.5
+FL042T0   1   042        
+*
+TF04200   FL042_vel  1    1.0
+TF04210   0.0         3.77777778                                * velocity for 1190 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S712          FM    TO     FM     TO
+*-------------------------------------------------------
+FL04300   HVAC-S712    706   282  24.4  24.4            
+FL04301   0.06     9.0   1.0                                    * A, L, FRACT OPEN, DIAM
+FL04302	  3     0    0     0                                    
+FL04303   1.0   1.0                                             
+FL043S0   0.06     9.0   0.24                    
+FL0430F   24.3    24.5
+FL0430T   24.3    24.5
+FL043T0   1   043        
+*
+TF04300   FL043_vel  1    1.0
+TF04310   0.0         2.97685185                                * velocity for 643 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S712          FM    TO     FM     TO
+*-------------------------------------------------------
+FL04400   HVAC-S712    704   707  24.225  24.225            
+FL04401   0.495    13.5   1.0                                   * A, L, FRACT OPEN, DIAM
+FL04402	  3     0    0     0                                    
+FL04403   1.0   1.0                                             
+FL044S0   0.495    13.5   0.683                    
+FL0440F   23.95    24.5
+FL0440T   23.95    24.5
+FL044T0   1   044        
+*
+TF04400   FL044_vel  1    1.0
+TF04410   0.0         6.86924804                                * velocity for 12241 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S709-1          FM    TO     FM     TO
+*-------------------------------------------------------
+FL03200   HVAC-S709-1    707   242  24.3  24.3            
+FL03201   0.28     1.2   1.0                                    * A, L, FRACT OPEN, DIAM
+FL03202	  3     0    0     0                                    
+FL03203   1.0   1.0                                             
+FL032S0   0.28     1.2   0.509                    
+FL0320F   24.1     24.5
+FL0320T   24.1     24.5
+FL032T0   1   032        
+*
+TF03200   FL032_vel  1    1.0
+TF03210   0.0         5.54166667                                * velocity for 5586 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S709-2          FM    TO     FM     TO
+*-------------------------------------------------------
+FL04500   HVAC-S709-2    707   231  24.325  24.325            
+FL04501   0.175     9.7   1.0                                    * A, L, FRACT OPEN, DIAM
+FL04502	  3     0    0     0                                    
+FL04503   1.0   1.0                                             
+FL045S0   0.175     9.7   0.412                    
+FL0450F   24.15     24.5
+FL0450T   24.15     24.5
+FL045T0   1   045        
+*
+TF04500   FL045_vel  1    1.0
+TF04510   0.0         4.94920635                                * velocity for 3118 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S708          FM    TO     FM     TO
+*-------------------------------------------------------
+FL04600   HVAC-S708    707   708  24.3125  24.3125            
+FL04601   0.1875    9.8   1.0                                   * A, L, FRACT OPEN, DIAM
+FL04602	  3     0    0     0                                    
+FL04603   1.0   1.0                                             
+FL046S0   0.1875    9.8   0.429                    
+FL0460F   24.125     24.5
+FL0460T   24.125     24.5
+FL046T0   1   046        
+*
+TF04600   FL046_vel  1    1.0
+TF04610   0.0         5.24                                      * velocity for 3537 m3/h
+*
+*-------------------------------------------------------
+* HVAC-S707          FM    TO     FM     TO
+*-------------------------------------------------------
+FL05400   HVAC-S707    708   290  24.45  24.45            
+FL05401   0.015    0.8   1.0                                    * A, L, FRACT OPEN, DIAM
+FL05402	  3     0    0     0                                    
+FL05403   1.0   1.0                                             
+FL054S0   0.015    0.8   0.12                   
+FL0540F   24.4     24.5
+FL0540T   24.4     24.5
+FL054T0   1   054        
+*
+TF05400   FL054_vel  1    1.0
+TF05410   0.0         1.40740741                                * velocity for 76 m3/h
 *
 ***
 *-------------------------------------------------------
