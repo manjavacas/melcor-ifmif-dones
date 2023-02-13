@@ -30,34 +30,70 @@ NCG444    HE    7                             * MATERIAL 7 IS HE
 NCG555    AR    8                             * MATERIAL 8 IS AR
 *
 ****************************************************************************************************************************************
-*         										           CONSTANTS                 			    		  						   *
-****************************************************************************************************************************************
-*
-****** CAUDAL ENTRADA ArPU ******
-CF10000   QP  EQUALS  1  0.0  35.64601176           * Caudal de entrada al purificador. Nippon Gases -> 80 Nm3/h para todas las salas
-CF10010   1.0  0.0  TIME
-*
-****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 35.64601176 m3/h) -> proporcional a 80 Nm3/h para solo R016
-CF10110   1.0  0.0  CFVALU.100                      * PARAMETRO A OPTIMIZAR
-*
-****** CAUDAL TOTAL SGS ******
-CF10200   QT  EQUALS  1  1.0                        * R016 (mas adelante: R016 + R009 + R129)
-CF10210   1.0  0.0  CFVALU.103
-*
-****** CAUDAL LLC *********
-CF10300   Q-LLC  EQUALS  1  0.0  11747.14318        * Caudal entrada/salida R016
-CF10310   1.0  0.0  TIME 
-*
-****************************************************************************************************************************************
 *        												CV (Control Volumes) INPUT									                   *
 ****************************************************************************************************************************************
+********************* ENVIRONMENT ********************************** 
+*-----------------------------------------------                                                                
+* CV400 - ENV-IN - Environment for INLET                                                                 
+*-----------------------------------------------                                                                
+CV40000   ENV-IN  2  2  5          		                                           
+CV40001   0   -1                                    * Time-independent				       
+CV400A0   3                                                                                         
+CV400A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV400A3   TATM    293.15  RHUM  0.6    	                                                 
+CV400A4   MLFR.4  0.78                              * Filled with air (N2)
+CV400A6   MLFR.5  0.21                              * Filled with air (O2)
+CV400A8   MLFR.8  0.01                              * Filled with air (Ar) 
 *
-************************************************* L0 ROOMS *************************************************************
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV400B1   0.0        0.0                                                          
+CV400B2  50.0   1000000.0              	            * Random huge volume   
+*
+*-----------------------------------------------                                                                
+* CV401 - ENV-OUT - Environment for EXHAUST                                                                
+*-----------------------------------------------                                                                
+CV40100   ENV-OUT  2  2  5          		                                           
+CV40101   0   0                                     				       
+CV401A0   3                                                                                         
+CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
+CV401A3   TATM    293.15  RHUM  0.6    	                                                 
+CV401A4   MLFR.4  0.78                              * Filled with air (N2)
+CV401A6   MLFR.5  0.21                              * Filled with air (O2)
+CV401A8   MLFR.8  0.01                              * Filled with air (Ar) 
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV401B1   0.0        0.0                                                          
+CV401B2  50.0   1000000.0              	            * Random huge volume  
+* 
+*-----------------------------------------------                                                                
+* CV402 - ENV-GRWTS - Environment (G-RWTS)
+*-----------------------------------------------                                                            
+CV40200   G-RWTS  2  2  5          		                                   
+CV40201   0   0		                                  				            
+CV402A0   3                                                                                         
+CV402A1   PVOL    101325.0                           * 101325Pa = 1atm                                                                     
+CV402A3   TATM    293.15  RHUM  0.6    	                                                  
+CV402A4   MLFR.4  0.78                               * Filled with air (O2)
+CV402A6   MLFR.5  0.21                               * Filled with air (N2)
+CV402A8   MLFR.8  0.01                               * Filled with air (Ar) 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV402B1   0.0        0.0                                                          
+CV402B2   50.0       1000000.0              	     * Random huge volume                                                          
+***      
+* 
+*-----------------------------------------------------------------------------------------------------------------------
 * 
 * C0 = Patm ; C1 = -55 Pa ; C2a = -63 Pa ; C2 = -90 Pa ; C3a = -110 Pa ; C3 = -130 Pa ; C4a = -195 Pa ; C4 = -260 Pa
 * 
 *----------------------------------------------------------------------------------------------------------------------- 
+*
+************************************************* L0 ROOMS *************************************************************
 *
 *-----------------------------------------------                                                                
 * CV001 - R001 - Loading area (C1)                                                                    
@@ -454,7 +490,7 @@ CV026B2   8.5      24771.0                          * 22122.8 m3 (2PNSLP)
 ***
 *
 *-----------------------------------------------                                                                
-* CV027 - R027 - Electric room SIC-2Train B (?)                                                          
+* CV027 - R027 - Electric room SIC-2 Train B (?)                                                          
 *-----------------------------------------------     
 ***
 *
@@ -871,309 +907,24 @@ CV096A8   MLFR.8  0.01                              * Filled with air (Ar)
 CV096B1   0.0      0.0                                                            
 CV096B2   7.5      421.0                            * 281.8 m3 (2PNSLP)                          
 ***
-*      
-*********************************************************** Ar SUPPLY **************************************************************
-*
-*-----------------------------------------------                                                                
-* CV900 - ArSS - Ar Supply Subsystem                                                                    
-*-----------------------------------------------                                                                
-CV90000   ARSS  2  0  1                                                            
-CV90001   0   -1		                             * Fog allowed (default)
-CV900A0   3                                                                                         
-CV900A1   PVOL  1200000.0                            * 12 Bar
-CV900A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C; 0% rel. humidity
-CV900A3   MLFR.8  0.99999                            * Filled with Ar -> 99.999%   
-CV900A4   MLFR.5  0.0000021                          * Initial 02 -> 21% de 0.001% 
-CV900A5   MLFR.4  0.0000079                          * Initial N2 -> 79% de 0.001%    
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV900B1   0.0      0.0                                                            
-CV900B2   50.0     1000000.0                             
-***
-*
-*-----------------------------------------------                                                                
-* CV901 - ArPU - Argon Purification Unit (C4)                                                                    
-*-----------------------------------------------                                                                
-CV90100   ArPU  2  0  1                                                   
-CV90101   0   0		                                * Fog allowed (default)
-CV901A0   3                                                                                         
-CV901A1   PVOL  101065.0                            * 101325Pa-260Pa 
-CV901A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV901A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV901A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV901A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV901B1   0.0      0.0                                                            
-CV901B2   6.0      942.48                           * Asumimos 8 cilindros de R = 2.5m y H = 6m
-***
-*
-*-----------------------------------------------                                                                
-* CV902 - SGS-AUX-1 (C4)                                                                    
-*-----------------------------------------------                                                                
-CV90200   SGS-AUX-1  2  0  1                                                   
-CV90201   0   0		                                * Fog allowed (default)
-CV902A0   3                                                                                         
-CV902A1   PVOL  101065.0                            * 101325Pa-260Pa 
-CV902A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV902A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV902A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV902A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV902B1   6.2      0.0                                                            
-CV902B2   7.2      1.0                              * 1m x 1m x 1m                                                   
-***
-*-----------------------------------------------                                                                
-* CV903 - SGS-AUX-2 (C4)                                                                    
-*-----------------------------------------------                                                                
-CV90300   SGS-AUX-2  2  0  1                                                   
-CV90301   0   0		                                * Fog allowed (default)
-CV903A0   3                                                                                         
-CV903A1   PVOL  101065.0                            * 101325Pa-260Pa 
-CV903A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV903A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV903A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV903A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV903B1   5.2      0.0                                                            
-CV903B2   7.2      2.0                              * 2m x 1m x 1m                                                   
-***
-*-----------------------------------------------                                                                
-* CV904 - SGS-AUX-3 (C4)                                                                    
-*-----------------------------------------------                                                                
-CV90400   SGS-AUX-3  2  0  1                                                   
-CV90401   0   0		                                * Fog allowed (default)
-CV904A0   3                                                                                         
-CV904A1   PVOL  101065.0                            * 101325Pa-260Pa 
-CV904A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV904A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV904A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV904A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-***
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV904B1   5.2      0.0                                                            
-CV904B2   7.2      2.0                              * 2m x 1m x 1m                                                   
-***
-*-----------------------------------------------                                                                
-* CV905 - SGS-AUX-4 (C4)                                                                    
-*-----------------------------------------------                                                                
-CV90500   SGS-AUX-4  2  0  1                                                   
-CV90501   0   0		                                * Fog allowed (default)
-CV905A0   3                                                                                         
-CV905A1   PVOL  101065.0                            * 101325Pa-260Pa 
-CV905A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV905A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV905A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV905A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV905B1   6.2      0.0                                                            
-CV905B2   7.2      1.0                              * 1m x 1m x 1m                                                   
-***
-*-----------------------------------------------                                                                
-* CV906 - SGS-AUX-5 (C4)                                                                    
-*-----------------------------------------------                                                                
-CV90600   SGS-AUX-5  2  0  1                                                   
-CV90601   0   0		                                * Fog allowed (default)
-CV906A0   3                                                                                         
-CV906A1   PVOL  101065.0                            * 101325Pa-260Pa 
-CV906A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV906A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV906A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV906A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV906B1   5.2      0.0                                                            
-CV906B2   7.2      2.0                              * 2m x 1m x 1m                                                                                                    
-***
-******* Energy source for SGS-AUX-5 *******           
-*                                           
-CF90100 'AUX-5-Energy-src' EQUALS 1 1.0             * Energy source
-CF90110  1.0  0.0  CVH-TVAP.906                     * Temp AUX-5 = 290.95K (mantener temp cte.)
-*                                                                                                                                 
-******* Sink SGS-AUX-5-O2 *******                    
-*                                           
-CV906C1  MASS.5 902 3                       
-CV906C2  TE 901 9                           
-*
-CF90200 'AUX-5-O2-sink' EQUALS 1 -2.4425E-04        * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
-CF90210  1.0  0.0  CVH-MASS.5.906                                      
-*
-******* Sink SGS-AUX-5-N2 *******                    
-*                                           
-CV906C3  MASS.4 903 3                       
-CV906C4  TE 901 9                           
-*
-CF90300 'AUX-5-N2-sink' EQUALS 1 -5.425E-05         * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
-CF90310  1.0  0.0  CVH-MASS.4.906   
-*
-******* Sink SGS-AUX-5-H2O *******                    
-*                                           
-CV906C5  MASS.3 904 3                       
-CV906C6  TE 901 9                           
-*
-CF90400 'AUX-5-H2O-sink' EQUALS 1 -2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
-CF90410  1.0  0.0  CVH-MASS.3.906   
-*
-*-----------------------------------------------                                                                
-* CV907 - SGS-AUX-6 (C3)                                                                    
-*-----------------------------------------------                                                                
-CV90700   SGS-AUX-6  2  0  1                                                   
-CV90701   0   0		                                * Fog allowed (default)
-CV907A0   3                                                                                         
-CV907A1   PVOL  101195.0                            * 101325Pa-130Pa 
-CV907A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV907A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV907A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV907A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-***
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV907B1   5.0      0.0                                                            
-CV907B2   6.0      1.0                              * 1m x 1m x 1m  
-***
-******* Energy source from SGS-AUX-6 *******           
-*                                           
-CF90000 'AUX-6-Energy-src' EQUALS 1 1.0             * Energy source
-CF90010  1.0  0.0  CVH-TVAP.906                     * Temp AUX-6 = 290.95K (mantener temp cte.)
-*   
-******* Source SGS-AUX-6-O2 *******                    
-*                                           
-CV907C1  MASS.5 905 3                       
-CV907C2  TE 900 9                           
-*
-CF90500 'AUX-6-O2-src' EQUALS 1 2.4425E-04          * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
-CF90510  1.0  0.0  CVH-MASS.5.906                                      
-*
-******* Source SGS-AUX-6-N2 *******                    
-*                                           
-CV907C3  MASS.4 906 3                       
-CV907C4  TE 900 9                           
-*
-CF90600 'AUX-6-N2-src' EQUALS 1 5.425E-05           * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
-CF90610  1.0  0.0  CVH-MASS.4.906  
-*
-******* Source SGS-AUX-6-H2O *******                    
-*                                           
-CV907C5  MASS.3 907 3                       
-CV907C6  TE 900 9                           
-*
-CF90700 'AUX-6-H2O-src' EQUALS 1 2.75E-04           * Eficiencia (= 0.99) / 3600 = 2.75E-04
-CF90710  1.0  0.0  CVH-MASS.3.906 
-*
-****************************************************************************************************************************************
-*
-*-----------------------------------------------                                                                
-* CV400 - ENV-IN - Environment for INLET                                                                 
-*-----------------------------------------------                                                                
-CV40000   ENV-IN  2  2  5          		                                           
-CV40001   0   -1                                    * Time-independent				       
-CV400A0   3                                                                                         
-CV400A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-CV400A3   TATM    293.15  RHUM  0.6    	                                                 
-CV400A8   MLFR.4  0.78                              * Filled with air (N2)
-CV400A9   MLFR.5  0.22                              * Filled with air (O2)
-*
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV400B1   0.0        0.0                                                          
-CV400B2   50.0       1000000.0              	    * Random huge volume   
-*
-*-----------------------------------------------                                                                
-* CV401 - ENV-OUT - Environment for OUTLET                                                                 
-*-----------------------------------------------                                                                
-CV40100   ENV-OUT  2  2  5          		                                           
-CV40101   0   0                                   				       
-CV401A0   3                                                                                         
-CV401A1   PVOL    101325.0                          * 101325Pa = 1atm                                                                     
-CV401A3   TATM    293.15  RHUM  0.6    	                                                 
-CV401A8   MLFR.4  0.78                              * Filled with air (N2)
-CV401A9   MLFR.5  0.22                              * Filled with air (O2)
-*
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV401B1   0.0        0.0                                                          
-CV401B2   50.0       1000000.0              	    * Random huge volume   
-*
-*-----------------------------------------------                                                                
-* CV402 - ENV-GRWTS - Environment (G-RWTS)
-*-----------------------------------------------                                                            
-CV40200   G-RWTS  2  2  5          		                                   
-CV40201   0   0		                                 * 				            
-CV402A0   3                                                                                         
-CV402A1   PVOL    101325.0                           * 101325Pa = 1atm                                                                     
-CV402A3   TATM    293.15  RHUM  0.6    	                                                  
-CV402A8   MLFR.4  0.79                               * Filled with air (O2)
-CV402A9   MLFR.5  0.21                               * Filled with air (N2)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV402B1   0.0        0.0                                                          
-CV402B2   50.0       1000000.0              	     * Random huge volume                                                          
-***      
 *  
 *-----------------------------------------------                                                                
-* CV409 - HVAC-C3 - HVAC C3 Collector
-*-----------------------------------------------                                                            
-CV40900   HVAC-C3  2  2  5          		                                   
-CV40901   0   0		                                 * 			            
-CV409A0   3                                                                                         
-CV409A1   PVOL    101095.0                           * 101325Pa - 130 Pa                                                                     
-CV409A3   TATM    293.15  RHUM  0.6    	                                                  
-CV409A8   MLFR.4  0.79                               * Filled with air (O2)
-CV409A9   MLFR.5  0.21                               * Filled with air (N2)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV409B1   0.0        0.0                                                          
-CV409B2   50.0       400.0              	         * Random huge volume                                                          
-*** 
-*
+* CV129 - R129 - Target interface room (C3 - C4 en 2PNSLP)                                                                   
 *-----------------------------------------------                                                                
-* CV410 - HVAC-C2 - HVAC C2 Collector
-*-----------------------------------------------                                                            
-CV41000   HVAC-C2  2  2  5          		                                   
-CV41001   0   0		                                 * 			            
-CV410A0   3                                                                                         
-CV410A1   PVOL    101235.0                           * 101325Pa - 90 Pa                                                                     
-CV410A3   TATM    293.15  RHUM  0.6    	                                                  
-CV410A8   MLFR.4  0.79                               * Filled with air (O2)
-CV410A9   MLFR.5  0.21                               * Filled with air (N2)
+CV12900   R129  2  2  2                             * noneq, NOuSED, 1=L0/2=L1/3=L2/4=L3                                  
+CV12901   0   -1		                            * fog ALLOWED (DEF), TIME-INDEP
+CV129A0   3                                                                                         
+CV129A1   PVOL    101195.0                          * 101325-130Pa                                                                          
+CV129A3   TATM    298.15    RHUM  0.0               * 25. deg C, room temp.                                      
+CV129A5   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV129A6   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV129A8   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV410B1   0.0        0.0                                                          
-CV410B2   50.0       400.0              	         * Random huge volume                                                          
-***      
-*
-*-----------------------------------------------                                                                
-* CV411 - HVAC-C4 - HVAC C4 Collector
-*-----------------------------------------------                                                            
-CV41100   HVAC-C4  2  2  5          		                                   
-CV41101   0   0		                                 * 				            
-CV411A0   3                                                                                         
-CV411A1   PVOL    101065.0                           * 101325Pa - 130 Pa                                                                     
-CV411A3   TATM    293.15  RHUM  0.6    	                                                  
-CV411A8   MLFR.4  0.79                               * Filled with air (O2)
-CV411A9   MLFR.5  0.21                               * Filled with air (N2)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV411B1   0.0        0.0                                                          
-CV411B2   50.0       400.0              	         * Random huge volume                                                          
-***      
-*  
+CV129B1   9.0      0.0                                                         
+CV129B2   14.5     529.0                            * 209.4 m3 (2PNSLP)  
+***
 ********************************** MANIFOLDS ********************************************
 *
 *-----------------------------------------------
@@ -1183,9 +934,10 @@ CV50000   AS-1  2  2  1                             * noneq, NOuSED, 1=L0/2=L1/3
 CV50001   0   0                                     * fog ALLOWED (DEF)
 CV500A0   3                                                                                         
 CV500A1   PVOL    101325.0                          * PATM                                                                          
-CV500A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV500A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                         
 CV500A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV500A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV500A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV500A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1200,9 +952,10 @@ CV55800   AS-2  2  2  1                             * noneq, NOuSED, 1=L0/2=L1/3
 CV55801   0   0                                     * fog ALLOWED (DEF)
 CV558A0   3                                                                                         
 CV558A1   PVOL    101325.0                          * PATM                                                                          
-CV558A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV558A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                        
 CV558A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV558A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV558A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV558A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1217,9 +970,10 @@ CV57300   AS-3  2  2  1                             * noneq, NOuSED, 1=L0/2=L1/3
 CV57301   0   0                                     * fog ALLOWED (DEF)
 CV573A0   3                                                                                         
 CV573A1   PVOL    101325.0                          * PATM                                                                          
-CV573A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV573A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                          
 CV573A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV573A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV573A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV573A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1236,7 +990,8 @@ CV600A0   3
 CV600A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV600A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV600A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV600A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV600A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV600A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1253,7 +1008,8 @@ CV656A0   3
 CV656A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV656A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV656A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV656A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV656A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV656A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1270,7 +1026,8 @@ CV677A0   3
 CV677A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV677A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV677A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV677A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV677A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV677A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1287,7 +1044,8 @@ CV678A0   3
 CV678A1   PVOL    101195.0                          * PATM-130Pa                                                                          
 CV678A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV678A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV678A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV678A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV678A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1304,7 +1062,8 @@ CV680A0   3
 CV680A1   PVOL    101065.0                          * PATM-230Pa                                                                          
 CV680A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV680A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV680A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV680A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV680A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1312,7 +1071,9 @@ CV680B1   6.5      0.0
 CV680B2   14.5     3.3                              * FROM L1 TO L0: 750 X 550
 ***   
 *
-******************************** CONNECTION VOLUMES ****************************************
+************************************* CONNECTION VOLUMES ***********************************************
+*
+*--------------------------------------------- L0 ------------------------------------------------------
 *
 *-------------------------------------------------------
 * CV551 - CVASL0-1 - Connection Volume Air Supply L0 1
@@ -1321,9 +1082,10 @@ CV55100   CVASL0-1  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV551A0   3                                                                                         
 CV551A1   PVOL    101325.0                          * PATM                                                                          
-CV551A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV551A3   TATM    287.15    RHUM  0.6               * 14.0 deg C             
 CV551A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV551A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV551A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV551A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1337,9 +1099,10 @@ CV55200   CVASL0-2  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV552A0   3                                                                                         
 CV552A1   PVOL    101325.0                          * PATM                                                                          
-CV552A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV552A3   TATM    287.15    RHUM  0.6               * 14.0 deg C  
 CV552A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV552A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV552A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV552A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1353,9 +1116,10 @@ CV55300   CVASL0-3  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV553A0   3                                                                                         
 CV553A1   PVOL    101325.0                          * PATM                                                                          
-CV553A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV553A3   TATM    287.15    RHUM  0.6               * 14.0 deg C        
 CV553A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV553A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV553A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV553A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1369,9 +1133,10 @@ CV55400   CVASL0-4  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV554A0   3                                                                                         
 CV554A1   PVOL    101325.0                          * PATM                                                                          
-CV554A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV554A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                         
 CV554A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV554A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV554A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV554A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1385,9 +1150,10 @@ CV55500   CVASL0-5  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV555A0   3                                                                                         
 CV555A1   PVOL    101325.0                          * PATM                                                                          
-CV555A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV555A3   TATM    287.15    RHUM  0.6               * 14.0 deg C         
 CV555A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV555A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV555A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV555A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1401,9 +1167,10 @@ CV55600   CVASL0-6  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV556A0   3                                                                                         
 CV556A1   PVOL    101325.0                          * PATM                                                                          
-CV556A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV556A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                  
 CV556A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV556A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV556A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV556A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1417,9 +1184,10 @@ CV55700   CVASL0-7  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV557A0   3                                                                                         
 CV557A1   PVOL    101325.0                          * PATM                                                                          
-CV557A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV557A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                
 CV557A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV557A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV557A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV557A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1433,9 +1201,10 @@ CV55900   CVASL0-8  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV55901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV559A0   3                                                                                         
 CV559A1   PVOL    101325.0                          * PATM                                                                          
-CV559A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV559A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                     
 CV559A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV559A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV559A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV559A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1450,9 +1219,10 @@ CV56000   CVASL0-9  2  2  1                         * noneq, NOuSED, 1=L0/2=L1/3
 CV56001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV560A0   3                                                                                         
 CV560A1   PVOL    101325.0                          * PATM                                                                          
-CV560A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV560A3   TATM    287.15    RHUM  0.6               * 14.0 deg C   
 CV560A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV560A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV560A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV560A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1467,9 +1237,10 @@ CV56100   CVASL0-10  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV561A0   3                                                                                         
 CV561A1   PVOL    101325.0                          * PATM                                                                          
-CV561A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV561A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                 
 CV561A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV561A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV561A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV561A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1484,9 +1255,10 @@ CV56200   CVASL0-11  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV562A0   3                                                                                         
 CV562A1   PVOL    101325.0                          * PATM                                                                          
-CV562A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV562A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                      
 CV562A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV562A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV562A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV562A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1500,9 +1272,10 @@ CV56300   CVASL0-12  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV563A0   3                                                                                         
 CV563A1   PVOL    101325.0                          * PATM                                                                          
-CV563A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV563A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                        
 CV563A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV563A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV563A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV563A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1516,9 +1289,10 @@ CV56400   CVASL0-13  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV564A0   3                                                                                         
 CV564A1   PVOL    101325.0                          * PATM                                                                          
-CV564A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV564A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                           
 CV564A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV564A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV564A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV564A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1533,9 +1307,10 @@ CV56500   CVASL0-14  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV565A0   3                                                                                         
 CV565A1   PVOL    101325.0                          * PATM                                                                          
-CV565A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV565A3   TATM    287.15    RHUM  0.6               * 14.0 deg C              
 CV565A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV565A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV565A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV565A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1550,9 +1325,10 @@ CV56600   CVASL0-15  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV566A0   3                                                                                         
 CV566A1   PVOL    101325.0                          * PATM                                                                          
-CV566A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV566A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                      
 CV566A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV566A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV566A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV566A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1567,9 +1343,10 @@ CV56700   CVASL0-16  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV567A0   3                                                                                         
 CV567A1   PVOL    101325.0                          * PATM                                                                          
-CV567A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV567A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                 
 CV567A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV567A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV567A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV567A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1584,9 +1361,10 @@ CV56800   CVASL0-17  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV568A0   3                                                                                         
 CV568A1   PVOL    101325.0                          * PATM                                                                          
-CV568A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV568A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV568A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV568A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV568A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV568A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1601,9 +1379,10 @@ CV56900   CVASL0-18  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV56901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV569A0   3                                                                                         
 CV569A1   PVOL    101325.0                          * PATM                                                                          
-CV569A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV569A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV569A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV569A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV569A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV569A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1618,9 +1397,10 @@ CV57000   CVASL0-19  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV570A0   3                                                                                         
 CV570A1   PVOL    101325.0                          * PATM                                                                          
-CV570A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV570A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV570A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV570A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV570A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV570A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1635,9 +1415,10 @@ CV57100   CVASL0-20  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV571A0   3                                                                                         
 CV571A1   PVOL    101325.0                          * PATM                                                                          
-CV571A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV571A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV571A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV571A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV571A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV571A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1652,9 +1433,10 @@ CV57200   CVASL0-21  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV572A0   3                                                                                         
 CV572A1   PVOL    101325.0                          * PATM                                                                          
-CV572A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV572A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                
 CV572A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV572A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV572A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV572A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1669,9 +1451,10 @@ CV57400   CVASL0-22  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV574A0   3                                                                                         
 CV574A1   PVOL    101325.0                          * PATM                                                                          
-CV574A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV574A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV574A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV574A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV574A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV574A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1686,9 +1469,10 @@ CV57500   CVASL0-23  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV575A0   3                                                                                         
 CV575A1   PVOL    101325.0                          * PATM                                                                          
-CV575A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV575A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV575A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV575A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV575A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV575A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1703,9 +1487,10 @@ CV57600   CVASL0-24  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV576A0   3                                                                                         
 CV576A1   PVOL    101325.0                          * PATM                                                                          
-CV576A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV576A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV576A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV576A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV576A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV576A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1720,9 +1505,10 @@ CV57700   CVASL0-25  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57701   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV577A0   3                                                                                         
 CV577A1   PVOL    101325.0                          * PATM                                                                          
-CV577A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV577A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                 
 CV577A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV577A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV577A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV577A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1737,9 +1523,10 @@ CV57800   CVASL0-26  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57801   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV578A0   3                                                                                         
 CV578A1   PVOL    101325.0                          * PATM                                                                          
-CV578A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV578A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV578A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV578A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV578A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV578A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1754,9 +1541,10 @@ CV57900   CVASL0-27  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV57901   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV579A0   3                                                                                         
 CV579A1   PVOL    101325.0                          * PATM                                                                          
-CV579A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV579A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                              
 CV579A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV579A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV579A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV579A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1771,9 +1559,10 @@ CV58000   CVASL0-28  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58001   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV580A0   3                                                                                         
 CV580A1   PVOL    101325.0                          * PATM                                                                          
-CV580A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV580A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                            
 CV580A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV580A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV580A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV580A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1788,9 +1577,10 @@ CV58100   CVASL0-29  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58101   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV581A0   3                                                                                         
 CV581A1   PVOL    101325.0                          * PATM                                                                          
-CV581A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV581A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                             
 CV581A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV581A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV581A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV581A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1805,9 +1595,10 @@ CV58200   CVASL0-30  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58201   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV582A0   3                                                                                         
 CV582A1   PVOL    101325.0                          * PATM                                                                          
-CV582A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV582A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                             
 CV582A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV582A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV582A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV582A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1822,9 +1613,10 @@ CV58300   CVASL0-31  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58301   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV583A0   3                                                                                         
 CV583A1   PVOL    101325.0                          * PATM                                                                          
-CV583A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV583A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                             
 CV583A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV583A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV583A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV583A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1839,9 +1631,10 @@ CV58400   CVASL0-32  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58401   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV584A0   3                                                                                         
 CV584A1   PVOL    101325.0                          * PATM                                                                          
-CV584A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV584A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                              
 CV584A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV584A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV584A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV584A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1856,9 +1649,10 @@ CV58500   CVASL0-33  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58501   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV585A0   3                                                                                         
 CV585A1   PVOL    101325.0                          * PATM                                                                          
-CV585A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV585A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
 CV585A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV585A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV585A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV585A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1873,9 +1667,10 @@ CV58600   CVASL0-34  2  2  1                        * noneq, NOuSED, 1=L0/2=L1/3
 CV58601   0   0                                     * fog ALLOWED (DEF), TIME-INDEP
 CV586A0   3                                                                                         
 CV586A1   PVOL    101325.0                          * PATM                                                                          
-CV586A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV586A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
 CV586A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV586A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV586A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV586A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1892,7 +1687,8 @@ CV650A0   3
 CV650A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV650A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV650A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV650A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV650A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV650A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1909,7 +1705,8 @@ CV651A0   3
 CV651A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV651A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV651A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV651A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV651A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV651A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1926,7 +1723,8 @@ CV652A0   3
 CV652A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV652A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV652A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV652A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV652A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV652A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1943,7 +1741,8 @@ CV653A0   3
 CV653A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV653A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV653A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV653A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV653A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV653A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1960,7 +1759,8 @@ CV654A0   3
 CV654A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV654A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV654A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV654A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV654A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV654A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1976,7 +1776,8 @@ CV657A0   3
 CV657A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV657A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV657A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV657A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV657A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV657A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -1992,7 +1793,8 @@ CV658A0   3
 CV658A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV658A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV658A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV658A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV658A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV658A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2008,7 +1810,8 @@ CV659A0   3
 CV659A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV659A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV659A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV659A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV659A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV659A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2024,7 +1827,8 @@ CV660A0   3
 CV660A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV660A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV660A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV660A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV660A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV660A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2040,7 +1844,8 @@ CV661A0   3
 CV661A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV661A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV661A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV661A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV661A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV661A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2056,7 +1861,8 @@ CV662A0   3
 CV662A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV662A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV662A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV662A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV662A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV662A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2072,7 +1878,8 @@ CV663A0   3
 CV663A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV663A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV663A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV663A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV663A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV663A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2088,7 +1895,8 @@ CV664A0   3
 CV664A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV664A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV664A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV664A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV664A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV664A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2104,7 +1912,8 @@ CV665A0   3
 CV665A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV665A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV665A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV665A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV665A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV665A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2120,7 +1929,8 @@ CV666A0   3
 CV666A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV666A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV666A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV666A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV666A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV666A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2136,7 +1946,8 @@ CV667A0   3
 CV667A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV667A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV667A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV667A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV667A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV667A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2152,7 +1963,8 @@ CV668A0   3
 CV668A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV668A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV668A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV668A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV668A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV668A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2168,7 +1980,8 @@ CV669A0   3
 CV669A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV669A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV669A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV669A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV669A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV669A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2184,7 +1997,8 @@ CV670A0   3
 CV670A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV670A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV670A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV670A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV670A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV670A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2200,7 +2014,8 @@ CV671A0   3
 CV671A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV671A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV671A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV671A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV671A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV671A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2216,7 +2031,8 @@ CV672A0   3
 CV672A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV672A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV672A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV672A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV672A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV672A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2232,7 +2048,8 @@ CV673A0   3
 CV673A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV673A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV673A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV673A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV673A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV673A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2248,7 +2065,8 @@ CV674A0   3
 CV674A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV674A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV674A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV674A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV674A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV674A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2264,7 +2082,8 @@ CV675A0   3
 CV675A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV675A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV675A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV675A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV675A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV675A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2280,7 +2099,8 @@ CV676A0   3
 CV676A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV676A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV676A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV676A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV676A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV676A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2296,7 +2116,8 @@ CV655A0   3
 CV655A1   PVOL    101235.0                          * PATM-90Pa                                                                          
 CV655A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV655A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV655A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV655A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV655A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2312,7 +2133,8 @@ CV679A0   3
 CV679A1   PVOL    101195.0                          * PATM-130Pa                                                                          
 CV679A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV679A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV679A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV679A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV679A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -2328,36 +2150,36 @@ CV681A0   3
 CV681A1   PVOL    101065.0                          * PATM-260Pa                                                                          
 CV681A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
 CV681A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV681A6   MLFR.5  0.22                              * FILLED WITH air (O2)
+CV681A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV681A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV681B1   6.95          0.0                                                         
 CV681B2   7.5           0.4125                      * 750 x 550 x 250
 *
-***                                                       
-****************************************************************************************************************************************
-*         												  FP (Flow paths) INPUT						   								   *
-****************************************************************************************************************************************
+***  
+*************************************************************************************************
+*                                         FLOW PATHS
+*************************************************************************************************
+*
+*------------------------------------------- L0 -------------------------------------------------
 *
 ***************************************** AIR SUPPLY ********************************************
 *
 **** AS-L0-1 ****
 *
 *-------------------------------------------------------
-* HVAC-inlet-AS-1          FM    TO     FM     TO
+* HVAC-AS1-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL30000   HVAC-inlet-AS-1    400   500  24.0  24.0            
-FL30001   1.0   0.25    1.0                                     * A, L, FRACT OPEN, DIAM
+FL30000   HVAC-AS1-IN    400   500  7.05  7.05                   
+FL30001   1.3275   8.0    1.0                                   * A, L, FRACT OPEN, DIAM
 FL30002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL30003   1.0   1.0                                             * FORM LOSS
-FL300S0   1.0   0.25   1.0                      
-FL3000F   23.5    24.5
-FL3000T   23.5    24.5
-FL300T0   1   300        
-*
-TF30000   FL300_vel  1    1.0
-TF30010   0.0        12.76638889                                * velocity (45959 m3/h)
+FL300S0   1.3275   8.0   1.118                     
+FL3000F   6.6    7.5
+FL3000T   6.6    7.5
+FL300T0   1   301
 *
 *-------------------------------------------------------
 * HVAC-S513          FM    TO     FM     TO
@@ -2619,19 +2441,16 @@ TF31710   0.0        6.14712219                                 * velocity (9986
 **** AS-L0-2 ****
 *
 *-------------------------------------------------------
-* HVAC-inlet-AS-2          FM    TO     FM     TO
+* HVAC-AS2-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL31800   HVAC-inlet-AS-2    400   558  24.0  24.0            
-FL31801   1.0   0.25    1.0                                     * A, L, FRACT OPEN, DIAM
+FL31800   HVAC-AS2-IN    400   558  7.7  7.7            
+FL31801   1.24   2.0    1.0                                     * A, L, FRACT OPEN, DIAM
 FL31802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL31803   1.0   1.0                                             * FORM LOSS
-FL318S0   1.0   0.25   1.0                      
-FL3180F   23.5    24.5
-FL3180T   23.5    24.5
-FL318T0   1   318        
-*
-TF31800   FL318_vel  1    1.0
-TF31810   0.0        10.38000000                                * velocity (37368 m3/h)
+FL318S0   1.24   2.0   1.055                      
+FL3180F   7.3    8.1
+FL3180T   7.3    8.1
+FL318T0   1   319        
 *
 *-------------------------------------------------------
 * HVAC-S900          FM    TO     FM     TO
@@ -3118,6 +2937,18 @@ TF35010   0.0        3.76068376                                 * velocity (9904
 **** AS-L0-3 ****
 *
 *-------------------------------------------------------
+* HVAC-AS3-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL38300   HVAC-AS3-IN  400   573  7.65  7.65           
+FL38301   1.755   1.1    1.0                                     * A, L, FRACT OPEN, DIAM
+FL38302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL38303   1.0   1.0                                             * FORM LOSS
+FL383S0   1.755   1.1    1.232                     
+FL3830F   7.2    8.1
+FL3830T   7.2    8.1
+FL383T0   1   351        
+*
+*-------------------------------------------------------
 * HVAC-S1127-1          FM    TO     FM     TO
 *-------------------------------------------------------
 FL35100   HVAC-S1127-1  573   574  7.65  7.65           
@@ -3597,56 +3428,24 @@ FL382T0   1   382
 TF38200   FL382_vel  1    1.0
 TF38210   0.0        5.04487179                                 * velocity (4722 m3/h)
 *
-*-------------------------------------------------------
-* HVAC-inlet-AS-3          FM    TO     FM     TO
-*-------------------------------------------------------
-FL38300   HVAC-inlet-AS-3    400   573  23.75  23.75            
-FL38301   2.25   1.0    1.0                                    * A, L, FRACT OPEN, DIAM
-FL38302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL38303   1.0   1.0                                             * FORM LOSS
-FL383S0   2.25   1.0   1.5                      
-FL3830F   23.0    24.5
-FL3830T   23.0    24.5
-FL383T0   1   383        
-*
-TF38300   FL383_vel  1    1.0
-TF38310   0.0        7.13296296                                * velocity (57777 m3/h)
-*
 ***
 ***************************************** C2 EXHAUST ********************************************
 *
-*-------------------------------------------------------
-* HVAC-exhaust-C2          FM    TO     FM     TO
-*-------------------------------------------------------
-FL46300   HVAC-exhaust-C2    410   401  30.5  30.5           
-FL46301   4.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL46302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL46303   1.0   1.0                                             * FORM LOSS
-FL463S0   4.0   1.0    2.0                     
-FL4630F   29.5    31.5
-FL4630T   29.5    31.5
-FL463T0   1   463        
-*
-TF46300   FL463_vel  1    1.0
-TF46310   0.0        8.03493056                                 * velocity (41361 (C2-1) + 50422 (C2-2) + 23920 (C2L0-3) m3/h)
-*
+*--------------------------------------------------------------------------------------------------------------------
 *
 **** C2-L0-1 ****
 *
 *-------------------------------------------------------
-* HVAC-col-C2-1          FM    TO     FM     TO
+* HVAC-C21-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL41100   HVAC-col-C2L0-1    600   410  30.75  30.75           
-FL41101   2.25   1.0    1.0                                     * A, L, FRACT OPEN, DIAM
+FL41100   HVAC-C21-EX   600   401  8.025  8.025           
+FL41101   1.1875   8.0    1.0                                   * A, L, FRACT OPEN, DIAM
 FL41102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL41103   1.0   1.0                                             * FORM LOSS
-FL411S0   2.25   1.0    1.5                     
-FL4110F   30.0    31.5
-FL4110T   30.0    31.5
-FL411T0   1   411        
-*
-TF41100   FL411_vel  1    1.0
-TF41110   0.0        5.10629630                                 * velocity (41361 m3/h)
+FL411S0   1.1875   8.0    1.08                     
+FL4110F   7.55    8.5
+FL4110T   7.55    8.5
+FL411T0   1   400   
 *
 *-------------------------------------------------------
 * HVAC-B40          FM    TO     FM     TO
@@ -3819,19 +3618,16 @@ TF41010   0.0        4.45940171                                 * velocity (2087
 *
 *--------------------------------------------------------------------------------------
 *-------------------------------------------------------
-* HVAC-col-C2-2          FM    TO     FM     TO
+* HVAC-C22-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL46500   HVAC-col-C2-2    656   410  23.75  23.75           
-FL46501   2.25   1.0    1.0                                 * A, L, FRACT OPEN, DIAM
+FL46500   HVAC-C22-EX   656   401  7.65  7.65           
+FL46501   1.53   9.0    1.0                                     * A, L, FRACT OPEN, DIAM
 FL46502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL46503   1.0   1.0                                             * FORM LOSS
-FL465S0   2.25   1.0    1.5                     
-FL4650F   23.0    24.5
-FL4650T   23.0    24.5
-FL465T0   1   465        
-*
-TF46500   FL465_vel  1    1.0
-TF46510   0.0        5.10629630                                 * velocity (41361 m3/h)
+FL465S0   1.53   9.0   1.177                     
+FL4650F   7.2    8.1
+FL4650T   7.2    8.1
+FL465T0   1   412
 *
 *-------------------------------------------------------
 * HVAC-A900          FM    TO     FM     TO
@@ -4289,19 +4085,16 @@ TF43810   0.0        3.85                                       * velocity (1386
 *
 *--------------------------------------------------------------------------------------
 *-------------------------------------------------------
-* HVAC-col-C2-3          FM    TO     FM     TO
+* HVAC-C23-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL44000   HVAC-col-C2-3   677   410  23.75  23.75           
-FL44001   2.25   1.0    1.0                                   * A, L, FRACT OPEN, DIAM
+FL44000   HVAC-C23-EX   677   401  7.7375  7.7375           
+FL44001   0.9425   2.5    1.0                                   * A, L, FRACT OPEN, DIAM
 FL44002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL44003   1.0   1.0                                             * FORM LOSS
-FL440S0   2.25   1.0    1.5                    
-FL4400F   23.0    24.5
-FL4400T   23.0    24.5
-FL440T0   1   440        
-*
-TF44000   FL440_vel  1    1.0
-TF44010   0.0        2.95308642                                 * velocity (23920 m3/h)
+FL440S0   0.9425   2.5    0.931                    
+FL4400F   7.375    8.1
+FL4400T   7.375    8.1
+FL440T0   1   441     
 *
 *-------------------------------------------------------
 * HVAC-A1100-1          FM    TO     FM     TO
@@ -4679,21 +4472,6 @@ TF38510   0.0        5.11111111                                 * velocity (4186
 *
 *--------------------------------------------------------------------------------------
 *-------------------------------------------------------
-* HVAC-exhaust-C3          FM    TO     FM     TO
-*-------------------------------------------------------
-FL46700   HVAC-exhaust-C3   409   401  30.5  30.5           
-FL46701   4.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL46702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL46703   1.0   1.0                                             * FORM LOSS
-FL467S0   4.0   1.0    2.0                     
-FL4670F   29.5    31.5
-FL4670T   29.5    31.5
-FL467T0   1   467        
-*
-TF46700   FL467_vel  1    1.0
-TF46710   0.0        1.19347222                                 * velocity (17186 m3/h)
-*
-*-------------------------------------------------------
 * HVAC-R058          FM    TO     FM     TO
 *-------------------------------------------------------
 FL46800   HVAC-R058   058   679  7.2  7.2           
@@ -4739,25 +4517,34 @@ TF47000   FL470_vel  1    1.0
 TF47010   0.0        7.34444444                                 * velocity (17186 m3/h)
 *
 *-------------------------------------------------------
-* HVAC-col-C3-1          FM    TO     FM     TO
+* HVAC-C31-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL47100   HVAC-col-C3-1   678   409  23.75  23.75           
-FL47101   2.25   1.0    1.0                                     * A, L, FRACT OPEN, DIAM
+FL47100   HVAC-C31-EX   678   401  8.175  8.175           
+FL47101   0.65   17.0    1.0                                    * A, L, FRACT OPEN, DIAM
 FL47102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL47103   1.0   1.0                                             * FORM LOSS
-FL471S0   2.25   1.0    1.5                     
-FL4710F   23.0    24.5
-FL4710T   23.0    24.5
-FL471T0   1   471        
-*
-TF47100   FL471_vel  1    1.0
-TF47110   0.0        2.12172840                                 * velocity (17186 m3/h)
+FL471S0   0.65   17.0    0.788                     
+FL4710F   7.85    8.5
+FL4710T   7.85    8.5
+FL471T0   1   470      
 *
 *--------------------------------------------------------------------------------------
 *
 **** C4-L0 ****
 *
 *--------------------------------------------------------------------------------------
+*-------------------------------------------------------
+* HVAC-D126          FM    TO     FM     TO
+*-------------------------------------------------------
+FL47500   HVAC-D126   680   401  7.225  7.225           
+FL47501   0.4125   12.0    1.0                                  * A, L, FRACT OPEN, DIAM
+FL47502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL47503   1.0   1.0                                             * FORM LOSS
+FL475S0   0.4125   12.0    0.635                     
+FL4750F   6.95    7.5
+FL4750T   6.95    7.5
+FL475T0   1   472 
+*
 *-------------------------------------------------------
 * HVAC-D126          FM    TO     FM     TO
 *-------------------------------------------------------
@@ -4804,20 +4591,249 @@ TF47400   FL474_vel  1    1.0
 TF47410   0.0        5.96148148                                 * velocity (6036 m3/h)
 *
 ***
+***
 **************************************************************** SGS ******************************************************************
+*
+*********************************************************** Ar SUPPLY **************************************************************
+*
+*-----------------------------------------------                                                                
+* CV900 - ArSS - Ar Supply Subsystem                                                                    
+*-----------------------------------------------                                                                
+CV90000   ARSS  2  0  1                                                            
+CV90001   0   -1		                             * Fog allowed (default)
+CV900A0   3                                                                                         
+CV900A1   PVOL  1200000.0                            * 12 Bar
+CV900A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C; 0% rel. humidity
+CV900A3   MLFR.8  0.99999                            * Filled with Ar -> 99.999%   
+CV900A4   MLFR.5  0.0000021                          * Initial 02 -> 21% de 0.001% 
+CV900A5   MLFR.4  0.0000079                          * Initial N2 -> 79% de 0.001%    
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV900B1   0.0      0.0                                                            
+CV900B2   50.0     1000000.0                             
+***
+*
+*-----------------------------------------------                                                                
+* CV901 - ArPU - Argon Purification Unit (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90100   ArPU  2  0  1                                                   
+CV90101   0   0		                                * Fog allowed (default)
+CV901A0   3                                                                                         
+CV901A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV901A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV901A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV901A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV901A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV901B1   0.0      0.0                                                            
+CV901B2   6.0      942.48                           * Asumimos 8 cilindros de R = 2.5m y H = 6m
+***
+*
+*-----------------------------------------------                                                                
+* CV902 - SGS-AUX-1 (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90200   SGS-AUX-1  2  0  1                                                   
+CV90201   0   0		                                * Fog allowed (default)
+CV902A0   3                                                                                         
+CV902A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV902A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV902A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV902A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV902A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV902B1   6.2      0.0                                                            
+CV902B2   7.2      1.0                              * 1m x 1m x 1m                                                   
+***
+*-----------------------------------------------                                                                
+* CV903 - SGS-AUX-2 (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90300   SGS-AUX-2  2  0  1                                                   
+CV90301   0   0		                                * Fog allowed (default)
+CV903A0   3                                                                                         
+CV903A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV903A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV903A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV903A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV903A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV903B1   5.2      0.0                                                            
+CV903B2   7.2      2.0                              * 2m x 1m x 1m                                                   
+***
+*-----------------------------------------------                                                                
+* CV904 - SGS-AUX-3 (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90400   SGS-AUX-3  2  0  1                                                   
+CV90401   0   0		                                * Fog allowed (default)
+CV904A0   3                                                                                         
+CV904A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV904A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV904A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV904A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV904A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV904B1   5.2      0.0                                                            
+CV904B2   7.2      2.0                              * 2m x 1m x 1m                                                   
+***
+*-----------------------------------------------                                                                
+* CV905 - SGS-AUX-4 (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90500   SGS-AUX-4  2  0  1                                                   
+CV90501   0   0		                                * Fog allowed (default)
+CV905A0   3                                                                                         
+CV905A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV905A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV905A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV905A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV905A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV905B1   6.2      0.0                                                            
+CV905B2   7.2      1.0                              * 1m x 1m x 1m                                                   
+***
+*-----------------------------------------------                                                                
+* CV906 - SGS-AUX-5 (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90600   SGS-AUX-5  2  0  1                                                   
+CV90601   0   0		                                * Fog allowed (default)
+CV906A0   3                                                                                         
+CV906A1   PVOL  101095.0                            * 101325Pa-130Pa 
+CV906A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV906A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV906A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV906A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV906B1   5.2      0.0                                                            
+CV906B2   7.2      2.0                              * 2m x 1m x 1m                                                                                                    
+***
+******* Energy source for SGS-AUX-5 *******           
+*                                           
+CF90100 'AUX-5-Energy-src' EQUALS 1 1.0             * Energy source
+CF90110  1.0  0.0  CVH-TVAP.906                     * Temp AUX-5 = 290.95K (mantener temp cte.)
+*                                                                                                                                 
+******* Sink SGS-AUX-5-O2 *******                    
+*                                           
+CV906C1  MASS.5 902 3                       
+CV906C2  TE 901 9                           
+*
+CF90200 'AUX-5-O2-sink' EQUALS 1 -2.4425E-04        * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
+CF90210  1.0  0.0  CVH-MASS.5.906                                      
+*
+******* Sink SGS-AUX-5-N2 *******                    
+*                                           
+CV906C3  MASS.4 903 3                       
+CV906C4  TE 901 9                           
+*
+CF90300 'AUX-5-N2-sink' EQUALS 1 -5.425E-05         * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
+CF90310  1.0  0.0  CVH-MASS.4.906   
+*
+******* Sink SGS-AUX-5-H2O *******                    
+*                                           
+CV906C5  MASS.3 904 3                       
+CV906C6  TE 901 9                           
+*
+CF90400 'AUX-5-H2O-sink' EQUALS 1 -2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
+CF90410  1.0  0.0  CVH-MASS.3.906   
+*
+*-----------------------------------------------                                                                
+* CV907 - SGS-AUX-6 (C3)                                                                    
+*-----------------------------------------------                                                                
+CV90700   SGS-AUX-6  2  0  1                                                   
+CV90701   0   0		                                * Fog allowed (default)
+CV907A0   3                                                                                         
+CV907A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV907A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV907A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV907A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV907A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV907B1   5.0      0.0                                                            
+CV907B2   6.0      1.0                              * 1m x 1m x 1m  
+***
+******* Energy source from SGS-AUX-6 *******           
+*                                           
+CF90000 'AUX-6-Energy-src' EQUALS 1 1.0             * Energy source
+CF90010  1.0  0.0  CVH-TVAP.906                     * Temp AUX-6 = 290.95K (mantener temp cte.)
+*   
+******* Source SGS-AUX-6-O2 *******                    
+*                                           
+CV907C1  MASS.5 905 3                       
+CV907C2  TE 900 9                           
+*
+CF90500 'AUX-6-O2-src' EQUALS 1 2.4425E-04          * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
+CF90510  1.0  0.0  CVH-MASS.5.906                                      
+*
+******* Source SGS-AUX-6-N2 *******                    
+*                                           
+CV907C3  MASS.4 906 3                       
+CV907C4  TE 900 9                           
+*
+CF90600 'AUX-6-N2-src' EQUALS 1 5.425E-05           * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
+CF90610  1.0  0.0  CVH-MASS.4.906  
+*
+******* Source SGS-AUX-6-H2O *******                    
+*                                           
+CV907C5  MASS.3 907 3                       
+CV907C6  TE 900 9                           
+*
+CF90700 'AUX-6-H2O-src' EQUALS 1 2.75E-04           * Eficiencia (= 0.99) / 3600 = 2.75E-04
+CF90710  1.0  0.0  CVH-MASS.3.906 
+*
+****************************************************************************************************************************************
+*         										           CONSTANTS                 			    		  						   *
+****************************************************************************************************************************************
+*
+****** CAUDAL ENTRADA ArPU ******
+CF10000   QP  EQUALS  1  0.0  80.10277188           * Caudal de entrada al purificador. Nippon Gases -> 80 Nm3/h para todas las salas 
+CF10010   1.0  0.0  TIME
+*
+****** CAUDAL VERTIDO POR CHIMENEA ******
+CF10100   RJ  MULTIPLY  1  0.3                      * Ar rejected by SGS-Ar (30% of 80 m3/h)
+CF10110   1.0  0.0  CFVALU.100                      * PARAMETRO A OPTIMIZAR
+*
+****** CAUDAL TOTAL SGS ******
+CF10200   QT  ADD  3  1.0                           * Q-LLC + Q-TIR + 2 * Q-TRAP
+CF10210   1.0  0.0  CFVALU.103
+CF10215   1.0  0.0  CFVALU.104
+CF10220   1.0  0.0  CFVALU.105
+*
+****** CAUDAL *********
+CF10300   Q-LLC  EQUALS  1  1.0  11732.05223        * Caudal entrada/salida R016 = 11717 Nm3/h
+CF10310   1.0  0.0  TIME 
+*
+****** CAUDAL TIR *********
+CF10400   Q-TIR  EQUALS  1  0.0  6414.229458        * Caudal entrada/salida R129 = 6406 Nm3/h
+CF10410   1.0  0.0  TIME 
+*
+****** CAUDAL TRAP *********
+CF10500   Q-TRAP  EQUALS  1  0.0  4126.294036       * Caudal entrada/salida R009 = 4121 Nm3/h
+CF10510   1.0  0.0  TIME 
 *
 *-------------------------------------------------------
 * SGS FL200           FM    TO    FM   TO                       * ArSS -> AUX-3
 *-------------------------------------------------------
 *
 FL20000   SGS-FL200   900   904   6.2    6.2
-FL20001   0.001341  7.5   1.0    0.038    0.038              
+FL20001   0.001134  7.5   1.0    0.038    0.038              
 FL20002   3     0    0     0                                
 FL20003   0.0   0.0                                                           
-FL200S0   0.001341   7.5    0.038                               * D_ext = 2"
+FL200S0   0.001134   7.5    0.038                               
 FL200T0   2  200           
 *
-CF20000   VEL-ArSS  EQUALS  1  0.0  0.1735                      * X / (3600 * 0.001341) -> MAX 0.1864495298 m/s
+CF20000   VEL-ArSS  EQUALS  1  0.0  0.1735                      * X / (3600 * 0.001134) -> MAX 0.1864495298 m/s
 CF20010   1.0  0.0  TIME
 *
 *-------------------------------------------------------
@@ -4828,7 +4844,7 @@ FL20100   SGS-FL201   903   904   6.2  6.2
 FL20101   0.43709  10.0   1.0    0.746    0.746              
 FL20102	  3     0    0     0                                
 FL20103   0.0   0.0                                                           
-FL201S0   0.43709   10.0    0.746                               * D_ext = 30"           
+FL201S0   0.43709   10.0    0.746                                        
 FL201T0   2   201                                   
 *
 CF20100   VEL-FL201  DIVIDE  2  1.0                             * (QT - QP) m3/h / (3600 * 0.43709)  m/s
@@ -4847,7 +4863,7 @@ FL20200   SGS-FL202   904   905   6.7    6.7
 FL20201   0.43709  5.0   1.0    0.746    0.746              
 FL20202	  3     0    0     0                                
 FL20203   0.0   0.0                                                         
-FL202S0   0.43709   5.0    0.746                                * D_ext = 30"           
+FL202S0   0.43709   5.0    0.746                                           
 FL202T0   2   205                                               * QT m3/h / (3600 * 0.43709)  m/s
 *
 *-------------------------------------------------------
@@ -4858,7 +4874,7 @@ FL20300   SGS-FL203   905   016   6.7  6.7
 FL20301   0.19322  4.0   1.0  0.496   0.496                
 FL20302	  3     0    0     0                                
 FL20303   0.0   0.0                                         
-FL203S0   0.19322  4.0   0.496                                  * D_ext = 20"                 
+FL203S0   0.19322  4.0   0.496                                                 
 FL203T0   2   203                                                                    
 *
 CF20300   VEL-FL203  DIVIDE  2  1.0                             * Q-LLC / (3600 * 0.19322)  m/s
@@ -4873,7 +4889,7 @@ FL20400   SGS-FL204   016   902  6.7  6.7
 FL20401   0.19322  4.0   1.0  0.496   0.496                
 FL20402	  3     0    0     0                                
 FL20403  0.0   0.0                                         
-FL204S0   0.19322  4.0   0.496                                  * D_ext = 20"                 
+FL204S0   0.19322  4.0   0.496                                                   
 FL204T0   2   203                                               * Mismo valor que SGS-FL203                                 
 *
 *-------------------------------------------------------
@@ -4884,7 +4900,7 @@ FL20500   SGS-FL205   902   903   6.7  6.7
 FL20501   0.43709  36.0   1.0    0.746    0.746              
 FL20502	  3     0    0     0                                
 FL20503   0.0   0.0                                                          
-FL205S0   0.43709   36.0    0.746                               * D_ext = 30"           
+FL205S0   0.43709   36.0    0.746                                          
 FL205T0   2   205                                               * QT m3/h / (3600 * 0.43709)  m/s                            
 *
 CF20500   VEL-FL205  DIVIDE  2  1.0
@@ -4899,7 +4915,7 @@ FL20600   SGS-FL206   903   901   5.6  5.6
 FL20601   0.001521  15.0   1.0    0.038    0.038              
 FL20602	  3     0    0     0                                
 FL20603   0.0   0.0                                                           
-FL206S0   0.001521   15.0    0.044                              * D_ext = 2.5"           
+FL206S0   0.001521   15.0    0.044                                       
 FL206T0   2   206                                               * QP / (3600 * 0.001521)  m/s
 *
 CF20600   VEL-FL206 DIVIDE 2 1.0
@@ -4914,7 +4930,7 @@ FL20700   SGS-FL207   906  904   6.2  6.2
 FL20701   0.001341 7.5   1.0    0.038    0.038              
 FL20702   3     0    0     0                                
 FL20703   0.0   0.0                                                            
-FL207S0   0.001341   7.5    0.038                               * D_ext = 2"           
+FL207S0   0.001341   7.5    0.038                                        
 FL207T0   2   207                                               * (QP - RJ) m3/h / (3600 * 0.001341)  m/s
 *
 CF20700   VEL-FL207 DIVIDE 2 1.0
@@ -4933,7 +4949,7 @@ FL20800   SGS-FL208   907   402   5.5  5.5
 FL20801   0.001341  7.5   1.0    0.038    0.038              
 FL20802   3     0    0     0                                
 FL20803   0.0   0.0                                                            
-FL208S0   0.001341   7.5    0.038                               * D_ext = 2"           
+FL208S0   0.001341   7.5    0.038                                         
 FL208T0   2   208                                               * RJ / (3600 * 0.001341) m/s
 *
 CF20800   VEL-FL208 DIVIDE 2 1.0
@@ -4948,7 +4964,7 @@ FL20900   SGS-FL209   901  906   5.6  5.6
 FL20901   0.001341  7.5   1.0    0.038    0.038              
 FL20902   3     0    0     0                                
 FL20903   0.0   0.0                                                            
-FL209S0   0.001341   7.5    0.038                               * D_ext = 2"           
+FL209S0   0.001341   7.5    0.038                                      
 *
 * Calculo automatico de velocidad por diferencia de presion 
 *
@@ -4960,57 +4976,85 @@ FL21000   SGS-FL210   901   907   5.5  5.5
 FL21001   0.001341  7.5   1.0    0.038    0.038              
 FL21002   3     0    0     0                                
 FL21003   0.0   0.0                                                           
-FL210S0   0.001341   7.5    0.038                               * D_ext = 2"           
+FL210S0   0.001341   7.5    0.038                                         
 *
 * Calculo automatico de velocidad por diferencia de presion 
 *
-**************************************************************  LEAKAGES *************************************************************** 
-*
 *-------------------------------------------------------
-* Leak-C002-AL016 (Door)                    
+* SGS FL211           FM    TO    FM   TO                       * AUX-4 -> R129
 *-------------------------------------------------------
 *
-*FL70000   lk-C002-AL016  042   096   3.75  3.75
-*FL70001   25.0E-6  0.25    1.0   	                                * A = 25mm2    
-*FL70002   3     0    0     0 				                        * Horizontal flow      
-*FL70003   0.0   0.0                                                                 	                  
-*FL700S0   25.0E-6  0.25   0.005641895835                                                  
-*** 
+FL21100   SGS-FL211   905   129   6.7   12.0
+FL21101   0.437087  18.0   1.0    0.373    0.373              
+FL21102   0     0    0     0                                
+FL21103   0.0   0.0                                                            
+FL211S0   0.437087   18.0    0.746                                         
+FL211T0   2   211                                               * Q-TIR / (3600 * 0.437087) m/s
+*
+CF21100   VEL-FL211 DIVIDE 2 1.0
+CF21110   0.0  1573.5132  TIME                                  * (3600 * 0.218956) = 1573.5132                                 
+CF21115   1.0  0.0  CFVALU.104
 *
 *-------------------------------------------------------
-* Leak-AL016-R016 (Door)                   
+* SGS FL212           FM    TO    FM   TO                       * AUX-4 -> R009-2
 *-------------------------------------------------------
 *
-FL70100   lk-AL016-R016  096   016   3.6  3.6
-FL70101   25.0E-6  1.0    1.0   	                                * A = 25mm2     
-FL70102	  3     0    0   0 				                            * Horizontal flow      
-FL70103   0.0   0.0                                                                 	                  
-FL701S0   25.0E-6  1.0   0.005641895835                                                    
-*** 
+FL21200   SGS-FL212   905   009   6.7  6.7
+FL21201   0.218956  18.0   1.0    0.528    0.528              
+FL21202   3     0    0     0                                
+FL21203   0.0   0.0                                                            
+FL212S0   0.218956   18.0    0.528                                         
+FL212T0   2   212                                               * Q-TRAP / (3600 * 0.218956) m/s
+*
+CF21200   VEL-FL212 DIVIDE 2 1.0
+CF21210   0.0  788.2416  TIME                                   * (3600 * 0.218956) = 788.2416                                 
+CF21215   1.0  0.0  CFVALU.105
 *
 *-------------------------------------------------------
-* Leak-R015-R016                    
+* SGS FL213           FM    TO    FM   TO                       * AUX-4 -> R009-1
 *-------------------------------------------------------
 *
-FL70200   lk-R015-R016  015   016   3.6  3.6
-FL70201   5.0E-6  0.5    1.0                            	        * A = 5mm2     
-FL70202	  3     0    0     0 				                        * Horizontal flow      
-FL70203   0.0   0.0                                                                 	                  
-FL702S0   5.0E-6  0.5   0.00253132522                       
-*** 
+FL21300   SGS-FL213   905   008   6.7  6.7
+FL21301   0.218956  18.0   1.0    0.528    0.528              
+FL21302   3     0    0     0                                
+FL21303   0.0   0.0                                                            
+FL213S0   0.218956   18.0    0.528                                         
+FL213T0   2   212                                               * Q-TRAP / (3600 * 0.218956) m/s
 *
 *-------------------------------------------------------
-* Leak-R018-R016                    
+* SGS FL214           FM    TO    FM   TO                       * R009-2 --> AUX-1
 *-------------------------------------------------------
 *
-FL70300   lk-R018-R016  018   016   3.6  3.6
-FL70301   5.0E-6  0.5    1.0   	                                    * A = 5mm2     
-FL70302	  3     0    0     0 				                        * Horizontal flow      
-FL70303   0.0   0.0                                                                 	                  
-FL703S0   5.0E-6  0.5   0.00253132522                       
-*** 
-**
+FL21400   SGS-FL214   009   902   6.7  6.7
+FL21401   0.218956  18.0   1.0    0.528    0.528              
+FL21402   3     0    0     0                                
+FL21403   0.0   0.0                                                            
+FL214S0   0.218956   18.0    0.528                                         
+FL214T0   2   212                                               * Q-TRAP / (3600 * 0.218956) m/s
 *
+*-------------------------------------------------------
+* SGS FL215           FM    TO    FM   TO                       * R009-2 --> AUX-1
+*-------------------------------------------------------
+*
+FL21500   SGS-FL215   008   902   6.7  6.7
+FL21501   0.218956  18.0   1.0    0.528    0.528              
+FL21502   3     0    0     0                                
+FL21503   0.0   0.0                                                            
+FL215S0   0.218956   18.0    0.528                                         
+FL215T0   2   212                                               * Q-TRAP / (3600 * 0.218956) m/s
+*
+*-------------------------------------------------------
+* SGS FL216           FM    TO    FM   TO                       * R129 --> AUX-4
+*-------------------------------------------------------
+*
+FL21600   SGS-FL211   129   902   12.0   6.7
+FL21601   0.437087  18.0   1.0    0.373    0.373              
+FL21602   0     0    0     0                                
+FL21603   0.0   0.0                                                            
+FL216S0   0.437087   18.0    0.746                                         
+FL216T0   2   211                                               * Q-TIR / (3600 * 0.437087) m/s
+*
+***
 *************************************************** OUTPUTS ***************************************************
 *
 * Formula densidad: d = d' · (P · T') / (P' · T) ; T' = 25 ºC , P' = Patm = 101325 Pa
@@ -5079,6 +5123,778 @@ CF16800  Denom-165 MULTIPLY 2 1.0
 CF16810  1.0  0.0  CFVALU.155
 CF16815  1.0  0.0  CFVALU.300
 *
+*
+*--------------------------------------------------------------------------------
+*                               INFILTRATIONS
+*--------------------------------------------------------------------------------
+*
+*********************       OUTDOORS       *************************** 
+*
+*----------------------------- L0 -----------------------------------*
+*
+FL93000   INF-OUT-SB4L0    400   083  5.0  5.0                  * Door height: 5000 mm
+FL93001   0.0708   0.5   1.0                                    * A, L, FRACT OPEN
+FL93002	  3       0     0     0                               
+FL93003   1.0     1.0                                   
+FL930S0   0.0708   0.5    0.3                             
+*
+FL93300   D-OUT-S02L0    400   086  3.0  3.0                    * Door height: 3000 mm
+FL93301   0.015   0.5   1.0                                     * A, L, FRACT OPEN
+FL93302	  3       0     0     0                                
+FL93303   1.0     1.0                                      
+FL933S0   0.015   0.5    0.138                             
+*
+FL94000   D-OUT-R001     400   001  5.0  5.0                    * Door height: 5000 mm
+FL94001   0.2311   0.5   1.0                                    * A, L, FRACT OPEN
+FL94002	  3       0     0     0                             
+FL94003   1.0     1.0                                   
+FL940S0   0.2311   0.5    0.542                             
+*
+FL94800   D-OUT-S05L0    400   088  3.0  3.0                    * Door height: 3000 mm
+FL94801   0.0205   0.5   1.0                                    * A, L, FRACT OPEN
+FL94802	  3       0     0     0                                 
+FL94803   1.0     1.0                                
+FL948S0   0.0205   0.5    0.162                             
+*
+FL96000   D-OUT-S07L0    400   089  3.0  3.0                    * Door height: 3000 mm
+FL96001   0.0123   0.5   1.0                                    * A, L, FRACT OPEN
+FL96002	  3       0     0     0                                 
+FL96003   1.0     1.0                                     
+FL960S0   0.0123   0.5    0.125                             
+*
+FL96100   D-OUT-R024     400   024  2.17  2.17                  * Door height: 2170 mm (x2)
+FL96101   0.041   0.5   1.0                                     * A, L, FRACT OPEN
+FL96102	  3       0     0     0                                 
+FL96103   1.0     1.0                                  
+FL961S0   0.041   0.5    0.228
+*
+FL96700   D-OUT-S04L0    400   087  3.0  3.0                    * Door height: 3000 mm
+FL96701   0.019   0.5   1.0                                     * A, L, FRACT OPEN
+FL96702	  3       0     0     0                                
+FL96703   1.0     1.0                                  
+FL967S0   0.019   0.5    0.156                             
+*
+FL96900   D-OUT-SB2L0    400   081  5.0  5.0                    * Door height: 5000 mm
+FL96901   0.0283   0.5   1.0                                    * A, L, FRACT OPEN
+FL96902	  3       0     0     0                                 
+FL96903   1.0     1.0                         
+FL969S0   0.0283   0.5    0.19                             
+*
+FL98000   D-OUT-R007     400   007  5.0  5.0                    * Door height: 5000 mm
+FL98001   0.1399   0.5   1.0                                    * A, L, FRACT OPEN
+FL98002	  3       0     0     0                                 
+FL98003   1.0     1.0                                
+FL980S0   0.1399   0.5    0.422                             
+*
+FL38700   W-OUT-SB1L0    400   080  4.25  4.25                  * Half room height (8.5 m)
+FL38701   0.0366     0.5   1.0                                  * A, L, FRACT OPEN
+FL38702	  3       0     0     0                                 
+FL38703   1.0     1.0                         
+FL387S0   0.0366     0.5    0.216                            
+*
+FL99000   W-OUT-SB3L0    400   082  4.25  4.25                  * Half room height (8.5 m)
+FL99001   0.0283   0.5   1.0                                    * A, L, FRACT OPEN
+FL99002	  3       0     0     0                                 
+FL99003   1.0     1.0                              
+FL990S0   0.0283   0.5    0.19                             
+*
+FL98600   W-OUT-E02L0    400   084  4.25  4.25                  * Half room height (8.5 m)
+FL98601   0.0064   0.5   1.0                                    * A, L, FRACT OPEN
+FL98602	  3       0     0     0                                
+FL98603   1.0     1.0                                
+FL986S0   0.0064   0.5    0.09                             
+*
+FL99600   W-OUT-E03L0    400   085  4.25  4.25                  * Half room height (8.5 m)
+FL99601   0.0077   0.5   1.0                                    * A, L, FRACT OPEN
+FL99602	  3       0     0     0                                 
+FL99603   1.0     1.0                              
+FL996S0   0.0077   0.5    0.099                             
+*
+FL69300   W-OUT-AL004    400   094  4.25  4.25                  * Half room height (8.5 m)
+FL69301   0.0749   0.5   1.0                                    * A, L, FRACT OPEN
+FL69302	  3       0     0     0                                 
+FL69303   1.0     1.0                             
+FL693S0   0.0749   0.5    0.309                             
+*
+FL98400   W-OUT-R026     400   026  4.25  4.25                  * Half room height (8.5 m)
+FL98401   0.9174   0.5   1.0                                    * A, L, FRACT OPEN
+FL98402	  3       0     0     0                                
+FL98403   1.0     1.0                                 
+FL984S0   0.9174   0.5    1.081                             
+*
+FL98500   W-OUT-R011     400   011  4.25  4.25                  * Half room height (8.5 m)
+FL98501   0.0914   0.5   1.0                                    * A, L, FRACT OPEN
+FL98502	  3       0     0     0                                 
+FL98503   1.0     1.0                             
+FL985S0   0.0914   0.5    0.341                             
+*
+FL98700   W-OUT-R025     400   025  4.25  4.25                  * Half room height (8.5 m)
+FL98701   0.0187   0.5   1.0                                    * A, L, FRACT OPEN
+FL98702	  3       0     0     0                                 
+FL98703   1.0     1.0                                     
+FL987S0   0.0187   0.5    0.154                             
+*
+FL98800   W-OUT-R023     400   023  4.25  4.25                  * Half room height (8.5 m)
+FL98801   0.0167   0.5   1.0                                    * A, L, FRACT OPEN
+FL98802	  3       0     0     0                                 
+FL98803   1.0     1.0                              
+FL988S0   0.0167   0.5    0.146                             
+*
+FL98900   W-OUT-R005     400   005  4.25  4.25                  * Half room height (8.5 m)
+FL98901   0.026   0.5   1.0                                     * A, L, FRACT OPEN
+FL98902	  3       0     0     0                                 
+FL98903   1.0     1.0                              
+FL989S0   0.026   0.5    0.182                            
+*
+FL99100   W-OUT-R014     400   014  4.25  4.25                  * Half room height (8.5 m)
+FL99101   0.0854   0.5   1.0                                    * A, L, FRACT OPEN
+FL99102	  3       0     0     0                                 
+FL99103   1.0     1.0                              
+FL991S0   0.0854   0.5    0.33                             
+*
+FL99200   W-OUT-R019     400   019  4.25  4.25                  * Half room height (8.5 m)
+FL99201   0.105   0.5   1.0                                     * A, L, FRACT OPEN
+FL99202	  3       0     0     0                                 
+FL99203   1.0     1.0                                    
+FL992S0   0.105   0.5    0.366                             
+*
+FL99300   W-OUT-R022     400   022  4.0  4.0                    * Half room height (8.0 m)
+FL99301   0.0317   0.5   1.0                                    * A, L, FRACT OPEN
+FL99302	  3       0     0     0                                 
+FL99303   1.0     1.0                                   
+FL993S0   0.0317   0.5    0.201                             
+*
+FL99400   W-OUT-R002     400   002  4.25  4.25                  * Half room height (8.5 m)
+FL99401   0.0412   0.5   1.0                                    * A, L, FRACT OPEN
+FL99402	  3       0     0     0                                 
+FL99403   1.0     1.0                               
+FL994S0   0.0412   0.5    0.229                             
+*
+FL99500   W-OUT-R003     400   003  4.25  4.25                  * Half room height (8.5 m)
+FL99501   0.1142   0.5   1.0                                    * A, L, FRACT OPEN
+FL99502	  3       0     0     0                                 
+FL99503   1.0     1.0                                           
+FL995S0   0.1142   0.5    0.381                             
+*
+FL99700   W-OUT-R010     400   010  4.25  4.25                  * Half room height (8.5 m)
+FL99701   0.0098   0.5   1.0                                    * A, L, FRACT OPEN
+FL99702	  3       0     0     0                                 
+FL99703   1.0     1.0                                   
+FL997S0   0.0098   0.5    0.112                             
+*
+FL99800   W-OUT-R056     400   056  4.25  4.25                  * Half room height (8.5 m)
+FL99801   0.0164   0.5   1.0                                    * A, L, FRACT OPEN
+FL99802	  3       0     0     0                                
+FL99803   1.0     1.0                                          
+FL998S0   0.0164   0.5    0.145                             
+*
+FL99900   W-OUT-R057     400   057  3.75  3.75                  * Half room height (7.5 m)
+FL99901   0.0017   1.5   1.0                                    * A, L, FRACT OPEN
+FL99902	  3       0     0     0                              
+FL99903   1.0     1.0                                      
+FL999S0   0.0017   1.5    0.047                             
+*
+FL38600   W-OUT-R053     400   053  3.75  3.75                  * Half room height (7.5 m)
+FL38601   0.0037   1.5   1.0                                    * A, L, FRACT OPEN
+FL38602	  3       0     0     0                                 
+FL38603   1.0     1.0                                    
+FL386S0   0.0037   1.5    0.0069                             
+*
+FL38800   W-OUT-R006     400   006  4.25  4.25                  * Half room height (8.5 m)
+FL38801   0.0165   0.5   1.0                                    * A, L, FRACT OPEN
+FL38802	  3       0     0     0                              
+FL38803   1.0     1.0                                   
+FL388S0   0.0165   0.5    0.145                             
+*
+FL38900   W-OUT-R052     400   052  3.75  3.75                  * Half room height (7.5 m)
+FL38901   0.0353   0.5   1.0                                    * A, L, FRACT OPEN
+FL38902	  3       0     0     0                               
+FL38903   1.0     1.0                                        
+FL389S0   0.0353   0.5    0.212                             
+*
+FL39000   W-OUT-R059     400   059  2.6   2.6                   * Half room height (5.2 m)
+FL39001   0.007   0.5   1.0                                  * A, L, FRACT OPEN
+FL39002	  3       0     0     0                                 
+FL39003   1.0     1.0                                          
+FL390S0   0.007   0.5    0.094                             
+*
+***
+************************** INDOORS ******************************
+*
+*---------------------------- L0 -------------------------------*
+*
+*--------------------------- Doors -----------------------------*
+*
+FL93100   D-SB4L0-S02L0     083   086  2.17   2.17              * Door height: 2170 mm
+FL93101   0.015   0.25  1.0                                     * A, L, FRACT OPEN
+FL93102   3     0     0     0                                 
+FL93103   1.0   1.0                                   
+FL931S0   0.015   0.25   0.138                             
+*
+FL93200   D-SB4L0-S02L0     094   086  2.17   2.17              * Door height: 2170 mm
+FL93201   0.015   0.25  1.0                                     * A, L, FRACT OPEN
+FL93202   3     0     0     0                                  
+FL93203   1.0   1.0                                         
+FL932S0   0.015   0.25   0.138                            
+*
+FL93400   D-SB4L0-AL004     083   094  3.8   3.8                * Door height: 3800 mm
+FL93401   0.0708   0.25  1.0                                    * A, L, FRACT OPEN
+FL93402   3     0     0     0                                 
+FL93403   1.0   1.0                                    
+FL934S0   0.0708   0.25   0.3                             
+*
+FL93500   D-AL004-R026     094   026   3.8   3.8                * Door height: 3800 mm
+FL93501   0.0749   0.25   1.0                                   * A, L, FRACT OPEN
+FL93502   3     0     0     0                                   
+FL93503   1.0   1.0                                     
+FL935S0   0.0749   0.25   0.309                             
+*
+FL93600   D-R026-C002     026   042   3.8   3.8                 * Door height: 3800 mm
+FL93601   0.475   0.5   1.0                                     * A, L, FRACT OPEN
+FL93602   3     0     0     0                                  
+FL93603   1.0   1.0                                             
+FL936S0   0.475   0.5    0.778                             
+*
+FL93700   D-R052-C002     052   042   3.0   3.0                 * Door height: 3000 mm
+FL93701   0.0353   0.5   1.0                                    * A, L, FRACT OPEN
+FL93702   3     0     0     0                                
+FL93703   1.0   1.0                               
+FL937S0   0.0353   0.5    0.212                             
+*
+FL93800   D-R006-AL001     006   091   3.0   3.0                * Door height: 3000 mm
+FL93801   0.0165   0.25  1.0                                    * A, L, FRACT OPEN
+FL93802   3     0     0     0                                  
+FL93803   1.0   1.0                                  
+FL938S0   0.0165   0.25   0.145                             
+*
+FL93900   D-AL001-R001     091   001   3.8   3.8                * Door height: 3800 mm
+FL93901   0.0281   0.5   1.0                                    * A, L, FRACT OPEN
+FL93902   3     0     0     0                                  
+FL93903   1.0   1.0                                          
+FL939S0   0.0281   0.5    0.189                             
+*
+FL94100   D-AL001-C002     091   042   3.8   3.8                * Door height: 3800 mm
+FL94101   0.0281   0.5   1.0                                    * A, L, FRACT OPEN
+FL94102   3     0     0     0                                 
+FL94103   1.0   1.0                                    
+FL941S0   0.0281   0.5    0.189                             
+*
+FL94200   D-SB1L0-C002     080   042   3.8   3.8                * Door height: 3800 mm
+FL94201   0.0366   0.25  1.0                                    * A, L, FRACT OPEN
+FL94202   3     0     0     0                                  
+FL94203   1.0   1.0                                         
+FL942S0   0.0366   0.25   0.216                             
+*
+FL94300   D-R053-AL055     053   095   3.0   3.0                * Door height: 3000 mm
+FL94301   0.0037   1.5   1.0                                    * A, L, FRACT OPEN
+FL94302   3     0     0     0                                
+FL94303   1.0   1.0                                     
+FL943S0   0.0037   1.5    0.069                             
+*
+FL94400   D-AL055-C002     095   042   3.8   3.8                * Door height: 3800 mm
+FL94401   0.0419   0.25  1.0                                    * A, L, FRACT OPEN
+FL94402   3     0     0     0                               
+FL94403   1.0   1.0                                      
+FL944S0   0.0419   0.25   0.231                             
+*
+FL94500   D-R058-AL055     058   095   3.8   3.8                * Door height: 3800 mm
+FL94501   0.0236   1.5   1.0                                    * A, L, FRACT OPEN
+FL94502   3     0     0     0                                  
+FL94503   1.0   1.0                                      
+FL945S0   0.0236   1.5    0.173                             
+*
+FL94600   D-R057-R058      057   058   3.8   3.8                * Door height: 3800 mm
+FL94601   0.0017   1.5   1.0                                    * A, L, FRACT OPEN
+FL94602   3     0     0     0                                 
+FL94603   1.0   1.0                                    
+FL946S0   0.0017   1.5    0.047                             
+*
+FL94700   D-S05L0-C002     088   042   3.0   3.0                * Door height: 3000 mm
+FL94701   0.0205   0.25  1.0                                    * A, L, FRACT OPEN
+FL94702   3     0     0     0                                 
+FL94703   1.0   1.0                                  
+FL947S0   0.0205   0.25   0.162                             
+*
+FL94900   D-R003-C002      003   042   3.0   3.0                * Door height: 3000 mm
+FL94901   0.1142   0.25  1.0                                    * A, L, FRACT OPEN
+FL94902   3     0     0     0                                   
+FL94903   1.0   1.0                              
+FL949S0   0.1142   0.25   0.381                             
+*
+FL95000   D-R010-C002      010   042   3.0   3.0                * Door height: 3000 mm
+FL95001   0.0098   0.25  1.0                                    * A, L, FRACT OPEN
+FL95002   3     0     0     0                                   
+FL95003   1.0   1.0                                 
+FL950S0   0.0098   0.25   0.112                             
+*
+FL95100   D-R004-C002      004   042   2.17   2.17              * Door height: 2170 mm
+FL95101   0.014   0.25  1.0                                     * A, L, FRACT OPEN
+FL95102   3     0     0     0                                     
+FL95103   1.0   1.0                                      
+FL951S0   0.014   0.25   0.134                             
+*
+FL95200   D-R002-C002      002   042   3.0    3.0               * Door height: 3000 mm
+FL95201   0.0412   0.25  1.0                                    * A, L, FRACT OPEN
+FL95202   3     0     0     0                                  
+FL95203   1.0   1.0                                
+FL952S0   0.0412   0.25   0.229                             
+*
+FL95300   D-R022-C002      022   042   3.0    3.0               * Door height: 3000 mm
+FL95301   0.0317   1.0   1.0                                    * A, L, FRACT OPEN
+FL95302   3     0     0     0                                   
+FL95303   1.0   1.0                                
+FL953S0   0.0317   1.0    0.201                             
+*
+FL95400   D-R019-C002      019   042   3.0    3.0               * Door height: 3000 mm
+FL95401   0.105   0.25  1.0                                     * A, L, FRACT OPEN
+FL95402   3     0     0     0                               
+FL95403   1.0   1.0                                
+FL954S0   0.105   0.25   0.366                             
+*
+FL95500   D-R059-R052      059   052   2.17   2.17              * Door height: 2170 mm
+FL95501   0.007   0.25  1.0                                     * A, L, FRACT OPEN
+FL95502   3     0     0     0                                   
+FL95503   1.0   1.0                                       
+FL955S0   0.007   0.25   0.094                             
+*
+FL95600   D-R014-C002      014   002   3.0    3.0               * Door height: 3000 mm
+FL95601   0.0854   0.25  1.0                                    * A, L, FRACT OPEN
+FL95602   3     0     0     0                                   
+FL95603   1.0   1.0                                         
+FL956S0   0.0854   0.25   0.33                             
+*
+FL95700   D-R007-AL002      007   092   4.2    4.2              * Door height: 4200 mm
+FL95701   0.0497   0.25  1.0                                    * A, L, FRACT OPEN
+FL95702   3     0     0     0                                   
+FL95703   1.0   1.0                                    
+FL957S0   0.0497   0.25   0.252                             
+*
+FL95800   D-AL002-SB3L0      092   082   5.0    5.0             * Door height: 5000 mm
+FL95801   0.0283   0.25  1.0                                    * A, L, FRACT OPEN
+FL95802   3     0     0     0                                  
+FL95803   1.0   1.0                                   
+FL958S0   0.0283   0.25   0.19                             
+*
+FL95900   D-AL002-C002      092   042   4.2    4.2              * Door height: 4200 mm
+FL95901   0.0497   0.25  1.0                                    * A, L, FRACT OPEN
+FL95902   3     0     0     0                                   
+FL95903   1.0   1.0                                      
+FL959S0   0.0497   0.25   0.252                             
+*
+FL96200   D-R024-C002      024   042   4.05    4.05             * OPEN PATH
+FL96201   101.25   1.0  1.0                                     * A, L, FRACT OPEN
+FL96202   3     0     0     0                                   
+FL96203   1.0   1.0                                             
+FL962S0   101.25   1.0   11.354  
+FL9620F   0.0    8.1
+FL9620T   0.0    8.1                           
+*
+FL97900   D-R005-C002       005   042   3.0    3.0              * Door height: 3000 mm
+FL97901   0.026   0.25  1.0                                     * A, L, FRACT OPEN
+FL97902   3     0     0     0                                   
+FL97903   1.0   1.0                                
+FL979S0   0.026   0.25   0.182                             
+*
+FL96300   D-R054-C002      054   042   2.17    2.17             * Door height: 2170 mm
+FL96301   0.0122   0.25  1.0                                    * A, L, FRACT OPEN
+FL96302   3     0     0     0                                   
+FL96303   1.0   1.0                                    
+FL963S0   0.0122   0.25   0.125                             
+*
+FL96400   D-R056-C002      056   042   2.17    2.17             * Door height: 2170 mm
+FL96401   0.0164   0.25  1.0                                    * A, L, FRACT OPEN
+FL96402   3     0     0     0                                   
+FL96403   1.0   1.0                             
+FL964S0   0.0164   0.25   0.145                             
+*
+FL96500   D-R023-C002      023   042   3.0    3.0               * Door height: 3000 mm
+FL96501   0.0167   0.25  1.0                                    * A, L, FRACT OPEN
+FL96502   3     0     0     0                                   
+FL96503   1.0   1.0                          
+FL965S0   0.0167   0.25   0.146                             
+*
+FL96600   D-R025-C002      025   042   3.0    3.0               * Door height: 3000 mm
+FL96601   0.0187   0.25  1.0                                    * A, L, FRACT OPEN
+FL96602   3     0     0     0                                   
+FL96603   1.0   1.0                                 
+FL966S0   0.0187   0.25   0.154                             
+*
+FL96800   D-S04L0-C002     087   042   3.0    3.0               * Door height: 3000 mm
+FL96801   0.019   0.25  1.0                                     * A, L, FRACT OPEN
+FL96802   3     0     0     0                                  
+FL96803   1.0   1.0                             
+FL968S0   0.019   0.25   0.156                             
+*
+FL97000   D-SB2L0-C002     081   042   4.2    4.2               * Door height: 4200 mm
+FL97001   0.0283   0.25  1.0                                    * A, L, FRACT OPEN
+FL97002   3     0     0     0                                   
+FL97003   1.0   1.0                               
+FL970S0   0.0283   0.25   0.19                             
+*
+FL97100   D-R011-C002      011   042   3.0    3.0               * Door height: 3000 mm
+FL97101   0.0914   0.25  1.0                                    * A, L, FRACT OPEN
+FL97102   3     0     0     0                                  
+FL97103   1.0   1.0                        
+FL971S0   0.0914   0.25   0.341                             
+*
+FL97200   D-R018-C002      018   042   3.0    3.0               * Door height: 3000 mm (x2)
+FL97201   0.1138    0.25  1.0                                   * A, L, FRACT OPEN
+FL97202   3     0     0     0                                   
+FL97203   1.0   1.0                                
+FL972S0   0.1138    0.25   0.381                             
+*
+FL97300   D-R0091-C002      008   042   3.8    3.8              * Door height: 3800 mm 
+FL97301   0.0206    1.0   1.0                                   * A, L, FRACT OPEN
+FL97302   3     0     0     0                                  
+FL97303   1.0   1.0                                      
+FL973S0   0.0206    1.0   0.162                             
+*
+FL97400   D-R0092-C002      009   042   3.8    3.8              * Door height: 3800 mm 
+FL97401   0.0216    0.5   1.0                                   * A, L, FRACT OPEN
+FL97402   3     0     0     0                                 
+FL97403   1.0   1.0                                   
+FL974S0   0.0216    0.5   0.166                             
+*
+FL97500   D-R016-AL016      016   096   3.8    3.8              * Door height: 3800 mm 
+FL97501   0.0155    1.0   1.0                                   * A, L, FRACT OPEN
+FL97502   3     0     0     0                                   
+FL97503   1.0   1.0                                    
+FL975S0   0.0155    1.0   0.014                             
+*
+FL97600   D-AL016-C002      096   042   3.8    3.8              * Door height: 3800 mm 
+FL97601   0.0155    0.25   1.0                                  * A, L, FRACT OPEN
+FL97602   3     0     0     0                                
+FL97603   1.0   1.0                           
+FL976S0   0.0155    0.25   0.014                             
+*
+FL97700   D-R015-C002      015   042    3.8    3.8              * Door height: 3800 mm 
+FL97701   0.1097    0.25   1.0                                  * A, L, FRACT OPEN
+FL97702   3     0     0     0                                   
+FL97703   1.0   1.0                                            
+FL977S0   0.1097    0.25   0.374                             
+*
+FL98100   D-R017-R018      017   018    3.0    3.0              * Door height: 3000 mm 
+FL98101   0.0084    0.25   1.0                                  * A, L, FRACT OPEN
+FL98102   3     0     0     0                                  
+FL98103   1.0   1.0                                          
+FL981S0   0.0084    0.25   0.103                             
+*
+FL98200   D-S04L0-E02L0     087   084   3.0    3.0              * Door height: 3000 mm 
+FL98201   0.0064    0.25   1.0                                  * A, L, FRACT OPEN
+FL98202   3     0     0     0                                  
+FL98203   1.0   1.0                                         
+FL982S0   0.0064    0.25   0.09                             
+*
+FL98300   D-S04L0-E02L0     087   084   3.0    3.0              * Door height: 3000 mm 
+FL98301   0.0077    0.25   1.0                                  * A, L, FRACT OPEN
+FL98302   3     0     0     0                                   
+FL98303   1.0   1.0                                         
+FL983S0   0.0077    0.25   0.099                             
+*
+***
+*-------------------------- Walls ------------------------------*
+*
+FL39100   D-SB4L0-R026      083   026   4.25    4.25            * Half room height (8.5 m)
+FL39101   0.0708    0.25   1.0                                  * A, L, FRACT OPEN
+FL39102   3     0     0     0                                   
+FL39103   1.0   1.0                                         
+FL391S0   0.0708    0.25   0.3                             
+*
+FL39200   D-SB4L0-R026      026   011   4.25    4.25            * Half room height (8.5 m)
+FL39201   0.0914    0.25   1.0                                  * A, L, FRACT OPEN
+FL39202   3     0     0     0                                  
+FL39203   1.0   1.0                                       
+FL392S0   0.0914    0.25   0.341                             
+*
+FL39300   D-R026-R059       026   059   2.6    2.6              * Half room height (5.2 m)
+FL39301   0.007    0.5    1.0                                   * A, L, FRACT OPEN
+FL39302   3     0     0     0                                  
+FL39303   1.0   1.0                                          
+FL393S0   0.007    0.5    0.094                             
+*
+FL39400   D-R026-R052       026   052   3.75    3.75            * Half room height (7.5 m)
+FL39401   0.0353    0.5    1.0                                  * A, L, FRACT OPEN
+FL39402   3     0     0     0                                   
+FL39403   1.0   1.0                                         
+FL394S0   0.0353    0.5    0.212                             
+*
+FL39500   D-R011-SB2L0      011   081   4.25    4.25            * Half room height (8.5 m)
+FL39501   0.0283    0.5    1.0                                  * A, L, FRACT OPEN
+FL39502   3     0     0     0                                  
+FL39503   1.0   1.0                                          
+FL395S0   0.0283    0.5    0.19                             
+*
+FL39600   D-SB2L0-S04L0     081   087   4.25    4.25            * Half room height (8.5 m)
+FL39601   0.019    0.7    1.0                                   * A, L, FRACT OPEN
+FL39602   3     0     0     0                                   
+FL39603   1.0   1.0                               
+FL396S0   0.019    0.7    0.156                             
+*
+FL39700   D-S04L0-R025      087   025   4.25    4.25            * Half room height (8.5 m)
+FL39701   0.0187    0.25   1.0                                  * A, L, FRACT OPEN
+FL39702   3     0     0     0                                  
+FL39703   1.0   1.0                                    
+FL397S0   0.0187    0.25   0.154                             
+*
+FL39800   D-E02L0-R025      084   025   4.25    4.25            * Half room height (8.5 m)
+FL39801   0.0064    0.25   1.0                                  * A, L, FRACT OPEN
+FL39802   3     0     0     0                                   
+FL39803   1.0   1.0                                            
+FL398S0   0.0064    0.25   0.09                             
+*
+FL39900   D-R025-R023       025   023   4.25    4.25            * Half room height (8.5 m)
+FL39901   0.0167    0.25   1.0                                  * A, L, FRACT OPEN
+FL39902   3     0     0     0                                   
+FL39903   1.0   1.0                                          
+FL399S0   0.0167    0.25   0.146                             
+*
+FL47600   D-R023-R024       023   024   4.25    4.25            * Half room height (8.5 m)
+FL47601   0.0167    0.25   1.0                                  * A, L, FRACT OPEN
+FL47602   3     0     0     0                                  
+FL47603   1.0   1.0                                         
+FL476S0   0.0167    0.25   0.146                             
+*
+FL47700   D-R024-R005       024   005   4.25    4.25            * Half room height (8.5 m)
+FL47701   0.026    0.25   1.0                                   * A, L, FRACT OPEN
+FL47702   3     0     0     0                                  
+FL47703   1.0   1.0                                       
+FL477S0   0.026    0.25   0.182                             
+*
+FL47800   D-R005-SB3L0      005   082   4.25    4.25            * Half room height (8.5 m)
+FL47801   0.026    0.25   1.0                                   * A, L, FRACT OPEN
+FL47802   3     0     0     0                                   
+FL47803   1.0   1.0                                     
+FL478S0   0.026    0.25   0.182                             
+*
+FL47900   D-SB3L0-R007      082   007   4.25    4.25            * Half room height (8.5 m)
+FL47901   0.0283    0.25   1.0                                  * A, L, FRACT OPEN
+FL47902   3     0     0     0                              
+FL47903   1.0   1.0                                            
+FL479S0   0.0283    0.25   0.19                             
+*
+FL48000   D-R007-R014       007   014   4.25    4.25            * Half room height (8.5 m)
+FL48001   0.0854    0.25   1.0                                  * A, L, FRACT OPEN
+FL48002   3     0     0     0                                   
+FL48003   1.0   1.0                              
+FL480S0   0.0854    0.25   0.33                             
+*
+FL48100   D-AL002-R014      092   014   4.25    4.25            * Half room height (8.5 m)
+FL48101   0.0497    0.25   1.0                                  * A, L, FRACT OPEN
+FL48102   3     0     0     0                                  
+FL48103   1.0   1.0                                      
+FL481S0   0.0497    0.25   0.252                             
+*
+FL48200   D-R014-R019       014   019   4.25    4.25            * Half room height (8.5 m)
+FL48201   0.0854    0.25   1.0                                  * A, L, FRACT OPEN
+FL48202   3     0     0     0                                  
+FL48203   1.0   1.0                                     
+FL482S0   0.0854    0.25   0.33                             
+*
+FL48300   D-R019-R022       019   022   4.0     4.0             * Half room height (8.0 m)
+FL48301   0.0317    1.0    1.0                                  * A, L, FRACT OPEN
+FL48302   3     0     0     0                                   
+FL48303   1.0   1.0                                  
+FL483S0   0.0317    1.0    0.201                             
+*
+FL48400   D-R022-R002       022   002   4.0     4.0             * Half room height (8.0 m)
+FL48401   0.0317    1.0    1.0                                  * A, L, FRACT OPEN
+FL48402   3     0     0     0                                   
+FL48403   1.0   1.0                                        
+FL484S0   0.0317    1.0    0.201                             
+*
+FL48500   D-R002-R004       002   004   4.25    4.25            * Half room height (8.5 m)
+FL48501   0.014    0.25   1.0                                   * A, L, FRACT OPEN
+FL48502   3     0     0     0                                  
+FL48503   1.0   1.0                                     
+FL485S0   0.014    0.25   0.134                             
+*
+FL48600   D-R002-R003       002   003   4.25    4.25            * Half room height (8.5 m)
+FL48601   0.0412    0.25   1.0                                  * A, L, FRACT OPEN
+FL48602   3     0     0     0                                  
+FL48603   1.0   1.0                                 
+FL486S0   0.0412    0.25   0.229                             
+*
+FL48700   D-R004-R003       004   003   4.25    4.25            * Half room height (8.5 m)
+FL48701   0.014    0.25   1.0                                   * A, L, FRACT OPEN
+FL48702   3     0     0     0                                
+FL48703   1.0   1.0                                            
+FL487S0   0.014    0.25   0.134                             
+*
+FL48800   D-R003-S05L0      003   088   4.25    4.25            * Half room height (8.5 m)
+FL48801   0.0205    0.25   1.0                                  * A, L, FRACT OPEN
+FL48802   3     0     0     0                                  
+FL48803   1.0   1.0                                           
+FL488S0   0.0205    0.25   0.162                             
+*
+FL48900   D-E03L0-R010      085   010   4.25    4.25            * Half room height (8.5 m)
+FL48901   0.0077    0.25   1.0                                  * A, L, FRACT OPEN
+FL48902   3     0     0     0                                 
+FL48903   1.0   1.0                                        
+FL489S0   0.0077    0.25   0.099                             
+*
+FL69400   D-E03L0-C002      085   042   4.05    4.05            * Half room height (8.1 m)
+FL69401   0.0077    0.25   1.0                                  * A, L, FRACT OPEN
+FL69402   3     0     0     0                                   
+FL69403   1.0   1.0                                            
+FL694S0   0.0077    0.25   0.099                             
+*
+FL49000   D-R010-R056       010   056   4.25    4.25            * Half room height (8.5 m)
+FL49001   0.0098    0.25   1.0                                  * A, L, FRACT OPEN
+FL49002   3     0     0     0                              
+FL49003   1.0   1.0                                       
+FL490S0   0.0098    0.25   0.112                             
+*
+FL49100   D-R057-R053       057   053   3.75    3.75            * Half room height (7.5 m)
+FL49101   0.0017    1.0    1.0                                  * A, L, FRACT OPEN
+FL49102   3     0     0     0                                 
+FL49103   1.0   1.0                                         
+FL491S0   0.0017    1.0    0.047                             
+*
+FL49200   D-R053-SB1L0      053   080   3.75    3.75            * Half room height (7.5 m)
+FL49201   0.0037    1.5    1.0                                  * A, L, FRACT OPEN
+FL49202   3     0     0     0                                 
+FL49203   1.0   1.0                                      
+FL492S0   0.0037    1.5    0.069                             
+*
+FL49300   D-SB1L0-R001      080   001   4.25    4.25            * Half room height (8.5 m)
+FL49301   0.0366    0.5    1.0                                  * A, L, FRACT OPEN
+FL49302   3     0     0     0                              
+FL49303   1.0   1.0                                           
+FL493S0   0.0366    0.5    0.216                             
+*
+FL49400   D-R001-C002       001   042   4.05    4.05            * Half room height (8.1 m)
+FL49401   0.2311    0.5    1.0                                  * A, L, FRACT OPEN
+FL49402   3     0     0     0                                   
+FL49403   1.0   1.0                             
+FL494S0   0.2311    0.5    0.542                             
+*
+FL49500   D-R052-R006       052   006   3.75    3.75            * Half room height (7.5 m)
+FL49501   0.0165    0.5    1.0                                  * A, L, FRACT OPEN
+FL49502   3     0     0     0                                   
+FL49503   1.0   1.0                               
+FL495S0   0.0165    0.5    0.145                             
+*
+FL49600   D-R052-AL001      052   091   3.75    3.75            * Half room height (7.5 m)
+FL49601   0.0281    0.5    1.0                                  * A, L, FRACT OPEN
+FL49602   3     0     0     0                                   
+FL49603   1.0   1.0                               
+FL496S0   0.0281    0.5    0.189                             
+*
+FL49700   D-R006-R001       006   001   4.25    4.25            * Half room height (8.5 m)
+FL49701   0.0165    0.5    1.0                                  * A, L, FRACT OPEN
+FL49702   3     0     0     0                                  
+FL49703   1.0   1.0                              
+FL497S0   0.0165    0.5    0.145                             
+*
+FL49800   D-R007-S07L0      007   089   4.25    4.25            * Half room height (8.5 m)
+FL49801   0.0123    0.5    1.0                                  * A, L, FRACT OPEN
+FL49802   3     0     0     0                                   
+FL49803   1.0   1.0                                 
+FL498S0   0.0123    0.5    0.125                             
+*
+FL49900   D-R015-AL016      015   096   3.75    3.75            * Half room height (7.5 m)
+FL49901   0.0155    1.0    1.0                                  * A, L, FRACT OPEN
+FL49902   3     0     0     0                                  
+FL49903   1.0   1.0                               
+FL499S0   0.0155    1.0    0.14                             
+*
+FL50000   D-R015-R016       015   016   3.6     3.6             * Half room height (7.2 m)
+FL50001   0.0462    1.0    1.0                                  * A, L, FRACT OPEN
+FL50002   3     0     0     0                                   
+FL50003   1.0   1.0                                        
+FL500S0   0.0462    1.0    0.243                             
+*
+FL59100   D-R015-R0092      015   009   4.25    4.25            * Half room height (8.5 m)
+FL59101   0.0216    1.0    1.0                                  * A, L, FRACT OPEN
+FL59102   3     0     0     0                                   
+FL59103   1.0   1.0                                      
+FL591S0   0.0216    1.0    0.166                             
+*
+FL59200   D-R0092-R016      009   016   3.6     3.6             * Half room height (7.2 m)
+FL59201   0.0216    1.0    1.0                                  * A, L, FRACT OPEN
+FL59202   3     0     0     0                                   
+FL59203   1.0   1.0                                    
+FL592S0   0.0216    1.0    0.166                             
+*
+FL59300   D-R016-R0091      016   008   3.6     3.6             * Half room height (7.2 m)
+FL59301   0.0206    1.0    1.0                                  * A, L, FRACT OPEN
+FL59302   3     0     0     0                                   
+FL59303   1.0   1.0                                  
+FL593S0   0.0206    1.0    0.162                             
+*
+FL59400   D-R016-R018       016   018   3.6     3.6             * Half room height (7.2 m)
+FL59401   0.0462    1.0    1.0                                  * A, L, FRACT OPEN
+FL59402   3     0     0     0                                   
+FL59403   1.0   1.0                            
+FL594S0   0.0462    1.0    0.243                             
+*
+FL59500   D-R018-R0091      018   008   3.75    3.75            * Half room height (7.5 m)
+FL59501   0.0206    1.0    1.0                                  * A, L, FRACT OPEN
+FL59502   3     0     0     0                                   
+FL59503   1.0   1.0                                       
+FL595S0   0.0206    1.0    0.162                             
+*
+FL59600   D-R0091-R017      008   017   3.75    3.75            * Half room height (7.5 m)
+FL59601   0.0084    1.0    1.0                                  * A, L, FRACT OPEN
+FL59602   3     0     0     0                             
+FL59603   1.0   1.0                                      
+FL596S0   0.0084    1.0    0.103                             
+*
+FL59700   D-R017-C002       017   042   3.75    3.75            * Half room height (7.5 m)
+FL59701   0.0084    0.25   1.0                                  * A, L, FRACT OPEN
+FL59702   3     0     0     0                              
+FL59703   1.0   1.0                                       
+FL597S0   0.0084    0.25   0.103                             
+*
+FL68500   D-R018-R058       018   058   3.75    3.75            * Half room height (7.5 m)
+FL68501   0.0236    1.5    1.0                                  * A, L, FRACT OPEN
+FL68502   3     0     0     0                                 
+FL68503   1.0   1.0                                             
+FL685S0   0.0236    1.5    0.173                             
+*
+FL68600   D-R018-AL055      018   095   3.75    3.75            * Half room height (7.5 m)
+FL68601   0.0419    0.25   1.0                                  * A, L, FRACT OPEN
+FL68602   3     0     0     0                                  
+FL68603   1.0   1.0                                            
+FL686S0   0.0419    0.25   0.231                             
+*
+FL68700   D-AL055-R054      095   054   4.25    4.25            * Half room height (8.5 m)
+FL68701   0.0122    0.25   1.0                                  * A, L, FRACT OPEN
+FL68702   3     0     0     0                                 
+FL68703   1.0   1.0                                           
+FL687S0   0.0122    0.25   0.125                             
+*
+FL68800   D-R058-C002       058   042   3.75    3.75            * Half room height (7.5 m)
+FL68801   0.0236    1.5    1.0                                  * A, L, FRACT OPEN
+FL68802   3     0     0     0                                   
+FL68803   1.0   1.0                                             
+FL688S0   0.0236    1.5    0.173                             
+*
+FL68900   D-R054-R053       054   053   3.75    3.75            * Half room height (7.5 m)
+FL68901   0.0037    1.5    1.0                                  * A, L, FRACT OPEN
+FL68902   3     0     0     0                                   
+FL68903   1.0   1.0                                            
+FL689S0   0.0037    1.5    0.069                             
+*
+FL69000   D-R016-C002       016   042   3.6     3.6             * Half room height (7.2 m)
+FL69001   0.0462    1.0    1.0                                  * A, L, FRACT OPEN
+FL69002   3     0     0     0                                 
+FL69003   1.0   1.0                                           
+FL690S0   0.0462    1.0    0.243                             
+*
+FL69100   D-R057-R056       057   056   3.75    3.75            * Half room height (7.5 m)
+FL69101   0.0017    1.5    1.0                                  * A, L, FRACT OPEN
+FL69102   3     0     0     0                                
+FL69103   1.0   1.0                                         
+FL691S0   0.0017    1.5    0.047                             
+*
+FL69200   D-R058-R056       058   056   3.75    3.75            * Half room height (7.5 m)
+FL69201   0.0164    1.5    1.0                                  * A, L, FRACT OPEN
+FL69202   3     0     0     0                                  
+FL69203   1.0   1.0                                         
+FL692S0   0.0164    1.5    0.145                             
+*
+***
 . * End
 *
 **********************************************************
