@@ -1,0 +1,136 @@
+****************************************************************************************************************************************
+****************************************************************************************************************************************
+*                                                        Main Building MELCOR model (Level 0)                                          *
+****************************************************************************************************************************************
+****************************************************************************************************************************************
+*
+*EOR* MELGEN
+*
+title     prueba
+jobid     prueba
+*
+restartf  prueba.rst
+outputf   prueba_gen.out
+diagf     prueba_gen.dia
+stopf     prueba.stp
+*
+crtout 
+tstart     00.0
+DTTIME     0.1      * initial time step
+*
+*
+****************************************************************************************************************************************
+*         										    NCG (Non Condensible Gases) INPUT			    		  						   *
+****************************************************************************************************************************************
+*
+NCG001    N2    4                             * MATERIAL 4 IS N2
+NCG002    O2    5                             * MATERIAL 5 IS O2
+NCG333    H2    6                             * MATERIAL 6 IS H2
+NCG444    HE    7                             * MATERIAL 7 IS HE
+NCG555    AR    8                             * MATERIAL 8 IS AR
+*
+*-----------------------------------------------                                                                
+* CV026 - R026 - Other applications and others irradiation sources area (C2)                                                          
+*-----------------------------------------------                                                                
+CV02600   R026  2  2  1                                                           
+CV02601   0   -1					                 
+CV026A0   3                                                                                         
+CV026A1   PVOL    101235.0                          * 101325-90Pa                                                                 
+CV026A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                
+CV026A5   MLFR.4  0.78                              * Filled with air (N2)
+CV026A6   MLFR.5  0.21                              * Filled with air (O2)
+CV026A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV026B1   0.0      0.0                                                            
+CV026B2   8.5      24771.0                          * 22122.8 m3 (2PNSLP)      
+***
+*
+*-----------------------------------------------                                                                
+* CV016 - R016 - Lithium loop cell (C3 - C4 en 2PNSLP)                                                                    
+*-----------------------------------------------                                                                
+CV01600   R016  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV01601   0   0		                                * Fog allowed (default)
+CV016A0   3                                                                                         
+CV016A1   PVOL  101195.0                            * 101325Pa-195Pa 
+CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV016B1   0.0      0.0                                                            
+CV016B2   7.2      2495.0                           * 2658.7 m3 (2PNSLP) ; Height = Volume / Floor Area
+***
+*
+*-------------------------------------------------------
+* HVAC-R058          FM    TO     FM     TO
+*-------------------------------------------------------
+FL46800   HVAC-R058   016   026  6.7  6.7           
+FL46801   1.0   1.0    1.0                                 * A, L, FRACT OPEN, DIAM
+FL46802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL46803   1.0   1.0                                             * FORM LOSS
+FL468S0   1.0   1.0    1.0                     
+FL4680F   6.2    7.2
+FL4680T   6.2    7.2
+FL468T0   1   468        
+*
+TF46800   FL468_vel  1    1.0
+TF46810   0.0        1.5                                 
+*
+*
+***
+. * End
+*
+**********************************************************
+*                     MELCOR INPUT                       *
+**********************************************************
+*
+*EOR* melcor
+*
+noflush
+*
+*
+* WARNINGLEVEL 0 0 -1
+*
+*
+TITLE     prueba
+*
+*********
+* FILES *
+*********
+*
+RESTARTFILE  prueba.rst
+OUTPUTFILE   prueba.out
+PLOTFILE     prueba.ptf
+DIAGFILE     prueba_cor.dia
+MESSAGEFILE  prueba_cor.mes
+*
+*
+*
+CPULEFT          200.
+CPULIM           86400.                             * max CPU time running      
+*
+CYMESF           100000    100000                   * FRECUENCIA TERMINAL / .OUT    
+*
+*
+RESTART          -1              
+*
+TEND             1.0e6                            * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+*
+*
+SOFTDTMIN  .1 1000
+*
+*
+*             TIME       DTMAX   DTMIN      DTEDT      DTPLT      DTRST
+TIME1       0.0         100.0     1.0      1800.0     1800.0     1800.0        * primer dia: cada media hora -> 1800 s
+TIME2       86400.0     1000.0    10.0     86400.0    86400.0    86400.0       * despues, cada 24 horas -> 86400.0 s
+TIME3       913600.0    100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
+*TIME3       31449600.0  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
+*
+*TIME_N     TEND-86400  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia (general): cada media hora
+*
+*
+.* END
