@@ -56,8 +56,7 @@ CV026A0   3
 CV026A1   PVOL    101235.0                          * 101325-90Pa                                                                 
 CV026A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                
 CV026A5   MLFR.4  0.78                              * Filled with air (N2)
-CV026A6   MLFR.5  0.21                              * Filled with air (O2)
-CV026A8   MLFR.8  0.01                              * Filled with air (Ar)
+CV026A6   MLFR.5  0.22                              * Filled with air (O2)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
