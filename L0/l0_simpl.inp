@@ -936,8 +936,8 @@ FL08601   1.0   1.0    1.0                                      * A, L, FRACT OP
 FL08602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL08603   1.0   1.0                                             * FORM LOSS
 FL086S0   1.0   1.0    1.0                     
-FL0860F   7.5    8.5
-FL0860T   7.5    8.5
+FL0860F   3.75    4.75
+FL0860T   3.75    4.75
 FL086T0   2      086           
 *
 CF08600   VEL-S02L0-IN  DIVIDE  1  405.0  0.0                   * Q / (3600 * A) 
@@ -951,8 +951,8 @@ FL18601   1.0   1.0    1.0                                      * A, L, FRACT OP
 FL18602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL18603   1.0   1.0                                             * FORM LOSS
 FL186S0   1.0   1.0    1.0                     
-FL1860F   7.5    8.5
-FL1860T   7.5    8.5
+FL1860F   3.75    4.75
+FL1860T   3.75    4.75
 FL186T0   2      186           
 *
 CF18600   VEL-S02L0-EX  DIVIDE  1  1267.0  0.0                  * Q / (3600 * A) 
@@ -966,8 +966,8 @@ FL08301   1.0   1.0    1.0                                      * A, L, FRACT OP
 FL08302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL08303   1.0   1.0                                             * FORM LOSS
 FL083S0   1.0   1.0    1.0                     
-FL0830F   7.5    8.5
-FL0830T   7.5    8.5
+FL0830F   3.75    4.75
+FL0830T   3.75    4.75
 FL083T0   2      083           
 *
 CF08300   VEL-SB4L0-IN  DIVIDE  1  3060.0  0.0                  * Q / (3600 * A) 
@@ -981,8 +981,8 @@ FL18301   1.0   1.0    1.0                                      * A, L, FRACT OP
 FL18302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL18303   1.0   1.0                                             * FORM LOSS
 FL183S0   1.0   1.0    1.0                     
-FL1830F   7.5    8.5
-FL1830T   7.5    8.5
+FL1830F   3.75    4.75
+FL1830T   3.75    4.75
 FL183T0   2      183           
 *
 CF18300   VEL-SB4L0-EX  DIVIDE  1  1248.0  0.0                  * Q / (3600 * A) 
@@ -996,8 +996,8 @@ FL09401   1.0   1.0    1.0                                      * A, L, FRACT OP
 FL09402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL09403   1.0   1.0                                             * FORM LOSS
 FL094S0   1.0   1.0    1.0                     
-FL0940F   7.5    8.5
-FL0940T   7.5    8.5
+FL0940F   3.75    4.75
+FL0940T   3.75    4.75
 FL094T0   2      094           
 *
 CF09400   VEL-AL004-IN  DIVIDE  1  1157.0  0.0                  * Q / (3600 * A) 
@@ -1011,8 +1011,8 @@ FL02601   1.0   1.0    1.0                                      * A, L, FRACT OP
 FL02602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL02603   1.0   1.0                                             * FORM LOSS
 FL026S0   1.0   1.0    1.0                     
-FL0260F   7.5    8.5
-FL0260T   7.5    8.5
+FL0260F   3.75    4.75
+FL0260T   3.75    4.75
 FL026T0   2      026           
 *
 CF02600   VEL-R026-IN  DIVIDE  1  24771.0  0.0                  * Q / (3600 * A) 
@@ -1026,12 +1026,672 @@ FL12601   1.0   1.0    1.0                                      * A, L, FRACT OP
 FL12602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL12603   1.0   1.0                                             * FORM LOSS
 FL126S0   1.0   1.0    1.0                     
-FL1260F   7.5    8.5
-FL1260T   7.5    8.5
+FL1260F   3.75    4.75
+FL1260T   3.75    4.75
 FL126T0   2      126           
 *
 CF12600   VEL-R026-EX  DIVIDE  1  32527.0  0.0                  * Q / (3600 * A) 
 CF12610   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R059-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL05900   HVAC-R059-IN   400   059  4.25  4.25           
+FL05901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL05902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL05903   1.0   1.0                                             * FORM LOSS
+FL059S0   1.0   1.0    1.0                     
+FL0590F   3.75    4.75
+FL0590T   3.75    4.75
+FL059T0   2      059           
+*
+CF05900   VEL-R059-IN  DIVIDE  1  381.0  0.0                    * Q / (3600 * A) 
+CF05910   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R059-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL15900   HVAC-R059-EX   059   401  4.25  4.25           
+FL15901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL15902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL15903   1.0   1.0                                             * FORM LOSS
+FL159S0   1.0   1.0    1.0                     
+FL1590F   3.75    4.75
+FL1590T   3.75    4.75
+FL159T0   2      159           
+*
+CF15900   VEL-R059-EX  DIVIDE  1  419.0  0.0                    * Q / (3600 * A) 
+CF15910   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R052-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL05200   HVAC-R052-IN   400   052  4.25  4.25           
+FL05201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL05202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL05203   1.0   1.0                                             * FORM LOSS
+FL052S0   1.0   1.0    1.0                     
+FL0520F   3.75    4.75
+FL0520T   3.75    4.75
+FL052T0   2      052           
+*
+CF05200   VEL-R052-IN  DIVIDE  1  1908.0  0.0                   * Q / (3600 * A) 
+CF05210   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R052-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL15200   HVAC-R052-EX   052   401  4.25  4.25           
+FL15201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL15202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL15203   1.0   1.0                                             * FORM LOSS
+FL152S0   1.0   1.0    1.0                     
+FL1520F   3.75    4.75
+FL1520T   3.75    4.75
+FL152T0   2      152           
+*
+CF15200   VEL-R052-EX  DIVIDE  1  2099.0  0.0                   * Q / (3600 * A) 
+CF15210   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R006-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL00600   HVAC-R006-IN   400   006  4.25  4.25           
+FL00601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL00602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL00603   1.0   1.0                                             * FORM LOSS
+FL006S0   1.0   1.0    1.0                     
+FL0060F   3.75    4.75
+FL0060T   3.75    4.75
+FL006T0   2      006           
+*
+CF00600   VEL-R006-IN  DIVIDE  1  749.0  0.0                    * Q / (3600 * A) 
+CF00610   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R006-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL10600   HVAC-R006-EX   006   401  4.25  4.25           
+FL10601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL10602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL10603   1.0   1.0                                             * FORM LOSS
+FL106S0   1.0   1.0    1.0                     
+FL1060F   3.75    4.75
+FL1060T   3.75    4.75
+FL106T0   2      106           
+*
+CF10600   VEL-R006-EX  DIVIDE  1  2087.0  0.0                   * Q / (3600 * A) 
+CF10610   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-AL001-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL09100   HVAC-AL001-IN   400   091  4.25  4.25           
+FL09101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL09102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL09103   1.0   1.0                                             * FORM LOSS
+FL091S0   1.0   1.0    1.0                     
+FL0910F   3.75    4.75
+FL0910T   3.75    4.75
+FL091T0   2      091           
+*
+CF09100   VEL-AL001-IN  DIVIDE  1  1073.0  0.0                   * Q / (3600 * A) 
+CF09110   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R001-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL00100   HVAC-R001-IN   400   001  4.25  4.25           
+FL00101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL00102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL00103   1.0   1.0                                             * FORM LOSS
+FL001S0   1.0   1.0    1.0                     
+FL0010F   3.75    4.75
+FL0010T   3.75    4.75
+FL001T0   2      001           
+*
+CF00100   VEL-R001-IN  DIVIDE  1  9986.0  0.0                   * Q / (3600 * A) 
+CF00110   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R001-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL10100   HVAC-R001-EX   001   401  4.25  4.25           
+FL10101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL10102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL10103   1.0   1.0                                             * FORM LOSS
+FL101S0   1.0   1.0    1.0                     
+FL1010F   3.75    4.75
+FL1010T   3.75    4.75
+FL101T0   2      101           
+*
+CF10100   VEL-R001-EX  DIVIDE  1  8293.0  0.0                   * Q / (3600 * A) 
+CF10110   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R011-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL01100   HVAC-R011-IN   400   011  4.25  4.25           
+FL01101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL01102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL01103   1.0   1.0                                             * FORM LOSS
+FL011S0   1.0   1.0    1.0                     
+FL0110F   3.75    4.75
+FL0110T   3.75    4.75
+FL011T0   2      011           
+*
+CF01100   VEL-R011-IN  DIVIDE  1  2469.0  0.0                   * Q / (3600 * A) 
+CF01110   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R011-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL11100   HVAC-R011-EX   011   401  4.25  4.25           
+FL11101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL11102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL11103   1.0   1.0                                             * FORM LOSS
+FL111S0   1.0   1.0    1.0                     
+FL1110F   3.75    4.75
+FL1110T   3.75    4.75
+FL111T0   2      111           
+*
+CF11100   VEL-R011-EX  DIVIDE  1  2962.0  0.0                   * Q / (3600 * A) 
+CF11110   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-SB1L0-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL08000   HVAC-SB1L0-IN   400   080  4.25  4.25           
+FL08001   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL08002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL08003   1.0   1.0                                             * FORM LOSS
+FL080S0   1.0   1.0    1.0                     
+FL0800F   3.75    4.75
+FL0800T   3.75    4.75
+FL080T0   2      080           
+*
+CF08000   VEL-SB1L0-IN  DIVIDE  1  990.0  0.0                   * Q / (3600 * A) 
+CF08010   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-SB1L0-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL18000   HVAC-SB1L0-EX   080   401  4.25  4.25           
+FL18001   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL18002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL18003   1.0   1.0                                             * FORM LOSS
+FL180S0   1.0   1.0    1.0                     
+FL1800F   3.75    4.75
+FL1800T   3.75    4.75
+FL180T0   2      180           
+*
+CF18000   VEL-SB1L0-EX  DIVIDE  1  1386.0  0.0                  * Q / (3600 * A) 
+CF18010   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R022-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL02200   HVAC-R022-IN   400   022  4.25  4.25           
+FL02201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL02202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL02203   1.0   1.0                                             * FORM LOSS
+FL022S0   1.0   1.0    1.0                     
+FL0220F   3.75    4.75
+FL0220T   3.75    4.75
+FL022T0   2      022           
+*
+CF02200   VEL-R022-IN  DIVIDE  1  1755.0  0.0                   * Q / (3600 * A) 
+CF02210   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R022-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL12200   HVAC-R022-EX   022   401  4.25  4.25           
+FL12201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL12202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL12203   1.0   1.0                                             * FORM LOSS
+FL122S0   1.0   1.0    1.0                     
+FL1220F   3.75    4.75
+FL1220T   3.75    4.75
+FL122T0   2      122           
+*
+CF12200   VEL-R022-EX  DIVIDE  1  1903.0  0.0                   * Q / (3600 * A) 
+CF12210   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-E03L0-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL08500   HVAC-E03L0-IN   400   085  4.25  4.25           
+FL08501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL08502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL08503   1.0   1.0                                             * FORM LOSS
+FL085S0   1.0   1.0    1.0                     
+FL0850F   3.75    4.75
+FL0850T   3.75    4.75
+FL085T0   2      085           
+*
+CF08500   VEL-E03L0-IN  DIVIDE  1  411.0  0.0                    * Q / (3600 * A) 
+CF08510   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-E03L0-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL18500   HVAC-E03L0-EX   085   401  4.25  4.25           
+FL18501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL18502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL18503   1.0   1.0                                             * FORM LOSS
+FL185S0   1.0   1.0    1.0                     
+FL1850F   3.75    4.75
+FL1850T   3.75    4.75
+FL185T0   2      185           
+*
+CF18500   VEL-E03L0-EX  DIVIDE  1  453.0  0.0                   * Q / (3600 * A) 
+CF18510   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-S05L0-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL08800   HVAC-S05L0-IN   400   088  4.25  4.25           
+FL08801   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL08802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL08803   1.0   1.0                                             * FORM LOSS
+FL088S0   1.0   1.0    1.0                     
+FL0880F   3.75    4.75
+FL0880T   3.75    4.75
+FL088T0   2      088           
+*
+CF08800   VEL-S05L0-IN  DIVIDE  1  554.0  0.0                   * Q / (3600 * A) 
+CF08810   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-S05L0-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL18800   HVAC-S05L0-EX   088   401  4.25  4.25           
+FL18801   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL18802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL18803   1.0   1.0                                             * FORM LOSS
+FL188S0   1.0   1.0    1.0                     
+FL1880F   3.75    4.75
+FL1880T   3.75    4.75
+FL188T0   2      188           
+*
+CF18800   VEL-S05L0-EX  DIVIDE  1  665.0  0.0                   * Q / (3600 * A) 
+CF18810   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R003-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL00300   HVAC-R003-IN   400   003  4.25  4.25           
+FL00301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL00302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL00303   1.0   1.0                                             * FORM LOSS
+FL003S0   1.0   1.0    1.0                     
+FL0030F   3.75    4.75
+FL0030T   3.75    4.75
+FL003T0   2      003           
+*
+CF00300   VEL-R003-IN  DIVIDE  1  3086.0  0.0                   * Q / (3600 * A) 
+CF00310   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R003-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL10300   HVAC-R003-EX   003   401  4.25  4.25           
+FL10301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL10302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL10303   1.0   1.0                                             * FORM LOSS
+FL103S0   1.0   1.0    1.0                     
+FL1030F   3.75    4.75
+FL1030T   3.75    4.75
+FL103T0   2      103           
+*
+CF10300   VEL-R003-EX  DIVIDE  1  3703.0  0.0                   * Q / (3600 * A) 
+CF10310   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R004-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL00400   HVAC-R004-IN   400   004  4.25  4.25           
+FL00401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL00402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL00403   1.0   1.0                                             * FORM LOSS
+FL004S0   1.0   1.0    1.0                     
+FL0040F   3.75    4.75
+FL0040T   3.75    4.75
+FL004T0   2      004           
+* 
+CF00400   VEL-R004-IN  DIVIDE  1  759.0  0.0                    * Q / (3600 * A) 
+CF00410   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R004-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL10400   HVAC-R004-EX   004   401  4.25  4.25           
+FL10401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL10402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL10403   1.0   1.0                                             * FORM LOSS
+FL104S0   1.0   1.0    1.0                     
+FL1040F   3.75    4.75
+FL1040T   3.75    4.75
+FL104T0   2      104           
+*
+CF10400   VEL-R004-EX  DIVIDE  1  834.0  0.0                    * Q / (3600 * A) 
+CF10410   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R002-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL00200   HVAC-R002-IN   400   002  4.25  4.25           
+FL00201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL00202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL00203   1.0   1.0                                             * FORM LOSS
+FL002S0   1.0   1.0    1.0                     
+FL0020F   3.75    4.75
+FL0020T   3.75    4.75
+FL002T0   2      002           
+*
+CF00200   VEL-R002-IN  DIVIDE  1  1115.0  0.0                   * Q / (3600 * A) 
+CF00210   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R002-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL10200   HVAC-R002-EX   002   401  4.25  4.25           
+FL10201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL10202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL10203   1.0   1.0                                             * FORM LOSS
+FL102S0   1.0   1.0    1.0                     
+FL1020F   3.75    4.75
+FL1020T   3.75    4.75
+FL102T0   2      102           
+*
+CF10200   VEL-R002-EX  DIVIDE  1  1338.0  0.0                   * Q / (3600 * A) 
+CF10210   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R019-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL01900   HVAC-R019-IN   400   019  4.25  4.25           
+FL01901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL01902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL01903   1.0   1.0                                             * FORM LOSS
+FL019S0   1.0   1.0    1.0                     
+FL0190F   3.75    4.75
+FL0190T   3.75    4.75
+FL019T0   2      019           
+*
+CF01900   VEL-R019-IN  DIVIDE  1  5670.0  0.0                   * Q / (3600 * A) 
+CF01910   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R019-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL11900   HVAC-R019-EX   019   401  4.25  4.25           
+FL11901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL11902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL11903   1.0   1.0                                             * FORM LOSS
+FL119S0   1.0   1.0    1.0                     
+FL1190F   3.75    4.75
+FL1190T   3.75    4.75
+FL119T0   2      119           
+*
+CF11900   VEL-R019-EX  DIVIDE  1  6195.0  0.0                   * Q / (3600 * A) 
+CF11910   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R014-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL01400   HVAC-R014-IN   400   014  4.25  4.25           
+FL01401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL01402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL01403   1.0   1.0                                             * FORM LOSS
+FL014S0   1.0   1.0    1.0                     
+FL0140F   3.75    4.75
+FL0140T   3.75    4.75
+FL014T0   2      014           
+*
+CF01400   VEL-R014-IN  DIVIDE  1  4612.0  0.0                   * Q / (3600 * A) 
+CF01410   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R014-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL11400   HVAC-R014-EX   014   401  4.25  4.25           
+FL11401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL11402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL11403   1.0   1.0                                             * FORM LOSS
+FL114S0   1.0   1.0    1.0                     
+FL1140F   3.75    4.75
+FL1140T   3.75    4.75
+FL114T0   2      114           
+*
+CF11400   VEL-R014-EX  DIVIDE  1  5534.0  0.0                   * Q / (3600 * A) 
+CF11410   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-AL002-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL09200   HVAC-AL002-IN   400   092  4.25  4.25           
+FL09201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL09202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL09203   1.0   1.0                                             * FORM LOSS
+FL092S0   1.0   1.0    1.0                     
+FL0920F   3.75    4.75
+FL0920T   3.75    4.75
+FL092T0   2      092           
+*
+CF09200   VEL-AL002-IN  DIVIDE  1  1590.0  0.0                   * Q / (3600 * A) 
+CF09210   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R007-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL00700   HVAC-R007-IN   400   007  4.25  4.25           
+FL00701   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL00702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL00703   1.0   1.0                                             * FORM LOSS
+FL007S0   1.0   1.0    1.0                     
+FL0070F   3.75    4.75
+FL0070T   3.75    4.75
+FL007T0   2      007           
+*
+CF00700   VEL-R007-IN  DIVIDE  1  6044.0  0.0                   * Q / (3600 * A) 
+CF00710   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R007-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL10700   HVAC-R007-EX   007   401  4.25  4.25           
+FL10701   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL10702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL10703   1.0   1.0                                             * FORM LOSS
+FL107S0   1.0   1.0    1.0                     
+FL1070F   3.75    4.75
+FL1070T   3.75    4.75
+FL107T0   2      107           
+*
+CF10700   VEL-R007-EX  DIVIDE  1  4186.0  0.0                   * Q / (3600 * A) 
+CF10710   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-S07L0-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL08900   HVAC-S07L0-IN   400   089  4.25  4.25           
+FL08901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL08902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL08903   1.0   1.0                                             * FORM LOSS
+FL089S0   1.0   1.0    1.0                     
+FL0890F   3.75    4.75
+FL0890T   3.75    4.75
+FL089T0   2      089           
+*
+CF08900   VEL-S07L0-IN  DIVIDE  1  334.0  0.0                   * Q / (3600 * A) 
+CF08910   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-S07L0-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL18900   HVAC-S07L0-EX   089   401  4.25  4.25           
+FL18901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL18902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL18903   1.0   1.0                                             * FORM LOSS
+FL189S0   1.0   1.0    1.0                     
+FL1880F   3.75    4.75
+FL1890T   3.75    4.75
+FL189T0   2      189           
+*
+CF18900   VEL-S07L0-EX  DIVIDE  1  468.0  0.0                   * Q / (3600 * A) 
+CF18910   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R005-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL00500   HVAC-R005-IN   400   005  4.25  4.25           
+FL00501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL00502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL00503   1.0   1.0                                             * FORM LOSS
+FL005S0   1.0   1.0    1.0                     
+FL0050F   3.75    4.75
+FL0050T   3.75    4.75
+FL005T0   2      005           
+*
+CF00500   VEL-R005-IN  DIVIDE  1  1408.0  0.0                   * Q / (3600 * A) 
+CF00510   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R005-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL10500   HVAC-R005-EX   005   401  4.25  4.25           
+FL10501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL10502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL10503   1.0   1.0                                             * FORM LOSS
+FL105S0   1.0   1.0    1.0                     
+FL1050F   3.75    4.75
+FL1050T   3.75    4.75
+FL105T0   2      105           
+*
+CF10500   VEL-R005-EX  DIVIDE  1  1548.0  0.0                   * Q / (3600 * A) 
+CF10510   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R024-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL02400   HVAC-R024-IN   400   024  4.25  4.25           
+FL02401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL02402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL02403   1.0   1.0                                             * FORM LOSS
+FL024S0   1.0   1.0    1.0                     
+FL0240F   3.75    4.75
+FL0240T   3.75    4.75
+FL024T0   2      024           
+*
+CF02400   VEL-R024-IN  DIVIDE  1  2424.0  0.0                   * Q / (3600 * A) 
+CF02410   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R024-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL12400   HVAC-R024-EX   024   401  4.25  4.25           
+FL12401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL12402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL12403   1.0   1.0                                             * FORM LOSS
+FL124S0   1.0   1.0    1.0                     
+FL1240F   3.75    4.75
+FL1240T   3.75    4.75
+FL124T0   2      124           
+*
+CF12400   VEL-R024-EX  DIVIDE  1  2627.0  0.0                   * Q / (3600 * A) 
+CF12410   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R023-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL02300   HVAC-R023-IN   400   023  4.25  4.25           
+FL02301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL02302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL02303   1.0   1.0                                             * FORM LOSS
+FL023S0   1.0   1.0    1.0                     
+FL0230F   3.75    4.75
+FL0230T   3.75    4.75
+FL023T0   2      023           
+*
+CF02300   VEL-R023-IN  DIVIDE  1  903.0  0.0                    * Q / (3600 * A) 
+CF02310   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R023-EX          FM    TO     FM     TO
+*-------------------------------------------------------
+FL12300   HVAC-R023-EX   023   401  4.25  4.25           
+FL12301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL12302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL12303   1.0   1.0                                             * FORM LOSS
+FL123S0   1.0   1.0    1.0                     
+FL1230F   3.75    4.75
+FL1230T   3.75    4.75
+FL123T0   2      123           
+*
+CF12300   VEL-R023-EX  DIVIDE  1  993.0  0.0                    * Q / (3600 * A) 
+CF12310   0.0  3600.0  TIME 
+*
+*-------------------------------------------------------
+* HVAC-R025-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL02500   HVAC-R025-IN   400   025  4.25  4.25           
+FL02501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL02502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL02503   1.0   1.0                                             * FORM LOSS
+FL025S0   1.0   1.0    1.0                     
+FL0250F   3.75    4.75
+FL0250T   3.75    4.75
+FL025T0   2      025           
+*
+CF02500   VEL-R024-IN  DIVIDE  1  505.0  0.0                    * Q / (3600 * A) 
+CF02510   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-R025-EX          FM    TO     FM     TO 
+*-------------------------------------------------------
+FL12500   HVAC-R025-EX   025   401  4.25  4.25           
+FL12501   1.0   1.5    1.0                                      * A, L, FRACT OPEN, DIAM
+FL12502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL12503   1.0   1.0                                             * FORM LOSS
+FL125S0   1.0   1.0    1.0                     
+FL1250F   3.75    4.75
+FL1250T   3.75    4.75
+FL125T0   2      125           
+*
+CF12500   VEL-R025-EX  DIVIDE  1  606.0  0.0                    * Q / (3600 * A) 
+CF12510   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-E02L0-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL08400   HVAC-E02L0-IN   400   084  4.25  4.25           
+FL08401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL08402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL08403   1.0   1.0                                             * FORM LOSS
+FL084S0   1.0   1.0    1.0                     
+FL0840F   3.75    4.75
+FL0840T   3.75    4.75
+FL084T0   2      084           
+*
+CF08400   VEL-E02L0-IN  DIVIDE  1  346.0  0.0                    * Q / (3600 * A) 
+CF08410   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-E02L0-EX          FM    TO     FM     TO 
+*-------------------------------------------------------
+FL18400   HVAC-E02L0-EX   084   401  4.25  4.25           
+FL18401   1.0   1.5    1.0                                      * A, L, FRACT OPEN, DIAM
+FL18402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL18403   1.0   1.0                                             * FORM LOSS
+FL184S0   1.0   1.0    1.0                     
+FL1840F   3.75    4.75
+FL1840T   3.75    4.75
+FL184T0   2      184           
+*
+CF18400   VEL-E02L0-EX  DIVIDE  1  381.0  0.0                    * Q / (3600 * A) 
+CF18410   0.0  3600.0  TIME
 *
 ***
 **************************************************************** SGS ******************************************************************
