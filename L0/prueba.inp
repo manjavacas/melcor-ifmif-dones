@@ -30,6 +30,24 @@ NCG444    HE    7                             * MATERIAL 7 IS HE
 NCG555    AR    8                             * MATERIAL 8 IS AR
 *
 *-----------------------------------------------                                                                
+* CV900 - ArSS - Ar Supply Subsystem                                                                    
+*-----------------------------------------------                                                                
+CV90000   ARSS  2  0  1                                                            
+CV90001   0   -1		                             * Fog allowed (default)
+CV900A0   3                                                                                         
+CV900A1   PVOL  1200000.0                            * 12 Bar
+CV900A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C; 0% rel. humidity
+CV900A3   MLFR.8  0.99999                            * Filled with Ar -> 99.999%   
+CV900A4   MLFR.5  0.0000021                          * Initial 02 -> 21% de 0.001% 
+CV900A5   MLFR.4  0.0000079                          * Initial N2 -> 79% de 0.001%    
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV900B1   0.0      0.0                                                            
+CV900B2   50.0     1000000.0                             
+***
+*
+*-----------------------------------------------                                                                
 * CV026 - R026 - Other applications and others irradiation sources area (C2)                                                          
 *-----------------------------------------------                                                                
 CV02600   R026  2  2  1                                                           
@@ -80,6 +98,16 @@ FL468T0   1   468
 TF46800   FL468_vel  1    1.0
 TF46810   0.0        1.5                                 
 *
+*-------------------------------------------------------
+* HVAC-R059          FM    TO     FM     TO
+*-------------------------------------------------------
+FL46800   HVAC-R059   900   016  6.7  6.7           
+FL46801   1.0   1.0    1.0                                 * A, L, FRACT OPEN, DIAM
+FL46802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL46803   1.0   1.0                                             * FORM LOSS
+FL468S0   1.0   1.0    1.0                     
+FL4680F   6.2    7.2
+FL4680T   6.2    7.2
 *
 ***
 . * End
