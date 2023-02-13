@@ -101,13 +101,13 @@ TF46810   0.0        1.5
 *-------------------------------------------------------
 * HVAC-R059          FM    TO     FM     TO
 *-------------------------------------------------------
-FL46800   HVAC-R059   900   016  6.7  6.7           
-FL46801   1.0   1.0    1.0                                 * A, L, FRACT OPEN, DIAM
-FL46802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL46803   1.0   1.0                                             * FORM LOSS
-FL468S0   1.0   1.0    1.0                     
-FL4680F   6.2    7.2
-FL4680T   6.2    7.2
+FL46900   HVAC-R059   900   016  6.7  6.7           
+FL46901   1.0   1.0    1.0                                 * A, L, FRACT OPEN, DIAM
+FL46902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL46903   1.0   1.0                                             * FORM LOSS
+FL469S0   1.0   1.0    1.0                     
+FL4690F   6.2    7.2
+FL4690T   6.2    7.2
 *
 ***
 . * End
