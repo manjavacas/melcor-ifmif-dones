@@ -7,9 +7,9 @@ l0: clean
 l1: clean
 	./melgen-fusion-186_bdba L1/l1.inp
 	./melcor-fusion-186_bdba L1/l1.inp
-prueba: clean
-	./melgen-fusion-186_bdba L0/prueba.inp
-	./melcor-fusion-186_bdba L0/prueba.inp
+l0s: clean
+	./melgen-fusion-186_bdba L0/l0_simpl.inp
+	./melcor-fusion-186_bdba L0/l0_simpl.inp
 mb: clean
 	./melgen-fusion-186_bdba Main Building/main.inp
 	./melcor-fusion-186_bdba  Main Building/main.inp
