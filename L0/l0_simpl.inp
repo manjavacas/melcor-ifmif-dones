@@ -6,13 +6,13 @@
 *
 *EOR* MELGEN
 *
-title     l0
-jobid     l0
+title     l0s
+jobid     l0s
 *
-restartf  l0.rst
-outputf   l0_gen.out
-diagf     l0_gen.dia
-stopf     l0.stp
+restartf  l0s.rst
+outputf   l0s_gen.out
+diagf     l0s_gen.dia
+stopf     l0s.stp
 *
 crtout 
 tstart     00.0
@@ -3416,17 +3416,17 @@ noflush
 * WARNINGLEVEL 0 0 -1
 *
 *
-TITLE     l0
+TITLE     l0s
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  l0.rst
-OUTPUTFILE   l0.out
-PLOTFILE     l0.ptf
-DIAGFILE     l0_cor.dia
-MESSAGEFILE  l0_cor.mes
+RESTARTFILE  l0s.rst
+OUTPUTFILE   l0s.out
+PLOTFILE     l0s.ptf
+DIAGFILE     l0s_cor.dia
+MESSAGEFILE  l0s_cor.mes
 *
 *
 *
