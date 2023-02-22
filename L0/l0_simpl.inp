@@ -113,9 +113,9 @@ CV001B1   0.0      0.0
 CV001B2   8.5      2496.0                           * 2113.4 m3 (2PNSLP)
 ***
 *-----------------------------------------------                                                                
-* CV002 - R002 - TL-WTS (C2)                                                                    
+* CV002 - G5 - Group 5 R002 R003 R004 R019 R022 (C2)                                                                    
 *-----------------------------------------------                                                                
-CV00200   R002  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
+CV00200   G5  2  0  1                               * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
 CV00201   0   0		                                * Fog allowed (default)
 CV002A0   3                                                                                         
 CV002A1   PVOL  101235.0                            * 101325Pa-90Pa 
@@ -127,42 +127,7 @@ CV002A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
 CV002B1   0.0      0.0                                                            
-CV002B2   8.5      1115.0                           * 909.6 m3 (2PNSLP)
-***
-*
-*-----------------------------------------------                                                                
-* CV003 - R003 - Liquid Waste Treatment Cell (C2)                                                                    
-*-----------------------------------------------                                                                
-CV00300   R003  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
-CV00301   0   0		                                * Fog allowed (default)
-CV003A0   3                                                                                         
-CV003A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV003A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
-CV003A3   MLFR.4  0.78                              * Filled with air (N2)
-CV003A6   MLFR.5  0.21                              * Filled with air (O2)
-CV003A8   MLFR.8  0.01                              * Filled with air (Ar)                           
-***
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV003B1   0.0      0.0                                                            
-CV003B2   8.5      3086.0                           * 2645.9 m3 (2PNSLP) 
-***
-*-----------------------------------------------                                                                
-* CV004 - R004 - CR LRWTS (C2)                                                                    
-*-----------------------------------------------                                                                
-CV00400   R004  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
-CV00401   0   0		                                * Fog allowed (default)
-CV004A0   3                                                                                         
-CV004A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV004A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
-CV004A3   MLFR.4  0.78                              * Filled with air (N2)
-CV004A6   MLFR.5  0.21                              * Filled with air (O2)
-CV004A8   MLFR.8  0.01                              * Filled with air (Ar)                           
-***
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV004B1   0.0      0.0                                                            
-CV004B2   8.5      379.0                            * 320.2 m3 (2PNSLP) 
+CV002B2   8.5      8272.0                          * 7077.1 m3 (2PNSLP)
 ***
 *
 *-----------------------------------------------                                                                
@@ -382,45 +347,9 @@ CV018B2   7.5      3074.0                           * 2528.3 m3 (2PNSLP)
 ***
 *
 *-----------------------------------------------                                                                
-* CV019 - R019 - Emergency detritiation (EDS) room (C2)                                                          
+* CV023 - Group 3 - R023 R025 (C2)                                                          
 *-----------------------------------------------                                                                
-CV01900   R019  2  2  1                                                           
-CV01901   0   0					                 
-CV019A0   3                                                                                         
-CV019A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV019A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                
-CV019A5   MLFR.4  0.78                              * Filled with air (N2)
-CV019A6   MLFR.5  0.21                              * Filled with air (O2)
-CV019A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV019B1   0.0      0.0                                                            
-CV019B2   8.5      2835.0                           * 2580.9 m3 (2PNSLP) ; Height = Volume / Floor Area      
-***
-*
-*-----------------------------------------------                                                                
-* CV022 - R022 - Waste room (C2)                                                          
-*-----------------------------------------------                                                                
-CV02200   R022  2  2  1                                                           
-CV02201   0   0					                 
-CV022A0   3                                                                                         
-CV022A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV022A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                
-CV022A5   MLFR.4  0.78                              * Filled with air (N2)
-CV022A6   MLFR.5  0.21                              * Filled with air (O2)
-CV022A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV022B1   0.0      0.0                                                            
-CV022B2   8.0      857.0                            * 620.5 m3 (2PNSLP)      
-***
-*
-*-----------------------------------------------                                                                
-* CV023 - R023 - Electric room SIC-1 Train B (C2)                                                          
-*-----------------------------------------------                                                                
-CV02300   R023  2  2  1                                                           
+CV02300   G3  2  2  1                                                           
 CV02301   0   0					                 
 CV023A0   3                                                                                         
 CV023A1   PVOL    101235.0                          * 101325-90Pa                                                                 
@@ -432,7 +361,7 @@ CV023A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV023B1   0.0      0.0                                                            
-CV023B2   8.5      451.0                            * 378.2 m3 (2PNSLP)      
+CV023B2   8.5      956.0                            * 779.8 m3 (2PNSLP)      
 ***
 *
 *-----------------------------------------------                                                                
@@ -450,25 +379,7 @@ CV024A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV024B1   0.0      0.0                                                            
-CV024B2   8.5      1109.0                           * 948.9 m3 (2PNSLP)      
-***
-*
-*-----------------------------------------------                                                                
-* CV025 - R025 - Piping and Cabling area (C2)                                                          
-*-----------------------------------------------                                                                
-CV02500   R025  2  2  1                                                           
-CV02501   0   0					                 
-CV025A0   3                                                                                         
-CV025A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV025A3   TATM    298.15    RHUM 0.6                * 25 deg. C; 60% rel. humidity                                
-CV025A5   MLFR.4  0.78                              * Filled with air (N2)
-CV025A6   MLFR.5  0.21                              * Filled with air (O2)
-CV025A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV025B1   0.0      0.0                                                            
-CV025B2   8.5      505.0                            * 401.6 m3 (2PNSLP)      
+CV024B2   8.5      13935.3                          * 11981.6 m3 (2PNSLP)      
 ***
 *
 *-----------------------------------------------                                                                
@@ -492,24 +403,6 @@ CV026B2   8.5      24771.0                          * 22122.8 m3 (2PNSLP)
 *-----------------------------------------------                                                                
 * CV027 - R027 - Electric room SIC-2 Train B (?)                                                          
 *-----------------------------------------------     
-***
-*
-*-----------------------------------------------                                                                
-* CV042 - C002 - Corridor (C2)                                                          
-*-----------------------------------------------                                                                
-CV04200   C002  2  2  1                                                           
-CV04201   0   0					                 
-CV042A0   3                                                                                         
-CV042A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV042A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
-CV042A5   MLFR.4  0.78                              * Filled with air (N2)
-CV042A6   MLFR.5  0.21                              * Filled with air (O2)
-CV042A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV042B1   0.0      0.0                                                            
-CV042B2   8.1      12826.3                          * 11032.7 m3 (2PNSLP) ; Height = Volume / Floor Area             
 ***
 *
 *-----------------------------------------------                                                                
@@ -603,9 +496,9 @@ CV058B2   7.5      1278.0                            * 822.8 m3 (2PNSLP)
 ***
 *
 *-----------------------------------------------                                                                
-* CV080 - SB1L0 - Shipping Bay 1 (C2)                                                          
+* CV080 - SB1 - Shipping Bay 1 (C2)                                                          
 *-----------------------------------------------                                                                
-CV08000   SB1L0  2  2  1                                                           
+CV08000   SB1  2  2  1                                                           
 CV08001   0   0					                 
 CV080A0   3                                                                                         
 CV080A1   PVOL    101235.0                          * 101325-90Pa                                                                 
@@ -617,7 +510,7 @@ CV080A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV080B1   0.0      0.0                                                            
-CV080B2   8.5      990.0                            * 807.4 m3 (2PNSLP)              
+CV080B2   31.5     3359.0                           * 2718.1 m3 (2PNSLP)              
 ***
 *
 *-----------------------------------------------                                                                
@@ -639,9 +532,9 @@ CV081B2   31.5     5143.0                           * 3996.9 m3 (2PNSLP)
 ***
 *
 *-----------------------------------------------                                                                
-* CV082 - SB3L0 - Shipping Bay 3 (C2)                                                          
+* CV082 - SB3 - Shipping Bay 3 (C2)                                                          
 *-----------------------------------------------                                                                
-CV08200   SB3L0  2  2  1                                                           
+CV08200   SB3  2  2  1                                                           
 CV08201   0   0					                 
 CV082A0   3                                                                                         
 CV082A1   PVOL    101235.0                          * 101325-90Pa                                                                 
@@ -653,7 +546,7 @@ CV082A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV082B1   0.0      0.0                                                            
-CV082B2   8.5      765.0                            * 680.7 m3 (2PNSLP)              
+CV082B2   31.5     2887.0                           * 2402.4 m3 (2PNSLP)              
 ***
 *
 *-----------------------------------------------                                                                
@@ -675,27 +568,9 @@ CV083B2   31.5     2720.0                           * 2282.7 m3 (2PNSLP)
 ***
 *
 *-----------------------------------------------                                                                
-* CV085 - E03L0 - Elevator 3 (C2)                                                          
+* CV086 - S02 - Stairs 2 (C2)                                                          
 *-----------------------------------------------                                                                
-CV08500   E03L0  2  2  1                                                           
-CV08501   0   0					                 
-CV085A0   3                                                                                         
-CV085A1   PVOL    101235.0                          * 101325-90Pa                                                                
-CV085A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
-CV085A5   MLFR.4  0.78                              * Filled with air (N2)
-CV085A6   MLFR.5  0.21                              * Filled with air (O2)
-CV085A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV085B1   0.0      0.0                                                            
-CV085B2   8.5      210.0                            * 160.7 m3 (2PNSLP)              
-***
-*
-*-----------------------------------------------                                                                
-* CV086 - S02L0 - Stairs 2 (C2)                                                          
-*-----------------------------------------------                                                                
-CV08600   S02L0  2  2  1                                                           
+CV08600   S02  2  2  1                                                           
 CV08601   0   0					                 
 CV086A0   3                                                                                         
 CV086A1   PVOL    101235.0                          * 101325-90Pa                                                                 
@@ -711,27 +586,9 @@ CV086B2   31.5     1440.0                           * 949.0 m3 (2PNSLP)
 ***
 *
 *-----------------------------------------------                                                                
-* CV088 - S05L0 - Stairs 5 (C2)                                                          
+* CV089 - S07 - Stairs 7 (C2)                                                          
 *-----------------------------------------------                                                                
-CV08800   S05L0  2  2  1                                                           
-CV08801   0   0					                 
-CV088A0   3                                                                                         
-CV088A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV088A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
-CV088A5   MLFR.4  0.78                              * Filled with air (N2)
-CV088A6   MLFR.5  0.21                              * Filled with air (O2)
-CV088A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV088B1   0.0      0.0                                                            
-CV088B2   8.5      554.0                            * 405.6 m3 (2PNSLP)              
-***
-*
-*-----------------------------------------------                                                                
-* CV089 - S07L0 - Stairs 7 (C2)                                                          
-*-----------------------------------------------                                                                
-CV08900   S07L0  2  2  1                                                           
+CV08900   S07  2  2  1                                                           
 CV08901   0   0					                 
 CV089A0   3                                                                                         
 CV089A1   PVOL    101235.0                          * 101325-90Pa                                                                 
@@ -743,7 +600,7 @@ CV089A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
 CV089B1   0.0      0.0                                                            
-CV089B2   8.5      334.0                            * 249.1 m3 (2PNSLP)              
+CV089B2   31.5     1188.0                           * 879.2 m3 (2PNSLP)              
 ***
 *
 *-----------------------------------------------                                                                
@@ -857,9 +714,9 @@ CV129B2   14.5     529.0                            * 209.4 m3 (2PNSLP)
 ******************************************************* HVAC SIMPLIFICADO *************************************************************
 *
 *-------------------------------------------------------
-* HVAC-S02L0-IN          FM    TO     FM     TO
+* HVAC-S02-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL08600   HVAC-S02L0-IN   400   086  4.25  4.25           
+FL08600   HVAC-S02-IN   400   086  4.25  4.25           
 FL08601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL08602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL08603   1.0   1.0                                             * FORM LOSS
@@ -868,13 +725,13 @@ FL0860F   3.75    4.75
 FL0860T   3.75    4.75
 FL086T0   2      086           
 *
-CF08600   VEL-S02L0-IN  DIVIDE  1  1810.0  0.0                  * Q / (3600 * A) 
+CF08600   VEL-S02-IN  DIVIDE  1  1810.0  0.0                    * Q / (3600 * A) 
 CF08610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-S02L0-EX          FM    TO     FM     TO
+* HVAC-S02-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL78600   HVAC-S02L0-EX   086   401  4.25  4.25           
+FL78600   HVAC-S02-EX   086   401  4.25  4.25           
 FL78601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL78602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL78603   1.0   1.0                                             * FORM LOSS
@@ -883,13 +740,13 @@ FL7860F   3.75    4.75
 FL7860T   3.75    4.75
 FL786T0   2      786           
 *
-CF78600   VEL-S02L0-EX  DIVIDE  1  4084.0  0.0                 * Q / (3600 * A) 
+CF78600   VEL-S02-EX  DIVIDE  1  4084.0  0.0                   * Q / (3600 * A) 
 CF78610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-SB4L0-IN          FM    TO     FM     TO
+* HVAC-SB4-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL08300   HVAC-SB4L0-IN   400   083  4.25  4.25           
+FL08300   HVAC-SB4-IN   400   083  4.25  4.25           
 FL08301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL08302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL08303   1.0   1.0                                             * FORM LOSS
@@ -898,13 +755,13 @@ FL0830F   3.75    4.75
 FL0830T   3.75    4.75
 FL083T0   2      083           
 *
-CF08300   VEL-SB4L0-IN  DIVIDE  1  10880.0  0.0                 * Q / (3600 * A) 
+CF08300   VEL-SB4-IN  DIVIDE  1  10880.0  0.0                   * Q / (3600 * A) 
 CF08310   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-SB4L0-EX          FM    TO     FM     TO
+* HVAC-SB4-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL78300   HVAC-SB4L0-EX   083   401  4.25  4.25           
+FL78300   HVAC-SB4-EX   083   401  4.25  4.25           
 FL78301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL78302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL78303   1.0   1.0                                             * FORM LOSS
@@ -913,7 +770,7 @@ FL7830F   3.75    4.75
 FL7830T   3.75    4.75
 FL783T0   2      783           
 *
-CF78300   VEL-SB4L0-EX  DIVIDE  1  3632.0  0.0                  * Q / (3600 * A) 
+CF78300   VEL-SB4-EX  DIVIDE  1  3632.0  0.0                    * Q / (3600 * A) 
 CF78310   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
@@ -962,9 +819,9 @@ CF72600   VEL-R026-EX  DIVIDE  1  32527.0  0.0                  * Q / (3600 * A)
 CF72610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-GL01-IN          FM    TO     FM     TO
+* HVAC-G1-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL00600   HVAC-GL01-IN   400   006  4.25  4.25           
+FL00600   HVAC-G1-IN   400   006  4.25  4.25           
 FL00601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL00602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL00603   1.0   1.0                                             * FORM LOSS
@@ -973,13 +830,13 @@ FL0060F   3.75    4.75
 FL0060T   3.75    4.75
 FL006T0   2      006           
 *
-CF00600   VEL-GL01-IN  DIVIDE  1  3038.0  0.0                   * Q / (3600 * A) 
+CF00600   VEL-G1-IN  DIVIDE  1  3038.0  0.0                     * Q / (3600 * A) 
 CF00610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-GL01-EX          FM    TO     FM     TO
+* HVAC-G1-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL70600   HVAC-GL01-EX   006   401  4.25  4.25           
+FL70600   HVAC-G1-EX   006   401  4.25  4.25           
 FL70601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL70602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL70603   1.0   1.0                                             * FORM LOSS
@@ -988,7 +845,7 @@ FL7060F   3.75    4.75
 FL7060T   3.75    4.75
 FL706T0   2      706           
 *
-CF70600   VEL-GL01-EX  DIVIDE  1  4605.0  0.0                  * Q / (3600 * A) 
+CF70600   VEL-G1-EX  DIVIDE  1  4605.0  0.0                    * Q / (3600 * A) 
 CF70610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
@@ -1067,9 +924,9 @@ CF71100   VEL-R011-EX  DIVIDE  1  2962.0  0.0                   * Q / (3600 * A)
 CF71110   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-SB1L0-IN          FM    TO     FM     TO
+* HVAC-SB1-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL08000   HVAC-SB1L0-IN   400   080  4.25  4.25           
+FL08000   HVAC-SB1-IN   400   080  4.25  4.25           
 FL08001   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL08002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL08003   1.0   1.0                                             * FORM LOSS
@@ -1078,13 +935,13 @@ FL0800F   3.75    4.75
 FL0800T   3.75    4.75
 FL080T0   2      080           
 *
-CF08000   VEL-SB1L0-IN  DIVIDE  1  990.0  0.0                   * Q / (3600 * A) 
+CF08000   VEL-SB1-IN  DIVIDE  1  5405.0  0.0                    * Q / (3600 * A) 
 CF08010   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-SB1L0-EX          FM    TO     FM     TO
+* HVAC-SB1-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL78000   HVAC-SB1L0-EX   080   401  4.25  4.25           
+FL78000   HVAC-SB1-EX   080   401  4.25  4.25           
 FL78001   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL78002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL78003   1.0   1.0                                             * FORM LOSS
@@ -1093,163 +950,13 @@ FL7800F   3.75    4.75
 FL7800T   3.75    4.75
 FL780T0   2      780           
 *
-CF78000   VEL-SB1L0-EX  DIVIDE  1  1386.0  0.0                  * Q / (3600 * A) 
+CF78000   VEL-SB1-EX  DIVIDE  1  6274.0  0.0                    * Q / (3600 * A) 
 CF78010   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-R022-IN          FM    TO     FM     TO
+* HVAC-G5-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL02200   HVAC-R022-IN   400   022  4.25  4.25           
-FL02201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL02202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL02203   1.0   1.0                                             * FORM LOSS
-FL022S0   1.0   1.0    1.0                     
-FL0220F   3.75    4.75
-FL0220T   3.75    4.75
-FL022T0   2      022           
-*
-CF02200   VEL-R022-IN  DIVIDE  1  1755.0  0.0                   * Q / (3600 * A) 
-CF02210   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R022-EX          FM    TO     FM     TO
-*-------------------------------------------------------
-FL72200   HVAC-R022-EX   022   401  4.25  4.25           
-FL72201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL72202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL72203   1.0   1.0                                             * FORM LOSS
-FL722S0   1.0   1.0    1.0                     
-FL7220F   3.75    4.75
-FL7220T   3.75    4.75
-FL722T0   2      722           
-*
-CF72200   VEL-R022-EX  DIVIDE  1  1903.0  0.0                   * Q / (3600 * A) 
-CF72210   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-E03L0-IN          FM    TO     FM     TO
-*-------------------------------------------------------
-FL08500   HVAC-E03L0-IN   400   085  4.25  4.25           
-FL08501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL08502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL08503   1.0   1.0                                             * FORM LOSS
-FL085S0   1.0   1.0    1.0                     
-FL0850F   3.75    4.75
-FL0850T   3.75    4.75
-FL085T0   2      085           
-*
-CF08500   VEL-E03L0-IN  DIVIDE  1  411.0  0.0                    * Q / (3600 * A) 
-CF08510   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-E03L0-EX          FM    TO     FM     TO
-*-------------------------------------------------------
-FL78500   HVAC-E03L0-EX   085   401  4.25  4.25           
-FL78501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL78502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL78503   1.0   1.0                                             * FORM LOSS
-FL785S0   1.0   1.0    1.0                     
-FL7850F   3.75    4.75
-FL7850T   3.75    4.75
-FL785T0   2      785           
-*
-CF78500   VEL-E03L0-EX  DIVIDE  1  453.0  0.0                   * Q / (3600 * A) 
-CF78510   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-S05L0-IN          FM    TO     FM     TO
-*-------------------------------------------------------
-FL08800   HVAC-S05L0-IN   400   088  4.25  4.25           
-FL08801   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL08802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL08803   1.0   1.0                                             * FORM LOSS
-FL088S0   1.0   1.0    1.0                     
-FL0880F   3.75    4.75
-FL0880T   3.75    4.75
-FL088T0   2      088           
-*
-CF08800   VEL-S05L0-IN  DIVIDE  1  554.0  0.0                   * Q / (3600 * A) 
-CF08810   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-S05L0-EX          FM    TO     FM     TO
-*-------------------------------------------------------
-FL78800   HVAC-S05L0-EX   088   401  4.25  4.25           
-FL78801   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL78802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL78803   1.0   1.0                                             * FORM LOSS
-FL788S0   1.0   1.0    1.0                     
-FL7880F   3.75    4.75
-FL7880T   3.75    4.75
-FL788T0   2      788           
-*
-CF78800   VEL-S05L0-EX  DIVIDE  1  665.0  0.0                   * Q / (3600 * A) 
-CF78810   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R003-IN          FM    TO     FM     TO
-*-------------------------------------------------------
-FL00300   HVAC-R003-IN   400   003  4.25  4.25           
-FL00301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL00302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL00303   1.0   1.0                                             * FORM LOSS
-FL003S0   1.0   1.0    1.0                     
-FL0030F   3.75    4.75
-FL0030T   3.75    4.75
-FL003T0   2      003           
-*
-CF00300   VEL-R003-IN  DIVIDE  1  3086.0  0.0                   * Q / (3600 * A) 
-CF00310   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R003-EX          FM    TO     FM     TO
-*-------------------------------------------------------
-FL70300   HVAC-R003-EX   003   401  4.25  4.25           
-FL70301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL70302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL70303   1.0   1.0                                             * FORM LOSS
-FL703S0   1.0   1.0    1.0                     
-FL7030F   3.75    4.75
-FL7030T   3.75    4.75
-FL703T0   2      703           
-*
-CF70300   VEL-R003-EX  DIVIDE  1  3703.0  0.0                   * Q / (3600 * A) 
-CF70310   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R004-IN          FM    TO     FM     TO
-*-------------------------------------------------------
-FL00400   HVAC-R004-IN   400   004  4.25  4.25           
-FL00401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL00402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL00403   1.0   1.0                                             * FORM LOSS
-FL004S0   1.0   1.0    1.0                     
-FL0040F   3.75    4.75
-FL0040T   3.75    4.75
-FL004T0   2      004           
-* 
-CF00400   VEL-R004-IN  DIVIDE  1  759.0  0.0                    * Q / (3600 * A) 
-CF00410   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R004-EX          FM    TO     FM     TO
-*-------------------------------------------------------
-FL70400   HVAC-R004-EX   004   401  4.25  4.25           
-FL70401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL70402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL70403   1.0   1.0                                             * FORM LOSS
-FL704S0   1.0   1.0    1.0                     
-FL7040F   3.75    4.75
-FL7040T   3.75    4.75
-FL704T0   2      704           
-*
-CF70400   VEL-R004-EX  DIVIDE  1  834.0  0.0                    * Q / (3600 * A) 
-CF70410   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R002-IN          FM    TO     FM     TO
-*-------------------------------------------------------
-FL00200   HVAC-R002-IN   400   002  4.25  4.25           
+FL00200   HVAC-G5-IN   400   002  4.25  4.25           
 FL00201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL00202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL00203   1.0   1.0                                             * FORM LOSS
@@ -1258,13 +965,13 @@ FL0020F   3.75    4.75
 FL0020T   3.75    4.75
 FL002T0   2      002           
 *
-CF00200   VEL-R002-IN  DIVIDE  1  1115.0  0.0                   * Q / (3600 * A) 
+CF00200   VEL-G5-IN  DIVIDE  1  12385.0  0.0                    * Q / (3600 * A) 
 CF00210   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-R002-EX          FM    TO     FM     TO
+* HVAC-G5-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL70200   HVAC-R002-EX   002   401  4.25  4.25           
+FL70200   HVAC-G5-EX   002   401  4.25  4.25           
 FL70201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL70202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL70203   1.0   1.0                                             * FORM LOSS
@@ -1273,38 +980,8 @@ FL7020F   3.75    4.75
 FL7020T   3.75    4.75
 FL702T0   2      702           
 *
-CF70200   VEL-R002-EX  DIVIDE  1  1338.0  0.0                   * Q / (3600 * A) 
+CF70200   VEL-G5-EX  DIVIDE  1  13973.0  0.0                    * Q / (3600 * A) 
 CF70210   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R019-IN          FM    TO     FM     TO
-*-------------------------------------------------------
-FL01900   HVAC-R019-IN   400   019  4.25  4.25           
-FL01901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL01902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL01903   1.0   1.0                                             * FORM LOSS
-FL019S0   1.0   1.0    1.0                     
-FL0190F   3.75    4.75
-FL0190T   3.75    4.75
-FL019T0   2      019           
-*
-CF01900   VEL-R019-IN  DIVIDE  1  5670.0  0.0                   * Q / (3600 * A) 
-CF01910   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R019-EX          FM    TO     FM     TO
-*-------------------------------------------------------
-FL71900   HVAC-R019-EX   019   401  4.25  4.25           
-FL71901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL71902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL71903   1.0   1.0                                             * FORM LOSS
-FL719S0   1.0   1.0    1.0                     
-FL7190F   3.75    4.75
-FL7190T   3.75    4.75
-FL719T0   2      719           
-*
-CF71900   VEL-R019-EX  DIVIDE  1  6195.0  0.0                   * Q / (3600 * A) 
-CF71910   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R014-IN          FM    TO     FM     TO
@@ -1382,9 +1059,9 @@ CF70700   VEL-R007-EX  DIVIDE  1  4186.0  0.0                   * Q / (3600 * A)
 CF70710   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-S07L0-IN          FM    TO     FM     TO
+* HVAC-S07-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL08900   HVAC-S07L0-IN   400   089  4.25  4.25           
+FL08900   HVAC-S07-IN   400   089  4.25  4.25           
 FL08901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL08902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL08903   1.0   1.0                                             * FORM LOSS
@@ -1393,13 +1070,13 @@ FL0890F   3.75    4.75
 FL0890T   3.75    4.75
 FL089T0   2      089           
 *
-CF08900   VEL-S07L0-IN  DIVIDE  1  334.0  0.0                   * Q / (3600 * A) 
+CF08900   VEL-S07-IN  DIVIDE  1  1523.0  0.0                    * Q / (3600 * A) 
 CF08910   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-S07L0-EX          FM    TO     FM     TO
+* HVAC-S07-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL78900   HVAC-S07L0-EX   089   401  4.25  4.25           
+FL78900   HVAC-S07-EX   089   401  4.25  4.25           
 FL78901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL78902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL78903   1.0   1.0                                             * FORM LOSS
@@ -1408,7 +1085,7 @@ FL7890F   3.75    4.75
 FL7890T   3.75    4.75
 FL789T0   2      789           
 *
-CF78900   VEL-S07L0-EX  DIVIDE  1  468.0  0.0                   * Q / (3600 * A) 
+CF78900   VEL-S07-EX  DIVIDE  1  1828.0  0.0                    * Q / (3600 * A) 
 CF78910   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
@@ -1442,9 +1119,9 @@ CF70500   VEL-R005-EX  DIVIDE  1  1548.0  0.0                   * Q / (3600 * A)
 CF70510   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-R024-IN          FM    TO     FM     TO
+* HVAC-G4-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL02400   HVAC-R024-IN   400   024  4.25  4.25           
+FL02400   HVAC-G4-IN   400   024  4.25  4.25           
 FL02401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL02402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL02403   1.0   1.0                                             * FORM LOSS
@@ -1453,13 +1130,13 @@ FL0240F   3.75    4.75
 FL0240T   3.75    4.75
 FL024T0   2      024           
 *
-CF02400   VEL-R024-IN  DIVIDE  1  2424.0  0.0                   * Q / (3600 * A) 
+CF02400   VEL-G4-IN  DIVIDE  1  19147.0  0.0                    * Q / (3600 * A) 
 CF02410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-R024-EX          FM    TO     FM     TO
+* HVAC-G4-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL72400   HVAC-R024-EX   024   401  4.25  4.25           
+FL72400   HVAC-G4-EX   024   401  4.25  4.25           
 FL72401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL72402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL72403   1.0   1.0                                             * FORM LOSS
@@ -1468,13 +1145,13 @@ FL7240F   3.75    4.75
 FL7240T   3.75    4.75
 FL724T0   2      724           
 *
-CF72400   VEL-R024-EX  DIVIDE  1  2627.0  0.0                   * Q / (3600 * A) 
+CF72400   VEL-G4-EX  DIVIDE  1  23374.0  0.0                    * Q / (3600 * A) 
 CF72410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-R023-IN          FM    TO     FM     TO
+* HVAC-G3-IN          FM    TO     FM     TO
 *-------------------------------------------------------
-FL02300   HVAC-R023-IN   400   023  4.25  4.25           
+FL02300   HVAC-G3-IN   400   023  4.25  4.25           
 FL02301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL02302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL02303   1.0   1.0                                             * FORM LOSS
@@ -1483,13 +1160,13 @@ FL0230F   3.75    4.75
 FL0230T   3.75    4.75
 FL023T0   2      023           
 *
-CF02300   VEL-R023-IN  DIVIDE  1  903.0  0.0                    * Q / (3600 * A) 
+CF02300   VEL-G3-IN  DIVIDE  1  1408.0  0.0                     * Q / (3600 * A) 
 CF02310   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
-* HVAC-R023-EX          FM    TO     FM     TO
+* HVAC-G3-EX          FM    TO     FM     TO
 *-------------------------------------------------------
-FL72300   HVAC-R023-EX   023   401  4.25  4.25           
+FL72300   HVAC-G3-EX   023   401  4.25  4.25           
 FL72301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
 FL72302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
 FL72303   1.0   1.0                                             * FORM LOSS
@@ -1498,38 +1175,8 @@ FL7230F   3.75    4.75
 FL7230T   3.75    4.75
 FL723T0   2      723           
 *
-CF72300   VEL-R023-EX  DIVIDE  1  993.0  0.0                    * Q / (3600 * A) 
+CF72300   VEL-G3-EX  DIVIDE  1  1599.0  0.0                     * Q / (3600 * A) 
 CF72310   0.0  3600.0  TIME 
-*
-*-------------------------------------------------------
-* HVAC-R025-IN          FM    TO     FM     TO
-*-------------------------------------------------------
-FL02500   HVAC-R025-IN   400   025  4.25  4.25           
-FL02501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL02502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL02503   1.0   1.0                                             * FORM LOSS
-FL025S0   1.0   1.0    1.0                     
-FL0250F   3.75    4.75
-FL0250T   3.75    4.75
-FL025T0   2      025           
-*
-CF02500   VEL-R025-IN  DIVIDE  1  505.0  0.0                    * Q / (3600 * A) 
-CF02510   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-R025-EX          FM    TO     FM     TO 
-*-------------------------------------------------------
-FL72500   HVAC-R025-EX   025   401  4.25  4.25           
-FL72501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL72502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL72503   1.0   1.0                                             * FORM LOSS
-FL725S0   1.0   1.0    1.0                     
-FL7250F   3.75    4.75
-FL7250T   3.75    4.75
-FL725T0   2      725           
-*
-CF72500   VEL-R025-EX  DIVIDE  1  606.0  0.0                    * Q / (3600 * A) 
-CF72510   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G2-IN          FM    TO     FM     TO
@@ -1560,6 +1207,36 @@ FL781T0   2      781
 *
 CF78100   VEL-G2-EX  DIVIDE  1  7995.0  0.0                     * Q / (3600 * A) 
 CF78110   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-SB3-IN          FM    TO     FM     TO
+*-------------------------------------------------------
+FL08200   HVAC-SB3-IN   400   082  4.25  4.25           
+FL08201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL08202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL08203   1.0   1.0                                             * FORM LOSS
+FL082S0   1.0   1.0    1.0                     
+FL0820F   3.75    4.75
+FL0820T   3.75    4.75
+FL082T0   2      082           
+*
+CF08200   VEL-SB3-IN  DIVIDE  1  3491.0  0.0                    * Q / (3600 * A) 
+CF08210   0.0  3600.0  TIME
+*
+*-------------------------------------------------------
+* HVAC-SB3-EX          FM    TO     FM     TO 
+*-------------------------------------------------------
+FL78200   HVAC-SB3-EX   082   401  4.25  4.25           
+FL78201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
+FL78202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
+FL78203   1.0   1.0                                             * FORM LOSS
+FL782S0   1.0   1.0    1.0                     
+FL7820F   3.75    4.75
+FL7820T   3.75    4.75
+FL782T0   2      782           
+*
+CF78200   VEL-SB3-EX  DIVIDE  1  6031.0  0.0                    * Q / (3600 * A) 
+CF78210   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R018-IN          FM    TO     FM     TO
@@ -1875,36 +1552,6 @@ FL753T0   2      753
 *
 CF75300   VEL-R053-EX  DIVIDE  1  6036.0  0.0                   * Q / (3600 * A) 
 CF75310   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-C002-IN          FM    TO     FM     TO
-*-------------------------------------------------------
-FL04200   HVAC-C002-IN   400   042  4.25  4.25           
-FL04201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL04202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL04203   1.0   1.0                                             * FORM LOSS
-FL042S0   1.0   1.0    1.0                     
-FL0420F   3.75    4.75
-FL0420T   3.75    4.75
-FL042T0   2      042           
-*
-CF04200   VEL-C002-IN  DIVIDE  1  16723.0  0.0                  * Q / (3600 * A) 
-CF04210   0.0  3600.0  TIME
-*
-*-------------------------------------------------------
-* HVAC-C002-EX          FM    TO     FM     TO 
-*-------------------------------------------------------
-FL74200   HVAC-C002-EX   042   401  4.25  4.25           
-FL74201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL74202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL74203   1.0   1.0                                             * FORM LOSS
-FL742S0   1.0   1.0    1.0                     
-FL7420F   3.75    4.75
-FL7420T   3.75    4.75
-FL742T0   2      742           
-*
-CF74200   VEL-C002-EX  DIVIDE  1  20747.0  0.0                  * Q / (3600 * A) 
-CF74210   0.0  3600.0  TIME
 *
 ***
 **************************************************************** SGS ******************************************************************
