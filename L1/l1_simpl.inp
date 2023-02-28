@@ -1184,57 +1184,6 @@ CV112B1   9.0      0.0
 CV112B2   17.5     2241.0                           * 2034.7 m3 (2PNSLP)  
 ***
 *-----------------------------------------------                                                                
-* CV147 - R147 - Loading station (C3 - C4a en 2PNSLP)                                                                   
-*-----------------------------------------------                                                                
-CV14700   R147  2  2  2                                                             
-CV14701   0   0 	                              
-CV147A0   3                                                                                         
-CV147A1   PVOL    101195.0                          * 101325-160Pa                                                                          
-CV147A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-CV147A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV147A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV147A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV147B1   9.0      0.0                                                         
-CV147B2   14.5     468.0                            * 370.1 m3 (2PNSLP)              
-***
-*-----------------------------------------------                                                                
-* CV151 - R151 - Tritium room (C3)                                                                   
-*-----------------------------------------------                                                                
-CV15100   R151  2  2  2                                                             
-CV15101   0   0 	                                
-CV151A0   3                                                                                         
-CV151A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-CV151A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-CV151A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV151A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV151A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV151B1   9.0      0.0                                                         
-CV151B2   14.5     915.0                            * 544.5 m3 (2PNSLP)                          
-***
-*-----------------------------------------------                                                                
-* CV191 - AL151 - Airlock (C3a - C3 en 2PNSLP)                                                                   
-*-----------------------------------------------                                                                
-CV19100   AL151  2  2  2                                                             
-CV19101   0   0 	                              
-CV191A0   3                                                                                         
-CV191A1   PVOL    101215.0                          * 101325-110Pa                                                                          
-CV191A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
-CV191A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV191A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV191A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV191B1   9.0      0.0                                                         
-CV191B2   14.5     628.0                            * 348.4 m3 (2PNSLP)
-***
-*-----------------------------------------------                                                                
 * CV144 - Group 9 - R144 R145-1 R145-2 R149 R163 (C2)                                                                   
 *-----------------------------------------------                                                                
 CV14400   R144  2  2  2                                                              
