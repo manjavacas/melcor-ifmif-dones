@@ -6,13 +6,13 @@
 *
 *EOR* MELGEN
 *
-title     l0s
-jobid     l0s
+title     l1s
+jobid     l1s
 *
-restartf  l0s.rst
-outputf   l0s_gen.out
-diagf     l0s_gen.dia
-stopf     l0s.stp
+restartf  l1s.rst
+outputf   l1s_gen.out
+diagf     l1s_gen.dia
+stopf     l1s.stp
 *
 crtout 
 tstart     00.0
