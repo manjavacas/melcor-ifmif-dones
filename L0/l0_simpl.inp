@@ -192,9 +192,9 @@ CV00801   0   0
 CV008A0   3                                                                                         
 CV008A1   PVOL  101235.0                            * 101325Pa-90Pa 
 CV008A2   TATM  293.15  RHUM  0.6                  
-CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%                         
+CV008A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV008A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV008A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%                         
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -210,9 +210,9 @@ CV00901   0   0
 CV009A0   3                                                                                         
 CV009A1   PVOL  101235.0                            * 101325Pa-90Pa 
 CV009A2   TATM  293.15  RHUM  0.6                  
-CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%                       
+CV009A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV009A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV009A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%                       
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
