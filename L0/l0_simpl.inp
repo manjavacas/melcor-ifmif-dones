@@ -102,7 +102,7 @@ CV00100   R001  2  0  1
 CV00101   0   0		                                
 CV001A0   3                                                                                         
 CV001A1   PVOL  101270.0                            * 101325Pa-55Pa 
-CV001A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV001A2   TATM  293.15  RHUM  0.6                  
 CV001A3   MLFR.4  0.78                              * Filled with air (N2)
 CV001A6   MLFR.5  0.21                              * Filled with air (O2)
 CV001A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -119,7 +119,7 @@ CV00200   G5  2  0  1
 CV00201   0   0		                                
 CV002A0   3                                                                                         
 CV002A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV002A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV002A2   TATM  293.15  RHUM  0.6                  
 CV002A3   MLFR.4  0.78                              * Filled with air (N2)
 CV002A6   MLFR.5  0.21                              * Filled with air (O2)
 CV002A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -137,7 +137,7 @@ CV00500   R005  2  0  1
 CV00501   0   0		                                
 CV005A0   3                                                                                         
 CV005A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV005A2   TATM  295.15  RHUM  0.6                   * 22 deg. C; 60% rel. humidity
+CV005A2   TATM  295.15  RHUM  0.6                  
 CV005A3   MLFR.4  0.78                              * Filled with air (N2)
 CV005A6   MLFR.5  0.21                              * Filled with air (O2)
 CV005A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -155,7 +155,7 @@ CV00600   G1  2  0  1
 CV00601   0   0		                                
 CV006A0   3                                                                                         
 CV006A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV006A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV006A2   TATM  293.15  RHUM  0.6                   
 CV006A3   MLFR.4  0.78                              * Filled with air (N2)
 CV006A6   MLFR.5  0.21                              * Filled with air (O2)
 CV006A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -173,7 +173,7 @@ CV00700   R007  2  0  1
 CV00701   0   0		                                
 CV007A0   3                                                                                         
 CV007A1   PVOL  101270.0                            * 101325Pa-55Pa 
-CV007A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV007A2   TATM  293.15  RHUM  0.6                   
 CV007A3   MLFR.4  0.78                              * Filled with air (N2)
 CV007A6   MLFR.5  0.21                              * Filled with air (O2)
 CV007A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -191,7 +191,7 @@ CV00800   R009-1  2  0  1
 CV00801   0   0		                               
 CV008A0   3                                                                                         
 CV008A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV008A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV008A2   TATM  293.15  RHUM  0.6                  
 CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
 CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%                         
@@ -209,7 +209,7 @@ CV00900   R009-2  2  0  1
 CV00901   0   0		                               
 CV009A0   3                                                                                         
 CV009A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV009A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV009A2   TATM  293.15  RHUM  0.6                  
 CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
 CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%                       
@@ -227,7 +227,7 @@ CV01000   G6  2  0  1
 CV01001   0   0		                             
 CV010A0   3                                                                                         
 CV010A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV010A2   TATM  298.15  RHUM  0.6                   * 25 deg. C; 60% rel. humidity
+CV010A2   TATM  298.15  RHUM  0.6                   
 CV010A3   MLFR.4  0.78                              * Filled with air (N2)
 CV010A6   MLFR.5  0.21                              * Filled with air (O2)
 CV010A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -245,7 +245,7 @@ CV01100   R011  2  0  1
 CV01101   0   0		                                
 CV011A0   3                                                                                         
 CV011A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV011A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV011A2   TATM  293.15  RHUM  0.6                  
 CV011A3   MLFR.4  0.78                              * Filled with air (N2)
 CV011A6   MLFR.5  0.21                              * Filled with air (O2)
 CV011A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -263,7 +263,7 @@ CV01400   R014  2  0  1
 CV01401   0   0		                              
 CV014A0   3                                                                                         
 CV014A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV014A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV014A2   TATM  293.15  RHUM  0.6                   
 CV014A3   MLFR.4  0.78                              * Filled with air (N2)
 CV014A6   MLFR.5  0.21                              * Filled with air (O2)
 CV014A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -281,7 +281,7 @@ CV01500   R015  2  0  1
 CV01501   0   0		                               
 CV015A0   3                                                                                         
 CV015A1   PVOL  101235.0                            * 101325Pa-90Pa 
-CV015A2   TATM  293.15  RHUM  0.6                   * 20 deg. C; 60% rel. humidity
+CV015A2   TATM  293.15  RHUM  0.6                  
 CV015A3   MLFR.4  0.78                              * Filled with air (N2)
 CV015A6   MLFR.5  0.21                              * Filled with air (O2)
 CV015A8   MLFR.8  0.01                              * Filled with air (Ar)                           
@@ -299,7 +299,7 @@ CV01600   R016  2  0  1
 CV01601   0   0		                              
 CV016A0   3                                                                                         
 CV016A1   PVOL  101195.0                            * 101325Pa-195Pa 
-CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV016A2   TATM  290.95  RHUM  0.0                   
 CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
 CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
@@ -317,7 +317,7 @@ CV01700   R017  2  2  1
 CV01701   0   0					                 
 CV017A0   3                                                                                         
 CV017A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV017A3   TATM    290.15    RHUM 0.6                * 17 deg. C; 60% rel. humidity                                
+CV017A3   TATM    290.15    RHUM 0.6                                                
 CV017A5   MLFR.4  0.78                              * Filled with air (N2)
 CV017A6   MLFR.5  0.21                              * Filled with air (O2)
 CV017A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -335,7 +335,7 @@ CV01800   R018  2  2  1
 CV01801   0   0					                 
 CV018A0   3                                                                                         
 CV018A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV018A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                
+CV018A3   TATM    293.15    RHUM 0.6                                              
 CV018A5   MLFR.4  0.78                              * Filled with air (N2)
 CV018A6   MLFR.5  0.21                              * Filled with air (O2)
 CV018A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -353,7 +353,7 @@ CV02300   G3  2  2  1
 CV02301   0   0					                 
 CV023A0   3                                                                                         
 CV023A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV023A3   TATM    295.15    RHUM 0.6                * 22 deg. C; 60% rel. humidity                                
+CV023A3   TATM    295.15    RHUM 0.6                                                
 CV023A5   MLFR.4  0.78                              * Filled with air (N2)
 CV023A6   MLFR.5  0.21                              * Filled with air (O2)
 CV023A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -371,7 +371,7 @@ CV02400   G4  2  2  1
 CV02401   0   0					                 
 CV024A0   3                                                                                         
 CV024A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV024A3   TATM    295.15    RHUM 0.6                * 22 deg. C; 60% rel. humidity                                
+CV024A3   TATM    295.15    RHUM 0.6                                               
 CV024A5   MLFR.4  0.78                              * Filled with air (N2)
 CV024A6   MLFR.5  0.21                              * Filled with air (O2)
 CV024A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -389,7 +389,7 @@ CV02600   R026  2  2  1
 CV02601   0   0					                 
 CV026A0   3                                                                                         
 CV026A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV026A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                
+CV026A3   TATM    293.15    RHUM 0.6                                                
 CV026A5   MLFR.4  0.78                              * Filled with air (N2)
 CV026A6   MLFR.5  0.21                              * Filled with air (O2)
 CV026A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -407,7 +407,7 @@ CV05300   R053  2  2  1
 CV05301   0   0					                 
 CV053A0   3                                                                                         
 CV053A1   PVOL    101065.0                          * 101325-260Pa                                                                 
-CV053A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV053A3   TATM    293.15    RHUM 0.6                                                
 CV053A5   MLFR.4  0.78                              * Filled with air (N2)
 CV053A6   MLFR.5  0.21                              * Filled with air (O2)
 CV053A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -425,7 +425,7 @@ CV05400   R054  2  2  1
 CV05401   0   0					                 
 CV054A0   3                                                                                         
 CV054A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV054A3   TATM    295.15    RHUM 0.6                * 22 deg. C; 60% rel. humidity                                 
+CV054A3   TATM    295.15    RHUM 0.6                                                
 CV054A5   MLFR.4  0.78                              * Filled with air (N2)
 CV054A6   MLFR.5  0.21                              * Filled with air (O2)
 CV054A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -443,7 +443,7 @@ CV05600   R056  2  2  1
 CV05601   0   0					                 
 CV056A0   3                                                                                         
 CV056A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV056A3   TATM    295.15    RHUM 0.6                * 22 deg. C; 60% rel. humidity                                 
+CV056A3   TATM    295.15    RHUM 0.6                                                 
 CV056A5   MLFR.4  0.78                              * Filled with air (N2)
 CV056A6   MLFR.5  0.21                              * Filled with air (O2)
 CV056A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -461,7 +461,7 @@ CV05700   R057  2  2  1
 CV05701   0   0					                 
 CV057A0   3                                                                                         
 CV057A1   PVOL    101065.0                          * 101325-260Pa                                                                 
-CV057A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV057A3   TATM    293.15    RHUM 0.6                                                 
 CV057A5   MLFR.4  0.78                              * Filled with air (N2)
 CV057A6   MLFR.5  0.21                              * Filled with air (O2)
 CV057A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -479,7 +479,7 @@ CV05800   R058  2  2  1
 CV05801   0   0					                 
 CV058A0   3                                                                                         
 CV058A1   PVOL    101195.0                          * 101325-130Pa                                                                 
-CV058A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV058A3   TATM    293.15    RHUM 0.6                                                 
 CV058A5   MLFR.4  0.78                              * Filled with air (N2)
 CV058A6   MLFR.5  0.21                              * Filled with air (O2)
 CV058A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -497,7 +497,7 @@ CV08000   SB1  2  2  1
 CV08001   0   0					                 
 CV080A0   3                                                                                         
 CV080A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV080A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV080A3   TATM    293.15    RHUM 0.6                                                 
 CV080A5   MLFR.4  0.78                              * Filled with air (N2)
 CV080A6   MLFR.5  0.21                              * Filled with air (O2)
 CV080A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -515,7 +515,7 @@ CV08100   G2  2  2  1
 CV08101   0   0					                 
 CV081A0   3                                                                                         
 CV081A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV081A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV081A3   TATM    293.15    RHUM 0.6                                                 
 CV081A5   MLFR.4  0.78                              * Filled with air (N2)
 CV081A6   MLFR.5  0.21                              * Filled with air (O2)
 CV081A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -533,7 +533,7 @@ CV08200   SB3  2  2  1
 CV08201   0   0					                 
 CV082A0   3                                                                                         
 CV082A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV082A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV082A3   TATM    293.15    RHUM 0.6                                                 
 CV082A5   MLFR.4  0.78                              * Filled with air (N2)
 CV082A6   MLFR.5  0.21                              * Filled with air (O2)
 CV082A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -551,7 +551,7 @@ CV08300   SB4  2  2  1
 CV08301   0   0					                 
 CV083A0   3                                                                                         
 CV083A1   PVOL    101270.0                          * 101325-55Pa                                                                 
-CV083A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV083A3   TATM    293.15    RHUM 0.6                                                
 CV083A5   MLFR.4  0.78                              * Filled with air (N2)
 CV083A6   MLFR.5  0.21                              * Filled with air (O2)
 CV083A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -569,7 +569,7 @@ CV08600   S02  2  2  1
 CV08601   0   0					                 
 CV086A0   3                                                                                         
 CV086A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV086A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV086A3   TATM    293.15    RHUM 0.6                                                 
 CV086A5   MLFR.4  0.78                              * Filled with air (N2)
 CV086A6   MLFR.5  0.21                              * Filled with air (O2)
 CV086A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -587,7 +587,7 @@ CV08900   S07  2  2  1
 CV08901   0   0					                 
 CV089A0   3                                                                                         
 CV089A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV089A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV089A3   TATM    293.15    RHUM 0.6                                                
 CV089A5   MLFR.4  0.78                              * Filled with air (N2)
 CV089A6   MLFR.5  0.21                              * Filled with air (O2)
 CV089A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -605,7 +605,7 @@ CV09100   AL001  2  2  1
 CV09101   0   0					                 
 CV091A0   3                                                                                         
 CV091A1   PVOL    101257.0                          * 101325-68Pa                                                                 
-CV091A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV091A3   TATM    293.15    RHUM 0.6                                                 
 CV091A5   MLFR.4  0.78                              * Filled with air (N2)
 CV091A6   MLFR.5  0.21                              * Filled with air (O2)
 CV091A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -623,7 +623,7 @@ CV09200   AL002  2  2  1
 CV09201   0   0					                 
 CV092A0   3                                                                                         
 CV092A1   PVOL    101257.0                          * 101325-68Pa                                                                 
-CV092A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV092A3   TATM    293.15    RHUM 0.6                                                
 CV092A5   MLFR.4  0.78                              * Filled with air (N2)
 CV092A6   MLFR.5  0.21                              * Filled with air (O2)
 CV092A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -641,7 +641,7 @@ CV09400   AL004  2  2  1
 CV09401   0   0					                 
 CV094A0   3                                                                                         
 CV094A1   PVOL    101257.0                          * 101325-68Pa                                                                 
-CV094A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV094A3   TATM    293.15    RHUM 0.6                                               
 CV094A5   MLFR.4  0.78                              * Filled with air (N2)
 CV094A6   MLFR.5  0.21                              * Filled with air (O2)
 CV094A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -659,7 +659,7 @@ CV09500   AL055  2  2  1
 CV09501   0   0					                 
 CV095A0   3                                                                                         
 CV095A1   PVOL    101215.0                          * 101325-110Pa                                                                 
-CV095A3   TATM    293.15    RHUM 0.6                * 20 deg. C; 60% rel. humidity                                 
+CV095A3   TATM    293.15    RHUM 0.6                                                
 CV095A5   MLFR.4  0.78                              * Filled with air (N2)
 CV095A6   MLFR.5  0.21                              * Filled with air (O2)
 CV095A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -697,7 +697,7 @@ CV10400   R104  2  2  2
 CV10401   0   -1		                                
 CV104A0   3                                                                                         
 CV104A1   PVOL    101257.0                          * 101325-68Pa                                                                          
-CV104A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV104A3   TATM    293.15    RHUM  0.6                                                     
 CV104A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV104A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV104A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -714,7 +714,7 @@ CV10600   G8  2  2  2
 CV10601   0   -1	                                
 CV106A0   3                                                                                         
 CV106A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV106A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV106A3   TATM    293.15    RHUM  0.6                                                    
 CV106A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV106A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV106A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -731,7 +731,7 @@ CV10500   R105  2  2  2
 CV10501   0   -1	                                
 CV105A0   3                                                                                         
 CV105A1   PVOL    101235.0                          * 101325-90Pa                                                                           
-CV105A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV105A3   TATM    293.15    RHUM  0.6                                                     
 CV105A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV105A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV105A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -748,7 +748,7 @@ CV12900   R129  2  2  2
 CV12901   0   -1		                           
 CV129A0   3                                                                                         
 CV129A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-CV129A3   TATM    298.15    RHUM  0.0               * 25. deg C, room temp.                                      
+CV129A3   TATM    298.15    RHUM  0.0                                                     
 CV129A5   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV129A6   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
 CV129A8   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
@@ -765,7 +765,7 @@ CV11000   R110  2  2  2
 CV11001   0   -1		                            
 CV110A0   3                                                                                         
 CV110A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV110A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV110A3   TATM    298.15    RHUM  0.6                                                     
 CV110A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV110A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV110A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -782,7 +782,7 @@ CV10200   R102  2  2  2
 CV10201   0   -1	                                
 CV102A0   3                                                                                         
 CV102A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV102A3   TATM    298.15    RHUM  0.6               * 25. deg C, room temp.                                      
+CV102A3   TATM    298.15    RHUM  0.6                                                    
 CV102A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV102A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV102A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -799,7 +799,7 @@ CV11200   R112  2  2  2
 CV11201   0   -1	                                
 CV112A0   3                                                                                         
 CV112A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV112A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV112A3   TATM    293.15    RHUM  0.6                                                     
 CV112A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV112A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV112A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -816,7 +816,7 @@ CV11400   R114-1  2  2  2
 CV11401   0   -1	                             
 CV114A0   3                                                                                         
 CV114A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV114A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV114A3   TATM    293.15    RHUM  0.6                                                     
 CV114A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV114A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV114A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -833,7 +833,7 @@ CV17000   R170  2  2  2
 CV17001   0   -1	                              
 CV170A0   3                                                                                         
 CV170A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV170A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV170A3   TATM    293.15    RHUM  0.6                                                     
 CV170A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV170A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV170A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -850,7 +850,7 @@ CV14700   R147  2  2  2
 CV14701   0   -1	                                
 CV147A0   3                                                                                         
 CV147A1   PVOL    101195.0                          * 101325-160Pa                                                                          
-CV147A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV147A3   TATM    293.15    RHUM  0.6                                                     
 CV147A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV147A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV147A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -867,7 +867,7 @@ CV15100   R151  2  2  2
 CV15101   0   -1	                                
 CV151A0   3                                                                                         
 CV151A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-CV151A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV151A3   TATM    293.15    RHUM  0.6                                                    
 CV151A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV151A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV151A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -884,7 +884,7 @@ CV19100   AL151  2  2  2
 CV19101   0   -1	                               
 CV191A0   3                                                                                         
 CV191A1   PVOL    101215.0                          * 101325-110Pa                                                                          
-CV191A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV191A3   TATM    293.15    RHUM  0.6                                                    
 CV191A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV191A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV191A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -901,7 +901,7 @@ CV15800   R158  2  2  2
 CV15801   0   -1	                               
 CV158A0   3                                                                                         
 CV158A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV158A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV158A3   TATM    293.15    RHUM  0.6                                                     
 CV158A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV158A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV158A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -918,7 +918,7 @@ CV15200   R152  2  2  2
 CV15201   0   -1	                         
 CV152A0   3                                                                                         
 CV152A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV152A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV152A3   TATM    293.15    RHUM  0.6                                                    
 CV152A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV152A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV152A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -935,7 +935,7 @@ CV15300   R153  2  2  2
 CV15301   0   -1	                             
 CV153A0   3                                                                                         
 CV153A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV153A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV153A3   TATM    293.15    RHUM  0.6                                                    
 CV153A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV153A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV153A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -951,8 +951,8 @@ CV153B2   16.5     517.0                            * 359.2 m3 (2PNSLP)
 CV13000   R130  2  2  2                                                              
 CV13001   0   -1	                              
 CV130A0   3                                                                                         
-CV130A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV130A3   TATM    290.95    RHUM  1.0               * 17.8 deg C, room temp.                                      
+CV130A1   PVOL    26250.0                           * 25-500 hPa (EFDA_D_2NPAR7) --> 26250 Pa                                                                         
+CV130A3   TATM    290.95    RHUM  1.0                                                    
 CV130A5   MLFR.7  0.9999                            * FILLED WITH He -> 99.99%   
 CV130A6   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
 CV130A8   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
@@ -969,7 +969,7 @@ CV15500   R155  2  2  2
 CV15501   0   -1	                              
 CV155A0   3                                                                                         
 CV155A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV155A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV155A3   TATM    295.15    RHUM  0.6                                                    
 CV155A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV155A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV155A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -986,7 +986,7 @@ CV19600   AL156  2  2  2
 CV19601   0   -1	                             
 CV196A0   3                                                                                         
 CV196A1   PVOL    101215.0                          * 101325-110Pa                                                                          
-CV196A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV196A3   TATM    293.15    RHUM  0.6                                                    
 CV196A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV196A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV196A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1003,7 +1003,7 @@ CV10100   G10  2  2  2
 CV10101   0   -1	                              
 CV101A0   3                                                                                         
 CV101A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV101A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV101A3   TATM    295.15    RHUM  0.6                                                   
 CV101A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV101A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV101A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1020,7 +1020,7 @@ CV15400   R154  2  2  2
 CV15401   0   -1	                                
 CV154A0   3                                                                                         
 CV154A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV154A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV154A3   TATM    295.15    RHUM  0.6                                                  
 CV154A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV154A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV154A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1037,7 +1037,7 @@ CV15600   R156  2  2  2
 CV15601   0   -1	                                
 CV156A0   3                                                                                         
 CV156A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV156A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV156A3   TATM    293.15    RHUM  0.6                                                    
 CV156A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV156A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV156A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1054,7 +1054,7 @@ CV15700   R157  2  2  2
 CV15701   0   -1	                                
 CV157A0   3                                                                                         
 CV157A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV157A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV157A3   TATM    293.15    RHUM  0.6                                                    
 CV157A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV157A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV157A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1071,7 +1071,7 @@ CV16600   R166  2  2  2
 CV16601   0   -1	                                
 CV166A0   3                                                                                         
 CV166A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV166A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV166A3   TATM    293.15    RHUM  0.6                                                    
 CV166A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV166A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV166A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1088,7 +1088,7 @@ CV16700   R167  2  2  2
 CV16701   0   -1	                                
 CV167A0   3                                                                                         
 CV167A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV167A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV167A3   TATM    293.15    RHUM  0.6                                                    
 CV167A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV167A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV167A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1105,7 +1105,7 @@ CV16800   R168  2  2  2
 CV16801   0   -1	                                
 CV168A0   3                                                                                         
 CV168A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV168A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV168A3   TATM    293.15    RHUM  0.6                                                     
 CV168A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV168A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV168A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1122,7 +1122,7 @@ CV16000   R160  2  2  2
 CV16001   0   -1	                                
 CV160A0   3                                                                                         
 CV160A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-CV160A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV160A3   TATM    293.15    RHUM  0.6                                                    
 CV160A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV160A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV160A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1139,7 +1139,7 @@ CV19000   C102  2  2  2
 CV19001   0   -1	                                
 CV190A0   3                                                                                         
 CV190A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV190A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV190A3   TATM    293.15    RHUM  0.6                                                   
 CV190A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV190A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV190A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1156,7 +1156,7 @@ CV19500   AL165  2  2  2
 CV19501   0   -1	                                
 CV195A0   3                                                                                         
 CV195A1   PVOL    101130.0                          * 101325-195Pa                                                                          
-CV195A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV195A3   TATM    293.15    RHUM  0.6                                                     
 CV195A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV195A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV195A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1173,7 +1173,7 @@ CV11200   R112  2  2  2
 CV11201   0   -1	                                
 CV112A0   3                                                                                         
 CV112A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV112A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV112A3   TATM    293.15    RHUM  0.6                                                     
 CV112A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV112A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV112A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1190,7 +1190,7 @@ CV14700   R147  2  2  2
 CV14701   0   -1	                               
 CV147A0   3                                                                                         
 CV147A1   PVOL    101195.0                          * 101325-160Pa                                                                          
-CV147A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV147A3   TATM    293.15    RHUM  0.6                                                    
 CV147A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV147A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV147A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1207,7 +1207,7 @@ CV15100   R151  2  2  2
 CV15101   0   -1	                                
 CV151A0   3                                                                                         
 CV151A1   PVOL    101195.0                          * 101325-130Pa                                                                          
-CV151A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV151A3   TATM    293.15    RHUM  0.6                                                    
 CV151A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV151A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV151A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1224,7 +1224,7 @@ CV19100   AL151  2  2  2
 CV19101   0   -1	                                
 CV191A0   3                                                                                         
 CV191A1   PVOL    101215.0                          * 101325-110Pa                                                                          
-CV191A3   TATM    293.15    RHUM  0.6               * 20. deg C, room temp.                                      
+CV191A3   TATM    293.15    RHUM  0.6                                                   
 CV191A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV191A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV191A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1241,7 +1241,7 @@ CV14400   R144  2  2  2
 CV14401   0   -1	                               
 CV144A0   3                                                                                         
 CV144A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV144A3   TATM    295.15    RHUM  0.6               * 22. deg C, room temp.                                      
+CV144A3   TATM    295.15    RHUM  0.6                                                   
 CV144A5   MLFR.4  0.78                              * FILLED WITH air (N2)
 CV144A6   MLFR.5  0.21                              * FILLED WITH air (O2)
 CV144A8   MLFR.8  0.01                              * Filled with air (Ar)
@@ -1257,840 +1257,784 @@ CV144B2   17.5     11568.0                           * 1937.8 m3 sin R149 (2PNSL
 * HVAC-S02-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL08600   HVAC-S02-IN   400   086  15.75  15.75           
-FL08601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL08602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL08603   1.0   1.0                                             * FORM LOSS
+FL08601   1.0   1.0    1.0                                     
+FL08602	  3 
 FL086S0   1.0   1.0    1.0                     
 FL0860F   15.25    16.25
 FL0860T   15.25    16.25
 FL086T0   2      086           
 *
-CF08600   VEL-S02-IN  DIVIDE  1  1810.0  0.0                    * Q / (3600 * A) 
+CF08600   VEL-S02-IN  DIVIDE  1  1810.0  0.0                    
 CF08610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-S02-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL78600   HVAC-S02-EX   086   401  15.75  15.75           
-FL78601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL78602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL78603   1.0   1.0                                             * FORM LOSS
+FL78601   1.0   1.0    1.0                                      
+FL78602	  3
 FL786S0   1.0   1.0    1.0                     
 FL7860F   15.25    16.25
 FL7860T   15.25    16.25
 FL786T0   2      786           
 *
-CF78600   VEL-S02-EX  DIVIDE  1  4084.0  0.0                   * Q / (3600 * A) 
+CF78600   VEL-S02-EX  DIVIDE  1  4084.0  0.0                   
 CF78610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-SB4-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL08300   HVAC-SB4-IN   400   083  15.75  15.75           
-FL08301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL08302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL08303   1.0   1.0                                             * FORM LOSS
+FL08301   1.0   1.0    1.0                                    
+FL08302	  3 
 FL083S0   1.0   1.0    1.0                     
 FL0830F   15.25    16.25
 FL0830T   15.25    16.25
 FL083T0   2      083           
 *
-CF08300   VEL-SB4-IN  DIVIDE  1  10880.0  0.0                   * Q / (3600 * A) 
+CF08300   VEL-SB4-IN  DIVIDE  1  10880.0  0.0                  
 CF08310   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-SB4-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL78300   HVAC-SB4-EX   083   401  15.75  15.75           
-FL78301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL78302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL78303   1.0   1.0                                             * FORM LOSS
+FL78301   1.0   1.0    1.0                                     
+FL78302	  3
 FL783S0   1.0   1.0    1.0                     
 FL7830F   15.25    16.25
 FL7830T   15.25    16.25
 FL783T0   2      783           
 *
-CF78300   VEL-SB4-EX  DIVIDE  1  3632.0  0.0                    * Q / (3600 * A) 
+CF78300   VEL-SB4-EX  DIVIDE  1  3632.0  0.0                   
 CF78310   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-AL004-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL09400   HVAC-AL004-IN   400   094  4.25  4.25           
-FL09401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL09402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL09403   1.0   1.0                                             * FORM LOSS
+FL09401   1.0   1.0    1.0                                      
+FL09402	  3S
 FL094S0   1.0   1.0    1.0                     
 FL0940F   3.75    4.75
 FL0940T   3.75    4.75
 FL094T0   2      094           
 *
-CF09400   VEL-AL004-IN  DIVIDE  1  1157.0  0.0                  * Q / (3600 * A) 
+CF09400   VEL-AL004-IN  DIVIDE  1  1157.0  0.0                
 CF09410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R026-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL02600   HVAC-R026-IN   400   026  4.25  4.25           
-FL02601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL02602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL02603   1.0   1.0                                             * FORM LOSS
+FL02601   1.0   1.0    1.0                                     
+FL02602	  3 
 FL026S0   1.0   1.0    1.0                     
 FL0260F   3.75    4.75
 FL0260T   3.75    4.75
 FL026T0   2      026           
 *
-CF02600   VEL-R026-IN  DIVIDE  1  24771.0  0.0                  * Q / (3600 * A) 
+CF02600   VEL-R026-IN  DIVIDE  1  24771.0  0.0                 
 CF02610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R026-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL72600   HVAC-R026-EX   026   401  4.25  4.25           
-FL72601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL72602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL72603   1.0   1.0                                             * FORM LOSS
+FL72601   1.0   1.0    1.0                                     
+FL72602	  3  
 FL726S0   1.0   1.0    1.0                     
 FL7260F   3.75    4.75
 FL7260T   3.75    4.75
 FL726T0   2      726           
 *
-CF72600   VEL-R026-EX  DIVIDE  1  32527.0  0.0                  * Q / (3600 * A) 
+CF72600   VEL-R026-EX  DIVIDE  1  32527.0  0.0               
 CF72610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G1-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL00600   HVAC-G1-IN   400   006  4.25  4.25           
-FL00601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL00602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL00603   1.0   1.0                                             * FORM LOSS
+FL00601   1.0   1.0    1.0                                      
+FL00602	  3 
 FL006S0   1.0   1.0    1.0                     
 FL0060F   3.75    4.75
 FL0060T   3.75    4.75
 FL006T0   2      006           
 *
-CF00600   VEL-G1-IN  DIVIDE  1  3038.0  0.0                     * Q / (3600 * A) 
+CF00600   VEL-G1-IN  DIVIDE  1  3038.0  0.0                   
 CF00610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G1-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL70600   HVAC-G1-EX   006   401  4.25  4.25           
-FL70601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL70602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL70603   1.0   1.0                                             * FORM LOSS
+FL70601   1.0   1.0    1.0                                     
+FL70602	  3
 FL706S0   1.0   1.0    1.0                     
 FL7060F   3.75    4.75
 FL7060T   3.75    4.75
 FL706T0   2      706           
 *
-CF70600   VEL-G1-EX  DIVIDE  1  4605.0  0.0                    * Q / (3600 * A) 
+CF70600   VEL-G1-EX  DIVIDE  1  4605.0  0.0                    
 CF70610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-AL001-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL09100   HVAC-AL001-IN   400   091  4.25  4.25           
-FL09101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL09102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL09103   1.0   1.0                                             * FORM LOSS
+FL09101   1.0   1.0    1.0                                    
+FL09102	  3 
 FL091S0   1.0   1.0    1.0                     
 FL0910F   3.75    4.75
 FL0910T   3.75    4.75
 FL091T0   2      091           
 *
-CF09100   VEL-AL001-IN  DIVIDE  1  1073.0  0.0                   * Q / (3600 * A) 
+CF09100   VEL-AL001-IN  DIVIDE  1  1073.0  0.0                   
 CF09110   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R001-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL00100   HVAC-R001-IN   400   001  4.25  4.25           
-FL00101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL00102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL00103   1.0   1.0                                             * FORM LOSS
+FL00101   1.0   1.0    1.0                                      
+FL00102	  3
 FL001S0   1.0   1.0    1.0                     
 FL0010F   3.75    4.75
 FL0010T   3.75    4.75
 FL001T0   2      001           
 *
-CF00100   VEL-R001-IN  DIVIDE  1  9986.0  0.0                   * Q / (3600 * A) 
+CF00100   VEL-R001-IN  DIVIDE  1  9986.0  0.0                  
 CF00110   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R001-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL70100   HVAC-R001-EX   001   401  4.25  4.25           
-FL70101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL70102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL70103   1.0   1.0                                             * FORM LOSS
+FL70101   1.0   1.0    1.0                                     
+FL70102	  3
 FL701S0   1.0   1.0    1.0                     
 FL7010F   3.75    4.75
 FL7010T   3.75    4.75
 FL701T0   2      701           
 *
-CF70100   VEL-R001-EX  DIVIDE  1  8293.0  0.0                   * Q / (3600 * A) 
+CF70100   VEL-R001-EX  DIVIDE  1  8293.0  0.0                
 CF70110   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R011-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL01100   HVAC-R011-IN   400   011  4.25  4.25           
-FL01101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL01102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL01103   1.0   1.0                                             * FORM LOSS
+FL01101   1.0   1.0    1.0                                    
+FL01102	  3
 FL011S0   1.0   1.0    1.0                     
 FL0110F   3.75    4.75
 FL0110T   3.75    4.75
 FL011T0   2      011           
 *
-CF01100   VEL-R011-IN  DIVIDE  1  2469.0  0.0                   * Q / (3600 * A) 
+CF01100   VEL-R011-IN  DIVIDE  1  2469.0  0.0                
 CF01110   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R011-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL71100   HVAC-R011-EX   011   401  4.25  4.25           
-FL71101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL71102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL71103   1.0   1.0                                             * FORM LOSS
+FL71101   1.0   1.0    1.0                                    
+FL71102	  3 
 FL711S0   1.0   1.0    1.0                     
 FL7110F   3.75    4.75
 FL7110T   3.75    4.75
 FL711T0   2      711           
 *
-CF71100   VEL-R011-EX  DIVIDE  1  2962.0  0.0                   * Q / (3600 * A) 
+CF71100   VEL-R011-EX  DIVIDE  1  2962.0  0.0                  
 CF71110   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-SB1-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL08000   HVAC-SB1-IN   400   080  15.75  15.75           
-FL08001   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL08002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL08003   1.0   1.0                                             * FORM LOSS
+FL08001   1.0   1.0    1.0                                     
+FL08002	  3
 FL080S0   1.0   1.0    1.0                     
 FL0800F   15.25    16.25
 FL0800T   15.25    16.25
 FL080T0   2      080           
 *
-CF08000   VEL-SB1-IN  DIVIDE  1  5405.0  0.0                    * Q / (3600 * A) 
+CF08000   VEL-SB1-IN  DIVIDE  1  5405.0  0.0                 
 CF08010   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-SB1-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL78000   HVAC-SB1-EX   080   401  15.75  15.75           
-FL78001   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL78002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL78003   1.0   1.0                                             * FORM LOSS
+FL78001   1.0   1.0    1.0                                    
+FL78002	  3
 FL780S0   1.0   1.0    1.0                     
 FL7800F   15.25    16.25
 FL7800T   15.25    16.25
 FL780T0   2      780           
 *
-CF78000   VEL-SB1-EX  DIVIDE  1  6274.0  0.0                    * Q / (3600 * A) 
+CF78000   VEL-SB1-EX  DIVIDE  1  6274.0  0.0                   
 CF78010   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G5-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL00200   HVAC-G5-IN   400   002  4.25  4.25           
-FL00201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL00202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL00203   1.0   1.0                                             * FORM LOSS
+FL00201   1.0   1.0    1.0                                      
+FL00202	  3
 FL002S0   1.0   1.0    1.0                     
 FL0020F   3.75    4.75
 FL0020T   3.75    4.75
 FL002T0   2      002           
 *
-CF00200   VEL-G5-IN  DIVIDE  1  12385.0  0.0                    * Q / (3600 * A) 
+CF00200   VEL-G5-IN  DIVIDE  1  12385.0  0.0                
 CF00210   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G5-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL70200   HVAC-G5-EX   002   401  4.25  4.25           
-FL70201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL70202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL70203   1.0   1.0                                             * FORM LOSS
+FL70201   1.0   1.0    1.0                                     
+FL70202	  3  
 FL702S0   1.0   1.0    1.0                     
 FL7020F   3.75    4.75
 FL7020T   3.75    4.75
 FL702T0   2      702           
 *
-CF70200   VEL-G5-EX  DIVIDE  1  13973.0  0.0                    * Q / (3600 * A) 
+CF70200   VEL-G5-EX  DIVIDE  1  13973.0  0.0                   
 CF70210   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R014-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL01400   HVAC-R014-IN   400   014  4.25  4.25           
-FL01401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL01402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL01403   1.0   1.0                                             * FORM LOSS
+FL01401   1.0   1.0    1.0                                     
+FL01402	  3
 FL014S0   1.0   1.0    1.0                     
 FL0140F   3.75    4.75
 FL0140T   3.75    4.75
 FL014T0   2      014           
 *
-CF01400   VEL-R014-IN  DIVIDE  1  4612.0  0.0                   * Q / (3600 * A) 
+CF01400   VEL-R014-IN  DIVIDE  1  4612.0  0.0                 
 CF01410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R014-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL71400   HVAC-R014-EX   014   401  4.25  4.25           
-FL71401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL71402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL71403   1.0   1.0                                             * FORM LOSS
+FL71401   1.0   1.0    1.0                                      
+FL71402	  3  
 FL714S0   1.0   1.0    1.0                     
 FL7140F   3.75    4.75
 FL7140T   3.75    4.75
 FL714T0   2      714           
 *
-CF71400   VEL-R014-EX  DIVIDE  1  5534.0  0.0                   * Q / (3600 * A) 
+CF71400   VEL-R014-EX  DIVIDE  1  5534.0  0.0                   
 CF71410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-AL002-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL09200   HVAC-AL002-IN   400   092  4.25  4.25           
-FL09201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL09202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL09203   1.0   1.0                                             * FORM LOSS
+FL09201   1.0   1.0    1.0                                      
+FL09202	  3 
 FL092S0   1.0   1.0    1.0                     
 FL0920F   3.75    4.75
 FL0920T   3.75    4.75
 FL092T0   2      092           
 *
-CF09200   VEL-AL002-IN  DIVIDE  1  1590.0  0.0                   * Q / (3600 * A) 
+CF09200   VEL-AL002-IN  DIVIDE  1  1590.0  0.0                   
 CF09210   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R007-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL00700   HVAC-R007-IN   400   007  4.25  4.25           
-FL00701   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL00702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL00703   1.0   1.0                                             * FORM LOSS
+FL00701   1.0   1.0    1.0                                      
+FL00702	  3
 FL007S0   1.0   1.0    1.0                     
 FL0070F   3.75    4.75
 FL0070T   3.75    4.75
 FL007T0   2      007           
 *
-CF00700   VEL-R007-IN  DIVIDE  1  6044.0  0.0                   * Q / (3600 * A) 
+CF00700   VEL-R007-IN  DIVIDE  1  6044.0  0.0                   
 CF00710   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R007-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL70700   HVAC-R007-EX   007   401  4.25  4.25           
-FL70701   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL70702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL70703   1.0   1.0                                             * FORM LOSS
+FL70701   1.0   1.0    1.0                                    
+FL70702	  3
 FL707S0   1.0   1.0    1.0                     
 FL7070F   3.75    4.75
 FL7070T   3.75    4.75
 FL707T0   2      707           
 *
-CF70700   VEL-R007-EX  DIVIDE  1  4186.0  0.0                   * Q / (3600 * A) 
+CF70700   VEL-R007-EX  DIVIDE  1  4186.0  0.0                 
 CF70710   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-S07-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL08900   HVAC-S07-IN   400   089  15.75  15.75           
-FL08901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL08902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL08903   1.0   1.0                                             * FORM LOSS
+FL08901   1.0   1.0    1.0                                    
+FL08902	  3 
 FL089S0   1.0   1.0    1.0                     
 FL0890F   15.25    16.25
 FL0890T   15.25    16.25
 FL089T0   2      089           
 *
-CF08900   VEL-S07-IN  DIVIDE  1  1523.0  0.0                    * Q / (3600 * A) 
+CF08900   VEL-S07-IN  DIVIDE  1  1523.0  0.0                   
 CF08910   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-S07-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL78900   HVAC-S07-EX   089   401  15.75  15.75           
-FL78901   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL78902	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL78903   1.0   1.0                                             * FORM LOSS
+FL78901   1.0   1.0    1.0                                  
+FL78902	  3
 FL789S0   1.0   1.0    1.0                     
 FL7890F   15.25    16.25
 FL7890T   15.25    16.25
 FL789T0   2      789           
 *
-CF78900   VEL-S07-EX  DIVIDE  1  1828.0  0.0                    * Q / (3600 * A) 
+CF78900   VEL-S07-EX  DIVIDE  1  1828.0  0.0                 
 CF78910   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R005-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL00500   HVAC-R005-IN   400   005  4.25  4.25           
-FL00501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL00502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL00503   1.0   1.0                                             * FORM LOSS
+FL00501   1.0   1.0    1.0                                      
+FL00502	  3             
 FL005S0   1.0   1.0    1.0                     
 FL0050F   3.75    4.75
 FL0050T   3.75    4.75
 FL005T0   2      005           
 *
-CF00500   VEL-R005-IN  DIVIDE  1  1408.0  0.0                   * Q / (3600 * A) 
+CF00500   VEL-R005-IN  DIVIDE  1  1408.0  0.0                  
 CF00510   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R005-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL70500   HVAC-R005-EX   005   401  4.25  4.25           
-FL70501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL70502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL70503   1.0   1.0                                             * FORM LOSS
+FL70501   1.0   1.0    1.0                                      
+FL70502	  3
 FL705S0   1.0   1.0    1.0                     
 FL7050F   3.75    4.75
 FL7050T   3.75    4.75
 FL705T0   2      705           
 *
-CF70500   VEL-R005-EX  DIVIDE  1  1548.0  0.0                   * Q / (3600 * A) 
+CF70500   VEL-R005-EX  DIVIDE  1  1548.0  0.0                    
 CF70510   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G4-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL02400   HVAC-G4-IN   400   024  4.25  4.25           
-FL02401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL02402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL02403   1.0   1.0                                             * FORM LOSS
+FL02401   1.0   1.0    1.0                                      
+FL02402	  3
 FL024S0   1.0   1.0    1.0                     
 FL0240F   3.75    4.75
 FL0240T   3.75    4.75
 FL024T0   2      024           
 *
-CF02400   VEL-G4-IN  DIVIDE  1  19147.0  0.0                    * Q / (3600 * A) 
+CF02400   VEL-G4-IN  DIVIDE  1  19147.0  0.0                  
 CF02410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G4-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL72400   HVAC-G4-EX   024   401  4.25  4.25           
-FL72401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL72402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL72403   1.0   1.0                                             * FORM LOSS
+FL72401   1.0   1.0    1.0                                      
+FL72402	  3
 FL724S0   1.0   1.0    1.0                     
 FL7240F   3.75    4.75
 FL7240T   3.75    4.75
 FL724T0   2      724           
 *
-CF72400   VEL-G4-EX  DIVIDE  1  23374.0  0.0                    * Q / (3600 * A) 
+CF72400   VEL-G4-EX  DIVIDE  1  23374.0  0.0                    
 CF72410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G3-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL02300   HVAC-G3-IN   400   023  4.25  4.25           
-FL02301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL02302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL02303   1.0   1.0                                             * FORM LOSS
+FL02301   1.0   1.0    1.0                                      
+FL02302	  3
 FL023S0   1.0   1.0    1.0                     
 FL0230F   3.75    4.75
 FL0230T   3.75    4.75
 FL023T0   2      023           
 *
-CF02300   VEL-G3-IN  DIVIDE  1  1408.0  0.0                     * Q / (3600 * A) 
+CF02300   VEL-G3-IN  DIVIDE  1  1408.0  0.0                      
 CF02310   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G3-EX          FM    TO     FM     TO
 *-------------------------------------------------------
 FL72300   HVAC-G3-EX   023   401  4.25  4.25           
-FL72301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL72302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL72303   1.0   1.0                                             * FORM LOSS
+FL72301   1.0   1.0    1.0                                     
+FL72302	  3 
 FL723S0   1.0   1.0    1.0                     
 FL7230F   3.75    4.75
 FL7230T   3.75    4.75
 FL723T0   2      723           
 *
-CF72300   VEL-G3-EX  DIVIDE  1  1599.0  0.0                     * Q / (3600 * A) 
+CF72300   VEL-G3-EX  DIVIDE  1  1599.0  0.0                    
 CF72310   0.0  3600.0  TIME 
 *
 *-------------------------------------------------------
 * HVAC-G2-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL08100   HVAC-G2-IN   400   081  15.75  15.75           
-FL08101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL08102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL08103   1.0   1.0                                             * FORM LOSS
+FL08101   1.0   1.0    1.0                                     
+FL08102	  3
 FL081S0   1.0   1.0    1.0                     
 FL0810F   15.25    16.25
 FL0810T   15.25    16.25
 FL081T0   2      081           
 *
-CF08100   VEL-G2-IN  DIVIDE  1  6966.0  0.0                     * Q / (3600 * A) 
+CF08100   VEL-G2-IN  DIVIDE  1  6966.0  0.0                      
 CF08110   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G2-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL78100   HVAC-G2-EX   081   401  15.75  15.75           
-FL78101   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL78102	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL78103   1.0   1.0                                             * FORM LOSS
+FL78101   1.0   1.0    1.0                                      
+FL78102	  3
 FL781S0   1.0   1.0    1.0                     
 FL7810F   15.25    16.25
 FL7810T   15.25    16.25
 FL781T0   2      781           
 *
-CF78100   VEL-G2-EX  DIVIDE  1  7995.0  0.0                     * Q / (3600 * A) 
+CF78100   VEL-G2-EX  DIVIDE  1  7995.0  0.0                     
 CF78110   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-SB3-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL08200   HVAC-SB3-IN   400   082  15.75  15.75           
-FL08201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL08202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL08203   1.0   1.0                                             * FORM LOSS
+FL08201   1.0   1.0    1.0                                    
+FL08202	  3
 FL082S0   1.0   1.0    1.0                     
 FL0820F   15.25    16.25
 FL0820T   15.25    16.25
 FL082T0   2      082           
 *
-CF08200   VEL-SB3-IN  DIVIDE  1  3491.0  0.0                    * Q / (3600 * A) 
+CF08200   VEL-SB3-IN  DIVIDE  1  3491.0  0.0                    
 CF08210   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-SB3-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL78200   HVAC-SB3-EX   082   401  15.75  15.75           
-FL78201   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL78202	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL78203   1.0   1.0                                             * FORM LOSS
+FL78201   1.0   1.0    1.0                                      
+FL78202	  3
 FL782S0   1.0   1.0    1.0                     
 FL7820F   15.25    16.25
 FL7820T   15.25    16.25
 FL782T0   2      782           
 *
-CF78200   VEL-SB3-EX  DIVIDE  1  6031.0  0.0                    * Q / (3600 * A) 
+CF78200   VEL-SB3-EX  DIVIDE  1  6031.0  0.0                    
 CF78210   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R018-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL01800   HVAC-R018-IN   400   018  4.25  4.25           
-FL01801   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL01802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL01803   1.0   1.0                                             * FORM LOSS
+FL01801   1.0   1.0    1.0                                     
+FL01802	  3 
 FL018S0   1.0   1.0    1.0                     
 FL0180F   3.75    4.75
 FL0180T   3.75    4.75
 FL018T0   2      018           
 *
-CF01800   VEL-R018-IN  DIVIDE  1  7501.0  0.0                   * Q / (3600 * A) 
+CF01800   VEL-R018-IN  DIVIDE  1  7501.0  0.0                  
 CF01810   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R018-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL71800   HVAC-R018-EX   018   401  4.25  4.25           
-FL71801   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL71802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL71803   1.0   1.0                                             * FORM LOSS
+FL71801   1.0   1.0    1.0                                     
+FL71802	  3
 FL718S0   1.0   1.0    1.0                     
 FL7180F   3.75    4.75
 FL7180T   3.75    4.75
 FL718T0   2      718           
 *
-CF71800   VEL-R018-EX  DIVIDE  1  8083.0  0.0                   * Q / (3600 * A) 
+CF71800   VEL-R018-EX  DIVIDE  1  8083.0  0.0                  
 CF71810   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R017-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL01700   HVAC-R017-IN   400   017  4.25  4.25           
-FL01701   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL01702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL01703   1.0   1.0                                             * FORM LOSS
+FL01701   1.0   1.0    1.0                                      
+FL01702	  3  
 FL017S0   1.0   1.0    1.0                     
 FL0170F   3.75    4.75
 FL0170T   3.75    4.75
 FL017T0   2      017           
 *
-CF01700   VEL-R017-IN  DIVIDE  1  455.0  0.0                    * Q / (3600 * A) 
+CF01700   VEL-R017-IN  DIVIDE  1  455.0  0.0                    
 CF01710   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R017-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL71700   HVAC-R017-EX   017   401  4.25  4.25           
-FL71701   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL71702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL71703   1.0   1.0                                             * FORM LOSS
+FL71701   1.0   1.0    1.0                                    
+FL71702	  3
 FL717S0   1.0   1.0    1.0                     
 FL7170F   3.75    4.75
 FL7170T   3.75    4.75
 FL717T0   2      717           
 *
-CF71700   VEL-R017-EX  DIVIDE  1  490.0  0.0                    * Q / (3600 * A) 
+CF71700   VEL-R017-EX  DIVIDE  1  490.0  0.0                  
 CF71710   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-AL016-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL09600   HVAC-AL016-IN   400   096  4.25  4.25           
-FL09601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL09602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL09603   1.0   1.0                                             * FORM LOSS
+FL09601   1.0   1.0    1.0                                     
+FL09602	  3
 FL096S0   1.0   1.0    1.0                     
 FL0960F   3.75    4.75
 FL0960T   3.75    4.75
 FL096T0   2      096           
 *
-CF09600   VEL-AL016-IN  DIVIDE  1  556.0  0.0                   * Q / (3600 * A) 
+CF09600   VEL-AL016-IN  DIVIDE  1  556.0  0.0                 
 CF09610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-AL016-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL79600   HVAC-AL016-EX   096   401  4.25  4.25           
-FL79601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL79602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL79603   1.0   1.0                                             * FORM LOSS
+FL79601   1.0   1.0    1.0                                  
+FL79602	  3 
 FL796S0   1.0   1.0    1.0                     
 FL7960F   3.75    4.75
 FL7960T   3.75    4.75
 FL796T0   2      796           
 *
-CF79600   VEL-AL016-EX  DIVIDE  1  624.0  0.0                   * Q / (3600 * A) 
+CF79600   VEL-AL016-EX  DIVIDE  1  624.0  0.0                    
 CF79610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R015-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL01500   HVAC-R015-IN   400   015  4.25  4.25           
-FL01501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL01502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL01503   1.0   1.0                                             * FORM LOSS
+FL01501   1.0   1.0    1.0                                      
+FL01502	  3 
 FL015S0   1.0   1.0    1.0                     
 FL0150F   3.75    4.75
 FL0150T   3.75    4.75
 FL015T0   2      015           
 *
-CF01500   VEL-R015-IN  DIVIDE  1  5926.0  0.0                   * Q / (3600 * A) 
+CF01500   VEL-R015-IN  DIVIDE  1  5926.0  0.0                  
 CF01510   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R015-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL71500   HVAC-R015-EX   015   401  4.25  4.25           
-FL71501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL71502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL71503   1.0   1.0                                             * FORM LOSS
+FL71501   1.0   1.0    1.0                                      
+FL71502	  3 
 FL715S0   1.0   1.0    1.0                     
 FL7150F   3.75    4.75
 FL7150T   3.75    4.75
 FL715T0   2      715           
 *
-CF71500   VEL-R015-EX  DIVIDE  1  6473.0  0.0                   * Q / (3600 * A) 
+CF71500   VEL-R015-EX  DIVIDE  1  6473.0  0.0                  
 CF71510   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R054-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL05400   HVAC-R054-IN   400   054  4.25  4.25           
-FL05401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL05402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL05403   1.0   1.0                                             * FORM LOSS
+FL05401   1.0   1.0    1.0                                     
+FL05402	  3 
 FL054S0   1.0   1.0    1.0                     
 FL0540F   3.75    4.75
 FL0540T   3.75    4.75
 FL054T0   2      054           
 *
-CF05400   VEL-R054-IN  DIVIDE  1  664.0  0.0                    * Q / (3600 * A) 
+CF05400   VEL-R054-IN  DIVIDE  1  664.0  0.0                   
 CF05410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R054-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL75400   HVAC-R054-EX   054   401  4.25  4.25           
-FL75401   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL75402	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL75403   1.0   1.0                                             * FORM LOSS
+FL75401   1.0   1.0    1.0                                     
+FL75402	  3     
 FL754S0   1.0   1.0    1.0                     
 FL7540F   3.75    4.75
 FL7540T   3.75    4.75
 FL754T0   2      754           
 *
-CF75400   VEL-R054-EX  DIVIDE  1  731.0  0.0                    * Q / (3600 * A) 
+CF75400   VEL-R054-EX  DIVIDE  1  731.0  0.0                     
 CF75410   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-AL055-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL09500   HVAC-AL055-IN   400   095  4.25  4.25           
-FL09501   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL09502	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL09503   1.0   1.0                                             * FORM LOSS
+FL09501   1.0   1.0    1.0                                      
+FL09502	  3 
 FL095S0   1.0   1.0    1.0                     
 FL0950F   3.75    4.75
 FL0950T   3.75    4.75
 FL095T0   2      095           
 *
-CF09500   VEL-AL055-IN  DIVIDE  1  2689.0  0.0                  * Q / (3600 * A) 
+CF09500   VEL-AL055-IN  DIVIDE  1  2689.0  0.0                  
 CF09510   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G6-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL01000   HVAC-G6-IN   400   010  15.75  15.75           
-FL01001   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL01002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL01003   1.0   1.0                                             * FORM LOSS
+FL01001   1.0   1.0    1.0                                    
+FL01002	  3
 FL010S0   1.0   1.0    1.0                     
 FL0100F   15.25    16.25
 FL0100T   15.25    16.25
 FL010T0   2      010           
 *
-CF01000   VEL-G6-IN  DIVIDE  1  5832.0  0.0                     * Q / (3600 * A) 
+CF01000   VEL-G6-IN  DIVIDE  1  5832.0  0.0                    
 CF01010   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-G6-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL71000   HVAC-G6-EX   010   401  15.75  15.75            
-FL71001   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL71002	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL71003   1.0   1.0                                             * FORM LOSS
+FL71001   1.0   1.0    1.0                                      
+FL71002	  3
 FL710S0   1.0   1.0    1.0                     
 FL7100F   15.25    16.25
 FL7100T   15.25    16.25
 FL710T0   2      710           
 *
-CF71000   VEL-G6-EX  DIVIDE  1  6578.0  0.0                     * Q / (3600 * A) 
+CF71000   VEL-G6-EX  DIVIDE  1  6578.0  0.0                      
 CF71010   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R056-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL05600   HVAC-R056-IN   400   056  4.25  4.25           
-FL05601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL05602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL05603   1.0   1.0                                             * FORM LOSS
+FL05601   1.0   1.0    1.0                                     
+FL05602	  3
 FL056S0   1.0   1.0    1.0                     
 FL0560F   3.75    4.75
 FL0560T   3.75    4.75
 FL056T0   2      056           
 *
-CF05600   VEL-R056-IN  DIVIDE  1  886.0  0.0                    * Q / (3600 * A) 
+CF05600   VEL-R056-IN  DIVIDE  1  886.0  0.0                    
 CF05610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R056-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL75600   HVAC-R056-EX   056   401  4.25  4.25           
-FL75601   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL75602	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL75603   1.0   1.0                                             * FORM LOSS
+FL75601   1.0   1.0    1.0                                      
+FL75602	  3
 FL756S0   1.0   1.0    1.0                     
 FL7560F   3.75    4.75
 FL7560T   3.75    4.75
 FL756T0   2      756           
 *
-CF75600   VEL-R056-EX  DIVIDE  1  953.0  0.0                    * Q / (3600 * A) 
+CF75600   VEL-R056-EX  DIVIDE  1  953.0  0.0                     
 CF75610   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R058-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL05800   HVAC-R058-IN   400   058  4.25  4.25           
-FL05801   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL05802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL05803   1.0   1.0                                             * FORM LOSS
+FL05801   1.0   1.0    1.0                                      
+FL05802	  3
 FL058S0   1.0   1.0    1.0                     
 FL0580F   3.75    4.75
 FL0580T   3.75    4.75
 FL058T0   2      058           
 *
-CF05800   VEL-R058-IN  DIVIDE  1  12780.0  0.0                  * Q / (3600 * A) 
+CF05800   VEL-R058-IN  DIVIDE  1  12780.0  0.0                  
 CF05810   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R058-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL75800   HVAC-R058-EX   058   401  4.25  4.25           
-FL75801   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL75802	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL75803   1.0   1.0                                             * FORM LOSS
+FL75801   1.0   1.0    1.0                                     
+FL75802	  3
 FL758S0   1.0   1.0    1.0                     
 FL7580F   3.75    4.75
 FL7580T   3.75    4.75
 FL758T0   2      758           
 *
-CF75800   VEL-R058-EX  DIVIDE  1  14195.0  0.0                  * Q / (3600 * A) 
+CF75800   VEL-R058-EX  DIVIDE  1  14195.0  0.0                  
 CF75810   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R057-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL05700   HVAC-R057-IN   400   057  4.25  4.25           
-FL05701   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL05702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL05703   1.0   1.0                                             * FORM LOSS
+FL05701   1.0   1.0    1.0                                      
+FL05702	  3                                         
 FL057S0   1.0   1.0    1.0                     
 FL0570F   3.75    4.75
 FL0570T   3.75    4.75
 FL057T0   2      057           
 *
-CF05700   VEL-R057-IN  DIVIDE  1  4057.0  0.0                 * Q / (3600 * A) 
+CF05700   VEL-R057-IN  DIVIDE  1  4057.0  0.0                  
 CF05710   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R057-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL75700   HVAC-R057-EX   057   401  4.25  4.25           
-FL75701   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL75702	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL75703   1.0   1.0                                             * FORM LOSS
+FL75701   1.0   1.0    1.0                                      
+FL75702	  3                                            
 FL757S0   1.0   1.0    1.0                     
 FL7570F   3.75    4.75
 FL7570T   3.75    4.75
 FL757T0   2      757           
 *
-CF75700   VEL-R057-EX  DIVIDE  1  4057.0  0.0                 * Q / (3600 * A) 
+CF75700   VEL-R057-EX  DIVIDE  1  4057.0  0.0                 
 CF75710   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R053-IN          FM    TO     FM     TO
 *-------------------------------------------------------
 FL05300   HVAC-R053-IN   400   053  4.25  4.25           
-FL05301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL05302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL05303   1.0   1.0                                             * FORM LOSS
-FL053S0   1.0   1.0    1.0                     
-FL0530F   3.75    4.75
-FL0530T   3.75    4.75
+FL05301   1.0    1.0    1.0                                      
+FL05302	  3                                           
+FL053S0   1.0    1.0    1.0                     
+FL0530F   3.75   4.75
+FL0530T   3.75   4.75
 FL053T0   2      053           
 *
-CF05300   VEL-R053-IN  DIVIDE  1  3196.0  0.0                   * Q / (3600 * A) 
+CF05300   VEL-R053-IN  DIVIDE  1  3196.0  0.0                   
 CF05310   0.0  3600.0  TIME
 *
 *-------------------------------------------------------
 * HVAC-R053-EX          FM    TO     FM     TO 
 *-------------------------------------------------------
 FL75300   HVAC-R053-EX   053   401  4.25  4.25           
-FL75301   1.0   1.0    1.0                                      * A, L, FRACT OPEN, DIAM
-FL75302	  3     0    0     0                                    * HORIZ fl, ACTIVE, FROM:NO BUBBLE, TO:NO BUBBLE
-FL75303   1.0   1.0                                             * FORM LOSS
-FL753S0   1.0   1.0    1.0                     
-FL7530F   3.75    4.75
-FL7530T   3.75    4.75
+FL75301   1.0    1.0    1.0                                     
+FL75302	  3                                           
+FL753S0   1.0    1.0    1.0                     
+FL7530F   3.75   4.75
+FL7530T   3.75   4.75
 FL753T0   2      753           
 *
-CF75300   VEL-R053-EX  DIVIDE  1  6036.0  0.0                   * Q / (3600 * A) 
+CF75300   VEL-R053-EX  DIVIDE  1  6036.0  0.0                   
 CF75310   0.0  3600.0  TIME
 *
 ***
@@ -2329,10 +2273,9 @@ CF10510   1.0  0.0  TIME
 *-------------------------------------------------------
 *
 FL20000   SGS-FL200   900   904   6.2    6.2
-FL20001   0.001134  7.5   1.0    0.038    0.038              
-FL20002   3     0    0     0                                
-FL20003   0.0   0.0                                                           
-FL200S0   0.001134   7.5    0.038                               
+FL20001   0.001134  7.5   1.0              
+FL20002   3                                                         
+FL200S0   0.001134  7.5   0.038                               
 FL200T0   2  200           
 *
 CF20000   VEL-ArSS  EQUALS  1  0.0  0.1735                      * X / (3600 * 0.001134) -> MAX 0.1864495298 m/s
@@ -2343,10 +2286,9 @@ CF20010   1.0  0.0  TIME
 *-------------------------------------------------------
 *
 FL20100   SGS-FL201   903   904   6.2  6.2
-FL20101   0.43709  10.0   1.0    0.746    0.746              
-FL20102	  3     0    0     0                                
-FL20103   0.0   0.0                                                           
-FL201S0   0.43709   10.0    0.746                                        
+FL20101   0.43709  10.0   1.0             
+FL20102	  3                                                         
+FL201S0   0.43709  10.0   0.746                                        
 FL201T0   2   201                                   
 *
 CF20100   VEL-FL201  DIVIDE  2  1.0                             * (QT - QP) m3/h / (3600 * 0.43709)  m/s
@@ -2362,10 +2304,10 @@ CF20215   -1.0  0.0  CFVALU.100
 *-------------------------------------------------------
 *
 FL20200   SGS-FL202   904   905   6.7    6.7
-FL20201   0.43709  5.0   1.0    0.746    0.746              
-FL20202	  3     0    0     0                                
+FL20201   0.43709  5.0   1.0              
+FL20202	  3                          
 FL20203   0.0   0.0                                                         
-FL202S0   0.43709   5.0    0.746                                           
+FL202S0   0.43709  5.0   0.746                                           
 FL202T0   2   205                                               * QT m3/h / (3600 * 0.43709)  m/s
 *
 *-------------------------------------------------------
@@ -2373,9 +2315,8 @@ FL202T0   2   205                                               * QT m3/h / (360
 *-------------------------------------------------------
 *
 FL20300   SGS-FL203   905   016   6.7  6.7
-FL20301   0.19322  4.0   1.0  0.496   0.496                
-FL20302	  3     0    0     0                                
-FL20303   0.0   0.0                                         
+FL20301   0.19322  4.0   1.0                
+FL20302	  3                                       
 FL203S0   0.19322  4.0   0.496                                                 
 FL203T0   2   203                                                                    
 *
@@ -2388,9 +2329,8 @@ CF20315   1.0  0.0  CFVALU.103
 *-------------------------------------------------------
 *
 FL20400   SGS-FL204   016   902  6.7  6.7  
-FL20401   0.19322  4.0   1.0  0.496   0.496                
-FL20402	  3     0    0     0                                
-FL20403  0.0   0.0                                         
+FL20401   0.19322  4.0   1.0               
+FL20402	  3                                      
 FL204S0   0.19322  4.0   0.496                                                   
 FL204T0   2   203                                               * Mismo valor que SGS-FL203                                 
 *
@@ -2399,10 +2339,9 @@ FL204T0   2   203                                               * Mismo valor qu
 *-------------------------------------------------------
 *
 FL20500   SGS-FL205   902   903   6.7  6.7
-FL20501   0.43709  36.0   1.0    0.746    0.746              
-FL20502	  3     0    0     0                                
-FL20503   0.0   0.0                                                          
-FL205S0   0.43709   36.0    0.746                                          
+FL20501   0.43709  36.0   1.0              
+FL20502	  3                                                         
+FL205S0   0.43709  36.0   0.746                                          
 FL205T0   2   205                                               * QT m3/h / (3600 * 0.43709)  m/s                            
 *
 CF20500   VEL-FL205  DIVIDE  2  1.0
@@ -2414,10 +2353,9 @@ CF20515   1.0  0.0  CFVALU.102
 *-------------------------------------------------------
 *
 FL20600   SGS-FL206   903   901   5.6  5.6
-FL20601   0.001521  15.0   1.0    0.038    0.038              
-FL20602	  3     0    0     0                                
-FL20603   0.0   0.0                                                           
-FL206S0   0.001521   15.0    0.044                                       
+FL20601   0.001521  15.0   1.0              
+FL20602	  3                                                          
+FL206S0   0.001521  15.0   0.044                                       
 FL206T0   2   206                                               * QP / (3600 * 0.001521)  m/s
 *
 CF20600   VEL-FL206 DIVIDE 2 1.0
@@ -2429,10 +2367,9 @@ CF20615   1.0  0.0  CFVALU.100
 *-------------------------------------------------------
 *
 FL20700   SGS-FL207   906  904   6.2  6.2
-FL20701   0.001341 7.5   1.0    0.038    0.038              
-FL20702   3     0    0     0                                
-FL20703   0.0   0.0                                                            
-FL207S0   0.001341   7.5    0.038                                        
+FL20701   0.001341  7.5   1.0              
+FL20702   3                                                           
+FL207S0   0.001341  7.5   0.038                                        
 FL207T0   2   207                                               * (QP - RJ) m3/h / (3600 * 0.001341)  m/s
 *
 CF20700   VEL-FL207 DIVIDE 2 1.0
@@ -2448,10 +2385,9 @@ CF30015   -1.0  0.0  CFVALU.101                                 * -RJ
 *-------------------------------------------------------
 *
 FL20800   SGS-FL208   907   402   5.5  5.5
-FL20801   0.001341  7.5   1.0    0.038    0.038              
-FL20802   3     0    0     0                                
-FL20803   0.0   0.0                                                            
-FL208S0   0.001341   7.5    0.038                                         
+FL20801   0.001341  7.5   1.0               
+FL20802   3                                                           
+FL208S0   0.001341  7.5   0.038                                         
 FL208T0   2   208                                               * RJ / (3600 * 0.001341) m/s
 *
 CF20800   VEL-FL208 DIVIDE 2 1.0
@@ -2463,10 +2399,9 @@ CF20815   1.0  0.0  CFVALU.101
 *-------------------------------------------------------
 *
 FL20900   SGS-FL209   901  906   5.6  5.6
-FL20901   0.001341  7.5   1.0    0.038    0.038              
-FL20902   3     0    0     0                                
-FL20903   0.0   0.0                                                            
-FL209S0   0.001341   7.5    0.038                                      
+FL20901   0.001341  7.5   1.0            
+FL20902   3                                                           
+FL209S0   0.001341  7.5   0.038                                      
 *
 * Calculo automatico de velocidad por diferencia de presion 
 *
@@ -2475,10 +2410,9 @@ FL209S0   0.001341   7.5    0.038
 *-------------------------------------------------------
 *
 FL21000   SGS-FL210   901   907   5.5  5.5
-FL21001   0.001341  7.5   1.0    0.038    0.038              
-FL21002   3     0    0     0                                
-FL21003   0.0   0.0                                                           
-FL210S0   0.001341   7.5    0.038                                         
+FL21001   0.001341  7.5   1.0              
+FL21002   3                                                        
+FL210S0   0.001341  7.5   0.038                                         
 *
 * Calculo automatico de velocidad por diferencia de presion 
 *
@@ -2487,10 +2421,8 @@ FL210S0   0.001341   7.5    0.038
 *-------------------------------------------------------
 *
 FL21100   SGS-FL211   905   129   6.7   12.0
-FL21101   0.437087  18.0   1.0    0.373    0.373              
-FL21102   0     0    0     0                                
-FL21103   0.0   0.0                                                            
-FL211S0   0.437087   18.0    0.746                                         
+FL21101   0.437087  18.0   1.0                                                            
+FL211S0   0.437087  18.0   0.746                                         
 FL211T0   2   211                                               * Q-TIR / (3600 * 0.437087) m/s
 *
 CF21100   VEL-FL211 DIVIDE 2 1.0
@@ -2502,10 +2434,9 @@ CF21115   1.0  0.0  CFVALU.104
 *-------------------------------------------------------
 *
 FL21200   SGS-FL212   905   009   6.7  6.7
-FL21201   0.218956  18.0   1.0    0.528    0.528              
-FL21202   3     0    0     0                                
-FL21203   0.0   0.0                                                            
-FL212S0   0.218956   18.0    0.528                                         
+FL21201   0.218956  18.0   1.0              
+FL21202   3                                                          
+FL212S0   0.218956  18.0   0.528                                         
 FL212T0   2   212                                               * Q-TRAP / (3600 * 0.218956) m/s
 *
 CF21200   VEL-FL212 DIVIDE 2 1.0
@@ -2517,10 +2448,9 @@ CF21215   1.0  0.0  CFVALU.105
 *-------------------------------------------------------
 *
 FL21300   SGS-FL213   905   008   6.7  6.7
-FL21301   0.218956  18.0   1.0    0.528    0.528              
-FL21302   3     0    0     0                                
-FL21303   0.0   0.0                                                            
-FL213S0   0.218956   18.0    0.528                                         
+FL21301   0.218956  18.0   1.0              
+FL21302   3                                                            
+FL213S0   0.218956  18.0   0.528                                         
 FL213T0   2   212                                               * Q-TRAP / (3600 * 0.218956) m/s
 *
 *-------------------------------------------------------
@@ -2528,10 +2458,9 @@ FL213T0   2   212                                               * Q-TRAP / (3600
 *-------------------------------------------------------
 *
 FL21400   SGS-FL214   009   902   6.7  6.7
-FL21401   0.218956  18.0   1.0    0.528    0.528              
-FL21402   3     0    0     0                                
-FL21403   0.0   0.0                                                            
-FL214S0   0.218956   18.0    0.528                                         
+FL21401   0.218956  18.0   1.0             
+FL21402   3                                                           
+FL214S0   0.218956  18.0   0.528                                         
 FL214T0   2   212                                               * Q-TRAP / (3600 * 0.218956) m/s
 *
 *-------------------------------------------------------
@@ -2539,10 +2468,9 @@ FL214T0   2   212                                               * Q-TRAP / (3600
 *-------------------------------------------------------
 *
 FL21500   SGS-FL215   008   902   6.7  6.7
-FL21501   0.218956  18.0   1.0    0.528    0.528              
-FL21502   3     0    0     0                                
-FL21503   0.0   0.0                                                            
-FL215S0   0.218956   18.0    0.528                                         
+FL21501   0.218956  18.0   1.0              
+FL21502   3                                                            
+FL215S0   0.218956  18.0   0.528                                         
 FL215T0   2   212                                               * Q-TRAP / (3600 * 0.218956) m/s
 *
 *-------------------------------------------------------
@@ -2550,10 +2478,8 @@ FL215T0   2   212                                               * Q-TRAP / (3600
 *-------------------------------------------------------
 *
 FL21600   SGS-FL211   129   902   12.0   6.7
-FL21601   0.437087  18.0   1.0    0.373    0.373              
-FL21602   0     0    0     0                                
-FL21603   0.0   0.0                                                            
-FL216S0   0.437087   18.0    0.746                                         
+FL21601   0.437087  18.0   1.0                                                           
+FL216S0   0.437087  18.0   0.746                                         
 FL216T0   2   211                                               * Q-TIR / (3600 * 0.437087) m/s
 *
 ***
@@ -2635,646 +2561,560 @@ CF16815  1.0  0.0  CFVALU.300
 *----------------------------- L0 -----------------------------------*
 *
 FL93300   D-OUT-S02    400   086  15.75  15.75                  
-FL93301   0.06085   0.635   1.0                                  
-FL93302	  3       0     0     0                                
-FL93303   1.0     1.0                                      
-FL933S0   0.06085   0.635    0.278                             
+FL93301   0.04661   0.816    1.0                                  
+FL93302	  3                                    
+FL933S0   0.04661   0.816    0.244                             
 *
 *
 FL93000   INF-OUT-SB4    400   083  15.75  15.75              
-FL93001   0.06525   0.524   1.0                                 
-FL93002	  3       0     0     0                               
-FL93003   1.0     1.0                                   
-FL930S0   0.06525   0.524    0.288   
+FL93001   0.04745   0.722    1.0                                 
+FL93002	  3                                  
+FL930S0   0.04745   0.722    0.246   
 *
 *
 FL69300   W-OUT-AL004    400   094  4.25  4.25                  
-FL69301   0.01377   0.5   1.0                                    
-FL69302	  3       0     0     0                                 
-FL69303   1.0     1.0                             
-FL693S0   0.01377   0.5    0.132                             
+FL69301   0.01028   0.67    1.0                                    
+FL69302	  3                            
+FL693S0   0.01028   0.67    0.114                             
 *                          
 *
 FL98400   W-OUT-R026     400   026  4.25  4.25                 
-FL98401   0.20847   0.569   1.0                                    
-FL98402	  3       0     0     0                                
-FL98403   1.0     1.0                                 
-FL984S0   0.20847   0.569    0.515                             
+FL98401   0.16046   0.739    1.0                                    
+FL98402	  3                                
+FL984S0   0.16046   0.739    0.452                             
 *
 *
 FL98500   W-OUT-R011     400   011  4.25  4.25                  
-FL98501   0.020407   0.529   1.0                                    
-FL98502	  3       0     0     0                                 
-FL98503   1.0     1.0                             
-FL985S0   0.020407   0.529    0.161                             
+FL98501   0.0155   0.699    1.0                                    
+FL98502	  3                             
+FL985S0   0.0155   0.699    0.14                             
 *
 *
 FL96700   D-OUT-G2    400   081  15.75  15.75                    
-FL96701   0.11613   0.524   1.0                                     
-FL96702	  3       0     0     0                                
-FL96703   1.0     1.0                                  
-FL967S0   0.11613   0.524    0.385                             
+FL96701   0.0844   0.722    1.0                                     
+FL96702	  3                                
+FL967S0   0.0844   0.722    0.328                             
 *
 *
 FL99000   W-OUT-SB3    400   082  15.75  15.75                  
-FL99001   0.0729   0.541   1.0                                    
-FL99002	  3       0     0     0                                 
-FL99003   1.0     1.0                              
-FL990S0   0.0729   0.541    0.305                             
+FL99001   0.05352   0.737    1.0                                    
+FL99002	  3                             
+FL990S0   0.05352   0.737    0.261                             
 *
 *
 FL96000   D-OUT-S07    400   089  15.75  15.75                   
-FL96001   0.18481   0.265   1.0                                   
-FL96002	  3       0     0     0                                 
-FL96003   1.0     1.0                                     
-FL960S0   0.18481   0.265    0.485                             
+FL96001   0.11018   0.443    1.0                                   
+FL96002	  3                                    
+FL960S0   0.11018   0.443    0.375                             
 *
 *
 FL38700   W-OUT-SB1    400   080  15.75  15.75                 
-FL38701   0.10859     0.523   1.0                                  
-FL38702	  3       0     0     0                                 
-FL38703   1.0     1.0                         
-FL387S0   0.10859     0.523    0.372                            
+FL38701   0.07982     0.713    1.0                                  
+FL38702	  3                         
+FL387S0   0.07982     0.713    0.319                            
 *
 *
 FL94800   D-OUT-G6    400   010  15.75  15.75                    
-FL94801   0.11515   0.599   1.0                                   
-FL94802	  3       0     0     0                                 
-FL94803   1.0     1.0                                
-FL948S0   0.11515   0.599    0.383                             
+FL94801   0.08653   0.787    1.0                                   
+FL94802	  3                                
+FL948S0   0.08653   0.787    0.332                             
 *
 *
 FL98700   W-OUT-G3     400   023  4.25  4.25                  
-FL98701   0.01819   0.543   1.0                                   
-FL98702	  3       0     0     0                                 
-FL98703   1.0     1.0                                     
-FL987S0   0.01819   0.543    0.152                             
+FL98701   0.01382   0.713    1.0                                   
+FL98702	  3                                    
+FL987S0   0.01382   0.713    0.133                             
 *
 *
 FL96100   D-OUT-G4     400   024  4.25  4.25                 
-FL96101   0.02061   0.564   1.0                                    
-FL96102	  3       0     0     0                                 
-FL96103   1.0     1.0                                  
-FL961S0   0.02061   0.564    0.162
+FL96101   0.01584   0.734    1.0                                    
+FL96102	  3                                 
+FL961S0   0.01584   0.734    0.142
 *
 *
 FL98900   W-OUT-R005     400   005  4.25  4.25                 
-FL98901   0.0153   0.5   1.0                                    
-FL98902	  3       0     0     0                                 
-FL98903   1.0     1.0                              
-FL989S0   0.0153   0.5    0.14                            
+FL98901   0.01142   0.67    1.0                                    
+FL98902	  3                              
+FL989S0   0.01142   0.67    0.121                            
 *
 *
 FL98000   D-OUT-R007     400   007  4.25  4.25                   
-FL98001   0.02341   0.541   1.0                                  
-FL98002	  3       0     0     0                                 
-FL98003   1.0     1.0                                
-FL980S0   0.02341   0.541    0.173                             
+FL98001   0.01781   0.711    1.0                                  
+FL98002	  3                               
+FL980S0   0.01781   0.711    0.151                             
 *
 *
 FL99100   W-OUT-R014     400   014  4.25  4.25                  
-FL99101   0.01745   0.534   1.0                                   
-FL99102	  3       0     0     0                                 
-FL99103   1.0     1.0                              
-FL991S0   0.01745   0.534    0.149                             
+FL99101   0.01324   0.704    1.0                                   
+FL99102	  3                              
+FL991S0   0.01324   0.704    0.13                             
 *
 *
 FL99200   W-OUT-G5     400   002  4.25  4.25                  
-FL99201   0.07211   0.579   1.0                                     
-FL99202	  3       0     0     0                                 
-FL99203   1.0     1.0                                    
-FL992S0   0.07211   0.579    0.303                             
+FL99201   0.05525   0.749    1.0                                     
+FL99202	  3                                    
+FL992S0   0.05525   0.749    0.2653                             
 *
 *
 FL99800   W-OUT-R056     400   056  4.25  4.25                  
-FL99801   0.00528   0.601   1.0                                 
-FL99802	  3       0     0     0                                
-FL99803   1.0     1.0                                          
-FL998S0   0.00528   0.601    0.082                             
+FL99801   0.00411   0.771    1.0                                 
+FL99802	  3                                          
+FL998S0   0.00411   0.771    0.072                             
 *
 *
 FL99900   W-OUT-R057     400   057  3.75  3.75                  
-FL99901   0.00442   1.495   1.0                                   
-FL99902	  3       0     0     0                              
-FL99903   1.0     1.0                                      
-FL999S0   0.00442   1.495    0.075                             
+FL99901   0.00397   1.665    1.0                                   
+FL99902	  3                                     
+FL999S0   0.00397   1.665    0.071                             
 *
 *
 FL38600   W-OUT-R053     400   053  3.75  3.75                  
-FL38601   0.00955   1.5   1.0                                  
-FL38602	  3       0     0     0                                 
-FL38603   1.0     1.0                                    
-FL386S0   0.00955   1.5    0.11                             
+FL38601   0.00858   1.67    1.0                                  
+FL38602	  3                                    
+FL386S0   0.00858   1.67    0.105                             
 *
 *
 FL94000   D-OUT-R001     400   001  4.25  4.25                    
-FL94001   0.04628   0.538   1.0                                    
-FL94002	  3       0     0     0                             
-FL94003   1.0     1.0                                   
-FL940S0   0.04628   0.538    0.243                             
+FL94001   0.0655   0.754    1.0                                    
+FL94002	  3                                  
+FL940S0   0.0655   0.754    0.289                             
 *
 *
 FL40000   W-OUT-G1     400   091  4.25  4.25                  
-FL40001   0.00514   0.8   1.0                                  
-FL40002	  3       0     0     0                              
-FL40003   1.0     1.0                                   
-FL400S0   0.00514   0.8    0.081                             
+FL40001   0.00494   0.8    1.0                                  
+FL40002	  3                                  
+FL400S0   0.00494   0.8    0.079                             
 *
 *
 FL38800   W-OUT-G1     400   006  4.25  4.25                  
-FL38801   0.02332   0.524   1.0                                  
-FL38802	  3       0     0     0                              
-FL38803   1.0     1.0                                   
-FL388S0   0.02332   0.524    0.172                             
+FL38801   0.02782   1.143    1.0                                  
+FL38802	  3                                   
+FL388S0   0.02782   1.143    0.188                             
 *
 ***
 ************************** INDOORS ******************************
 *
-*---------------------------- L0 -------------------------------*
+*--------------------------- L0 --------------------------------*
 *
 FL93100   D-SB4-S02     083   086  15.75   15.75             
-FL93101   0.05519   0.383  1.0                                     
-FL93102   3     0     0     0                                 
-FL93103   1.0   1.0                                   
+FL93101   0.05519   0.383   1.0                                     
+FL93102   3                                   
 FL931S0   0.05519   0.383   0.265                             
 *
 *
 FL93200   D-AL004-S02     094   086  4.25   4.25              
-FL93201   0.01262   0.25  1.0                                     
-FL93202   3     0     0     0                                  
-FL93203   1.0   1.0                                         
+FL93201   0.01262   0.25   1.0                                     
+FL93202   3                                         
 FL932S0   0.01262   0.25   0.127                            
 *
 *
 FL93400   D-SB4-AL004     083   094  4.25   4.25                
-FL93401   0.01966   0.325  1.0                                    
-FL93402   3     0     0     0                                 
-FL93403   1.0   1.0                                    
+FL93401   0.01966   0.325   1.0                                    
+FL93402   3                                    
 FL934S0   0.01966   0.325   0.158                             
 *
 *
 FL93500   D-AL004-R026     094   026   4.25   4.25                
 FL93501   0.0618   0.287   1.0                                   
-FL93502   3     0     0     0                                   
-FL93503   1.0   1.0                                     
+FL93502   3                                    
 FL935S0   0.0618   0.287   0.281                            
 *
 *
 FL39100   W-SB4-R026      083   026   4.25    4.25            
 FL39101   0.01753    0.372   1.0                                  
-FL39102   3     0     0     0                                   
-FL39103   1.0   1.0                                         
+FL39102   3                                        
 FL391S0   0.01753    0.372   0.149                             
 *
 *
 FL39200   W-R026-R011      026   011   4.25    4.25            
 FL39201   0.07913    0.341   1.0                                  
-FL39202   3     0     0     0                                  
-FL39203   1.0   1.0                                       
+FL39202   3                                      
 FL392S0   0.07913    0.341   0.317                             
 *
 *
 FL39300   W-R026-G1       026   006   4.25    4.25             
 FL39301   0.01703    0.532    1.0                                   
-FL39302   3     0     0     0                                  
-FL39303   1.0   1.0                                          
+FL39302   3                                         
 FL393S0   0.01703    0.532    0.147                             
 *
 *
 FL93800   D-G1-AL001     006   091   4.25   4.25                
-FL93801   0.02863   0.373  1.0                                    
-FL93802   3     0     0     0                                  
-FL93803   1.0   1.0                                  
+FL93801   0.02863   0.373   1.0                                    
+FL93802   3                                 
 FL938S0   0.02863   0.373   0.191                             
 *
 *
 FL93900   D-AL001-R001     091   001   4.25   4.25                
-FL93901   0.00683   0.5   1.0                                    
-FL93902   3     0     0     0                                  
-FL93903   1.0   1.0                                          
+FL93901   0.00683   0.5    1.0                                    
+FL93902   3                                         
 FL939S0   0.00683   0.5    0.093                             
 *
 *
 FL49700   W-G1-R001       006   001   4.25    4.25            
 FL49701   0.00942    0.542    1.0                                  
-FL49702   3     0     0     0                                  
-FL49703   1.0   1.0                              
+FL49702   3                            
 FL497S0   0.00942    0.542    0.109                             
 *
 *
 FL39500   W-R011-G2      011   081   4.25    4.25            
 FL39501   0.01123    0.581    1.0                                  
-FL39502   3     0     0     0                                  
-FL39503   1.0   1.0                                          
+FL39502   3                                        
 FL395S0   0.01123    0.581    0.12                             
 *
 *
 FL97100   D-R011-G4      011   024   4.25    4.25               
-FL97101   0.01793   0.53  1.0                                    
-FL97102   3     0     0     0                                  
-FL97103   1.0   1.0                        
+FL97101   0.01793   0.53   1.0                                    
+FL97102   3                       
 FL971S0   0.01793   0.53   0.151                             
 *
 *
 FL93600   D-R026-G4     026   024   4.25   4.25                 
-FL93601   0.02125   0.557   1.0                                     
-FL93602   3     0     0     0                                  
-FL93603   1.0   1.0                                             
+FL93601   0.02125   0.557    1.0                                     
+FL93602   3                                            
 FL936S0   0.02125   0.557    0.164                             
 *
 *
 FL93700   D-G1-G4     006   024   4.25   4.25                 
-FL93701   0.01126   0.516   1.0                                
-FL93702   3     0     0     0                                
-FL93703   1.0   1.0                               
+FL93701   0.01126   0.516    1.0                                
+FL93702   3                              
 FL937S0   0.01126   0.516    0.12                             
 *
 *
 FL94100   D-AL001-G4     091   024   4.25   4.25
-FL94101   0.00565   0.559   1.0                                    
-FL94102   3     0     0     0                                 
-FL94103   1.0   1.0                                    
+FL94101   0.00565   0.559    1.0                                    
+FL94102   3                                  
 FL941S0   0.00565   0.559    0.085                             
 *
 *
 FL49300   W-SB1-R001      080   001   4.25    4.25            
 FL49301   0.01553    0.561    1.0                                  
-FL49302   3     0     0     0                              
-FL49303   1.0   1.0                                           
+FL49302   3                                          
 FL493S0   0.01553    0.561    0.141                             
 *
 *
 FL49400   W-R001-G4       001   024   4.25    4.25           
 FL49401   0.01531    0.512    1.0                                
-FL49402   3     0     0     0                                   
-FL49403   1.0   1.0                             
+FL49402   3                            
 FL494S0   0.01531    0.512    0.14                             
 *
 *
 FL94200   D-SB1-G4     080   024   4.25    4.25        
-FL94201   0.01948   0.304  1.0                                 
-FL94202   3     0     0     0                                  
-FL94203   1.0   1.0                                         
+FL94201   0.01948   0.304   1.0                                 
+FL94202   3                                       
 FL942S0   0.01948   0.304   0.158                             
 *
 *
 FL49200   W-R053-SB1      053   080   3.75    3.75            
 FL49201   0.00413    1.5    1.0                                  
-FL49202   3     0     0     0                                 
-FL49203   1.0   1.0                                      
+FL49202   3                                    
 FL492S0   0.00413    1.5    0.072                             
 *
 *
 FL94400   D-AL055-G4     095   024   4.25    4.25   
-FL94401   0.01184   0.25  1.0                                    
-FL94402   3     0     0     0                               
-FL94403   1.0   1.0                                      
+FL94401   0.01184   0.25   1.0                                    
+FL94402   3                                     
 FL944S0   0.01184   0.25   0.123                             
 *
 *
 FL96300   D-R054-G4      054   024   4.25    4.25 
-FL96301   0.01001   0.25  1.0                                    
-FL96302   3     0     0     0                                   
-FL96303   1.0   1.0                                    
+FL96301   0.01001   0.25   1.0                                    
+FL96302   3                                   
 FL963S0   0.01001   0.25   0.113                             
 *
 *
 FL97200   D-R018-G4       018   024   3.75    3.75              
-FL97201   0.02718    0.355  1.0                                   
-FL97202   3     0     0     0                                   
-FL97203   1.0   1.0                                
+FL97201   0.02718    0.355   1.0                                   
+FL97202   3                               
 FL972S0   0.02718    0.355   0.186                             
 *
 *
 FL97600   D-AL016-G4      096   024    3.75    3.75              
 FL97601   0.00802    0.25   1.0                                  
-FL97602   3     0     0     0                                
-FL97603   1.0   1.0                           
+FL97602   3                          
 FL976S0   0.00802    0.25   0.101                             
 *
 *
 FL97700   D-R015-G4      015   024    4.75    4.75
 FL97701   0.09453    0.312   1.0                                  
-FL97702   3     0     0     0                                   
-FL97703   1.0   1.0                                            
+FL97702   3                                            
 FL977S0   0.09453    0.312   0.347                             
 *
 *
 FL69000   W-R016-G4       016   024   3.6     3.6             
 FL69001   0.01051    1.0    1.0                                  
-FL69002   3     0     0     0                                 
-FL69003   1.0   1.0                                           
+FL69002   3                                          
 FL690S0   0.01051    1.0    0.116                             
 *
 *
 FL96800   D-G2-G4     081   024   4.25    4.25
-FL96801   0.03613   0.324  1.0                                    
-FL96802   3     0     0     0                                  
-FL96803   1.0   1.0                             
+FL96801   0.03613   0.324   1.0                                    
+FL96802   3                             
 FL968S0   0.03613   0.324   0.214                             
 *
 *
 FL39700   D-G2-G3      081   023   4.25    4.25           
 FL39701   0.01689    0.376   1.0                              
-FL39702   3     0     0     0                                  
-FL39703   1.0   1.0                                    
+FL39702   3                                  
 FL397S0   0.01689    0.376   0.147                             
 *
 *
 FL96500   D-G3-G4      023   024   4.25    4.25              
-FL96501   0.0531   0.293  1.0                                    
-FL96502   3     0     0     0                                   
-FL96503   1.0   1.0                          
+FL96501   0.0531   0.293   1.0                                    
+FL96502   3                         
 FL965S0   0.0531   0.293   0.26                             
 *
 *
 FL97900   D-R005-G4       005   024   4.25    4.25
-FL97901   0.04455   0.31  1.0                                     
-FL97902   3     0     0     0                                   
-FL97903   1.0   1.0                                
+FL97901   0.04455   0.31   1.0                                     
+FL97902   3                             
 FL979S0   0.04455   0.31   0.238                             
 *
 *
 FL95800   D-AL002-SB3      092   082   4.25    4.25
-FL95801   0.01611   0.399  1.0                                    
-FL95802   3     0     0     0                                  
-FL95803   1.0   1.0                                   
+FL95801   0.01611   0.399   1.0                                    
+FL95802   3                                
 FL958S0   0.01611   0.399   0.143                             
 *
 *
 FL95900   D-AL002-G4      092   024   4.25    4.25             
-FL95901   0.01744   0.25  1.0                                    
-FL95902   3     0     0     0                                   
-FL95903   1.0   1.0                                      
+FL95901   0.01744   0.25   1.0                                    
+FL95902   3                                     
 FL959S0   0.01744   0.25   0.149                             
 *
 *
 FL47800   D-R005-SB3      005   082   4.25    4.25            
 FL47801   0.01755    0.372   1.0                                   
-FL47802   3     0     0     0                                   
-FL47803   1.0   1.0                                     
+FL47802   3                                    
 FL478S0   0.01755    0.372   0.149                             
+*
+*
+FL95700   D-R007-AL002      007   092   4.25    4.25              
+FL95701   0.01744   0.25   1.0                                    
+FL95702   3                                   
+FL957S0   0.01744   0.25   0.149                             
 *
 *
 FL47900   D-SB3-R007      082   007   4.25    4.25            
 FL47901   0.01755    0.372   1.0                               
-FL47902   3     0     0     0                              
-FL47903   1.0   1.0                                            
+FL47902   3                                          
 FL479S0   0.01755    0.372   0.149                              
-*
-*
-FL95700   D-R007-AL002      007   092   4.25    4.25              
-FL95701   0.01744   0.25  1.0                                    
-FL95702   3     0     0     0                                   
-FL95703   1.0   1.0                                    
-FL957S0   0.01744   0.25   0.149                             
 *
 *
 FL49800   D-R007-S07      007   089   4.25    4.25         
 FL49801   0.01099    0.536    1.0                                  
-FL49802   3     0     0     0                                   
-FL49803   1.0   1.0                                 
+FL49802   3                                
 FL498S0   0.01099    0.536    0.118                             
 *
 *
 FL95600   D-R014-G4      014   024   4.25    4.25    
-FL95601   0.02828   0.305  1.0                                    
-FL95602   3     0     0     0                                   
-FL95603   1.0   1.0                                         
+FL95601   0.02828   0.305   1.0                                    
+FL95602   3                                         
 FL956S0   0.02828   0.305   0.19                             
 *
 *
 FL48000   D-R007-R014       007   014   4.25    4.25            
 FL48001   0.0279    0.289   1.0                                 
-FL48002   3     0     0     0                                   
-FL48003   1.0   1.0                              
+FL48002   3                             
 FL480S0   0.0279    0.289   0.188                             
 *
 *
 FL48100   D-AL002-R014      092   014   4.25    4.25            
 FL48101   0.02499    0.357   1.0                                  
-FL48102   3     0     0     0                                  
-FL48103   1.0   1.0                                      
+FL48102   3                                      
 FL481S0   0.02499    0.357   0.178                             
 *
 *
 FL48200   D-R014-G5       014   002   4.25    4.25            
 FL48201   0.05164    0.333   1.0                                 
-FL48202   3     0     0     0                                  
-FL48203   1.0   1.0                                     
+FL48202   3                                    
 FL482S0   0.05164    0.333   0.256                             
 *
 *
 FL48800   D-G5-G6      002   010   4.25    4.25            
 FL48801   0.03054    0.277   1.0                                  
-FL48802   3     0     0     0                                  
-FL48803   1.0   1.0                                           
+FL48802   3                                         
 FL488S0   0.03054    0.277   0.197                             
 *
 *
 FL94900   D-G5-G4      002   024   4.25    4.25  
-FL94901   0.08107   0.384  1.0                                   
-FL94902   3     0     0     0                                   
-FL94903   1.0   1.0                              
+FL94901   0.08107   0.384   1.0                                   
+FL94902   3                             
 FL949S0   0.08107   0.384   0.321                             
 *
 *
 FL94700   D-G6-G4     010   024    4.25    4.25    
-FL94701   0.03547   0.25  1.0                                    
-FL94702   3     0     0     0                                 
-FL94703   1.0   1.0                                  
+FL94701   0.03547   0.25   1.0                                    
+FL94702   3                                  
 FL947S0   0.03547   0.25   0.213                             
 *
 *
 FL96400   D-R056-G4      056   024   4.25    4.25
-FL96401   0.0139   0.25  1.0                                    
-FL96402   3     0     0     0                                   
-FL96403   1.0   1.0                             
+FL96401   0.0139   0.25   1.0                                    
+FL96402   3                           
 FL964S0   0.0139   0.25   0.133                             
 *
 *
 FL49000   D-G6-R056       010   056   4.25    4.25            
 FL49001   0.01268    0.327   1.0                                  
-FL49002   3     0     0     0                              
-FL49003   1.0   1.0                                       
+FL49002   3                                      
 FL490S0   0.01268    0.327   0.127                             
 *
 *
 FL97300   D-R0091-G4      008   024   4.0    4.0               
 FL97301   0.00964    1.0   1.0                                   
-FL97302   3     0     0     0                                  
-FL97303   1.0   1.0                                      
+FL97302   3                                     
 FL973S0   0.00964    1.0   0.111                             
 *
 *
 FL97400   D-R0092-G4      009   024   4.25    4.25              
 FL97401   0.02684    0.53   1.0                                   
-FL97402   3     0     0     0                                 
-FL97403   1.0   1.0                                   
+FL97402   3                                 
 FL974S0   0.02684    0.53   0.185                             
 *
 *
 FL59700   D-R017-G4       017   024   3.75    3.75            
 FL59701   0.00795    0.25   1.0                                  
-FL59702   3     0     0     0                              
-FL59703   1.0   1.0                                       
+FL59702   3                                      
 FL597S0   0.00795    0.25   0.101                             
 *
 *
 FL68800   D-R058-G4       058   024   3.75    3.75            
 FL68801   0.004    1.5    1.0                                 
-FL68802   3     0     0     0                                   
-FL68803   1.0   1.0                                             
+FL68802   3                                            
 FL688S0   0.004    1.5    0.071                             
 *
 *
 FL94300   D-R053-AL055     053   095   3.75    3.75               
-FL94301   0.0051   1.5   1.0                                    
-FL94302   3     0     0     0                                
-FL94303   1.0   1.0                                     
+FL94301   0.0051   1.5    1.0                                    
+FL94302   3                                    
 FL943S0   0.0051   1.5    0.081                             
 *
 *
 FL49100   D-R057-R053       057   053   3.75    3.75            
 FL49101   0.00535    1.0    1.0                                  
-FL49102   3     0     0     0                                 
-FL49103   1.0   1.0                                         
+FL49102   3                                         
 FL491S0   0.00535    1.0    0.083                             
 *
 *
 FL68900   D-R054-R053       054   053   3.75    3.75            
 FL68901   0.00373    1.5    1.0                                  
-FL68902   3     0     0     0                                   
-FL68903   1.0   1.0                                            
+FL68902   3                                           
 FL689S0   0.00373    1.5    0.069                             
 *
 *
 FL94500   D-R058-AL055     058   095   3.75    3.75 
-FL94501   0.00304   1.5   1.0                                    
-FL94502   3     0     0     0                                  
-FL94503   1.0   1.0                                      
+FL94501   0.00304   1.5    1.0                                    
+FL94502   3                                    
 FL945S0   0.00304   1.5    0.062                             
 *
 *
 FL68600   D-R018-AL055      018   095   3.75    3.75           
 FL68601   0.04344    0.351   1.0                                 
-FL68602   3     0     0     0                                  
-FL68603   1.0   1.0                                            
+FL68602   3                                          
 FL686S0   0.04344    0.351   0.235                             
 *
 *
 FL94600   D-R057-R058      057   058   3.75    3.75
-FL94601   0.00325   1.5   1.0                                    
-FL94602   3     0     0     0                                 
-FL94603   1.0   1.0                                    
+FL94601   0.00325   1.5    1.0                                    
+FL94602   3                                  
 FL946S0   0.00325   1.5    0.064                             
 *
 *
 FL69100   D-R057-R056       057   056   3.75    3.75            
 FL69101   0.00425    1.5    1.0                                  
-FL69102   3     0     0     0                                
-FL69103   1.0   1.0                                         
+FL69102   3                                         
 FL691S0   0.00425    1.5    0.074                             
 *
 *
 FL69200   D-R058-R056       058   056   3.75    3.75           
-FL69201   0.0149    1.5    1.0                                  
-FL69202   3     0     0     0                                  
-FL69203   1.0   1.0                                         
+FL69201   0.0149    1.5     1.0                                  
+FL69202   3                                        
 FL692S0   0.00149    1.5    0.044                             
 *
 *
 FL98100   D-R017-R018      017   018    3.75    3.75 
 FL98101   0.02715    0.25   1.0                                  
-FL98102   3     0     0     0                                  
-FL98103   1.0   1.0                                          
+FL98102   3                                         
 FL981S0   0.02715    0.25   0.186                             
 *
 *
 FL68500   D-R018-R058       018   058   3.75    3.75            
 FL68501   0.0065    1.5    1.0                                  
-FL68502   3     0     0     0                                 
-FL68503   1.0   1.0                                             
+FL68502   3                                            
 FL685S0   0.0065    1.5    0.091                             
 *
 *
 FL59400   D-R016-R018       016   018   3.6     3.6            
 FL59401   0.01703    1.0    1.0                                 
-FL59402   3     0     0     0                                   
-FL59403   1.0   1.0                            
+FL59402   3                           
 FL594S0   0.01703    1.0    0.147                             
 *
 *
 FL59500   D-R018-R0091      018   008   3.75    3.75          
 FL59501   0.00128    2.111    1.0                                 
-FL59502   3     0     0     0                                   
-FL59503   1.0   1.0                                       
+FL59502   3                                       
 FL595S0   0.00128    2.111    0.04                             
 *
 *
 FL59600   D-R0091-R017      008   017   3.75    3.75          
 FL59601   0.00495    1.0    1.0                                
-FL59602   3     0     0     0                             
-FL59603   1.0   1.0                                      
+FL59602   3                                     
 FL596S0   0.00495    1.0    0.079                             
 *
 *
 FL68700   D-AL055-R054      095   054   4.25    4.25            
 FL68701   0.04056    0.25   1.0                                 
-FL68702   3     0     0     0                                 
-FL68703   1.0   1.0                                           
+FL68702   3                                          
 FL687S0   0.04056    0.25   0.227                             
 *
 *
 FL97500   D-R016-AL016      016   096   3.6    3.6
 FL97501   0.00741    1.0   1.0                                   
-FL97502   3     0     0     0                                   
-FL97503   1.0   1.0                                    
+FL97502   3                                  
 FL975S0   0.00741    1.0   0.097                             
 *
 *
 FL49900   D-R015-AL016      015   096   3.75    3.75            
 FL49901   0.00596    1.0    1.0                                  
-FL49902   3     0     0     0                                  
-FL49903   1.0   1.0                               
+FL49902   3                               
 FL499S0   0.00596    1.0    0.087                             
 *
 *
 FL50000   D-R015-R016       015   016   3.6     3.6             
 FL50001   0.01457    1.0    1.0                                  
-FL50002   3     0     0     0                                   
-FL50003   1.0   1.0                                        
+FL50002   3                                       
 FL500S0   0.01457    1.0    0.136                             
 *
 *
 FL59100   D-R015-R0092      015   009   4.25    4.25            
 FL59101   0.00476    1.957    1.0                                  
-FL59102   3     0     0     0                                   
-FL59103   1.0   1.0                                      
+FL59102   3                                     
 FL591S0   0.00476    1.957    0.078                             
 *
 *
 FL59200   D-R0092-R016      009   016   3.6     3.6             
 FL59201   0.00404    1.179    1.0                                  
-FL59202   3     0     0     0                                   
-FL59203   1.0   1.0                                    
+FL59202   3                                   
 FL592S0   0.00404    1.179    0.072                             
 *
 *
 FL59300   D-R016-R0091      016   008   3.6     3.6             
 FL59301   0.00716    1.446    1.0                                  
-FL59302   3     0     0     0                                   
-FL59303   1.0   1.0                                  
+FL59302   3                              
 FL593S0   0.00716    1.446    0.095                             
 *
 *
 ************************************************* VERTICAL ******************************************************
 *
-FL59300   D-R016-R0091      016   008   3.6     3.6             
-FL59301   0.00716    1.446    1.0                                  
-FL59302   3     0     0     0                                   
-FL59303   1.0   1.0                                  
-FL593S0   0.00716    1.446    0.095                             
+FL00300   R-AL004-R104      094   104   8.5   9.0             
+FL00301   0.02349    0.5    1.0                                  
+FL003S0   0.02349    0.5    0.173                             
+*
+*
+FL00300   R-R026-R105       026   105   8.5   9.0             
+FL00301   0.02349    0.5    1.0                                  
+FL003S0   0.02349    0.5    0.173                             
+*
 *
 ***
 . * End
