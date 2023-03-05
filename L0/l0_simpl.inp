@@ -16,7 +16,7 @@ stopf     l0s.stp
 *
 crtout 
 tstart     00.0
-DTTIME     0.1      * initial time step
+DTTIME     10.0      * initial time step
 *
 *
 ****************************************************************************************************************************************
@@ -3409,7 +3409,7 @@ CYMESF           100000    100000                   * FRECUENCIA TERMINAL / .OUT
 *
 RESTART          -1              
 *
-TEND             259200.0                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             172800.0                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000
