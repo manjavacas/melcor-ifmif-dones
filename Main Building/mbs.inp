@@ -3058,7 +3058,7 @@ CV556B2   8.1        0.15125                        * 1100 x 550 x 250
 * CV557 - CVASL0-17 - Connection Volume Air Supply L0 17
 *-------------------------------------------------------                                                                
 CV55700   CVASL0-17  2  2  12                                                       
-CV55755801   0   0                                    
+CV55701   0   0                                    
 CV557A0   3                                                                                         
 CV557A1   PVOL    101325.0                                                                                                  
 CV557A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                  
@@ -3075,19 +3075,19 @@ CV557B2   8.1        0.021875                       * 350 x 250 x 250
 *-------------------------------------------------------
 * CV558- CVASL0-18 - Connection Volume Air Supply L0 18
 *-------------------------------------------------------                                                                
-CV5580   CVASL0-18  2  2  12                                                         
-CV5581   0   0                                    
-CV5580   3                                                                                         
-CV5581   PVOL    101325.0                                                                                                   
-CV5583   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
-CV5585   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV5586   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV5588   MLFR.8  0.01                              * Filled with air (Ar)
+CV55800   CVASL0-18  2  2  12                                                         
+CV55801   0   0                                    
+CV558A0   3                                                                                         
+CV558A1   PVOL    101325.0                                                                                                   
+CV558A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                                   
+CV558A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV558A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV558A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV5581   7.65       0.0                                                         
-CV5582   8.1        0.084375                       * 750 x 450 x 250
+CV558B1   7.65       0.0                                                         
+CV558B2   8.1        0.084375                       * 750 x 450 x 250
 *
 ***    
 *-------------------------------------------------------
