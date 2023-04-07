@@ -3537,21 +3537,21 @@ CV566B2   8.1          0.463125                     * 1950 x 950 x 250
 *
 *** 
 *-------------------------------------------------------
-* CV579 - CVASL0-27 - Connection Volume Air Supply L0 27
+* CV567 - CVASL0-27 - Connection Volume Air Supply L0 27
 *-------------------------------------------------------                                                                
-CV57900   CVASL0-27  2  2  13                                                       
-CV57901   0   0                                    
-CV579A0   3                                                                                         
-CV579A1   PVOL    101325.0                                                                                                    
-CV579A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                              
-CV579A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV579A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV579A8   MLFR.8  0.01                              * Filled with air (Ar)
+CV56700   CVASL0-27  2  2  13                                                       
+CV56701   0   0                                    
+CV567A0   3                                                                                         
+CV567A1   PVOL    101325.0                                                                                                    
+CV567A3   TATM    287.15    RHUM  0.6               * 14.0 deg C                              
+CV567A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV567A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV567A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV579B1   6.75         0.0                                                         
-CV579B2   8.1          0.658125                     * 1950 x 1350 x 250
+CV567B1   6.75         0.0                                                         
+CV567B2   8.1          0.658125                     * 1950 x 1350 x 250
 *
 *** 
 *-------------------------------------------------------
