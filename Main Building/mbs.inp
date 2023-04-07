@@ -7507,8 +7507,8 @@ CV633A8   MLFR.8  0.01                              * Filled with air (Ar)
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                               
-CV633B1   30.35         0.0                                                         
-CV633B2   31.0          0.6525                      * 1800 X 950 (+500) X 250
+CV633B1   30.05         0.0                                                         
+CV633B2   31.5          0.6525                      * 1800 X 950 (+500) X 250
 ***
 *-------------------------------------------------------
 * CV634 - CVASL3 - 21 - Connection Volume Air Supply L3 21
