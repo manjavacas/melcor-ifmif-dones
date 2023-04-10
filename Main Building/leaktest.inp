@@ -321,7 +321,7 @@ MESSAGEFILE  leaktest_cor.mes
 *
 CPULEFT          200.
 CPULIM           200000.    * max time running     
-CYMESF           55    60    
+CYMESF           10000    10000     * FRECUENCIA TERMINAL / .OUT     
 RESTART          -1        
 TEND             3600      * simulation time (seconds)
 SOFTDTMIN  .1 1000
