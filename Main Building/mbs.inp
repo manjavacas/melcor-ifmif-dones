@@ -1123,7 +1123,7 @@ CV129B2   14.5     529.0                            * 209.4 m3 (2PNSLP)
 *                                                             
 * CV110 - R110 + R113 + R114 - Accelerator Vault + Beam transport room + Radiation isolation room (C2 - C3 en 2PNSLP)                                                                   
 *                                                              
-CV11000   R110  2  2  2                                                            
+CV11000   G7  2  2  2                                                            
 CV11001   0   0		                            
 CV110A0   3                                                                                         
 CV110A1   PVOL    101235.0                          * 101325-90Pa                                                                          
