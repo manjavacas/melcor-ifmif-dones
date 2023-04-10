@@ -1,0 +1,236 @@
+****************************************************************************************************************************************
+****************************************************************************************************************************************
+*                                                  Main Building MELCOR model (LEAK TEST)                                              *
+****************************************************************************************************************************************
+****************************************************************************************************************************************
+*
+*EOR* MELGEN
+*
+title     leaktestR0092
+jobid     leaktestR0092
+*
+restartf  leaktestR0092.RST
+outputf   leaktestR0092_gen.out
+diagf     leaktestR0092_gen.dia
+stopf     leaktestR0092.stp
+*
+crtout 
+tstart    0.0
+DTTIME    0.1      * initial time step
+*
+*
+****************************************************************************************************************************************
+*         										    NCG (Non Condensible Gases) INPUT			    		  						   *
+****************************************************************************************************************************************
+*
+NCG001    N2    4                                   * MATERIAL 4 IS N2
+NCG002    O2    5                                   * MATERIAL 5 IS O2
+NCG333    H2    6                                   * MATERIAL 6 IS H2
+NCG444    HE    7                                   * MATERIAL 7 IS HE
+NCG555    AR    8                                   * MATERIAL 8 IS AR
+*
+****************************************************************************************************************************************
+*        												CV (Control Volumes) INPUT									                   *
+****************************************************************************************************************************************
+*
+************************************************************************************
+*                                                               
+*               CV016 - R016 - Lithium loop cell (C3 - C4 en 2PNSLP)                                                                    
+*                                                                
+CV01600   R016  2  0  1                                                            
+CV01601   0   -1		                              
+CV016A0   3                                                                                         
+CV016A1   PVOL  101195.0                            * 101325Pa-130Pa 
+CV016A2   TATM  290.95  RHUM  0.0                   
+CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV016B1   0.0      0.0                                                            
+CV016B2   7.2      2495.0                           * 2658.7 m3 (2PNSLP) ; Height = Volume / Floor Area
+*** 
+************************************************************************************
+*                                                                 
+*                 CV024 - Group 4 - R024 C002 R005 AL002 (C2)                                                          
+*                                                                
+CV02400   G4  2  2  1                                                         
+CV02401   0   -1					                 
+CV024A0   3                                                                                         
+CV024A1   PVOL    101235.0                          * 101325-90Pa                                                                 
+CV024A3   TATM    295.15    RHUM 0.6                                               
+CV024A5   MLFR.4  0.78                              * Filled with air (N2)
+CV024A6   MLFR.5  0.21                              * Filled with air (O2)
+CV024A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV024B1   0.0      0.0                                                            
+CV024B2   8.5      15407.3                          * 13265.3 m3 (2PNSLP)      
+***
+*
+************************************************************************************
+*                                                                
+*               CV018 - R018 - Ar purification Equipment (C2)                                                          
+*                                                                
+CV01800   R018  2  2  1                                                           
+CV01801   0   -1					                 
+CV018A0   3                                                                                         
+CV018A1   PVOL    101235.0                          * 101325-90Pa                                                                 
+CV018A3   TATM    293.15    RHUM 0.6                                              
+CV018A5   MLFR.4  0.78                              * Filled with air (N2)
+CV018A6   MLFR.5  0.21                              * Filled with air (O2)
+CV018A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV018B1   0.0      0.0                                                            
+CV018B2   7.5      3074.0                           * 2528.3 m3 (2PNSLP)      
+***
+*
+************************************************************************************
+*                                                                 
+*       CV008 - R009-1 - Cold Traps Cell (C2 - por confirmar en 2PNSLP)                                                                    
+*                                                                
+CV00800   R009-1  2  0  1                                                         
+CV00801   0   0		                               
+CV008A0   3                                                                                         
+CV008A1   PVOL  100195.0                            * -1000Pa 
+CV008A2   TATM  293.15  RHUM  0.6                  
+CV008A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
+CV008A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
+CV008A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%                         
+***
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV008B1   0.0      0.0                                                            
+CV008B2   8.0      557.0                            * 609.0 m3 (2PNSLP) ; Height = Volume / Floor Area
+***
+*
+************************************************************************************
+*                                                                
+*                CV017 - R017 - Li Sampling Cell (C2 - C4 en 2PNSLP)                                                          
+*                                                              
+CV01700   R017  2  2  1                                                           
+CV01701   0   -1					                 
+CV017A0   3                                                                                         
+CV017A1   PVOL    101235.0                          * 101325-90Pa                                                                 
+CV017A3   TATM    290.15    RHUM 0.6                                                
+CV017A5   MLFR.4  0.78                              * Filled with air (N2)
+CV017A6   MLFR.5  0.21                              * Filled with air (O2)
+CV017A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV017B1   0.0      0.0                                                            
+CV017B2   7.5      228.0                            * 157.0 m3 (2PNSLP)      
+***
+*
+************************************************************************************
+*                                                               
+*               CV144 - Group 9 - R144 R145-1 R145-2 R149 R163 (C2)                                                                   
+*                                                               
+CV14400   G9  2  2  2                                                               
+CV14401   0   -1	                               
+CV144A0   3                                                                                         
+CV144A1   PVOL    101235.0                          * 101325-90Pa                                                                          
+CV144A3   TATM    295.15    RHUM  0.6                                                   
+CV144A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV144A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV144A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV144B1   9.0      0.0                                                         
+CV144B2   17.5     11568.0                           * 1937.8 m3 sin R149 (2PNSLP)           
+***
+*
+************************************************************************************
+*                                                               
+*               CV160 - R160 - Complementary experiments hall (C3)                                                                   
+*                                                                
+CV16000   R160  2  2  2                             
+CV16001   0   -1	                                
+CV160A0   3                                                                                         
+CV160A1   PVOL    101195.0                          * 101325-130Pa                                                                          
+CV160A3   TATM    293.15    RHUM  0.6                                                    
+CV160A5   MLFR.4  0.78                              * FILLED WITH air (N2)
+CV160A6   MLFR.5  0.21                              * FILLED WITH air (O2)
+CV160A8   MLFR.8  0.01                              * Filled with air (Ar)
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV160B1   9.0      0.0                                                         
+CV160B2   17.0     3030.0                           * 2357.0 m3 (2PNSLP)     
+***
+*
+*************************************************************************************************
+*
+FL64700   D-R0091-G4      008   024   4.0    4.0               
+FL64701   2.286E-5    1.0   1.0                                   
+FL64702   3                                     
+FL647S0   2.286E-5    1.0   0.0054                             
+*
+*
+FL51100   D-R018-R0091      018   008   3.75    3.75          
+FL51101   4.5E-6    1.0    1.0                                 
+FL51102   3                                       
+FL511S0   4.5E-6    1.0    0.00239                             
+*
+*
+FL09900   D-R0091-R017      008   017   3.75    3.75          
+FL09901   8.25E-6    1.0    1.0                                
+FL09902   3                                    
+FL099S0   8.25E-6    1.0    0.00324                             
+*
+*
+FL50900   D-R016-R0091      016   008   3.6     3.6             
+FL50901   1.557E-5    1.0    1.0                                  
+FL50902   3                              
+FL509S0   1.557E-5    1.0    0.00445                             
+*
+*
+FL03900   R-R0091-G9        008   144   8.0   9.0             
+FL03901   4.983E-7     0.5    1.0                                                 
+FL039S0   4.983E-7     0.5    0.0008                             
+*
+*
+FL04200   R-R0091-R160      008   160   8.0   9.0             
+FL04201   5.692E-6    1.0    1.0                                                 
+FL042S0   5.692E-6    1.0    0.00269                             
+*
+*
+. * End
+*
+**********************************************************
+*                     MELCOR INPUT                       *
+**********************************************************
+*
+*EOR* MELCOR
+*
+noflush
+*
+*
+* WARNINGLEVEL 0 0 -1
+*
+*
+TITLE     leaktestR0092
+*
+RESTARTFILE  leaktestR0092.rst
+OUTPUTFILE   leaktestR0092.out
+PLOTFILE     leaktestR0092.ptf
+DIAGFILE     leaktestR0092_cor.dia
+MESSAGEFILE  leaktestR0092_cor.mes
+*
+CPULEFT          200.
+CPULIM           200000.    * max time running     
+CYMESF           10000    10000     * FRECUENCIA TERMINAL / .OUT     
+RESTART          -1        
+TEND             3600      * simulation time (seconds)
+SOFTDTMIN  .1 1000
+*
+*             TIME       DTMAX   DTMIN      DTEDT      DTPLT      DTRST
+TIME1       0.0         5.0     1.0      1.0     1.0     1.0
+*
+.* End
