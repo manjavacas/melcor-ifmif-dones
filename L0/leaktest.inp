@@ -16,7 +16,7 @@ stopf     leaktest.stp
 *
 crtout 
 tstart    0.0
-DTTIME    1.E-1      * initial time step
+DTTIME    0.1      * initial time step
 *
 *
 ****************************************************************************************************************************************
@@ -33,14 +33,15 @@ NCG555    AR    8                                   * MATERIAL 8 IS AR
 *        												CV (Control Volumes) INPUT									                   *
 ****************************************************************************************************************************************
 *
-*-----------------------------------------------                                                                
-* CV016 - R016 - Lithium loop cell (C4)                                                                    
-*-----------------------------------------------                                                                
-CV01600   R016  2  0  1                             * 1=2BF / 2=1BF / 3=1F / 4=2F                                  
-CV01601   0   0		                                * Fog allowed (default)
+************************************************************************************
+*                                                               
+*               CV016 - R016 - Lithium loop cell (C3 - C4 en 2PNSLP)                                                                    
+*                                                                
+CV01600   R016  2  0  1                                                            
+CV01601   0   0		                              
 CV016A0   3                                                                                         
-CV016A1   PVOL  100065.0                            * -1000 Pa para Oxygen Method
-CV016A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV016A1   PVOL  100235.0                            * -1000 Pa 
+CV016A2   TATM  290.95  RHUM  0.0                   
 CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
 CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
@@ -48,38 +49,34 @@ CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
 CV016B1   0.0      0.0                                                            
-CV016B2   7.2      2658.7
+CV016B2   7.2      2495.0                           * 2658.7 m3 (2PNSLP) ; Height = Volume / Floor Area
 ***
 *
-*-----------------------------------------------                                                                
-* CV042 - C002 - Corridor (C2)                                                          
-*-----------------------------------------------                                                                
-CV04200   C002  2  2  1                                                           
-CV04201   0   0					                 
-CV042A0   3                                                                                         
-CV042A1   PVOL    101235.0                          * 101325-90Pa                                                                 
-CV042A3   TATM    293.15    RHUM 0.6                                                
-CV042A5   MLFR.4  0.78                              * Filled with air (N2)
-CV042A6   MLFR.5  0.21                              * Filled with air (O2)
-CV042A8   MLFR.8  0.01                              * Filled with air (Ar)
-*
+************************************************************************************
+*                                                               
+*               CV096 - AL016 - Airlock (C2 - C3a en 2PNSLP)                                                                    
+*                                                              
+CV09600   AL016  2  0  1                                                            
+CV09601   0  0		                              
+CV096A0   3                                                                                         
+CV096A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV096A3   TATM    293.15    RHUM 0.6                                                
+CV096A5   MLFR.4  0.78                              * Filled with air (N2)
+CV096A6   MLFR.5  0.21                              * Filled with air (O2)
+CV096A8   MLFR.8  0.01                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV042B1   0.0      0.0                                                            
-CV042B2   8.13     11032.7                     
+***                                                                
+CV096B1   0.0      0.0                                                            
+CV096B2   7.5      421.0                            * 281.8 m3 (2PNSLP)                          
 ***
 *
-*-------------------------------------------------------
-* Leak-C002-R016 (Corridor to LLC)                   
-*-------------------------------------------------------
+*************************************************************************************************
 *
-FL99700   lk-C002-R016  016   042   3.6  3.6
-FL99701   1E-6  0.5    1.0 	                            * A = 1mm2     
-FL99702	  3     0    0     0 				            * Horizontal flow      
-FL99703   1.0   1.0                                     * Coef por defecto (1.0)                 	                  
-FL997S0   1E-6  0.5   0.0011283791670955127                       
-*
+FL64900   D-R016-AL016      016   096   3.6    3.6
+FL64901   0.008926    1.0   1.0                                   
+FL64902   3                                  
+FL649S0   0.008926    1.0   0.1066                             
 *
 . * End
 *
@@ -103,29 +100,14 @@ PLOTFILE     leaktest.ptf
 DIAGFILE     leaktest_cor.dia
 MESSAGEFILE  leaktest_cor.mes
 *
-*
-*
 CPULEFT          200.
 CPULIM           200000.    * max time running     
-*
 CYMESF           55    60    
-*
-*
 RESTART          -1        
-*
 TEND             86400      * simulation time (seconds)
+SOFTDTMIN  .1 1000
 *
-*
-SOFTDTMIN  .0001 1000
-*           TIME     DTMAX  DTMIN    DTEDT  DTPLT   DTRST
-TIME1        0.0     1.0    1.0e-3   1000.0  1.0    200.0
-TIME2      400.0     5.0    1.0e-3   1000.0  5.0    100.0
-TIME3      750.0     15.0   1.0e-3   1000.0  50.0   100.0
-TIME4     1500.0     15.0   1.0e-3   1000.0  50.0   100.0
-TIME5     2000.0     15.0   1.0e-3   1000.0  50.0   500.0
-TIME6     3000.0     15.0   1.0e-3   1000.0  50.0   500.0
-TIME7     4000.0     15.0   1.0e-3   2500.0  50.0   15000.0
-TIME8     5000.0     15.0   1.0e-3   2500.0  50.0   15000.0
-*
+*             TIME       DTMAX   DTMIN      DTEDT      DTPLT      DTRST
+TIME1       0.0         100.0     5.0      3600.0     3600.0     3600.0
 *
 .* End
