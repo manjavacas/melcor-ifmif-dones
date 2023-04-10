@@ -57,7 +57,7 @@ CV016B2   7.2      2495.0                           * 2658.7 m3 (2PNSLP) ; Heigh
 *               CV096 - AL016 - Airlock (C2 - C3a en 2PNSLP)                                                                    
 *                                                              
 CV09600   AL016  2  0  1                                                            
-CV09601   0  0		                              
+CV09601   0  -1		                              
 CV096A0   3                                                                                         
 CV096A1   PVOL  101235.0                            * 101325Pa-90Pa 
 CV096A3   TATM    293.15    RHUM 0.6                                                
