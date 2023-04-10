@@ -1,6 +1,6 @@
 leak: clean
-	./melgen-fusion-186_bdba L0/leaktest.inp
-	./melcor-fusion-186_bdba L0/leaktest.inp
+	./melgen-fusion-186_bdba Main Building/leaktest.inp
+	./melcor-fusion-186_bdba Main Building/leaktest.inp
 l0: clean
 	./melgen-fusion-186_bdba L0/l0.inp
 	./melcor-fusion-186_bdba L0/l0.inp
