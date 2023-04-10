@@ -96,7 +96,7 @@ CV018B2   7.5      3074.0                           * 2528.3 m3 (2PNSLP)
 CV00800   R009-1  2  0  1                                                         
 CV00801   0   0		                               
 CV008A0   3                                                                                         
-CV008A1   PVOL  101235.0                            * 101325Pa-90Pa 
+CV008A1   PVOL  100195.0                            * -1000Pa 
 CV008A2   TATM  293.15  RHUM  0.6                  
 CV008A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV008A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
