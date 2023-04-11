@@ -659,54 +659,54 @@ CF17315   223.2211781  0.0  CVH-P.008                               * d' · T' =
 *
 *
 CF16000   LLC-N2-ppm DIVIDE 2 1.0E6
-CF16010   CVH-VOLVAP.016  0.0  CFVALU.150            * Volumen LLC * densidad N2 = CVH-VOLVAP.016 * CFVALU.150                                                              
+CF16010   2495.0  0.0  CFVALU.150            * Volumen LLC * densidad N2 = 2495.0 * CFVALU.150                                                              
 CF16015   1.0  0.0  CVH-MASS.4.016
 *
 CF16100   LLC-O2-ppm DIVIDE 2 1.0E6
-CF16110   CVH-VOLVAP.016  0.0  CFVALU.151            * Volumen LLC * densidad O2 = CVH-VOLVAP.016 * CFVALU.151                                                                       
+CF16110   2495.0  0.0  CFVALU.151            * Volumen LLC * densidad O2 = 2495.0 * CFVALU.151                                                                       
 CF16115   1.0  0.0  CVH-MASS.5.016
 *
 CF16200   LLC-H2O-ppm DIVIDE 2 1.0E6
-CF16210   CVH-VOLVAP.016  0.0  CFVALU.152            * Volumen LLC * densidad H2O = CVH-VOLVAP.016 * CFVALU.152                                                                         
+CF16210   2495.0  0.0  CFVALU.152            * Volumen LLC * densidad H2O = 2495.0 * CFVALU.152                                                                         
 CF16215   1.0  0.0  CVH-MASS.3.016
 *
 *
 CF17400   TIR-N2-ppm DIVIDE 2 1.0E6
-CF17410   CVH-VOLVAP.129  0.0  CFVALU.156            * Volumen TIR * densidad N2 = CVH-VOLVAP.129 * CFVALU.156                                                              
+CF17410   529.0  0.0  CFVALU.156            * Volumen TIR * densidad N2 = 529.0 * CFVALU.156                                                              
 CF17415   1.0  0.0  CVH-MASS.4.129
 *
 CF17500   TIR-O2-ppm DIVIDE 2 1.0E6
-CF17510   CVH-VOLVAP.129  0.0  CFVALU.157            * Volumen TIR * densidad O2 = CVH-VOLVAP.129 * CFVALU.157                                                                       
+CF17510   529.0  0.0  CFVALU.157            * Volumen TIR * densidad O2 = 529.0 * CFVALU.157                                                                       
 CF17515   1.0  0.0  CVH-MASS.5.129
 *
 CF17600   TIR-H2O-ppm DIVIDE 2 1.0E6
-CF17610   CVH-VOLVAP.129  0.0  CFVALU.158            * Volumen TIR * densidad H2O = CVH-VOLVAP.129 * CFVALU.158                                                                         
+CF17610   529.0  0.0  CFVALU.158            * Volumen TIR * densidad H2O = 529.0 * CFVALU.158                                                                         
 CF17615   1.0  0.0  CVH-MASS.3.129
 *
 *
 CF17700   HTC-N2-ppm DIVIDE 2 1.0E6
-CF17710   CVH-VOLVAP.009  0.0  CFVALU.159            * Volumen HTC * densidad N2 = CVH-VOLVAP.009 * CFVALU.156                                                              
+CF17710   585.0  0.0  CFVALU.159            * Volumen HTC * densidad N2 = 585.0 * CFVALU.156                                                              
 CF17715   1.0  0.0  CVH-MASS.4.009
 *
 CF17800   HTC-O2-ppm DIVIDE 2 1.0E6
-CF17810   CVH-VOLVAP.009  0.0  CFVALU.169            * Volumen HTC * densidad O2 = CVH-VOLVAP.009 * CFVALU.157                                                                       
+CF17810   585.0  0.0  CFVALU.169            * Volumen HTC * densidad O2 = 585.0 * CFVALU.157                                                                       
 CF17815   1.0  0.0  CVH-MASS.5.009
 *
 CF17900   HTC-H2O-ppm DIVIDE 2 1.0E6
-CF17910   CVH-VOLVAP.009  0.0  CFVALU.170            * Volumen HTC * densidad H2O = CVH-VOLVAP.009 * CFVALU.158                                                                         
+CF17910   585.0  0.0  CFVALU.170            * Volumen HTC * densidad H2O = 585.0 * CFVALU.158                                                                         
 CF17915   1.0  0.0  CVH-MASS.3.009
 *
 *
 CF18000   CTC-N2-ppm DIVIDE 2 1.0E6
-CF18010   CVH-VOLVAP.008  0.0  CFVALU.171            * Volumen CTC * densidad N2 = CVH-VOLVAP.008 * CFVALU.156                                                              
+CF18010   557.0  0.0  CFVALU.171            * Volumen CTC * densidad N2 = 557.0 * CFVALU.156                                                              
 CF18015   1.0  0.0  CVH-MASS.4.008
 *
 CF18100   CTC-O2-ppm DIVIDE 2 1.0E6
-CF18110   CVH-VOLVAP.008  0.0  CFVALU.172            * Volumen CTC * densidad O2 = CVH-VOLVAP.008 * CFVALU.157                                                                       
+CF18110   557.0  0.0  CFVALU.172            * Volumen CTC * densidad O2 = 557.0 * CFVALU.157                                                                       
 CF18115   1.0  0.0  CVH-MASS.5.008
 *
 CF18200   CTC-H2O-ppm DIVIDE 2 1.0E6
-CF18210   CVH-VOLVAP.008  0.0  CFVALU.173            * Volumen CTC * densidad H2O = CVH-VOLVAP.008 * CFVALU.158                                                                         
+CF18210   557.0  0.0  CFVALU.173            * Volumen CTC * densidad H2O = 557.0 * CFVALU.158                                                                         
 CF18215   1.0  0.0  CVH-MASS.3.008
 *
 *
