@@ -6,13 +6,13 @@
 *
 *EOR* MELGEN
 *
-title     sgs
-jobid     sgs
+title     sgs2
+jobid     sgs2
 *
-restartf  sgs.rst
-outputf   sgs_gen.out
-diagf     sgs_gen.dia
-stopf     sgs.stp
+restartf  sgs2.rst
+outputf   sgs2_gen.out
+diagf     sgs2_gen.dia
+stopf     sgs2.stp
 *
 crtout 
 tstart     00.0
@@ -166,24 +166,6 @@ CV900B2   50.0     1000000.0
 ***
 *
 *-----------------------------------------------                                                                
-* CV901 - ArPU - Argon Purification Unit (C3)                                                                    
-*-----------------------------------------------                                                                
-CV90100   ArPU  2  0  1                                                   
-CV90101   0   0		                                * Fog allowed (default)
-CV901A0   3                                                                                         
-CV901A1   PVOL  101195.0                            * 101325Pa-130Pa 
-CV901A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV901A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV901A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV901A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV901B1   0.0      0.0                                                            
-CV901B2   6.0      942.48                           * Asumimos 8 cilindros de R = 2.5m y H = 6m
-***
-*
-*-----------------------------------------------                                                                
 * CV902 - SGS-AUX-1                                                                    
 *-----------------------------------------------                                                                
 CV90200   SGS-AUX-1  2  0  1                                                   
@@ -234,6 +216,44 @@ CV904A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 CV904B1   5.2      0.0                                                            
 CV904B2   7.2      2.0                              * 2m x 1m x 1m                                                   
 ***
+******* Energy source for SGS-AUX-3 *******           
+*                                           
+CF90100 'AUX-3-Energy-src' EQUALS 1 1.0             * Energy source
+CF90110  1.0  0.0  CVH-TVAP.904                     * Temp AUX-3 = 290.95K (mantener temp cte.)
+*                                                                                                                                 
+******* Sink SGS-AUX-3-O2 *******                    
+*                                           
+CV904C1  MASS.5 902 3                       
+CV904C2  TE 901 9                           
+*       
+CF90200 'AUX-3-O2-sink' DIVIDE 2  1.0               * Eficiencia (= 0.8793) * 2 * QP * MASS / (3600 * (QT-2R)) 
+CF90210  1.0  0.0  CFVALU.500
+CF90215  1.7586  0.0  CFVALU.501                                       
+*
+CF50000  DENOM-CF902  ADD  2  3600.0
+CF50010  1.0  0.0  CFVALU.102
+CF50015  1.0  0.0  CFVALU.101
+*
+CF50100  NUM-CF902  MULTIPLY  2  3600.0
+CF50110  1.0  0.0  CFVALU.100
+CF50115  1.0  0.0  CVH-MASS.5.904
+*
+******* Sink SGS-AUX-3-N2 *******                    
+*                                           
+CV904C3  MASS.4 903 3                       
+CV904C4  TE 901 9                           
+*
+CF90300 'AUX-3-N2-sink' EQUALS 1 -5.425E-05         * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
+CF90310  1.0  0.0  CVH-MASS.4.904   
+*
+******* Sink SGS-AUX-3-H2O *******                    
+*                                           
+CV904C5  MASS.3 904 3                       
+CV904C6  TE 901 9                           
+*
+CF90400 'AUX-3-H2O-sink' EQUALS 1 -2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
+CF90410  1.0  0.0  CVH-MASS.3.904   
+*
 *-----------------------------------------------                                                                
 * CV905 - SGS-AUX-4 (C3)                                                                    
 *-----------------------------------------------                                                                
@@ -251,52 +271,6 @@ CV905A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%
 CV905B1   6.2      0.0                                                            
 CV905B2   7.2      1.0                              * 1m x 1m x 1m                                                   
 ***
-*-----------------------------------------------                                                                
-* CV906 - SGS-AUX-5 (C3)                                                                    
-*-----------------------------------------------                                                                
-CV90600   SGS-AUX-5  2  0  1                                                   
-CV90601   0   0		                                * Fog allowed (default)
-CV906A0   3                                                                                         
-CV906A1   PVOL  102000.0                             
-CV906A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV906A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV906A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV906A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV906B1   5.2      0.0                                                            
-CV906B2   7.2      2.0                              * 2m x 1m x 1m                                                                                                    
-***
-******* Energy source for SGS-AUX-5 *******           
-*                                           
-CF90100 'AUX-5-Energy-src' EQUALS 1 1.0             * Energy source
-CF90110  1.0  0.0  CVH-TVAP.906                     * Temp AUX-5 = 290.95K (mantener temp cte.)
-*                                                                                                                                 
-******* Sink SGS-AUX-5-O2 *******                    
-*                                           
-CV906C1  MASS.5 902 3                       
-CV906C2  TE 901 9                           
-*
-CF90200 'AUX-5-O2-sink' EQUALS 1 -2.4425E-04        * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
-CF90210  1.0  0.0  CVH-MASS.5.906                                      
-*
-******* Sink SGS-AUX-5-N2 *******                    
-*                                           
-CV906C3  MASS.4 903 3                       
-CV906C4  TE 901 9                           
-*
-CF90300 'AUX-5-N2-sink' EQUALS 1 -5.425E-05         * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
-CF90310  1.0  0.0  CVH-MASS.4.906   
-*
-******* Sink SGS-AUX-5-H2O *******                    
-*                                           
-CV906C5  MASS.3 904 3                       
-CV906C6  TE 901 9                           
-*
-CF90400 'AUX-5-H2O-sink' EQUALS 1 -2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
-CF90410  1.0  0.0  CVH-MASS.3.906   
-*
 *-----------------------------------------------                                                                
 * CV907 - SGS-AUX-6                                                                     
 *-----------------------------------------------                                                                
@@ -348,12 +322,12 @@ CF90710  1.0  0.0  CVH-MASS.3.906
 ****************************************************************************************************************************************
 *
 ****** CAUDAL ENTRADA ArPU ******
-CF10000   QP  EQUALS  1  0.0  57.8                  * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
-CF10010   1.0  0.0  TIME
+CF10000   QP  EQUALS  1  2.0                        * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
+CF10010   0.0  57.8  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  EQUALS  1  0.0  22.2                  * Ar rejected by SGS-Ar (Nippon --> 22.2 Nm3/h)
-CF10110   1.0  0.0  TIME                            * PARAMETRO A OPTIMIZAR
+CF10100   RJ  EQUALS  1  2.0                         * Ar rejected by SGS-Ar (Nippon --> 22.2 Nm3/h)
+CF10110   0.0  22.2  TIME                            * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
 CF10200   QT  EQUALS  1  0.0  26869.0               
@@ -377,7 +351,7 @@ CF20010   1.0  0.0  TIME
 * SGS FL201           FM    TO    FM   TO                       * AUX-2 -> AUX-3
 *-------------------------------------------------------
 *
-FL20100   SGS-FL201   903   906   6.2  6.2
+FL20100   SGS-FL201   903   904   6.2  6.2
 FL20101   0.43709  10.0   1.0             
 FL20102	  3                                                         
 FL201S0   0.43709  10.0   0.746 
@@ -424,33 +398,6 @@ CF20510   0.0  1573.524  TIME                                   * (3600 * 0.4370
 CF20515   1.0  0.0  CFVALU.102
 *
 *-------------------------------------------------------
-* SGS FL206           FM    TO    FM   TO                       * AUX-2 --> ArPU
-*-------------------------------------------------------
-*
-FL20600   SGS-FL206   903   901   5.6  5.6
-FL20601   0.001521  15.0   1.0              
-FL20602	  3                                                          
-FL206S0   0.001521  15.0   0.044                                       
-FL206T0   2   206                                               * 2*(QP+Rj) / (3600 * 0.001521)  m/s
-*
-CF20600   VEL-FL206  DIVIDE  2  1.0
-CF20610   0.0  5.4756  TIME                                     * (3600 * 0.001521) = 5.4756       
-CF20615   1.0  0.0  CFVALU.103
-*
-CF10300   Qpur  ADD  2  2.0
-CF10310   1.0  0.0  CFVALU.100
-CF10315   1.0  0.0  CFVALU.101
-*
-*-------------------------------------------------------
-* SGS FL207           FM    TO    FM   TO                       * ArPU --> AUX-3
-*-------------------------------------------------------
-*
-FL20700   SGS-FL207   906  904   6.2  6.2
-FL20701   0.001341  1.0   1.0              
-FL20702   3                                                           
-FL207S0   0.001341  1.0   0.038 
-*
-*-------------------------------------------------------
 * SGS FL208           FM    TO    FM   TO                       * ArPU -> G-RWTS
 *-------------------------------------------------------
 *
@@ -466,12 +413,7 @@ FL208S0   0.001341  7.5   0.038
 FL20900   SGS-FL209   901  906   5.6  5.6
 FL20901   0.001341  14.0   1.0            
 FL20902   3                                                           
-FL209S0   0.001341  14.0   0.038                                          
-FL209T0   2   209                                               * 2*QP / (3600 * 0.001341)  m/s
-*
-CF20900   VEL-FL209 DIVIDE 2 2.0
-CF20910   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276
-CF20915   1.0  0.0  CFVALU.100
+FL209S0   0.001341  14.0   0.038  
 *
 *-------------------------------------------------------
 * SGS FL210           FM    TO    FM   TO                       * ArPU -> G-RWTS
@@ -754,17 +696,17 @@ noflush
 * WARNINGLEVEL 0 0 -1
 *
 *
-TITLE     sgs
+TITLE     sgs2
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  sgs.rst
-OUTPUTFILE   sgs.out
-PLOTFILE     sgs.ptf
-DIAGFILE     sgs_cor.dia
-MESSAGEFILE  sgs_cor.mes
+RESTARTFILE  sgs2.rst
+OUTPUTFILE   sgs2.out
+PLOTFILE     sgs2.ptf
+DIAGFILE     sgs2_cor.dia
+MESSAGEFILE  sgs2_cor.mes
 *
 *
 *
