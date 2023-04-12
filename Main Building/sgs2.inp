@@ -148,24 +148,6 @@ CV129B2   14.5     529.0                            * 209.4 m3 (2PNSLP)
 *
 *********************************************************** Ar SUPPLY **************************************************************
 *-----------------------------------------------                                                                
-* CV900 - ArSS - Ar Supply Subsystem                                                                    
-*-----------------------------------------------                                                                
-CV90000   ARSS  2  0  1                                                            
-CV90001   0   -1		                             * Fog allowed (default)
-CV900A0   3                                                                                         
-CV900A1   PVOL  1200000.0                            * 12 Bar
-CV900A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C; 0% rel. humidity
-CV900A3   MLFR.8  0.99999                            * Filled with Ar -> 99.999%   
-CV900A4   MLFR.5  0.0000021                          * Initial 02 -> 21% de 0.001% 
-CV900A5   MLFR.4  0.0000079                          * Initial N2 -> 79% de 0.001%    
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV900B1   0.0      0.0                                                            
-CV900B2   50.0     1000000.0                             
-***
-*
-*-----------------------------------------------                                                                
 * CV902 - SGS-AUX-1                                                                    
 *-----------------------------------------------                                                                
 CV90200   SGS-AUX-1  2  0  1                                                   
@@ -226,15 +208,15 @@ CF90110  1.0  0.0  CVH-TVAP.904                     * Temp AUX-3 = 290.95K (mant
 CV904C1  MASS.5 902 3                       
 CV904C2  TE 901 9                           
 *       
-CF90200 'AUX-3-O2-sink' DIVIDE 2  1.0               * Eficiencia (= 0.8793) * QP * MASS / (3600 * (QT-2R)) 
+CF90200 'AUX-3-O2-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.8793) * QP * MASS / (3600 * (QT-R)) 
 CF90210  1.0  0.0  CFVALU.500
-CF90215  0.8793  0.0  CFVALU.501                                       
+CF90215  1.0  0.0  CFVALU.501                                       
 *
 CF50000  DENOM-CF902  ADD  2  3600.0
 CF50010  1.0  0.0  CFVALU.102
-CF50015  1.0  0.0  CFVALU.101
+CF50015  -1.0  0.0  CFVALU.101
 *
-CF50100  NUM-CF902  MULTIPLY  2  3600.0
+CF50100  NUM-CF902  MULTIPLY  2  0.8793
 CF50110  1.0  0.0  CFVALU.100
 CF50115  1.0  0.0  CVH-MASS.5.904
 *
@@ -242,20 +224,46 @@ CF50115  1.0  0.0  CVH-MASS.5.904
 *                                           
 CV904C3  MASS.4 903 3                       
 CV904C4  TE 901 9                           
+*     
+CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.1953) * QP * MASS / (3600 * (QT-R)) 
+CF90310  1.0  0.0  CFVALU.500
+CF90315  1.0  0.0  CFVALU.503                                       
 *
-CF90300 'AUX-3-N2-sink' EQUALS 1 -5.425E-05         * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
-CF90310  1.0  0.0  CVH-MASS.4.904   
+CF50300  NUM-CF903  MULTIPLY  2  0.1953
+CF50310  1.0  0.0  CFVALU.100
+CF50315  1.0  0.0  CVH-MASS.4.904
 *
 ******* Sink SGS-AUX-3-H2O *******                    
 *                                           
 CV904C5  MASS.3 904 3                       
 CV904C6  TE 901 9                           
+*  
+CF90400 'AUX-3-H20-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.99) * QP * MASS / (3600 * (QT-R)) 
+CF90410  1.0  0.0  CFVALU.500
+CF90415  1.0  0.0  CFVALU.504                                       
 *
-CF90400 'AUX-3-H2O-sink' EQUALS 1 -2.75E-04         * Eficiencia (= 0.99) / 3600 = 2.75E-04
-CF90410  1.0  0.0  CVH-MASS.3.904   
-*
+CF50400  NUM-CF903  MULTIPLY  2  0.99
+CF50410  1.0  0.0  CFVALU.100
+CF50415  1.0  0.0  CVH-MASS.3.904
+*  *
+******* Source SGS-AUX-3-Ar *******                    
+*                                           
+CV904C7  MASS.8 905 3                       
+CV904C8  TE 901 9                           
+*  
+CF90500 'AUX-3-H20-source' DIVIDE  2  1.0 
+CF90510  0.0  3600.0  TIME
+CF90515  1.0  0.0  CFVALU.505
+
+CF50500  NUM-CF905  ADD  5  1.0               
+CF50510  -1.0  0.0  CFVALU.902
+CF50515  -1.0  0.0  CFVALU.903
+CF50520  -1.0  0.0  CFVALU.904    
+CF50525  1.0  0.0  FL-MFLOW.208  
+CF50525  0.0  -10.0  TIME                                
+* 
 *-----------------------------------------------                                                                
-* CV905 - SGS-AUX-4 (C3)                                                                    
+* CV905 - SGS-AUX-4                                                                    
 *-----------------------------------------------                                                                
 CV90500   SGS-AUX-4  2  0  1                                                   
 CV90501   0   0		                                * Fog allowed (default)
@@ -277,7 +285,7 @@ CV905B2   7.2      1.0                              * 1m x 1m x 1m
 CV90700   SGS-AUX-6  2  0  1                                                   
 CV90701   0   0		                               
 CV907A0   3                                                                                         
-CV907A1   PVOL  101000.0                            
+CV907A1   PVOL  101400.0                            
 CV907A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C
 CV907A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV907A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -298,24 +306,24 @@ CF90010  1.0  0.0  CVH-TVAP.906                     * Temp AUX-6 = 290.95K (mant
 CV907C1  MASS.5 905 3                       
 CV907C2  TE 900 9                           
 *
-CF90500 'AUX-6-O2-src' EQUALS 1 2.4425E-04          * Eficiencia (= 0.8793) / 3600 = 2.4425E-04
-CF90510  1.0  0.0  CVH-MASS.5.906                   * 2 * 57.8 Nm3/h / 26869                  
+CF90500 'AUX-6-O2-src' EQUALS 1 1.0          
+CF90510  -1.0  0.0  CFVALU.902                                   
 *
 ******* Source SGS-AUX-6-N2 *******                    
 *                                           
 CV907C3  MASS.4 906 3                       
 CV907C4  TE 900 9                           
 *
-CF90600 'AUX-6-N2-src' EQUALS 1 5.425E-05           * Eficiencia (= 0.1953) / 3600 = 5.425E-05    
-CF90610  1.0  0.0  CVH-MASS.4.906  
+CF90600 'AUX-6-N2-src' EQUALS 1 1.0           
+CF90610  -1.0  0.0  CFVALU.903  
 *
 ******* Source SGS-AUX-6-H2O *******                    
 *                                           
 CV907C5  MASS.3 907 3                       
 CV907C6  TE 900 9                           
 *
-CF90700 'AUX-6-H2O-src' EQUALS 1 2.75E-04           * Eficiencia (= 0.99) / 3600 = 2.75E-04
-CF90710  1.0  0.0  CVH-MASS.3.906 
+CF90700 'AUX-6-H2O-src' EQUALS 1 1.0
+CF90710  -1.0  0.0  CFVALU.904 
 *
 ****************************************************************************************************************************************
 *         										           CONSTANTS                 			    		  						   *
@@ -334,19 +342,6 @@ CF10200   QT  EQUALS  1  0.0  26869.0
 CF10210   1.0  0.0  TIME
 *
 ********************************************************* FL CONNECTIONS ********************************************************
-*-------------------------------------------------------
-* SGS FL200           FM    TO    FM   TO                       * ArSS -> AUX-3
-*-------------------------------------------------------
-*
-FL20000   SGS-FL200   900   904   6.2    6.2
-FL20001   0.001134  7.5   1.0              
-FL20002   3                                                         
-FL200S0   0.001134  7.5   0.038                               
-FL200T0   2  200           
-*
-CF20000   VEL-ArSS  EQUALS  1  0.0  0.15                        * X / (3600 * 0.001134) -> MAX 0.1864495298 m/s
-CF20010   1.0  0.0  TIME
-*
 *-------------------------------------------------------
 * SGS FL201           FM    TO    FM   TO                       * AUX-2 -> AUX-3
 *-------------------------------------------------------
@@ -401,7 +396,7 @@ CF20515   1.0  0.0  CFVALU.102
 * SGS FL208           FM    TO    FM   TO                       * ArPU -> G-RWTS
 *-------------------------------------------------------
 *
-FL20800   SGS-FL208   907   402   5.5  5.5
+FL20800   SGS-FL208   903   907   5.5  5.5
 FL20801   0.001341  7.5   1.0               
 FL20802   3                                                           
 FL208S0   0.001341  7.5   0.038 
@@ -414,20 +409,20 @@ FL20900   SGS-FL209   901  906   5.6  5.6
 FL20901   0.001341  14.0   1.0            
 FL20902   3                                                           
 FL209S0   0.001341  14.0   0.038  
+FL208T0   2  208
+*
+CF20800   VEL-FL208  DIVIDE  2  1.0                             * RJ / (3600 * 0.001341)
+CF20810   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276
+CF20815   1.0  0.0  CFVALU.101                                        
 *
 *-------------------------------------------------------
 * SGS FL210           FM    TO    FM   TO                       * ArPU -> G-RWTS
 *-------------------------------------------------------
 *
-FL21000   SGS-FL210   901   907   5.5  5.5
+FL21000   SGS-FL210   907   402   5.5  5.5
 FL21001   0.001341  7.5   1.0              
 FL21002   3                                                        
 FL210S0   0.001341  7.5   0.038  
-FL210T0   2  210
-*
-CF21000   VEL-FL210  DIVIDE  2  2.0                             * 2*Rj / (3600 * 0.001341)
-CF21010   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276
-CF21015   1.0  0.0  CFVALU.101                                        
 *
 *-------------------------------------------------------
 * SGS FL211           FM    TO    FM   TO                       * AUX-4 -> R129
@@ -546,22 +541,21 @@ CF15215   223.2211781  0.0  CVH-P.016                               * d' · T' =
 *
 *
 CF15300   N2-dens-AUX5 DIVIDE 2 1.0                                      
-CF15310   101325.0  0.0  CVH-TVAP.906
-CF15315   347.34475  0.0  CVH-P.906                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
+CF15310   101325.0  0.0  CVH-TVAP.904
+CF15315   347.34475  0.0  CVH-P.904                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
 *
 CF15400   O2-dens-AUX5 DIVIDE 2 1.0                                      
-CF15410   101325.0  0.0  CVH-TVAP.906
-CF15415   396.83765  0.0  CVH-P.906                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
+CF15410   101325.0  0.0  CVH-TVAP.904
+CF15415   396.83765  0.0  CVH-P.904                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
 *
 CF15500   H2O-dens-AUX5 DIVIDE 2 1.0                                      
-CF15510   101325.0  0.0  CVH-TVAP.906
-CF15515   223.2211781  0.0  CVH-P.906                               * d' · T' = 223.2211781 (d' = 0.7486875 kg/m3)
+CF15510   101325.0  0.0  CVH-TVAP.904
+CF15515   223.2211781  0.0  CVH-P.904                               * d' · T' = 223.2211781 (d' = 0.7486875 kg/m3)
 *
 *
 CF15600   N2-dens-TIR DIVIDE 2 1.0                                      
 CF15610   101325.0  0.0  CVH-TVAP.129
 CF15615   347.34475  0.0  CVH-P.129                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
-*
 *
 CF15700   O2-dens-TIR DIVIDE 2 1.0                                      
 CF15710   101325.0  0.0  CVH-TVAP.129
@@ -628,58 +622,29 @@ CF17615   1.0  0.0  CVH-MASS.3.129
 *
 *
 CF17700   HTC-N2-ppm DIVIDE 2 1.0E6
-CF17710   585.0  0.0  CFVALU.159            * Volumen HTC * densidad N2 = 585.0 * CFVALU.156                                                              
+CF17710   585.0  0.0  CFVALU.159            * Volumen HTC * densidad N2 = 585.0 * CFVALU.159                                                              
 CF17715   1.0  0.0  CVH-MASS.4.009
 *
 CF17800   HTC-O2-ppm DIVIDE 2 1.0E6
-CF17810   585.0  0.0  CFVALU.169            * Volumen HTC * densidad O2 = 585.0 * CFVALU.157                                                                       
+CF17810   585.0  0.0  CFVALU.169            * Volumen HTC * densidad O2 = 585.0 * CFVALU.169                                                                       
 CF17815   1.0  0.0  CVH-MASS.5.009
 *
 CF17900   HTC-H2O-ppm DIVIDE 2 1.0E6
-CF17910   585.0  0.0  CFVALU.170            * Volumen HTC * densidad H2O = 585.0 * CFVALU.158                                                                         
+CF17910   585.0  0.0  CFVALU.170            * Volumen HTC * densidad H2O = 585.0 * CFVALU.170                                                                         
 CF17915   1.0  0.0  CVH-MASS.3.009
 *
 *
 CF18000   CTC-N2-ppm DIVIDE 2 1.0E6
-CF18010   557.0  0.0  CFVALU.171            * Volumen CTC * densidad N2 = 557.0 * CFVALU.156                                                              
+CF18010   557.0  0.0  CFVALU.171            * Volumen CTC * densidad N2 = 557.0 * CFVALU.171                                                              
 CF18015   1.0  0.0  CVH-MASS.4.008
 *
 CF18100   CTC-O2-ppm DIVIDE 2 1.0E6
-CF18110   557.0  0.0  CFVALU.172            * Volumen CTC * densidad O2 = 557.0 * CFVALU.157                                                                       
+CF18110   557.0  0.0  CFVALU.172            * Volumen CTC * densidad O2 = 557.0 * CFVALU.172                                                                       
 CF18115   1.0  0.0  CVH-MASS.5.008
 *
 CF18200   CTC-H2O-ppm DIVIDE 2 1.0E6
-CF18210   557.0  0.0  CFVALU.173            * Volumen CTC * densidad H2O = 557.0 * CFVALU.158                                                                         
+CF18210   557.0  0.0  CFVALU.173            * Volumen CTC * densidad H2O = 557.0 * CFVALU.173                                                                         
 CF18215   1.0  0.0  CVH-MASS.3.008
-*
-*
-CF16300   ArPu-N2-ppm DIVIDE 2 1.0E6                 * Impurezas de N2 (ppm) en Ar purificado
-CF16310   1.0  0.0  CFVALU.166                                                            
-CF16315   3600.0  0.0  FL-MFLOW.4.207
-*
-CF16400   ArPu-O2-ppm DIVIDE 2 1.0E6                 * Impurezas de O2 (ppm) en Ar purificado
-CF16410   1.0  0.0  CFVALU.167                                                              
-CF16415   3600.0  0.0  FL-MFLOW.5.207
-*
-CF16500   ArPu-H2O-ppm DIVIDE 2 1.0E6                * Impurezas de H2O (ppm) en Ar purificado
-CF16510   1.0  0.0  CFVALU.168                                                                                                           
-CF16515   3600.0  0.0  FL-MFLOW.3.207
-*
-*
-* Auxiliar CF
-*
-*
-CF16600  Denom-163 MULTIPLY 2 1.0
-CF16610  1.0  0.0  CFVALU.153
-CF16615  1.0  0.0  CFVALU.100
-*
-CF16700  Denom-164 MULTIPLY 2 1.0
-CF16710  1.0  0.0  CFVALU.154
-CF16715  1.0  0.0  CFVALU.100
-*
-CF16800  Denom-165 MULTIPLY 2 1.0
-CF16810  1.0  0.0  CFVALU.155
-CF16815  1.0  0.0  CFVALU.100
 *
 ***
 . * End
@@ -718,7 +683,7 @@ CYMESF           100000    100000                   * FRECUENCIA TERMINAL / .OUT
 *
 RESTART          -1              
 *
-TEND             3.1536e7                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             7.2E6                              * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000
@@ -726,8 +691,8 @@ SOFTDTMIN  .1 1000
 *
 *             TIME       DTMAX   DTMIN      DTEDT      DTPLT      DTRST
 TIME1       0.0         100.0     1.0      1800.0     1800.0     1800.0        * primer dia: cada media hora -> 1800 s
-TIME2       86400.0     1000.0    5.0     14400.0    14400.0    14400.0       * despues, cada 4 horas -> 14400.0 s
-TIME3       913600.0    100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
+TIME2       86400.0     1000.0    5.0      7200.0     7200.0     7200.0        * despues, cada 2 horas -> 7200.0 s
+TIME3       71136000    100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
 *TIME3       31449600.0  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
 *
 *TIME_N     TEND-86400  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia (general): cada media hora
