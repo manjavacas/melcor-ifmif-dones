@@ -266,10 +266,10 @@ CF50530  0.0  -10.0  TIME
 * CV905 - SGS-AUX-4                                                                    
 *-----------------------------------------------                                                                
 CV90500   SGS-AUX-4  2  0  1                                                   
-CV90501   0   0		                                * Fog allowed (default)
+CV90501   0   0		                              
 CV905A0   3                                                                                         
-CV905A1   PVOL  101400.0                            * 101325Pa-130Pa 
-CV905A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV905A1   PVOL  101400.0                            
+CV905A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C
 CV905A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV905A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
 CV905A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01%  
@@ -303,11 +303,11 @@ CF90010  1.0  0.0  CVH-TVAP.906                     * Temp AUX-6 = 290.95K (mant
 *   
 ******* Source SGS-AUX-6-O2 *******                    
 *                                           
-CV907C1  MASS.5 905 3                       
+CV907C1  MASS.5 908 3                       
 CV907C2  TE 900 9                           
 *
-CF90500 'AUX-6-O2-src' EQUALS 1 1.0          
-CF90510  -1.0  0.0  CFVALU.902                                   
+CF90800 'AUX-6-O2-src' EQUALS 1 1.0          
+CF90810  -1.0  0.0  CFVALU.902                                   
 *
 ******* Source SGS-AUX-6-N2 *******                    
 *                                           
