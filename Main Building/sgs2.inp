@@ -251,7 +251,7 @@ CF50415  1.0  0.0  CVH-MASS.3.904
 CV904C7  MASS.8 905 3                       
 CV904C8  TE 901 9                           
 *  
-CF90500 'AUX-3-H20-source' DIVIDE  2  1.0 
+CF90500 'AUX-3-Ar-source' DIVIDE  2  1.0 
 CF90510  0.0  3600.0  TIME
 CF90515  1.0  0.0  CFVALU.505
 
@@ -299,7 +299,7 @@ CV907B2   6.0      1.0                              * 1m x 1m x 1m
 ******* Energy source from SGS-AUX-6 *******           
 *                                           
 CF90000 'AUX-6-Energy-src' EQUALS 1 1.0             * Energy source
-CF90010  1.0  0.0  CVH-TVAP.906                     * Temp AUX-6 = 290.95K (mantener temp cte.)
+CF90010  1.0  0.0  CVH-TVAP.904                     * Temp AUX-6 = 290.95K (mantener temp cte.)
 *   
 ******* Source SGS-AUX-6-O2 *******                    
 *                                           
