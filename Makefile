@@ -22,6 +22,9 @@ mbs: clean
 sgs: clean
 	./melgen-fusion-186_bdba Main Building/sgs.inp
 	./melcor-fusion-186_bdba Main Building/sgs.inp
+sgs2: clean
+	./melgen-fusion-186_bdba Main Building/sgs2.inp
+	./melcor-fusion-186_bdba Main Building/sgs2.inp
 mb: clean
 	./melgen-fusion-186_bdba Main Building/main.inp
 	./melcor-fusion-186_bdba  Main Building/main.inp
