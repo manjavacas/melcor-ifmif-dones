@@ -250,20 +250,66 @@ CF50415  1.0  0.0  CVH-MASS.3.904
 *                                           
 CV904C7  MASS.8 905 3                       
 CV904C8  TE 901 9                           
-*  
-CF90500  'AUX-3-Ar-source'  ADD  8  1.0               
-CF90510  -1.0  0.0  CFVALU.902
-CF90515  -1.0  0.0  CFVALU.903
-CF90520  -1.0  0.0  CFVALU.904  
-CF90525  1.0   0.0   FL-MFLOW.3.208  
-CF90530  1.0   0.0   FL-MFLOW.4.208  
-CF90535  1.0   0.0   FL-MFLOW.5.208  
-CF90540  1.0   0.0   FL-MFLOW.8.208  
-CF90545  -1.05   0.0   CFVALU.505
 *
-CF50500  AR-MASS_LEAKS  DIVIDE  2  10.415
-CF50510  0.0  3600.0  TIME                                 * 0.0025 * SUM(VOL_ROOMS) = 10.415 m3/h (max)
-CF50515  1.0  0.0  CFVALU.183
+CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.0 
+CF90510  0.0  1.784  TIME
+CF90515  1.0  0.0  CFVALU.505   
+*
+CF50500  NUM-CF905  ADD  8  1.0
+CF50510  1.0  0.0  CFVALU.506
+CF50515  1.0  0.0  CFVALU.507
+CF50520  1.0  0.0  CFVALU.508
+CF50525  1.0  0.0  CFVALU.509
+CF50530  1.0  0.0  CFVALU.510
+CF50535  1.0  0.0  CFVALU.511
+CF50540  1.0  0.0  CFVALU.512
+CF50545  1.0  0.0  CFVALU.513
+*
+CF50600  O2-PUR-VOL  MULTIPLY  2  -1.0
+CF50610  1.0  0.0  CFVALU.902
+CF50615  1.0  0.0  CFVALU.154
+*
+CF50600  N2-PUR-VOL  MULTIPLY  2  -1.0
+CF50610  1.0  0.0  CFVALU.903
+CF50615  1.0  0.0  CFVALU.153
+*
+CF50800  H2O-PUR-VOL  MULTIPLY  2  -1.0
+CF50810  1.0  0.0  CFVALU.904
+CF50815  1.0  0.0  CFVALU.155
+*
+CF50900  AR-REJ-VOL  MULTIPLY  2  1.0
+CF50910  1.0  0.0  FL-MFLOW.8.208
+CF50915  1.0  0.0  CFVALU.187
+*
+CF51000  H2O-REJ-VOL  MULTIPLY  2  1.0
+CF51010  1.0  0.0  FL-MFLOW.3.208
+CF51015  1.0  0.0  CFVALU.186
+*
+CF51100  N2-REJ-VOL  MULTIPLY  2  1.0
+CF51110  1.0  0.0  FL-MFLOW.4.208
+CF51115  1.0  0.0  CFVALU.184
+*
+CF51200  O2-REJ-VOL  MULTIPLY  2  1.0
+CF51210  1.0  0.0  FL-MFLOW.5.208
+CF51215  1.0  0.0  CFVALU.185
+*
+CF51300  LEAKS-VOL  DIVIDE  2  -1.0
+CF51310  0.0  3600.0  TIME
+CF51315  0.0  10.415  TIME
+*
+*CF90500  'AUX-3-Ar-source'  ADD  8  1.0               
+*CF90510  -1.0  0.0  CFVALU.902
+*CF90515  -1.0  0.0  CFVALU.903
+*CF90520  -1.0  0.0  CFVALU.904  
+*CF90525  1.0   0.0   FL-MFLOW.3.208  
+*CF90530  1.0   0.0   FL-MFLOW.4.208  
+*CF90535  1.0   0.0   FL-MFLOW.5.208  
+*CF90540  1.0   0.0   FL-MFLOW.8.208  
+*CF90545  -1.05   0.0   CFVALU.505
+*
+*CF50500  AR-MASS_LEAKS  DIVIDE  2  10.415
+*CF50510  0.0  3600.0  TIME                                 * 0.0025 * SUM(VOL_ROOMS) = 10.415 m3/h (max)
+*CF50515  1.0  0.0  CFVALU.183
 * 
 *-----------------------------------------------                                                                
 * CV905 - SGS-AUX-4                                                                    
@@ -532,6 +578,23 @@ CF15115   396.83765  0.0  CVH-P.016                                 * d' · T' =
 CF15200   H2O-dens-LLC DIVIDE 2 1.0                                      
 CF15210   101325.0  0.0  CVH-TVAP.016
 CF15215   223.2211781  0.0  CVH-P.016                               * d' · T' = 223.2211781 (d' = 0.7486875 kg/m3)
+*
+*
+CF18400   N2-dens-AUX2 DIVIDE 2 1.0                                      
+CF18410   101325.0  0.0  CVH-TVAP.903
+CF18415   347.34475  0.0  CVH-P.903                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
+*
+CF18500   O2-dens-AUX2 DIVIDE 2 1.0                                      
+CF18510   101325.0  0.0  CVH-TVAP.903
+CF18515   396.83765  0.0  CVH-P.903                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
+*
+CF18600   H2O-dens-AUX2 DIVIDE 2 1.0                                      
+CF18610   101325.0  0.0  CVH-TVAP.903
+CF18615   223.2211781  0.0  CVH-P.903                               * d' · T' = 223.2211781 (d' = 0.7486875 kg/m3)
+*
+CF18700   Ar-dens-AUX2 DIVIDE 2 1.0                                      
+CF18710   101325.0  0.0  CVH-TVAP.903
+CF18715   531.8996  0.0  CVH-P.903                                  * d' · T = 531.8996 (d' = 1.784 kg/m3)
 *
 *
 CF15300   N2-dens-AUX3 DIVIDE 2 1.0                                      
