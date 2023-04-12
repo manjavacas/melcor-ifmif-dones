@@ -226,9 +226,9 @@ CF90110  1.0  0.0  CVH-TVAP.904                     * Temp AUX-3 = 290.95K (mant
 CV904C1  MASS.5 902 3                       
 CV904C2  TE 901 9                           
 *       
-CF90200 'AUX-3-O2-sink' DIVIDE 2  1.0               * Eficiencia (= 0.8793) * 2 * QP * MASS / (3600 * (QT-2R)) 
+CF90200 'AUX-3-O2-sink' DIVIDE 2  1.0               * Eficiencia (= 0.8793) * QP * MASS / (3600 * (QT-2R)) 
 CF90210  1.0  0.0  CFVALU.500
-CF90215  1.7586  0.0  CFVALU.501                                       
+CF90215  0.8793  0.0  CFVALU.501                                       
 *
 CF50000  DENOM-CF902  ADD  2  3600.0
 CF50010  1.0  0.0  CFVALU.102
