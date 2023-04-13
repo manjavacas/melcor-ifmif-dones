@@ -786,6 +786,19 @@ CF26300   ELEM-CF253  DIVIDE  2  1.0
 CF26310   1.0  0.0  CFVALU.213
 CF26315   1.0  0.0  CVH-MASS.8.129
 *
+********************************************************************************
+**                    EXTERNAL DATA FILE  (*EDF package)                      **
+********************************************************************************
+*
+EDF11100 VARIAB 4 WRITE
+EDF11101 variables.dat
+EDF11102 8E12.4
+EDF11110 0.      1.
+EDF111AA CFVALU.250         * % AIRE LLC
+EDF111AB CFVALU.251         * % AIRE HTC
+EDF111AC CFVALU.252			* % AIRE CTC
+EDF111AD CFVALU.253			* % AIRE TIR
+*
 ***
 . * End
 *
