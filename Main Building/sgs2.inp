@@ -132,7 +132,7 @@ CV009B2   8.5      585.0                            * 581.3 m3 (2PNSLP)
 CV12900   R129  2  2  2                                                          
 CV12901   0   0		                           
 CV129A0   3                                                                                         
-CV129A1   PVOL    101165.0                          * 101325-130Pa                                                                          
+CV129A1   PVOL    101065.0                          * 101325-130Pa                                                                          
 CV129A3   TATM    298.15    RHUM  0.0                                                     
 CV129A5   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
 CV129A6   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
@@ -266,7 +266,7 @@ CF50525  1.0  0.0  CFVALU.509
 *  
 CF50600  AUX-P016  L-GE  2  1.0  0.0
 CF50605  NORMAL
-CF50610  0.0  101195.0  TIME
+CF50610  0.0  101065.0  TIME
 CF50615  1.0  0.0  CVH-P.16   
 *   
 CF50700  AUX-P129  L-GE  2  1.0  0.0
@@ -276,12 +276,12 @@ CF50715  1.0  0.0  CVH-P.129
 *
 CF50800  AUX-P0091  L-GE  2  1.0  0.0
 CF50805  NORMAL
-CF50810  0.0  101235.0  TIME
+CF50810  0.0  101065.0  TIME
 CF50815  1.0  0.0  CVH-P.8  
 *
 CF50900  AUX-P0092  L-GE  2  1.0  0.0
 CF50905  NORMAL
-CF50910  0.0  101235.0  TIME
+CF50910  0.0  101065.0  TIME
 CF50915  1.0  0.0  CVH-P.9  
 *
 *CF90500  'AUX-3-Ar-source'  MULTIPLY  2  1.0 
