@@ -409,6 +409,10 @@ CF10110   0.0  22.2  TIME                            * PARAMETRO A OPTIMIZAR
 CF10200   QT  EQUALS  1  0.0  26869.0               
 CF10210   1.0  0.0  TIME
 *
+****** % MAXIMO AIRE ******
+CF10300   QT  EQUALS  1  0.0  10.0               
+CF10310   1.0  0.0  TIME
+*
 ********************************************************* FL CONNECTIONS ********************************************************
 *-------------------------------------------------------
 * SGS FL201           FM    TO    FM   TO                       * AUX-2 -> AUX-3
@@ -745,7 +749,7 @@ CF26015   1.0  0.0  CVH-MASS.8.016
 CF27000   STOP-LLC  L-GE  2  1.0
 CF27001   .FALSE.
 CF27010   1.0  0.0  CFVALU.250
-CF27015   0.0  0.01  TIME
+CF27015   0.001  0.0  CFVALU.103
 *
 *
 CF25100   HTC-AIR%  ADD  2  100.0
@@ -765,7 +769,7 @@ CF26115   1.0  0.0  CVH-MASS.8.008
 CF27100   STOP-HTC  L-GE  2  1.0
 CF27101   .FALSE.
 CF27110   1.0  0.0  CFVALU.251
-CF27115   0.0  10.0  TIME
+CF27115   1.0  0.0  CFVALU.103
 *
 *
 CF25200   CTC-AIR%  ADD  2  100.0
@@ -785,7 +789,7 @@ CF26215   1.0  0.0  CVH-MASS.8.009
 CF27200   STOP-CTC  L-GE  2  1.0
 CF27201   .FALSE.
 CF27210   1.0  0.0  CFVALU.252
-CF27215   0.0  10.0  TIME
+CF27215   1.0  0.0  CFVALU.103
 *
 *
 CF25300   TIR-AIR%  ADD  2  100.0
@@ -805,7 +809,7 @@ CF26315   1.0  0.0  CVH-MASS.8.129
 CF27300   STOP-TIR  L-GE  2  1.0
 CF27301   .FALSE.
 CF27310   1.0  0.0  CFVALU.253
-CF27315   0.0  10.0  TIME
+CF27315   1.0  0.0  CFVALU.103
 *
 *
 CF66600   STOP  L-OR  4  1.0
