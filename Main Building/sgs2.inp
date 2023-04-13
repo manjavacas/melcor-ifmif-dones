@@ -15,18 +15,9 @@ diagf     sgs2_gen.dia
 stopf     sgs2.stp
 *
 crtout 
-tstart     00.0
-DTTIME     0.1      * initial time step
+tstart    00.0
+DTTIME    0.1      * initial time step
 *
-STOPCF     666
-*
-CF66600   STOP  L-OR  4  1.0
-CF66601   .TRUE.
-CF66610   1.0  0.0  CFVALU.270
-CF66615   1.0  0.0  CFVALU.271
-CF66620   1.0  0.0  CFVALU.272
-CF66625   1.0  0.0  CFVALU.273
-***
 *
 ****************************************************************************************************************************************
 *         										    NCG (Non Condensible Gases) INPUT			    		  						   *
@@ -820,6 +811,15 @@ CF27310   1.0  0.0  CFVALU.253
 CF27315   1.0  0.0  CFVALU.103
 *
 ***
+*
+CF66600   STOP  L-OR  4  1.0
+CF66601   .FALSE.
+CF66610   1.0  0.0  CFVALU.270
+CF66615   1.0  0.0  CFVALU.271
+CF66620   1.0  0.0  CFVALU.272
+CF66625   1.0  0.0  CFVALU.273
+*
+***
 ********************************************************************************
 **                    EXTERNAL DATA FILE  (*EDF package)                      **
 ********************************************************************************
@@ -860,6 +860,7 @@ PLOTFILE     sgs2.ptf
 DIAGFILE     sgs2_cor.dia
 MESSAGEFILE  sgs2_cor.mes
 *
+STOPCF    666
 *
 *
 CPULEFT          200.
