@@ -251,9 +251,16 @@ CF50415  1.0  0.0  CVH-MASS.3.904
 CV904C7  MASS.8 905 3                       
 CV904C8  TE 901 9   
 *
-CF90500  'AUX-3-Ar-source'  EQUALS  1  0.0  0.0158 
-CF90510  1.0  0.0  TIME
-*                        
+CF90500  'AUX-3-Ar-source'  L-A-IFTE  3  1.0  0.0 
+CF90501  0.0
+CF90510  1.0  0.0 CFVALU.505
+CF90515  0.0  0.0156  TIME
+CF90520  0.0  0.0158  TIME
+*      
+CF50500  AUX-P  L-GE  2  1.0  0.0
+CF50501  .true.
+CF50510  0.0  101195.0  TIME
+CF50515  1.0  0.0  CVH-P.016                  
 *
 *CF90500  'AUX-3-Ar-source'  MULTIPLY  2  1.0 
 *CF90510  0.0  1.784  TIME
