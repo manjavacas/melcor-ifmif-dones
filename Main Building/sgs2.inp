@@ -225,11 +225,11 @@ CF50115  1.0  0.0  CVH-MASS.5.904
 CV904C3  MASS.4 903 3                       
 CV904C4  TE 901 9                           
 *     
-CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.1953) * QP * MASS / (3600 * (QT-R)) 
+CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.8) * QP * MASS / (3600 * (QT-R)) 
 CF90310  1.0  0.0  CFVALU.500
 CF90315  1.0  0.0  CFVALU.503                                       
 *
-CF50300  NUM-CF903  MULTIPLY  2  0.1953
+CF50300  NUM-CF903  MULTIPLY  2  0.8
 CF50310  1.0  0.0  CFVALU.100
 CF50315  1.0  0.0  CVH-MASS.4.904
 *
