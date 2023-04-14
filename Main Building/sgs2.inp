@@ -251,7 +251,7 @@ CF50415  1.0  0.0  CVH-MASS.3.904
 CV904C7  MASS.8 905 3                       
 CV904C8  TE 901 9   
 *
-CV90500  'AUX-3-Ar-source'  DIVIDE  1  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar
+CV90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar
 CV90510  0.0  3600.0  TIME
 CV90515  0.0  0.4  TIME
 *
