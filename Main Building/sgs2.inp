@@ -254,8 +254,8 @@ CV904C8  TE 901 9
 CF90500  'AUX-3-Ar-source'  L-A-IFTE  3  1.0
 CF90505  NORMAL
 CF90510  1.0  0.0 CFVALU.505
-CF90515  0.0  0.025  TIME
-CF90520  0.0  0.015  TIME
+CF90515  0.0  0.02  TIME
+CF90520  0.0  0.01  TIME
 *
 CF50500  AUX-P-CF905  L-OR  3  1.0  0.0
 CF50505  NORMAL 
@@ -402,7 +402,7 @@ CF10010   0.0  57.8  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  2.0                         * Ar rejected by SGS-Ar (Nippon --> 22.2 Nm3/h)
-CF10110   0.0  22.2  TIME                            * PARAMETRO A OPTIMIZAR
+CF10110   0.0  10.0  TIME                            * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
 CF10200   QT  EQUALS  1  0.0  26869.0               
@@ -560,7 +560,7 @@ FL009T0  2  009
 *
 CF00900  R009-2-LEAK-VEL  DIVIDE  2  1.0
 CF00910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF00915  0.0  1.4625   TIME                           * 0.0025 * VOL_CTC
+CF00915  0.0  0.0585   TIME                           * 0.0025 * VOL_CTC
 *
 *
 FL00800  R009-1-LEAK   400   008  4.0   4.0
@@ -571,7 +571,7 @@ FL008T0  2  008
 *
 CF00800  R009-1-LEAK-VEL  DIVIDE  2  1.0
 CF00810  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF00815  0.0  1.3925   TIME                           * 0.0025 * VOL_HTC
+CF00815  0.0  0.0557   TIME                           * 0.0025 * VOL_HTC
 *
 *
 FL12900  R129-LEAK   400   129  11.75   11.75
@@ -582,7 +582,7 @@ FL129T0  2  129
 *
 CF12900  R129-LEAK-VEL  DIVIDE  2  1.0
 CF12910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF12915  0.0  1.3225   TIME                           * 0.0025 * VOL_TIR
+CF12915  0.0  0.0529   TIME                           * 0.0025 * VOL_TIR
 *
 ***
 *************************************************** OUTPUTS ***************************************************
