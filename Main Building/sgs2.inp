@@ -883,9 +883,9 @@ SOFTDTMIN  .1 1000
 *
 *
 *             TIME       DTMAX   DTMIN      DTEDT      DTPLT      DTRST
-TIME1       0.0         10.0     1.0      300.0     300.0     300.0        * primer dia: cada media hora -> 1800 s
-TIME2       86400.0     50.0    5.0      1200.0     1200.0     1200.0        * despues, cada 2 horas -> 7200.0 s
-TIME3       71136000    10.0     1.0      300.0     300.0     300.0        * ultimo dia: cada media hora -> 1800 s
+TIME1       0.0         10.0     1.0      1800.0     1800.0     1800.0        * primer dia: cada media hora -> 1800 s
+TIME2       86400.0     50.0    5.0      21600.0     21600.0    21600.0        * despues, cada 2 horas -> 7200.0 s
+TIME3       71136000    10.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
 *TIME3       31449600.0  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
 *
 *TIME_N     TEND-86400  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia (general): cada media hora
