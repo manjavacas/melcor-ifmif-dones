@@ -248,18 +248,18 @@ CF50415  1.0  0.0  CVH-MASS.3.904
 *  
 ******* Source SGS-AUX-3-Ar *******                    
 *                                           
-CV904C7  MASS.8 905 3                       
+CV904C7  MASS.8 910 3                       
 CV904C8  TE 901 9   
 *
 CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar
 CF90510  0.0  3600.0  TIME
 CF90515  0.0  0.4  TIME
 *
-*CF91000  'AR-INLET'  L-A-IFTE  3  1.0
-*CF91005  NORMAL
-*CF91010  1.0  0.0  CFVALU.506
-*CF91015  0.0  0.0  TIME
-*CF91020  1.0  0.0  CFVALU.905
+CF91000  'AR-INLET'  L-A-IFTE  3  1.0
+CF91005  NORMAL
+CF91010  1.0  0.0  CFVALU.506
+CF91015  1.0  0.0  CFVALU.905
+CF91020  0.0  0.0  TIME
 *
 *CF90500  'AUX-3-Ar-source'  MULTIPLY  2  1.0 
 *CF90510  0.0  1.784  TIME
