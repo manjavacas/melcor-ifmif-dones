@@ -369,7 +369,7 @@ CF90710  -1.0  0.0  CFVALU.904
 ****************************************************************************************************************************************
 *
 ****** CAUDAL ENTRADA ArPU ******
-CF10000   QP  EQUALS  1  2.0                        * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
+CF10000   QP  EQUALS  1  2.0                         * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
 CF10010   0.0  57.8  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
@@ -876,18 +876,14 @@ CYMESF           100000    100000                   * FRECUENCIA TERMINAL / .OUT
 *
 RESTART          -1              
 *
-TEND             7.2E6                              * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             1.0E7                              * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1 1000
 *
 *
 *             TIME       DTMAX   DTMIN      DTEDT      DTPLT      DTRST
-TIME1       0.0         10.0     1.0      1800.0     1800.0     1800.0        * primer dia: cada media hora -> 1800 s
-TIME2       86400.0     50.0    5.0      21600.0     21600.0    21600.0        * despues, cada 2 horas -> 7200.0 s
-TIME3       71136000    10.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
-*TIME3       31449600.0  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia: cada media hora -> 1800 s
-*
+TIME1         0.0        50.0    5.0        86400.0    86400.0    86400.0          
 *TIME_N     TEND-86400  100.0     1.0      1800.0     1800.0     1800.0        * ultimo dia (general): cada media hora
 *
 *
