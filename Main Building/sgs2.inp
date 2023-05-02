@@ -885,7 +885,7 @@ RESTART          -1
 TEND             3.1536E7                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
-SOFTDTMIN  1.  100
+SOFTDTMIN  1.0  100
 *
 *
 *             TIME     DTMAX     DTMIN     DTEDT      DTPLT      DTRST
