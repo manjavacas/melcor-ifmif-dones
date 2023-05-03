@@ -251,15 +251,15 @@ CF50415  1.0  0.0  CVH-MASS.3.904
 CV904C7  MASS.8 910 3                       
 CV904C8  TE 901 9   
 *
-CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar
+CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar + lo que se tira ~ 30 m3/h
 CF90510  0.0  3600.0  TIME
-CF90515  0.0  0.75  TIME
+CF90515  0.0  20.0  TIME
 *
 CF91000  'AR-INLET'  L-A-IFTE  3  1.0
 CF91005  NORMAL
 CF91010  1.0  0.0  CFVALU.506
-CF91015  1.0  0.0  CFVALU.905
-CF91020  0.0  0.0  TIME
+CF91015  2.0  0.0  CFVALU.905
+CF91020  0.5  0.0  CFVALU.905
 *
 *CF90500  'AUX-3-Ar-source'  MULTIPLY  2  1.0 
 *CF90510  0.0  1.784  TIME
@@ -380,7 +380,7 @@ CF10010   0.0  57.8  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  2.0                         * Ar rejected by SGS-Ar (Nippon --> 22.2 Nm3/h)
-CF10110   0.0  10.0  TIME                            * PARAMETRO A OPTIMIZAR
+CF10110   0.0  15.0  TIME                            * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
 CF10200   QT  EQUALS  1  0.0  26869.0               
@@ -453,13 +453,14 @@ FL208T0   2  208
 *
 CF20800   VEL-FL208  DIVIDE  2  1.0                             * RJ / (3600 * 0.001341)
 CF20810   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276
-CF20815   1.0  0.0  CFVALU.909                                        
+CF20815   1.0  0.0  CFVALU.101
+*CF20815   1.0  0.0  CFVALU.909                                        
 *
-CF90900  'FL208-VENT'  L-A-IFTE  3  1.0
-CF90905  NORMAL
-CF90910  1.0  0.0  CFVALU.506
-CF90915  0.0  0.0  TIME
-CF90920  1.0  0.0  CFVALU.101
+*CF90900  'FL208-VENT'  L-A-IFTE  3  1.0
+*CF90905  NORMAL
+*CF90910  1.0  0.0  CFVALU.506
+*CF90915  0.0  0.0  TIME
+*CF90920  1.0  0.0  CFVALU.101
 *
 *CF50500  AUX-P-CF909  L-OR  3  1.0  0.0
 *CF50505  NORMAL 
@@ -871,7 +872,7 @@ PLOTFILE     sgs2.ptf
 DIAGFILE     sgs2_cor.dia
 MESSAGEFILE  sgs2_cor.mes
 *
-STOPCF    270
+*STOPCF    270
 *
 *
 CPULEFT          200.
