@@ -895,7 +895,7 @@ PLOTFILE     sgs2.ptf
 DIAGFILE     sgs2_cor.dia
 MESSAGEFILE  sgs2_cor.mes
 *
-STOPCF    666
+*STOPCF    666
 *
 *
 CPULEFT          200.
