@@ -256,13 +256,13 @@ CV904C8  TE 901 9
 *
 CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar + lo que se tira ~ 30 m3/h
 CF90510  0.0  3600.0  TIME
-CF90515  1.5  0.0  CFVALU.101
+CF90515  1.0  0.0  CFVALU.101
 *
 CF91000  'AR-INLET'  L-A-IFTE  3  1.0
 CF91005  NORMAL
 CF91010  1.0  0.0  CFVALU.506
 CF91015  2.0  0.0  CFVALU.905
-CF91020  0.25  0.0  CFVALU.905
+CF91020  0.75  0.0  CFVALU.905
 *
 CF50600  AUX-P016  L-GE  2  1.0  0.0
 CF50605  NORMAL
@@ -743,6 +743,6 @@ SOFTDTMIN  .1  1000
 *
 *
 *             TIME     DTMAX     DTMIN     DTEDT      DTPLT      DTRST
-TIME1         0.0      100.0    10.0     86400.0    86400.0    86400.0          
+TIME1         0.0      100.0    10.0     43200.0    43200.0    43200.0          
 *
 .* END
