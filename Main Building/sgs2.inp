@@ -836,7 +836,7 @@ CF26015   1.0  0.0  CVH-MASS.8.016
 **                    EXTERNAL DATA FILE  (*EDF package)                      **
 ********************************************************************************
 *
-EDF11100 VARIAB 1¡2 WRITE
+EDF11100 VARIAB 2 WRITE
 EDF11101 variables.dat
 EDF11102 8E12.4
 EDF11110 0.      86400.
