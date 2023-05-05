@@ -208,18 +208,18 @@ CF90110  1.0  0.0  CVH-TVAP.904                     * Temp AUX-3 = 290.95K (mant
 CV904C1  MASS.5 902 3                       
 CV904C2  TE 901 9                           
 *       
-CF90200 'AUX-3-O2-sink' DIVIDE  2  -1.0               * Eficiencia (= 0.8793) * QP * MASS/S / (QT-R) 
-CF90210  1.0  0.0  CFVALU.500
+CF90200 'AUX-3-O2-sink' DIVIDE  2  -1.0               * Eficiencia (= 0.8793) * QP * MASS/S / QT 
+CF90210  1.0  0.0  CFVALU.102
 CF90215  1.0  0.0  CFVALU.501                                       
 *
-CF50000  DENOM-CF902  ADD  2  1.0  * 3600.0  
-CF50010  1.0  0.0  CFVALU.102
-CF50015  -1.0  0.0  CFVALU.101
+*CF50000  DENOM-CF902  ADD  2  1.0  * 3600.0  
+*CF50010  1.0  0.0  CFVALU.102
+*CF50015  -1.0  0.0  CFVALU.101
 *
 CF50100  NUM-CF902  MULTIPLY  2  0.8793
 CF50110  1.0  0.0  CFVALU.100
 *CF50115  1.0  0.0  CVH-MASS.5.904
-CF50115  1.0  0.0  FL-MFLOW.5.201
+CF50115  1.0  0.0  FL-MFLOW.5.205
 *
 ******* Sink SGS-AUX-3-N2 *******                    
 *                                           
@@ -227,7 +227,7 @@ CV904C3  MASS.4 903 3
 CV904C4  TE 901 9                           
 *     
 CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.8) * QP * MASS/S / (QT-R)
-CF90310  1.0  0.0  CFVALU.500
+CF90310  1.0  0.0  CFVALU.102
 CF90315  1.0  0.0  CFVALU.503                                       
 *
 CF50300  NUM-CF903  MULTIPLY  2  0.8
@@ -241,7 +241,7 @@ CV904C5  MASS.3 904 3
 CV904C6  TE 901 9                           
 *  
 CF90400 'AUX-3-H20-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.99) * QP * MASS/S / (QT-R)
-CF90410  1.0  0.0  CFVALU.500
+CF90410  1.0  0.0  CFVALU.102
 CF90415  1.0  0.0  CFVALU.504                                       
 *
 CF50400  NUM-CF903  MULTIPLY  2  0.99
@@ -256,13 +256,13 @@ CV904C8  TE 901 9
 *
 CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar + lo que se tira ~ 30 m3/h
 CF90510  0.0  3600.0  TIME
-CF90515  1.0  0.0  CFVALU.101
+CF90515  1.5  0.0  CFVALU.101
 *
 CF91000  'AR-INLET'  L-A-IFTE  3  1.0
 CF91005  NORMAL
 CF91010  1.0  0.0  CFVALU.506
 CF91015  2.0  0.0  CFVALU.905
-CF91020  0.5  0.0  CFVALU.905
+CF91020  0.25  0.0  CFVALU.905
 *
 CF50600  AUX-P016  L-GE  2  1.0  0.0
 CF50605  NORMAL
