@@ -836,13 +836,13 @@ CF26015   1.0  0.0  CVH-MASS.8.016
 **                    EXTERNAL DATA FILE  (*EDF package)                      **
 ********************************************************************************
 *
-EDF11100 VARIAB 2 WRITE
+EDF11100 VARIAB 3 WRITE
 EDF11101 variables.dat
 EDF11102 8E12.4
 EDF11110 0.      86400.
 EDF111AA CFVALU.250         * % AIRE LLC
 EDF111AB CFVALU.254         * % VAR AIRE LLC
-*EDF111AC CFVALU.252			* % AIRE CTC
+EDF111AC CFVALU.255			* % NUM VAR AIRE LLC
 *EDF111AD CFVALU.253			* % AIRE TIR
 *
 CF25400  LLC-AIR-VAR  DIVIDE  2  1.0
