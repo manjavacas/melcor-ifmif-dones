@@ -216,7 +216,7 @@ CF90215  1.0  0.0  CFVALU.501
 *CF50010  1.0  0.0  CFVALU.102
 *CF50015  -1.0  0.0  CFVALU.101
 *
-CF50100  NUM-CF902  MULTIPLY  2  0.8793
+CF50100  NUM-CF902  MULTIPLY  2  0.9
 CF50110  1.0  0.0  CFVALU.100
 *CF50115  1.0  0.0  CVH-MASS.5.904
 CF50115  1.0  0.0  FL-MFLOW.5.205
@@ -343,7 +343,7 @@ CF10010   0.0  57.8  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  2.0                         * Ar rejected by SGS-Ar (Nippon --> 22.2 Nm3/h)
-CF10110   0.0  0.1  TIME                             * PARAMETRO A OPTIMIZAR
+CF10110   0.0  0.6  TIME                             * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
 CF10200   QT  EQUALS  1  0.0  26869.0               
@@ -414,7 +414,7 @@ FL20802   3
 FL208S0   0.001341  7.5   0.038 
 FL208T0   2  208
 *
-CF20800   VEL-FL208  DIVIDE  2  0.0                             * RJ / (3600 * 0.001341)
+CF20800   VEL-FL208  DIVIDE  2  1.0                             * RJ / (3600 * 0.001341)
 CF20810   0.0  4.8276  TIME                                     * (3600 * 0.001341) = 4.8276
 CF20815   1.0  0.0  CFVALU.101
 * 
