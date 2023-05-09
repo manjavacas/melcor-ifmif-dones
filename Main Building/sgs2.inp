@@ -343,7 +343,7 @@ CF10010   0.0  57.8  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  2.0                         * Ar rejected by SGS-Ar (Nippon --> 22.2 Nm3/h)
-CF10110   0.0  0.1  TIME                             * PARAMETRO A OPTIMIZAR
+CF10110   0.0  0.4  TIME                             * PARAMETRO A OPTIMIZAR
 *
 ****** CAUDAL TOTAL SGS ******
 CF10200   QT  EQUALS  1  0.0  26869.0               
