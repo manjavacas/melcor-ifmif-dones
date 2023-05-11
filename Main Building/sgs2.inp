@@ -230,7 +230,7 @@ CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.8) * QP *
 CF90310  1.0  0.0  CFVALU.102
 CF90315  1.0  0.0  CFVALU.503                                       
 *
-CF50300  NUM-CF903  MULTIPLY  2  0.7
+CF50300  NUM-CF903  MULTIPLY  2  0.6
 CF50310  1.0  0.0  CFVALU.100
 *CF50315  1.0  0.0  CVH-MASS.4.904
 CF50315  1.0  0.0  FL-MFLOW.4.205
