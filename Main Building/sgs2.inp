@@ -216,9 +216,8 @@ CF90215  1.0  0.0  CFVALU.501
 *CF50010  1.0  0.0  CFVALU.102
 *CF50015  -1.0  0.0  CFVALU.101
 *
-CF50100  NUM-CF902  MULTIPLY  2  0.8
+CF50100  NUM-CF902  MULTIPLY  2  0.8793
 CF50110  1.0  0.0  CFVALU.100
-*CF50115  1.0  0.0  CVH-MASS.5.904
 CF50115  1.0  0.0  FL-MFLOW.5.205
 *
 ******* Sink SGS-AUX-3-N2 *******                    
@@ -232,7 +231,6 @@ CF90315  1.0  0.0  CFVALU.503
 *
 CF50300  NUM-CF903  MULTIPLY  2  0.8
 CF50310  1.0  0.0  CFVALU.100
-*CF50315  1.0  0.0  CVH-MASS.4.904
 CF50315  1.0  0.0  FL-MFLOW.4.205
 *
 ******* Sink SGS-AUX-3-H2O *******                    
@@ -246,7 +244,6 @@ CF90415  1.0  0.0  CFVALU.504
 *
 CF50400  NUM-CF903  MULTIPLY  2  0.99
 CF50410  1.0  0.0  CFVALU.100
-*CF50415  1.0  0.0  CVH-MASS.3.904
 CF50415  1.0  0.0  FL-MFLOW.3.205
 *  
 ******* Source SGS-AUX-3-Ar *******                    
@@ -256,7 +253,7 @@ CV904C8  TE 901 9
 *
 CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar + lo que se tira ~ 30 m3/h
 CF90510  0.0  3600.0  TIME
-CF90515  1.0  0.0  CFVALU.101
+CF90515  0.95045  0.0  CFVALU.101                         * 95% pureza
 *
 CF91000  'AR-INLET'  L-A-IFTE  3  1.0
 CF91005  NORMAL
@@ -268,6 +265,9 @@ CF50600  AUX-P016  L-GE  2  1.0  0.0
 CF50605  NORMAL
 CF50610  0.0  101065.0  TIME
 CF50615  1.0  0.0  CVH-P.16   
+*
+*
+* Pureza Argón inyectado --> 100%. En caso de menos, hay que inyectar las impurezas
 *
 *-----------------------------------------------                                                                
 * CV905 - SGS-AUX-4                                                                    
@@ -286,6 +286,46 @@ CV905A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 3%
 CV905B1   6.2      0.0                                                            
 CV905B2   7.2      1.0                              * 1m x 1m x 1m                                                   
 ***
+*                                           
+CV905C1  MASS.5 920 3                                       * Impurezas O2 inyectadas                
+CV905C2  TE 901 9   
+*
+CF90900  'AUX-3-imp1-src'  DIVIDE  2  1.429           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar + lo que se tira ~ 30 m3/h
+CF90910  0.0  3600.0  TIME
+CF90915  0.0105  0.0  CFVALU.101
+*
+CF92000  'O2-imp-INLET'  L-A-IFTE  3  1.0
+CF92005  NORMAL
+CF92010  1.0  0.0  CFVALU.506
+CF92015  2.0  0.0  CFVALU.909
+CF92020  0.0  0.0  CFVALU.909
+*                                          
+CV905C3  MASS.4 921 3                                     * Impurezas N2 inyectadas                
+CV905C4  TE 901 9   
+*
+CF91100  'AUX-3-imp2-src'  DIVIDE  2  1.25           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar + lo que se tira ~ 30 m3/h
+CF91110  0.0  3600.0  TIME
+CF91115  0.039  0.0  CFVALU.101
+*
+CF92100  'N2-imp-INLET'  L-A-IFTE  3  1.0
+CF92105  NORMAL
+CF92110  1.0  0.0  CFVALU.506
+CF92115  2.0  0.0  CFVALU.911
+CF92120  0.0  0.0  CFVALU.911
+*                                          
+CV905C5  MASS.3 922 3                                     * Impurezas H2O inyectadas                
+CV905C6  TE 901 9   
+*
+CF91200  'AUX-3-imp3-src'  DIVIDE  2  0.598136           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar + lo que se tira ~ 30 m3/h
+CF91210  0.0  3600.0  TIME
+CF91215  0.00005  0.0  CFVALU.101
+*
+CF92200  'H2O-imp-INLET'  L-A-IFTE  3  1.0
+CF92205  NORMAL
+CF92210  1.0  0.0  CFVALU.506
+CF92215  2.0  0.0  CFVALU.912
+CF92220  0.0  0.0  CFVALU.912
+*
 *-----------------------------------------------                                                                
 * CV907 - SGS-AUX-6                                                                     
 *-----------------------------------------------                                                                
@@ -489,8 +529,8 @@ FL016T0  2  016
 *
 CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
 CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF01615  0.0  0.2495   TIME                           * 0.0001 * VOL_LLC
-CF01615  0.0  2.495   TIME
+CF01615  0.0  0.2495   TIME                           * 0.0001 * VOL_LLC
+*CF01615  0.0  2.495   TIME
 *
 *
 FL00900  R009-2-LEAK   400   009  4.25   4.25
@@ -501,8 +541,8 @@ FL009T0  2  009
 *
 CF00900  R009-2-LEAK-VEL  DIVIDE  2  1.0
 CF00910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF00915  0.0  0.0585   TIME                           * 0.0001 * VOL_CTC
-CF00915  0.0  0.585   TIME 
+CF00915  0.0  0.0585   TIME                           * 0.0001 * VOL_CTC
+*CF00915  0.0  0.585   TIME 
 *
 *
 FL00800  R009-1-LEAK   400   008  4.0   4.0
@@ -513,8 +553,8 @@ FL008T0  2  008
 *
 CF00800  R009-1-LEAK-VEL  DIVIDE  2  1.0
 CF00810  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF00815  0.0  0.0557   TIME                           * 0.0001 * VOL_HTC
-CF00815  0.0  0.557   TIME  
+CF00815  0.0  0.0557   TIME                           * 0.0001 * VOL_HTC
+*CF00815  0.0  0.557   TIME  
 *
 *
 FL12900  R129-LEAK   400   129  11.75   11.75
@@ -525,154 +565,11 @@ FL129T0  2  129
 *
 CF12900  R129-LEAK-VEL  DIVIDE  2  1.0
 CF12910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF12915  0.0  0.0529   TIME                           * 0.0001 * VOL_TIR
-CF12915  0.0  0.529   TIME 
+CF12915  0.0  0.0529   TIME                           * 0.0001 * VOL_TIR
+*CF12915  0.0  0.529   TIME 
 *
 ***
 *************************************************** OUTPUTS ***************************************************
-*
-* Formula densidad: d = d' · (P · T') / (P' · T) ; T' = 25 ºC , P' = Patm = 101325 Pa
-*
-*CF15000   N2-dens-LLC DIVIDE 2 1.0                                      
-*CF15010   101325.0  0.0  CVH-TVAP.016
-*CF15015   347.34475  0.0  CVH-P.016                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
-*
-*CF15100   O2-dens-LLC DIVIDE 2 1.0                                      
-*CF15110   101325.0  0.0  CVH-TVAP.016
-*CF15115   396.83765  0.0  CVH-P.016                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
-*
-*CF15200   H2O-dens-LLC DIVIDE 2 1.0                                      
-*CF15210   101325.0  0.0  CVH-TVAP.016
-*CF15215   297.2704575  0.0  CVH-P.016                               * d' · T' = 297.2704575 (d' = 0.99705 kg/m3)
-*
-*
-*CF18400   N2-dens-AUX2 DIVIDE 2 1.0                                      
-*CF18410   101325.0  0.0  CVH-TVAP.903
-*CF18415   347.34475  0.0  CVH-P.903                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
-*
-*CF18500   O2-dens-AUX2 DIVIDE 2 1.0                                      
-*CF18510   101325.0  0.0  CVH-TVAP.903
-*CF18515   396.83765  0.0  CVH-P.903                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
-*
-*CF18600   H2O-dens-AUX2 DIVIDE 2 1.0                                      
-*CF18610   101325.0  0.0  CVH-TVAP.903
-*CF18615   297.2704575  0.0  CVH-P.903                               * d' · T' = 297.2704575 (d' = 0.99705 kg/m3)
-*
-*CF18700   Ar-dens-AUX2 DIVIDE 2 1.0                                      
-*CF18710   101325.0  0.0  CVH-TVAP.903
-*CF18715   531.8996  0.0  CVH-P.903                                  * d' · T = 531.8996 (d' = 1.784 kg/m3)
-*
-*
-*CF15300   N2-dens-AUX3 DIVIDE 2 1.0                                      
-*CF15310   101325.0  0.0  CVH-TVAP.904
-*CF15315   347.34475  0.0  CVH-P.904                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
-*
-*CF15400   O2-dens-AUX3 DIVIDE 2 1.0                                      
-*CF15410   101325.0  0.0  CVH-TVAP.904
-*CF15415   396.83765  0.0  CVH-P.904                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
-*
-*CF15500   H2O-dens-AUX3 DIVIDE 2 1.0                                      
-*CF15510   101325.0  0.0  CVH-TVAP.904
-*CF15515   297.2704575  0.0  CVH-P.904                               * d' · T' = 297.2704575 (d' = 0.99705 kg/m3)
-*
-*CF18300   Ar-dens-AUX3 DIVIDE 2 1.0                                      
-*CF18310   101325.0  0.0  CVH-TVAP.904
-*CF18315   531.8996  0.0  CVH-P.904                                  * d' · T = 531.8996 (d' = 1.784 kg/m3)
-*
-*
-*CF15600   N2-dens-TIR DIVIDE 2 1.0                                      
-*CF15610   101325.0  0.0  CVH-TVAP.129
-*CF15615   347.34475  0.0  CVH-P.129                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
-*
-*CF15700   O2-dens-TIR DIVIDE 2 1.0                                      
-*CF15710   101325.0  0.0  CVH-TVAP.129
-*CF15715   396.83765  0.0  CVH-P.129                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
-*
-*CF15800   H2O-dens-TIR DIVIDE 2 1.0                                      
-*CF15810   101325.0  0.0  CVH-TVAP.129
-*CF15815   297.2704575  0.0  CVH-P.129                               * d' · T' = 297.2704575 (d' = 0.99705 kg/m3)
-*
-*
-*CF15900   N2-dens-HTC DIVIDE 2 1.0                                      
-*CF15910   101325.0  0.0  CVH-TVAP.009
-*CF15915   347.34475  0.0  CVH-P.009                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
-*
-*CF16900   O2-dens-HTC DIVIDE 2 1.0                                      
-*CF16910   101325.0  0.0  CVH-TVAP.009
-*CF16915   396.83765  0.0  CVH-P.009                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
-*
-*CF17000   H2O-dens-HTC DIVIDE 2 1.0                                      
-*CF17010   101325.0  0.0  CVH-TVAP.009
-*CF17015   297.2704575  0.0  CVH-P.009                               * d' · T' = 297.2704575 (d' = 0.99705 kg/m3)
-*
-*
-*CF17100   N2-dens-CTC DIVIDE 2 1.0                                      
-*CF17110   101325.0  0.0  CVH-TVAP.008
-*CF17115   347.34475  0.0  CVH-P.008                                 * d' · T' = 347.34475 (d' = 1.165 kg/m3)
-*
-*CF17200   O2-dens-CTC DIVIDE 2 1.0                                      
-*CF17210   101325.0  0.0  CVH-TVAP.008
-*CF17215   396.83765  0.0  CVH-P.008                                 * d' · T' = 396.83765 (d' = 1.331 kg/m3)
-*
-*CF17300   H2O-dens-CTC DIVIDE 2 1.0                                      
-*CF17310   101325.0  0.0  CVH-TVAP.008
-*CF17315   297.2704575  0.0  CVH-P.008                               * d' · T' = 297.2704575 (d' = 0.99705 kg/m3)
-*
-*
-* ppm
-*
-*
-*CF16000   LLC-N2-ppm DIVIDE 2 1.0E6
-*CF16010   2495.0  0.0  CFVALU.150            * Volumen LLC * densidad N2 = 2495.0 * CFVALU.150                                                              
-*CF16015   1.0  0.0  CVH-MASS.4.016
-*
-*CF16100   LLC-O2-ppm DIVIDE 2 1.0E6
-*CF16110   2495.0  0.0  CFVALU.151            * Volumen LLC * densidad O2 = 2495.0 * CFVALU.151                                                                       
-*CF16115   1.0  0.0  CVH-MASS.5.016
-*
-*CF16200   LLC-H2O-ppm DIVIDE 2 1.0E6
-*CF16210   2495.0  0.0  CFVALU.152            * Volumen LLC * densidad H2O = 2495.0 * CFVALU.152                                                                         
-*CF16215   1.0  0.0  CVH-MASS.3.016
-*
-*
-*CF17400   TIR-N2-ppm DIVIDE 2 1.0E6
-*CF17410   529.0  0.0  CFVALU.156            * Volumen TIR * densidad N2 = 529.0 * CFVALU.156                                                              
-*CF17415   1.0  0.0  CVH-MASS.4.129
-*
-*CF17500   TIR-O2-ppm DIVIDE 2 1.0E6
-*CF17510   529.0  0.0  CFVALU.157            * Volumen TIR * densidad O2 = 529.0 * CFVALU.157                                                                       
-*CF17515   1.0  0.0  CVH-MASS.5.129
-*
-*CF17600   TIR-H2O-ppm DIVIDE 2 1.0E6
-*CF17610   529.0  0.0  CFVALU.158            * Volumen TIR * densidad H2O = 529.0 * CFVALU.158                                                                         
-*CF17615   1.0  0.0  CVH-MASS.3.129
-*
-*
-*CF17700   HTC-N2-ppm DIVIDE 2 1.0E6
-*CF17710   585.0  0.0  CFVALU.159            * Volumen HTC * densidad N2 = 585.0 * CFVALU.159                                                              
-*CF17715   1.0  0.0  CVH-MASS.4.009
-*
-*CF17800   HTC-O2-ppm DIVIDE 2 1.0E6
-*CF17810   585.0  0.0  CFVALU.169            * Volumen HTC * densidad O2 = 585.0 * CFVALU.169                                                                       
-*CF17815   1.0  0.0  CVH-MASS.5.009
-*
-*CF17900   HTC-H2O-ppm DIVIDE 2 1.0E6
-*CF17910   585.0  0.0  CFVALU.170            * Volumen HTC * densidad H2O = 585.0 * CFVALU.170                                                                         
-*CF17915   1.0  0.0  CVH-MASS.3.009
-*
-*
-*CF18000   CTC-N2-ppm DIVIDE 2 1.0E6
-*CF18010   557.0  0.0  CFVALU.171            * Volumen CTC * densidad N2 = 557.0 * CFVALU.171                                                              
-*CF18015   1.0  0.0  CVH-MASS.4.008
-*
-*CF18100   CTC-O2-ppm DIVIDE 2 1.0E6
-*CF18110   557.0  0.0  CFVALU.172            * Volumen CTC * densidad O2 = 557.0 * CFVALU.172                                                                       
-*CF18115   1.0  0.0  CVH-MASS.5.008
-*
-*CF18200   CTC-H2O-ppm DIVIDE 2 1.0E6
-*CF18210   557.0  0.0  CFVALU.173            * Volumen CTC * densidad H2O = 557.0 * CFVALU.173                                                                         
-*CF18215   1.0  0.0  CVH-MASS.3.008
-*
 *
 *  Porcentaje aire
 *
