@@ -10665,7 +10665,7 @@ CPULEFT          200.
 CPULIM           86400.                                 
 CYMESF           100000 100000                      
 RESTART          -1              
-SOFTDTMIN        .1 1000
+SOFTDTMIN        .01 1000
 *
 TEND             3e7   * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
@@ -10680,6 +10680,6 @@ DIAGFILE     mbs_cor.dia
 MESSAGEFILE  mbs_cor.mes
 *
 *            TIME        DTMAX   DTMIN      DTEDT      DTPLT      DTRST
-TIME1        0.0         100.0     5.0      86400.0    86400.0    86400.0
+TIME1        0.0         100.0     1.0      86400.0    86400.0    86400.0
 *
 .* END
