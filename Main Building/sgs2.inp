@@ -208,15 +208,15 @@ CF90110  1.0  0.0  CVH-TVAP.904                     * Temp AUX-3 = 290.95K (mant
 CV904C1  MASS.5 902 3                       
 CV904C2  TE 901 9                           
 *       
-CF90200 'AUX-3-O2-sink' DIVIDE  2  -1.0               * Eficiencia (= 0.8793) * QP * MASS/S / QT 
-CF90210  1.0  0.0  CFVALU.102
+CF90200 'AUX-3-O2-sink' DIVIDE  2  -1.0               * Eficiencia (= 0.8) * QP * MASS/S / QT 
+CF90210  1.0  0.0  CFVALU.500
 CF90215  1.0  0.0  CFVALU.501                                       
 *
-*CF50000  DENOM-CF902  ADD  2  1.0  * 3600.0  
-*CF50010  1.0  0.0  CFVALU.102
-*CF50015  -1.0  0.0  CFVALU.101
+CF50000  DENOM-CF902  ADD  2  1.0  3600.0  
+CF50010  1.0  0.0  CFVALU.102
+CF50015  -1.0  0.0  CFVALU.101
 *
-CF50100  NUM-CF902  MULTIPLY  2  0.8793
+CF50100  NUM-CF902  MULTIPLY  2  0.8
 CF50110  1.0  0.0  CFVALU.100
 CF50115  1.0  0.0  FL-MFLOW.5.205
 *
@@ -225,11 +225,11 @@ CF50115  1.0  0.0  FL-MFLOW.5.205
 CV904C3  MASS.4 903 3                       
 CV904C4  TE 901 9                           
 *     
-CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.8) * QP * MASS/S / (QT-R)
+CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.7) * QP * MASS/S / (QT-R)
 CF90310  1.0  0.0  CFVALU.102
 CF90315  1.0  0.0  CFVALU.503                                       
 *
-CF50300  NUM-CF903  MULTIPLY  2  0.8
+CF50300  NUM-CF903  MULTIPLY  2  0.7
 CF50310  1.0  0.0  CFVALU.100
 CF50315  1.0  0.0  FL-MFLOW.4.205
 *
@@ -238,11 +238,11 @@ CF50315  1.0  0.0  FL-MFLOW.4.205
 CV904C5  MASS.3 904 3                       
 CV904C6  TE 901 9                           
 *  
-CF90400 'AUX-3-H20-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.99) * QP * MASS/S / (QT-R)
+CF90400 'AUX-3-H20-sink' DIVIDE 2  -1.0               * Eficiencia (= 0.95) * QP * MASS/S / (QT-R)
 CF90410  1.0  0.0  CFVALU.102
 CF90415  1.0  0.0  CFVALU.504                                       
 *
-CF50400  NUM-CF903  MULTIPLY  2  0.99
+CF50400  NUM-CF903  MULTIPLY  2  0.95
 CF50410  1.0  0.0  CFVALU.100
 CF50415  1.0  0.0  FL-MFLOW.3.205
 *  
@@ -294,12 +294,15 @@ CF90900  'AUX-3-imp1-src'  DIVIDE  2  1.429           * +- El volumen de fugas (
 CF90910  0.0  3600.0  TIME
 CF90915  0.0105  0.0  CFVALU.101
 *
-CF92000  'O2-imp-INLET'  L-A-IFTE  3  1.0
-CF92005  NORMAL
-CF92010  1.0  0.0  CFVALU.506
-CF92015  2.0  0.0  CFVALU.909
-CF92020  0.0  0.0  CFVALU.909
-*                                          
+*CF92000  'O2-imp-INLET'  L-A-IFTE  3  1.0
+*CF92005  NORMAL
+*CF92010  1.0  0.0  CFVALU.506
+*CF92015  2.0  0.0  CFVALU.909
+*CF92020  0.0  0.0  CFVALU.909
+*
+CF92000  'O2-imp-INLET'  EQUALS  1  -1.0
+CF92010  1.0  0.0  CFVALU.904   
+*                                     
 CV905C3  MASS.4 921 3                                     * Impurezas N2 inyectadas                
 CV905C4  TE 901 9   
 *
