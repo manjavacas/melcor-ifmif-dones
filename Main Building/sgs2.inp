@@ -311,12 +311,9 @@ CF51200  AR-INLET-vel  DIVIDE  2  1.0
 CF51210  0.0  1800.0  TIME                                      * (3600 * 0.5) = 1800.0 
 CF51215  1.0  0.0  CFVALU.513
 *
-CF51300  AR-INLET-vel-NUM  ADD  5  1.0
-CF51310  -1.0  0.0  CFVALU.016
-CF51315  -1.0  0.0  CFVALU.008
-CF51320  -1.0  0.0  CFVALU.009
-CF51325  -1.0  0.0  CFVALU.129
-CF51330  4.8276  0.0  FL-VELVAP.210                               * Q = VEL * (3600 * 0.001341)
+CF51300  AR-INLET-vel-NUM  ADD  2  1.0
+CF51310  0.0  -0.4166  TIME                                     * VOL_fugas = HLR (0.0001) * TOTAL_VOL (4166 m3)
+CF51315  4.8276   0.0  FL-VELVAP.210                            * Q = VEL * (3600 * 0.001341)
 *
 CF51000  AUX-PSALAS  L-OR  4  1.0  0.0
 CF51005  NORMAL
