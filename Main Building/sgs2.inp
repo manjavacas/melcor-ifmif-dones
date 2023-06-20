@@ -157,8 +157,8 @@ CV129A8   MLFR.8  0.995                              * Filled with Ar (99.5%)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
-CV129B1   9.0      0.0                                                         
-CV129B2   14.5     529.0                            * 209.4 m3 (2PNSLP)  
+CV129B1   0.0      0.0                                                         
+CV129B2   5.5     529.0                            * 209.4 m3 (2PNSLP)  
 ***
 *
 **************************************************************** SGS ******************************************************************
@@ -277,32 +277,65 @@ CV905A8   MLFR.8  0.995                              * Filled with Ar (99.5%)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-CV905B1   6.2      0.0                                                            
-CV905B2   7.2      1.0                              * 1m x 1m x 1m                                                   
+CV905B1   5.0      0.0                                                            
+CV905B2   7.2      2.2                              * 1m x 1m x 1m                                                   
 ***
 ******* Source SGS-AUX-3-Ar *******                    
 *                                           
-CV905C7  MASS.8 910 3                       
-CV905C8  TE 901 9   
+* CV905C7  MASS.8 910 3                       
+* CV905C8  TE 901 9   
+* *
+* CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           
+* CF90510  0.0  3600.0  TIME
+* CF90515  0.995  0.0  CFVALU.101                        * 99.5% pureza
+* *
+* CF91000  'AR-INLET'  L-A-IFTE  3  1.0
+* CF91005  NORMAL
+* CF91010  1.0  0.0  CFVALU.506
+* CF91015  2.0  0.0  CFVALU.905
+* CF91020  0.0  0.0  CFVALU.905
+* *
+* CF50600  AUX-P016  L-GE  2  1.0  0.0
+* CF50605  NORMAL
+* CF50610  0.0  101065.0  TIME
+* CF50615  1.0  0.0  CVH-P.16                           
 *
-CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           
-CF90510  0.0  3600.0  TIME
-CF90515  0.995  0.0  CFVALU.101                        * 99.5% pureza
-*
-CF91000  'AR-INLET'  L-A-IFTE  3  1.0
-CF91005  NORMAL
-CF91010  1.0  0.0  CFVALU.506
-CF91015  2.0  0.0  CFVALU.905
-CF91020  0.0  0.0  CFVALU.905
-*
-CF50600  AUX-P016  L-GE  2  1.0  0.0
-CF50605  NORMAL
-CF50610  0.0  101065.0  TIME
-CF50615  1.0  0.0  CVH-P.16                           
-*
-* AQUÍ YO METERÍA EL ARGÓN CON UN FL(PID) DESDE UN VOLUMEN QUE CONTENGA ARGON CON LA PUREZA QUE SEA + LAS IMPUREZAS,
-* ASÍ NO HAY QUE HACER 4 FUENTES DE MASA PARA EL INLET
-*
+
+CF30500 SETPOINT EQUALS 1 1.0
+CF30510 0.0 101065.0 TIME
+
+CF30400 ERROR-CTC ADD 2 1.0
+CF30410 1.0 0.0 CVH-P.8
+CF30411 -1.0 0.0 CFVALU.305
+
+CF30300 ERROR-HTC ADD 2 1.0
+CF30310 1.0 0.0 CVH-P.9
+CF30311 -1.0 0.0 CFVALU.305
+
+CF30200 ERROR-TIR ADD 2 1.0
+CF30210 1.0 0.0 CVH-P.129
+CF30211 -1.0 0.0 CFVALU.305
+
+CF30100 ERROR-LLC ADD 2 1.0
+CF30110 1.0 0.0 CVH-P.16
+CF30111 -1.0 0.0 CFVALU.305
+
+CF30000 MEAN-SUM-ERROR ADD 4 0.25
+CF30010 1.0 0.0 CFVALU.301
+CF30011 1.0 0.0 CFVALU.302
+CF30012 1.0 0.0 CFVALU.303
+CF30013 1.0 0.0 CFVALU.304
+
+CF29900 PID-AR-INLET PID 1 1.0
+CF29903 0.2 0.05 0.0                * Kp, Ki, Kd
+CF29910 1.0 0.0 CFVALU.300
+
+FL29900   Ar-INLET   401   905   6.2  6.2
+FL29901   0.43709  10.0   1.0             
+FL29902	  3                                                         
+FL299S0   0.43709  10.0   0.746
+FL299T0   2     299
+
 *-----------------------------------------------                                                                
 * CV907 - SGS-AUX-6                                                                     
 *-----------------------------------------------                                                                
@@ -359,7 +392,7 @@ CF10010   0.0  80.0  TIME
 CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  EQUALS  1  0.5                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
+CF10100   RJ  EQUALS  1  0.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
 CF10110   0.0  0.4166  TIME                             
 *
 ****** CAUDAL TOTAL SGS ******
@@ -444,8 +477,9 @@ FL210S0   0.001341  7.5   0.038
 * SGS FL211           FM    TO    FM   TO                       * AUX-4 -> R129
 *-------------------------------------------------------
 *
-FL21100   SGS-FL211   905   129   6.7   12.0
-FL21101   0.437087  18.0   1.0                                                      
+FL21100   SGS-FL211   905   129   5.25   5.25
+FL21101   0.437087  18.0   1.0
+FL21102   3                                                      
 FL211S0   0.437087  18.0   0.746     
 *
 *-------------------------------------------------------
@@ -488,8 +522,9 @@ FL215S0   0.218956  18.0   0.528
 * SGS FL216           FM    TO    FM   TO                       * R129 --> AUX-4
 *-------------------------------------------------------
 *
-FL21600   SGS-FL216   129   902   12.0   6.7
-FL21601   0.437087  18.0   1.0                                                           
+FL21600   SGS-FL216   129   902   5.25   5.25
+FL21601   0.437087  18.0   1.0 
+FL21602   3                                                          
 FL216S0   0.437087  18.0   0.746                                         
 *
 ***
