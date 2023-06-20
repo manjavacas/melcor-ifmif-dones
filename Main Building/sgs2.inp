@@ -74,7 +74,7 @@ CV40100   ArSS  2  2  5
 CV40101   0   -1		                                  				            
 CV401A0   3                                                                                         
 CV401A1   PVOL    101065.0                                                                                              
-CV401A3   TATM    293.15  RHUM  0.0    	                                                  
+CV401A3   TATM    293.15  RHUM  0.6    	                                                  
 CV401A4   MLFR.4  0.00395                               
 CV401A6   MLFR.5  0.00105                                
 CV401A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -93,7 +93,7 @@ CV01600   R016  2  0  1
 CV01601   0   0		                              
 CV016A0   3                                                                                         
 CV016A1   PVOL  101065.0                            
-CV016A2   TATM  290.95  RHUM  0.0                   
+CV016A2   TATM  290.95  RHUM  0.6                   
 CV016A4   MLFR.4  0.00395                               
 CV016A6   MLFR.5  0.00105                                
 CV016A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -112,7 +112,7 @@ CV00800   R009-1  2  0  1
 CV00801   0   0		                               
 CV008A0   3                                                                                         
 CV008A1   PVOL  101065.0                            * 101325Pa-90Pa 
-CV008A2   TATM  293.15  RHUM  0.0                  
+CV008A2   TATM  293.15  RHUM  0.6                  
 CV008A4   MLFR.4  0.00395                               
 CV008A6   MLFR.5  0.00105                                
 CV008A8   MLFR.8  0.995                              * Filled with Ar (99.5%)                          
@@ -131,7 +131,7 @@ CV00900   R009-2  2  0  1
 CV00901   0   0		                               
 CV009A0   3                                                                                         
 CV009A1   PVOL  101065.0                            * 101325Pa-90Pa 
-CV009A2   TATM  293.15  RHUM  0.0                  
+CV009A2   TATM  293.15  RHUM  0.6                  
 CV009A4   MLFR.4  0.00395                               
 CV009A6   MLFR.5  0.00105                                
 CV009A8   MLFR.8  0.995                              * Filled with Ar (99.5%)                        
@@ -150,7 +150,7 @@ CV12900   R129  2  2  2
 CV12901   0   0		                           
 CV129A0   3                                                                                         
 CV129A1   PVOL    101065.0                          * 101325-130Pa                                                                          
-CV129A3   TATM    298.15    RHUM  0.0                                                     
+CV129A3   TATM    298.15    RHUM  0.6                                                     
 CV129A4   MLFR.4  0.00395                               
 CV129A6   MLFR.5  0.00105                                
 CV129A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -171,7 +171,7 @@ CV90200   SGS-AUX-1  2  0  1
 CV90201   0   0		                              
 CV902A0   3                                                                                         
 CV902A1   PVOL  101000.0                            
-CV902A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C
+CV902A2   TATM  290.95  RHUM  0.6                    * 17.8 deg. C
 CV902A4   MLFR.4  0.00395                               
 CV902A6   MLFR.5  0.00105                                
 CV902A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -188,7 +188,7 @@ CV90300   SGS-AUX-2  2  0  1
 CV90301   0   0		                           
 CV903A0   3                                                                                         
 CV903A1   PVOL  101400.0                            
-CV903A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C
+CV903A2   TATM  290.95  RHUM  0.6                   * 17.8 deg. C
 CV903A4   MLFR.4  0.00395                               
 CV903A6   MLFR.5  0.00105                                
 CV903A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -205,7 +205,7 @@ CV90400   SGS-AUX-3  2  0  1
 CV90401   0   0		                                * Fog allowed (default)
 CV904A0   3                                                                                         
 CV904A1   PVOL  101300.0                            
-CV904A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
+CV904A2   TATM  290.95  RHUM  0.6                   * 17.8 deg. C; 0% rel. humidity
 CV904A4   MLFR.4  0.00395                               
 CV904A6   MLFR.5  0.00105                                
 CV904A8   MLFR.8  0.995                              * Filled with Ar (99.5%) 
@@ -270,7 +270,7 @@ CV90500   SGS-AUX-4  2  0  1
 CV90501   0   0		                              
 CV905A0   3                                                                                         
 CV905A1   PVOL  101200.0                             
-CV905A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C
+CV905A2   TATM  290.95  RHUM  0.6                   * 17.8 deg. C
 CV905A4   MLFR.4  0.00395                               
 CV905A6   MLFR.5  0.00105                                
 CV905A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -282,27 +282,71 @@ CV905B2   7.2      2.2                              * 1m x 1m x 1m
 ***
 ******* Source SGS-AUX-3-Ar *******                    
 *                                           
-CV905C7  MASS.8 910 3                       
-CV905C8  TE 901 9   
+*CV905C7  MASS.8 910 3                       
+*CV905C8  TE 901 9   
 * 
-CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           
-CF90510  0.0  3600.0  TIME
-CF90515  0.995  0.0  CFVALU.101                        * 99.5% pureza
+*CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           
+*CF90510  0.0  3600.0  TIME
+*CF90515  0.995  0.0  CFVALU.101                        * 99.5% pureza
 *
-CF91000  'AR-INLET'  L-A-IFTE  3  1.0
-CF91005  NORMAL
-CF91010  1.0  0.0  CFVALU.506
-CF91015  2.0  0.0  CFVALU.905
-CF91020  0.0  0.0  CFVALU.905
+*CF91000  'AR-INLET'  L-A-IFTE  3  1.0
+*CF91005  NORMAL
+*CF91010  1.0  0.0  CFVALU.506
+*CF91015  2.0  0.0  CFVALU.905
+*CF91020  0.0  0.0  CFVALU.905
+*
+FL20700  AR-INLET  401  905  6.7  6.7
+FL20701  0.5  1.0  1.0
+FL20702  3
+FL207S0  0.5  1.0  0.5
+FL207T0  2  512
+*
+CF51100  AR-INLET-control  L-A-IFTE  3  1.0
+CF51105  NORMAL
+CF51110  1.0  0.0  CFVALU.510
+CF51115  1.2  0.0  CFVALU.512
+CF51120  0.0  0.0  CFVALU.512
+*
+CF51200  AR-INLET-vel  DIVIDE  2  1.0
+CF51210  0.0  1800.0  TIME                                      * (3600 * 0.5) = 1800.0 
+CF51215  1.0  0.0  CFVALU.513
+*
+CF51300  AR-INLET-vel-NUM  ADD  5  1.0
+CF51310  -1.0  0.0  CFVALU.016
+CF51315  -1.0  0.0  CFVALU.008
+CF51320  -1.0  0.0  CFVALU.009
+CF51325  -1.0  0.0  CFVALU.129
+CF51330  4.8276  0.0  FL-VELVAP.210                               * Q = VEL * (3600 * 0.001341)
+*
+CF51000  AUX-PSALAS  L-OR  4  1.0  0.0
+CF51005  NORMAL
+CF51010  1.0  0.0  CFVALU.506
+CF51015  1.0  0.0  CFVALU.508
+CF51020  1.0  0.0  CFVALU.509
+CF51025  1.0  0.0  CFVALU.529
 *
 CF50600  AUX-P016  L-GE  2  1.0  0.0
 CF50605  NORMAL
-CF50610  0.0  101065.0  TIME
+CF50610  1.0  0.0  CFVALU.305
 CF50615  1.0  0.0  CVH-P.16                           
 *
-
-*CF30500 SETPOINT EQUALS 1 1.0
-*CF30510 0.0 101065.0 TIME
+CF50800  AUX-P008  L-GE  2  1.0  0.0
+CF50805  NORMAL
+CF50810  1.0  0.0  CFVALU.305
+CF50815  1.0  0.0  CVH-P.8
+*
+CF50900  AUX-P009  L-GE  2  1.0  0.0
+CF50905  NORMAL
+CF50910  1.0  0.0  CFVALU.305
+CF50915  1.0  0.0  CVH-P.9
+*
+CF52900  AUX-P129  L-GE  2  1.0  0.0
+CF52905  NORMAL
+CF52910  1.0  0.0  CFVALU.305
+CF52915  1.0  0.0  CVH-P.129
+*
+CF30500 SETPOINT EQUALS 1 1.0
+CF30510 0.0 101065.0 TIME
 
 *CF30400 ERROR-CTC ADD 2 1.0
 *CF30410 1.0 0.0 CVH-P.8
@@ -343,7 +387,7 @@ CV90700   SGS-AUX-6  2  0  1
 CV90701   0   0		                               
 CV907A0   3                                                                                         
 CV907A1   PVOL  101300.0                            
-CV907A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C
+CV907A2   TATM  290.95  RHUM  0.6                    * 17.8 deg. C
 CV907A4   MLFR.4  0.00395                               
 CV907A6   MLFR.5  0.00105                                
 CV907A8   MLFR.8  0.995                              * Filled with Ar (99.5%)   
@@ -664,6 +708,6 @@ SOFTDTMIN  .1  1000
 *
 *
 *             TIME     DTMAX     DTMIN     DTEDT      DTPLT      DTRST
-TIME1         0.0      100.0    0.1     43200.0    43200.0    43200.0          
+TIME1         0.0      100.0    10.0     43200.0    43200.0    43200.0          
 *
 .* END
