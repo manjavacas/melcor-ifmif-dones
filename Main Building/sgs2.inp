@@ -74,7 +74,7 @@ CV40100   ArSS  2  2  5
 CV40101   0   -1		                                  				            
 CV401A0   3                                                                                         
 CV401A1   PVOL    101065.0                                                                                              
-CV401A3   TATM    293.15  RHUM  0.6    	                                                  
+CV401A3   TATM    293.15  RHUM  0.0    	                                                  
 CV401A4   MLFR.4  0.00395                               
 CV401A6   MLFR.5  0.00105                                
 CV401A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -112,7 +112,7 @@ CV00800   R009-1  2  0  1
 CV00801   0   0		                               
 CV008A0   3                                                                                         
 CV008A1   PVOL  101065.0                            * 101325Pa-90Pa 
-CV008A2   TATM  293.15  RHUM  0.6                  
+CV008A2   TATM  293.15  RHUM  0.0                  
 CV008A4   MLFR.4  0.00395                               
 CV008A6   MLFR.5  0.00105                                
 CV008A8   MLFR.8  0.995                              * Filled with Ar (99.5%)                          
@@ -131,7 +131,7 @@ CV00900   R009-2  2  0  1
 CV00901   0   0		                               
 CV009A0   3                                                                                         
 CV009A1   PVOL  101065.0                            * 101325Pa-90Pa 
-CV009A2   TATM  293.15  RHUM  0.6                  
+CV009A2   TATM  293.15  RHUM  0.0                  
 CV009A4   MLFR.4  0.00395                               
 CV009A6   MLFR.5  0.00105                                
 CV009A8   MLFR.8  0.995                              * Filled with Ar (99.5%)                        
@@ -178,8 +178,8 @@ CV902A8   MLFR.8  0.995                              * Filled with Ar (99.5%)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
-CV902B1   6.2      0.0                                                            
-CV902B2   7.2      1.0                              * 1m x 1m x 1m                                                   
+CV902B1   5.2      0.0                                                            
+CV902B2   7.2      2.0                              * 1m x 1m x 1m                                                   
 ***
 *-----------------------------------------------                                                                
 * CV903 - SGS-AUX-2                                                                    
@@ -282,59 +282,59 @@ CV905B2   7.2      2.2                              * 1m x 1m x 1m
 ***
 ******* Source SGS-AUX-3-Ar *******                    
 *                                           
-* CV905C7  MASS.8 910 3                       
-* CV905C8  TE 901 9   
-* *
-* CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           
-* CF90510  0.0  3600.0  TIME
-* CF90515  0.995  0.0  CFVALU.101                        * 99.5% pureza
-* *
-* CF91000  'AR-INLET'  L-A-IFTE  3  1.0
-* CF91005  NORMAL
-* CF91010  1.0  0.0  CFVALU.506
-* CF91015  2.0  0.0  CFVALU.905
-* CF91020  0.0  0.0  CFVALU.905
-* *
-* CF50600  AUX-P016  L-GE  2  1.0  0.0
-* CF50605  NORMAL
-* CF50610  0.0  101065.0  TIME
-* CF50615  1.0  0.0  CVH-P.16                           
+CV905C7  MASS.8 910 3                       
+CV905C8  TE 901 9   
+* 
+CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           
+CF90510  0.0  3600.0  TIME
+CF90515  0.995  0.0  CFVALU.101                        * 99.5% pureza
+*
+CF91000  'AR-INLET'  L-A-IFTE  3  1.0
+CF91005  NORMAL
+CF91010  1.0  0.0  CFVALU.506
+CF91015  2.0  0.0  CFVALU.905
+CF91020  0.0  0.0  CFVALU.905
+*
+CF50600  AUX-P016  L-GE  2  1.0  0.0
+CF50605  NORMAL
+CF50610  0.0  101065.0  TIME
+CF50615  1.0  0.0  CVH-P.16                           
 *
 
-CF30500 SETPOINT EQUALS 1 1.0
-CF30510 0.0 101065.0 TIME
+*CF30500 SETPOINT EQUALS 1 1.0
+*CF30510 0.0 101065.0 TIME
 
-CF30400 ERROR-CTC ADD 2 1.0
-CF30410 1.0 0.0 CVH-P.8
-CF30411 -1.0 0.0 CFVALU.305
+*CF30400 ERROR-CTC ADD 2 1.0
+*CF30410 1.0 0.0 CVH-P.8
+*CF30411 -1.0 0.0 CFVALU.305
 
-CF30300 ERROR-HTC ADD 2 1.0
-CF30310 1.0 0.0 CVH-P.9
-CF30311 -1.0 0.0 CFVALU.305
+*CF30300 ERROR-HTC ADD 2 1.0
+*CF30310 1.0 0.0 CVH-P.9
+*CF30311 -1.0 0.0 CFVALU.305
 
-CF30200 ERROR-TIR ADD 2 1.0
-CF30210 1.0 0.0 CVH-P.129
-CF30211 -1.0 0.0 CFVALU.305
+*CF30200 ERROR-TIR ADD 2 1.0
+*CF30210 1.0 0.0 CVH-P.129
+*CF30211 -1.0 0.0 CFVALU.305
 
-CF30100 ERROR-LLC ADD 2 1.0
-CF30110 1.0 0.0 CVH-P.16
-CF30111 -1.0 0.0 CFVALU.305
+*CF30100 ERROR-LLC ADD 2 1.0
+*CF30110 1.0 0.0 CVH-P.16
+*CF30111 -1.0 0.0 CFVALU.305
 
-CF30000 MEAN-SUM-ERROR ADD 4 0.25
-CF30010 1.0 0.0 CFVALU.301
-CF30011 1.0 0.0 CFVALU.302
-CF30012 1.0 0.0 CFVALU.303
-CF30013 1.0 0.0 CFVALU.304
+*CF30000 MEAN-SUM-ERROR ADD 4 0.25
+*CF30010 1.0 0.0 CFVALU.301
+*CF30011 1.0 0.0 CFVALU.302
+*CF30012 1.0 0.0 CFVALU.303
+*CF30013 1.0 0.0 CFVALU.304
 
-CF29900 PID-AR-INLET PID 1 1.0
-CF29903 0.2 0.05 0.0                * Kp, Ki, Kd
-CF29910 1.0 0.0 CFVALU.300
+*CF29900 PID-AR-INLET PID 1 1.0
+*CF29903 0.002 0.0005 0.0                * Kp, Ki, Kd
+*CF29910 1.0 0.0 CFVALU.300
 
-FL29900   Ar-INLET   401   905   6.2  6.2
-FL29901   0.5  10.0   1.0             
-FL29902	  3                                                         
-FL299S0   0.5  10.0   0.5
-FL299T0   2     299
+*FL29900   Ar-INLET   401   905   6.2  6.2
+*FL29901   0.5  10.0   1.0             
+*FL29902	  3                                                         
+*FL299S0   0.5  10.0   0.5
+*FL299T0   2     299
 
 *-----------------------------------------------                                                                
 * CV907 - SGS-AUX-6                                                                     
@@ -664,6 +664,6 @@ SOFTDTMIN  .1  1000
 *
 *
 *             TIME     DTMAX     DTMIN     DTEDT      DTPLT      DTRST
-TIME1         0.0      100.0    10.0     43200.0    43200.0    43200.0          
+TIME1         0.0      100.0    0.1     43200.0    43200.0    43200.0          
 *
 .* END
