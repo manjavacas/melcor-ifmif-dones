@@ -67,6 +67,23 @@ CV402A8   MLFR.8  0.01                               * Filled with air (Ar)
 CV402B1   0.0        0.0                                                          
 CV402B2   50.0       1000000.0              	     * Random huge volume                                                          
 ***      
+* -----------------------------------------------                                                                
+* CV401 - Ar Supply Subsystem - ArSS
+*-----------------------------------------------                                                            
+CV40100   ArSS  2  2  5          		                                   
+CV40101   0   -1		                                  				            
+CV401A0   3                                                                                         
+CV401A1   PVOL    101065.0                                                                                              
+CV401A3   TATM    293.15  RHUM  0.6    	                                                  
+CV401A4   MLFR.4  0.00395                               
+CV401A6   MLFR.5  0.00105                                
+CV401A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV401B1   0.0        0.0                                                          
+CV401B2   30.0       1000000.0              	     * Random huge volume                                                          
+***      
 * 
 ************************************************************************************
 *                                                               
@@ -77,9 +94,9 @@ CV01601   0   0
 CV016A0   3                                                                                         
 CV016A1   PVOL  101065.0                            
 CV016A2   TATM  290.95  RHUM  0.0                   
-CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 97%   
-CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 3% 
-CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 3% 
+CV016A4   MLFR.4  0.00395                               
+CV016A6   MLFR.5  0.00105                                
+CV016A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -96,9 +113,9 @@ CV00801   0   0
 CV008A0   3                                                                                         
 CV008A1   PVOL  101065.0                            * 101325Pa-90Pa 
 CV008A2   TATM  293.15  RHUM  0.6                  
-CV008A3   MLFR.8  0.9999                            * Filled with Ar -> 97%   
-CV008A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 3% 
-CV008A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 3%                         
+CV008A4   MLFR.4  0.00395                               
+CV008A6   MLFR.5  0.00105                                
+CV008A8   MLFR.8  0.995                              * Filled with Ar (99.5%)                          
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -115,9 +132,9 @@ CV00901   0   0
 CV009A0   3                                                                                         
 CV009A1   PVOL  101065.0                            * 101325Pa-90Pa 
 CV009A2   TATM  293.15  RHUM  0.6                  
-CV009A3   MLFR.8  0.9999                            * Filled with Ar -> 97%   
-CV009A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 3% 
-CV009A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 3%                       
+CV009A4   MLFR.4  0.00395                               
+CV009A6   MLFR.5  0.00105                                
+CV009A8   MLFR.8  0.995                              * Filled with Ar (99.5%)                        
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -134,9 +151,9 @@ CV12901   0   0
 CV129A0   3                                                                                         
 CV129A1   PVOL    101065.0                          * 101325-130Pa                                                                          
 CV129A3   TATM    298.15    RHUM  0.0                                                     
-CV129A5   MLFR.8  0.9999                            * Filled with Ar -> 97%   
-CV129A6   MLFR.5  0.000021                          * Initial 02 -> 21% de 3% 
-CV129A8   MLFR.4  0.000079                          * Initial N2 -> 79% de 3% 
+CV129A4   MLFR.4  0.00395                               
+CV129A6   MLFR.5  0.00105                                
+CV129A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -155,9 +172,9 @@ CV90201   0   -1
 CV902A0   3                                                                                         
 CV902A1   PVOL  101065.0                            
 CV902A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C
-CV902A3   MLFR.8  0.9999                            * Filled with Ar -> 97%   
-CV902A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 3% 
-CV902A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 3%  
+CV902A4   MLFR.4  0.00395                               
+CV902A6   MLFR.5  0.00105                                
+CV902A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -172,9 +189,9 @@ CV90301   0   -1
 CV903A0   3                                                                                         
 CV903A1   PVOL  101065.0                            
 CV903A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C
-CV903A3   MLFR.8  0.9999                            * Filled with Ar -> 97%   
-CV903A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 3% 
-CV903A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 3%  
+CV903A4   MLFR.4  0.00395                               
+CV903A6   MLFR.5  0.00105                                
+CV903A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -189,9 +206,9 @@ CV90401   0   -1		                                * Fog allowed (default)
 CV904A0   3                                                                                         
 CV904A1   PVOL  101065.0                            
 CV904A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C; 0% rel. humidity
-CV904A3   MLFR.8  0.9999                            * Filled with Ar -> 97%   
-CV904A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 3% 
-CV904A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 3%  
+CV904A4   MLFR.4  0.00395                               
+CV904A6   MLFR.5  0.00105                                
+CV904A8   MLFR.8  0.995                              * Filled with Ar (99.5%) 
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -206,9 +223,9 @@ CF90110  1.0  0.0  CVH-TVAP.904                     * Temp AUX-3 = 290.95K (mant
 ******* Sink SGS-AUX-3-O2 *******                    
 *                                           
 CV904C1  MASS.5 902 3                       
-CV904C2  TE 901 9                           
-*       
-CF90200 'AUX-3-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP * MASS/S / (QT - RJ)
+CV904C2  TE 901 9                                              
+*     
+CF90200 'AUX-3-O2-sink' DIVIDE  2  -1.0            * Eficiencia (= 0.8) * QP * MASS/S / (QT - RJ)
 CF90210  1.0  0.0  CFVALU.500
 CF90215  1.0  0.0  CFVALU.501                                       
 *
@@ -248,26 +265,23 @@ CF50415  1.0  0.0  FL-MFLOW.3.205
 *  
 ******* Source SGS-AUX-3-Ar *******                    
 *                                           
-*CV904C7  MASS.8 910 3                       
-*CV904C8  TE 901 9   
+CV904C7  MASS.8 910 3                       
+CV904C8  TE 901 9   
 *
-*CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           * +- El volumen de fugas (0.0001*  TotalVol ~ 0.4 m3/h) en Ar + lo que se tira ~ 30 m3/h
-*CF90510  0.0  3600.0  TIME
-*CF90515  0.95045  0.0  CFVALU.101                         * 95% pureza
+CF90500  'AUX-3-Ar-source'  DIVIDE  2  1.784           
+CF90510  0.0  3600.0  TIME
+CF90515  0.995  0.0  CFVALU.101                        * 99.5% pureza
 *
-*CF91000  'AR-INLET'  L-A-IFTE  3  1.0
-*CF91005  NORMAL
-*CF91010  1.0  0.0  CFVALU.506
-*CF91015  2.0  0.0  CFVALU.905
-*CF91020  0.0  0.0  CFVALU.905
+CF91000  'AR-INLET'  L-A-IFTE  3  1.0
+CF91005  NORMAL
+CF91010  1.0  0.0  CFVALU.506
+CF91015  1.0  0.0  CFVALU.905
+CF91020  0.0  0.0  CFVALU.905
 *
 CF50600  AUX-P016  L-GE  2  1.0  0.0
 CF50605  NORMAL
 CF50610  0.0  101065.0  TIME
-CF50615  1.0  0.0  CVH-P.16   
-*
-*
-* Pureza Argón inyectado --> 100%. En caso de menos, hay que inyectar las impurezas
+CF50615  1.0  0.0  CVH-P.16                           
 *
 *-----------------------------------------------                                                                
 * CV905 - SGS-AUX-4                                                                    
@@ -275,11 +289,11 @@ CF50615  1.0  0.0  CVH-P.16
 CV90500   SGS-AUX-4  2  0  1                                                   
 CV90501   0   -1		                              
 CV905A0   3                                                                                         
-CV905A1   PVOL  101065.0                            
-CV905A2   TATM  290.95  RHUM  0.0                 * 17.8 deg. C
-CV905A3   MLFR.8  0.9999                            * Filled with Ar -> 97%   
-CV905A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 3% 
-CV905A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 3%  
+CV905A1   PVOL  101065.0                             
+CV905A2   TATM  290.95  RHUM  0.0                   * 17.8 deg. C
+CV905A4   MLFR.4  0.00395                               
+CV905A6   MLFR.5  0.00105                                
+CV905A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -293,10 +307,10 @@ CV90700   SGS-AUX-6  2  0  1
 CV90701   0   -1		                               
 CV907A0   3                                                                                         
 CV907A1   PVOL  101065.0                            
-CV907A2   TATM  290.95  RHUM  0.0                  * 17.8 deg. C
-CV907A3   MLFR.8  0.9999                             * Filled with Ar -> 97%   
-CV907A4   MLFR.5  0.000021                           * Initial 02 -> 21% de 3.0% 
-CV907A5   MLFR.4  0.000079                           * Initial N2 -> 79% de 3.0%  
+CV907A2   TATM  290.95  RHUM  0.0                    * 17.8 deg. C
+CV907A4   MLFR.4  0.00395                               
+CV907A6   MLFR.5  0.00105                                
+CV907A8   MLFR.8  0.995                              * Filled with Ar (99.5%)   
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
