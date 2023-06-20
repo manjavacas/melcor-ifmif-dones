@@ -354,7 +354,7 @@ CF90710  -1.0  0.0  CFVALU.904
 ****************************************************************************************************************************************
 *
 ****** CAUDAL ENTRADA ArPU ******
-CF10000   QP  EQUALS  1  2.0                         * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
+CF10000   QP  EQUALS  1  1.0                         * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
 CF10010   0.0  57.8  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
