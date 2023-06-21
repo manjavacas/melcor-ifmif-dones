@@ -74,7 +74,7 @@ CV40100   ArSS  2  2  5
 CV40101   0   -1		                                  				            
 CV401A0   3                                                                                         
 CV401A1   PVOL    101065.0                                                                                              
-CV401A3   TATM    293.15  RHUM  0.6    	                                                  
+CV401A3   TATM    293.15  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE    	                                                  
 CV401A4   MLFR.4  0.00395                               
 CV401A6   MLFR.5  0.00105                                
 CV401A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -93,7 +93,7 @@ CV01600   R016  2  0  1
 CV01601   0   0		                              
 CV016A0   3                                                                                         
 CV016A1   PVOL  101065.0                            
-CV016A2   TATM  290.95  RHUM  0.6                   
+CV016A2   TATM  290.95  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                   
 CV016A4   MLFR.4  0.00395                               
 CV016A6   MLFR.5  0.00105                                
 CV016A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -112,7 +112,7 @@ CV00800   R009-1  2  0  1
 CV00801   0   0		                               
 CV008A0   3                                                                                         
 CV008A1   PVOL  101065.0                            * 101325Pa-90Pa 
-CV008A2   TATM  293.15  RHUM  0.6                  
+CV008A2   TATM  293.15  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
 CV008A4   MLFR.4  0.00395                               
 CV008A6   MLFR.5  0.00105                                
 CV008A8   MLFR.8  0.995                              * Filled with Ar (99.5%)                          
@@ -131,7 +131,7 @@ CV00900   R009-2  2  0  1
 CV00901   0   0		                               
 CV009A0   3                                                                                         
 CV009A1   PVOL  101065.0                            * 101325Pa-90Pa 
-CV009A2   TATM  293.15  RHUM  0.6                  
+CV009A2   TATM  293.15  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
 CV009A4   MLFR.4  0.00395                               
 CV009A6   MLFR.5  0.00105                                
 CV009A8   MLFR.8  0.995                              * Filled with Ar (99.5%)                        
@@ -150,7 +150,7 @@ CV12900   R129  2  2  2
 CV12901   0   0		                           
 CV129A0   3                                                                                         
 CV129A1   PVOL    101065.0                          * 101325-130Pa                                                                          
-CV129A3   TATM    298.15    RHUM  0.6                                                     
+CV129A3   TATM    298.15    RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                                                    
 CV129A4   MLFR.4  0.00395                               
 CV129A6   MLFR.5  0.00105                                
 CV129A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -171,7 +171,7 @@ CV90200   SGS-AUX-1  2  0  1
 CV90201   0   0		                              
 CV902A0   3                                                                                         
 CV902A1   PVOL  101000.0                            
-CV902A2   TATM  290.95  RHUM  0.6                    * 17.8 deg. C
+CV902A2   TATM  290.95  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE
 CV902A4   MLFR.4  0.00395                               
 CV902A6   MLFR.5  0.00105                                
 CV902A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -188,7 +188,7 @@ CV90300   SGS-AUX-2  2  0  1
 CV90301   0   0		                           
 CV903A0   3                                                                                         
 CV903A1   PVOL  101400.0                            
-CV903A2   TATM  290.95  RHUM  0.6                   * 17.8 deg. C
+CV903A2   TATM  290.95  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE
 CV903A4   MLFR.4  0.00395                               
 CV903A6   MLFR.5  0.00105                                
 CV903A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -205,7 +205,7 @@ CV90400   SGS-AUX-3  2  0  1
 CV90401   0   0		                                * Fog allowed (default)
 CV904A0   3                                                                                         
 CV904A1   PVOL  101300.0                            
-CV904A2   TATM  290.95  RHUM  0.6                   * 17.8 deg. C; 0% rel. humidity
+CV904A2   TATM  290.95  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE
 CV904A4   MLFR.4  0.00395                               
 CV904A6   MLFR.5  0.00105                                
 CV904A8   MLFR.8  0.995                              * Filled with Ar (99.5%) 
@@ -270,7 +270,7 @@ CV90500   SGS-AUX-4  2  0  1
 CV90501   0   0		                              
 CV905A0   3                                                                                         
 CV905A1   PVOL  101200.0                             
-CV905A2   TATM  290.95  RHUM  0.6                   * 17.8 deg. C
+CV905A2   TATM  290.95  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE
 CV905A4   MLFR.4  0.00395                               
 CV905A6   MLFR.5  0.00105                                
 CV905A8   MLFR.8  0.995                              * Filled with Ar (99.5%)  
@@ -385,7 +385,7 @@ CV90700   SGS-AUX-6  2  0  1
 CV90701   0   0		                               
 CV907A0   3                                                                                         
 CV907A1   PVOL  101300.0                            
-CV907A2   TATM  290.95  RHUM  0.6                    * 17.8 deg. C
+CV907A2   TATM  290.95  RHUM  0.003                    * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE
 CV907A4   MLFR.4  0.00395                               
 CV907A6   MLFR.5  0.00105                                
 CV907A8   MLFR.8  0.995                              * Filled with Ar (99.5%)   
