@@ -313,8 +313,8 @@ CF51210  0.0  1800.0  TIME                                      * (3600 * 0.5) =
 CF51215  1.0  0.0  CFVALU.513
 *
 CF51300  AR-INLET-vel-NUM  ADD  2  1.0
-CF51310  0.0  -0.4166  TIME                                     * VOL_fugas = HLR (0.0001) * TOTAL_VOL (4166 m3)
-CF51315  4.8276   0.0  FL-VELVAP.210                            * Q = VEL * (3600 * 0.001341)
+CF51310  0.0   -0.4166  TIME                                     * VOL_fugas = HLR (0.0001) * TOTAL_VOL (4166 m3)
+CF51315  1.25  0.0  CFVALU.101                                   * Q = VEL * (3600 * 0.001341)
 *
 CF51000  AUX-PSALAS  L-OR  4  1.0  0.0
 CF51005  NORMAL
@@ -434,8 +434,8 @@ CF10010   0.0  80.0  TIME
 CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
-CF10100   RJ  EQUALS  1  0.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-CF10110   0.0  0.4166  TIME                             
+CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
+CF10110   0.0  0.1  TIME                             
 *
 ****** CAUDAL TOTAL SGS ******
 CF10200   QT  EQUALS  1  0.0  26869.0               
