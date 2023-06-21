@@ -28,6 +28,9 @@ sgs2: clean
 mb: clean
 	./melgen-fusion-186_bdba Main Building/main.inp
 	./melcor-fusion-186_bdba  Main Building/main.inp
+rhum: clean
+	./melgen-fusion-186_bdba Main Building/rhum.inp
+	./melcor-fusion-186_bdba  Main Building/rhum.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES

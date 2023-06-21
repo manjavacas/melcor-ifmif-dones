@@ -6,13 +6,13 @@
 *
 *EOR* MELGEN
 *
-title     leaktestR129
-jobid     leaktestR129
+title     rhum
+jobid     rhum
 *
-restartf  leaktestR129.RST
-outputf   leaktestR129_gen.out
-diagf     leaktestR129_gen.dia
-stopf     leaktestR129.stp
+restartf  rhum.RST
+outputf   rhum_gen.out
+diagf     rhum_gen.dia
+stopf     rhum.stp
 *
 crtout 
 tstart    0.0
@@ -42,9 +42,9 @@ CV11001   0   -1
 CV110A0   3                                                                                         
 CV110A1   PVOL    101235.0                          * 101325-90Pa                                                                          
 CV110A3   TATM    298.15    RHUM  0.6                                                     
-CV110A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV110A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV110A8   MLFR.8  0.01                              * Filled with air (Ar)
+CV110A5   MLFR.4  0.0                              * FILLED WITH air (N2)
+CV110A6   MLFR.5  0.0                              * FILLED WITH air (O2)
+CV110A8   MLFR.8  1.0                              * Filled with air (Ar)
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -52,152 +52,6 @@ CV110B1   9.0      0.0
 CV110B2   16.5     10998.0                          * 7394.2 m3 (2PNSLP)  
 ***
 ************************************************************************************
-*                                                               
-*               CV016 - R016 - Lithium loop cell (C3 - C4 en 2PNSLP)                                                                    
-*                                                                
-CV01600   R016  2  0  1                                                            
-CV01601   0   -1		                              
-CV016A0   3                                                                                         
-CV016A1   PVOL  101195.0                            * 101325Pa-130Pa 
-CV016A2   TATM  290.95  RHUM  0.0                   
-CV016A3   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV016A4   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV016A5   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                
-CV016B1   0.0      0.0                                                            
-CV016B2   7.2      2495.0                           * 2658.7 m3 (2PNSLP) ; Height = Volume / Floor Area
-***
-************************************************************************************
-*                                                                  
-*           CV114 - R114-1 - Radiation isolation room 1 (C2 - C3 en 2PNSLP)                                                                   
-*                                                               
-CV11400   R114-1  2  2  2                                                            
-CV11401   0   -1	                             
-CV114A0   3                                                                                         
-CV114A1   PVOL    101235.0                          * 101325-90Pa                                                                          
-CV114A3   TATM    293.15    RHUM  0.6                                                     
-CV114A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV114A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV114A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV114B1   9.0      0.0                                                         
-CV114B2   16.5     686.0                            * 394.9 m3 (2PNSLP)     
-***
-* 
-************************************************************************************
-*                                                                  
-*                       CV152 - R152 - Maintenance room (C4)                                                                   
-*                                                                
-CV15200   R152  2  2  2                             
-CV15201   0   -1	                         
-CV152A0   3                                                                                         
-CV152A1   PVOL    101065.0                          * 101325-260Pa                                                                          
-CV152A3   TATM    293.15    RHUM  0.6                                                    
-CV152A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV152A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV152A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV152B1   9.0      0.0                                                         
-CV152B2   14.5     979.0                            * 480.7 m3 (2PNSLP)             
-***
-*  
-************************************************************************************
-*                                                               
-*                        CV147 - G17 - R147 AL151 R151 (C3)                                                                   
-*                                                                
-CV14700   G17  2  2  2                             
-CV14701   0   -1	                               
-CV147A0   3                                                                                         
-CV147A1   PVOL    101195.0                          * 101325-160Pa                                                                          
-CV147A3   TATM    293.15    RHUM  0.6                                                    
-CV147A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV147A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV147A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV147B1   9.0      0.0                                                         
-CV147B2   14.5     2011.0                           * 1263.0 m3 (2PNSLP)              
-***
-*
-************************************************************************************
-*                                                              
-*           CV129 - R129 - Target interface room (C3 - C4 en 2PNSLP)                                                                   
-*                                                               
-CV12900   R129  2  2  2                                                          
-CV12901   0   0		                           
-CV129A0   3                                                                                         
-CV129A1   PVOL    100065.0                          * -1000Pa                                                                          
-CV129A3   TATM    298.15    RHUM  0.0                                                     
-CV129A5   MLFR.8  0.9999                            * Filled with Ar -> 99.99%   
-CV129A6   MLFR.5  0.000021                          * Initial 02 -> 21% de 0.01% 
-CV129A8   MLFR.4  0.000079                          * Initial N2 -> 79% de 0.01% 
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV129B1   9.0      0.0                                                         
-CV129B2   14.5     529.0                            * 209.4 m3 (2PNSLP)  
-* 
-************************************************************************************
-* 
-*                         CV230 - R230 - Access Cell (C4)                                                                   
-*                                                               
-CV23000   R230  2  2  5                                                               
-CV23001   0   -1	                               
-CV230A0   3                                                                                         
-CV230A1   PVOL    101065.0                          * 101325-230Pa                                                                          
-CV230A3   TATM    293.15    RHUM  0.6                                                   
-CV230A5   MLFR.4  0.78                              * FILLED WITH air (N2)
-CV230A6   MLFR.5  0.21                              * FILLED WITH air (O2)
-CV230A8   MLFR.8  0.01                              * Filled with air (Ar)
-*** 
-***       ALTITUDE/VOLUME Table                                                                                                
-***                                                                                                 
-CV230B1   16.0      0.0                                                         
-CV230B2   31.0      15865.5                         * 2PNSLP           
-***
-* 
-*************************************************************************************************
-*
-FL03000   R-R016-R129       016   129   7.2   9.0             
-FL03001   7.616E-6    1.5    1.0                                                 
-FL030S0   7.616E-6    1.5    0.00311                            
-*
-*
-FL13500   W-G7-R129    110    129    11.75    11.75             
-FL13501   7.425E-6    2.5    1.0                                  
-FL13502   3                              
-FL135S0   7.425E-6    2.5    0.00307                             
-*
-*
-FL15900   W-G17-R129    147    129    11.75    11.75             
-FL15901   1.54E-5    1.5    1.0                                  
-FL15902   3                              
-FL159S0   1.54E-5    1.5    0.00443                             
-*
-*
-FL16100   W-R1141-R129    114    129    11.75    11.75             
-FL16101   7.15E-6    2.5    1.0                                  
-FL16102   3                              
-FL161S0   7.15E-6    2.5    0.00302                             
-*
-*
-FL16200   W-R152-R129    152    129    11.75    11.75             
-FL16201   1.54E-5    2.5    1.0                                  
-FL16202   3                              
-FL162S0   1.54E-5    2.5    0.00443                             
-*
-*
-FL74800   R-R129-R230      129   230   14.5   16.0             
-FL74801   6.54E-6    1.5    1.0                                  
-FL748S0   6.54E-6    1.5    0.00289                             
-*
 *
 . * End
 *
@@ -213,13 +67,13 @@ noflush
 * WARNINGLEVEL 0 0 -1
 *
 *
-TITLE     leaktestR129
+TITLE     rhum
 *
-RESTARTFILE  leaktestR129.rst
-OUTPUTFILE   leaktestR129.out
-PLOTFILE     leaktestR129.ptf
-DIAGFILE     leaktestR129_cor.dia
-MESSAGEFILE  leaktestR129_cor.mes
+RESTARTFILE  rhum.rst
+OUTPUTFILE   rhum.out
+PLOTFILE     rhum.ptf
+DIAGFILE     rhum_cor.dia
+MESSAGEFILE  rhum_cor.mes
 *
 CPULEFT          200.
 CPULIM           200000.    * max time running     
