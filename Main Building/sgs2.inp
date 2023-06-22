@@ -304,7 +304,7 @@ FL207T0  2  511
 CF51100  AR-INLET-control  L-A-IFTE  3  1.0
 CF51105  NORMAL
 CF51110  1.0  0.0  CFVALU.510
-CF51115  4.0  0.0  CFVALU.512
+CF51115  8.0  0.0  CFVALU.512
 CF51120  0.0  0.0  CFVALU.512
 *
 CF51200  AR-INLET-vel  DIVIDE  2  1.0
@@ -435,7 +435,7 @@ CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-CF10110   0.0  0.1  TIME                             
+CF10110   0.0  0.05  TIME                             
 *
 ****** CAUDAL TOTAL SGS ******
 CF10200   QT  EQUALS  1  0.0  26869.0               
