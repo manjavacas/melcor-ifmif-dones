@@ -304,17 +304,17 @@ FL207T0  2  511
 CF51100  AR-INLET-control  L-A-IFTE  3  1.0
 CF51105  NORMAL
 CF51110  1.0  0.0  CFVALU.510
-CF51115  1.5  0.0  CFVALU.512
+CF51115  4.0  0.0  CFVALU.512
 CF51120  0.0  0.0  CFVALU.512
 *
 CF51200  AR-INLET-vel  DIVIDE  2  1.0
 CF51201  0.0  
 CF51210  0.0  1800.0  TIME                                      * (3600 * 0.5) = 1800.0 
-CF51215  1.0  0.0  CFVALU.513
+CF51215  1.0  0.0  CFVALU.101
 *
-CF51300  AR-INLET-vel-NUM  ADD  2  1.0
-CF51310  0.0   -0.4166  TIME                                     * VOL_fugas = HLR (0.0001) * TOTAL_VOL (4166 m3)
-CF51315  1.25  0.0  CFVALU.101                                   * Q = VEL * (3600 * 0.001341)
+*CF51300  AR-INLET-vel-NUM  ADD  2  1.0
+*CF51310  0.0   -0.4166  TIME                                     * VOL_fugas = HLR (0.0001) * TOTAL_VOL (4166 m3)
+*CF51315  1.25  0.0  CFVALU.101                                   * Q = VEL * (3600 * 0.001341)
 *
 CF51000  AUX-PSALAS  L-OR  4  1.0  0.0
 CF51005  NORMAL
