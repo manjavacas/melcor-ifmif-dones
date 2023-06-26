@@ -337,16 +337,16 @@ CF51120  0.0  0.0  CFVALU.512
 CF51200  AR-INLET-vel  DIVIDE  2  1.0
 CF51201  0.0  
 CF51210  0.0  1800.0  TIME                            * (3600 * 0.5) = 1800.0 
-CF51215  1.0  0.0  CFVALU.513
-*CF51215  1.0  0.0  CFVALU.101
+*CF51215  1.0  0.0  CFVALU.513
+CF51215  2.5  0.0  CFVALU.101
 *
-CF51300  AR-INLET-velnum  ADD  5  1.0
-CF51310  0.0  -0.4166  TIME                           * Infiltrations: Volume * HLR
+*CF51300  AR-INLET-velnum  ADD  5  1.0
+*CF51310  0.0  -0.4166  TIME                           * Infiltrations: Volume * HLR
 *CF51310  0.0  -2.083  TIME                            * Infiltrations: Volume * HLR
-CF51315  1.0  0.0  CFVALU.101                         * RJ
-CF51320  0.7452551285  0.0  CFVALU.908                * Purified O2 volume (dens' = dens=1.429 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
-CF51325  0.8519756629  0.0  CFVALU.906                * Purified N2 volume (dens' = dens=1.250 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
-CF51330  219.717264  0.0  CFVALU.907                  * Purified H2O volume (dens' = dens=0.004847 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
+*CF51315  1.0  0.0  CFVALU.101                         * RJ
+*CF51320  0.7452551285  0.0  CFVALU.908                * Purified O2 volume (dens' = dens=1.429 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
+*CF51325  0.8519756629  0.0  CFVALU.906                * Purified N2 volume (dens' = dens=1.250 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
+*CF51330  219.717264  0.0  CFVALU.907                  * Purified H2O volume (dens' = dens=0.004847 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
 *
 CF51000  AUX-PSALAS  L-OR  4  1.0  0.0
 CF51005  NORMAL
@@ -438,7 +438,7 @@ CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-CF10110   0.0  0.025  TIME                             
+CF10110   0.0  0.2  TIME                             
 *
 ****** CAUDAL TOTAL SGS ******
 CF10200   QT  EQUALS  1  0.0  26869.0               
