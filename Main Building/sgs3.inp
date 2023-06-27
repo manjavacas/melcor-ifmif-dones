@@ -118,7 +118,7 @@ CV00800   R009-1  2  0  1
 CV00801   0   0		                               
 CV008A0   3                                                                                         
 CV008A1   PVOL  101065.0                             
-CV008A2   TATM  293.15  RHUM  0.003                 * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
+CV008A2   TATM  293.15  RHUM  0.003                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
 CV008A4   MLFR.4  0.00395                           * (99.5%)   
 CV008A6   MLFR.5  0.00105                           * (99.5%)    
 CV008A8   MLFR.8  0.995                             * Filled with Ar (99.5%)         
@@ -140,7 +140,7 @@ CV00900   R009-2  2  0  1
 CV00901   0   0		                               
 CV009A0   3                                                                                         
 CV009A1   PVOL  101065.0                             
-CV009A2   TATM  293.15  RHUM  0.003                 * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
+CV009A2   TATM  293.15  RHUM  0.003                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
 CV009A4   MLFR.4  0.00395                           * (99.5%)   
 CV009A6   MLFR.5  0.00105                           * (99.5%)    
 CV009A8   MLFR.8  0.995                             * Filled with Ar (99.5%)   
@@ -162,7 +162,7 @@ CV12900   R129  2  2  2
 CV12901   0   0		                           
 CV129A0   3                                                                                         
 CV129A1   PVOL    101065.0                                                                                                    
-CV129A3   TATM    298.15    RHUM  0.003             * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                                                    
+CV129A3   TATM    298.15    RHUM  0.003             * 25 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                                                    
 CV129A4   MLFR.4  0.00395                           * (99.5%)   
 CV129A6   MLFR.5  0.00105                           * (99.5%)    
 CV129A8   MLFR.8  0.995                             * Filled with Ar (99.5%)  
@@ -176,315 +176,6 @@ CV129B1   0.0      0.0
 CV129B2   5.5     529.0                            * 209.4 m3 (2PNSLP)  
 ***
 *
-**************************************************************** SGS ******************************************************************                                                 
-***
-******* Energy source for R016 *******           
-*                                           
-CF90100 'Energy-src-R016' EQUALS 1 1.0             
-CF90110  1.0  0.0  CVH-TVAP.016                    
-*                                                                                                                                 
-******* Sink R016 - O2 *******                    
-*                                           
-CV016C1  MASS.5 902 3                       
-CV016C2  TE 901 9                                              
-*     
-CF90200 'R016-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * (RATIO-R016 * QP) * MASS / VOL-R016
-CF90210  1.0  0.0  CFVALU.102
-CF90215  1.0  0.0  CFVALU.500                                       
-*
-CF50000  NUM-CF902  MULTIPLY  3  0.8
-CF50010  1.0  0.0  CFVALU.100
-CF50015  1.0  0.0  CFVALU.107
-CF50020  1.0  0.0  CVH-MASS.5.016
-*
-******* Sink R016 - N2 *******                    
-*                                           
-CV016C3  MASS.4 903 3                       
-CV016C4  TE 901 9                           
-*     
-CF90300 'R016-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * (RATIO-R016 * QP) * MASS / VOL-R016
-CF90310  1.0  0.0  CFVALU.102
-CF90315  1.0  0.0  CFVALU.501                                       
-*
-CF50100  NUM-CF903  MULTIPLY  3  0.7
-CF50110  1.0  0.0  CFVALU.100
-CF50115  1.0  0.0  CFVALU.107
-CF50120  1.0  0.0  CVH-MASS.4.016
-*
-******* Sink R016 - H2O *******                    
-*                                           
-CV016C5  MASS.3 904 3                       
-CV016C6  TE 901 9                           
-*  
-CF90400 'R016-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * (RATIO-R016 * QP) * MASS / VOL-R016
-CF90410  1.0  0.0  CFVALU.102
-CF90415  1.0  0.0  CFVALU.502                                       
-*
-CF50200  NUM-CF904  MULTIPLY  3  0.95
-CF50210  1.0  0.0  CFVALU.100
-CF50215  1.0  0.0  CFVALU.107
-CF50220  1.0  0.0  CVH-MASS.3.016
-*  
-***
-******* Energy source for R009-1 *******           
-*                                           
-CF90500 'Energy-src-R0091' EQUALS 1 1.0             
-CF90510  1.0  0.0  CVH-TVAP.008                    
-*                                                                                                                                 
-******* Sink R009-1 - O2 *******                    
-*                                           
-CV008C1  MASS.5 906 3                       
-CV008C2  TE 905 9                                              
-*     
-CF90600 'R0091-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * (RATIO-R009-1 * QP) * MASS / VOL-R009-1
-CF90610  1.0  0.0  CFVALU.103
-CF90615  1.0  0.0  CFVALU.503                                       
-*
-CF50300  NUM-CF906  MULTIPLY  3  0.8
-CF50310  1.0  0.0  CFVALU.100
-CF50315  1.0  0.0  CFVALU.108
-CF50320  1.0  0.0  CVH-MASS.5.008
-*
-******* Sink R009-1 - N2 *******                    
-*                                           
-CV008C3  MASS.4 907 3                       
-CV008C4  TE 905 9                           
-*     
-CF90700 'R0091-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * (RATIO-R009-1 * QP) * MASS / VOL-R009-1
-CF90710  1.0  0.0  CFVALU.103
-CF90715  1.0  0.0  CFVALU.504                                       
-*
-CF50400  NUM-CF907  MULTIPLY  3  0.7
-CF50410  1.0  0.0  CFVALU.100
-CF50415  1.0  0.0  CFVALU.108
-CF50420  1.0  0.0  CVH-MASS.4.008
-*
-******* Sink R009-1 - H2O *******                    
-*                                           
-CV008C5  MASS.3 908 3                       
-CV008C6  TE 905 9                           
-*  
-CF90800 'R0091-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * (RATIO-R009-1 * QP) * MASS / VOL-R009-1
-CF90810  1.0  0.0  CFVALU.103
-CF90815  1.0  0.0  CFVALU.505                                       
-*
-CF50500  NUM-CF908  MULTIPLY  3  0.95
-CF50510  1.0  0.0  CFVALU.100
-CF50515  1.0  0.0  CFVALU.108
-CF50520  1.0  0.0  CVH-MASS.3.008
-*    
-***
-******* Energy source for R009-2 *******           
-*                                           
-CF90900 'Energy-src-R0092' EQUALS 1 1.0             
-CF90910  1.0  0.0  CVH-TVAP.009                    
-*                                                                                                                                 
-******* Sink R009-2 - O2 *******                    
-*                                           
-CV009C1  MASS.5 910 3                       
-CV009C2  TE 909 9                                              
-*     
-CF91000 'R0092-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * (RATIO-R009-2 * QP) * MASS / VOL-R009-2
-CF91010  1.0  0.0  CFVALU.104
-CF91015  1.0  0.0  CFVALU.506                                       
-*
-CF50600  NUM-CF910  MULTIPLY  3  0.8
-CF50610  1.0  0.0  CFVALU.100
-CF50615  1.0  0.0  CFVALU.109
-CF50620  1.0  0.0  CVH-MASS.5.009
-*
-******* Sink R009-2 - N2 *******                    
-*                                           
-CV009C3  MASS.4 911 3                       
-CV009C4  TE 909 9                           
-*     
-CF91100 'R0092-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * (RATIO-R009-2 * QP) * MASS / VOL-R009-2
-CF91110  1.0  0.0  CFVALU.104
-CF91115  1.0  0.0  CFVALU.507                                       
-*
-CF50700  NUM-CF911  MULTIPLY  3  0.7
-CF50710  1.0  0.0  CFVALU.100
-CF50715  1.0  0.0  CFVALU.109
-CF50720  1.0  0.0  CVH-MASS.4.009
-*
-******* Sink R009-2 - H2O *******                    
-*                                           
-CV009C5  MASS.3 912 3                       
-CV009C6  TE 909 9                           
-*  
-CF91200 'R0092-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * (RATIO-R009-2 * QP) * MASS / VOL-R009-2
-CF91210  1.0  0.0  CFVALU.104
-CF91215  1.0  0.0  CFVALU.508                                      
-*
-CF50800  NUM-CF912  MULTIPLY  3  0.95
-CF50810  1.0  0.0  CFVALU.100
-CF50815  1.0  0.0  CFVALU.109
-CF50820  1.0  0.0  CVH-MASS.3.009
-*  
-***
-******* Energy source for R129 *******           
-*                                           
-CF91300 'Energy-src-R129' EQUALS 1 1.0             
-CF91310  1.0  0.0  CVH-TVAP.129                    
-*                                                                                                                                 
-******* Sink R129 - O2 *******                    
-*                                           
-CV129C1  MASS.5 914 3                       
-CV129C2  TE 913 9                                              
-*     
-CF91400 'R129-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * (RATIO-R129 * QP) * MASS / VOL-R129
-CF91410  1.0  0.0  CFVALU.105
-CF91415  1.0  0.0  CFVALU.509                                       
-*
-CF50900  NUM-CF914  MULTIPLY  3  0.8
-CF50910  1.0  0.0  CFVALU.100
-CF50915  1.0  0.0  CFVALU.110
-CF50920  1.0  0.0  CVH-MASS.5.129
-*
-******* Sink R129 - N2 *******                    
-*                                           
-CV129C3  MASS.4 915 3                       
-CV129C4  TE 913 9                           
-*     
-CF91500 'R129-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * (RATIO-R129 * QP) * MASS / VOL-R129
-CF91510  1.0  0.0  CFVALU.105
-CF91515  1.0  0.0  CFVALU.510                                       
-*
-CF51000  NUM-CF915  MULTIPLY  3  0.7
-CF51010  1.0  0.0  CFVALU.100
-CF51015  1.0  0.0  CFVALU.110
-CF51020  1.0  0.0  CVH-MASS.4.129
-*
-******* Sink R129 - H2O *******                    
-*                                           
-CV129C5  MASS.3 916 3                       
-CV129C6  TE 913 9                           
-*  
-CF91600 'R129-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * (RATIO-R129 * QP) * MASS / VOL-R129
-CF91610  1.0  0.0  CFVALU.105
-CF91615  1.0  0.0  CFVALU.511                                      
-*
-CF51100  NUM-CF916  MULTIPLY  3  0.95
-CF51110  1.0  0.0  CFVALU.100
-CF51115  1.0  0.0  CFVALU.110
-CF51120  1.0  0.0  CVH-MASS.3.129
-* 
-***
-******* R016 - Ar *******                    
-*
-FL11600  R016-AR-INLET  401  016  6.7  6.7
-FL11601  0.5  1.0  1.0
-FL11602  3
-FL116S0  0.5  1.0  0.5
-FL116T0  2  512
-*
-CF51200  R016-AR-INLET-control  L-A-IFTE  3  1.0
-CF51205  NORMAL
-CF51210  1.0  0.0  CFVALU.514
-CF51215  0.0  0.0  CFVALU.513
-CF51220  0.0  0.0  CFVALU.513
-*
-CF51300  R016-AR-INLET-vel  DIVIDE  2  1.0
-CF51301  0.0  
-CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51315  2.5  0.0  CFVALU.524
-*
-CF52400  NUM-CF513  MULTIPLY  2  1.0  
-CF52410  1.0  0.0  CFVALU.107
-CF52415  1.0  0.0  CFVALU.101  
-*
-CF51400  AUX-P016  L-GE  2  1.0  0.0
-CF51405  NORMAL
-CF51410  1.0  0.0  CFVALU.499
-CF51415  1.0  0.0  CVH-P.16                           
-*
-***
-******* R009-1 - Ar *******                    
-*
-FL10800  R0091-AR-INLET  401  008  6.7  6.7
-FL10801  0.5  1.0  1.0
-FL10802  3
-FL108S0  0.5  1.0  0.5
-FL108T0  2  515
-*
-CF51500  R0091-AR-INLET-control  L-A-IFTE  3  1.0
-CF51505  NORMAL
-CF51510  1.0  0.0  CFVALU.517
-CF51515  0.0  0.0  CFVALU.516
-CF51520  0.0  0.0  CFVALU.516
-*
-CF51600  R0091-AR-INLET-vel  DIVIDE  2  1.0
-CF51601  0.0  
-CF51610  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51615  2.5  0.0  CFVALU.525
-*
-CF52500  NUM-CF516  MULTIPLY  2  1.0  
-CF52510  1.0  0.0  CFVALU.108
-CF52515  1.0  0.0  CFVALU.101  
-*
-CF51700  AUX-P008  L-GE  2  1.0  0.0
-CF51705  NORMAL
-CF51710  1.0  0.0  CFVALU.499
-CF51715  1.0  0.0  CVH-P.8
-*
-***
-******* R009-2 - Ar *******                    
-*
-FL10900  R0092-AR-INLET  401  009  6.7  6.7
-FL10901  0.5  1.0  1.0
-FL10902  3
-FL109S0  0.5  1.0  0.5
-FL109T0  2  518
-*
-CF51800  R0092-AR-INLET-control  L-A-IFTE  3  1.0
-CF51805  NORMAL
-CF51810  1.0  0.0  CFVALU.520
-CF51815  0.0  0.0  CFVALU.519
-CF51820  0.0  0.0  CFVALU.519
-*
-CF51900  R0092-AR-INLET-vel  DIVIDE  2  1.0
-CF51901  0.0  
-CF51910  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51915  2.5  0.0  CFVALU.526
-*
-CF52600  NUM-CF519  MULTIPLY  2  1.0  
-CF52610  1.0  0.0  CFVALU.109
-CF52615  1.0  0.0  CFVALU.101  
-*
-CF52000  AUX-P009  L-GE  2  1.0  0.0
-CF52005  NORMAL
-CF52010  1.0  0.0  CFVALU.499
-CF52015  1.0  0.0  CVH-P.9
-*
-***
-******* R129 - Ar *******                    
-*
-FL02900  R0092-AR-INLET  401  009  6.7  6.7
-FL02901  0.5  1.0  1.0
-FL02902  3
-FL029S0  0.5  1.0  0.5
-FL029T0  2  521
-*
-CF52100  R129-AR-INLET-control  L-A-IFTE  3  1.0
-CF52105  NORMAL
-CF52110  1.0  0.0  CFVALU.523
-CF52115  0.0  0.0  CFVALU.522
-CF52120  0.0  0.0  CFVALU.522
-*
-CF52200  R129-AR-INLET-vel  DIVIDE  2  1.0
-CF52201  0.0  
-CF52210  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF52215  2.5  0.0  CFVALU.527
-*
-CF52700  NUM-CF513  MULTIPLY  2  1.0  
-CF52710  1.0  0.0  CFVALU.110
-CF52715  1.0  0.0  CFVALU.101  
-*
-CF52300  AUX-P129  L-GE  2  1.0  0.0
-CF52305  NORMAL
-CF52310  1.0  0.0  CFVALU.499
-CF52315  1.0  0.0  CVH-P.129
-*
 ****************************************************************************************************************************************
 *         										           CONSTANTS                 			    		  						   *
 ****************************************************************************************************************************************
@@ -493,13 +184,13 @@ CF49900 PRESSURE EQUALS 1 1.0
 CF49910 0.0 101065.0 TIME
 *
 ****** CAUDAL ENTRADA ArPU ******
-CF10000   QP  ADD 2  1.0                             * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
+CF10000   QP  ADD  2  1.0                            * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
 CF10010   0.0  80.0  TIME
 CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-CF10110   0.0  0.5  TIME                             
+CF10110   0.0  0.1  TIME                             
 *
 ****** VOLUMEN R016 ******
 CF10200   VOL-R016  EQUALS  1  1.0                   
@@ -544,6 +235,352 @@ CF11000   RATIO-R129  DIVIDE  2  1.0
 CF11010   1.0  0.0  CFVALU.106
 CF11015   1.0  0.0  CFVALU.105                     
 *
+**************************************************************** SGS ******************************************************************                                                 
+***
+******* Energy source for R016 *******           
+*                                           
+CF90100 'Energy-src-R016' EQUALS 1 1.0             
+CF90110  1.0  0.0  CVH-TVAP.016                    
+*                                                                                                                                 
+******* Sink R016 - O2 *******                    
+*                                           
+CV016C1  MASS.5 902 3                       
+CV016C2  TE 901 9                                              
+*     
+CF90200 'R016-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP(m3/s) * MASS / VOL
+CF90210  3600.0  0.0  CFVALU.106
+CF90215  1.0  0.0  CFVALU.500                                       
+*
+CF50000  NUM-CF902  MULTIPLY  2  0.8
+CF50010  1.0  0.0  CFVALU.100
+CF50020  1.0  0.0  CVH-MASS.5.016
+*
+CF80000  R016-O2-VOL  MULTIPLY  1  0.7473099419    * DENS = DENS_0(=1.429) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
+CF80010  1.0  0.0  CFVALU.902
+*
+******* Sink R016 - N2 *******                    
+*                                           
+CV016C3  MASS.4 903 3                       
+CV016C4  TE 901 9                           
+*     
+CF90300 'R016-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP(m3/s) * MASS / VOL
+CF90310  3600.0  0.0  CFVALU.106
+CF90315  1.0  0.0  CFVALU.501                                       
+*
+CF50100  NUM-CF903  MULTIPLY  2  0.7
+CF50110  1.0  0.0  CFVALU.100
+CF50120  1.0  0.0  CVH-MASS.4.016
+*
+CF80100  R016-N2-VOL  MULTIPLY  1  0.8543247256    * DENS = DENS_0(=1.25) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
+CF80110  1.0  0.0  CFVALU.903
+*
+******* Sink R016 - H2O *******                    
+*                                           
+CV016C5  MASS.3 904 3                       
+CV016C6  TE 901 9                           
+*  
+CF90400 'R016-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * QP(m3/s) * MASS / VOL
+CF90410  3600.0  0.0  CFVALU.106
+CF90415  1.0  0.0  CFVALU.502                                       
+*
+CF50200  NUM-CF904  MULTIPLY  2  0.95
+CF50210  1.0  0.0  CFVALU.100
+CF50220  1.0  0.0  CVH-MASS.3.016
+*  
+***
+******* Energy source for R009-1 *******           
+*                                           
+CF90500 'Energy-src-R0091' EQUALS 1 1.0             
+CF90510  1.0  0.0  CVH-TVAP.008                    
+*                                                                                                                                 
+******* Sink R009-1 - O2 *******                    
+*                                           
+CV008C1  MASS.5 906 3                       
+CV008C2  TE 905 9                                              
+*     
+CF90600 'R0091-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP(m3/s) * MASS / VOL
+CF90610  3600.0  0.0  CFVALU.106
+CF90615  1.0  0.0  CFVALU.503                                       
+*
+CF50300  NUM-CF906  MULTIPLY  2  0.8
+CF50310  1.0  0.0  CFVALU.100
+CF50320  1.0  0.0  CVH-MASS.5.008
+*
+CF80300  R0091-O2-VOL  MULTIPLY  1  0.7529606787    * DENS = DENS_0(=1.429) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=293.15)) 
+CF80310  1.0  0.0  CFVALU.906
+*
+******* Sink R009-1 - N2 *******                    
+*                                           
+CV008C3  MASS.4 907 3                       
+CV008C4  TE 905 9                           
+*     
+CF90700 'R0091-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP(m3/s) * MASS / VOL
+CF90710  3600.0  0.0  CFVALU.106
+CF90715  1.0  0.0  CFVALU.504                                       
+*
+CF50400  NUM-CF907  MULTIPLY  2  0.7
+CF50410  1.0  0.0  CFVALU.100
+CF50420  1.0  0.0  CVH-MASS.4.008
+*
+CF80400  R0091-N2-VOL  MULTIPLY  1  0.8607846479    * DENS = DENS_0(=1.25) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=293.15)) 
+CF80410  1.0  0.0  CFVALU.907
+*
+******* Sink R009-1 - H2O *******                    
+*                                           
+CV008C5  MASS.3 908 3                       
+CV008C6  TE 905 9                           
+*  
+CF90800 'R0091-H20-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.95) * QP(m3/s) * MASS / VOL
+CF90810  3600.0  0.0  CFVALU.106
+CF90815  1.0  0.0  CFVALU.505                                       
+*
+CF50500  NUM-CF908  MULTIPLY  2  0.95
+CF50510  1.0  0.0  CFVALU.100
+CF50520  1.0  0.0  CVH-MASS.3.008
+*    
+***
+******* Energy source for R009-2 *******           
+*                                           
+CF90900 'Energy-src-R0092' EQUALS 1 1.0             
+CF90910  1.0  0.0  CVH-TVAP.009                    
+*                                                                                                                                 
+******* Sink R009-2 - O2 *******                    
+*                                           
+CV009C1  MASS.5 910 3                       
+CV009C2  TE 909 9                                              
+*     
+CF91000 'R0092-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP(m3/s) * MASS / VOL
+CF91010  3600.0  0.0  CFVALU.106
+CF91015  1.0  0.0  CFVALU.506                                       
+*
+CF50600  NUM-CF910  MULTIPLY  2  0.8
+CF50610  1.0  0.0  CFVALU.100
+CF50620  1.0  0.0  CVH-MASS.5.009
+*
+CF80600  R0092-O2-VOL  MULTIPLY  1  0.7529606787    * DENS = DENS_0(=1.429) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=293.15)) 
+CF80610  1.0  0.0  CFVALU.910
+*
+******* Sink R009-2 - N2 *******                    
+*                                           
+CV009C3  MASS.4 911 3                       
+CV009C4  TE 909 9                           
+*     
+CF91100 'R0092-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP(m3/s) * MASS / VOL
+CF91110  3600.0  0.0  CFVALU.106
+CF91115  1.0  0.0  CFVALU.507                                       
+*
+CF50700  NUM-CF911  MULTIPLY  2  0.7
+CF50710  1.0  0.0  CFVALU.100
+CF50720  1.0  0.0  CVH-MASS.4.009
+*
+CF80700  R0092-N2-VOL  MULTIPLY  1  0.8607846479    * DENS = DENS_0(=1.25) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=293.15)) 
+CF80710  1.0  0.0  CFVALU.911
+*
+******* Sink R009-2 - H2O *******                    
+*                                           
+CV009C5  MASS.3 912 3                       
+CV009C6  TE 909 9                           
+*  
+CF91200 'R0092-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * QP(m3/s) * MASS / VOL
+CF91210  3600.0  0.0  CFVALU.106
+CF91215  1.0  0.0  CFVALU.508                                      
+*
+CF50800  NUM-CF912  MULTIPLY  2  0.95
+CF50810  1.0  0.0  CFVALU.100
+CF50820  1.0  0.0  CVH-MASS.3.009
+*  
+***
+******* Energy source for R129 *******           
+*                                           
+CF91300 'Energy-src-R129' EQUALS 1 1.0             
+CF91310  1.0  0.0  CVH-TVAP.129                    
+*                                                                                                                                 
+******* Sink R129 - O2 *******                    
+*                                           
+CV129C1  MASS.5 914 3                       
+CV129C2  TE 913 9                                              
+*     
+CF91400 'R129-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP(m3/s) * MASS / VOL
+CF91410  3600.0  0.0  CFVALU.106
+CF91415  1.0  0.0  CFVALU.509                                       
+*
+CF50900  NUM-CF914  MULTIPLY  2  0.8
+CF50910  1.0  0.0  CFVALU.100
+CF50920  1.0  0.0  CVH-MASS.5.129
+*
+CF80900  R129-O2-VOL  MULTIPLY  1  0.7658032623    * DENS = DENS_0(=1.429) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=298.15)) 
+CF80910  1.0  0.0  CFVALU.914
+*
+******* Sink R129 - N2 *******                    
+*                                           
+CV129C3  MASS.4 915 3                       
+CV129C4  TE 913 9                           
+*     
+CF91500 'R129-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP(m3/s) * MASS / VOL
+CF91510  3600.0  0.0  CFVALU.106
+CF91515  1.0  0.0  CFVALU.510                                       
+*
+CF51000  NUM-CF915  MULTIPLY  2  0.7
+CF51010  1.0  0.0  CFVALU.100
+CF51020  1.0  0.0  CVH-MASS.4.129
+*
+CF81000  R129-N2-VOL  MULTIPLY  1  0.8754662895    * DENS = DENS_0(=1.25) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=298.15)) 
+CF81010  1.0  0.0  CFVALU.915
+*
+******* Sink R129 - H2O *******                    
+*                                           
+CV129C5  MASS.3 916 3                       
+CV129C6  TE 913 9                           
+*  
+CF91600 'R129-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * QP(m3/s) * MASS / VOL
+CF91610  3600.0  0.0  CFVALU.106
+CF91615  1.0  0.0  CFVALU.511                                      
+*
+CF51100  NUM-CF916  MULTIPLY  2  0.95
+CF51110  1.0  0.0  CFVALU.100
+CF51120  1.0  0.0  CVH-MASS.3.129
+* 
+***
+CF81100  O2-VOL-PUR  ADD  4  1.0
+CF81110  1.0  0.0  CFVALU.800
+CF81115  1.0  0.0  CFVALU.803
+CF81120  1.0  0.0  CFVALU.806
+CF81125  1.0  0.0  CFVALU.809
+*
+CF81200  N2-VOL-PUR  ADD  4  1.0
+CF81210  1.0  0.0  CFVALU.801
+CF81215  1.0  0.0  CFVALU.804
+CF81220  1.0  0.0  CFVALU.807
+CF81225  1.0  0.0  CFVALU.810
+*
+CF81300  BALANCE  ADD  10  1.0
+CF81310  1800.0  0.0  CFVALU.016         * LEAK - R016
+CF81315  1800.0  0.0  CFVALU.008         * LEAK - R009-1
+CF81320  1800.0  0.0  CFVALU.009         * LEAK - R009-2
+CF81325  1800.0  0.0  CFVALU.029         * LEAK - R129
+CF81330  -1800.0  0.0  CFVALU.216        * RJ - R016
+CF81335  -1800.0  0.0  CFVALU.208        * RJ - R009-1
+CF81340  -1800.0  0.0  CFVALU.209        * RJ - R009-2
+CF81345  -1800.0  0.0  CFVALU.229        * RJ - R129
+*CF81350  1800.0  0.0  CFVALU.512         * AR - R016
+*CF81355  1800.0  0.0  CFVALU.515         * AR - R009-1
+*CF81360  1800.0  0.0  CFVALU.518         * AR - R009-2
+*CF81365  1800.0  0.0  CFVALU.521         * AR - R129
+CF81370  1.0  0.0  CFVALU.811            * VOL-O2
+CF81375  1.0  0.0  CFVALU.812            * VOL-N2
+*
+***
+******* R016 - Ar *******                    
+*
+FL11600  R016-AR-IN  401  016  6.7  6.7
+FL11601  0.5  1.0  1.0
+FL11602  3
+FL116S0  0.5  1.0  0.5
+FL116T0  2  512
+*
+CF51200  R016-AR-IN-con  L-A-IFTE  3  1.0
+CF51205  NORMAL
+CF51210  1.0  0.0  CFVALU.514
+CF51215  1.0  0.0  CFVALU.513
+CF51220  0.0  0.0  CFVALU.513
+*
+CF51300  R016-AR-IN-vel  DIVIDE  2  1.0
+CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF51315  1.0  0.0  CFVALU.524
+*
+CF52400  NUM-CF513  MULTIPLY  2  1.0  
+CF52410  1.0  0.0  CFVALU.107
+CF52415  1.0  0.0  CFVALU.101  
+*
+CF51400  AUX-P016  L-GE  2  1.0  0.0
+CF51405  NORMAL
+CF51410  1.0  0.0  CFVALU.499
+CF51415  1.0  0.0  CVH-P.16                           
+*
+***
+******* R009-1 - Ar *******                    
+*
+FL10800  R0091-AR-IN  401  008  6.7  6.7
+FL10801  0.5  1.0  1.0
+FL10802  3
+FL108S0  0.5  1.0  0.5
+FL108T0  2  515
+*
+CF51500  R0091-AR-IN-con  L-A-IFTE  3  1.0
+CF51505  NORMAL
+CF51510  1.0  0.0  CFVALU.517
+CF51515  1.0  0.0  CFVALU.516
+CF51520  0.0  0.0  CFVALU.516
+*
+CF51600  R0091-AR-IN-vel  DIVIDE  2  1.0 
+CF51610  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF51615  2.5  0.0  CFVALU.525
+*
+CF52500  NUM-CF516  MULTIPLY  2  1.0  
+CF52510  1.0  0.0  CFVALU.108
+CF52515  1.0  0.0  CFVALU.101  
+*
+CF51700  AUX-P008  L-GE  2  1.0  0.0
+CF51705  NORMAL
+CF51710  1.0  0.0  CFVALU.499
+CF51715  1.0  0.0  CVH-P.8
+*
+***
+******* R009-2 - Ar *******                    
+*
+FL10900  R0092-AR-IN  401  009  6.7  6.7
+FL10901  0.5  1.0  1.0
+FL10902  3
+FL109S0  0.5  1.0  0.5
+FL109T0  2  518
+*
+CF51800  R0092-AR-IN-con  L-A-IFTE  3  1.0
+CF51805  NORMAL
+CF51810  1.0  0.0  CFVALU.520
+CF51815  1.0  0.0  CFVALU.519
+CF51820  0.0  0.0  CFVALU.519
+*
+CF51900  R0092-AR-IN-vel  DIVIDE  2  1.0
+CF51910  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF51915  2.5  0.0  CFVALU.526
+*
+CF52600  NUM-CF519  MULTIPLY  2  1.0  
+CF52610  1.0  0.0  CFVALU.109
+CF52615  1.0  0.0  CFVALU.101  
+*
+CF52000  AUX-P009  L-GE  2  1.0  0.0
+CF52005  NORMAL
+CF52010  1.0  0.0  CFVALU.499
+CF52015  1.0  0.0  CVH-P.9
+*
+***
+******* R129 - Ar *******                    
+*
+FL12900  R0092-AR-IN  401  009  6.7  6.7
+FL12901  0.5  1.0  1.0
+FL12902  3
+FL129S0  0.5  1.0  0.5
+FL129T0  2  521
+*
+CF52100  R129-AR-IN-con  L-A-IFTE  3  1.0
+CF52105  NORMAL
+CF52110  1.0  0.0  CFVALU.523
+CF52115  1.0  0.0  CFVALU.522
+CF52120  0.0  0.0  CFVALU.522
+*
+CF52200  R129-AR-IN-vel  DIVIDE  2  1.0 
+CF52210  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF52215  2.5  0.0  CFVALU.527
+*
+CF52700  NUM-CF513  MULTIPLY  2  1.0  
+CF52710  1.0  0.0  CFVALU.110
+CF52715  1.0  0.0  CFVALU.101  
+*
+CF52300  AUX-P129  L-GE  2  1.0  0.0
+CF52305  NORMAL
+CF52310  1.0  0.0  CFVALU.499
+CF52315  1.0  0.0  CVH-P.129
+*
 ********************************************************* G-RWTS ********************************************************
 *-------------------------------------------------------
 * SGS RJ016           FM    TO    FM   TO                       
@@ -556,6 +593,7 @@ FL216S0   0.5  7.5   0.5
 FL216T0   2  216
 *
 CF21600   VEL-RJ016  DIVIDE  2  1.0                             * RJ * RATIO-R016 / (3600 * 0.5)
+CF21601   0.0
 CF21610   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
 CF21615   1.0  0.0  CFVALU.217
 * 
@@ -574,6 +612,7 @@ FL208S0   0.5  7.5   0.5
 FL208T0   2  208
 *
 CF20800   VEL-RJ008  DIVIDE  2  1.0                             * RJ * RATIO-R009-1 / (3600 * 0.5)
+CF20801   0.0
 CF20810   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
 CF20815   1.0  0.0  CFVALU.207
 * 
@@ -592,6 +631,7 @@ FL209S0   0.5  7.5   0.5
 FL209T0   2  209
 *
 CF20900   VEL-RJ009  DIVIDE  2  1.0                             * RJ * RATIO-R009-2 / (3600 * 0.5)
+CF20901   0.0
 CF20910   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
 CF20915   1.0  0.0  CFVALU.210
 * 
@@ -610,6 +650,7 @@ FL229S0   0.5  7.5   0.5
 FL229T0   2  229
 *
 CF22900   VEL-RJ129  DIVIDE  2  1.0                             * RJ * RATIO-R009-2 / (3600 * 0.5)
+CF22901   0.0
 CF22910   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
 CF22915   1.0  0.0  CFVALU.228
 * 
@@ -626,21 +667,10 @@ FL016S0  0.5  0.5  0.5
 FL016T0  2  016
 *
 CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
+CF01601  0.0
 CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
 CF01615  0.0001  0.0   CFVALU.102                     * 0.0001 * VOL_LLC
 *CF01615  0.0005  0.0   CFVALU.102                     * 0.0005 * VOL_CTC
-*
-*
-FL00900  R009-2-LEAK   400   009  4.25   4.25
-FL00901  0.5  0.5  1.0
-FL00902  3
-FL009S0  0.5  0.5  0.5
-FL009T0  2  009
-*
-CF00900  R009-2-LEAK-VEL  DIVIDE  2  1.0
-CF00910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF00915  0.0001  0.0   CFVALU.103                     * 0.0001 * VOL_CTC
-*CF00915  0.0005  0.0   CFVALU.103                     * 0.0005 * VOL_CTC
 *
 *
 FL00800  R009-1-LEAK   400   008  4.0   4.0
@@ -650,18 +680,33 @@ FL008S0  0.5  0.5  0.5
 FL008T0  2  008
 *
 CF00800  R009-1-LEAK-VEL  DIVIDE  2  1.0
+CF00801  0.0
 CF00810  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
 CF00815  0.0001  0.0   CFVALU.104                     * 0.0001 * VOL_HTC
 *CF00815  0.0005  0.0   CFVALU.104                     * 0.0005 * VOL_HTC
+*
+*
+FL00900  R009-2-LEAK   400   009  4.25   4.25
+FL00901  0.5  0.5  1.0
+FL00902  3
+FL009S0  0.5  0.5  0.5
+FL009T0  2  009
+*
+CF00900  R009-2-LEAK-VEL  DIVIDE  2  1.0
+CF00901  0.0
+CF00910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
+CF00915  0.0001  0.0   CFVALU.103                     * 0.0001 * VOL_CTC
+*CF00915  0.0005  0.0   CFVALU.103                     * 0.0005 * VOL_CTC
 *
 *
 FL02900  R129-LEAK   400   129  4.75   4.75
 FL02901  0.5  0.5  1.0
 FL02902  3
 FL029S0  0.5  0.5  0.5
-FL029T0  2  129
+FL029T0  2  029
 *
 CF02900  R129-LEAK-VEL  DIVIDE  2  1.0
+CF02901  0.0
 CF02910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
 CF02915  0.0001  0.0   CFVALU.105                     * 0.0001 * VOL_TIR
 *CF02915  0.0005  0.0   CFVALU.105                     * 0.0005 * VOL_CTC
@@ -672,18 +717,22 @@ CF02915  0.0001  0.0   CFVALU.105                     * 0.0001 * VOL_TIR
 *  Porcentaje aire R016
 *
 CF25000   LLC-AIR%  ADD  2  100.0
+CF25001   0.0
 CF25010   0.0  1.0  TIME
 CF25015   -1.0  0.0  CFVALU.255
 *
 CF25100   LLC-O2%  DIVIDE  2  100.0
+CF25101   0.0
 CF25110   1.0  0.0  CFVALU.254
 CF25115   1.0  0.0  CVH-MASS.5.016
 *
 CF25200   LLC-N2%  DIVIDE  2  100.0
+CF25201   0.0
 CF25210   1.0  0.0  CFVALU.254
 CF25215   1.0  0.0  CVH-MASS.4.016
 *
 CF25300   LLC-H2O%  DIVIDE  2  100.0
+CF25301   0.0
 CF25310   1.0  0.0  CFVALU.254
 CF25315   1.0  0.0  CVH-MASS.3.016
 *
@@ -694,6 +743,7 @@ CF25420   1.0  0.0  CVH-MASS.5.016
 CF25425   1.0  0.0  CVH-MASS.8.016
 *
 CF25500   ELEM-CF250  DIVIDE  2  1.0
+CF25501   1.0
 CF25510   1.0  0.0  CFVALU.254
 CF25515   1.0  0.0  CVH-MASS.8.016
 *
@@ -701,18 +751,22 @@ CF25515   1.0  0.0  CVH-MASS.8.016
 *  Porcentaje aire R009-1
 *
 CF26000   HTC-AIR%  ADD  2  100.0
+CF26001   0.0
 CF26010   0.0  1.0  TIME
 CF26015   -1.0  0.0  CFVALU.265
 *
 CF26100   HTC-O2%  DIVIDE  2  100.0
+CF26101   0.0
 CF26110   1.0  0.0  CFVALU.264
 CF26115   1.0  0.0  CVH-MASS.5.008
 *
 CF26200   HTC-N2%  DIVIDE  2  100.0
+CF26201   0.0
 CF26210   1.0  0.0  CFVALU.264
 CF26215   1.0  0.0  CVH-MASS.4.008
 *
 CF26300   HTC-H2O%  DIVIDE  2  100.0
+CF26301   0.0
 CF26310   1.0  0.0  CFVALU.264
 CF26315   1.0  0.0  CVH-MASS.3.008
 *
@@ -723,6 +777,7 @@ CF26420   1.0  0.0  CVH-MASS.5.008
 CF26425   1.0  0.0  CVH-MASS.8.008
 *
 CF26500   ELEM-CF260  DIVIDE  2  1.0
+CF26501   1.0
 CF26510   1.0  0.0  CFVALU.264
 CF26515   1.0  0.0  CVH-MASS.8.008
 *
@@ -730,18 +785,22 @@ CF26515   1.0  0.0  CVH-MASS.8.008
 *  Porcentaje aire R009-2
 *
 CF27000   CTC-AIR%  ADD  2  100.0
+CF27001   0.0
 CF27010   0.0  1.0  TIME
 CF27015   -1.0  0.0  CFVALU.275
 *
 CF27100   CTC-O2%  DIVIDE  2  100.0
+CF27101   0.0
 CF27110   1.0  0.0  CFVALU.274
 CF27115   1.0  0.0  CVH-MASS.5.009
 *
 CF27200   CTC-N2%  DIVIDE  2  100.0
+CF27201   0.0
 CF27210   1.0  0.0  CFVALU.274
 CF27215   1.0  0.0  CVH-MASS.4.009
 *
 CF27300   CTC-H2O%  DIVIDE  2  100.0
+CF27301   0.0
 CF27310   1.0  0.0  CFVALU.274
 CF27315   1.0  0.0  CVH-MASS.3.009
 *
@@ -752,6 +811,7 @@ CF27420   1.0  0.0  CVH-MASS.5.009
 CF27425   1.0  0.0  CVH-MASS.8.009
 *
 CF27500   ELEM-CF270  DIVIDE  2  1.0
+CF27501   1.0
 CF27510   1.0  0.0  CFVALU.274
 CF27515   1.0  0.0  CVH-MASS.8.009
 *
@@ -759,18 +819,22 @@ CF27515   1.0  0.0  CVH-MASS.8.009
 *  Porcentaje aire R129
 *
 CF28000   TIR-AIR%  ADD  2  100.0
+CF28001   0.0
 CF28010   0.0  1.0  TIME
 CF28015   -1.0  0.0  CFVALU.285
 *
 CF28100   TIR-O2%  DIVIDE  2  100.0
+CF28101   0.0
 CF28110   1.0  0.0  CFVALU.284
 CF28115   1.0  0.0  CVH-MASS.5.129
 *
 CF28200   TIR-N2%  DIVIDE  2  100.0
+CF28201   0.0
 CF28210   1.0  0.0  CFVALU.284
 CF28215   1.0  0.0  CVH-MASS.4.129
 *
 CF28300   TIR-H2O%  DIVIDE  2  100.0
+CF28301   0.0
 CF28310   1.0  0.0  CFVALU.284
 CF28315   1.0  0.0  CVH-MASS.3.129
 *
@@ -781,44 +845,49 @@ CF28420   1.0  0.0  CVH-MASS.5.129
 CF28425   1.0  0.0  CVH-MASS.8.129
 *
 CF28500   ELEM-CF280  DIVIDE  2  1.0
+CF28501   1.0
 CF28510   1.0  0.0  CFVALU.284
 CF28515   1.0  0.0  CVH-MASS.8.129
 *
 ***
 *  Porcentaje aire TOTAL
 *
-CF29000   TOTAL-AIR%  ADD  3  100.0
+CF29000   TOTAL-AIR%  ADD  3  1.0
+CF29001   0.0
 CF29015   1.0  0.0  CFVALU.292
 CF29020   1.0  0.0  CFVALU.294
 CF29025   1.0  0.0  CFVALU.296
 *
-CF29100   TOTAL-O2%-NUM  ADD  4  100.0
+CF29100   TOTAL-O2%-NUM  ADD  4  1.0
 CF29110   1.0  0.0  CVH-MASS.5.16
 CF29115   1.0  0.0  CVH-MASS.5.8
 CF29120   1.0  0.0  CVH-MASS.5.9
 CF29125   1.0  0.0  CVH-MASS.5.129
 *
 CF29200   TOTAL-O2%  DIVIDE  2  100.0
+CF29201   0.0
 CF29210   1.0  0.0  CFVALU.297
 CF29215   1.0  0.0  CFVALU.291
 *
-CF29300   TOTAL-N2%-NUM  ADD  4  100.0
+CF29300   TOTAL-N2%-NUM  ADD  4  1.0
 CF29310   1.0  0.0  CVH-MASS.4.16
 CF29315   1.0  0.0  CVH-MASS.4.8
 CF29320   1.0  0.0  CVH-MASS.4.9
 CF29325   1.0  0.0  CVH-MASS.4.129
 *
 CF29400   TOTAL-N2%  DIVIDE  2  100.0
+CF29401   0.0
 CF29410   1.0  0.0  CFVALU.297
 CF29415   1.0  0.0  CFVALU.293
 *
-CF29500   TOTAL-H2O%-NUM  ADD  4  100.0
+CF29500   TOTAL-H2O%-NUM  ADD  4  1.0
 CF29510   1.0  0.0  CVH-MASS.3.16
 CF29515   1.0  0.0  CVH-MASS.3.8
 CF29520   1.0  0.0  CVH-MASS.3.9
 CF29525   1.0  0.0  CVH-MASS.3.129
 *
 CF29600   TOTAL-H2O%  DIVIDE  2  100.0
+CF29601   0.0
 CF29610   1.0  0.0  CFVALU.297
 CF29615   1.0  0.0  CFVALU.295
 *
