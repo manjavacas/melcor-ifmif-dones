@@ -190,7 +190,7 @@ CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-CF10110   0.0  0.1  TIME                             
+CF10110   0.0  0.0  TIME                             
 *
 ****** VOLUMEN R016 ******
 CF10200   VOL-R016  EQUALS  1  1.0                   
@@ -486,7 +486,7 @@ CF51220  0.0  0.0  CFVALU.513
 *
 CF51300  R016-AR-IN-vel  DIVIDE  2  1.0
 CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51315  1.0  0.0  CFVALU.524
+CF51315  2.5  0.0  CFVALU.524
 *
 CF52400  NUM-CF513  MULTIPLY  2  1.0  
 CF52410  1.0  0.0  CFVALU.107
