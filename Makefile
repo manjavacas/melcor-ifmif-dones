@@ -31,6 +31,9 @@ mb: clean
 rhum: clean
 	./melgen-fusion-186_bdba Main Building/rhum.inp
 	./melcor-fusion-186_bdba  Main Building/rhum.inp
+sgs3: clean
+	./melgen-fusion-186_bdba Main Building/sgs3.inp
+	./melcor-fusion-186_bdba Main Building/sgs3.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES
