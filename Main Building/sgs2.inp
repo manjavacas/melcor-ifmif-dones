@@ -249,13 +249,9 @@ CF90110  1.0  0.0  CVH-TVAP.904                     * Temp AUX-3 = 290.95K (mant
 CV904C1  MASS.5 902 3                       
 CV904C2  TE 901 9                                              
 *     
-CF90200 'AUX-3-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP * MASS/S / (QT - RJ)
-CF90210  1.0  0.0  CFVALU.500
+CF90200 'AUX-3-O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP * MASS/S / QT
+CF90210  1.0  0.0  CFVALU.102
 CF90215  1.0  0.0  CFVALU.501                                       
-*
-CF50000  DENOM-CF902  ADD  2  1.0  3600.0  
-CF50010  1.0  0.0  CFVALU.102
-CF50015  -1.0  0.0  CFVALU.101
 *
 CF50100  NUM-CF902  MULTIPLY  2  0.8
 CF50110  1.0  0.0  CFVALU.100
@@ -266,8 +262,9 @@ CF50115  1.0  0.0  FL-MFLOW.5.205
 CV904C3  MASS.4 903 3                       
 CV904C4  TE 901 9                           
 *     
-CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP * MASS/S / (QT-RJ)
-CF90310  1.0  0.0  CFVALU.500
+CF90300 'AUX-3-N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP * MASS/S / QT
+CF90301                                             * 0.7*QP*(0.79*0.03*26869*densN2) / QT
+CF90310  1.0  0.0  CFVALU.102
 CF90315  1.0  0.0  CFVALU.503                                       
 *
 CF50300  NUM-CF903  MULTIPLY  2  0.7
@@ -279,8 +276,8 @@ CF50315  1.0  0.0  FL-MFLOW.4.205
 CV904C5  MASS.3 904 3                       
 CV904C6  TE 901 9                           
 *  
-CF90400 'AUX-3-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * QP * MASS/S / (QT-RJ)
-CF90410  1.0  0.0  CFVALU.500
+CF90400 'AUX-3-H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * QP * MASS/S / QT
+CF90410  1.0  0.0  CFVALU.102
 CF90415  1.0  0.0  CFVALU.504                                       
 *
 CF50400  NUM-CF904  MULTIPLY  2  0.95
@@ -327,12 +324,12 @@ CF51210  0.0  1800.0  TIME                            * (3600 * 0.5) = 1800.0
 *CF51215  1.0  0.0  CFVALU.513
 CF51215  2.5  0.0  CFVALU.101
 *
-*CF51300  AR-INLET-velnum  ADD  5  1.0
+CF51300  AR-INLET-velnum  ADD  4  1.0
 *CF51310  0.0  -0.4166  TIME                           * Infiltrations: Volume * HLR
-*CF51310  0.0  -2.083  TIME                            * Infiltrations: Volume * HLR
-*CF51315  1.0  0.0  CFVALU.101                         * RJ
-*CF51320  0.7452551285  0.0  CFVALU.908                * Purified O2 volume (dens' = dens=1.429 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
-*CF51325  0.8519756629  0.0  CFVALU.906                * Purified N2 volume (dens' = dens=1.250 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
+CF51310  0.0  -2.083  TIME                            * Infiltrations: Volume * HLR
+CF51315  1.0  0.0  CFVALU.101                         * RJ
+CF51320  0.7452551285  0.0  CFVALU.908                * Purified O2 volume (dens' = dens=1.429 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
+CF51325  0.8519756629  0.0  CFVALU.906                * Purified N2 volume (dens' = dens=1.250 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
 *CF51330  219.717264  0.0  CFVALU.907                  * Purified H2O volume (dens' = dens=0.004847 * (P'=101065 * T=273.15) / (P=Patm * T'=290.15))
 *
 CF51000  AUX-PSALAS  L-OR  4  1.0  0.0
