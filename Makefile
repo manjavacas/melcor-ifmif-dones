@@ -1,39 +1,39 @@
 leak016: clean
-	./melgen-fusion-186_bdba Main Building/leaktestR016.inp
-	./melcor-fusion-186_bdba Main Building/leaktestR016.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/leaktestR016.inp
+	./melcor-fusion-186_bdba main-building/leaktestR016.inp
 leak129: clean
-	./melgen-fusion-186_bdba Main Building/leaktestR129.inp
-	./melcor-fusion-186_bdba Main Building/leaktestR129.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/leaktestR129.inp
+	./melcor-fusion-186_bdba main-building/leaktestR129.inp
 leak0091: clean
-	./melgen-fusion-186_bdba Main Building/leaktestR0091.inp
-	./melcor-fusion-186_bdba Main Building/leaktestR0091.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/leaktestR0091.inp
+	./melcor-fusion-186_bdba main-building/leaktestR0091.inp
 leak0092: clean
-	./melgen-fusion-186_bdba Main Building/leaktestR0092.inp
-	./melcor-fusion-186_bdba Main Building/leaktestR0092.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/leaktestR0092.inp
+	./melcor-fusion-186_bdba main-building/leaktestR0092.inp
 l0: clean
-	./melgen-fusion-186_bdba L0/l0.inp
+	./melgen-fusion-186_bdba ow=o i=L0/l0.inp
 	./melcor-fusion-186_bdba L0/l0.inp
 l1: clean
-	./melgen-fusion-186_bdba L1/l1.inp
+	./melgen-fusion-186_bdba ow=o i=L1/l1.inp
 	./melcor-fusion-186_bdba L1/l1.inp
 mbs: clean
-	./melgen-fusion-186_bdba Main Building/mbs.inp
-	./melcor-fusion-186_bdba Main Building/mbs.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/mbs.inpz
+	./melcor-fusion-186_bdba main-building/mbs.inp
 sgs: clean
-	./melgen-fusion-186_bdba Main Building/sgs.inp
-	./melcor-fusion-186_bdba Main Building/sgs.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/sgs.inp
+	./melcor-fusion-186_bdba main-building/sgs.inp
 sgs2: clean
-	./melgen-fusion-186_bdba Main Building/sgs2.inp
-	./melcor-fusion-186_bdba Main Building/sgs2.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/sgs2.inp
+	./melcor-fusion-186_bdba main-building/sgs2.inp
 mb: clean
-	./melgen-fusion-186_bdba Main Building/main.inp
-	./melcor-fusion-186_bdba  Main Building/main.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/main.inp
+	./melcor-fusion-186_bdba main-building/main.inp
 rhum: clean
-	./melgen-fusion-186_bdba Main Building/rhum.inp
-	./melcor-fusion-186_bdba  Main Building/rhum.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/rhum.inp
+	./melcor-fusion-186_bdba main-building/rhum.inp
 sgs3: clean
-	./melgen-fusion-186_bdba Main Building/sgs3.inp
-	./melcor-fusion-186_bdba Main Building/sgs3.inp
+	./melgen-fusion-186_bdba ow=o i=main-building/sgs3.inp
+	./melcor-fusion-186_bdba main-building/sgs3.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES
