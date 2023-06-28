@@ -74,16 +74,10 @@ CV40100   ArSS  2  2  5
 CV40101   0   -1		                                  				            
 CV401A0   3                                                                                         
 CV401A1   PVOL    101065.0                                                                                              
-CV401A3   TATM    293.15  RHUM  0.018               * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE  = 0.003 (C) ; 0.018 (D) ; 0.06 (E)  	                                                  
-*CV401A4   MLFR.4  0.00395                           * (99.5%)    
-*CV401A6   MLFR.5  0.00105                           * (99.5%)     
-*CV401A8   MLFR.8  0.995                             * Filled with Ar (99.5%)  
-CV401A4   MLFR.4  0.0237                            * (97%)    
-CV401A6   MLFR.5  0.0063                            * (97%)     
-CV401A8   MLFR.8  0.97                              * Filled with Ar (97%)
-*CV401A4   MLFR.4  0.021                             * (90%)  -----> E  
-*CV401A6   MLFR.5  0.079                             * (90%)  -----> E   
-*CV401A8   MLFR.8  0.9                               * Filled with Ar (90%)  -----> E  
+CV401A3   TATM    293.15  RHUM  0.018               * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE
+CV401A4   MLFR.4  0.000395                           * (99.95%)    
+CV401A6   MLFR.5  0.000105                           * (99.95%)     
+CV401A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -99,16 +93,10 @@ CV01600   R016  2  0  1
 CV01601   0   0		                              
 CV016A0   3                                                                                         
 CV016A1   PVOL  101065.0                            
-CV016A2   TATM  290.95  RHUM  0.018                 * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE = 0.003 (C) ; 0.018 (D) ; 0.06 (E)                  
-*CV016A4   MLFR.4  0.00395                           * (99.5%)   
-*CV016A6   MLFR.5  0.00105                           * (99.5%)    
-*CV016A8   MLFR.8  0.995                             * Filled with Ar (99.5%)
-CV016A4   MLFR.4  0.0237                            * (97%)    
-CV016A6   MLFR.5  0.0063                            * (97%)     
-CV016A8   MLFR.8  0.97                              * Filled with Ar (97%)  
-*CV016A4   MLFR.4  0.021                             * (90%)  -----> E  
-*CV016A6   MLFR.5  0.079                             * (90%)  -----> E   
-*CV016A8   MLFR.8  0.9                               * Filled with Ar (90%)  -----> E   
+CV016A2   TATM  290.95  RHUM  0.018                 * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
+CV016A4   MLFR.4  0.000395                           * (99.95%)   
+CV016A6   MLFR.5  0.000105                           * (99.95%)    
+CV016A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)   
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -124,16 +112,10 @@ CV00800   R009-1  2  0  1
 CV00801   0   0		                               
 CV008A0   3                                                                                         
 CV008A1   PVOL  101065.0                             
-CV008A2   TATM  293.15  RHUM  0.018                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE = 0.003 (C) ; 0.018 (D) ; 0.06 (E)                  
-*CV008A4   MLFR.4  0.00395                           * (99.5%)   
-*CV008A6   MLFR.5  0.00105                           * (99.5%)    
-*CV008A8   MLFR.8  0.995                             * Filled with Ar (99.5%)         
-CV008A4   MLFR.4  0.0237                            * (97%)    
-CV008A6   MLFR.5  0.0063                            * (97%)     
-CV008A8   MLFR.8  0.97                              * Filled with Ar (97%)        
-*CV008A4   MLFR.4  0.021                             * (90%)  -----> E  
-*CV008A6   MLFR.5  0.079                             * (90%)  -----> E   
-*CV008A8   MLFR.8  0.9                               * Filled with Ar (90%)  -----> E              
+CV008A2   TATM  293.15  RHUM  0.0003                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
+CV008A4   MLFR.4  0.000395                           * (99.95%)   
+CV008A6   MLFR.5  0.000105                           * (99.95%)    
+CV008A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)              
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -149,16 +131,10 @@ CV00900   R009-2  2  0  1
 CV00901   0   0		                               
 CV009A0   3                                                                                         
 CV009A1   PVOL  101065.0                             
-CV009A2   TATM  293.15  RHUM  0.018                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE = 0.003 (C) ; 0.018 (D) ; 0.06 (E)                
-*CV009A4   MLFR.4  0.00395                           * (99.5%)   -----> C
-*CV009A6   MLFR.5  0.00105                           * (99.5%)   -----> C 
-*CV009A8   MLFR.8  0.995                             * Filled with Ar (99.5%)  -----> C 
-CV009A4   MLFR.4  0.0237                            * (97%)  -----> D  
-CV009A6   MLFR.5  0.0063                            * (97%)  -----> D   
-CV009A8   MLFR.8  0.97                              * Filled with Ar (97%)  -----> D    
-*CV009A4   MLFR.4  0.021                             * (90%)  -----> E  
-*CV009A6   MLFR.5  0.079                             * (90%)  -----> E   
-*CV009A8   MLFR.8  0.9                               * Filled with Ar (90%)  -----> E                 
+CV009A2   TATM  293.15  RHUM  0.0003                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
+CV009A4   MLFR.4  0.000395                           * (99.95%)   
+CV009A6   MLFR.5  0.000105                           * (99.95%)    
+CV009A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)                
 ***
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -174,16 +150,10 @@ CV12900   R129  2  2  2
 CV12901   0   0		                           
 CV129A0   3                                                                                         
 CV129A1   PVOL    101065.0                                                                                                    
-CV129A3   TATM    298.15    RHUM  0.018             * 25 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE = 0.003 (C) ; 0.018 (D) ; 0.06 (E)                                                   
-*CV129A4   MLFR.4  0.00395                           * (99.5%)   
-*CV129A6   MLFR.5  0.00105                           * (99.5%)    
-*CV129A8   MLFR.8  0.995                             * Filled with Ar (99.5%)  
-CV129A4   MLFR.4  0.0237                            * (97%)    
-CV129A6   MLFR.5  0.0063                            * (97%)     
-CV129A8   MLFR.8  0.97                              * Filled with Ar (97%) 
-*CV129A4   MLFR.4  0.021                             * (90%)  -----> E  
-*CV129A6   MLFR.5  0.079                             * (90%)  -----> E   
-*CV129A8   MLFR.8  0.9                               * Filled with Ar (90%)  -----> E  
+CV129A3   TATM    298.15    RHUM  0.0003             * 25 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
+CV129A4   MLFR.4  0.000395                           * (99.95%)   
+CV129A6   MLFR.5  0.000105                           * (99.95%)    
+CV129A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)  
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                                                 
@@ -205,9 +175,12 @@ CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-*CF10110   0.0  0.4  TIME                             * C
-CF10110   0.0  0.0  TIME                             * D
-*CF10110   0.0  20.0  TIME                            * E
+CF10110   0.0  0.3  TIME                             * C / P_inicial
+*CF10110   0.0  0.25  TIME                             * C / P_3dias
+*CF10110   0.0  1.8  TIME                             * D / P_inicial
+*CF10110   0.0  1.55  TIME                             * D / P_3dias
+*CF10110   0.0  20.0  TIME                            * E / P_inicial --> este oscila mucho entorno al equilibro, quizás haya que subir el valor del INLET de Ar
+*CF10110   0.0  15.0  TIME                            * E / P_3dias
 *
 ****** VOLUMEN R016 ******
 CF10200   VOL-R016  EQUALS  1  1.0                   
@@ -251,6 +224,16 @@ CF10915   1.0  0.0  CFVALU.104
 CF11000   RATIO-R129  DIVIDE  2  1.0                   
 CF11010   1.0  0.0  CFVALU.106
 CF11015   1.0  0.0  CFVALU.105                     
+*
+**** CONCENTRACIÓN MÁXIMA O2/N2 ****
+CF11100   Cmax-O2N2  EQUALS  1  1.0                   
+CF11110   0.0  0.5  TIME                 * 0.5 % ---> C
+*CF11110   0.0  3.0  TIME                 * 3 % ---> D
+*CF11110   0.0  10.0  TIME                * 10 % ---> E
+*
+**** CONCENTRACIÓN MÁXIMA H2O ****
+CF11200   Cmax-H2O  EQUALS  1  1.0                   
+CF11210   0.0  0.01  TIME                 * 0.01 %
 *
 **************************************************************** SGS ******************************************************************                                                 
 ***
@@ -471,6 +454,7 @@ CF81220  1.0  0.0  CFVALU.807
 CF81225  1.0  0.0  CFVALU.810
 *
 CF81300  BALANCE  ADD  10  1.0
+CF81301  0.0
 CF81310  1800.0  0.0  CFVALU.016         * LEAK - R016
 CF81315  1800.0  0.0  CFVALU.008         * LEAK - R009-1
 CF81320  1800.0  0.0  CFVALU.009         * LEAK - R009-2
@@ -483,17 +467,17 @@ CF81345  -1800.0  0.0  CFVALU.229        * RJ - R129
 *CF81355  1800.0  0.0  CFVALU.515         * AR - R009-1
 *CF81360  1800.0  0.0  CFVALU.518         * AR - R009-2
 *CF81365  1800.0  0.0  CFVALU.521         * AR - R129
-CF81370  1.0  0.0  CFVALU.811            * VOL-O2
-CF81375  1.0  0.0  CFVALU.812            * VOL-N2
+CF81370  3600.0  0.0  CFVALU.811            * VOL-O2
+CF81375  3600.0  0.0  CFVALU.812            * VOL-N2
 *
 ***
 ******* R016 - Ar *******                    
 *
-*FL11600  R016-AR-IN  401  016  6.7  6.7
-*FL11601  0.5  1.0  1.0
-*FL11602  3
-*FL116S0  0.5  1.0  0.5
-*FL116T0  2  512
+FL11600  R016-AR-IN  401  016  6.7  6.7
+FL11601  0.5  1.0  1.0
+FL11602  3
+FL116S0  0.5  1.0  0.5
+FL116T0  2  512
 *
 CF51200  R016-AR-IN-con  L-A-IFTE  3  1.0
 CF51205  NORMAL
@@ -503,7 +487,7 @@ CF51220  0.0  0.0  CFVALU.513
 *
 CF51300  R016-AR-IN-vel  DIVIDE  2  1.0
 CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51315  2.5  0.0  CFVALU.524
+CF51315  1.5  0.0  CFVALU.524
 *
 CF52400  NUM-CF513  MULTIPLY  2  1.0  
 CF52410  1.0  0.0  CFVALU.107
@@ -517,11 +501,11 @@ CF51415  1.0  0.0  CVH-P.16
 ***
 ******* R009-1 - Ar *******                    
 *
-*FL10800  R0091-AR-IN  401  008  6.7  6.7
-*FL10801  0.5  1.0  1.0
-*FL10802  3
-*FL108S0  0.5  1.0  0.5
-*FL108T0  2  515
+FL10800  R0091-AR-IN  401  008  6.7  6.7
+FL10801  0.5  1.0  1.0
+FL10802  3
+FL108S0  0.5  1.0  0.5
+FL108T0  2  515
 *
 CF51500  R0091-AR-IN-con  L-A-IFTE  3  1.0
 CF51505  NORMAL
@@ -531,7 +515,7 @@ CF51520  0.0  0.0  CFVALU.516
 *
 CF51600  R0091-AR-IN-vel  DIVIDE  2  1.0 
 CF51610  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51615  2.5  0.0  CFVALU.525
+CF51615  1.5  0.0  CFVALU.525
 *
 CF52500  NUM-CF516  MULTIPLY  2  1.0  
 CF52510  1.0  0.0  CFVALU.108
@@ -545,11 +529,11 @@ CF51715  1.0  0.0  CVH-P.8
 ***
 ******* R009-2 - Ar *******                    
 *
-*FL10900  R0092-AR-IN  401  009  6.7  6.7
-*FL10901  0.5  1.0  1.0
-*FL10902  3
-*FL109S0  0.5  1.0  0.5
-*FL109T0  2  518
+FL10900  R0092-AR-IN  401  009  6.7  6.7
+FL10901  0.5  1.0  1.0
+FL10902  3
+FL109S0  0.5  1.0  0.5
+FL109T0  2  518
 *
 CF51800  R0092-AR-IN-con  L-A-IFTE  3  1.0
 CF51805  NORMAL
@@ -559,7 +543,7 @@ CF51820  0.0  0.0  CFVALU.519
 *
 CF51900  R0092-AR-IN-vel  DIVIDE  2  1.0
 CF51910  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51915  2.5  0.0  CFVALU.526
+CF51915  1.5  0.0  CFVALU.526
 *
 CF52600  NUM-CF519  MULTIPLY  2  1.0  
 CF52610  1.0  0.0  CFVALU.109
@@ -573,11 +557,11 @@ CF52015  1.0  0.0  CVH-P.9
 ***
 ******* R129 - Ar *******                    
 *
-*FL12900  R0092-AR-IN  401  009  6.7  6.7
-*FL12901  0.5  1.0  1.0
-*FL12902  3
-*FL129S0  0.5  1.0  0.5
-*FL129T0  2  521
+FL12900  R0092-AR-IN  401  129  5.0  5.0
+FL12901  0.5  1.0  1.0
+FL12902  3
+FL129S0  0.5  1.0  0.5
+FL129T0  2  521
 *
 CF52100  R129-AR-IN-con  L-A-IFTE  3  1.0
 CF52105  NORMAL
@@ -587,7 +571,7 @@ CF52120  0.0  0.0  CFVALU.522
 *
 CF52200  R129-AR-IN-vel  DIVIDE  2  1.0 
 CF52210  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF52215  2.5  0.0  CFVALU.527
+CF52215  1.5  0.0  CFVALU.527
 *
 CF52700  NUM-CF513  MULTIPLY  2  1.0  
 CF52710  1.0  0.0  CFVALU.110
@@ -646,6 +630,7 @@ FL209S0   0.5  7.5   0.5
 FL209T0   2  209
 *
 CF20900   VEL-RJ009  DIVIDE  2  1.0                             * RJ * RATIO-R009-2 / (3600 * 0.5)
+CF20901   0.0
 CF20910   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
 CF20915   1.0  0.0  CFVALU.210
 * 
@@ -663,7 +648,8 @@ FL22902   3
 FL229S0   0.5  7.5   0.5 
 FL229T0   2  229
 *
-CF22900   VEL-RJ129  DIVIDE  2  1.0                             * RJ * RATIO-R009-2 / (3600 * 0.5)
+CF22900   VEL-RJ129  DIVIDE  2  1.0                             * RJ * RATIO-R129 / (3600 * 0.5)
+CF22901   0.0
 CF22910   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
 CF22915   1.0  0.0  CFVALU.228
 * 
@@ -680,9 +666,10 @@ FL016S0  0.5  0.5  0.5
 FL016T0  2  016
 *
 CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
+CF01601  0.0
 CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF01615  0.0001  0.0   CFVALU.102                     * 0.0001 * VOL_LLC
-CF01615  0.0005  0.0   CFVALU.102                     * 0.0005 * VOL_LLC
+CF01615  0.0001  0.0   CFVALU.102                     * 0.0001 * VOL_LLC
+*CF01615  0.0005  0.0   CFVALU.102                     * 0.0005 * VOL_LLC
 *CF01615  0.005  0.0   CFVALU.102                      * 0.005 * VOL_LLC
 *
 *
@@ -693,10 +680,11 @@ FL008S0  0.5  0.5  0.5
 FL008T0  2  008
 *
 CF00800  R009-1-LEAK-VEL  DIVIDE  2  1.0
+CF00801  0.0
 CF00810  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF00815  0.0001  0.0   CFVALU.104                     * 0.0001 * VOL_HTC
-CF00815  0.0005  0.0   CFVALU.104                     * 0.0005 * VOL_HTC
-*CF00815  0.005  0.0   CFVALU.104                      * 0.005 * VOL_HTC
+CF00815  0.0001  0.0   CFVALU.103                     * 0.0001 * VOL_CTC
+*CF00815  0.0005  0.0   CFVALU.103                     * 0.0005 * VOL_CTC
+*CF00815  0.005  0.0   CFVALU.103                      * 0.005 * VOL_CTC
 *
 *
 FL00900  R009-2-LEAK   400   009  4.25   4.25
@@ -706,10 +694,11 @@ FL009S0  0.5  0.5  0.5
 FL009T0  2  009
 *
 CF00900  R009-2-LEAK-VEL  DIVIDE  2  1.0
+CF00901  0.0
 CF00910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF00915  0.0001  0.0   CFVALU.103                     * 0.0001 * VOL_CTC
-CF00915  0.0005  0.0   CFVALU.103                     * 0.0005 * VOL_CTC
-*CF00915  0.005  0.0   CFVALU.103                      * 0.005 * VOL_CTC
+CF00915  0.0001  0.0   CFVALU.104                     * 0.0001 * VOL_HTC
+*CF00915  0.0005  0.0   CFVALU.104                     * 0.0005 * VOL_HTC
+*CF00915  0.005  0.0   CFVALU.104                      * 0.005 * VOL_HTC
 *
 *
 FL02900  R129-LEAK   400   129  4.75   4.75
@@ -719,9 +708,10 @@ FL029S0  0.5  0.5  0.5
 FL029T0  2  029
 *
 CF02900  R129-LEAK-VEL  DIVIDE  2  1.0
+CF02901  0.0
 CF02910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF02915  0.0001  0.0   CFVALU.105                     * 0.0001 * VOL_TIR
-CF02915  0.0005  0.0   CFVALU.105                     * 0.0005 * VOL_TIR
+CF02915  0.0001  0.0   CFVALU.105                     * 0.0001 * VOL_TIR
+*CF02915  0.0005  0.0   CFVALU.105                     * 0.0005 * VOL_TIR
 *CF02915  0.005  0.0   CFVALU.105                      * 0.005 * VOL_TIR
 *
 ***
