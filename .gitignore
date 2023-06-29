@@ -1,12 +1,13 @@
 melgen-fusion-186_bdba
 melcor-fusion-186_bdba
-PP_EAI.inp
 *.DIA
 *.MES
 *.OUT
 *.RST
 *.dia
 *.out
+*.PTF
+*.DAT
 fort*
 extDIAG
 MEGDIA

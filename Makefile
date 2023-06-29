@@ -53,6 +53,7 @@ cleanall:
 	rm -f *.OUT
 	rm -f *.PTF
 	rm -f *.RST
+	rm -f *.DAT
 	rm -f extDIAG
 	rm -f MEGDIA
 	rm -f MEGOUT
