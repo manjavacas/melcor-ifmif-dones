@@ -905,11 +905,26 @@ CF29725   1.0  0.0  CFVALU.284
 **                    EXTERNAL DATA FILE  (*EDF package)                      **
 ********************************************************************************
 *
-*EDF11100 VARIAB 1 WRITE
-*EDF11101 variables.dat
-*EDF11102 8E12.4
-*EDF11110 0.      86400.
-*EDF111AA CFVALU.250         * % AIRE LLC
+EDF11100 VARIAB 16 WRITE
+EDF11101 sgs_var.dat
+EDF11102 8E12.4
+EDF11110 0.1      86400.     
+EDF111P0 CVH-P.016          * P R016
+EDF111P1 CVH-P.008          * P R009-1
+EDF111P2 CVH-P.009          * P R009-2
+EDF111P3 CVH-P.129          * P R129
+EDF111O0 CFVALU.251         * % O2 R016
+EDF111O1 CFVALU.261         * % O2 R009-1
+EDF111O2 CFVALU.271         * % O2 R009-2
+EDF111O3 CFVALU.281         * % O2 R129
+EDF111N0 CFVALU.252         * % N2 R016
+EDF111N1 CFVALU.262         * % N2 R009-1
+EDF111N2 CFVALU.272         * % N2 R009-2
+EDF111N3 CFVALU.282         * % N2 R129
+EDF111H0 CFVALU.253         * % H2O R016
+EDF111H1 CFVALU.263         * % H2O R009-1
+EDF111H2 CFVALU.273         * % H2O R009-2
+EDF111H3 CFVALU.283         * % H2O R129
 *
 ***
 . * End
