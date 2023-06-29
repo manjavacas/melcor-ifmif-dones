@@ -175,7 +175,7 @@ CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-CF10110   0.0  0.3  TIME                             * C / P_inicial
+CF10110   0.0  0.29024 TIME                             * C / P_inicial
 *CF10110   0.0  0.25  TIME                             * C / P_3dias
 *CF10110   0.0  1.8  TIME                             * D / P_inicial
 *CF10110   0.0  1.55  TIME                             * D / P_3dias
@@ -909,23 +909,42 @@ EDF11100 VARIAB 16 WRITE
 EDF11101 sgs_var.dat
 EDF11102 8E20.12
 EDF11110 0.1      1000.
+* PRESIONES
 EDF111A0 CFVALU.300         
 EDF111A1 CFVALU.301         
 EDF111A2 CFVALU.302         
-EDF111A3 CFVALU.303         
+EDF111A3 CFVALU.303   
+* O2      
 EDF111B0 CFVALU.251         
 EDF111B1 CFVALU.261         
 EDF111B2 CFVALU.271         
-EDF111B3 CFVALU.281         
+EDF111B3 CFVALU.281  
+* N2       
 EDF111C0 CFVALU.252         
 EDF111C1 CFVALU.262         
 EDF111C2 CFVALU.272         
-EDF111C3 CFVALU.282         
+EDF111C3 CFVALU.282   
+* H2O      
 EDF111D0 CFVALU.253         
 EDF111D1 CFVALU.263         
 EDF111D2 CFVALU.273         
 EDF111D3 CFVALU.283      
 *
+***** PRESIÓN LLC *****
+CF30000  P-R016  EQUALS  1  1.0
+CF30010  1.0  0.0  CVH-P.016
+*
+***** PRESIÓN HTC *****
+CF30100  P-R0091  EQUALS  1  1.0
+CF30110  1.0  0.0  CVH-P.008
+*
+***** PRESIÓN CTC *****
+CF30200  P-R0092  EQUALS  1  1.0
+CF30210  1.0  0.0  CVH-P.009
+*
+***** PRESIÓN TIR *****
+CF30300  P-R129  EQUALS  1  1.0
+CF30310  1.0  0.0  CVH-P.129
 ***
 . * End
 *

@@ -27,7 +27,7 @@ MAX_IMP_N2 = .5
 MAX_IMP_H2O = .1
 
 # Incremento RJ
-INC_RJ = .01
+INC_RJ = .00001
 
 
 def overpressure(pressures):
@@ -65,31 +65,36 @@ while not end:
     subprocess.call([MELCOR_PATH, MODEL_PATH],
                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-    # Leer ultimos valores del EDF
+    # Leer presiones maximas y ultimas concentraciones del EDF
     with open(EDF_PATH, 'r') as file:
         try:
-            last_values = []
-            for line in file.readlines()[-3:]:
-                last_values.extend([np.float64(value)
-                                   for value in line.split()])
-            pressures = last_values[1:5]
-            imps_o2 = last_values[5:9]
-            imps_n2 = last_values[9:13]
-            imps_h2o = last_values[13:17]
+            df = []
+            values = []
+            for line in file:
+                values.extend([float(value) for value in line.split()])
+                if len(values) == 17:
+                    df.append(values)
+                    values = []
+            df = np.array(df)
+
+            imps_o2 = df[-1][5:9]
+            imps_n2 = df[-1][9:13]
+            imps_h2o = df[-1][13:17]
+            max_pressures = np.max(df[:, 1:5], axis=0)
         except:
             raise Exception('ERROR en lectura de EDF.')
-        
+
     # Informacion
     rj = float(rj_cf.records['CF10110']['ARADCN_0'])
     print(''.join(['RJ = ', str(rj),
-                   '\n - Pressures = ', str(pressures),
+                   '\n - Max. pressures = ', str(max_pressures),
                    '\n - Imps. O2 = ', str(imps_o2),
                    '\n - Imps. N2 = ', str(imps_n2),
-                   '\n - Imps. H2O = ', str(imps_h2o), 
+                   '\n - Imps. H2O = ', str(imps_h2o),
                    '\n', 90 * '-']))
 
     # Condiciones
-    if overpressure(pressures) or imp_exceeded(imps_o2, imps_n2, imps_h2o):
+    if overpressure(max_pressures) or imp_exceeded(imps_o2, imps_n2, imps_h2o):
         # Aumentar RJ y actualizar CF
         new_rj = round(rj + INC_RJ, 5)
         rj_cf.update_field('ARADCN_0', new_rj)
