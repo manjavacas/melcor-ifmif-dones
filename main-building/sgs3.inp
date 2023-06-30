@@ -175,10 +175,10 @@ CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-CF10110   0.0  0.29024 TIME                             * C / P_inicial
-*CF10110   0.0  0.25  TIME                             * C / P_3dias
-*CF10110   0.0  1.8  TIME                             * D / P_inicial
-*CF10110   0.0  1.55  TIME                             * D / P_3dias
+*CF10110   0.0  0.29024 TIME                             * C / P_inicial
+*CF10110   0.0  0.184  TIME                             * C / P_5dias
+CF10110   0.0  1.0  TIME                             * D / P_inicial
+*CF10110   0.0  1.55  TIME                             * D / P_5dias
 *CF10110   0.0  20.0  TIME                            * E / P_inicial --> este oscila mucho entorno al equilibro, quizás haya que subir el valor del INLET de Ar
 *CF10110   0.0  15.0  TIME                            * E / P_3dias
 *
@@ -227,8 +227,8 @@ CF11015   1.0  0.0  CFVALU.105
 *
 **** CONCENTRACIÓN MÁXIMA O2/N2 ****
 CF11100   Cmax-O2N2  EQUALS  1  1.0                   
-CF11110   0.0  0.5  TIME                 * 0.5 % ---> C
-*CF11110   0.0  3.0  TIME                 * 3 % ---> D
+*CF11110   0.0  0.5  TIME                 * 0.5 % ---> C
+CF11110   0.0  3.0  TIME                 * 3 % ---> D
 *CF11110   0.0  10.0  TIME                * 10 % ---> E
 *
 **** CONCENTRACIÓN MÁXIMA H2O ****
@@ -668,8 +668,8 @@ FL016T0  2  016
 CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
 CF01601  0.0
 CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF01615  0.0001  0.0   CFVALU.102                     * 0.0001 * VOL_LLC
-*CF01615  0.0005  0.0   CFVALU.102                     * 0.0005 * VOL_LLC
+*CF01615  0.0001  0.0   CFVALU.102                     * 0.0001 * VOL_LLC
+CF01615  0.0005  0.0   CFVALU.102                     * 0.0005 * VOL_LLC
 *CF01615  0.005  0.0   CFVALU.102                      * 0.005 * VOL_LLC
 *
 *
@@ -682,8 +682,8 @@ FL008T0  2  008
 CF00800  R009-1-LEAK-VEL  DIVIDE  2  1.0
 CF00801  0.0
 CF00810  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF00815  0.0001  0.0   CFVALU.103                     * 0.0001 * VOL_CTC
-*CF00815  0.0005  0.0   CFVALU.103                     * 0.0005 * VOL_CTC
+*CF00815  0.0001  0.0   CFVALU.103                     * 0.0001 * VOL_CTC
+CF00815  0.0005  0.0   CFVALU.103                     * 0.0005 * VOL_CTC
 *CF00815  0.005  0.0   CFVALU.103                      * 0.005 * VOL_CTC
 *
 *
@@ -696,8 +696,8 @@ FL009T0  2  009
 CF00900  R009-2-LEAK-VEL  DIVIDE  2  1.0
 CF00901  0.0
 CF00910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF00915  0.0001  0.0   CFVALU.104                     * 0.0001 * VOL_HTC
-*CF00915  0.0005  0.0   CFVALU.104                     * 0.0005 * VOL_HTC
+*CF00915  0.0001  0.0   CFVALU.104                     * 0.0001 * VOL_HTC
+CF00915  0.0005  0.0   CFVALU.104                     * 0.0005 * VOL_HTC
 *CF00915  0.005  0.0   CFVALU.104                      * 0.005 * VOL_HTC
 *
 *
@@ -710,8 +710,8 @@ FL029T0  2  029
 CF02900  R129-LEAK-VEL  DIVIDE  2  1.0
 CF02901  0.0
 CF02910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF02915  0.0001  0.0   CFVALU.105                     * 0.0001 * VOL_TIR
-*CF02915  0.0005  0.0   CFVALU.105                     * 0.0005 * VOL_TIR
+*CF02915  0.0001  0.0   CFVALU.105                     * 0.0001 * VOL_TIR
+CF02915  0.0005  0.0   CFVALU.105                     * 0.0005 * VOL_TIR
 *CF02915  0.005  0.0   CFVALU.105                      * 0.005 * VOL_TIR
 *
 ***
