@@ -24,7 +24,7 @@ MAX_PRESS_DEVIATION = 40
 # Maximas impurezas permitidas
 MAX_IMP_O2 = .5
 MAX_IMP_N2 = .5
-MAX_IMP_H2O = .1
+MAX_IMP_H2O = .01
 
 # Incremento RJ
 INC_RJ = .00001
@@ -49,9 +49,9 @@ def imp_exceeded(imps_o2, imps_n2, imps_h2o):
 
 
 end = False
-
-# Obtener RJ inicial
 toolkit = Toolkit(MODEL_PATH)
+
+# Funcion RJ
 rj_cf = toolkit.get_cf('CF101')
 
 while not end:
@@ -84,8 +84,10 @@ while not end:
         except:
             raise Exception('ERROR en lectura de EDF.')
 
-    # Informacion
+    # RJ actual
     rj = float(rj_cf.records['CF10110']['ARADCN_0'])
+
+    # Informacion
     print(''.join(['RJ = ', str(rj),
                    '\n - Max. pressures = ', str(max_pressures),
                    '\n - Imps. O2 = ', str(imps_o2),
