@@ -22,12 +22,12 @@ TARGET_PRESSURE = 101065.
 MAX_PRESS_DEVIATION = 40
 
 # Maximas impurezas permitidas
-MAX_IMP_O2 = .5
-MAX_IMP_N2 = .5
+MAX_IMP_O2 = .3
+MAX_IMP_N2 = .3
 MAX_IMP_H2O = .01
 
 # Incremento RJ
-INC_RJ = .00001
+INC_RJ = .001
 
 
 def overpressure(pressures):
