@@ -20,11 +20,11 @@ mbs: clean
 	./melgen-fusion-186_bdba ow=o i=main-building/mbs.inpz
 	./melcor-fusion-186_bdba main-building/mbs.inp
 sgs: clean
-	./melgen-fusion-186_bdba ow=o i=main-building/sgs.inp
-	./melcor-fusion-186_bdba main-building/sgs.inp
+	./melgen-fusion-186_bdba ow=o i=SGS-Ar/sgs.inp
+	./melcor-fusion-186_bdba SGS-Ar/sgs.inp
 sgs2: clean
-	./melgen-fusion-186_bdba ow=o i=main-building/sgs2.inp
-	./melcor-fusion-186_bdba main-building/sgs2.inp
+	./melgen-fusion-186_bdba ow=o i=SGS-Ar/sgs2.inp
+	./melcor-fusion-186_bdba SGS-Ar/sgs2.inp
 mb: clean
 	./melgen-fusion-186_bdba ow=o i=main-building/main.inp
 	./melcor-fusion-186_bdba main-building/main.inp
@@ -32,8 +32,8 @@ rhum: clean
 	./melgen-fusion-186_bdba ow=o i=main-building/rhum.inp
 	./melcor-fusion-186_bdba main-building/rhum.inp
 sgs3: clean
-	./melgen-fusion-186_bdba ow=o i=main-building/sgs3.inp
-	./melcor-fusion-186_bdba main-building/sgs3.inp
+	./melgen-fusion-186_bdba ow=o i=SGS-Ar/sgs3.inp
+	./melcor-fusion-186_bdba SGS-Ar/sgs3.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES
