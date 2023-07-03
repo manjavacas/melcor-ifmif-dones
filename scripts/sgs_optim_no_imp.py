@@ -12,8 +12,8 @@ from melkit.toolkit import Toolkit
 # Paths
 MELGEN_PATH = './melgen-fusion-186_bdba'
 MELCOR_PATH = './melcor-fusion-186_bdba'
-MODEL_PATH = './SGS-Ar/sgs3_copy.inp'
-EDF_PATH = './SGS_VAR.DAT'
+MODEL_PATH = './SGS-Ar/NO-INLET/HLR0001_copy.inp'
+EDF_PATH = './HLR0001.DAT'
 
 # Presion objetivo
 TARGET_PRESSURE = 101065.
@@ -21,31 +21,20 @@ TARGET_PRESSURE = 101065.
 # Maxima desviacion de presion permitida
 MAX_PRESS_DEVIATION = 40
 
-# Maximas impurezas permitidas
-MAX_IMP_O2 = 3.
-MAX_IMP_N2 = 3.
-MAX_IMP_H2O = .02
-
 # Incremento RJ
 INC_RJ = .1
 
 
-def overpressure(pressures):
+def bad_pressure(max_pressures, min_pressures):
     """
-    Devuelve True si alguna presion > TARGET_PRESSURE + MAX_PRESS_DEVIATION
+    Devuelve True si alguna presion no esta en el rango +-40
     """
-    return any(value > (TARGET_PRESSURE + MAX_PRESS_DEVIATION) for value in pressures)
+    press_cond_1 = any(value < (TARGET_PRESSURE - MAX_PRESS_DEVIATION)
+                       for value in min_pressures)
+    press_cond_2 = any(value > (TARGET_PRESSURE + MAX_PRESS_DEVIATION)
+                       for value in max_pressures)
 
-
-def imp_exceeded(imps_o2, imps_n2, imps_h2o):
-    """
-    Devuelve True si alguna concentracion > MAX_IMP_x
-    """
-    o2_exceeded = any(value > MAX_IMP_O2 for value in imps_o2)
-    n2_exceeded = any(value > MAX_IMP_N2 for value in imps_n2)
-    h2o_exceeded = any(value > MAX_IMP_H2O for value in imps_h2o)
-
-    return o2_exceeded or n2_exceeded or h2o_exceeded
+    return press_cond_1 or press_cond_2
 
 
 end = False
@@ -62,7 +51,7 @@ while not end:
     subprocess.call([MELCOR_PATH, MODEL_PATH],
                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-    # Leer presiones maximas y ultimas concentraciones del EDF
+    # Leer presiones maximas
     with open(EDF_PATH, 'r') as file:
         try:
             df = []
@@ -73,11 +62,8 @@ while not end:
                     df.append(values)
                     values = []
             df = np.array(df)
-
-            imps_o2 = df[-1][5:9]
-            imps_n2 = df[-1][9:13]
-            imps_h2o = df[-1][13:17]
             max_pressures = np.max(df[:, 1:5], axis=0)
+            min_pressures = np.min(df[:, 1:5], axis=0)
         except:
             raise Exception('ERROR en lectura de EDF.')
 
@@ -88,13 +74,11 @@ while not end:
     # Informacion
     print(''.join(['RJ = ', str(rj),
                    '\n - Max. pressures = ', str(max_pressures),
-                   '\n - Imps. O2 = ', str(imps_o2),
-                   '\n - Imps. N2 = ', str(imps_n2),
-                   '\n - Imps. H2O = ', str(imps_h2o),
+                   '\n - Min. pressures = ', str(min_pressures),
                    '\n', 90 * '-']))
 
     # Condiciones
-    if overpressure(max_pressures) or imp_exceeded(imps_o2, imps_n2, imps_h2o):
+    if bad_pressure(max_pressures, min_pressures):
         # Aumentar RJ y actualizar CF
         new_rj = round(rj + INC_RJ, 5)
         rj_cf.update_field('ARADCN_0', new_rj)

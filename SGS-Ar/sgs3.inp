@@ -908,7 +908,7 @@ CF29725   1.0  0.0  CFVALU.284
 EDF11100 VARIAB 16 WRITE
 EDF11101 sgs_var.dat
 EDF11102 8E20.12
-EDF11110 0.1      1000.
+EDF11110 604800.      1000.
 * PRESIONES
 EDF111A0 CFVALU.300         
 EDF111A1 CFVALU.301         
@@ -983,7 +983,7 @@ CYMESF           10000    10000                     * FRECUENCIA TERMINAL / .OUT
 *
 RESTART          -1              
 *
-TEND             3.1536e7                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             1.1536e7                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
 *
 *
 SOFTDTMIN  .1  1000
