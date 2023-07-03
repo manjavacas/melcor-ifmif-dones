@@ -6,13 +6,13 @@
 *
 *EOR* MELGEN
 *
-title     SGS-HLR10E-4
-jobid     SGS-HLR10E-4
+title     sgs3
+jobid     sgs3
 *
-restartf  SGS-HLR10E-4.rst
-outputf   SGS-HLR10E-4_gen.out
-diagf     SGS-HLR10E-4_gen.dia
-stopf     SGS-HLR10E-4.stp
+restartf  sgs3.rst
+outputf   sgs3_gen.out
+diagf     sgs3_gen.dia
+stopf     sgs3.stp
 *
 crtout 
 tstart    00.0
@@ -463,38 +463,126 @@ CF81330  -1800.0  0.0  CFVALU.216        * RJ - R016
 CF81335  -1800.0  0.0  CFVALU.208        * RJ - R009-1
 CF81340  -1800.0  0.0  CFVALU.209        * RJ - R009-2
 CF81345  -1800.0  0.0  CFVALU.229        * RJ - R129
+*CF81350  1800.0  0.0  CFVALU.512         * AR - R016
+*CF81355  1800.0  0.0  CFVALU.515         * AR - R009-1
+*CF81360  1800.0  0.0  CFVALU.518         * AR - R009-2
+*CF81365  1800.0  0.0  CFVALU.521         * AR - R129
 CF81370  3600.0  0.0  CFVALU.811            * VOL-O2
 CF81375  3600.0  0.0  CFVALU.812            * VOL-N2
 *
 ***
-********************************************************* G-RWTS ********************************************************
+******* R016 - Ar *******                    
+*
+FL11600  R016-AR-IN  401  016  6.7  6.7
+FL11601  0.5  1.0  1.0
+FL11602  3
+FL116S0  0.5  1.0  0.5
+FL116T0  2  512
+*
+CF51200  R016-AR-IN-con  L-A-IFTE  3  1.0
+CF51205  NORMAL
+CF51210  1.0  0.0  CFVALU.514
+CF51215  1.0  0.0  CFVALU.513
+CF51220  0.0  0.0  CFVALU.513
+*
+CF51300  R016-AR-IN-vel  DIVIDE  2  1.0
+CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF51315  1.5  0.0  CFVALU.524
+*
+CF52400  NUM-CF513  MULTIPLY  2  1.0  
+CF52410  1.0  0.0  CFVALU.107
+CF52415  1.0  0.0  CFVALU.101  
 *
 CF51400  AUX-P016  L-GE  2  1.0  0.0
 CF51405  NORMAL
 CF51410  1.0  0.0  CFVALU.499
-CF51415  1.0  0.0  CVH-P.16
+CF51415  1.0  0.0  CVH-P.16                           
+*
+***
+******* R009-1 - Ar *******                    
+*
+FL10800  R0091-AR-IN  401  008  6.7  6.7
+FL10801  0.5  1.0  1.0
+FL10802  3
+FL108S0  0.5  1.0  0.5
+FL108T0  2  515
+*
+CF51500  R0091-AR-IN-con  L-A-IFTE  3  1.0
+CF51505  NORMAL
+CF51510  1.0  0.0  CFVALU.517
+CF51515  1.0  0.0  CFVALU.516
+CF51520  0.0  0.0  CFVALU.516
+*
+CF51600  R0091-AR-IN-vel  DIVIDE  2  1.0 
+CF51610  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF51615  1.5  0.0  CFVALU.525
+*
+CF52500  NUM-CF516  MULTIPLY  2  1.0  
+CF52510  1.0  0.0  CFVALU.108
+CF52515  1.0  0.0  CFVALU.101  
 *
 CF51700  AUX-P008  L-GE  2  1.0  0.0
 CF51705  NORMAL
 CF51710  1.0  0.0  CFVALU.499
 CF51715  1.0  0.0  CVH-P.8
 *
+***
+******* R009-2 - Ar *******                    
+*
+FL10900  R0092-AR-IN  401  009  6.7  6.7
+FL10901  0.5  1.0  1.0
+FL10902  3
+FL109S0  0.5  1.0  0.5
+FL109T0  2  518
+*
+CF51800  R0092-AR-IN-con  L-A-IFTE  3  1.0
+CF51805  NORMAL
+CF51810  1.0  0.0  CFVALU.520
+CF51815  1.0  0.0  CFVALU.519
+CF51820  0.0  0.0  CFVALU.519
+*
+CF51900  R0092-AR-IN-vel  DIVIDE  2  1.0
+CF51910  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF51915  1.5  0.0  CFVALU.526
+*
+CF52600  NUM-CF519  MULTIPLY  2  1.0  
+CF52610  1.0  0.0  CFVALU.109
+CF52615  1.0  0.0  CFVALU.101  
+*
 CF52000  AUX-P009  L-GE  2  1.0  0.0
 CF52005  NORMAL
 CF52010  1.0  0.0  CFVALU.499
 CF52015  1.0  0.0  CVH-P.9
+*
+***
+******* R129 - Ar *******                    
+*
+FL12900  R0092-AR-IN  401  129  5.0  5.0
+FL12901  0.5  1.0  1.0
+FL12902  3
+FL129S0  0.5  1.0  0.5
+FL129T0  2  521
+*
+CF52100  R129-AR-IN-con  L-A-IFTE  3  1.0
+CF52105  NORMAL
+CF52110  1.0  0.0  CFVALU.523
+CF52115  1.0  0.0  CFVALU.522
+CF52120  0.0  0.0  CFVALU.522
+*
+CF52200  R129-AR-IN-vel  DIVIDE  2  1.0 
+CF52210  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF52215  1.5  0.0  CFVALU.527
+*
+CF52700  NUM-CF513  MULTIPLY  2  1.0  
+CF52710  1.0  0.0  CFVALU.110
+CF52715  1.0  0.0  CFVALU.101  
 *
 CF52300  AUX-P129  L-GE  2  1.0  0.0
 CF52305  NORMAL
 CF52310  1.0  0.0  CFVALU.499
 CF52315  1.0  0.0  CVH-P.129
 *
-CF52600  P-trigger  L-OR  4  1.0
-CF52610  1.0  0.0  CFVALU.514
-CF52615  1.0  0.0  CFVALU.517
-CF52620  1.0  0.0  CFVALU.520
-CF52625  1.0  0.0  CFVALU.523
-*
+********************************************************* G-RWTS ********************************************************
 *-------------------------------------------------------
 * SGS RJ016           FM    TO    FM   TO                       
 *-------------------------------------------------------
@@ -505,15 +593,9 @@ FL21602   3
 FL216S0   0.5  7.5   0.5 
 FL216T0   2  216
 *
-CF21600   RJ016  L-A-IFTE  3  1.0
-CF21605   NORMAL
-CF21610   1.0  0.0  CFVALU.526
-CF21615   0.0  0.0  TIME
-CF21620   1.0  0.0  CFVALU.218
-*
-CF21800   VEL-RJ016  DIVIDE  2  1.0                             * RJ * RATIO-R016 / (3600 * 0.5)
-CF21810   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
-CF21815   1.0  0.0  CFVALU.217
+CF21600   VEL-RJ016  DIVIDE  2  1.0                             * RJ * RATIO-R016 / (3600 * 0.5)
+CF21610   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
+CF21615   1.0  0.0  CFVALU.217
 * 
 CF21700   NUM-VEL-RJ016  MULTIPLY  2  1.0                             
 CF21710   1.0  0.0  CFVALU.101                                  * RJ
@@ -529,15 +611,9 @@ FL20802   3
 FL208S0   0.5  7.5   0.5 
 FL208T0   2  208
 *
-CF20800   RJ016  L-A-IFTE  3  1.0
-CF20805   NORMAL
-CF20810   1.0  0.0  CFVALU.526
-CF20815   0.0  0.0  TIME
-CF20820   1.0  0.0  CFVALU.206
-*
-CF20600   VEL-RJ008  DIVIDE  2  1.0                             * RJ * RATIO-R009-1 / (3600 * 0.5)
-CF20610   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
-CF20615   1.0  0.0  CFVALU.207
+CF20800   VEL-RJ008  DIVIDE  2  1.0                             * RJ * RATIO-R009-1 / (3600 * 0.5)
+CF20810   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
+CF20815   1.0  0.0  CFVALU.207
 * 
 CF20700   NUM-VEL-RJ008  MULTIPLY  2  1.0                             
 CF20710   1.0  0.0  CFVALU.101                                  * RJ
@@ -553,16 +629,10 @@ FL20902   3
 FL209S0   0.5  7.5   0.5 
 FL209T0   2  209
 *
-CF20900   RJ016  L-A-IFTE  3  1.0
-CF20905   NORMAL
-CF20910   1.0  0.0  CFVALU.526
-CF20915   0.0  0.0  TIME
-CF20920   1.0  0.0  CFVALU.211
-*
-CF21100   VEL-RJ009  DIVIDE  2  1.0                             * RJ * RATIO-R009-2 / (3600 * 0.5)
-CF21101   0.0
-CF21110   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
-CF21115   1.0  0.0  CFVALU.210
+CF20900   VEL-RJ009  DIVIDE  2  1.0                             * RJ * RATIO-R009-2 / (3600 * 0.5)
+CF20901   0.0
+CF20910   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
+CF20915   1.0  0.0  CFVALU.210
 * 
 CF21000   NUM-VEL-RJ009  MULTIPLY  2  1.0                             
 CF21010   1.0  0.0  CFVALU.101                                  * RJ
@@ -578,16 +648,10 @@ FL22902   3
 FL229S0   0.5  7.5   0.5 
 FL229T0   2  229
 *
-CF22900   RJ016  L-A-IFTE  3  1.0
-CF22905   NORMAL
-CF22910   1.0  0.0  CFVALU.526
-CF22915   0.0  0.0  TIME
-CF22920   1.0  0.0  CFVALU.230
-*
-CF23000   VEL-RJ129  DIVIDE  2  1.0                             * RJ * RATIO-R129 / (3600 * 0.5)
-CF23001   0.0
-CF23010   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
-CF23015   1.0  0.0  CFVALU.228
+CF22900   VEL-RJ129  DIVIDE  2  1.0                             * RJ * RATIO-R129 / (3600 * 0.5)
+CF22901   0.0
+CF22910   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
+CF22915   1.0  0.0  CFVALU.228
 * 
 CF22800   NUM-VEL-RJ129  MULTIPLY  2  1.0                             
 CF22810   1.0  0.0  CFVALU.101                                  * RJ
@@ -604,8 +668,8 @@ FL016T0  2  016
 CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
 CF01601  0.0
 CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF01615  0.0001  0.0   CFVALU.102                     * 0.0001 * VOL_LLC
-*CF01615  0.0005  0.0   CFVALU.102                     * 0.0005 * VOL_LLC
+*CF01615  0.0001  0.0   CFVALU.102                     * 0.0001 * VOL_LLC
+CF01615  0.0005  0.0   CFVALU.102                     * 0.0005 * VOL_LLC
 *CF01615  0.005  0.0   CFVALU.102                      * 0.005 * VOL_LLC
 *
 *
@@ -618,8 +682,8 @@ FL008T0  2  008
 CF00800  R009-1-LEAK-VEL  DIVIDE  2  1.0
 CF00801  0.0
 CF00810  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF00815  0.0001  0.0   CFVALU.103                     * 0.0001 * VOL_CTC
-*CF00815  0.0005  0.0   CFVALU.103                     * 0.0005 * VOL_CTC
+*CF00815  0.0001  0.0   CFVALU.103                     * 0.0001 * VOL_CTC
+CF00815  0.0005  0.0   CFVALU.103                     * 0.0005 * VOL_CTC
 *CF00815  0.005  0.0   CFVALU.103                      * 0.005 * VOL_CTC
 *
 *
@@ -632,8 +696,8 @@ FL009T0  2  009
 CF00900  R009-2-LEAK-VEL  DIVIDE  2  1.0
 CF00901  0.0
 CF00910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF00915  0.0001  0.0   CFVALU.104                     * 0.0001 * VOL_HTC
-*CF00915  0.0005  0.0   CFVALU.104                     * 0.0005 * VOL_HTC
+*CF00915  0.0001  0.0   CFVALU.104                     * 0.0001 * VOL_HTC
+CF00915  0.0005  0.0   CFVALU.104                     * 0.0005 * VOL_HTC
 *CF00915  0.005  0.0   CFVALU.104                      * 0.005 * VOL_HTC
 *
 *
@@ -646,8 +710,8 @@ FL029T0  2  029
 CF02900  R129-LEAK-VEL  DIVIDE  2  1.0
 CF02901  0.0
 CF02910  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-CF02915  0.0001  0.0   CFVALU.105                     * 0.0001 * VOL_TIR
-*CF02915  0.0005  0.0   CFVALU.105                     * 0.0005 * VOL_TIR
+*CF02915  0.0001  0.0   CFVALU.105                     * 0.0001 * VOL_TIR
+CF02915  0.0005  0.0   CFVALU.105                     * 0.0005 * VOL_TIR
 *CF02915  0.005  0.0   CFVALU.105                      * 0.005 * VOL_TIR
 *
 ***
@@ -896,17 +960,17 @@ noflush
 * WARNINGLEVEL 0 0 -1
 *
 *
-TITLE     SGS-HLR10E-4
+TITLE     sgs3
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  SGS-HLR10E-4.rst
-OUTPUTFILE   SGS-HLR10E-4.out
-PLOTFILE     SGS-HLR10E-4.ptf
-DIAGFILE     SGS-HLR10E-4_cor.dia
-MESSAGEFILE  SGS-HLR10E-4_cor.mes
+RESTARTFILE  sgs3.rst
+OUTPUTFILE   sgs3.out
+PLOTFILE     sgs3.ptf
+DIAGFILE     sgs3_cor.dia
+MESSAGEFILE  sgs3_cor.mes
 *
 *STOPCF    666
 *
@@ -926,6 +990,6 @@ SOFTDTMIN  .1  1000
 *
 *
 *             TIME     DTMAX     DTMIN     DTEDT      DTPLT      DTRST
-TIME1         0.0      100.0    10.0     21600.0    21600.0    21600.0          
+TIME1         0.0      100.0    10.0     43200.0    43200.0    43200.0          
 *
 .* END

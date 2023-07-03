@@ -34,6 +34,9 @@ rhum: clean
 sgs3: clean
 	./melgen-fusion-186_bdba ow=o i=SGS-Ar/sgs3.inp
 	./melcor-fusion-186_bdba SGS-Ar/sgs3.inp
+HLR1: clean
+	./melgen-fusion-186_bdba ow=o i=SGS-Ar/NO-INLET/HLR0001.inp
+	./melcor-fusion-186_bdba SGS-Ar/NO-INLET/HLR0001.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES
