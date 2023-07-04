@@ -6,13 +6,13 @@
 *
 *EOR* MELGEN
 *
-title     sgs_final
-jobid     sgs_final
+title     sgs_final_copy
+jobid     sgs_final_copy
 *
-restartf  sgs_final.rst
-outputf   sgs_final_gen.out
-diagf     sgs_final_gen.dia
-stopf     sgs_final.stp
+restartf  sgs_final_copy.rst
+outputf   sgs_final_copy_gen.out
+diagf     sgs_final_copy_gen.dia
+stopf     sgs_final_copy.stp
 *
 crtout 
 tstart    00.0
@@ -318,17 +318,17 @@ noflush
 * WARNINGLEVEL 0 0 -1
 *
 *
-TITLE     sgs_final
+TITLE     sgs_final_copy
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  sgs_final.rst
-OUTPUTFILE   sgs_final.out
-PLOTFILE     sgs_final.ptf
-DIAGFILE     sgs_final_cor.dia
-MESSAGEFILE  sgs_final_cor.mes
+RESTARTFILE  sgs_final_copy.rst
+OUTPUTFILE   sgs_final_copy.out
+PLOTFILE     sgs_final_copy.ptf
+DIAGFILE     sgs_final_copy_cor.dia
+MESSAGEFILE  sgs_final_copy_cor.mes
 *
 *STOPCF    666
 *

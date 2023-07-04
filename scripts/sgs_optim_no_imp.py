@@ -12,8 +12,8 @@ from melkit.toolkit import Toolkit
 # Paths
 MELGEN_PATH = './melgen-fusion-186_bdba'
 MELCOR_PATH = './melcor-fusion-186_bdba'
-MODEL_PATH = './SGS-Ar/NO-INLET/HLR0001_copy.inp'
-EDF_PATH = './HLR0001.DAT'
+MODEL_PATH = './sgs_final_copy.inp'
+EDF_PATH = './sgs_var.DAT'
 
 # Presion objetivo
 TARGET_PRESSURE = 101065.
