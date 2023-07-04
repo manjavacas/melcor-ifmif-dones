@@ -37,6 +37,9 @@ sgs3: clean
 HLR1: clean
 	./melgen-fusion-186_bdba ow=o i=SGS-Ar/NO-INLET/HLR0001.inp
 	./melcor-fusion-186_bdba SGS-Ar/NO-INLET/HLR0001.inp
+sgsf: clean
+	./melgen-fusion-186_bdba ow=o i=SGS-Ar/sgs_final.inp
+	./melcor-fusion-186_bdba SGS-Ar/sgs_final.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES

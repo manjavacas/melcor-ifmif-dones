@@ -1,0 +1,353 @@
+****************************************************************************************************************************************
+****************************************************************************************************************************************
+*                                                       SGS MELCOR model                                                               *
+****************************************************************************************************************************************
+****************************************************************************************************************************************
+*
+*EOR* MELGEN
+*
+title     sgs_final
+jobid     sgs_final
+*
+restartf  sgs_final.rst
+outputf   sgs_final_gen.out
+diagf     sgs_final_gen.dia
+stopf     sgs_final.stp
+*
+crtout 
+tstart    00.0
+DTTIME    0.1      * initial time step
+*
+*
+****************************************************************************************************************************************
+*         										    NCG (Non Condensible Gases) INPUT			    		  						   *
+****************************************************************************************************************************************
+*
+NCG001    N2    4                             * MATERIAL 4 IS N2
+NCG002    O2    5                             * MATERIAL 5 IS O2
+NCG333    H2    6                             * MATERIAL 6 IS H2
+NCG444    HE    7                             * MATERIAL 7 IS HE
+NCG555    AR    8                             * MATERIAL 8 IS AR
+*
+****************************************************************************************************************************************
+*        												CV (Control Volumes) INPUT									                   *
+****************************************************************************************************************************************
+*-----------------------------------------------                                                                
+* CV400 - ENV-IN - Environment for INLET                                                                 
+*-----------------------------------------------                                                                
+CV40000   ENV-IN  2  2  5          		                                           
+CV40001   0   -1                                     * Time-independent				       
+CV400A0   3                                                                                         
+CV400A1   PVOL    101325.0                           * 101325Pa = 1atm                                                                     
+CV400A3   TATM    293.15  RHUM  0.6    	                                                 
+CV400A4   MLFR.4  0.78                               * Filled with air (N2)
+CV400A6   MLFR.5  0.21                               * Filled with air (O2)
+CV400A8   MLFR.8  0.01                               * Filled with air (Ar) 
+*
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV400B1   0.0         0.0                                                          
+CV400B2  50.0   1000000.0              	             * Random huge volume   
+*
+*-----------------------------------------------                                                                
+* CV402 - ENV-GRWTS - Environment (G-RWTS)
+*-----------------------------------------------                                                            
+CV40200   G-RWTS  2  2  5          		                                   
+CV40201   0   0		                                  				            
+CV402A0   3                                                                                         
+CV402A1   PVOL    101325.0                           * 101325Pa = 1atm                                                                     
+CV402A3   TATM    293.15  RHUM  0.6    	                                                  
+CV402A4   MLFR.4  0.78                               * Filled with air (O2)
+CV402A6   MLFR.5  0.21                               * Filled with air (N2)
+CV402A8   MLFR.8  0.01                               * Filled with air (Ar) 
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV402B1   0.0        0.0                                                          
+CV402B2   50.0       1000000.0              	     * Random huge volume                                                          
+***      
+* -----------------------------------------------                                                                
+* CV401 - Ar Supply Subsystem - ArSS
+*------------------------------------------------                                                            
+CV40100   ArSS  2  2  5          		                                   
+CV40101   0   -1		                                  				            
+CV401A0   3                                                                                         
+CV401A1   PVOL    101065.0                                                                                              
+CV401A3   TATM    293.15  RHUM  0.0003               * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE
+CV401A4   MLFR.4  0.000395                           * (99.95%)    
+CV401A6   MLFR.5  0.000105                           * (99.95%)     
+CV401A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)  
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                                                 
+CV401B1   0.0        0.0                                                          
+CV401B2   30.0       1000000.0              	     * Random huge volume                                                          
+***      
+* 
+*********************************************************************************************
+*                                                               
+* CV016 - R016 - Lithium loop cell (C3 - C4 en 2PNSLP) - 2495.0 / 2658.7 m3 (2PNSLP)    
+* CV008 - R009-1 - Cold Traps Cell (C2 - por confirmar en 2PNSLP) - 557.0 / 609.0 m3 (2PNSLP)
+* CV009 - R009-2 - Hot Traps Cell (C2 - C4 en 2PNSLP) - 585.0 / 581.3 m3 (2PNSLP)   
+* CV129 - R129 - Target interface room (C3 - C4 en 2PNSLP) - 529.0 / 209.4 m3 (2PNSLP)                                                            
+*                                                                
+CV01600   Rooms  2  0  1                                                            
+CV01601   0   0		                              
+CV016A0   3                                                                                         
+CV016A1   PVOL  101065.0                            
+CV016A2   TATM  293.15  RHUM  0.0003                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.6) * %AIRE                  
+CV016A4   MLFR.4  0.000395                           * (99.95%)   
+CV016A6   MLFR.5  0.000105                           * (99.95%)    
+CV016A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)   
+*** 
+***       ALTITUDE/VOLUME Table                                                                                                
+***                                                                
+CV016B1   0.0      0.0                                                            
+CV016B2   7.0      4166.0                            * 4058.4 m3
+***
+*
+****************************************************************************************************************************************
+*         										           CONSTANTS                 			    		  						   *
+****************************************************************************************************************************************
+****** PRESIÓN C4 ********
+CF49900 PRESSURE EQUALS 1 1.0
+CF49910 0.0 101065.0 TIME
+*
+****** CAUDAL ENTRADA ArPU ******
+CF10000   QP  ADD  2  1.0                            * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
+CF10010   0.0  80.0  TIME
+CF10015   -1.0  0.0  CFVALU.101
+*
+****** CAUDAL VERTIDO POR CHIMENEA ******
+CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
+*CF10110   0.0  0.29024 TIME                             * C / P_inicial
+*CF10110   0.0  0.184  TIME                             * C / P_5dias
+CF10110   0.0  0.3  TIME                             * D / P_inicial
+*CF10110   0.0  1.55  TIME                             * D / P_5dias
+*CF10110   0.0  20.0  TIME                            * E / P_inicial --> este oscila mucho entorno al equilibro, quizás haya que subir el valor del INLET de Ar
+*CF10110   0.0  15.0  TIME                            * E / P_3dias
+*
+**************************************************************** SGS ******************************************************************                                                 
+***
+******* Energy source for Rooms *******           
+*                                           
+CF90100 'Energy-src' EQUALS 1 1.0             
+CF90110  1.0  0.0  CVH-TVAP.016                    
+*                                                                                                                                 
+******* Sink - O2 *******                    
+*                                           
+CV016C1  MASS.5 902 3                       
+CV016C2  TE 901 9                                              
+*     
+CF90200 'O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP(m3/s) * MASS / VOL
+CF90210  0.0  14997600.0  TIME                * 3600 (s/h) * 4166 (m3) = 14997600.0
+CF90215  1.0  0.0  CFVALU.500                                       
+*
+CF50000  NUM-CF902  MULTIPLY  2  0.8
+CF50010  4166.0  0.0  CFVALU.100
+CF50020  1.0  0.0  CVH-MASS.5.016
+*
+CF80000  O2-VOL  MULTIPLY  1  0.7473099419    * DENS = DENS_0(=1.429) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
+CF80010  1.0  0.0  CFVALU.902
+*
+******* Sink - N2 *******                    
+*                                           
+CV016C3  MASS.4 903 3                       
+CV016C4  TE 901 9                           
+*     
+CF90300 'N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP(m3/s) * MASS / VOL
+CF90310  0.0  14997600.0  TIME                * 3600 (s/h) * 4166 (m3) = 14997600.0
+CF90315  1.0  0.0  CFVALU.501                                       
+*
+CF50100  NUM-CF903  MULTIPLY  2  0.7
+CF50110  1.0  0.0  CFVALU.100
+CF50120  1.0  0.0  CVH-MASS.4.016
+*
+CF80100  N2-VOL  MULTIPLY  1  0.8543247256    * DENS = DENS_0(=1.25) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
+CF80110  1.0  0.0  CFVALU.903
+*
+******* Sink - H2O *******                    
+*                                           
+CV016C5  MASS.3 904 3                       
+CV016C6  TE 901 9                           
+*  
+CF90400 'H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * QP(m3/s) * MASS / VOL
+CF90410  0.0  14997600.0  TIME                * 3600 (s/h) * 4166 (m3) = 14997600.0
+CF90415  1.0  0.0  CFVALU.502                                       
+*
+CF50200  NUM-CF904  MULTIPLY  2  0.95
+CF50210  1.0  0.0  CFVALU.100
+CF50220  1.0  0.0  CVH-MASS.3.016
+*  
+***
+CF81300  BALANCE  ADD  4  1.0
+CF81301  0.0
+CF81310  1800.0  0.0  CFVALU.016         * LEAK - R016
+CF81330  -1800.0  0.0  CFVALU.216        * RJ - R016
+*CF81350  1800.0  0.0  CFVALU.512         * AR - R016
+CF81370  3600.0  0.0  CFVALU.800         * VOL-O2
+CF81375  3600.0  0.0  CFVALU.801         * VOL-N2
+*
+***
+******* Inlet - Ar *******                    
+*
+*FL11600  AR-IN  401  016  6.7  6.7
+*FL11601  0.5  1.0  1.0
+*FL11602  3
+*FL116S0  0.5  1.0  0.5
+*FL116T0  2  512
+*
+CF51200  AR-IN-con  L-A-IFTE  3  1.0
+CF51205  NORMAL
+CF51210  1.0  0.0  CFVALU.514
+CF51215  1.0  0.0  CFVALU.513
+CF51220  0.0  0.0  CFVALU.513
+*
+CF51300  AR-IN-vel  DIVIDE  2  1.0
+CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+CF51315  1.5  0.0  CFVALU.101
+*
+CF51400  AUX-P  L-GE  2  1.0  0.0
+CF51405  NORMAL
+CF51410  1.0  0.0  CFVALU.499
+CF51415  1.0  0.0  CVH-P.16                           
+*
+***
+********************************************************* G-RWTS ********************************************************
+*-------------------------------------------------------
+* SGS RJ016           FM    TO    FM   TO                       
+*-------------------------------------------------------
+*
+FL21600   SGS-RJ016   016   402   5.5  5.5
+FL21601   0.5  7.5   1.0               
+FL21602   3                                                           
+FL216S0   0.5  7.5   0.5 
+FL216T0   2  216
+*
+CF21600   VEL-RJ016  DIVIDE  2  1.0                             * RJ / (3600 * 0.5)
+CF21610   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
+CF21615   1.0  0.0  CFVALU.101
+*
+***
+*************************************************** LEAKS *****************************************************
+***
+FL01600  R016-LEAK   400   016  3.6   3.6
+FL01601  0.5  0.5  1.0
+FL01602  3
+FL016S0  0.5  0.5  0.5
+FL016T0  2  016
+*
+CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
+CF01601  0.0
+CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
+CF01615  0.0  0.4166   TIME                           * 0.0001 * 4166.0 (VOL) = 0.4166
+*CF01615  0.0  2.083   TIME                            * 0.0005 * 4166.0 (VOL) = 2.083
+*CF01615  0.0  20.83   TIME                            * 0.005 * 4166.0 (VOL) = 20.83
+*
+***
+*************************************************** OUTPUTS ***************************************************
+*
+*  Porcentaje aire
+*
+CF25000   AIR%  ADD  2  100.0
+CF25001   0.0
+CF25010   0.0  1.0  TIME
+CF25015   -1.0  0.0  CFVALU.255
+*
+CF25100   O2%  DIVIDE  2  100.0
+CF25101   0.0
+CF25110   1.0  0.0  CFVALU.254
+CF25115   1.0  0.0  CVH-MASS.5.016
+*
+CF25200   N2%  DIVIDE  2  100.0
+CF25201   0.0
+CF25210   1.0  0.0  CFVALU.254
+CF25215   1.0  0.0  CVH-MASS.4.016
+*
+CF25300   H2O%  DIVIDE  2  100.0
+CF25301   0.0
+CF25310   1.0  0.0  CFVALU.254
+CF25315   1.0  0.0  CVH-MASS.3.016
+*
+CF25400   DEN-CF255  ADD  4  1.0
+CF25410   1.0  0.0  CVH-MASS.3.016
+CF25415   1.0  0.0  CVH-MASS.4.016
+CF25420   1.0  0.0  CVH-MASS.5.016
+CF25425   1.0  0.0  CVH-MASS.8.016
+*
+CF25500   ELEM-CF250  DIVIDE  2  1.0
+CF25501   1.0
+CF25510   1.0  0.0  CFVALU.254
+CF25515   1.0  0.0  CVH-MASS.8.016
+*
+***
+***
+********************************************************************************
+**                    EXTERNAL DATA FILE  (*EDF package)                      **
+********************************************************************************
+*
+EDF11100 VARIAB 4 WRITE
+EDF11101 sgs_var.dat
+EDF11102 8E20.12
+EDF11110 604800.      1000.
+* PRESIONES
+EDF111A0 CFVALU.300  
+* O2      
+EDF111B0 CFVALU.251  
+* N2       
+EDF111C0 CFVALU.252  
+* H2O      
+EDF111D0 CFVALU.253      
+*
+***** PRESIÓN *****
+CF30000  P-ROOMS  EQUALS  1  1.0
+CF30010  1.0  0.0  CVH-P.016
+*
+. * End
+*
+**********************************************************
+*                     MELCOR INPUT                       *
+**********************************************************
+*
+*EOR* melcor
+*
+noflush
+*
+*
+* WARNINGLEVEL 0 0 -1
+*
+*
+TITLE     sgs_final
+*
+*********
+* FILES *
+*********
+*
+RESTARTFILE  sgs_final.rst
+OUTPUTFILE   sgs_final.out
+PLOTFILE     sgs_final.ptf
+DIAGFILE     sgs_final_cor.dia
+MESSAGEFILE  sgs_final_cor.mes
+*
+*STOPCF    666
+*
+*
+CPULEFT          200.
+CPULIM           86400.                             * max CPU time running      
+*
+CYMESF           10000    10000                     * FRECUENCIA TERMINAL / .OUT    
+*
+*
+RESTART          -1              
+*
+TEND             1.1536e7                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+*
+*
+SOFTDTMIN  .1  1000
+*
+*
+*             TIME     DTMAX     DTMIN     DTEDT      DTPLT      DTRST
+TIME1         0.0      100.0    10.0     43200.0    43200.0    43200.0          
+*
+.* END

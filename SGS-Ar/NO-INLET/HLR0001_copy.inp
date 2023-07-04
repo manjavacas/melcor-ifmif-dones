@@ -6,13 +6,13 @@
 *
 *EOR* MELGEN
 *
-title     HLR0001
-jobid     HLR0001
+title     HLR0001_copy
+jobid     HLR0001_copy
 *
-restartf  HLR0001.rst
-outputf   HLR0001_gen.out
-diagf     HLR0001_gen.dia
-stopf     HLR0001.stp
+restartf  HLR0001_copy.rst
+outputf   HLR0001_copy_gen.out
+diagf     HLR0001_copy_gen.dia
+stopf     HLR0001_copy.stp
 *
 crtout 
 tstart    00.0
@@ -923,17 +923,17 @@ noflush
 * WARNINGLEVEL 0 0 -1
 *
 *
-TITLE     HLR0001
+TITLE     HLR0001_copy
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  HLR0001.rst
-OUTPUTFILE   HLR0001.out
-PLOTFILE     HLR0001.ptf
-DIAGFILE     HLR0001_cor.dia
-MESSAGEFILE  HLR0001_cor.mes
+RESTARTFILE  HLR0001_copy.rst
+OUTPUTFILE   HLR0001_copy.out
+PLOTFILE     HLR0001_copy.ptf
+DIAGFILE     HLR0001_copy_cor.dia
+MESSAGEFILE  HLR0001_copy_cor.mes
 *
 *STOPCF    666
 *
