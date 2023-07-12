@@ -39,7 +39,7 @@ CV40000   ENV-IN  2  2  5
 CV40001   0   -1                                     * Time-independent				       
 CV400A0   3                                                                                         
 CV400A1   PVOL    101325.0                           * 101325Pa = 1atm                                                                     
-CV400A3   TATM    293.15  RHUM  0.2    	                                                 
+CV400A3   TATM    293.15  RHUM  0.4    	                                                 
 CV400A4   MLFR.4  0.78                               * Filled with air (N2)
 CV400A6   MLFR.5  0.21                               * Filled with air (O2)
 CV400A8   MLFR.8  0.01                               * Filled with air (Ar) 
@@ -57,7 +57,7 @@ CV40200   G-RWTS  2  2  5
 CV40201   0   0		                                  				            
 CV402A0   3                                                                                         
 CV402A1   PVOL    101325.0                           * 101325Pa = 1atm                                                                     
-CV402A3   TATM    293.15  RHUM  0.2    	                                                  
+CV402A3   TATM    293.15  RHUM  0.4    	                                                  
 CV402A4   MLFR.4  0.78                               * Filled with air (O2)
 CV402A6   MLFR.5  0.21                               * Filled with air (N2)
 CV402A8   MLFR.8  0.01                               * Filled with air (Ar) 
@@ -74,7 +74,7 @@ CV40100   ArSS  2  2  5
 CV40101   0   -1		                                  				            
 CV401A0   3                                                                                         
 CV401A1   PVOL    101065.0                                                                                              
-CV401A3   TATM    293.15  RHUM  0.0002               * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.2) * %AIRE
+CV401A3   TATM    293.15  RHUM  0.0002               * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.4) * %AIRE
 CV401A4   MLFR.4  0.000395                           * (99.95%)    
 CV401A6   MLFR.5  0.000105                           * (99.95%)     
 CV401A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)  
@@ -96,7 +96,7 @@ CV01600   Rooms  2  0  1
 CV01601   0   0		                              
 CV016A0   3                                                                                         
 CV016A1   PVOL  101065.0                            
-CV016A2   TATM  293.15  RHUM  0.001                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.2) * %AIRE                  
+CV016A2   TATM  293.15  RHUM  0.002                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.4) * %AIRE                  
 CV016A4   MLFR.4  0.00395                           * (99.5%)   
 CV016A6   MLFR.5  0.00105                           * (99.5%)    
 CV016A8   MLFR.8  0.995                             * Filled with Ar (99.5%)   
@@ -121,12 +121,9 @@ CF10015   -1.0  0.0  CFVALU.101
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-*CF10110   0.0  0.29024 TIME                             * C / P_inicial
-*CF10110   0.0  0.184  TIME                             * C / P_5dias
-CF10110   0.0  0.1  TIME                             * D / P_inicial
-*CF10110   0.0  1.55  TIME                             * D / P_5dias
-*CF10110   0.0  20.0  TIME                            * E / P_inicial --> este oscila mucho entorno al equilibro, quizás haya que subir el valor del INLET de Ar
-*CF10110   0.0  15.0  TIME                            * E / P_3dias
+CF10110   0.0  0.4  TIME                             * HLR 1E-04
+*CF10110   0.0  2.0  TIME                             * HLR 5E-04
+*CF10110   0.0  20.0  TIME                             * HLR 5E-03
 *
 **************************************************************** SGS ******************************************************************                                                 
 ***
