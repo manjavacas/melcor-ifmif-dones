@@ -295,7 +295,7 @@ CF25515   1.0  0.0  CVH-MASS.8.016
 **                    EXTERNAL DATA FILE  (*EDF package)                      **
 ********************************************************************************
 *
-EDF11100 VARIAB 4 WRITE
+EDF11100 VARIAB 5 WRITE
 EDF11101 sgs_var.dat
 EDF11102 8E20.12
 EDF11110 604800.      1000.
@@ -307,6 +307,8 @@ EDF111B0 CFVALU.251
 EDF111C0 CFVALU.252  
 * H2O      
 EDF111D0 CFVALU.253      
+* AIR
+EDF111E0 CFVALU.250
 *
 ***** PRESIÓN *****
 CF30000  P-ROOMS  EQUALS  1  1.0
