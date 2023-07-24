@@ -6,13 +6,13 @@
 *
 *EOR* MELGEN
 *
-title     sgs_final
-jobid     sgs_final
+title     dry
+jobid     dry
 *
-restartf  sgs_final.rst
-outputf   sgs_final_gen.out
-diagf     sgs_final_gen.dia
-stopf     sgs_final.stp
+restartf  dry.rst
+outputf   dry_gen.out
+diagf     dry_gen.dia
+stopf     dry.stp
 *
 crtout 
 tstart    00.0
@@ -74,7 +74,7 @@ CV40100   ArSS  2  2  5
 CV40101   0   -1		                                  				            
 CV401A0   3                                                                                         
 CV401A1   PVOL    101065.0                                                                                              
-CV401A3   TATM    293.15  RHUM  0.0002               * 17.8 deg. C  ;  RHUM = RHUM_TOTAL (0.4) * %AIRE
+CV401A3   TATM    293.15  RHUM  0.0002               * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.4) * %AIRE
 CV401A4   MLFR.4  0.000395                           * (99.95%)    
 CV401A6   MLFR.5  0.000105                           * (99.95%)     
 CV401A8   MLFR.8  0.9995                             * Filled with Ar (99.95%)  
@@ -96,15 +96,15 @@ CV01600   Rooms  2  0  1
 CV01601   0   0		                              
 CV016A0   3                                                                                         
 CV016A1   PVOL  101065.0                            
-CV016A2   TATM  293.15  RHUM  0.012                * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.4) * %AIRE                  
-CV016A4   MLFR.4  0.0063                           * (99.5%)      
-CV016A6   MLFR.5  0.0237                           * (99.5%)       
-CV016A8   MLFR.8  0.97                             * Filled with Ar (99.5%)   
+CV016A2   TATM  293.15  RHUM  0.065                * 20 deg. C  ;  RHUM = 0.15% vol                
+CV016A4   MLFR.4  0.78                              * dry air     
+CV016A6   MLFR.5  0.21                              * dry air       
+CV016A8   MLFR.8  0.01                              * dry air   
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
 CV016B1   0.0      0.0                                                            
-CV016B2   7.0      4166.0                            * 4058.4 m3
+CV016B2   7.0      2495.0                            * 4058.4 m3
 ***
 *
 ****************************************************************************************************************************************
@@ -128,7 +128,7 @@ CF10020   0.0  80.0  TIME
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
 *CF10110   0.0  0.4  TIME                             * HLR 1E-04
-CF10110   0.0  2.0  TIME                             * HLR 5E-04
+CF10110   0.0  30.0  TIME                             * HLR 5E-04
 *CF10110   0.0  20.0  TIME                             * HLR 5E-03
 *
 **************************************************************** SGS ******************************************************************                                                 
@@ -140,11 +140,15 @@ CF90110  1.0  0.0  CVH-TVAP.016
 *                                                                                                                                 
 ******* Sink - O2 *******                    
 *                                           
-CV016C1  MASS.5 902 3                       
+CV016C1  MASS.5 905 3                       
 CV016C2  TE 901 9                                              
-*     
+*
+CF90500  'Saturation-O2' MAX  2  1.0
+CF90510  1.0  0.0  CFVALU.902
+CF90515  0.0  -0.000143888889  TIME     
+*
 CF90200 'O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP(m3/s) * MASS / VOL
-CF90210  0.0  14997600.0  TIME                * 3600 (s/h) * 4166 (m3) = 14997600.0
+CF90210  0.0  8982000.0  TIME                * 3600 (s/h) * 2495 (m3) = 8982000.0
 CF90215  1.0  0.0  CFVALU.500                                       
 *
 CF50000  NUM-CF902  MULTIPLY  2  0.8
@@ -156,11 +160,15 @@ CF80010  1.0  0.0  CFVALU.902
 *
 ******* Sink - N2 *******                    
 *                                           
-CV016C3  MASS.4 903 3                       
+CV016C3  MASS.4 906 3                       
 CV016C4  TE 901 9                           
 *     
+CF90600  'Saturation-N2' MAX  2  1.0
+CF90610  1.0  0.0  CFVALU.903
+CF90615  0.0  -0.0004675  TIME   
+*
 CF90300 'N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP(m3/s) * MASS / VOL
-CF90310  0.0  14997600.0  TIME                * 3600 (s/h) * 4166 (m3) = 14997600.0
+CF90310  0.0  8982000.0  TIME                * 3600 (s/h) * 2495 (m3) = 8982000.0
 CF90315  1.0  0.0  CFVALU.501                                       
 *
 CF50100  NUM-CF903  MULTIPLY  2  0.7
@@ -176,7 +184,7 @@ CV016C5  MASS.3 904 3
 CV016C6  TE 901 9                           
 *  
 CF90400 'H20-sink' DIVIDE 2  -1.0             * Eficiencia (= 0.95) * QP(m3/s) * MASS / VOL
-CF90410  0.0  14997600.0  TIME                * 3600 (s/h) * 4166 (m3) = 14997600.0
+CF90410  0.0  8982000.0  TIME                * 3600 (s/h) * 2495 (m3) = 8982000.0
 CF90415  1.0  0.0  CFVALU.502                                       
 *
 CF50200  NUM-CF904  MULTIPLY  2  0.95
@@ -201,7 +209,7 @@ FL11600  AR-IN  401  016  6.7  6.7
 FL11601  0.5  1.0  1.0
 FL11602  3
 FL116S0  0.5  1.0  0.5
-FL116T0  2  512
+FL116T0  2  513
 *
 CF51200  AR-IN-con  L-A-IFTE  3  1.0
 CF51205  NORMAL
@@ -211,7 +219,7 @@ CF51220  0.0  0.0  CFVALU.513
 *
 CF51300  AR-IN-vel  DIVIDE  2  1.0
 CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51315  1.5  0.0  CFVALU.101
+CF51315  1.0  0.0  CFVALU.101
 *
 CF51400  AUX-P  L-GE  2  1.0  0.0
 CF51405  NORMAL
@@ -258,7 +266,7 @@ CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
 CF01601  0.0
 CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
 *CF01615  0.0  0.4166   TIME                           * 0.0001 * 4166.0 (VOL) = 0.4166
-CF01615  0.0  2.083   TIME                            * 0.0005 * 4166.0 (VOL) = 2.083
+CF01615  0.0  1.2475   TIME                            * 0.0005 * 2495.0 (VOL) = 1.2475
 *CF01615  0.0  20.83   TIME                            * 0.005 * 4166.0 (VOL) = 20.83
 *
 ***
@@ -336,17 +344,17 @@ noflush
 * WARNINGLEVEL 0 0 -1
 *
 *
-TITLE     sgs_final
+TITLE     dry
 *
 *********
 * FILES *
 *********
 *
-RESTARTFILE  sgs_final.rst
-OUTPUTFILE   sgs_final.out
-PLOTFILE     sgs_final.ptf
-DIAGFILE     sgs_final_cor.dia
-MESSAGEFILE  sgs_final_cor.mes
+RESTARTFILE  dry.rst
+OUTPUTFILE   dry.out
+PLOTFILE     dry.ptf
+DIAGFILE     dry_cor.dia
+MESSAGEFILE  dry_cor.mes
 *
 *STOPCF    666
 *
@@ -359,13 +367,13 @@ CYMESF           10000    10000                     * FRECUENCIA TERMINAL / .OUT
 *
 RESTART          -1              
 *
-TEND             3.1536e7                           * TIEMPO DE SIMULACION (seg) 3.1536e7 -> 1 year
+TEND             6.048e5                            * TIEMPO DE SIMULACION (seg) - 15 dias
 *
 *
 SOFTDTMIN  .1  1000
 *
 *
 *             TIME     DTMAX     DTMIN     DTEDT      DTPLT      DTRST
-TIME1         0.0      100.0    10.0     21600.0    21600.0    21600.0          
+TIME1         0.0      100.0    10.0     1800.0    1800.0    1800.0          
 *
 .* END

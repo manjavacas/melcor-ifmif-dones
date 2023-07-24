@@ -40,6 +40,9 @@ HLR1: clean
 sgsf: clean
 	./melgen-fusion-186_bdba ow=o i=SGS-Ar/sgs_final.inp
 	./melcor-fusion-186_bdba SGS-Ar/sgs_final.inp
+dry: clean
+	./melgen-fusion-186_bdba ow=o i=SGS-Ar/dry.inp
+	./melcor-fusion-186_bdba SGS-Ar/dry.inp
 clean:
 	rm -f *.DIA
 	rm -f *.MES
