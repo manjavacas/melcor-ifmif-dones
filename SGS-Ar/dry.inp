@@ -128,7 +128,7 @@ CF10020   0.0  80.0  TIME
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
 *CF10110   0.0  0.4  TIME                             * HLR 1E-04
-CF10110   0.0  30.0  TIME                             * HLR 5E-04
+CF10110   0.0  15.0  TIME                             * HLR 5E-04
 *CF10110   0.0  20.0  TIME                             * HLR 5E-03
 *
 **************************************************************** SGS ******************************************************************                                                 
@@ -367,7 +367,7 @@ CYMESF           10000    10000                     * FRECUENCIA TERMINAL / .OUT
 *
 RESTART          -1              
 *
-TEND             6.048e5                            * TIEMPO DE SIMULACION (seg) - 15 dias
+TEND             1.296e6                            * TIEMPO DE SIMULACION (seg) - 15 dias
 *
 *
 SOFTDTMIN  .1  1000

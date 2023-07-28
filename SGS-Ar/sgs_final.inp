@@ -96,10 +96,10 @@ CV01600   Rooms  2  0  1
 CV01601   0   0		                              
 CV016A0   3                                                                                         
 CV016A1   PVOL  101065.0                            
-CV016A2   TATM  293.15  RHUM  0.012                * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.4) * %AIRE                  
-CV016A4   MLFR.4  0.0063                           * (99.5%)      
-CV016A6   MLFR.5  0.0237                           * (99.5%)       
-CV016A8   MLFR.8  0.97                             * Filled with Ar (99.5%)   
+CV016A2   TATM  293.15  RHUM  0.002                 * 20 deg. C  ;  RHUM = RHUM_TOTAL (0.4) * %AIRE                  
+CV016A4   MLFR.4  0.00395                           * (99.5%)      
+CV016A6   MLFR.5  0.00105                           * (99.5%)       
+CV016A8   MLFR.8  0.995                             * Filled with Ar (99.5%)   
 *** 
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
@@ -116,7 +116,7 @@ CF49910 0.0 101065.0 TIME
 *
 ****** CAUDAL ENTRADA ArPU ******
 CF10200   QP  ADD  2  1.0                            * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
-CF10210   0.0  80.0  TIME
+CF10210   0.0  160.0  TIME
 CF10215   -1.0  0.0  CFVALU.101
 *
 CF10000   QP_REAL  L-A-IFTE  3  1.0
@@ -127,9 +127,9 @@ CF10020   0.0  80.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
-*CF10110   0.0  0.4  TIME                             * HLR 1E-04
-CF10110   0.0  2.0  TIME                             * HLR 5E-04
-*CF10110   0.0  20.0  TIME                             * HLR 5E-03
+CF10110   0.0  0.4  TIME                             * HLR 1E-04
+*CF10110   0.0  2.0  TIME                             * HLR 5E-04
+*CF10110   0.0  20.0  TIME                            * HLR 5E-03
 *
 **************************************************************** SGS ******************************************************************                                                 
 ***
@@ -197,26 +197,26 @@ CF81375  3600.0  0.0  CFVALU.801         * VOL-N2
 ***
 ******* Inlet - Ar *******                    
 *
-FL11600  AR-IN  401  016  6.7  6.7
-FL11601  0.5  1.0  1.0
-FL11602  3
-FL116S0  0.5  1.0  0.5
-FL116T0  2  512
+*FL11600  AR-IN  401  016  6.7  6.7
+*FL11601  0.5  1.0  1.0
+*FL11602  3
+*FL116S0  0.5  1.0  0.5
+*FL116T0  2  512
 *
-CF51200  AR-IN-con  L-A-IFTE  3  1.0
-CF51205  NORMAL
-CF51210  1.0  0.0  CFVALU.514
-CF51215  1.0  0.0  CFVALU.513
-CF51220  0.0  0.0  CFVALU.513
+*CF51200  AR-IN-con  L-A-IFTE  3  1.0
+*CF51205  NORMAL
+*CF51210  1.0  0.0  CFVALU.514
+*CF51215  1.0  0.0  CFVALU.513
+*CF51220  0.0  0.0  CFVALU.513
 *
-CF51300  AR-IN-vel  DIVIDE  2  1.0
-CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51315  1.5  0.0  CFVALU.101
+*CF51300  AR-IN-vel  DIVIDE  2  1.0
+*CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+*CF51315  1.5  0.0  CFVALU.101
 *
-CF51400  AUX-P  L-GE  2  1.0  0.0
-CF51405  NORMAL
-CF51410  1.0  0.0  CFVALU.499
-CF51415  1.0  0.0  CVH-P.16                           
+*CF51400  AUX-P  L-GE  2  1.0  0.0
+*CF51405  NORMAL
+*CF51410  1.0  0.0  CFVALU.499
+*CF51415  1.0  0.0  CVH-P.16                           
 *
 ***
 ********************************************************* G-RWTS ********************************************************
@@ -257,8 +257,8 @@ FL016T0  2  016
 CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
 CF01601  0.0
 CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
-*CF01615  0.0  0.4166   TIME                           * 0.0001 * 4166.0 (VOL) = 0.4166
-CF01615  0.0  2.083   TIME                            * 0.0005 * 4166.0 (VOL) = 2.083
+CF01615  0.0  0.4166   TIME                           * 0.0001 * 4166.0 (VOL) = 0.4166
+*CF01615  0.0  2.083   TIME                            * 0.0005 * 4166.0 (VOL) = 2.083
 *CF01615  0.0  20.83   TIME                            * 0.005 * 4166.0 (VOL) = 20.83
 *
 ***
