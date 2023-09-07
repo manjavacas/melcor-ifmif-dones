@@ -104,7 +104,7 @@ CV016A8   MLFR.8  0.995                             * Filled with Ar (99.5%)
 ***       ALTITUDE/VOLUME Table                                                                                                
 ***                                                                
 CV016B1   0.0      0.0                                                            
-CV016B2   7.0      4166.0                            * 4058.4 m3
+CV016B2   7.2      4166.0                            * 4058.4 m3
 ***
 *
 ****************************************************************************************************************************************
@@ -151,8 +151,8 @@ CF50000  NUM-CF902  MULTIPLY  2  0.8
 CF50010  1.0  0.0  CFVALU.100
 CF50020  1.0  0.0  CVH-MASS.5.016
 *
-CF80000  O2-VOL  MULTIPLY  1  0.75348796209   * DENS = DENS_0(=1.429) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
-CF80010  1.0  0.0  CFVALU.902
+*CF80000  O2-VOL  MULTIPLY  1  0.75348796209   * DENS = DENS_0(=1.429) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
+*CF80010  1.0  0.0  CFVALU.902
 *
 ******* Sink - N2 *******                    
 *                                           
@@ -167,8 +167,8 @@ CF50100  NUM-CF903  MULTIPLY  2  0.7
 CF50110  1.0  0.0  CFVALU.100
 CF50120  1.0  0.0  CVH-MASS.4.016
 *
-CF80100  N2-VOL  MULTIPLY  1  0.8607846479    * DENS = DENS_0(=1.25) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
-CF80110  1.0  0.0  CFVALU.903
+*CF80100  N2-VOL  MULTIPLY  1  0.8607846479    * DENS = DENS_0(=1.25) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
+*CF80110  1.0  0.0  CFVALU.903
 *
 ******* Sink - H2O *******                    
 *                                           
@@ -183,31 +183,31 @@ CF50200  NUM-CF904  MULTIPLY  2  0.95
 CF50210  1.0  0.0  CFVALU.100
 CF50220  1.0  0.0  CVH-MASS.3.016
 *  
-CF80200  H2O-VOL  MULTIPLY  1  1.801445384    * DENS = DENS_0(=0.5972875) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
-CF80210  1.0  0.0  CFVALU.904
+*CF80200  H2O-VOL  MULTIPLY  1  1.801445384    * DENS = DENS_0(=0.5972875) * P(=101065) * T_0(=273.15) / (P_0(=101325) * T(=290.95)) 
+*CF80210  1.0  0.0  CFVALU.904
 ***
 ******* Inlet - Ar *******                    
 *
-FL11600  AR-IN  401  016  6.7  6.7
-FL11601  0.5  1.0  1.0
-FL11602  3
-FL116S0  0.5  1.0  0.5
-FL116T0  2  512
+*FL11600  AR-IN  401  016  6.7  6.7
+*FL11601  0.5  1.0  1.0
+*FL11602  3
+*FL116S0  0.5  1.0  0.5
+*FL116T0  2  512
 *
-CF51200  AR-IN-con  L-A-IFTE  3  1.0
-CF51205  NORMAL
-CF51210  1.0  0.0  CFVALU.514
-CF51215  1.0  0.0  CFVALU.513
-CF51220  0.0  0.0  CFVALU.513
+*CF51200  AR-IN-con  L-A-IFTE  3  1.0
+*CF51205  NORMAL
+*CF51210  1.0  0.0  CFVALU.514
+*CF51215  1.0  0.0  CFVALU.513
+*CF51220  0.0  0.0  CFVALU.513
 *
-CF51300  AR-IN-vel  DIVIDE  2  1.0
-CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
-CF51315  1.0  0.0  CFVALU.101
+*CF51300  AR-IN-vel  DIVIDE  2  1.0
+*CF51310  0.0  1800.0  TIME                         * (3600 * 0.5) = 1800.0 
+*CF51315  1.0  0.0  CFVALU.101
 *
-CF51400  AUX-P  L-GE  2  1.0  0.0
-CF51405  NORMAL
-CF51410  1.0  0.0  CFVALU.499
-CF51415  1.0  0.0  CVH-P.16                           
+*CF51400  AUX-P  L-GE  2  1.0  0.0
+*CF51405  NORMAL
+*CF51410  1.0  0.0  CFVALU.499
+*CF51415  1.0  0.0  CVH-P.16                           
 *
 ***
 ********************************************************* G-RWTS ********************************************************
@@ -257,36 +257,36 @@ CF01615  0.0  2.083   TIME                            * 0.0005 * 4166.0 (VOL) = 
 *
 *  Porcentaje aire
 *
-CF25000   AIR%  ADD  2  100.0
-CF25001   0.0
-CF25010   0.0  1.0  TIME
-CF25015   -1.0  0.0  CFVALU.255
+*CF25000   AIR%  ADD  2  100.0
+*CF25001   0.0
+*CF25010   0.0  1.0  TIME
+*CF25015   -1.0  0.0  CFVALU.255
 *
-CF25100   O2%  DIVIDE  2  100.0
-CF25101   0.0
-CF25110   1.0  0.0  CFVALU.254
-CF25115   1.0  0.0  CVH-MASS.5.016
+*CF25100   O2%  DIVIDE  2  100.0
+*CF25101   0.0
+*CF25110   1.0  0.0  CFVALU.254
+*CF25115   1.0  0.0  CVH-MASS.5.016
 *
-CF25200   N2%  DIVIDE  2  100.0
-CF25201   0.0
-CF25210   1.0  0.0  CFVALU.254
-CF25215   1.0  0.0  CVH-MASS.4.016
+*CF25200   N2%  DIVIDE  2  100.0
+*CF25201   0.0
+*CF25210   1.0  0.0  CFVALU.254
+*CF25215   1.0  0.0  CVH-MASS.4.016
 *
-CF25300   H2O%  DIVIDE  2  100.0
-CF25301   0.0
-CF25310   1.0  0.0  CFVALU.254
-CF25315   1.0  0.0  CVH-MASS.3.016
+*CF25300   H2O%  DIVIDE  2  100.0
+*CF25301   0.0
+*CF25310   1.0  0.0  CFVALU.254
+*CF25315   1.0  0.0  CVH-MASS.3.016
 *
-CF25400   DEN-CF255  ADD  4  1.0
-CF25410   1.0  0.0  CVH-MASS.3.016
-CF25415   1.0  0.0  CVH-MASS.4.016
-CF25420   1.0  0.0  CVH-MASS.5.016
-CF25425   1.0  0.0  CVH-MASS.8.016
+*CF25400   DEN-CF255  ADD  4  1.0
+*CF25410   1.0  0.0  CVH-MASS.3.016
+*CF25415   1.0  0.0  CVH-MASS.4.016
+*CF25420   1.0  0.0  CVH-MASS.5.016
+*CF25425   1.0  0.0  CVH-MASS.8.016
 *
-CF25500   ELEM-CF250  DIVIDE  2  1.0
-CF25501   1.0
-CF25510   1.0  0.0  CFVALU.254
-CF25515   1.0  0.0  CVH-MASS.8.016
+*CF25500   ELEM-CF250  DIVIDE  2  1.0
+*CF25501   1.0
+*CF25510   1.0  0.0  CFVALU.254
+*CF25515   1.0  0.0  CVH-MASS.8.016
 *
 ***
 ***
@@ -294,12 +294,12 @@ CF25515   1.0  0.0  CVH-MASS.8.016
 **                    EXTERNAL DATA FILE  (*EDF package)                      **
 ********************************************************************************
 *
-EDF11100 VARIAB 2 WRITE
-EDF11101 sgs_var.dat
-EDF11102 8E20.12
-EDF11110 1209600.      1000.
+*EDF11100 VARIAB 2 WRITE
+*EDF11101 sgs_var.dat
+*EDF11102 8E20.12
+*EDF11110 1209600.      1000.
 * PRESIONES
-EDF111A0 CFVALU.300  
+*EDF111A0 CFVALU.300  
 * O2      
 *EDF111B0 CFVALU.251  
 * N2       
@@ -307,11 +307,11 @@ EDF111A0 CFVALU.300
 * H2O      
 *EDF111D0 CFVALU.253      
 * AIR
-EDF111E0 CFVALU.250
+*EDF111E0 CFVALU.250
 *
 ***** PRESIÓN *****
-CF30000  P-ROOMS  EQUALS  1  1.0
-CF30010  1.0  0.0  CVH-P.016
+*CF30000  P-ROOMS  EQUALS  1  1.0
+*CF30010  1.0  0.0  CVH-P.016
 *
 . * End
 *
