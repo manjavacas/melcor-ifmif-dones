@@ -117,7 +117,7 @@ CF49910 0.0 101065.0 TIME
 ********************************
 CF30100  Porc-Ar  L-GE  2  1.0  0.0
 CF30110  1.0  0.0  CVH-X.8.016
-CF30115  0.0  0.86  TIME
+CF30115  0.0  0.85  TIME
 *
 ****** CAUDAL ENTRADA ArPU ******
 CF10200   QP  L-A-IFTE  3  1.0                            * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
@@ -139,10 +139,10 @@ CF10020   0.0  80.0  TIME
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100  RJ  L-A-IFTE  3  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
 *CF10110   0.0  0.4  TIME                             * HLR 1E-04
-CF10110  1.0  0.0  CFVALU.301                             * HLR 5E-04
+CF10110  1.0  0.0  CFVALU.301                         * HLR 5E-04
 CF10115  0.0  2.0  TIME
 CF10120  0.0  200.0  TIME
-*CF10110   0.0  20.0  TIME                             * HLR 5E-03
+*CF10110   0.0  20.0  TIME                            * HLR 5E-03
 *
 **************************************************************** SGS ******************************************************************                                                 
 ***

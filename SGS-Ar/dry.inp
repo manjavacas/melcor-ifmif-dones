@@ -116,19 +116,19 @@ CF49910 0.0 101065.0 TIME
 *
 ****** CAUDAL ENTRADA ArPU ******
 CF10200   QP  EQUALS  1  1.0                            * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
-CF10210   0.0  160.0  TIME
+CF10210   0.0  80.0  TIME
 *CF10215   -1.0  0.0  CFVALU.101
 *
 CF10000   QP_REAL  L-A-IFTE  3  1.0
 CF10005   NORMAL
 CF10010   1.0  0.0  CFVALU.515
 CF10015   1.0  0.0  CFVALU.102
-CF10020   0.0  160.0  TIME
+CF10020   0.0  80.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
 *CF10110   0.0  0.4  TIME                             * HLR 1E-04
-CF10110   0.0  400.0  TIME                             * HLR 5E-04
+CF10110   0.0  300.0  TIME                             * HLR 5E-04
 *CF10110   0.0  20.0  TIME                             * HLR 5E-03
 *
 **************************************************************** SGS ******************************************************************                                                 
@@ -145,7 +145,7 @@ CV016C2  TE 901 9
 *
 CF90500  'Saturation-O2' MAX  2  1.0
 CF90510  1.0  0.0  CFVALU.902
-CF90515  0.0  -0.00024021238  TIME              * -0.00024021238 / -0.00048042476
+CF90515  0.0  -0.00048042476  TIME              * -0.00024021238 / -0.00048042476
 *
 CF90200 'O2-sink' DIVIDE  2  -1.0             * Eficiencia (= 0.8) * QP(m3/s) * MASS / VOL
 CF90210  0.0  8982000.0  TIME                * 3600 (s/h) * 2495 (m3) = 8982000.0
@@ -165,7 +165,7 @@ CV016C4  TE 901 9
 *     
 CF90600  'Saturation-N2' MAX  2  1.0
 CF90610  1.0  0.0  CFVALU.903
-CF90615  0.0 -0.00078093258  TIME               * -0.00078093258 / -0.00156186516
+CF90615  0.0 -0.00156186516  TIME               * -0.00078093258 / -0.00156186516
 *
 CF90300 'N2-sink' DIVIDE 2  -1.0              * Eficiencia (= 0.7) * QP(m3/s) * MASS / VOL
 CF90310  0.0  8982000.0  TIME                * 3600 (s/h) * 2495 (m3) = 8982000.0
