@@ -114,6 +114,10 @@ CV016B2   7.2      2495.0                            * 4058.4 m3
 CF49900 PRESSURE EQUALS 1 1.0
 CF49910 0.0 101065.0 TIME
 *
+CF39900 PRESSURE-LLC ADD 2 1.0
+CF39910 1.0 0.0 CVH-P.016
+CF39915 0.0 -101065.0 TIME
+*
 ****** CAUDAL ENTRADA ArPU ******
 CF10200   QP  EQUALS  1  1.0                            * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
 CF10210   0.0  80.0  TIME
@@ -241,8 +245,8 @@ FL216T0   2  216
 CF21600   RJ016  L-A-IFTE  3  1.0
 CF21605   NORMAL
 CF21610   1.0  0.0  CFVALU.515
-CF21615   1.1  0.0  CFVALU.218
-CF21620   0.9  0.0  CFVALU.218
+CF21615   1.0125  0.0  CFVALU.218
+CF21620   0.95  0.0  CFVALU.218
 *
 CF21800   VEL-RJ016  DIVIDE  2  1.0                             * RJ / (3600 * 0.5)
 CF21810   0.0  1800.0  TIME                                     * (3600 * 0.5) = 1800.0
@@ -367,13 +371,13 @@ CYMESF           10000    10000                     * FRECUENCIA TERMINAL / .OUT
 *
 RESTART          -1              
 *
-TEND             86400.0                            * TIEMPO DE SIMULACION (seg) - 15 dias 1.296e6 / 7 dias 6.048e5
+TEND             86400.0                            * TIEMPO DE SIMULACION (seg)
 *
 *
 SOFTDTMIN  .1  1000
 *
 *
 *             TIME     DTMAX     DTMIN     DTEDT      DTPLT      DTRST
-TIME1         0.0      100.0    10.0     60.0    60.0    60.0          
+TIME1         0.0      100.0    10.0     10.0    10.0    10.0          
 *
 .* END

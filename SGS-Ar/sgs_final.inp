@@ -114,22 +114,26 @@ CV016B2   7.2      4166.0                            * 4058.4 m3
 CF49900 PRESSURE EQUALS 1 1.0
 CF49910 0.0 101065.0 TIME
 *
+CF39900 PRESSURE-LLC ADD 2 1.0
+CF39910 1.0 0.0 CVH-P.016
+CF39915 0.0 -101065.0 TIME
+*
 ****** CAUDAL ENTRADA ArPU ******
 CF10200   QP  ADD  2  1.0                            * Caudal purificado. Nippon Gases -> 57.8 Nm3/h para todas las salas 
-CF10210   0.0  80.0  TIME
+CF10210   0.0  240.0  TIME
 CF10215   -1.0  0.0  CFVALU.101
 *
 CF10000   QP_REAL  L-A-IFTE  3  1.0
 CF10005   NORMAL
 CF10010   1.0  0.0  CFVALU.515
 CF10015   1.0  0.0  CFVALU.102
-CF10020   0.0  80.0  TIME
+CF10020   0.0  240.0  TIME
 *
 ****** CAUDAL VERTIDO POR CHIMENEA ******
 CF10100   RJ  EQUALS  1  1.0                         * Ar rejected by SGS-Ar (Nippon -> 22.2 Nm3/h)
 *CF10110   0.0  0.4  TIME                             * HLR 1E-04
-CF10110   0.0  2.5  TIME                             * HLR 5E-04
-*CF10110   0.0  20.0  TIME                            * HLR 5E-03
+*CF10110   0.0  2.5  TIME                             * HLR 5E-04
+CF10110   0.0  20.0  TIME                            * HLR 5E-03
 *
 **************************************************************** SGS ******************************************************************                                                 
 ***
@@ -249,8 +253,8 @@ CF01600  R016-LEAK-VEL  DIVIDE  2  1.0
 CF01601  0.0
 CF01610  0.0  1800.0   TIME                           * (3600 * 0.5) = 1800
 *CF01615  0.0  0.4166   TIME                           * 0.0001 * 4166.0 (VOL) = 0.4166
-CF01615  0.0  2.083   TIME                            * 0.0005 * 4166.0 (VOL) = 2.083
-*CF01615  0.0  20.83   TIME                            * 0.005 * 4166.0 (VOL) = 20.83
+*CF01615  0.0  2.083   TIME                            * 0.0005 * 4166.0 (VOL) = 2.083
+CF01615  0.0  20.83   TIME                            * 0.005 * 4166.0 (VOL) = 20.83
 *
 ***
 *************************************************** OUTPUTS ***************************************************
