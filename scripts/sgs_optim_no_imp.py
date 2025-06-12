@@ -24,7 +24,6 @@ MAX_PRESS_DEVIATION = 40
 # Incremento RJ
 INC_RJ = .1
 
-
 def bad_pressure(max_pressures, min_pressures):
     """
     Devuelve True si alguna presion no esta en el rango +-40
