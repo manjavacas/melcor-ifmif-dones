@@ -46,6 +46,7 @@ dry: clean
 dry2: clean
 	./melgen-fusion-186_bdba ow=o i=SGS-Ar/dry2.inp
 	./melcor-fusion-186_bdba SGS-Ar/dry2.inp
+
 clean:
 	rm -f *.DIA
 	rm -f *.MES
