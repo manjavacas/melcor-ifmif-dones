@@ -1,6 +1,6 @@
 ## 📝 About
 
-This project includes the [MELCOR 1.8.6 model](https://energy.sandia.gov/programs/nuclear-energy/nuclear-energy-safety-security/melcor/) of the [IFMIF-DONES](https://ifmif-dones.es/) main building (**under development**).
+This project includes the [MELCOR 1.8.6 model](https://energy.sandia.gov/programs/nuclear-energy/nuclear-energy-safety-security/melcor/) of the [IFMIF-DONES](https://ifmif-dones.es/) main building.
 
 ## ⚛️ IFMIF-DONES
 
